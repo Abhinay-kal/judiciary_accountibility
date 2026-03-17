@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-1: #f4e7cf;
+  --bg-2: #fceecf;
+  --ink: #10151f;
+  --accent: #d1764f;
+  --ocean: #245e6f;
+}
+
+body {
+  color: var(--ink);
+  background: radial-gradient(circle at 10% 10%, #fff7e3 0%, transparent 40%),
+    radial-gradient(circle at 80% 30%, #d2ece5 0%, transparent 35%),
+    linear-gradient(140deg, var(--bg-1), var(--bg-2));
+  min-height: 100vh;
+}
+
+.card {
+  @apply rounded-2xl border border-ink/10 bg-white/70 p-5 shadow-sm backdrop-blur;
+}
