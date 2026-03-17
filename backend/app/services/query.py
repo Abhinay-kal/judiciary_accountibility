@@ -23,6 +23,12 @@ def apply_case_filters(query: Query, filters: CaseQuery) -> Query:
         query = query.filter(Case.filing_date >= filters.start_date)
     if filters.end_date:
         query = query.filter(Case.filing_date <= filters.end_date)
+    if filters.min_importance is not None:
+        query = query.filter(Case.importance_score.is_not(None), Case.importance_score >= filters.min_importance)
+    if filters.min_normalized_delay is not None:
+        query = query.filter(Case.normalized_delay.is_not(None), Case.normalized_delay >= filters.min_normalized_delay)
+    if filters.delay_severity:
+        query = query.filter(Case.delay_severity == filters.delay_severity)
     if filters.flagged_only:
         query = query.join(Flag, Flag.case_id == Case.id).filter(Flag.is_active.is_(True))
     if filters.politician_only:

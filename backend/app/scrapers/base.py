@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import asyncio
 import hashlib
 import logging
 import time
@@ -12,6 +13,7 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 from app.core.config import get_settings
+from app.core.monitoring import SCRAPER_FETCH_TOTAL
 
 logger = logging.getLogger(__name__)
 settings = get_settings()
@@ -47,8 +49,12 @@ class BaseScraper:
         """Fetch URL and persist raw response for auditability."""
 
         headers = {"User-Agent": settings.scraper_user_agent}
-        response = self.session.get(url, headers=headers, timeout=settings.scraper_timeout_seconds)
-        response.raise_for_status()
+        try:
+            response = self.session.get(url, headers=headers, timeout=settings.scraper_timeout_seconds)
+            response.raise_for_status()
+        except Exception:
+            SCRAPER_FETCH_TOTAL.labels(source=self.source_name, result="failed").inc()
+            raise
 
         content = response.content
         checksum = hashlib.sha256(content).hexdigest()
@@ -56,6 +62,7 @@ class BaseScraper:
         time.sleep(settings.scraper_rate_limit_seconds)
 
         logger.info("Fetched %s (%s)", url, checksum)
+        SCRAPER_FETCH_TOTAL.labels(source=self.source_name, result="success").inc()
 
         return ScrapeResult(
             source=self.source_name,
@@ -83,6 +90,22 @@ class BaseScraper:
         """Parse raw response into normalized dictionaries."""
 
         raise NotImplementedError
+
+    async def fetch_urls_concurrently(self, urls: list[str]) -> list[ScrapeResult]:
+        """Fetch multiple URLs concurrently using a bounded thread pool approach."""
+
+        semaphore = asyncio.Semaphore(settings.scraper_concurrency)
+
+        async def _fetch(url: str) -> ScrapeResult:
+            async with semaphore:
+                return await asyncio.to_thread(self.fetch_url, url)
+
+        return await asyncio.gather(*[_fetch(url) for url in urls])
+
+    def fetch_urls(self, urls: list[str]) -> list[ScrapeResult]:
+        """Synchronous wrapper for concurrent URL fetching."""
+
+        return asyncio.run(self.fetch_urls_concurrently(urls))
 
     def run(self) -> list[tuple[ScrapeResult, dict[str, Any]]]:
         """Run scraper and return raw + parsed records."""

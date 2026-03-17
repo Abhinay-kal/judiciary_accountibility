@@ -11,6 +11,9 @@ class CaseQuery(BaseModel):
     party_name: Optional[str] = None
     flagged_only: bool = False
     politician_only: bool = False
+    min_importance: Optional[float] = None
+    min_normalized_delay: Optional[float] = None
+    delay_severity: Optional[str] = None
     start_date: Optional[date] = None
     end_date: Optional[date] = None
     page: int = 1

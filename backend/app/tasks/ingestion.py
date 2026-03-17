@@ -5,6 +5,8 @@ import uuid
 from datetime import datetime
 
 from app.celery_app import celery_app
+from app.core.cache import invalidate_for_event
+from app.core.monitoring import INGESTION_RECORDS_TOTAL
 from app.db.session import SessionLocal
 from app.scrapers.sources.ecourts import ECourtsScraper
 from app.scrapers.sources.high_court import HighCourtCauseListScraper
@@ -39,7 +41,13 @@ def run_daily_ingestion() -> dict:
                 for raw, record in items:
                     normalized = normalize_case_record(record)
                     case = upsert_case_from_normalized(db, normalized)
-                    upsert_hearings_for_case(db, case, record, scraper.source_name)
+                    upsert_hearings_for_case(
+                        db,
+                        case,
+                        record,
+                        scraper.source_name,
+                        ingestion_run_id=run_id,
+                    )
                     create_ingestion_log(
                         db,
                         source=scraper.source_name,
@@ -51,10 +59,12 @@ def run_daily_ingestion() -> dict:
                         metadata_json={"content_type": raw.content_type},
                     )
                     processed += 1
+                    INGESTION_RECORDS_TOTAL.labels(source=scraper.source_name, result="success").inc()
                 db.commit()
             except Exception as exc:
                 db.rollback()
                 failed += 1
+                INGESTION_RECORDS_TOTAL.labels(source=scraper.source_name, result="failed").inc()
                 create_ingestion_log(
                     db,
                     source=scraper.source_name,
@@ -69,6 +79,8 @@ def run_daily_ingestion() -> dict:
                 logger.exception("Ingestion failed for %s", scraper.source_name)
 
         flagged = run_anomaly_detection(db)
+        invalidate_for_event("INGESTION_COMPLETED")
+
         return {"run_id": run_id, "processed": processed, "failed": failed, "flagged": flagged}
     finally:
         db.close()

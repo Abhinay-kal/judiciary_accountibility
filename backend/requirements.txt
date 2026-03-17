@@ -18,3 +18,10 @@ python-multipart==0.0.20
 orjson==3.10.15
 pytest==8.3.4
 httpx==0.28.1
+prometheus-client==0.21.1
+slowapi==0.1.9
+# ── ML module (optional — comment out to exclude from image if ML_ENABLED=false) ──
+scikit-learn==1.6.1
+joblib==1.4.2
+numpy==2.2.3
+PyYAML==6.0.2

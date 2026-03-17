@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from datetime import date
+
 from bs4 import BeautifulSoup
 
 from app.scrapers.base import BaseScraper
@@ -10,23 +12,23 @@ class HighCourtCauseListScraper(BaseScraper):
     source_name = "high_court"
 
     def run(self) -> list[tuple]:
-        urls = [
+        html_urls = [
             "https://www.allahabadhighcourt.in/",
         ]
+        pdf_urls = [
+            "https://main.sci.gov.in/pdf/causelist/sample.pdf",
+        ]
         output = []
-        for url in urls:
-            raw = self.fetch_url(url)
+        for raw in self.fetch_urls(html_urls):
             for record in self.parse(raw):
                 output.append((raw, record))
 
-            # Example PDF path support for cause lists
-            pdf_url = "https://main.sci.gov.in/pdf/causelist/sample.pdf"
-            try:
-                raw_pdf = self.fetch_url(pdf_url)
+        try:
+            for raw_pdf in self.fetch_urls(pdf_urls):
                 for record in self.parse(raw_pdf):
                     output.append((raw_pdf, record))
-            except Exception:
-                pass
+        except Exception:
+            pass
         return output
 
     def parse(self, raw):
@@ -43,6 +45,14 @@ class HighCourtCauseListScraper(BaseScraper):
                     "status": "pending",
                     "source_url": raw.url,
                     "source_fields": {"source": "high_court_pdf"},
+                    "hearings": [
+                        {
+                            "date": date.today(),
+                            "listing_type": "cause_list",
+                            "raw_bench": marker,
+                            "outcome_text": None,
+                        }
+                    ],
                 }
             ]
 
@@ -58,5 +68,13 @@ class HighCourtCauseListScraper(BaseScraper):
                 "status": "pending",
                 "source_url": raw.url,
                 "source_fields": {"source": "high_court_html"},
+                "hearings": [
+                    {
+                        "date": date.today(),
+                        "listing_type": "cause_list",
+                        "raw_bench": title,
+                        "outcome_text": None,
+                    }
+                ],
             }
         ]

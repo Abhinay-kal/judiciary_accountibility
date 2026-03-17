@@ -1,69 +1,118 @@
-version: "3.9"
-
 services:
   db:
     image: postgres:16
+    container_name: justice-tracker-db
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: justice_tracker
     ports:
-      - "5432:5432"
+      - "${DB_PORT:-55433}:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d justice_tracker"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
 
   redis:
     image: redis:7-alpine
+    container_name: justice-tracker-redis
     ports:
       - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
 
   backend:
     build:
       context: ./backend
+    container_name: justice-tracker-backend
     env_file:
       - .env
     depends_on:
-      - db
-      - redis
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
     ports:
       - "8000:8000"
     volumes:
       - ./backend:/app
+    command: ["sh", "/app/bootstrap.sh"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
 
-  worker:
+  celery-worker:
     build:
       context: ./backend
+    container_name: justice-tracker-celery-worker
     env_file:
       - .env
     command: celery -A app.celery_app.celery_app worker --loglevel=INFO
     depends_on:
-      - backend
-      - redis
-      - db
+      backend:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      db:
+        condition: service_healthy
     volumes:
       - ./backend:/app
+    healthcheck:
+      test: ["CMD", "celery", "-A", "app.celery_app.celery_app", "inspect", "ping", "-d", "celery@$$HOSTNAME"]
+      interval: 30s
+      timeout: 10s
+      retries: 10
 
-  beat:
+  celery-beat:
     build:
       context: ./backend
+    container_name: justice-tracker-celery-beat
     env_file:
       - .env
     command: celery -A app.celery_app.celery_app beat --loglevel=INFO
     depends_on:
-      - worker
-      - redis
+      backend:
+        condition: service_healthy
+      celery-worker:
+        condition: service_started
+      redis:
+        condition: service_healthy
+      db:
+        condition: service_healthy
     volumes:
       - ./backend:/app
+    healthcheck:
+      test: ["CMD", "python", "-c", "import os; os._exit(0)"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
 
   frontend:
     build:
       context: ./frontend
+    container_name: justice-tracker-frontend
+    env_file:
+      - .env
     environment:
-      NEXT_PUBLIC_API_BASE: http://localhost:8000/api/v1
+      NEXT_PUBLIC_API_BASE: ${NEXT_PUBLIC_API_BASE:-http://localhost:8000/api/v1}
     ports:
       - "3000:3000"
     depends_on:
-      - backend
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000"]
+      interval: 15s
+      timeout: 5s
+      retries: 20
 
 volumes:
   pgdata:

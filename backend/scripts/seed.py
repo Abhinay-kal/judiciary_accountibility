@@ -1,13 +1,85 @@
+import argparse
 from datetime import date, timedelta
 
 from app.db.session import SessionLocal
+from app.ingestion.models import IngestionSource
 from app.models import Adjournment, Case, CasePartyLink, Court, Hearing, Judge, Order, PublicOfficial
 from app.services.adjournment import detect_adjournment
 
 
-def run_seed() -> None:
+def _ensure_ingestion_sources(db) -> int:
+    defaults = [
+        {
+            "source_name": "njdg",
+            "source_type": "API",
+            "base_url": "https://njdg.ecourts.gov.in/",
+            "priority": 1,
+            "expected_update_interval_minutes": 1440,
+        },
+        {
+            "source_name": "ecourts_services",
+            "source_type": "SCRAPER",
+            "base_url": "https://services.ecourts.gov.in/",
+            "priority": 2,
+            "expected_update_interval_minutes": 720,
+        },
+        {
+            "source_name": "supreme_court_causelist",
+            "source_type": "HTML",
+            "base_url": "https://main.sci.gov.in/",
+            "priority": 2,
+            "expected_update_interval_minutes": 1440,
+        },
+    ]
+
+    existing = {
+        row[0]
+        for row in db.query(IngestionSource.source_name).all()
+    }
+    created = 0
+    for item in defaults:
+        if item["source_name"] in existing:
+            continue
+        db.add(
+            IngestionSource(
+                source_name=item["source_name"],
+                source_type=item["source_type"],
+                base_url=item["base_url"],
+                is_active=True,
+                priority=item["priority"],
+                expected_update_interval_minutes=item["expected_update_interval_minutes"],
+                health_status="HEALTHY",
+                mirror_urls=[],
+                config_json={},
+            )
+        )
+        created += 1
+    return created
+
+
+def run_seed(*, only_if_empty: bool = True) -> None:
     db = SessionLocal()
     try:
+        created_sources = _ensure_ingestion_sources(db)
+
+        existing_cases = db.query(Case.id).count()
+        if only_if_empty and existing_cases > 0:
+            db.commit()
+            print(
+                f"Seed skipped: cases already exist ({existing_cases}). "
+                f"Ingestion sources added: {created_sources}."
+            )
+            return
+
+        existing_seed_case = db.query(Case.id).filter(Case.case_uid == "seed::delhi-hc::001").first()
+        if existing_seed_case:
+            db.commit()
+            print(
+                "Seed skipped: sample case already present. "
+                f"Ingestion sources added: {created_sources}."
+            )
+            return
+
         court = Court(name="Delhi High Court", level="high", state="Delhi")
         db.add(court)
         db.flush()
@@ -82,9 +154,17 @@ def run_seed() -> None:
         )
 
         db.commit()
+        print(f"Seed completed. Ingestion sources added: {created_sources}. Sample data loaded.")
     finally:
         db.close()
 
 
 if __name__ == "__main__":
-    run_seed()
+    parser = argparse.ArgumentParser(description="Load sample data for local development.")
+    parser.add_argument(
+        "--always",
+        action="store_true",
+        help="Attempt to seed even when existing rows are present.",
+    )
+    args = parser.parse_args()
+    run_seed(only_if_empty=not args.always)

@@ -1,6 +1,7 @@
 import { DelayBarChart } from "@/components/DelayBarChart";
 import { StatCard } from "@/components/StatCard";
 import { getJSON } from "@/components/api";
+import Link from "next/link";
 
 type CourtStat = {
   court_id: number;
@@ -32,6 +33,9 @@ export default async function HomePage() {
         <p className="max-w-3xl text-sm text-ink/70">
           Data aggregated from public judicial sources. Verify with official records.
         </p>
+        <Link href="/open-data" className="inline-block rounded-lg bg-ocean px-4 py-2 text-sm font-semibold text-white">
+          Explore Open Data Catalog
+        </Link>
       </header>
 
       <section className="grid gap-4 md:grid-cols-3">

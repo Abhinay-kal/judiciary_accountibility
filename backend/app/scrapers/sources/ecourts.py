@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from datetime import date
+
 from bs4 import BeautifulSoup
 
 from app.scrapers.base import BaseScraper
@@ -13,8 +15,7 @@ class ECourtsScraper(BaseScraper):
             "https://services.ecourts.gov.in/ecourtindia_v6/",
         ]
         output = []
-        for url in urls:
-            raw = self.fetch_url(url)
+        for raw in self.fetch_urls(urls):
             for record in self.parse(raw):
                 output.append((raw, record))
         return output
@@ -33,5 +34,13 @@ class ECourtsScraper(BaseScraper):
                 "status": "pending",
                 "source_url": raw.url,
                 "source_fields": {"source": "ecourts"},
+                "hearings": [
+                    {
+                        "date": date.today(),
+                        "listing_type": "cause_list",
+                        "raw_bench": title,
+                        "outcome_text": None,
+                    }
+                ],
             }
         ]
