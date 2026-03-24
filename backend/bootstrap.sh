@@ -5,14 +5,26 @@ log() {
   echo "[bootstrap] $*"
 }
 
-if [ -z "${DATABASE_URL:-}" ]; then
-  log "DATABASE_URL is not set"
+fail() {
+  log "ERROR: $*"
   exit 1
+}
+
+on_exit() {
+  status="$?"
+  if [ "$status" -ne 0 ]; then
+    log "bootstrap failed with exit code $status"
+  fi
+}
+
+trap on_exit EXIT
+
+if [ -z "${DATABASE_URL:-}" ]; then
+  fail "DATABASE_URL is not set"
 fi
 
 if [ -z "${REDIS_URL:-}" ]; then
-  log "REDIS_URL is not set"
-  exit 1
+  fail "REDIS_URL is not set"
 fi
 
 log "Waiting for Postgres and Redis"
@@ -69,8 +81,16 @@ PY
 log "Running migrations"
 PYTHONPATH=/app alembic -c /app/alembic.ini upgrade head
 
-log "Seeding sample data if database is empty"
-PYTHONPATH=/app python /app/scripts/seed.py
+case "${AUTO_SEED_DB:-0}" in
+  1|true|TRUE|True)
+    log "Hydrating database via seed script"
+    PYTHONPATH=/app python /app/scripts/seed.py
+    log "Database hydration complete"
+    ;;
+  *)
+    log "AUTO_SEED_DB not enabled; skipping seed hydration"
+    ;;
+esac
 
 if [ "${BOOTSTRAP_ONLY:-0}" = "1" ]; then
   log "BOOTSTRAP_ONLY=1 set; exiting after bootstrap"
