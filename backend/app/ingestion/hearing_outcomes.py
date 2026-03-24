@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import math
 import re
 from dataclasses import dataclass, field
 from datetime import date, datetime, timezone
@@ -47,7 +46,6 @@ class RuleSpec:
     outcome_type: HearingOutcomeType
     confidence: float
     keywords: tuple[str, ...]
-    high_confidence: bool = True
 
 
 @dataclass
@@ -108,23 +106,6 @@ def _rule_specs() -> tuple[RuleSpec, ...]:
             ),
         ),
         RuleSpec(
-            name="no_proceedings_keywords",
-            outcome_type=HearingOutcomeType.NO_PROCEEDINGS,
-            confidence=0.90,
-            keywords=("no proceedings",),
-        ),
-        RuleSpec(
-            name="not_reached_keywords",
-            outcome_type=HearingOutcomeType.NOT_REACHED,
-            confidence=0.90,
-            keywords=(
-                "not reached",
-                "not taken up",
-                "not heard",
-                "case not taken",
-            ),
-        ),
-        RuleSpec(
             name="heard_keywords",
             outcome_type=HearingOutcomeType.HEARD,
             confidence=0.92,
@@ -153,7 +134,38 @@ def _rule_specs() -> tuple[RuleSpec, ...]:
             confidence=0.96,
             keywords=_DISPOSAL_TOKENS,
         ),
+        RuleSpec(
+            name="not_reached_keywords",
+            outcome_type=HearingOutcomeType.NOT_REACHED,
+            confidence=0.90,
+            keywords=(
+                "not reached",
+                "not taken up",
+                "not heard",
+                "case not taken",
+            ),
+        ),
+        RuleSpec(
+            name="no_proceedings_keywords",
+            outcome_type=HearingOutcomeType.NO_PROCEEDINGS,
+            confidence=0.90,
+            keywords=("no proceedings",),
+        ),
     )
+
+
+@lru_cache(maxsize=1)
+def _compiled_keyword_patterns() -> dict[str, dict[str, re.Pattern[str]]]:
+    compiled: dict[str, dict[str, re.Pattern[str]]] = {}
+    for rule in _rule_specs():
+        compiled[rule.name] = {}
+        for keyword in rule.keywords:
+            parts = [re.escape(part) for part in keyword.casefold().split() if part]
+            if not parts:
+                continue
+            pattern = r"\b" + r"\s+".join(parts) + r"\b"
+            compiled[rule.name][keyword] = re.compile(pattern)
+    return compiled
 
 
 def _normalize_text(raw_text: str | None) -> str:
@@ -174,7 +186,19 @@ def _contains_keyword(text: str, keyword: str) -> bool:
 
 
 def _match_rule(text: str, rule: RuleSpec) -> list[str]:
-    return [keyword for keyword in rule.keywords if _contains_keyword(text, keyword)]
+    patterns = _compiled_keyword_patterns().get(rule.name, {})
+    matched = [keyword for keyword, pattern in patterns.items() if pattern.search(text)]
+    if rule.outcome_type != HearingOutcomeType.HEARD:
+        return matched
+
+    filtered: list[str] = []
+    for keyword in matched:
+        if keyword in {"heard", "heard today", "argument heard"} and re.search(r"\bnot\s+heard\b", text):
+            continue
+        if keyword == "taken up" and re.search(r"\bnot\s+taken\s+up\b", text):
+            continue
+        filtered.append(keyword)
+    return filtered
 
 
 def _is_listing_only(text: str, listing_type: str | None, source_name: str | None) -> bool:
@@ -351,6 +375,51 @@ def _apply_ml_fallback(
         parser_version=result.parser_version,
         presence_of_order_pdf=has_order_pdf,
     )
+
+
+def coerce_corroborating_signal(payload: Any) -> CorroboratingSignal | None:
+    if isinstance(payload, CorroboratingSignal):
+        return payload
+    if not isinstance(payload, dict):
+        return None
+    raw_outcome = payload.get("outcome_type")
+    if raw_outcome is None:
+        return None
+    try:
+        outcome_type = HearingOutcomeType(str(raw_outcome).upper())
+    except ValueError:
+        return None
+    confidence = payload.get("confidence", 0.0)
+    try:
+        confidence_val = float(confidence)
+    except (TypeError, ValueError):
+        confidence_val = 0.0
+    confidence_val = max(0.0, min(1.0, confidence_val))
+    source_name = str(payload.get("source_name") or payload.get("source") or "unknown")
+    evidence_id = payload.get("evidence_id")
+    if evidence_id is not None:
+        evidence_id = str(evidence_id)
+    matched_keywords = [str(item) for item in (payload.get("matched_keywords") or []) if str(item).strip()]
+    matched_rules = [str(item) for item in (payload.get("matched_rules") or []) if str(item).strip()]
+    return CorroboratingSignal(
+        outcome_type=outcome_type,
+        confidence=confidence_val,
+        source_name=source_name,
+        evidence_id=evidence_id,
+        matched_keywords=matched_keywords,
+        matched_rules=matched_rules,
+    )
+
+
+def coerce_corroborating_signals(payloads: Iterable[Any] | None) -> list[CorroboratingSignal]:
+    if not payloads:
+        return []
+    normalized: list[CorroboratingSignal] = []
+    for payload in payloads:
+        signal = coerce_corroborating_signal(payload)
+        if signal is not None:
+            normalized.append(signal)
+    return normalized
     if prediction is None or prediction.confidence <= result.confidence:
         return None
 
@@ -428,6 +497,7 @@ def apply_outcome_to_hearing(
     listing_type: str | None,
     source_name: str,
     parser_version: str | None = None,
+    additional_signals: Sequence[CorroboratingSignal] | None = None,
 ) -> ParseResult:
     parser_version = parser_version or get_settings().outcome_parser_version
     corroborating_signals = build_corroborating_signals(
@@ -437,6 +507,8 @@ def apply_outcome_to_hearing(
         current_source=source_name,
         existing_hearing=hearing if hearing.id else None,
     )
+    if additional_signals:
+        corroborating_signals.extend(additional_signals)
     has_order_pdf = any(signal.evidence_id and signal.evidence_id.startswith("order:") for signal in corroborating_signals)
     result = parse_outcome_text(
         raw_outcome_text,

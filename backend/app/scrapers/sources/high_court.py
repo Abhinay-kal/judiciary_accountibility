@@ -50,6 +50,7 @@ class HighCourtCauseListScraper(BaseScraper):
                             "date": date.today(),
                             "listing_type": "cause_list",
                             "raw_bench": marker,
+                            "raw_outcome_text": None,
                             "outcome_text": None,
                         }
                     ],
@@ -73,6 +74,7 @@ class HighCourtCauseListScraper(BaseScraper):
                         "date": date.today(),
                         "listing_type": "cause_list",
                         "raw_bench": title,
+                        "raw_outcome_text": None,
                         "outcome_text": None,
                     }
                 ],

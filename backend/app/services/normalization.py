@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 
 from app.core.config import get_settings
 from app.core.monitoring import JUDGE_ATTRIBUTION_LOW_CONFIDENCE_TOTAL, JUDGE_ATTRIBUTION_MISSING_TOTAL
-from app.ingestion.hearing_outcomes import apply_outcome_to_hearing
+from app.ingestion.hearing_outcomes import apply_outcome_to_hearing, coerce_corroborating_signals
 from app.ingestion.models import IngestionSource
 from app.models import Adjournment, Case, Court, Hearing, IngestionLog, Judge, JudgeAssignment, JudgeAttributionAudit
 from app.services.adjournment import detect_adjournment
@@ -130,6 +130,11 @@ def upsert_hearings_for_case(
     hearings = record.get("hearings") or []
     source_row = db.query(IngestionSource).filter(IngestionSource.source_name == source).one_or_none()
     source_id = source_row.id if source_row else None
+    source_fields = record.get("source_fields") or {}
+    record_level_signals = [
+        *coerce_corroborating_signals(record.get("corroborating_signals")),
+        *coerce_corroborating_signals(source_fields.get("corroborating_signals")),
+    ]
     for item in hearings:
         hearing_date = item.get("date")
         if not hearing_date:
@@ -169,6 +174,7 @@ def upsert_hearings_for_case(
             hearing.outcome_text = item.get("outcome_text") or item.get("raw_outcome_text")
             hearing.source = source
 
+        item_level_signals = coerce_corroborating_signals(item.get("corroborating_signals"))
         parse_result = apply_outcome_to_hearing(
             db,
             hearing,
@@ -176,6 +182,7 @@ def upsert_hearings_for_case(
             listing_type=item.get("listing_type"),
             source_name=source,
             parser_version=item.get("parser_version") or settings.outcome_parser_version,
+            additional_signals=[*record_level_signals, *item_level_signals],
         )
 
         is_adj, reason = detect_adjournment(

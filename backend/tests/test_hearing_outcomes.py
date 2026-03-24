@@ -13,6 +13,7 @@ from app.ingestion.hearing_outcomes import (
     CorroboratingSignal,
     ParseResult,
     annotate_hearing,
+    coerce_corroborating_signals,
     parse_outcome_text,
 )
 from app.main import app
@@ -94,6 +95,46 @@ def test_multi_source_corroboration_boosts_confidence() -> None:
     assert result.outcome_type == HearingOutcomeType.HEARD
     assert result.confidence > 0.92
     assert "multi_source_corroboration" in result.matched_rules
+
+
+def test_conflicting_tokens_prefers_disposal_rule() -> None:
+    result = parse_outcome_text(
+        "Case not heard earlier but judgment pronounced today",
+        source_name="high_court",
+        allow_ml=False,
+    )
+    assert result.outcome_type == HearingOutcomeType.DISPOSED
+    assert result.confidence >= 0.96
+
+
+def test_coerce_corroborating_signals_handles_payload_dicts() -> None:
+    payloads = [
+        {
+            "outcome_type": "heard",
+            "confidence": "0.88",
+            "source": "judge_diary",
+            "evidence_id": "diary:20",
+            "matched_keywords": ["heard today"],
+            "matched_rules": ["judge_diary_entry"],
+        },
+        {
+            "outcome_type": "disposed",
+            "confidence": 1.5,
+            "source_name": "news",
+        },
+        {
+            "outcome_type": "invalid_type",
+            "confidence": 0.8,
+        },
+    ]
+
+    signals = coerce_corroborating_signals(payloads)
+    assert len(signals) == 2
+    assert signals[0].outcome_type == HearingOutcomeType.HEARD
+    assert signals[0].confidence == pytest.approx(0.88)
+    assert signals[0].source_name == "judge_diary"
+    assert signals[1].outcome_type == HearingOutcomeType.DISPOSED
+    assert signals[1].confidence == pytest.approx(1.0)
 
 
 class FakeDB:

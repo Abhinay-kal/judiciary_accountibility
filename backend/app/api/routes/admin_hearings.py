@@ -6,6 +6,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 
 from app.core.cache import invalidate_namespace
+from app.core.config import get_settings
 from app.db.session import get_db
 from app.evidence.hearings import build_hearing_evidence_bundle
 from app.ingestion.hearing_outcomes import annotate_hearing, reprocess_hearing, review_queue_query
@@ -14,11 +15,12 @@ from datetime import datetime
 from app.models import Hearing, HearingOutcomeAudit, HearingOutcomeType, JudgeAssignment, JudgeAssignmentRole, JudgeAttributionAudit, JudgeRegistry
 
 router = APIRouter(prefix="/admin/hearings", tags=["admin-hearings"])
+settings = get_settings()
 
 
 @router.get("/review")
 def list_hearings_for_review(
-    threshold: float = Query(default=0.6, ge=0.0, le=1.0),
+    threshold: float = Query(default=settings.default_outcome_confidence_verify, ge=0.0, le=1.0),
     limit: int = Query(default=50, ge=1, le=200),
     db: Session = Depends(get_db),
 ) -> dict[str, Any]:
@@ -211,8 +213,14 @@ def _serialize_hearing(db: Session, hearing: Hearing) -> dict[str, Any]:
         "date": hearing.date,
         "listing_type": hearing.listing_type,
         "outcome_text": hearing.outcome_text,
+        "raw_outcome_text": hearing.raw_outcome_text,
         "outcome_type": hearing.outcome_type.value if hearing.outcome_type else None,
         "outcome_confidence": hearing.outcome_confidence,
+        "needs_verification": (
+            hearing.outcome_type is None
+            or hearing.outcome_type == HearingOutcomeType.OTHER
+            or (hearing.outcome_confidence or 0.0) < settings.default_outcome_confidence_verify
+        ),
         "parser_version": hearing.parser_version,
         "annotated_by": hearing.annotated_by,
         "annotated_at": hearing.annotated_at,

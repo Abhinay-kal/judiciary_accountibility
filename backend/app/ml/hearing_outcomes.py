@@ -136,7 +136,7 @@ def _build_pipeline() -> Pipeline:
     return Pipeline(
         steps=[
             ("pre", preprocessor),
-            ("model", LogisticRegression(max_iter=2000, multi_class="auto")),
+            ("model", LogisticRegression(max_iter=2000)),
         ]
     )
 

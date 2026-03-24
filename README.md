@@ -258,6 +258,86 @@ backend/app/ml/
   predict.py         — CaseDurationPredictor singleton, PredictionResult
   outliers.py        — delay ratio, severity classification, batch flagging
   artifacts/         — model binaries (gitignored; generated at runtime)
+
+## Hearing Outcome Classification
+
+The ingestion subsystem distinguishes listing entries from substantive proceedings using a deterministic parser, corroboration rules, and optional ML fallback.
+
+### Canonical Outcome Types
+
+- LISTED
+- HEARD
+- ADJOURNED
+- ORDER_RESERVED
+- DISPOSED
+- NOT_REACHED
+- NO_PROCEEDINGS
+- OTHER
+
+Persisted hearing fields:
+
+- outcome_type
+- outcome_confidence (0.0 to 1.0)
+- raw_outcome_text
+- parser_version
+- annotated_by
+- annotated_at
+
+### Rule Engine and Confidence
+
+The parser runs ordered high-precision keyword rules first, then falls back:
+
+1. ADJOURNED: adjourn, postponed, deferred, put up, relisted, adjd, adjd., adj., adjourned to
+2. HEARD: heard, argument heard, taken up, considered, heard today
+3. ORDER_RESERVED: order reserved, order kept, reserved, orders reserved
+4. DISPOSED: disposed, dismissed, pronounced, judgment, ug, allowed, dismissed with costs
+5. NOT_REACHED / NO_PROCEEDINGS: not reached, not taken up, no proceedings, not heard, case not taken
+6. LISTED when only scheduling/listing hints are present
+
+Corroboration logic then adjusts confidence:
+
+- Same-day order PDF with disposal cues overrides to DISPOSED (0.99)
+- Cause-list LISTED plus same-day order upgrades to HEARD or DISPOSED
+- Multi-source agreement combines confidence values and boosts certainty
+- Ambiguous or unsupported language text is marked OTHER and queued for review
+
+Review threshold:
+
+- DEFAULT_OUTCOME_CONFIDENCE_VERIFY (default 0.60)
+
+### Optional ML Fallback
+
+Set ML_PARSER_ENABLED=true to enable ML disambiguation for low-confidence/OTHER outcomes.
+
+- Model: lightweight sklearn text+metadata classifier
+- Training data: admin-annotated hearings
+- Artifacts: backend/app/ml/artifacts/hearing_outcome_model.pkl and hearing_outcome_evaluation.json
+- Retraining task: app.tasks.hearing_outcomes.retrain_hearing_outcome_model
+
+### Admin Verification Workflow
+
+- GET /api/v1/admin/hearings/review?threshold=0.6
+- POST /api/v1/admin/hearings/{id}/annotate
+- POST /api/v1/admin/hearings/{id}/reprocess
+- GET /api/v1/admin/hearings/{id}/audit
+
+Annotation and reprocessing actions are audit logged with previous/new values, actor, timestamp, and parser version transitions.
+
+### Reprocessing and Backfill
+
+- Scheduled refresh task: app.tasks.hearing_outcomes.reprocess_hearing_outcomes
+- Backfill script: backend/app/scripts/backfill_hearing_outcomes.py
+- Alembic hardening migration: backend/alembic/versions/0019_hearing_outcome_hardening.py
+
+### Frontend Display Guidance
+
+Timeline and admin views should show:
+
+- Outcome badge (LISTED, HEARD, ADJOURNED, etc.)
+- Confidence bar with numeric score
+- Why tooltip containing matched keywords, matched rules, and corroborating sources
+- Source links to cause-list/order artifacts
+- Needs verification CTA when confidence is below threshold or outcome is OTHER
 ```
 
 ### Feature Engineering
