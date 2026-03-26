@@ -6,7 +6,7 @@ alembic==1.14.1
 pydantic-settings==2.7.1
 celery==5.4.0
 redis==5.2.1
-requests==2.32.3
+requests==2.33.0
 beautifulsoup4==4.13.3
 lxml==5.3.1
 pdfminer.six==20231228
@@ -14,8 +14,8 @@ pymupdf==1.25.3
 pandas==2.2.3
 python-dateutil==2.9.0.post0
 rapidfuzz==3.12.1
-python-multipart==0.0.20
-orjson==3.10.15
+python-multipart==0.0.22
+orjson==3.11.6
 pytest==8.3.4
 httpx==0.28.1
 prometheus-client==0.21.1
