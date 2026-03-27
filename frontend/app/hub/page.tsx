@@ -142,6 +142,16 @@ function fmtDate(value: string): string {
   return parsed.toLocaleString();
 }
 
+function SectionSkeleton({ rows = 3 }: { rows?: number }) {
+  return (
+    <div className="card animate-pulse space-y-3">
+      {Array.from({ length: rows }).map((_, index) => (
+        <div key={index} className="h-10 rounded-lg bg-ink/10" />
+      ))}
+    </div>
+  );
+}
+
 function UnifiedHubInner() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -155,6 +165,7 @@ function UnifiedHubInner() {
 
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get("q") ?? "");
   const [searchResults, setSearchResults] = useState<CaseItem[]>([]);
+  const [isLoadingSearch, setIsLoadingSearch] = useState(false);
 
   const [judges, setJudges] = useState<JudgeItem[]>([]);
   const [selectedJudgeId, setSelectedJudgeId] = useState<number | null>(() => {
@@ -166,6 +177,7 @@ function UnifiedHubInner() {
     return Number.isInteger(numeric) && numeric > 0 ? numeric : null;
   });
   const [judgeStats, setJudgeStats] = useState<JudgeStats | null>(null);
+  const [isLoadingJudgeStats, setIsLoadingJudgeStats] = useState(false);
 
   const [correctionTargetType, setCorrectionTargetType] = useState<"case" | "flag" | "evidence" | "hearing">(() => {
     const value = searchParams.get("target_type");
@@ -182,18 +194,23 @@ function UnifiedHubInner() {
 
   const [feedbackAdminId, setFeedbackAdminId] = useState("1");
   const [feedbackRows, setFeedbackRows] = useState<PendingFeedbackItem[]>([]);
+  const [isLoadingFeedback, setIsLoadingFeedback] = useState(false);
 
   const [populationAdminId, setPopulationAdminId] = useState("1");
   const [populationReason, setPopulationReason] = useState("Unified hub manual population run");
   const [populationRuns, setPopulationRuns] = useState<PopulationRunItem[]>([]);
   const [selectedRunId, setSelectedRunId] = useState<string | null>(() => searchParams.get("run_id"));
   const [populationDetail, setPopulationDetail] = useState<PopulationRunDetail | null>(null);
+  const [isLoadingPopulation, setIsLoadingPopulation] = useState(false);
+  const [isLoadingPopulationDetail, setIsLoadingPopulationDetail] = useState(false);
   const [isTriggeringPopulation, setIsTriggeringPopulation] = useState(false);
+  const [isLoadingPublic, setIsLoadingPublic] = useState(false);
 
   const inFlightRequests = useRef<Map<string, Promise<unknown>>>(new Map());
   const publicDataLoaded = useRef(false);
   const feedbackLoaded = useRef(false);
   const populationLoaded = useRef(false);
+  const lastRestoredSearch = useRef<string>("");
 
   const hasActivePopulationRun = useMemo(
     () => populationRuns.some((run) => ACTIVE_STATUSES.has(run.status)),
@@ -253,6 +270,7 @@ function UnifiedHubInner() {
   );
 
   const loadPublicOverview = useCallback(async () => {
+    setIsLoadingPublic(true);
     try {
       const [statsPayload, flagsPayload, datasetsPayload, judgesPayload] = await Promise.all([
         fetchJsonDedup<CourtStat[]>("stats.court", `${API_BASE}/stats/court`).catch(() => []),
@@ -267,18 +285,23 @@ function UnifiedHubInner() {
       setJudges(Array.isArray(judgesPayload) ? judgesPayload : []);
     } catch {
       setMessage("Failed to load overview data.");
+    } finally {
+      setIsLoadingPublic(false);
     }
   }, [fetchJsonDedup]);
 
   const loadFeedback = useCallback(async () => {
+    setIsLoadingFeedback(true);
     const payload = await fetchJsonDedup<{ items: PendingFeedbackItem[] }>(
       "feedback.pending",
       `${API_BASE}/admin/feedback/pending`
     ).catch(() => ({ items: [] }));
     setFeedbackRows(payload.items || []);
+    setIsLoadingFeedback(false);
   }, [fetchJsonDedup]);
 
   const loadPopulationRuns = useCallback(async () => {
+    setIsLoadingPopulation(true);
     const payload = await fetchJsonDedup<{ items: PopulationRunItem[] }>(
       "population.runs",
       `${API_BASE}/admin/population/runs?limit=20&offset=0`
@@ -290,26 +313,67 @@ function UnifiedHubInner() {
       setSelectedRunId(firstRun);
       updateQueryParams({ run_id: firstRun });
     }
+    setIsLoadingPopulation(false);
   }, [fetchJsonDedup, selectedRunId, updateQueryParams]);
 
   const loadPopulationDetail = useCallback(async (runId: string) => {
+    setIsLoadingPopulationDetail(true);
     const payload = await fetchJsonDedup<PopulationRunDetail>(
       `population.detail.${runId}`,
       `${API_BASE}/admin/population/runs/${runId}`
     ).catch(() => null);
     if (!payload) {
       setMessage(`Failed to load run details for ${runId}`);
+      setIsLoadingPopulationDetail(false);
       return;
     }
     setPopulationDetail(payload);
+    setIsLoadingPopulationDetail(false);
   }, [fetchJsonDedup]);
+
+  const runSearch = useCallback(async (query: string, syncUrl: boolean) => {
+    const normalized = query.trim();
+    if (!normalized) {
+      setSearchResults([]);
+      if (syncUrl) {
+        updateQueryParams({ q: null });
+      }
+      return;
+    }
+    setIsLoadingSearch(true);
+    const payload = await fetchJsonDedup<{ items: CaseItem[] }>(
+      `cases.search.${normalized}`,
+      `${API_BASE}/cases?court=${encodeURIComponent(normalized)}&page_size=20`
+    ).catch(() => ({ items: [] }));
+    setSearchResults(payload.items || []);
+    setIsLoadingSearch(false);
+    if (syncUrl) {
+      updateQueryParams({ q: normalized });
+    }
+  }, [fetchJsonDedup, updateQueryParams]);
 
   useEffect(() => {
     const nextSection = asSection(searchParams.get("section"));
     if (nextSection !== section) {
       setSection(nextSection);
     }
-  }, [searchParams, section]);
+    const nextSearchQuery = searchParams.get("q") ?? "";
+    if (nextSearchQuery !== searchQuery) {
+      setSearchQuery(nextSearchQuery);
+    }
+  }, [searchParams, section, searchQuery]);
+
+  useEffect(() => {
+    if (section !== "search") {
+      return;
+    }
+    const restoredQuery = (searchParams.get("q") ?? "").trim();
+    if (!restoredQuery || restoredQuery === lastRestoredSearch.current) {
+      return;
+    }
+    lastRestoredSearch.current = restoredQuery;
+    runSearch(restoredQuery, false);
+  }, [section, searchParams, runSearch]);
 
   useEffect(() => {
     const needsPublicData = section === "overview" || section === "judges" || section === "heatmap" || section === "open_data";
@@ -333,6 +397,7 @@ function UnifiedHubInner() {
       return;
     }
     async function loadJudgeStats() {
+      setIsLoadingJudgeStats(true);
       const payload = await fetchJsonDedup<JudgeStats>(
         `judges.stats.${selectedJudgeId}`,
         `${API_BASE}/judges/${selectedJudgeId}/stats`
@@ -340,6 +405,7 @@ function UnifiedHubInner() {
       if (payload) {
         setJudgeStats(payload);
       }
+      setIsLoadingJudgeStats(false);
     }
     loadJudgeStats();
   }, [selectedJudgeId, fetchJsonDedup]);
@@ -384,10 +450,7 @@ function UnifiedHubInner() {
 
   async function submitSearch(event: FormEvent) {
     event.preventDefault();
-    const response = await fetch(`${API_BASE}/cases?court=${encodeURIComponent(searchQuery)}&page_size=20`);
-    const payload = await response.json().catch(() => ({ items: [] }));
-    setSearchResults(payload.items || []);
-    updateQueryParams({ q: searchQuery || null });
+    await runSearch(searchQuery, true);
   }
 
   async function feedbackAction(
@@ -504,6 +567,7 @@ function UnifiedHubInner() {
         <section className="space-y-4">
           {section === "overview" ? (
             <div className="space-y-4">
+              {isLoadingPublic && courtStats.length === 0 ? <SectionSkeleton rows={5} /> : null}
               <div className="grid gap-3 md:grid-cols-3">
                 <div className="card"><p className="text-xs text-ink/60">Total Cases</p><p className="font-display text-3xl">{totalCases}</p></div>
                 <div className="card"><p className="text-xs text-ink/60">Pending Cases</p><p className="font-display text-3xl">{pendingCases}</p></div>
@@ -551,6 +615,7 @@ function UnifiedHubInner() {
 
               <div className="card">
                 <h3 className="font-display text-xl">Results</h3>
+                {isLoadingSearch ? <SectionSkeleton rows={4} /> : null}
                 <ul className="mt-3 space-y-2 text-sm">
                   {searchResults.map((item) => (
                     <li key={item.id} className="rounded-lg border border-ink/10 bg-white p-2">
@@ -570,6 +635,7 @@ function UnifiedHubInner() {
               <div className="card">
                 <h3 className="font-display text-xl">Judge directory</h3>
                 <p className="text-sm text-ink/70">Select a judge to load stats in this panel.</p>
+                {isLoadingPublic && judges.length === 0 ? <SectionSkeleton rows={3} /> : null}
                 <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
                   {judges.slice(0, 24).map((judge) => (
                     <button
@@ -587,6 +653,7 @@ function UnifiedHubInner() {
 
               <div className="card">
                 <h3 className="font-display text-xl">Judge stats</h3>
+                {isLoadingJudgeStats ? <SectionSkeleton rows={2} /> : null}
                 {judgeStats ? (
                   <div className="mt-3 grid gap-3 sm:grid-cols-3">
                     <div className="rounded-lg border border-ink/10 bg-white p-3">
@@ -612,6 +679,7 @@ function UnifiedHubInner() {
           {section === "heatmap" ? (
             <div className="card">
               <h3 className="font-display text-xl">Court delay heatmap</h3>
+              {isLoadingPublic && courtStats.length === 0 ? <SectionSkeleton rows={4} /> : null}
               <div className="mt-3 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
                 {courtStats.map((court) => {
                   const intensity = Math.min(1, court.backlog_ratio);
@@ -631,6 +699,7 @@ function UnifiedHubInner() {
             <div className="card">
               <h3 className="font-display text-xl">Open data catalog</h3>
               <p className="text-sm text-ink/70">Download datasets directly from this hub.</p>
+              {isLoadingPublic && datasets.length === 0 ? <SectionSkeleton rows={3} /> : null}
               <div className="mt-3 space-y-2">
                 {datasets.map((dataset) => (
                   <article key={dataset.dataset_id} className="rounded-lg border border-ink/10 bg-white p-3">
@@ -708,6 +777,7 @@ function UnifiedHubInner() {
               </label>
 
               <div className="space-y-2">
+                {isLoadingFeedback && feedbackRows.length === 0 ? <SectionSkeleton rows={4} /> : null}
                 {feedbackRows.map((item) => (
                   <article key={item.id} className="rounded-lg border border-ink/10 bg-white p-3 text-sm">
                     <p className="font-semibold">Case {item.case_id} - {item.responder_name}</p>
@@ -762,6 +832,7 @@ function UnifiedHubInner() {
               <div className="grid gap-4 lg:grid-cols-2">
                 <article className="card">
                   <h4 className="font-display text-lg">Recent runs</h4>
+                  {isLoadingPopulation && populationRuns.length === 0 ? <SectionSkeleton rows={3} /> : null}
                   <div className="mt-3 space-y-2">
                     {populationRuns.map((run) => (
                       <button
@@ -781,6 +852,7 @@ function UnifiedHubInner() {
 
                 <article className="card">
                   <h4 className="font-display text-lg">Run details</h4>
+                  {isLoadingPopulationDetail ? <SectionSkeleton rows={2} /> : null}
                   {populationDetail ? (
                     <div className="mt-3 space-y-2 text-xs">
                       <p><span className="font-semibold">Status:</span> {populationDetail.run.status}</p>
