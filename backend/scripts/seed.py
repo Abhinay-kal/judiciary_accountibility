@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import argparse
 from contextlib import contextmanager
-from datetime import date, datetime, timedelta, timezone
+from datetime import date, datetime, timezone
 from typing import Iterator, TypeVar
 
 from sqlalchemy.orm import Session
@@ -62,6 +62,20 @@ def _soft_delete_rows(rows: list[object]) -> None:
 
 
 def _dedupe_seed_entities(db: Session, *, case_id: int, hearing_dates: list[date], order_date: date) -> None:
+    hearing_date_set = set(hearing_dates)
+
+    # Remove extra active seed hearings outside canonical schedule.
+    extra_hearings = (
+        db.query(Hearing)
+        .filter(
+            Hearing.case_id == case_id,
+            Hearing.source == "seed",
+            Hearing.is_deleted.is_(False),
+        )
+        .all()
+    )
+    _soft_delete_rows([row for row in extra_hearings if row.date not in hearing_date_set])
+
     # Keep one active hearing per (case_id, date)
     for hearing_date in hearing_dates:
         hearings = (
@@ -92,6 +106,19 @@ def _dedupe_seed_entities(db: Session, *, case_id: int, hearing_dates: list[date
         if len(active) > 1:
             _soft_delete_rows(active[1:])
 
+    # Remove active adjournments no longer tied to canonical active hearings.
+    stale_adjournments = (
+        db.query(Adjournment)
+        .filter(
+            Adjournment.case_id == case_id,
+            Adjournment.is_deleted.is_(False),
+            Adjournment.hearing_id.isnot(None),
+            Adjournment.hearing_id.notin_(hearing_ids),
+        )
+        .all()
+    )
+    _soft_delete_rows(stale_adjournments)
+
     # Keep one active seed order for the canonical seed order key
     orders = (
         db.query(Order)
@@ -106,6 +133,21 @@ def _dedupe_seed_entities(db: Session, *, case_id: int, hearing_dates: list[date
     active_orders = [row for row in orders if not row.is_deleted]
     if len(active_orders) > 1:
         _soft_delete_rows(active_orders[1:])
+
+    extra_orders = (
+        db.query(Order)
+        .filter(
+            Order.case_id == case_id,
+            Order.source == "seed",
+            Order.is_deleted.is_(False),
+            (
+                (Order.order_date != order_date)
+                | (Order.order_link != "https://example.org/order.pdf")
+            ),
+        )
+        .all()
+    )
+    _soft_delete_rows(extra_orders)
 
     # Keep one active official and party link for seed identity
     officials = (
@@ -195,8 +237,15 @@ def _ensure_ingestion_sources(db: Session) -> int:
 
 
 def _upsert_seed_graph(db: Session) -> None:
-    today = date.today()
     seed_uid = "seed::delhi-hc::001"
+    filing_date = date(2024, 2, 1)
+    next_hearing_date = date(2026, 4, 15)
+    hearing_dates = [
+        date(2026, 1, 10),
+        date(2026, 2, 5),
+        date(2026, 3, 1),
+    ]
+    order_date = date(2026, 3, 20)
 
     court, _ = get_or_create(
         db,
@@ -224,8 +273,8 @@ def _upsert_seed_graph(db: Session) -> None:
         "state": "Delhi",
         "bench": "Division Bench",
         "judges_text": "Justice A. Mehra",
-        "filing_date": today - timedelta(days=400),
-        "next_hearing_date": today + timedelta(days=15),
+        "filing_date": filing_date,
+        "next_hearing_date": next_hearing_date,
         "case_type": "Writ",
         "status": "pending",
         "source_url": "https://example.org/case/seed-001",
@@ -241,8 +290,6 @@ def _upsert_seed_graph(db: Session) -> None:
         "Listed for final hearing",
         "Arguments partly heard",
     ]
-    hearing_dates = [today - timedelta(days=90 - i * 20) for i in range(len(outcomes))]
-
     for i, text in enumerate(outcomes):
         hearing_date = hearing_dates[i]
         hearing, _ = get_or_create(
@@ -300,7 +347,6 @@ def _upsert_seed_graph(db: Session) -> None:
             },
         )
 
-    order_date = today - timedelta(days=5)
     order, _ = get_or_create(
         db,
         Order,
