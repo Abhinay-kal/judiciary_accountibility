@@ -1,0 +1,672 @@
+"use client";
+
+import Link from "next/link";
+import { FormEvent, useCallback, useEffect, useMemo, useState } from "react";
+
+import { AdminCorrectionQueue } from "@/components/AdminCorrectionQueue";
+import { CorrectionRequestForm } from "@/components/CorrectionRequestForm";
+import { DelayBarChart } from "@/components/DelayBarChart";
+
+type HubSectionKey =
+  | "overview"
+  | "search"
+  | "judges"
+  | "heatmap"
+  | "open_data"
+  | "corrections"
+  | "feedback"
+  | "population";
+
+type CourtStat = {
+  court_id: number;
+  court_name: string;
+  total_cases: number;
+  pending_cases: number;
+  disposed_cases: number;
+  backlog_ratio: number;
+};
+
+type FlagItem = {
+  id: number;
+  case_id: number;
+  flag_type: string;
+  details?: { summary?: string };
+};
+
+type CaseItem = {
+  id: number;
+  case_number: string;
+  status: string;
+};
+
+type JudgeItem = {
+  id: number;
+  name: string;
+};
+
+type JudgeStats = {
+  judge_id: number;
+  judge_name: string;
+  total_hearings: number;
+  adjournment_rate: number;
+  median_disposal_days: number;
+};
+
+type DatasetItem = {
+  dataset_id: string;
+  name: string;
+  description: string;
+  version: string;
+};
+
+type PendingFeedbackItem = {
+  id: string;
+  case_id: number;
+  responder_name: string;
+  responder_affiliation?: string;
+  responder_contact: string;
+  submitted_at: string;
+};
+
+type PopulationRunItem = {
+  run_id: string;
+  status: string;
+  trigger_type: string;
+  completed_sources: number;
+  total_sources: number;
+  records_processed: number;
+  records_failed: number;
+  started_at: string;
+};
+
+type PopulationSourceItem = {
+  id: number;
+  source_name: string;
+  status: string;
+  records_processed: number;
+  records_failed: number;
+  error_summary?: string | null;
+};
+
+type PopulationRunDetail = {
+  run: PopulationRunItem;
+  sources: PopulationSourceItem[];
+};
+
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE ?? "http://localhost:8000/api/v1";
+const BACKEND_DOCS_URL = `${API_BASE.replace(/\/api\/v1\/?$/, "")}/docs`;
+const ACTIVE_STATUSES = new Set(["QUEUED", "RUNNING"]);
+
+const SECTIONS: Array<{ key: HubSectionKey; label: string; helper: string }> = [
+  { key: "overview", label: "Overview", helper: "Core health and flagged activity" },
+  { key: "search", label: "Case Search", helper: "Find cases fast" },
+  { key: "judges", label: "Judges", helper: "Judge list and performance stats" },
+  { key: "heatmap", label: "Heatmap", helper: "Backlog intensity by court" },
+  { key: "open_data", label: "Open Data", helper: "Catalog and download links" },
+  { key: "corrections", label: "Corrections", helper: "Submit and moderate requests" },
+  { key: "feedback", label: "RtR Feedback", helper: "Moderate official responses" },
+  { key: "population", label: "Population", helper: "Run and monitor full ingestion" },
+];
+
+function fmtPercent(value: number): string {
+  return `${(value * 100).toFixed(1)}%`;
+}
+
+function fmtDate(value: string): string {
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) {
+    return value;
+  }
+  return parsed.toLocaleString();
+}
+
+export default function UnifiedHubPage() {
+  const [section, setSection] = useState<HubSectionKey>("overview");
+  const [message, setMessage] = useState("");
+
+  const [courtStats, setCourtStats] = useState<CourtStat[]>([]);
+  const [flags, setFlags] = useState<FlagItem[]>([]);
+  const [datasets, setDatasets] = useState<DatasetItem[]>([]);
+
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<CaseItem[]>([]);
+
+  const [judges, setJudges] = useState<JudgeItem[]>([]);
+  const [selectedJudgeId, setSelectedJudgeId] = useState<number | null>(null);
+  const [judgeStats, setJudgeStats] = useState<JudgeStats | null>(null);
+
+  const [correctionTargetType, setCorrectionTargetType] = useState<"case" | "flag" | "evidence" | "hearing">("case");
+  const [correctionTargetId, setCorrectionTargetId] = useState<number>(1);
+
+  const [feedbackAdminId, setFeedbackAdminId] = useState("1");
+  const [feedbackRows, setFeedbackRows] = useState<PendingFeedbackItem[]>([]);
+
+  const [populationAdminId, setPopulationAdminId] = useState("1");
+  const [populationReason, setPopulationReason] = useState("Unified hub manual population run");
+  const [populationRuns, setPopulationRuns] = useState<PopulationRunItem[]>([]);
+  const [selectedRunId, setSelectedRunId] = useState<string | null>(null);
+  const [populationDetail, setPopulationDetail] = useState<PopulationRunDetail | null>(null);
+  const [isTriggeringPopulation, setIsTriggeringPopulation] = useState(false);
+
+  const hasActivePopulationRun = useMemo(
+    () => populationRuns.some((run) => ACTIVE_STATUSES.has(run.status)),
+    [populationRuns]
+  );
+
+  const totalCases = useMemo(() => courtStats.reduce((sum, item) => sum + item.total_cases, 0), [courtStats]);
+  const pendingCases = useMemo(() => courtStats.reduce((sum, item) => sum + item.pending_cases, 0), [courtStats]);
+  const disposedCases = useMemo(() => courtStats.reduce((sum, item) => sum + item.disposed_cases, 0), [courtStats]);
+
+  const loadPublicOverview = useCallback(async () => {
+    const [statsResponse, flagsResponse, datasetsResponse, judgesResponse] = await Promise.all([
+      fetch(`${API_BASE}/stats/court`),
+      fetch(`${API_BASE}/flags?page=1&page_size=8`),
+      fetch(`${API_BASE}/datasets`),
+      fetch(`${API_BASE}/judges`),
+    ]);
+
+    const statsPayload = await statsResponse.json().catch(() => []);
+    const flagsPayload = await flagsResponse.json().catch(() => ({ items: [] }));
+    const datasetsPayload = await datasetsResponse.json().catch(() => ({ items: [] }));
+    const judgesPayload = await judgesResponse.json().catch(() => []);
+
+    setCourtStats(Array.isArray(statsPayload) ? statsPayload : []);
+    setFlags(Array.isArray(flagsPayload.items) ? flagsPayload.items : []);
+    setDatasets(Array.isArray(datasetsPayload.items) ? datasetsPayload.items : []);
+    setJudges(Array.isArray(judgesPayload) ? judgesPayload : []);
+  }, []);
+
+  const loadFeedback = useCallback(async () => {
+    const response = await fetch(`${API_BASE}/admin/feedback/pending`);
+    const payload = await response.json().catch(() => ({ items: [] }));
+    setFeedbackRows(payload.items || []);
+  }, []);
+
+  const loadPopulationRuns = useCallback(async () => {
+    const response = await fetch(`${API_BASE}/admin/population/runs?limit=20&offset=0`);
+    const payload = await response.json().catch(() => ({ items: [] }));
+    const runs = payload.items || [];
+    setPopulationRuns(runs);
+    if (!selectedRunId && runs.length > 0) {
+      setSelectedRunId(runs[0].run_id);
+    }
+  }, [selectedRunId]);
+
+  const loadPopulationDetail = useCallback(async (runId: string) => {
+    const response = await fetch(`${API_BASE}/admin/population/runs/${runId}`);
+    const payload = await response.json().catch(() => null);
+    if (!response.ok || !payload) {
+      setMessage(`Failed to load run details for ${runId}`);
+      return;
+    }
+    setPopulationDetail(payload);
+  }, []);
+
+  useEffect(() => {
+    loadPublicOverview();
+    loadFeedback();
+    loadPopulationRuns();
+  }, [loadPublicOverview, loadFeedback, loadPopulationRuns]);
+
+  useEffect(() => {
+    if (!selectedJudgeId) {
+      return;
+    }
+    async function loadJudgeStats() {
+      const response = await fetch(`${API_BASE}/judges/${selectedJudgeId}/stats`);
+      const payload = await response.json().catch(() => null);
+      if (response.ok && payload) {
+        setJudgeStats(payload);
+      }
+    }
+    loadJudgeStats();
+  }, [selectedJudgeId]);
+
+  useEffect(() => {
+    if (!selectedRunId) {
+      return;
+    }
+    loadPopulationDetail(selectedRunId);
+  }, [selectedRunId, loadPopulationDetail]);
+
+  useEffect(() => {
+    const poller = setInterval(() => {
+      loadPopulationRuns();
+      if (selectedRunId) {
+        loadPopulationDetail(selectedRunId);
+      }
+    }, hasActivePopulationRun ? 5000 : 15000);
+
+    return () => clearInterval(poller);
+  }, [hasActivePopulationRun, selectedRunId, loadPopulationRuns, loadPopulationDetail]);
+
+  async function submitSearch(event: FormEvent) {
+    event.preventDefault();
+    const response = await fetch(`${API_BASE}/cases?court=${encodeURIComponent(searchQuery)}&page_size=20`);
+    const payload = await response.json().catch(() => ({ items: [] }));
+    setSearchResults(payload.items || []);
+  }
+
+  async function feedbackAction(
+    id: string,
+    action: "verify" | "publish" | "reject" | "limit" | "escalate"
+  ) {
+    const body: Record<string, unknown> = { admin_id: Number(feedbackAdminId) };
+    if (action === "verify") {
+      body.method = "admin_verified";
+      body.reason = "Manual directory validation";
+    }
+    if (action === "publish") {
+      body.public_note = "An official response was submitted and verified.";
+    }
+    if (action === "reject") {
+      body.reason = "Insufficient verification evidence";
+    }
+    if (action === "limit") {
+      body.reason = "PII redacted";
+      body.public_note = "Response published in limited form after redaction.";
+      body.redacted_content = "Redacted by moderation team.";
+    }
+    if (action === "escalate") {
+      body.reason = "Escalated for legal review";
+    }
+
+    const response = await fetch(`${API_BASE}/admin/feedback/${id}/${action}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    if (!response.ok) {
+      setMessage(`Feedback action ${action} failed for ${id}`);
+      return;
+    }
+    setMessage(`Feedback action ${action} completed for ${id}`);
+    loadFeedback();
+  }
+
+  async function triggerPopulationRun() {
+    setIsTriggeringPopulation(true);
+    setMessage("");
+    try {
+      const response = await fetch(`${API_BASE}/admin/population/runs/trigger`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          admin_id: Number(populationAdminId),
+          reason: populationReason,
+        }),
+      });
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        setMessage(payload.detail || "Failed to trigger population run");
+        return;
+      }
+      setMessage(payload.status === "already_running" ? `Run already active: ${payload.run_id}` : `Run queued: ${payload.run_id}`);
+      await loadPopulationRuns();
+      if (payload.run_id) {
+        setSelectedRunId(payload.run_id);
+      }
+    } finally {
+      setIsTriggeringPopulation(false);
+    }
+  }
+
+  return (
+    <div className="space-y-4">
+      <header className="card flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+        <div>
+          <h1 className="font-display text-3xl text-ink">Unified Operations Hub</h1>
+          <p className="text-sm text-ink/70">
+            One place for public insights and admin actions. Use the left menu to switch sections without changing pages.
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-2 text-xs">
+          <Link href="/" className="rounded-lg border border-ink/20 px-3 py-2 hover:bg-white/70">Legacy Home</Link>
+          <a href={BACKEND_DOCS_URL} className="rounded-lg border border-ink/20 px-3 py-2 hover:bg-white/70" target="_blank" rel="noreferrer">API Docs</a>
+          <Link href="/admin/population" className="rounded-lg border border-ink/20 px-3 py-2 hover:bg-white/70">Population Page</Link>
+        </div>
+      </header>
+
+      {message ? <p className="rounded-lg border border-ink/20 bg-white/70 px-3 py-2 text-sm text-ink/80">{message}</p> : null}
+
+      <div className="grid gap-4 lg:grid-cols-[280px_minmax(0,1fr)]">
+        <aside className="card h-fit lg:sticky lg:top-6">
+          <h2 className="font-display text-xl">Sections</h2>
+          <p className="mt-1 text-xs text-ink/65">Everything is available in this single interface.</p>
+          <nav className="mt-3 space-y-2">
+            {SECTIONS.map((item) => (
+              <button
+                key={item.key}
+                className={`w-full rounded-lg border px-3 py-2 text-left ${
+                  section === item.key
+                    ? "border-ocean/60 bg-ocean/10"
+                    : "border-ink/10 bg-white/70 hover:bg-white"
+                }`}
+                onClick={() => setSection(item.key)}
+              >
+                <p className="text-sm font-semibold text-ink">{item.label}</p>
+                <p className="text-xs text-ink/70">{item.helper}</p>
+              </button>
+            ))}
+          </nav>
+
+          <div className="mt-4 space-y-2 rounded-xl border border-ink/10 bg-white/80 p-3 text-xs">
+            <p><span className="font-semibold">Total Cases:</span> {totalCases}</p>
+            <p><span className="font-semibold">Flags:</span> {flags.length}</p>
+            <p><span className="font-semibold">Pending Feedback:</span> {feedbackRows.length}</p>
+            <p><span className="font-semibold">Active Runs:</span> {populationRuns.filter((run) => ACTIVE_STATUSES.has(run.status)).length}</p>
+          </div>
+        </aside>
+
+        <section className="space-y-4">
+          {section === "overview" ? (
+            <div className="space-y-4">
+              <div className="grid gap-3 md:grid-cols-3">
+                <div className="card"><p className="text-xs text-ink/60">Total Cases</p><p className="font-display text-3xl">{totalCases}</p></div>
+                <div className="card"><p className="text-xs text-ink/60">Pending Cases</p><p className="font-display text-3xl">{pendingCases}</p></div>
+                <div className="card"><p className="text-xs text-ink/60">Disposed Cases</p><p className="font-display text-3xl">{disposedCases}</p></div>
+              </div>
+
+              <DelayBarChart
+                data={courtStats
+                  .slice()
+                  .sort((a, b) => b.pending_cases - a.pending_cases)
+                  .slice(0, 8)
+                  .map((item) => ({ court: item.court_name, pending: item.pending_cases }))}
+              />
+
+              <div className="card">
+                <h3 className="font-display text-xl">Recent flagged cases</h3>
+                <ul className="mt-3 space-y-2 text-sm">
+                  {flags.map((item) => (
+                    <li key={item.id} className="rounded-lg border border-ink/10 bg-white p-2">
+                      <p className="font-semibold">Case #{item.case_id} - {item.flag_type}</p>
+                      {item.details?.summary ? <p className="mt-1 text-xs text-ink/70">{item.details.summary}</p> : null}
+                    </li>
+                  ))}
+                  {flags.length === 0 ? <li>No flagged cases yet.</li> : null}
+                </ul>
+              </div>
+            </div>
+          ) : null}
+
+          {section === "search" ? (
+            <div className="space-y-4">
+              <div className="card">
+                <h3 className="font-display text-xl">Search cases</h3>
+                <p className="text-sm text-ink/70">Find cases by case number, court, or party keywords.</p>
+                <form onSubmit={submitSearch} className="mt-3 flex gap-2">
+                  <input
+                    className="w-full rounded-lg border border-ink/20 bg-white p-3"
+                    value={searchQuery}
+                    onChange={(event) => setSearchQuery(event.target.value)}
+                    placeholder="Enter case number, court, or party keyword"
+                  />
+                  <button className="rounded-lg bg-ocean px-4 py-2 text-white" type="submit">Search</button>
+                </form>
+              </div>
+
+              <div className="card">
+                <h3 className="font-display text-xl">Results</h3>
+                <ul className="mt-3 space-y-2 text-sm">
+                  {searchResults.map((item) => (
+                    <li key={item.id} className="rounded-lg border border-ink/10 bg-white p-2">
+                      <p className="font-semibold">{item.case_number}</p>
+                      <p className="text-ink/70">Status: {item.status}</p>
+                      <Link className="text-xs text-ocean underline" href={`/cases/${item.id}`}>Open full case page</Link>
+                    </li>
+                  ))}
+                  {searchResults.length === 0 ? <li>No search results yet.</li> : null}
+                </ul>
+              </div>
+            </div>
+          ) : null}
+
+          {section === "judges" ? (
+            <div className="space-y-4">
+              <div className="card">
+                <h3 className="font-display text-xl">Judge directory</h3>
+                <p className="text-sm text-ink/70">Select a judge to load stats in this panel.</p>
+                <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                  {judges.slice(0, 24).map((judge) => (
+                    <button
+                      key={judge.id}
+                      className={`rounded-lg border px-3 py-2 text-left text-sm ${
+                        selectedJudgeId === judge.id ? "border-ocean/60 bg-ocean/10" : "border-ink/10 bg-white"
+                      }`}
+                      onClick={() => setSelectedJudgeId(judge.id)}
+                    >
+                      {judge.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="card">
+                <h3 className="font-display text-xl">Judge stats</h3>
+                {judgeStats ? (
+                  <div className="mt-3 grid gap-3 sm:grid-cols-3">
+                    <div className="rounded-lg border border-ink/10 bg-white p-3">
+                      <p className="text-xs text-ink/60">Total hearings</p>
+                      <p className="text-xl font-semibold">{judgeStats.total_hearings}</p>
+                    </div>
+                    <div className="rounded-lg border border-ink/10 bg-white p-3">
+                      <p className="text-xs text-ink/60">Adjournment rate</p>
+                      <p className="text-xl font-semibold">{fmtPercent(judgeStats.adjournment_rate)}</p>
+                    </div>
+                    <div className="rounded-lg border border-ink/10 bg-white p-3">
+                      <p className="text-xs text-ink/60">Median disposal (days)</p>
+                      <p className="text-xl font-semibold">{judgeStats.median_disposal_days.toFixed(0)}</p>
+                    </div>
+                  </div>
+                ) : (
+                  <p className="mt-2 text-sm text-ink/70">Pick a judge to view stats.</p>
+                )}
+              </div>
+            </div>
+          ) : null}
+
+          {section === "heatmap" ? (
+            <div className="card">
+              <h3 className="font-display text-xl">Court delay heatmap</h3>
+              <div className="mt-3 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+                {courtStats.map((court) => {
+                  const intensity = Math.min(1, court.backlog_ratio);
+                  const bg = `rgba(209, 118, 79, ${0.2 + intensity * 0.7})`;
+                  return (
+                    <div key={court.court_id} className="rounded-lg border border-ink/10 p-3" style={{ background: bg }}>
+                      <p className="font-semibold">{court.court_name}</p>
+                      <p className="text-sm">Backlog ratio: {fmtPercent(court.backlog_ratio)}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          ) : null}
+
+          {section === "open_data" ? (
+            <div className="card">
+              <h3 className="font-display text-xl">Open data catalog</h3>
+              <p className="text-sm text-ink/70">Download datasets directly from this hub.</p>
+              <div className="mt-3 space-y-2">
+                {datasets.map((dataset) => (
+                  <article key={dataset.dataset_id} className="rounded-lg border border-ink/10 bg-white p-3">
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <p className="font-semibold">{dataset.name}</p>
+                      <span className="rounded-full bg-ink/5 px-2 py-1 text-xs">v{dataset.version}</span>
+                    </div>
+                    <p className="mt-1 text-sm text-ink/70">{dataset.description}</p>
+                    <div className="mt-2 flex flex-wrap gap-2 text-xs">
+                      <a className="rounded bg-ocean px-2 py-1 text-white" href={`/api/v1/datasets/${dataset.dataset_id}/download?format=csv`}>CSV</a>
+                      <a className="rounded bg-accent px-2 py-1 text-white" href={`/api/v1/datasets/${dataset.dataset_id}/download?format=json`}>JSON</a>
+                      <a className="rounded border border-ink/20 px-2 py-1" href={`/api/v1/datasets/${dataset.dataset_id}/schema`}>Schema</a>
+                    </div>
+                  </article>
+                ))}
+                {datasets.length === 0 ? <p className="text-sm text-ink/70">No datasets available.</p> : null}
+              </div>
+            </div>
+          ) : null}
+
+          {section === "corrections" ? (
+            <div className="space-y-4">
+              <div className="card">
+                <h3 className="font-display text-xl">Submit correction</h3>
+                <p className="text-sm text-ink/70">Configure target type and target id, then submit in one step.</p>
+                <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                  <label className="text-xs text-ink/70">
+                    Target type
+                    <select
+                      className="mt-1 w-full rounded border border-ink/20 p-2"
+                      value={correctionTargetType}
+                      onChange={(event) => setCorrectionTargetType(event.target.value as "case" | "flag" | "evidence" | "hearing")}
+                    >
+                      <option value="case">Case</option>
+                      <option value="flag">Flag</option>
+                      <option value="evidence">Evidence</option>
+                      <option value="hearing">Hearing</option>
+                    </select>
+                  </label>
+                  <label className="text-xs text-ink/70">
+                    Target id
+                    <input
+                      className="mt-1 w-full rounded border border-ink/20 p-2"
+                      type="number"
+                      min={1}
+                      value={correctionTargetId}
+                      onChange={(event) => setCorrectionTargetId(Number(event.target.value || 1))}
+                    />
+                  </label>
+                </div>
+                <div className="mt-3">
+                  <CorrectionRequestForm
+                    key={`${correctionTargetType}-${correctionTargetId}`}
+                    targetType={correctionTargetType}
+                    targetId={correctionTargetId}
+                  />
+                </div>
+              </div>
+              <div className="card">
+                <AdminCorrectionQueue />
+              </div>
+            </div>
+          ) : null}
+
+          {section === "feedback" ? (
+            <div className="card space-y-3">
+              <h3 className="font-display text-xl">Right-to-Respond moderation</h3>
+              <label className="block text-sm">
+                Admin ID
+                <input
+                  className="ml-2 w-24 rounded border border-ink/20 p-1"
+                  value={feedbackAdminId}
+                  onChange={(event) => setFeedbackAdminId(event.target.value)}
+                />
+              </label>
+
+              <div className="space-y-2">
+                {feedbackRows.map((item) => (
+                  <article key={item.id} className="rounded-lg border border-ink/10 bg-white p-3 text-sm">
+                    <p className="font-semibold">Case {item.case_id} - {item.responder_name}</p>
+                    <p className="text-xs text-ink/70">{item.responder_affiliation || "No affiliation"} - {item.responder_contact}</p>
+                    <p className="text-xs text-ink/70">Submitted: {fmtDate(item.submitted_at)}</p>
+                    <div className="mt-2 flex flex-wrap gap-2 text-xs">
+                      <button className="rounded bg-slate-700 px-2 py-1 text-white" onClick={() => feedbackAction(item.id, "verify")}>Verify</button>
+                      <button className="rounded bg-emerald-700 px-2 py-1 text-white" onClick={() => feedbackAction(item.id, "publish")}>Publish</button>
+                      <button className="rounded bg-amber-700 px-2 py-1 text-white" onClick={() => feedbackAction(item.id, "limit")}>Limit</button>
+                      <button className="rounded bg-rose-700 px-2 py-1 text-white" onClick={() => feedbackAction(item.id, "reject")}>Reject</button>
+                      <button className="rounded bg-indigo-700 px-2 py-1 text-white" onClick={() => feedbackAction(item.id, "escalate")}>Escalate</button>
+                    </div>
+                  </article>
+                ))}
+                {feedbackRows.length === 0 ? <p className="text-sm text-ink/70">No pending feedback items.</p> : null}
+              </div>
+            </div>
+          ) : null}
+
+          {section === "population" ? (
+            <div className="space-y-4">
+              <div className="card">
+                <h3 className="font-display text-xl">Population run controls</h3>
+                <p className="text-sm text-ink/70">Start and monitor full-source ingestion directly from this panel.</p>
+                <div className="mt-3 flex flex-wrap items-end gap-3">
+                  <label className="text-xs text-ink/70">
+                    Admin ID
+                    <input
+                      className="mt-1 w-24 rounded border border-ink/20 p-2"
+                      value={populationAdminId}
+                      onChange={(event) => setPopulationAdminId(event.target.value)}
+                    />
+                  </label>
+                  <label className="min-w-[280px] flex-1 text-xs text-ink/70">
+                    Reason
+                    <input
+                      className="mt-1 w-full rounded border border-ink/20 p-2"
+                      value={populationReason}
+                      onChange={(event) => setPopulationReason(event.target.value)}
+                    />
+                  </label>
+                  <button
+                    className="rounded bg-ocean px-3 py-2 text-xs text-white disabled:cursor-not-allowed disabled:opacity-60"
+                    onClick={triggerPopulationRun}
+                    disabled={isTriggeringPopulation || hasActivePopulationRun}
+                  >
+                    {hasActivePopulationRun ? "Run in progress" : isTriggeringPopulation ? "Queueing..." : "Start population"}
+                  </button>
+                </div>
+              </div>
+
+              <div className="grid gap-4 lg:grid-cols-2">
+                <article className="card">
+                  <h4 className="font-display text-lg">Recent runs</h4>
+                  <div className="mt-3 space-y-2">
+                    {populationRuns.map((run) => (
+                      <button
+                        key={run.run_id}
+                        className="w-full rounded-lg border border-ink/10 bg-white p-2 text-left text-xs hover:bg-slate-50"
+                        onClick={() => setSelectedRunId(run.run_id)}
+                      >
+                        <p className="font-semibold">{run.run_id}</p>
+                        <p className="text-ink/70">
+                          {run.status} - {run.completed_sources}/{run.total_sources} sources - {run.records_processed} processed
+                        </p>
+                      </button>
+                    ))}
+                    {populationRuns.length === 0 ? <p className="text-xs text-ink/70">No runs yet.</p> : null}
+                  </div>
+                </article>
+
+                <article className="card">
+                  <h4 className="font-display text-lg">Run details</h4>
+                  {populationDetail ? (
+                    <div className="mt-3 space-y-2 text-xs">
+                      <p><span className="font-semibold">Status:</span> {populationDetail.run.status}</p>
+                      <p><span className="font-semibold">Trigger:</span> {populationDetail.run.trigger_type}</p>
+                      <p><span className="font-semibold">Started:</span> {fmtDate(populationDetail.run.started_at)}</p>
+                      <p>
+                        <span className="font-semibold">Records:</span> {populationDetail.run.records_processed} processed / {populationDetail.run.records_failed} failed
+                      </p>
+                      <div className="max-h-72 space-y-1 overflow-auto rounded border border-ink/10 p-2">
+                        {populationDetail.sources.map((source) => (
+                          <div key={source.id} className="rounded border border-ink/10 p-2">
+                            <p className="font-semibold">{source.source_name}</p>
+                            <p className="text-ink/70">
+                              {source.status} - {source.records_processed} processed - {source.records_failed} failed
+                            </p>
+                            {source.error_summary ? <p className="text-rose-700">{source.error_summary}</p> : null}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <p className="mt-2 text-xs text-ink/70">Select a run to inspect source-level progress.</p>
+                  )}
+                </article>
+              </div>
+            </div>
+          ) : null}
+        </section>
+      </div>
+    </div>
+  );
+}

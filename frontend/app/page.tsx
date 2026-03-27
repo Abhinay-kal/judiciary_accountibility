@@ -33,9 +33,14 @@ export default async function HomePage() {
         <p className="max-w-3xl text-sm text-ink/70">
           Data aggregated from public judicial sources. Verify with official records.
         </p>
-        <Link href="/open-data" className="inline-block rounded-lg bg-ocean px-4 py-2 text-sm font-semibold text-white">
-          Explore Open Data Catalog
-        </Link>
+        <div className="flex flex-wrap gap-2">
+          <Link href="/hub" className="inline-block rounded-lg bg-ocean px-4 py-2 text-sm font-semibold text-white">
+            Open Unified Hub
+          </Link>
+          <Link href="/open-data" className="inline-block rounded-lg border border-ink/20 px-4 py-2 text-sm font-semibold text-ink">
+            Explore Open Data Catalog
+          </Link>
+        </div>
       </header>
 
       <section className="grid gap-4 md:grid-cols-3">
