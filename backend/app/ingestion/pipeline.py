@@ -66,6 +66,12 @@ from app.ingestion.models import (
     IngestionSource,
 )
 from app.ingestion.cas import store_payload
+from app.scrapers.sources import (
+    ECourtsScraper,
+    HighCourtCauseListScraper,
+    NJDGScraper,
+    SupremeCourtCauseListScraper,
+)
 from app.storage.storage_client import StorageClient
 
 logger = logging.getLogger(__name__)
@@ -457,7 +463,16 @@ class ResilientIngestionPipeline:
     # Scraper registry
     # ------------------------------------------------------------------
 
-    _SCRAPER_REGISTRY: dict[str, type] = {}
+    _SCRAPER_REGISTRY: dict[str, type] = {
+        # Canonical scraper source names
+        "njdg": NJDGScraper,
+        "ecourts": ECourtsScraper,
+        "supreme_court": SupremeCourtCauseListScraper,
+        "high_court": HighCourtCauseListScraper,
+        # Backward-compatible aliases for existing ingestion_sources rows
+        "ecourts_services": ECourtsScraper,
+        "supreme_court_causelist": SupremeCourtCauseListScraper,
+    }
 
     @classmethod
     def register_scraper(cls, source_name: str, scraper_cls: type) -> None:

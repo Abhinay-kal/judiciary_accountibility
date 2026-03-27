@@ -20,6 +20,22 @@ body {
   min-height: 100vh;
 }
 
+@keyframes routeFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.route-shell {
+  animation: routeFadeIn 120ms ease-out;
+  will-change: opacity, transform;
+}
+
 .card {
   @apply rounded-2xl border border-ink/10 bg-white/70 p-5 shadow-sm backdrop-blur;
 }

@@ -157,6 +157,7 @@ function UnifiedHubInner() {
   const searchParams = useSearchParams();
 
   const [section, setSection] = useState<HubSectionKey>(() => asSection(searchParams.get("section")));
+  const [mountedSections, setMountedSections] = useState<Set<HubSectionKey>>(() => new Set([asSection(searchParams.get("section"))]));
   const [message, setMessage] = useState("");
 
   const [courtStats, setCourtStats] = useState<CourtStat[]>([]);
@@ -223,7 +224,7 @@ function UnifiedHubInner() {
 
   const updateQueryParams = useCallback(
     (entries: Record<string, string | null>) => {
-      const params = new URLSearchParams(searchParams.toString());
+      const params = new URLSearchParams(window.location.search);
       for (const [key, value] of Object.entries(entries)) {
         if (value === null || value === "") {
           params.delete(key);
@@ -234,14 +235,13 @@ function UnifiedHubInner() {
 
       const query = params.toString();
       const nextUrl = query ? `${pathname}?${query}` : pathname;
-      const currentQuery = searchParams.toString();
-      const currentUrl = currentQuery ? `${pathname}?${currentQuery}` : pathname;
+      const currentUrl = `${window.location.pathname}${window.location.search}`;
       if (nextUrl === currentUrl) {
         return;
       }
       window.history.replaceState(null, "", nextUrl);
     },
-    [pathname, searchParams]
+    [pathname]
   );
 
   const fetchJsonDedup = useCallback(
@@ -308,13 +308,12 @@ function UnifiedHubInner() {
     ).catch(() => ({ items: [] }));
     const runs = payload.items || [];
     setPopulationRuns(runs);
-    if (!selectedRunId && runs.length > 0) {
+    if (runs.length > 0) {
       const firstRun = runs[0].run_id;
-      setSelectedRunId(firstRun);
-      updateQueryParams({ run_id: firstRun });
+      setSelectedRunId((previous) => previous ?? firstRun);
     }
     setIsLoadingPopulation(false);
-  }, [fetchJsonDedup, selectedRunId, updateQueryParams]);
+  }, [fetchJsonDedup]);
 
   const loadPopulationDetail = useCallback(async (runId: string) => {
     setIsLoadingPopulationDetail(true);
@@ -353,17 +352,6 @@ function UnifiedHubInner() {
   }, [fetchJsonDedup, updateQueryParams]);
 
   useEffect(() => {
-    const nextSection = asSection(searchParams.get("section"));
-    if (nextSection !== section) {
-      setSection(nextSection);
-    }
-    const nextSearchQuery = searchParams.get("q") ?? "";
-    if (nextSearchQuery !== searchQuery) {
-      setSearchQuery(nextSearchQuery);
-    }
-  }, [searchParams, section, searchQuery]);
-
-  useEffect(() => {
     if (section !== "search") {
       return;
     }
@@ -390,6 +378,17 @@ function UnifiedHubInner() {
       loadPopulationRuns();
     }
   }, [section, loadFeedback, loadPopulationRuns, loadPublicOverview]);
+
+  useEffect(() => {
+    setMountedSections((previous) => {
+      if (previous.has(section)) {
+        return previous;
+      }
+      const next = new Set(previous);
+      next.add(section);
+      return next;
+    });
+  }, [section]);
 
   useEffect(() => {
     if (!selectedJudgeId) {
@@ -433,20 +432,14 @@ function UnifiedHubInner() {
   }, [section, hasActivePopulationRun, selectedRunId, loadPopulationRuns, loadPopulationDetail]);
 
   useEffect(() => {
-    updateQueryParams({ section });
-  }, [section, updateQueryParams]);
-
-  useEffect(() => {
-    updateQueryParams({ judge_id: selectedJudgeId ? String(selectedJudgeId) : null });
-  }, [selectedJudgeId, updateQueryParams]);
-
-  useEffect(() => {
-    updateQueryParams({ target_type: correctionTargetType, target_id: String(correctionTargetId) });
-  }, [correctionTargetType, correctionTargetId, updateQueryParams]);
-
-  useEffect(() => {
-    updateQueryParams({ run_id: selectedRunId || null });
-  }, [selectedRunId, updateQueryParams]);
+    updateQueryParams({
+      section,
+      judge_id: selectedJudgeId ? String(selectedJudgeId) : null,
+      target_type: correctionTargetType,
+      target_id: String(correctionTargetId),
+      run_id: selectedRunId || null,
+    });
+  }, [section, selectedJudgeId, correctionTargetType, correctionTargetId, selectedRunId, updateQueryParams]);
 
   async function submitSearch(event: FormEvent) {
     event.preventDefault();
@@ -565,8 +558,8 @@ function UnifiedHubInner() {
         </aside>
 
         <section className="space-y-4">
-          {section === "overview" ? (
-            <div className="space-y-4">
+          {section === "overview" || mountedSections.has("overview") ? (
+            <div className={section === "overview" ? "space-y-4" : "hidden"}>
               {isLoadingPublic && courtStats.length === 0 ? <SectionSkeleton rows={5} /> : null}
               <div className="grid gap-3 md:grid-cols-3">
                 <div className="card"><p className="text-xs text-ink/60">Total Cases</p><p className="font-display text-3xl">{totalCases}</p></div>
@@ -597,8 +590,8 @@ function UnifiedHubInner() {
             </div>
           ) : null}
 
-          {section === "search" ? (
-            <div className="space-y-4">
+          {section === "search" || mountedSections.has("search") ? (
+            <div className={section === "search" ? "space-y-4" : "hidden"}>
               <div className="card">
                 <h3 className="font-display text-xl">Search cases</h3>
                 <p className="text-sm text-ink/70">Find cases by case number, court, or party keywords.</p>
@@ -630,8 +623,8 @@ function UnifiedHubInner() {
             </div>
           ) : null}
 
-          {section === "judges" ? (
-            <div className="space-y-4">
+          {section === "judges" || mountedSections.has("judges") ? (
+            <div className={section === "judges" ? "space-y-4" : "hidden"}>
               <div className="card">
                 <h3 className="font-display text-xl">Judge directory</h3>
                 <p className="text-sm text-ink/70">Select a judge to load stats in this panel.</p>
@@ -676,8 +669,8 @@ function UnifiedHubInner() {
             </div>
           ) : null}
 
-          {section === "heatmap" ? (
-            <div className="card">
+          {section === "heatmap" || mountedSections.has("heatmap") ? (
+            <div className={section === "heatmap" ? "card" : "hidden"}>
               <h3 className="font-display text-xl">Court delay heatmap</h3>
               {isLoadingPublic && courtStats.length === 0 ? <SectionSkeleton rows={4} /> : null}
               <div className="mt-3 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
@@ -695,8 +688,8 @@ function UnifiedHubInner() {
             </div>
           ) : null}
 
-          {section === "open_data" ? (
-            <div className="card">
+          {section === "open_data" || mountedSections.has("open_data") ? (
+            <div className={section === "open_data" ? "card" : "hidden"}>
               <h3 className="font-display text-xl">Open data catalog</h3>
               <p className="text-sm text-ink/70">Download datasets directly from this hub.</p>
               {isLoadingPublic && datasets.length === 0 ? <SectionSkeleton rows={3} /> : null}
@@ -720,8 +713,8 @@ function UnifiedHubInner() {
             </div>
           ) : null}
 
-          {section === "corrections" ? (
-            <div className="space-y-4">
+          {section === "corrections" || mountedSections.has("corrections") ? (
+            <div className={section === "corrections" ? "space-y-4" : "hidden"}>
               <div className="card">
                 <h3 className="font-display text-xl">Submit correction</h3>
                 <p className="text-sm text-ink/70">Configure target type and target id, then submit in one step.</p>
@@ -764,8 +757,8 @@ function UnifiedHubInner() {
             </div>
           ) : null}
 
-          {section === "feedback" ? (
-            <div className="card space-y-3">
+          {section === "feedback" || mountedSections.has("feedback") ? (
+            <div className={section === "feedback" ? "card space-y-3" : "hidden"}>
               <h3 className="font-display text-xl">Right-to-Respond moderation</h3>
               <label className="block text-sm">
                 Admin ID
@@ -797,8 +790,8 @@ function UnifiedHubInner() {
             </div>
           ) : null}
 
-          {section === "population" ? (
-            <div className="space-y-4">
+          {section === "population" || mountedSections.has("population") ? (
+            <div className={section === "population" ? "space-y-4" : "hidden"}>
               <div className="card">
                 <h3 className="font-display text-xl">Population run controls</h3>
                 <p className="text-sm text-ink/70">Start and monitor full-source ingestion directly from this panel.</p>

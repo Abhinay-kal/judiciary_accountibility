@@ -198,6 +198,13 @@ def _ensure_ingestion_sources(db: Session) -> int:
             "priority": 2,
             "expected_update_interval_minutes": 1440,
         },
+        {
+            "source_name": "high_court",
+            "source_type": "HTML",
+            "base_url": "https://www.allahabadhighcourt.in/",
+            "priority": 3,
+            "expected_update_interval_minutes": 1440,
+        },
     ]
 
     created = 0

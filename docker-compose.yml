@@ -68,7 +68,7 @@ services:
     volumes:
       - ./backend:/app
     healthcheck:
-      test: ["CMD", "celery", "-A", "app.celery_app.celery_app", "inspect", "ping", "-d", "celery@$$HOSTNAME"]
+      test: ["CMD", "celery", "-A", "app.celery_app.celery_app", "inspect", "ping"]
       interval: 30s
       timeout: 10s
       retries: 10
