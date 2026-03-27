@@ -51,12 +51,22 @@ RUN_SUCCESS = "SUCCESS"
 RUN_PARTIAL = "PARTIAL"
 RUN_FAILED = "FAILED"
 
+POPULATION_QUEUED = "QUEUED"
+POPULATION_RUNNING = "RUNNING"
+POPULATION_SUCCESS = "SUCCESS"
+POPULATION_PARTIAL = "PARTIAL"
+POPULATION_FAILED = "FAILED"
+
+POPULATION_TRIGGER_MANUAL = "MANUAL"
+POPULATION_TRIGGER_SCHEDULED = "SCHEDULED"
+
 # Valid source types
 SOURCE_HTML = "HTML"
 SOURCE_JSON = "JSON"
 SOURCE_PDF = "PDF"
 SOURCE_API = "API"
 SOURCE_SCRAPER = "SCRAPER"
+INGESTION_SOURCE_FK = "ingestion_sources.id"
 
 
 class IngestionSource(Base):
@@ -153,7 +163,7 @@ class IngestionRun(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
     run_id: Mapped[str] = mapped_column(String(64), nullable=False, unique=True, index=True)
     source_id: Mapped[int] = mapped_column(
-        ForeignKey("ingestion_sources.id"), nullable=False, index=True
+        ForeignKey(INGESTION_SOURCE_FK), nullable=False, index=True
     )
 
     # Timing
@@ -218,7 +228,7 @@ class RawPayload(Base):
     retrieved_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), nullable=False
     )
-    source_id: Mapped[int] = mapped_column(ForeignKey("ingestion_sources.id"), nullable=False, index=True)
+    source_id: Mapped[int] = mapped_column(ForeignKey(INGESTION_SOURCE_FK), nullable=False, index=True)
     ingestion_run_id: Mapped[Optional[int]] = mapped_column(
         ForeignKey("ingestion_runs.id"), nullable=True, index=True
     )
@@ -226,3 +236,85 @@ class RawPayload(Base):
 
     source: Mapped["IngestionSource"] = relationship()
     ingestion_run: Mapped[Optional["IngestionRun"]] = relationship(back_populates="raw_payloads")
+
+
+class PopulationRun(Base):
+    """Tracks a parent population run across all active ingestion sources."""
+
+    __tablename__ = "population_runs"
+    __table_args__ = (
+        Index("idx_population_runs_status_started", "status", "started_at"),
+        Index("idx_population_runs_trigger_started", "trigger_type", "started_at"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
+    run_id: Mapped[str] = mapped_column(String(64), nullable=False, unique=True, index=True)
+    trigger_type: Mapped[str] = mapped_column(String(20), nullable=False, default=POPULATION_TRIGGER_MANUAL)
+    status: Mapped[str] = mapped_column(String(20), nullable=False, default=POPULATION_QUEUED, index=True)
+    admin_id: Mapped[Optional[int]] = mapped_column(Integer, nullable=True, index=True)
+    reason: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    root_task_id: Mapped[Optional[str]] = mapped_column(String(64), nullable=True, index=True)
+
+    total_sources: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    completed_sources: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    successful_sources: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    failed_sources: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    records_processed: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    records_failed: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+
+    diagnostics: Mapped[dict] = mapped_column(JSONB, nullable=False, default=dict)
+
+    started_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False
+    )
+    finished_at: Mapped[Optional[datetime]] = mapped_column(
+        DateTime(timezone=True), nullable=True
+    )
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False
+    )
+
+    source_runs: Mapped[list["PopulationSourceRun"]] = relationship(
+        back_populates="population_run",
+        order_by="PopulationSourceRun.id.asc()",
+        cascade="all, delete-orphan",
+    )
+
+
+class PopulationSourceRun(Base):
+    """Tracks source-level progress and diagnostics for one population run."""
+
+    __tablename__ = "population_source_runs"
+    __table_args__ = (
+        Index("idx_population_source_runs_run_status", "population_run_id", "status"),
+        Index("idx_population_source_runs_source", "source_id"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
+    population_run_id: Mapped[int] = mapped_column(
+        ForeignKey("population_runs.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
+    )
+    source_id: Mapped[int] = mapped_column(
+        ForeignKey(INGESTION_SOURCE_FK, ondelete="CASCADE"),
+        nullable=False,
+        index=True,
+    )
+    source_name: Mapped[str] = mapped_column(String(100), nullable=False)
+    status: Mapped[str] = mapped_column(String(20), nullable=False, default=POPULATION_QUEUED, index=True)
+    task_id: Mapped[Optional[str]] = mapped_column(String(64), nullable=True, index=True)
+    records_processed: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    records_failed: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    error_summary: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    diagnostics: Mapped[dict] = mapped_column(JSONB, nullable=False, default=dict)
+
+    started_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False
+    )
+    finished_at: Mapped[Optional[datetime]] = mapped_column(
+        DateTime(timezone=True), nullable=True
+    )
+
+    population_run: Mapped["PopulationRun"] = relationship(back_populates="source_runs")
+    source: Mapped["IngestionSource"] = relationship()

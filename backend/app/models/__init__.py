@@ -1,5 +1,5 @@
 from app.models.entities import Adjournment, Case, CaseFeedback, CaseMediaMention, CasePartyLink, CasePrediction, ContentLabel, ContentLabelKind, ContentLabelSource, CorrectionRequest, CorrectionRequestStatus, Court, DelayBaseline, FeedbackAuditAction, FeedbackAuditLog, FeedbackDisplayLabel, FeedbackPublicStatus, FeedbackReceivedVia, FeedbackResponderType, FeedbackVerification, FeedbackVerificationMethod, Flag, Hearing, HearingOutcomeAudit, HearingOutcomeType, ImportanceAuditLog, ImportanceConfig, IngestionLog, InvestigationSnapshot, Judge, JudgeAssignment, JudgeAssignmentRole, JudgeAttributionAudit, JudgeRegistry, ModerationActionType, ModerationLog, ModerationTargetType, Order, PublicOfficial, PublicStatus, SurvivalCurve
-from app.ingestion.models import IngestionSource, IngestionRun
+from app.ingestion.models import IngestionRun, IngestionSource, PopulationRun, PopulationSourceRun
 from app.provenance.models import FieldProvenance, ProvenanceLink
 from app.cache.precomputed import CaseTypeMetricsCache, CourtStatsCache, JudgeStatsCache, StateMetricsCache
 
@@ -38,6 +38,8 @@ __all__ = [
     "ImportanceAuditLog",
     "IngestionSource",
     "IngestionRun",
+    "PopulationRun",
+    "PopulationSourceRun",
     "CaseFeedback",
     "FeedbackVerification",
     "FeedbackAuditLog",

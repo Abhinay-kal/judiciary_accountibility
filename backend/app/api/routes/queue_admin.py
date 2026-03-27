@@ -29,6 +29,7 @@ class TriggerPipelineRequest(BaseModel):
 _ALLOWED_MANUAL_TASKS = {
     "app.tasks.ingestion.run_daily_ingestion": "ingestion",
     "app.tasks.ingestion_tasks.run_ingestion_scheduler": "ingestion",
+    "app.tasks.population.start_population_run": "ingestion",
     "app.tasks.delay_analytics.run_delay_analytics_pipeline": "analytics",
     "app.tasks.survival_analytics.run_survival_pipeline": "analytics",
     "app.tasks.cache_tasks.refresh_precomputed_cache": "analytics",

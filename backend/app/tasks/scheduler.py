@@ -68,6 +68,11 @@ celery_app.conf.beat_schedule = {
         "schedule": crontab(minute=45, hour=7),
         "args": (_settings.delay_update_batch_size,),
     },
+    "daily-admin-population-run": {
+        "task": "app.tasks.population.start_population_run",
+        "schedule": crontab(minute=15, hour=3),
+        "kwargs": {"trigger_type": "SCHEDULED", "reason": "daily scheduled population"},
+    },
     "daily-survival-curves-recompute": {
         "task": "app.tasks.survival_analytics.recompute_survival_curves",
         "schedule": crontab(minute=15, hour=8),

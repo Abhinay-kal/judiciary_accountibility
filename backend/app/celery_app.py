@@ -21,6 +21,7 @@ celery_app.conf.imports = (
     "app.tasks.dormancy_analytics",
     "app.tasks.cache_tasks",
     "app.tasks.notifications",
+    "app.tasks.population",
 )
 
 celery_app.autodiscover_tasks(["app.tasks"])
