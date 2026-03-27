@@ -2,8 +2,8 @@
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
+import { FormEvent, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 const AdminCorrectionQueue = dynamic(
   () => import("@/components/AdminCorrectionQueue").then((module) => module.AdminCorrectionQueue),
@@ -142,8 +142,7 @@ function fmtDate(value: string): string {
   return parsed.toLocaleString();
 }
 
-export default function UnifiedHubPage() {
-  const router = useRouter();
+function UnifiedHubInner() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -205,79 +204,158 @@ export default function UnifiedHubPage() {
   const pendingCases = useMemo(() => courtStats.reduce((sum, item) => sum + item.pending_cases, 0), [courtStats]);
   const disposedCases = useMemo(() => courtStats.reduce((sum, item) => sum + item.disposed_cases, 0), [courtStats]);
 
+  const updateQueryParams = useCallback(
+    (entries: Record<string, string | null>) => {
+      const params = new URLSearchParams(searchParams.toString());
+      for (const [key, value] of Object.entries(entries)) {
+        if (value === null || value === "") {
+          params.delete(key);
+        } else {
+          params.set(key, value);
+        }
+      }
+
+      const query = params.toString();
+      const nextUrl = query ? `${pathname}?${query}` : pathname;
+      const currentQuery = searchParams.toString();
+      const currentUrl = currentQuery ? `${pathname}?${currentQuery}` : pathname;
+      if (nextUrl === currentUrl) {
+        return;
+      }
+      window.history.replaceState(null, "", nextUrl);
+    },
+    [pathname, searchParams]
+  );
+
+  const fetchJsonDedup = useCallback(
+    async <T,>(key: string, url: string): Promise<T> => {
+      const existing = inFlightRequests.current.get(key);
+      if (existing) {
+        return existing as Promise<T>;
+      }
+
+      const pending = (async () => {
+        const response = await fetch(url, { cache: "no-store" });
+        if (!response.ok) {
+          throw new Error(`Request failed for ${key}`);
+        }
+        return (await response.json()) as T;
+      })();
+
+      inFlightRequests.current.set(key, pending as Promise<unknown>);
+      try {
+        return await pending;
+      } finally {
+        inFlightRequests.current.delete(key);
+      }
+    },
+    []
+  );
+
   const loadPublicOverview = useCallback(async () => {
-    const [statsResponse, flagsResponse, datasetsResponse, judgesResponse] = await Promise.all([
-      fetch(`${API_BASE}/stats/court`),
-      fetch(`${API_BASE}/flags?page=1&page_size=8`),
-      fetch(`${API_BASE}/datasets`),
-      fetch(`${API_BASE}/judges`),
-    ]);
+    try {
+      const [statsPayload, flagsPayload, datasetsPayload, judgesPayload] = await Promise.all([
+        fetchJsonDedup<CourtStat[]>("stats.court", `${API_BASE}/stats/court`).catch(() => []),
+        fetchJsonDedup<{ items: FlagItem[] }>("flags.first_page", `${API_BASE}/flags?page=1&page_size=8`).catch(() => ({ items: [] })),
+        fetchJsonDedup<{ items: DatasetItem[] }>("datasets.catalog", `${API_BASE}/datasets`).catch(() => ({ items: [] })),
+        fetchJsonDedup<JudgeItem[]>("judges.all", `${API_BASE}/judges`).catch(() => []),
+      ]);
 
-    const statsPayload = await statsResponse.json().catch(() => []);
-    const flagsPayload = await flagsResponse.json().catch(() => ({ items: [] }));
-    const datasetsPayload = await datasetsResponse.json().catch(() => ({ items: [] }));
-    const judgesPayload = await judgesResponse.json().catch(() => []);
-
-    setCourtStats(Array.isArray(statsPayload) ? statsPayload : []);
-    setFlags(Array.isArray(flagsPayload.items) ? flagsPayload.items : []);
-    setDatasets(Array.isArray(datasetsPayload.items) ? datasetsPayload.items : []);
-    setJudges(Array.isArray(judgesPayload) ? judgesPayload : []);
-  }, []);
+      setCourtStats(Array.isArray(statsPayload) ? statsPayload : []);
+      setFlags(Array.isArray(flagsPayload.items) ? flagsPayload.items : []);
+      setDatasets(Array.isArray(datasetsPayload.items) ? datasetsPayload.items : []);
+      setJudges(Array.isArray(judgesPayload) ? judgesPayload : []);
+    } catch {
+      setMessage("Failed to load overview data.");
+    }
+  }, [fetchJsonDedup]);
 
   const loadFeedback = useCallback(async () => {
-    const response = await fetch(`${API_BASE}/admin/feedback/pending`);
-    const payload = await response.json().catch(() => ({ items: [] }));
+    const payload = await fetchJsonDedup<{ items: PendingFeedbackItem[] }>(
+      "feedback.pending",
+      `${API_BASE}/admin/feedback/pending`
+    ).catch(() => ({ items: [] }));
     setFeedbackRows(payload.items || []);
-  }, []);
+  }, [fetchJsonDedup]);
 
   const loadPopulationRuns = useCallback(async () => {
-    const response = await fetch(`${API_BASE}/admin/population/runs?limit=20&offset=0`);
-    const payload = await response.json().catch(() => ({ items: [] }));
+    const payload = await fetchJsonDedup<{ items: PopulationRunItem[] }>(
+      "population.runs",
+      `${API_BASE}/admin/population/runs?limit=20&offset=0`
+    ).catch(() => ({ items: [] }));
     const runs = payload.items || [];
     setPopulationRuns(runs);
     if (!selectedRunId && runs.length > 0) {
-      setSelectedRunId(runs[0].run_id);
+      const firstRun = runs[0].run_id;
+      setSelectedRunId(firstRun);
+      updateQueryParams({ run_id: firstRun });
     }
-  }, [selectedRunId]);
+  }, [fetchJsonDedup, selectedRunId, updateQueryParams]);
 
   const loadPopulationDetail = useCallback(async (runId: string) => {
-    const response = await fetch(`${API_BASE}/admin/population/runs/${runId}`);
-    const payload = await response.json().catch(() => null);
-    if (!response.ok || !payload) {
+    const payload = await fetchJsonDedup<PopulationRunDetail>(
+      `population.detail.${runId}`,
+      `${API_BASE}/admin/population/runs/${runId}`
+    ).catch(() => null);
+    if (!payload) {
       setMessage(`Failed to load run details for ${runId}`);
       return;
     }
     setPopulationDetail(payload);
-  }, []);
+  }, [fetchJsonDedup]);
 
   useEffect(() => {
-    loadPublicOverview();
-    loadFeedback();
-    loadPopulationRuns();
-  }, [loadPublicOverview, loadFeedback, loadPopulationRuns]);
+    const nextSection = asSection(searchParams.get("section"));
+    if (nextSection !== section) {
+      setSection(nextSection);
+    }
+  }, [searchParams, section]);
+
+  useEffect(() => {
+    const needsPublicData = section === "overview" || section === "judges" || section === "heatmap" || section === "open_data";
+    if (needsPublicData && !publicDataLoaded.current) {
+      publicDataLoaded.current = true;
+      loadPublicOverview();
+    }
+    if (section === "feedback" && !feedbackLoaded.current) {
+      feedbackLoaded.current = true;
+      loadFeedback();
+    }
+    if (section === "population" && !populationLoaded.current) {
+      populationLoaded.current = true;
+      loadPopulationRuns();
+    }
+  }, [section, loadFeedback, loadPopulationRuns, loadPublicOverview]);
 
   useEffect(() => {
     if (!selectedJudgeId) {
+      setJudgeStats(null);
       return;
     }
     async function loadJudgeStats() {
-      const response = await fetch(`${API_BASE}/judges/${selectedJudgeId}/stats`);
-      const payload = await response.json().catch(() => null);
-      if (response.ok && payload) {
+      const payload = await fetchJsonDedup<JudgeStats>(
+        `judges.stats.${selectedJudgeId}`,
+        `${API_BASE}/judges/${selectedJudgeId}/stats`
+      ).catch(() => null);
+      if (payload) {
         setJudgeStats(payload);
       }
     }
     loadJudgeStats();
-  }, [selectedJudgeId]);
+  }, [selectedJudgeId, fetchJsonDedup]);
 
   useEffect(() => {
     if (!selectedRunId) {
+      setPopulationDetail(null);
       return;
     }
     loadPopulationDetail(selectedRunId);
   }, [selectedRunId, loadPopulationDetail]);
 
   useEffect(() => {
+    if (section !== "population") {
+      return;
+    }
     const poller = setInterval(() => {
       loadPopulationRuns();
       if (selectedRunId) {
@@ -286,13 +364,30 @@ export default function UnifiedHubPage() {
     }, hasActivePopulationRun ? 5000 : 15000);
 
     return () => clearInterval(poller);
-  }, [hasActivePopulationRun, selectedRunId, loadPopulationRuns, loadPopulationDetail]);
+  }, [section, hasActivePopulationRun, selectedRunId, loadPopulationRuns, loadPopulationDetail]);
+
+  useEffect(() => {
+    updateQueryParams({ section });
+  }, [section, updateQueryParams]);
+
+  useEffect(() => {
+    updateQueryParams({ judge_id: selectedJudgeId ? String(selectedJudgeId) : null });
+  }, [selectedJudgeId, updateQueryParams]);
+
+  useEffect(() => {
+    updateQueryParams({ target_type: correctionTargetType, target_id: String(correctionTargetId) });
+  }, [correctionTargetType, correctionTargetId, updateQueryParams]);
+
+  useEffect(() => {
+    updateQueryParams({ run_id: selectedRunId || null });
+  }, [selectedRunId, updateQueryParams]);
 
   async function submitSearch(event: FormEvent) {
     event.preventDefault();
     const response = await fetch(`${API_BASE}/cases?court=${encodeURIComponent(searchQuery)}&page_size=20`);
     const payload = await response.json().catch(() => ({ items: [] }));
     setSearchResults(payload.items || []);
+    updateQueryParams({ q: searchQuery || null });
   }
 
   async function feedbackAction(
@@ -369,7 +464,7 @@ export default function UnifiedHubPage() {
           </p>
         </div>
         <div className="flex flex-wrap gap-2 text-xs">
-          <Link href="/" className="rounded-lg border border-ink/20 px-3 py-2 hover:bg-white/70">Legacy Home</Link>
+          <Link href="/legacy" className="rounded-lg border border-ink/20 px-3 py-2 hover:bg-white/70">Legacy Home</Link>
           <a href={BACKEND_DOCS_URL} className="rounded-lg border border-ink/20 px-3 py-2 hover:bg-white/70" target="_blank" rel="noreferrer">API Docs</a>
           <Link href="/admin/population" className="rounded-lg border border-ink/20 px-3 py-2 hover:bg-white/70">Population Page</Link>
         </div>
@@ -716,5 +811,13 @@ export default function UnifiedHubPage() {
         </section>
       </div>
     </div>
+  );
+}
+
+export default function UnifiedHubPage() {
+  return (
+    <Suspense fallback={<div className="card text-sm text-ink/70">Loading unified hub...</div>}>
+      <UnifiedHubInner />
+    </Suspense>
   );
 }
