@@ -17,7 +17,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               Unified Hub
             </Link>
             <nav className="flex flex-wrap gap-2 text-xs">
-              <Link href="/" className="rounded-lg border border-ink/15 px-2 py-1 hover:bg-white/80">Home</Link>
+              <Link href="/hub" className="rounded-lg border border-ink/15 px-2 py-1 hover:bg-white/80">Home</Link>
+              <Link href="/legacy" className="rounded-lg border border-ink/15 px-2 py-1 hover:bg-white/80">Legacy</Link>
               <Link href="/search" className="rounded-lg border border-ink/15 px-2 py-1 hover:bg-white/80">Search</Link>
               <Link href="/open-data" className="rounded-lg border border-ink/15 px-2 py-1 hover:bg-white/80">Open Data</Link>
               <Link href="/admin/population" className="rounded-lg border border-ink/15 px-2 py-1 hover:bg-white/80">Admin</Link>

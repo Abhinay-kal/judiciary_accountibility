@@ -1,11 +1,24 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import { FormEvent, useCallback, useEffect, useMemo, useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-import { AdminCorrectionQueue } from "@/components/AdminCorrectionQueue";
-import { CorrectionRequestForm } from "@/components/CorrectionRequestForm";
-import { DelayBarChart } from "@/components/DelayBarChart";
+const AdminCorrectionQueue = dynamic(
+  () => import("@/components/AdminCorrectionQueue").then((module) => module.AdminCorrectionQueue),
+  { ssr: false, loading: () => <p className="text-sm text-ink/70">Loading correction queue...</p> }
+);
+
+const CorrectionRequestForm = dynamic(
+  () => import("@/components/CorrectionRequestForm").then((module) => module.CorrectionRequestForm),
+  { ssr: false, loading: () => <p className="text-sm text-ink/70">Loading correction form...</p> }
+);
+
+const DelayBarChart = dynamic(
+  () => import("@/components/DelayBarChart").then((module) => module.DelayBarChart),
+  { ssr: false, loading: () => <p className="text-sm text-ink/70">Loading chart...</p> }
+);
 
 type HubSectionKey =
   | "overview"
@@ -108,6 +121,15 @@ const SECTIONS: Array<{ key: HubSectionKey; label: string; helper: string }> = [
   { key: "population", label: "Population", helper: "Run and monitor full ingestion" },
 ];
 
+const SECTION_KEY_SET = new Set<HubSectionKey>(SECTIONS.map((item) => item.key));
+
+function asSection(value: string | null): HubSectionKey {
+  if (value && SECTION_KEY_SET.has(value as HubSectionKey)) {
+    return value as HubSectionKey;
+  }
+  return "overview";
+}
+
 function fmtPercent(value: number): string {
   return `${(value * 100).toFixed(1)}%`;
 }
@@ -121,22 +143,43 @@ function fmtDate(value: string): string {
 }
 
 export default function UnifiedHubPage() {
-  const [section, setSection] = useState<HubSectionKey>("overview");
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  const [section, setSection] = useState<HubSectionKey>(() => asSection(searchParams.get("section")));
   const [message, setMessage] = useState("");
 
   const [courtStats, setCourtStats] = useState<CourtStat[]>([]);
   const [flags, setFlags] = useState<FlagItem[]>([]);
   const [datasets, setDatasets] = useState<DatasetItem[]>([]);
 
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState(() => searchParams.get("q") ?? "");
   const [searchResults, setSearchResults] = useState<CaseItem[]>([]);
 
   const [judges, setJudges] = useState<JudgeItem[]>([]);
-  const [selectedJudgeId, setSelectedJudgeId] = useState<number | null>(null);
+  const [selectedJudgeId, setSelectedJudgeId] = useState<number | null>(() => {
+    const value = searchParams.get("judge_id");
+    if (!value) {
+      return null;
+    }
+    const numeric = Number(value);
+    return Number.isInteger(numeric) && numeric > 0 ? numeric : null;
+  });
   const [judgeStats, setJudgeStats] = useState<JudgeStats | null>(null);
 
-  const [correctionTargetType, setCorrectionTargetType] = useState<"case" | "flag" | "evidence" | "hearing">("case");
-  const [correctionTargetId, setCorrectionTargetId] = useState<number>(1);
+  const [correctionTargetType, setCorrectionTargetType] = useState<"case" | "flag" | "evidence" | "hearing">(() => {
+    const value = searchParams.get("target_type");
+    return value === "flag" || value === "evidence" || value === "hearing" ? value : "case";
+  });
+  const [correctionTargetId, setCorrectionTargetId] = useState<number>(() => {
+    const value = searchParams.get("target_id");
+    if (!value) {
+      return 1;
+    }
+    const numeric = Number(value);
+    return Number.isInteger(numeric) && numeric > 0 ? numeric : 1;
+  });
 
   const [feedbackAdminId, setFeedbackAdminId] = useState("1");
   const [feedbackRows, setFeedbackRows] = useState<PendingFeedbackItem[]>([]);
@@ -144,9 +187,14 @@ export default function UnifiedHubPage() {
   const [populationAdminId, setPopulationAdminId] = useState("1");
   const [populationReason, setPopulationReason] = useState("Unified hub manual population run");
   const [populationRuns, setPopulationRuns] = useState<PopulationRunItem[]>([]);
-  const [selectedRunId, setSelectedRunId] = useState<string | null>(null);
+  const [selectedRunId, setSelectedRunId] = useState<string | null>(() => searchParams.get("run_id"));
   const [populationDetail, setPopulationDetail] = useState<PopulationRunDetail | null>(null);
   const [isTriggeringPopulation, setIsTriggeringPopulation] = useState(false);
+
+  const inFlightRequests = useRef<Map<string, Promise<unknown>>>(new Map());
+  const publicDataLoaded = useRef(false);
+  const feedbackLoaded = useRef(false);
+  const populationLoaded = useRef(false);
 
   const hasActivePopulationRun = useMemo(
     () => populationRuns.some((run) => ACTIVE_STATUSES.has(run.status)),
