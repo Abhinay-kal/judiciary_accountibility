@@ -327,8 +327,11 @@ def analyze_case_delay(
                 logger = logging.getLogger(__name__)
                 logger.warning(f"Baseline calculation failed: {str(calc_error)[:100]}")
 
+        # Compute z-scores for debugging
         z_scores = detector.compute_z_scores(case, db, baseline)
-        probability = detector.compute_probability(z_scores, baseline)
+        
+        # Compute final probability (will recalculate features and z-scores)
+        probability = detector.compute_probability(case, db, baseline)
 
         return DelayProbabilityResponse(
             case_id=case_id,
