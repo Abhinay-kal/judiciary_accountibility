@@ -40,7 +40,7 @@ const riskConfig = {
   },
 };
 
-export function RiskBadge({ riskLevel, probability }: RiskBadgeProps) {
+export function RiskBadge({ riskLevel, probability }: Readonly<RiskBadgeProps>) {
   const config = riskConfig[riskLevel];
 
   return (

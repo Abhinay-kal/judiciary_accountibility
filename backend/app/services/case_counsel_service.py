@@ -1,7 +1,7 @@
 """Case Counsel service for managing counsel assignments to cases."""
 
 from typing import List, Optional
-from datetime import datetime
+from datetime import datetime, timezone
 from sqlalchemy.orm import Session
 from app.models import CaseCounsel
 
@@ -17,7 +17,7 @@ class CaseCounselService:
             case_id=case_id,
             advocate_id=advocate_id,
             role=role,
-            appointment_date=datetime.utcnow(),
+            appointment_date=datetime.now(timezone.utc),
             is_lead_counsel=is_lead_counsel,
             notes=notes
         )
@@ -54,7 +54,7 @@ class CaseCounselService:
         if not counsel:
             return None
         
-        counsel.removal_date = datetime.utcnow()
+        counsel.removal_date = datetime.now(timezone.utc)
         session.commit()
         session.refresh(counsel)
         return counsel

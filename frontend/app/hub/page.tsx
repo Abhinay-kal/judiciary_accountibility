@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
-import { FormEvent, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 const AdminCorrectionQueue = dynamic(
   () => import("@/components/AdminCorrectionQueue").then((module) => module.AdminCorrectionQueue),
@@ -161,11 +161,11 @@ function fmtDate(value: string): string {
   return parsed.toLocaleString();
 }
 
-function SectionSkeleton({ rows = 3 }: { rows?: number }) {
+function SectionSkeleton({ rows = 3 }: Readonly<{ rows?: number }>) {
   return (
     <div className="card animate-pulse space-y-3">
       {Array.from({ length: rows }).map((_, index) => (
-        <div key={index} className="h-10 rounded-lg bg-ink/10" />
+        <div key={`skeleton-${index}`} className="h-10 rounded-lg bg-ink/10" />
       ))}
     </div>
   );
@@ -237,13 +237,19 @@ function UnifiedHubInner() {
     [populationRuns]
   );
 
+  const populationButtonText = useMemo(() => {
+    if (hasActivePopulationRun) return "Run in progress";
+    if (isTriggeringPopulation) return "Queueing...";
+    return "Start population";
+  }, [hasActivePopulationRun, isTriggeringPopulation]);
+
   const totalCases = useMemo(() => courtStats.reduce((sum, item) => sum + item.total_cases, 0), [courtStats]);
   const pendingCases = useMemo(() => courtStats.reduce((sum, item) => sum + item.pending_cases, 0), [courtStats]);
   const disposedCases = useMemo(() => courtStats.reduce((sum, item) => sum + item.disposed_cases, 0), [courtStats]);
 
   const updateQueryParams = useCallback(
     (entries: Record<string, string | null>) => {
-      const params = new URLSearchParams(window.location.search);
+      const params = new URLSearchParams(globalThis.location.search);
       for (const [key, value] of Object.entries(entries)) {
         if (value === null || value === "") {
           params.delete(key);
@@ -254,11 +260,11 @@ function UnifiedHubInner() {
 
       const query = params.toString();
       const nextUrl = query ? `${pathname}?${query}` : pathname;
-      const currentUrl = `${window.location.pathname}${window.location.search}`;
+      const currentUrl = `${globalThis.location.pathname}${globalThis.location.search}`;
       if (nextUrl === currentUrl) {
         return;
       }
-      window.history.replaceState(null, "", nextUrl);
+      globalThis.history.replaceState(null, "", nextUrl);
     },
     [pathname]
   );
@@ -460,7 +466,7 @@ function UnifiedHubInner() {
     });
   }, [section, selectedJudgeId, correctionTargetType, correctionTargetId, selectedRunId, updateQueryParams]);
 
-  async function submitSearch(event: FormEvent) {
+  async function submitSearch(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     await runSearch(searchQuery, true);
   }
@@ -895,7 +901,7 @@ function UnifiedHubInner() {
                     onClick={triggerPopulationRun}
                     disabled={isTriggeringPopulation || hasActivePopulationRun}
                   >
-                    {hasActivePopulationRun ? "Run in progress" : isTriggeringPopulation ? "Queueing..." : "Start population"}
+                    {populationButtonText}
                   </button>
                 </div>
               </div>

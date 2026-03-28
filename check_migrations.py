@@ -59,7 +59,7 @@ try:
         print(f"\n✓ Alembic heads: {heads}")
         
         if len(heads) > 1:
-            print(f"⚠ WARNING: Multiple branch heads detected! This causes the 'overlaps' error.")
+            print("⚠ WARNING: Multiple branch heads detected! This causes the 'overlaps' error.")
             print("The migrations have diverged into multiple branches.")
     except Exception as e:
         print(f"⚠ Could not get heads: {e}")

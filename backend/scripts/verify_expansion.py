@@ -20,11 +20,11 @@ if latest_run:
         if sr.status not in statuses:
             statuses[sr.status] = 0
         statuses[sr.status] += 1
-    print(f"\nStatus breakdown:")
+    print("\nStatus breakdown:")
     for status in sorted(statuses.keys()):
         print(f"  {status}: {statuses[status]}")
     
-    print(f"\nSource breakdown by priority:")
+    print("\nSource breakdown by priority:")
     priorities = {}
     for sr in source_runs:
         p = sr.source.priority
@@ -38,7 +38,7 @@ if latest_run:
 
 # Verify registry completeness
 from app.ingestion.pipeline import ResilientIngestionPipeline
-print(f"\n=== Registry Verification ===")
+print("\n=== Registry Verification ===")
 print(f"Total registered scrapers: {len(ResilientIngestionPipeline._SCRAPER_REGISTRY)}")
 print(f"Total active sources in DB: {db.query(IngestionSource).filter(IngestionSource.is_active == True).count()}")
 
@@ -54,5 +54,5 @@ if unresolved:
 else:
     print("✓ All active sources have registered scrapers")
 
-print(f"\n=== SUCCESS ===")
+print("\n=== SUCCESS ===")
 print(f"Expansion complete: 4 → {len(source_runs)} sources in population run")

@@ -1,4 +1,5 @@
 """System status and integration readiness endpoint."""
+from typing import Annotated
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from sqlalchemy import func
@@ -11,7 +12,7 @@ router = APIRouter(prefix="/status", tags=["status"])
 
 
 @router.get("/integration-ready")
-def check_integration_ready(db: Session = Depends(get_db)) -> dict:
+def check_integration_ready(db: Annotated[Session, Depends(get_db)]) -> dict:
     """Check if the system has data ready for the frontend to display.
     
     Returns:

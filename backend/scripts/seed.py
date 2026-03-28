@@ -15,6 +15,11 @@ from app.services.adjournment import detect_adjournment
 
 T = TypeVar("T")
 
+# Seed data constants
+SEED_ORDER_LINK = "https://example.org/order.pdf"
+SEED_OFFICIAL_NAME = "Shri Example Minister"
+SEED_OFFICIAL_ROLE = "Minister"
+
 
 @contextmanager
 def session_scope() -> Iterator[Session]:
@@ -126,7 +131,7 @@ def _dedupe_seed_entities(db: Session, *, case_id: int, hearing_dates: list[date
         .filter(
             Order.case_id == case_id,
             Order.order_date == order_date,
-            Order.order_link == "https://example.org/order.pdf",
+            Order.order_link == SEED_ORDER_LINK,
         )
         .order_by(Order.id.asc())
         .all()
@@ -143,7 +148,7 @@ def _dedupe_seed_entities(db: Session, *, case_id: int, hearing_dates: list[date
             Order.is_deleted.is_(False),
             (
                 (Order.order_date != order_date)
-                | (Order.order_link != "https://example.org/order.pdf")
+                | (Order.order_link != SEED_ORDER_LINK)
             ),
         )
         .all()
@@ -153,7 +158,7 @@ def _dedupe_seed_entities(db: Session, *, case_id: int, hearing_dates: list[date
     # Keep one active official and party link for seed identity
     officials = (
         db.query(PublicOfficial)
-        .filter(PublicOfficial.full_name == "Shri Example Minister", PublicOfficial.role == "Minister")
+        .filter(PublicOfficial.full_name == SEED_OFFICIAL_NAME, PublicOfficial.role == SEED_OFFICIAL_ROLE)
         .order_by(PublicOfficial.id.asc())
         .all()
     )
@@ -166,7 +171,7 @@ def _dedupe_seed_entities(db: Session, *, case_id: int, hearing_dates: list[date
         .filter(
             CasePartyLink.case_id == case_id,
             CasePartyLink.party_type == "petitioner",
-            CasePartyLink.party_name == "Shri Example Minister",
+            CasePartyLink.party_name == SEED_OFFICIAL_NAME,
         )
         .order_by(CasePartyLink.id.asc())
         .all()
@@ -329,7 +334,7 @@ def _upsert_seed_graph(db: Session) -> None:
     order, _ = get_or_create(
         db,
         Order,
-        lookup={"case_id": case.id, "order_date": order_date, "order_link": "https://example.org/order.pdf"},
+        lookup={"case_id": case.id, "order_date": order_date, "order_link": SEED_ORDER_LINK},
         defaults={"source": "seed", "is_deleted": False},
     )
     update_instance(order, {"source": "seed", "is_deleted": False, "deleted_at": None})
@@ -337,7 +342,7 @@ def _upsert_seed_graph(db: Session) -> None:
     official, _ = get_or_create(
         db,
         PublicOfficial,
-        lookup={"full_name": "Shri Example Minister", "role": "Minister"},
+        lookup={"full_name": SEED_OFFICIAL_NAME, "role": SEED_OFFICIAL_ROLE},
         defaults={"source": "seed", "is_deleted": False},
     )
     update_instance(official, {"source": "seed", "is_deleted": False, "deleted_at": None})
@@ -349,7 +354,7 @@ def _upsert_seed_graph(db: Session) -> None:
         lookup={
             "case_id": case.id,
             "party_type": "petitioner",
-            "party_name": "Shri Example Minister",
+            "party_name": SEED_OFFICIAL_NAME,
         },
         defaults={
             "official_id": official.id,

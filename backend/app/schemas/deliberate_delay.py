@@ -11,6 +11,9 @@ from typing import List, Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
+# Field descriptions
+CASE_IDENTIFIER_DESC = "Case identifier"
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Individual Component Schemas
@@ -105,7 +108,7 @@ class DelayProbabilityResponse(BaseModel):
     """Response for deliberate delay probability scoring."""
 
     case_id: int = Field(..., description="ID of the case being analyzed")
-    case_number: str = Field(..., description="Case identifier")
+    case_number: str = Field(..., description=CASE_IDENTIFIER_DESC)
     probability: float = Field(
         ...,
         description="Probability of deliberate delay (0-100)",
@@ -155,7 +158,7 @@ class CaseFeatureValues(BaseModel):
     """Feature values extracted for a case (used in batch responses)."""
 
     case_id: int = Field(..., description="Case ID")
-    case_number: str = Field(..., description="Case identifier")
+    case_number: str = Field(..., description=CASE_IDENTIFIER_DESC)
     adjournment_density: float = Field(
         ..., description="Adjournment frequency normalized by case age"
     )
@@ -174,7 +177,7 @@ class CaseProbabilityAnalysis(BaseModel):
     """Single case analysis result for batch operations."""
 
     case_id: int = Field(..., description="Case ID")
-    case_number: str = Field(..., description="Case identifier")
+    case_number: str = Field(..., description=CASE_IDENTIFIER_DESC)
     probability: float = Field(
         ...,
         description="Probability of deliberate delay (0-100)",

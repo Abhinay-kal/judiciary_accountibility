@@ -13,7 +13,7 @@ Attribution methods:
 - Aggregate: Multiple minor indicators combined into responsibility score
 """
 
-from datetime import datetime
+from datetime import datetime, timezone
 from enum import Enum
 from typing import Optional
 from sqlalchemy.orm import Session
@@ -65,7 +65,7 @@ class DelayAttribution:
         self.impacted_days = impacted_days
         self.supporting_evidence = supporting_evidence
         self.reasoning = reasoning
-        self.created_at = datetime.utcnow()
+        self.created_at = datetime.now(timezone.utc)
     
     def to_dict(self) -> dict:
         return {
@@ -332,7 +332,6 @@ def get_case_delay_attributions(
 def get_advocate_responsibility_summary(
     db: Session,
     advocate_id: int,
-    case_id: Optional[int] = None,
 ) -> dict:
     """Get summary of advocate's attributed responsibility."""
     query = db.query(Advocate).filter(Advocate.id == advocate_id).first()
