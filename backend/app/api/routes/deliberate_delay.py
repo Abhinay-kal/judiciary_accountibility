@@ -497,12 +497,8 @@ def batch_analyze_cases(
         )
 
     try:
-        # Rollback any previous failed transaction to get clean session
-        try:
-            db.rollback()
-            db.expunge_all()  # Clear any cached objects
-        except Exception:
-            pass  # Session might be fresh
+        # For batch, don't rollback - use fresh session from FastAPI
+        # Just ensure we have a clean state
         
         from app.db.population_cache import PopulationCache
         from app.db.session import SessionLocal
@@ -523,23 +519,25 @@ def batch_analyze_cases(
                     detector = CaseAnomalyDetector()
                     baseline = detector.calculate_baselines(baseline_db)
                     cache.set_baseline_metrics(baseline)
+                except Exception as calc_error:
+                    # If baseline calculation fails, use default baseline
+                    from app.services.delay_detection_phase3 import BaselineMetrics
+                    baseline = BaselineMetrics(
+                        density_mean=0.0,
+                        density_std=0.0,
+                        party_score_mean=0.0,
+                        party_score_std=0.0,
+                        dormancy_cv_mean=0.0,
+                        dormancy_cv_std=0.0,
+                        bench_hunting_mean=0.0,
+                        bench_hunting_std=0.0,
+                        sample_size=0,
+                        calculation_date=datetime.utcnow(),
+                    )
+                    logger = logging.getLogger(__name__)
+                    logger.warning(f"Baseline calculation failed: {str(calc_error)[:100]}")
                 finally:
                     baseline_db.close()
-            except Exception:
-                # If baseline calc fails, use default baseline
-                from app.services.delay_detection_phase3 import BaselineMetrics
-                baseline = BaselineMetrics(
-                    density_mean=0.0,
-                    density_std=0.0,
-                    party_score_mean=0.0,
-                    party_score_std=0.0,
-                    dormancy_cv_mean=0.0,
-                    dormancy_cv_std=0.0,
-                    bench_hunting_mean=0.0,
-                    bench_hunting_std=0.0,
-                    sample_size=0,
-                    calculation_date=datetime.utcnow(),
-                )
 
         # Analyze cases
         results: List[CaseProbabilityAnalysis] = []

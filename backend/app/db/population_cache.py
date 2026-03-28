@@ -161,30 +161,38 @@ class PopulationCache:
             baseline: BaselineMetrics dataclass to persist
         """
         try:
-            # Delete old records
-            self.db.query(PopulationBaselineRecord).delete()
+            # Use separate session to avoid corrupting the calling session
+            from app.db.session import SessionLocal
+            
+            separate_db = SessionLocal()
+            try:
+                # Delete old records
+                separate_db.query(PopulationBaselineRecord).delete()
 
-            # Create and insert new record
-            record = PopulationBaselineRecord(
-                density_mean=baseline.density_mean,
-                density_std=baseline.density_std,
-                party_score_mean=baseline.party_score_mean,
-                party_score_std=baseline.party_score_std,
-                dormancy_cv_mean=baseline.dormancy_cv_mean,
-                dormancy_cv_std=baseline.dormancy_cv_std,
-                bench_hunting_mean=baseline.bench_hunting_mean,
-                bench_hunting_std=baseline.bench_hunting_std,
-                sample_size=baseline.sample_size,
-                calculation_date=baseline.calculation_date,
-                cache_version="1.0",
-                metadata_={
-                    "cached_at": datetime.utcnow().isoformat(),
-                    "ttl_seconds": _CACHE_TTL_SECONDS,
-                },
-            )
+                # Create and insert new record
+                record = PopulationBaselineRecord(
+                    density_mean=baseline.density_mean,
+                    density_std=baseline.density_std,
+                    party_score_mean=baseline.party_score_mean,
+                    party_score_std=baseline.party_score_std,
+                    dormancy_cv_mean=baseline.dormancy_cv_mean,
+                    dormancy_cv_std=baseline.dormancy_cv_std,
+                    bench_hunting_mean=baseline.bench_hunting_mean,  
+                    bench_hunting_std=baseline.bench_hunting_std,
+                    sample_size=baseline.sample_size,
+                    calculation_date=baseline.calculation_date,
+                    cache_version="1.0",
+                    metadata_={
+                        "cached_at": datetime.utcnow().isoformat(),
+                        "ttl_seconds": _CACHE_TTL_SECONDS,
+                    },
+                )
 
-            self.db.add(record)
-            self.db.commit()
+                separate_db.add(record)
+                separate_db.commit()
+                
+            finally:
+                separate_db.close()
 
         except Exception:
             # Ignore persistence errors - in-memory cache still works
