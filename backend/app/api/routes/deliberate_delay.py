@@ -545,7 +545,7 @@ def batch_analyze_cases(
                 continue
 
         # Compute summary statistics
-        summary_stats = {"test_value": 123, "test_list": [1, 2, 3]}
+        summary_stats = {}
         
         if probabilities_list:
             from statistics import mean, stdev
@@ -574,12 +574,7 @@ def batch_analyze_cases(
             analysis_timestamp=datetime.utcnow(),
         )
         
-        # Debug: return raw dict to bypass Pydantic
-        import logging
-        logger = logging.getLogger(__name__)
-        logger.info(f"Batch summary_stats before response: {summary_stats}")
-        
-        return result.model_dump()
+        return result
 
     except HTTPException:
         raise
