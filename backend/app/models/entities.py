@@ -134,6 +134,42 @@ class FeedbackAuditAction(str, enum.Enum):
     URGENT_HIDDEN = "urgent_hidden"
 
 
+class AdjournmentReasonType(str, enum.Enum):
+    """Classified reasons for adjournment to detect delay tactics."""
+    ON_REQUEST = "on_request"  # Adjourned on request of party/counsel
+    COURT_ADJOURNED = "court_adjourned"  # Court adjourned on its own motion
+    FILE_NOT_READY = "file_not_ready"  # Court file not available
+    JUDGE_UNAVAILABLE = "judge_unavailable"  # Judge/presiding officer unavailable
+    COUNSEL_UNAVAILABLE = "counsel_unavailable"  # Parties/counsel not present
+    INTERIM_PENDING = "interim_pending"  # Awaiting decision on interim application
+    COMPLIANCE_PENDING = "compliance_pending"  # Awaiting compliance with court order
+    PARTY_NOT_READY = "party_not_ready"  # Party not ready to proceed
+    OTHER_PROCEDURAL = "other_procedural"  # Other procedural reason
+    UNSPECIFIED = "unspecified"  # Reason not stated or unclear
+
+
+class InterimApplicationType(str, enum.Enum):
+    """Types of interim applications to track delay tactics."""
+    BAIL = "bail"
+    STAY_OF_PROCEEDINGS = "stay_of_proceedings"
+    INJUNCTION = "injunction"
+    INTERIM_RELIEF = "interim_relief"
+    RECALL = "recall"
+    REVIEW = "review"
+    CLARIFICATION = "clarification"
+    SUSPENSION = "suspension"
+    OTHER = "other"
+
+
+class AdvocateRole(str, enum.Enum):
+    """Role of advocate in case."""
+    PETITIONER = "petitioner"
+    RESPONDENT = "respondent"
+    INTERVENER = "intervener"
+    AMICUS = "amicus"
+    OTHER = "other"
+
+
 hearing_outcome_enum = Enum(
     HearingOutcomeType,
     name="hearing_outcome_type",
@@ -246,6 +282,30 @@ feedback_audit_action_enum = Enum(
 )
 
 
+adjournment_reason_enum = Enum(
+    AdjournmentReasonType,
+    name="adjournment_reason_type",
+    native_enum=False,
+    validate_strings=True,
+)
+
+
+interim_application_type_enum = Enum(
+    InterimApplicationType,
+    name="interim_application_type",
+    native_enum=False,
+    validate_strings=True,
+)
+
+
+advocate_role_enum = Enum(
+    AdvocateRole,
+    name="advocate_role",
+    native_enum=False,
+    validate_strings=True,
+)
+
+
 class Court(TimestampSoftDeleteMixin, Base):
     __tablename__ = "courts"
 
@@ -294,6 +354,77 @@ class JudgeRegistry(Base):
     )
 
     assignments: Mapped[list["JudgeAssignment"]] = relationship(back_populates="judge_registry")
+
+
+class Advocate(TimestampSoftDeleteMixin, Base):
+    """Registry of advocates/lawyers appearing in court cases."""
+    __tablename__ = "advocates"
+    __table_args__ = (
+        Index("idx_advocates_canonical_name", "canonical_name"),
+        Index("idx_advocates_bar_council_id", "bar_council_id"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
+    advocate_uid: Mapped[str] = mapped_column(String(128), nullable=False, unique=True, index=True)
+    full_name: Mapped[str] = mapped_column(String(255), nullable=False, index=True)
+    canonical_name: Mapped[str] = mapped_column(String(255), nullable=False, index=True)
+    name_variants: Mapped[dict] = mapped_column(JSONB, nullable=False, default=dict)
+    phonetic_keys: Mapped[dict] = mapped_column(JSONB, nullable=False, default=dict)
+    
+    # Credentials & Registry
+    bar_council_id: Mapped[Optional[str]] = mapped_column(String(100), nullable=True, index=True)
+    bar_council_name: Mapped[Optional[str]] = mapped_column(String(255), nullable=True)
+    enrollment_number: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
+    enrollment_date: Mapped[Optional[date]] = mapped_column(Date, nullable=True)
+    
+    # Geographic & Practice Info
+    primary_court_id: Mapped[Optional[int]] = mapped_column(ForeignKey("courts.id"), nullable=True, index=True)
+    practice_states: Mapped[list[str]] = mapped_column(JSONB, nullable=False, default=list)
+    
+    # Case Statistics (denormalized for performance)
+    total_cases: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
+    total_adjournment_requests: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
+    avg_adjournment_rate: Mapped[float] = mapped_column(Float, nullable=True)  # % of cases with adjournment requests
+    
+    # Metadata
+    is_verified: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False, index=True)
+    verification_source: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
+    last_seen_date: Mapped[Optional[date]] = mapped_column(Date, nullable=True)
+    metadata_json: Mapped[dict] = mapped_column(JSONB, nullable=False, default=dict)
+
+    # Relationships
+    court: Mapped[Optional["Court"]] = relationship()
+    case_appearances: Mapped[list["CaseCounsel"]] = relationship(back_populates="advocate")
+
+
+class CaseCounsel(TimestampSoftDeleteMixin, Base):
+    """Tracks which advocates appear in which cases and their roles."""
+    __tablename__ = "case_counsel"
+    __table_args__ = (
+        UniqueConstraint("case_id", "advocate_id", "role", name="uq_case_advocate_role"),
+        Index("idx_case_counsel_advocate", "advocate_id"),
+        Index("idx_case_counsel_case", "case_id"),
+        Index("idx_case_counsel_appearance_date", "first_appearance_date"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
+    case_id: Mapped[int] = mapped_column(ForeignKey("cases.id"), nullable=False, index=True)
+    advocate_id: Mapped[int] = mapped_column(ForeignKey("advocates.id"), nullable=False, index=True)
+    role: Mapped[AdvocateRole] = mapped_column(advocate_role_enum, nullable=False)
+    
+    # Tracking
+    first_appearance_date: Mapped[Optional[date]] = mapped_column(Date, nullable=True)
+    last_appearance_date: Mapped[Optional[date]] = mapped_column(Date, nullable=True)
+    is_currently_appearing: Mapped[bool] = mapped_column(Boolean, default=True, nullable=False)
+    
+    # Case-Specific Statistics
+    adjournment_requests_made: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
+    hearings_attended: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
+    hearings_skipped: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
+    
+    # Relationships
+    case: Mapped["Case"] = relationship(back_populates="counsel")
+    advocate: Mapped["Advocate"] = relationship(back_populates="case_appearances")
 
 
 class Case(TimestampSoftDeleteMixin, Base):
@@ -367,6 +498,8 @@ class Case(TimestampSoftDeleteMixin, Base):
     prediction: Mapped[Optional["CasePrediction"]] = relationship(
         back_populates="case", uselist=False
     )
+    counsel: Mapped[list["CaseCounsel"]] = relationship(back_populates="case")
+    interim_applications: Mapped[list["InterimApplication"]] = relationship(foreign_keys="InterimApplication.case_id")
 
 
 class CaseMediaMention(TimestampSoftDeleteMixin, Base):
@@ -540,16 +673,32 @@ class JudgeAttributionAudit(Base):
 
 class Adjournment(TimestampSoftDeleteMixin, Base):
     __tablename__ = "adjournments"
-    __table_args__ = (Index("idx_adjournments_case_is_adj", "case_id", "is_adjournment"),)
+    __table_args__ = (
+        Index("idx_adjournments_case_is_adj", "case_id", "is_adjournment"),
+        Index("idx_adjournments_requested_by", "requested_by"),
+        Index("idx_adjournments_reason_type", "reason_type"),
+    )
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     case_id: Mapped[int] = mapped_column(ForeignKey("cases.id"), nullable=False, index=True)
     hearing_id: Mapped[Optional[int]] = mapped_column(ForeignKey("hearings.id"), nullable=True, index=True)
     is_adjournment: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False, index=True)
-    reason_category: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
+    
+    # Structured reason tracking (new)
+    reason_type: Mapped[Optional[AdjournmentReasonType]] = mapped_column(adjournment_reason_enum, nullable=True, index=True)
+    reason_category: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)  # Legacy free-text field
+    
+    # Tactic tracking (new)
+    requested_by: Mapped[Optional[int]] = mapped_column(ForeignKey("advocates.id"), nullable=True, index=True)
+    was_contested: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
+    grounds_cited_text: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    
     source: Mapped[str] = mapped_column(String(100), nullable=False)
 
     case: Mapped[Case] = relationship(back_populates="adjournments")
+    requested_advocate: Mapped[Optional["Advocate"]] = relationship()
+    hearing: Mapped[Optional["Hearing"]] = relationship()
+
 
 
 class Order(TimestampSoftDeleteMixin, Base):
@@ -567,6 +716,45 @@ class Order(TimestampSoftDeleteMixin, Base):
     last_label_id: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
 
     case: Mapped[Case] = relationship(back_populates="orders")
+
+
+class InterimApplication(TimestampSoftDeleteMixin, Base):
+    """Tracks interim applications (bail, stay, injunctions) filed in cases."""
+    __tablename__ = "interim_applications"
+    __table_args__ = (
+        Index("idx_interim_case_filing_date", "case_id", "filing_date"),
+        Index("idx_interim_case_status", "case_id", "decision_status"),
+        Index("idx_interim_type", "application_type"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    case_id: Mapped[int] = mapped_column(ForeignKey("cases.id"), nullable=False, index=True)
+    
+    # Application Details
+    application_type: Mapped[InterimApplicationType] = mapped_column(interim_application_type_enum, nullable=False, index=True)
+    filing_date: Mapped[Optional[date]] = mapped_column(Date, nullable=True, index=True)
+    applicant_advocate_id: Mapped[Optional[int]] = mapped_column(ForeignKey("advocates.id"), nullable=True)
+    applicant_party_role: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
+    
+    # Decision Tracking
+    decision_date: Mapped[Optional[date]] = mapped_column(Date, nullable=True, index=True)
+    decision_status: Mapped[Optional[str]] = mapped_column(String(50), nullable=True, index=True)  # GRANTED, REJECTED, DISMISSED, RESERVED, etc.
+    decision_order_id: Mapped[Optional[int]] = mapped_column(ForeignKey("orders.id"), nullable=True)
+    
+    # Classification (for tactic detection)
+    is_frivolous_indicator: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
+    grounds_cited_text: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    urgency_claim_text: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    
+    # Outcomes
+    delay_caused_days: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
+    related_adjournment_ids: Mapped[list[int]] = mapped_column(JSONB, nullable=False, default=list)
+    
+    source: Mapped[str] = mapped_column(String(100), nullable=False)
+
+    case: Mapped["Case"] = relationship(foreign_keys=[case_id])
+    applicant: Mapped[Optional["Advocate"]] = relationship(foreign_keys=[applicant_advocate_id])
+    decision_order: Mapped[Optional["Order"]] = relationship(foreign_keys=[decision_order_id])
 
 
 class Flag(TimestampSoftDeleteMixin, Base):
