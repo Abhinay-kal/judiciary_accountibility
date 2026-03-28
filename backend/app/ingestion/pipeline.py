@@ -69,6 +69,7 @@ from app.ingestion.cas import store_payload
 from app.scrapers.sources import (
     ECourtsScraper,
     HighCourtCauseListScraper,
+    INDIA_SOURCE_SCRAPERS,
     NJDGScraper,
     SupremeCourtCauseListScraper,
 )
@@ -473,6 +474,10 @@ class ResilientIngestionPipeline:
         "ecourts_services": ECourtsScraper,
         "supreme_court_causelist": SupremeCourtCauseListScraper,
     }
+    _SCRAPER_REGISTRY.update(INDIA_SOURCE_SCRAPERS)
+
+    if len(_SCRAPER_REGISTRY) != len(set(_SCRAPER_REGISTRY.keys())):
+        raise RuntimeError("Duplicate source names detected in ingestion scraper registry")
 
     @classmethod
     def register_scraper(cls, source_name: str, scraper_cls: type) -> None:

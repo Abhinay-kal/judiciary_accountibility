@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.api.routes import admin_corrections, admin_feedback, admin_hearings, admin_importance, admin_judges, admin_population, cases, corrections, courts, feedback, flags, ingestion, investigation, judges, ml, open_data, provenance, queue_admin, stats, survival
+from app.api.routes import admin_corrections, admin_data_overview, admin_feedback, admin_hearings, admin_importance, admin_judges, admin_population, analytics, cases, corrections, courts, feedback, flags, ingestion, investigation, judges, ml, open_data, provenance, queue_admin, stats, status, survival
 
 api_router = APIRouter()
 api_router.include_router(courts.router, tags=["courts"])
@@ -22,4 +22,7 @@ api_router.include_router(admin_feedback.router, tags=["admin-feedback"])
 api_router.include_router(admin_judges.router, tags=["admin-judges"])
 api_router.include_router(admin_importance.router, tags=["admin-importance"])
 api_router.include_router(admin_population.router, tags=["admin-population"])
+api_router.include_router(admin_data_overview.router, tags=["admin-data-overview"])
+api_router.include_router(analytics.router, tags=["analytics"])
 api_router.include_router(queue_admin.router, tags=["admin-queues"])
+api_router.include_router(status.router, tags=["status"])

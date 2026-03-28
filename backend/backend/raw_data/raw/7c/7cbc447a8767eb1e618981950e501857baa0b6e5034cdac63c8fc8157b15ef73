@@ -1,0 +1,19 @@
+<meta http-equiv="refresh" content="time; URL=index.php" />
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+
+<meta name="keywords" content="High Court of Bombay, Bombay High Court, Mumbai High Court, Maharashtra Judiciary, Maharashtra Courts, Courts, Judiciary" />
+<meta name="description" content="Official website of the High Court of Bombay." />
+<meta name="google-site-verification" content="LwgEjfp1lx7wrtz35lNCSuwryYOoaADxOb29bBN4Ygo" />
+<title>Official Website of High Court of Bombay</title>
+<script type="text/javascript">
+function browserdetectg()
+{
+window.location="http://bombayhighcourt.nic.in/index.php";
+}
+</script>
+</head>
+<body onload='browserdetectg();'>
+</body>
+</html>

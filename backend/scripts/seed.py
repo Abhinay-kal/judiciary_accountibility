@@ -9,6 +9,7 @@ from sqlalchemy.orm import Session
 
 from app.db.session import SessionLocal
 from app.ingestion.models import IngestionSource
+from app.ingestion.source_specs import VERIFIED_INGESTION_SOURCES
 from app.models import Adjournment, Case, CasePartyLink, Court, Hearing, Judge, Order, PublicOfficial
 from app.services.adjournment import detect_adjournment
 
@@ -176,36 +177,7 @@ def _dedupe_seed_entities(db: Session, *, case_id: int, hearing_dates: list[date
 
 
 def _ensure_ingestion_sources(db: Session) -> int:
-    defaults = [
-        {
-            "source_name": "njdg",
-            "source_type": "API",
-            "base_url": "https://njdg.ecourts.gov.in/",
-            "priority": 1,
-            "expected_update_interval_minutes": 1440,
-        },
-        {
-            "source_name": "ecourts_services",
-            "source_type": "SCRAPER",
-            "base_url": "https://services.ecourts.gov.in/",
-            "priority": 2,
-            "expected_update_interval_minutes": 720,
-        },
-        {
-            "source_name": "supreme_court_causelist",
-            "source_type": "HTML",
-            "base_url": "https://main.sci.gov.in/",
-            "priority": 2,
-            "expected_update_interval_minutes": 1440,
-        },
-        {
-            "source_name": "high_court",
-            "source_type": "HTML",
-            "base_url": "https://www.allahabadhighcourt.in/",
-            "priority": 3,
-            "expected_update_interval_minutes": 1440,
-        },
-    ]
+    defaults = VERIFIED_INGESTION_SOURCES
 
     created = 0
     for item in defaults:
