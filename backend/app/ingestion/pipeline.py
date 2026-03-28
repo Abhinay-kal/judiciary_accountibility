@@ -476,8 +476,15 @@ class ResilientIngestionPipeline:
     }
     _SCRAPER_REGISTRY.update(INDIA_SOURCE_SCRAPERS)
 
-    if len(_SCRAPER_REGISTRY) != len(set(_SCRAPER_REGISTRY.keys())):
-        raise RuntimeError("Duplicate source names detected in ingestion scraper registry")
+    # Collision detection: identify any duplicate keys
+    registry_keys = list(_SCRAPER_REGISTRY.keys())
+    unique_keys = set(registry_keys)
+    if len(registry_keys) != len(unique_keys):
+        duplicates = [key for key in unique_keys if registry_keys.count(key) > 1]
+        raise RuntimeError(
+            f"Duplicate source names detected in scraper registry: {duplicates}. "
+            f"Total entries: {len(registry_keys)}, unique: {len(unique_keys)}"
+        )
 
     @classmethod
     def register_scraper(cls, source_name: str, scraper_cls: type) -> None:
