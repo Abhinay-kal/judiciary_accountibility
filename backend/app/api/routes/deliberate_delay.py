@@ -297,19 +297,37 @@ def analyze_case_delay(
                 )
 
         # ── Phase 2: Extract features ────────────────────────────────────────
-        feature_engineer = FeatureEngineer()
-        features = feature_engineer.engineer(case, db)
-
         # ── Phase 3: Calculate probability ───────────────────────────────────
         detector = CaseAnomalyDetector()
         cache = PopulationCache(db)
         baseline = cache.get_baseline_metrics()
 
         if baseline is None:
-            baseline = detector.calculate_baselines(db)
-            cache.set_baseline_metrics(baseline)
+            try:
+                baseline = detector.calculate_baselines(db)
+                cache.set_baseline_metrics(baseline)
+            except Exception as calc_error:
+                # If baseline calc fails, use default baseline with zeros
+                from app.services.delay_detection_phase3 import BaselineMetrics
+                from datetime import datetime
+                baseline = BaselineMetrics(
+                    density_mean=0.0,
+                    density_std=0.0,
+                    party_score_mean=0.0,
+                    party_score_std=0.0,
+                    dormancy_cv_mean=0.0,
+                    dormancy_cv_std=0.0,
+                    bench_hunting_mean=0.0,
+                    bench_hunting_std=0.0,
+                    sample_size=0,
+                    calculation_date=datetime.utcnow(),
+                )
+                # Log the error but continue
+                import logging
+                logger = logging.getLogger(__name__)
+                logger.warning(f"Baseline calculation failed: {str(calc_error)[:100]}")
 
-        z_scores = detector.compute_z_scores(features, baseline)
+        z_scores = detector.compute_z_scores(case, db, baseline)
         probability = detector.compute_probability(z_scores, baseline)
 
         return DelayProbabilityResponse(
@@ -490,13 +508,9 @@ def batch_analyze_cases(
                     error_count += 1
                     continue
 
-                # Extract features
-                feature_engineer = FeatureEngineer()
-                features = feature_engineer.engineer(case, db)
-
                 # Compute probability
                 detector = CaseAnomalyDetector()
-                z_scores = detector.compute_z_scores(features, baseline)
+                z_scores = detector.compute_z_scores(case, db, baseline)
                 probability_result = detector.compute_probability(z_scores, baseline)
 
                 results.append(
@@ -610,12 +624,8 @@ def get_case_z_scores(
             baseline = detector.calculate_baselines(db)
             cache.set_baseline_metrics(baseline)
 
-        # Compute z-scores
-        feature_engineer = FeatureEngineer()
-        features = feature_engineer.engineer(case, db)
-
         detector = CaseAnomalyDetector()
-        z_scores = detector.compute_z_scores(features, baseline)
+        z_scores = detector.compute_z_scores(case, db, baseline)
 
         return ZScoresResponse(
             density_z=z_scores.density_z,

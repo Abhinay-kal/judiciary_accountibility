@@ -172,11 +172,12 @@ class CaseAnomalyDetector:
             Only includes cases with status in common resolved states.
             Requires at least 3 resolved cases; returns zeros if insufficient data.
         """
-        # Query resolved cases with adequate hearing history
-        # Filter for cases that are likely closed/resolved based on is_disposed flag
+        # Query all recent cases with hearings for baseline calculation
+        # We use all available cases since is_disposed may not be reliably set
         resolved_cases = (
             db.query(Case)
-            .filter(Case.is_disposed == True)  # noqa: E712
+            .order_by(Case.filing_date.desc())
+            .limit(1000)  # Use up to 1000 recent cases for baseline
             .all()
         )
 

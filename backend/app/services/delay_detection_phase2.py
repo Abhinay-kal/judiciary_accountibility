@@ -527,7 +527,7 @@ class FeatureEngineer:
         return "irregular"
 
     @classmethod
-    def compute_bench_hunting_index(case: Case, db: Session) -> BenchHuntingIndex:
+    def compute_bench_hunting_index(cls, case: Case, db: Session) -> BenchHuntingIndex:
         """Detect bench hunting patterns (judge/bench changes).
 
         Bench hunting occurs when parties repeatedly cause judge changes
@@ -633,4 +633,53 @@ class FeatureEngineer:
             high_adjournment_judges=high_adj_judges,
             pattern_strength=round(pattern_strength, 3),
             explanation=explanation,
+        )
+
+    @classmethod
+    def engineer(cls, case: Case, db: Session) -> "CaseDelayFeatures":
+        """Extract all Phase 2 features for a case (aggregator method).
+
+        This method computes all four delay detection features and aggregates them
+        into a single CaseDelayFeatures dataclass.
+
+        Args:
+            case: The case to analyze.
+            db: Database session.
+
+        Returns:
+            CaseDelayFeatures with all computed features.
+        """
+        from app.schemas.delay_features import CaseDelayFeatures
+
+        # Compute adjournment density
+        adjournment_density = cls.compute_adjournment_density(case, db)
+
+        # Compute tactic frequency
+        tactic_frequency = cls.compute_tactic_frequency(case, db)
+
+        # Compute party-driven delay score
+        party_driven_score = cls.compute_party_driven_delay_score(
+            case, db, adjournment_density, tactic_frequency
+        )
+
+        # Compute dormancy variance
+        dormancy_variance = cls.compute_dormancy_variance(case, db)
+
+        # Compute bench hunting index
+        bench_hunting_index = cls.compute_bench_hunting_index(case, db)
+
+        # Aggregate into CaseDelayFeatures
+        return CaseDelayFeatures(
+            case_id=case.id,
+            adjournment_density_pct=adjournment_density.density,
+            party_driven_delay_score=party_driven_score.score,
+            dormancy_variance_cv=dormancy_variance.coefficient_of_variation,
+            bench_hunting_index=bench_hunting_index.pattern_strength,
+            #
+            # Full detail objects for advanced usage
+            adjournment_density=adjournment_density,
+            party_driven_delay=party_driven_score,
+            dormancy_analysis=dormancy_variance,
+            bench_hunting=bench_hunting_index,
+            tactic_frequency=tactic_frequency,
         )
