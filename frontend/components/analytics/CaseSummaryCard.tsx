@@ -3,17 +3,18 @@
 import { useEffect, useState } from "react";
 import { StatCard } from "@/components/StatCard";
 
-interface SummaryData {
+interface SummaryResponse {
   total_cases: number;
-  pending_cases: number;
-  disposed_cases: number;
-  disposal_rate: number;
+  disposal_status: {
+    disposed: { count: number; percentage: number };
+    pending: { count: number; percentage: number };
+  };
 }
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE ?? "http://localhost:8000/api/v1";
 
 export function CaseSummaryCard() {
-  const [data, setData] = useState<SummaryData | null>(null);
+  const [data, setData] = useState<SummaryResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -27,7 +28,7 @@ export function CaseSummaryCard() {
         if (!response.ok) {
           throw new Error(`Failed to fetch summary: ${response.status}`);
         }
-        const result = (await response.json()) as SummaryData;
+        const result = (await response.json()) as SummaryResponse;
         setData(result);
         setError(null);
       } catch (err) {
@@ -65,15 +66,15 @@ export function CaseSummaryCard() {
       />
       <StatCard
         label="Pending Cases"
-        value={data.pending_cases.toLocaleString()}
+        value={data.disposal_status.pending.count.toLocaleString()}
       />
       <StatCard
         label="Disposed Cases"
-        value={data.disposed_cases.toLocaleString()}
+        value={data.disposal_status.disposed.count.toLocaleString()}
       />
       <StatCard
         label="Disposal Rate"
-        value={`${(data.disposal_rate * 100).toFixed(1)}%`}
+        value={`${(data.disposal_status.disposed.percentage).toFixed(1)}%`}
       />
     </>
   );

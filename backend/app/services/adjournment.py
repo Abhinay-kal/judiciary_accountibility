@@ -10,10 +10,13 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 from enum import Enum
+from logging import getLogger
 from typing import Optional
 
 from app.models import HearingOutcomeType
 from app.ingestion.hearing_outcomes import parse_outcome_text
+
+logger = getLogger(__name__)
 
 
 class DelayTactic(str, Enum):
@@ -129,34 +132,57 @@ class AdjournmentTacticClassifier:
     def _normalize_text(cls, text: str | None) -> str:
         """Normalize hearing outcome text for pattern matching.
 
+        Handles bytes encoding gracefully and validates input type strictly.
+        Returns empty string on any encoding or type error (fail-safe).
+
         Args:
-            text: Raw outcome text from hearing record.
+            text: Raw outcome text from hearing record (can be str, bytes, or None).
 
         Returns:
             Normalized text in lowercase with collapsed whitespace.
+            Empty string if text is None, invalid type, or cannot be decoded.
         """
-        if not text:
+        if text is None:
             return ""
 
-        # Convert to lowercase
-        normalized = text.lower()
+        try:
+            # DEFENSIVE: Handle bytes by decoding with fallback encodings
+            if isinstance(text, bytes):
+                for encoding in ["utf-8", "utf-16", "latin-1", "iso-8859-1"]:
+                    try:
+                        text = text.decode(encoding)
+                        break
+                    except (UnicodeDecodeError, AttributeError):
+                        continue
+                else:
+                    # All decodings failed
+                    logger.warning("Failed to decode bytes text; returning empty string")
+                    return ""
 
-        # Collapse multiple whitespaces into single space
-        normalized = cls._WHITESPACE_RE.sub(" ", normalized)
+            # DEFENSIVE: Strict type check after potential decoding
+            if not isinstance(text, str):
+                logger.warning(f"Text input is not string or bytes: {type(text).__name__}")
+                return ""
 
-        # Remove common prefixes that don't aid classification
-        normalized = re.sub(r"^(after|thereafter|next|below|adjourned|adjourned.*to).*?:", "", normalized)
+            # Normalize the string
+            normalized = text.lower()
+            normalized = cls._WHITESPACE_RE.sub(" ", normalized)
+            normalized = re.sub(r"^(after|thereafter|next|below|adjourned|adjourned[^:]*to)[^:]*:", "", normalized)
+            normalized = re.sub(r"[^\w\s]", " ", normalized)
 
-        # Remove punctuation but keep word boundaries
-        normalized = re.sub(r"[^\w\s]", " ", normalized)
+            return normalized.strip()
 
-        return normalized.strip()
+        except (AttributeError, TypeError, UnicodeError) as e:
+            logger.warning(f"Error normalizing text: {type(e).__name__}: {e}")
+            return ""
 
     @classmethod
     def _calculate_pattern_score(
         cls, text: str, patterns: list[tuple[str, float]]
     ) -> tuple[float, list[str]]:
         """Calculate matched pattern score and extract keywords.
+
+        DEFENSIVE: Catches TypeError in addition to re.error.
 
         Args:
             text: Normalized outcome text to analyze.
@@ -170,14 +196,28 @@ class AdjournmentTacticClassifier:
 
         for pattern, weight in patterns:
             try:
+                # DEFENSIVE: Validate text is actually a string before regex
+                if not isinstance(text, str):
+                    logger.warning(f"Pattern score text is not string: {type(text).__name__}")
+                    break
+
                 matches = re.finditer(pattern, text)
                 for match in matches:
                     total_score += weight
                     keyword = match.group(0)
                     if keyword not in matched_keywords:
                         matched_keywords.append(keyword)
-            except re.error:
-                # Skip invalid regex patterns
+
+            except re.error as e:
+                logger.debug(f"Invalid regex pattern '{pattern}': {e}")
+                continue
+            except TypeError as e:
+                # CRITICAL FIX: Catch TypeError from non-string text
+                logger.warning(f"TypeError in pattern matching: {e}")
+                break
+            except Exception as e:
+                # Catch any other unexpected exceptions
+                logger.warning(f"Unexpected error in pattern matching: {type(e).__name__}: {e}")
                 continue
 
         return total_score, matched_keywords
@@ -196,29 +236,27 @@ class AdjournmentTacticClassifier:
         Returns:
             Normalized confidence score between 0.0 and 1.0.
         """
+        if not isinstance(raw_score, (int, float)) or raw_score is None:
+            return 0.0
+
         if raw_score <= 0:
             return 0.0
 
         # Linear scaling with empirical tuning
-        # At raw_score = 1.0, we want ~0.25 confidence
-        # At raw_score = 2.0, we want ~0.55 confidence
-        # At raw_score = 3.0+, we want ~0.75+ confidence
-        # At raw_score = 6.0+, we want near 1.0 confidence
-
-        # Use a power function for gentler curve: confidence = (raw_score / baseline)^exponent
-        baseline = 4.0  # Tuned for empirical weight distributions
-        exponent = 0.65  # Controls curve steepness
+        baseline = 4.0
+        exponent = 0.65
 
         try:
             score = (raw_score / baseline) ** exponent
-            # Clamp to valid range
             return min(1.0, max(0.0, score))
-        except (ValueError, OverflowError):
+        except (ValueError, OverflowError, ZeroDivisionError):
             return 1.0 if raw_score > 0 else 0.0
 
     @classmethod
     def classify_tactic(cls, outcome_text: str | None) -> TacticClassification:
         """Classify adjournment tactic from hearing outcome text.
+
+        DEFENSIVE: Handles None, bytes, malformed OCR, and encoding errors gracefully.
 
         Analyzes hearing outcome text to identify specific delay tactics.
         Returns the highest-confidence tactic along with supporting evidence.
@@ -228,16 +266,10 @@ class AdjournmentTacticClassifier:
 
         Returns:
             TacticClassification containing identified tactic and confidence score.
-
-        Example:
-            >>> text = "Adjourned on counsel being out of station."
-            >>> result = AdjournmentTacticClassifier.classify_tactic(text)
-            >>> result.tactic
-            <DelayTactic.PROXY_COUNSEL: 'TACTIC_PROXY_COUNSEL'>
-            >>> result.confidence
-            0.71
+            Always returns a valid TacticClassification (never raises).
         """
-        if not outcome_text or not outcome_text.strip():
+        # DEFENSIVE: Handle None and empty input upfront
+        if not outcome_text:
             return TacticClassification(
                 tactic=DelayTactic.NO_TACTIC_IDENTIFIED,
                 confidence=0.0,
@@ -245,6 +277,7 @@ class AdjournmentTacticClassifier:
                 explanation="No outcome text provided for analysis.",
             )
 
+        # Normalize text with encoding-safe handling
         normalized_text = cls._normalize_text(outcome_text)
 
         if not normalized_text:
@@ -252,60 +285,71 @@ class AdjournmentTacticClassifier:
                 tactic=DelayTactic.NO_TACTIC_IDENTIFIED,
                 confidence=0.0,
                 matched_keywords=[],
-                explanation="Outcome text normalized to empty string.",
+                explanation="Outcome text normalized to empty string (invalid encoding or format).",
             )
 
-        # Calculate scores for each tactic
-        proxy_score, proxy_keywords = cls._calculate_pattern_score(normalized_text, cls._PROXY_COUNSEL_PATTERNS)
-        frivolous_score, frivolous_keywords = cls._calculate_pattern_score(
-            normalized_text, cls._FRIVOLOUS_FILING_PATTERNS
-        )
-        judge_score, judge_keywords = cls._calculate_pattern_score(normalized_text, cls._JUDGE_UNAVAILABLE_PATTERNS)
-        stay_score, stay_keywords = cls._calculate_pattern_score(normalized_text, cls._STAY_EXTENSION_PATTERNS)
+        try:
+            # Calculate scores for each tactic
+            proxy_score, proxy_keywords = cls._calculate_pattern_score(normalized_text, cls._PROXY_COUNSEL_PATTERNS)
+            frivolous_score, frivolous_keywords = cls._calculate_pattern_score(
+                normalized_text, cls._FRIVOLOUS_FILING_PATTERNS
+            )
+            judge_score, judge_keywords = cls._calculate_pattern_score(normalized_text, cls._JUDGE_UNAVAILABLE_PATTERNS)
+            stay_score, stay_keywords = cls._calculate_pattern_score(normalized_text, cls._STAY_EXTENSION_PATTERNS)
 
-        # Normalize scores to confidence range
-        proxy_confidence = cls._normalize_score(proxy_score)
-        frivolous_confidence = cls._normalize_score(frivolous_score)
-        judge_confidence = cls._normalize_score(judge_score)
-        stay_confidence = cls._normalize_score(stay_score)
+            # Normalize scores to confidence range
+            proxy_confidence = cls._normalize_score(proxy_score)
+            frivolous_confidence = cls._normalize_score(frivolous_score)
+            judge_confidence = cls._normalize_score(judge_score)
+            stay_confidence = cls._normalize_score(stay_score)
 
-        # Find highest confidence tactic
-        scores = {
-            DelayTactic.PROXY_COUNSEL: (proxy_confidence, proxy_keywords),
-            DelayTactic.FRIVOLOUS_FILING: (frivolous_confidence, frivolous_keywords),
-            DelayTactic.JUDGE_UNAVAILABLE: (judge_confidence, judge_keywords),
-            DelayTactic.STAY_EXTENSION: (stay_confidence, stay_keywords),
-        }
+            # Find highest confidence tactic
+            scores = {
+                DelayTactic.PROXY_COUNSEL: (proxy_confidence, proxy_keywords),
+                DelayTactic.FRIVOLOUS_FILING: (frivolous_confidence, frivolous_keywords),
+                DelayTactic.JUDGE_UNAVAILABLE: (judge_confidence, judge_keywords),
+                DelayTactic.STAY_EXTENSION: (stay_confidence, stay_keywords),
+            }
 
-        best_tactic = max(scores, key=lambda t: scores[t][0])
-        best_confidence, best_keywords = scores[best_tactic]
+            best_tactic = max(scores, key=lambda t: scores[t][0])
+            best_confidence, best_keywords = scores[best_tactic]
 
-        # Generate explanation
-        if best_confidence < 0.15:
+            # Generate explanation
+            if best_confidence < 0.15:
+                return TacticClassification(
+                    tactic=DelayTactic.NO_TACTIC_IDENTIFIED,
+                    confidence=best_confidence,
+                    matched_keywords=best_keywords,
+                    explanation=f"No deliberate delay tactic detected (best match: {best_tactic.value}, confidence: {best_confidence:.2f}).",
+                )
+
+            tactic_explanations = {
+                DelayTactic.PROXY_COUNSEL: "Adjournment attributed to proxy counsel or party counsel unavailability.",
+                DelayTactic.FRIVOLOUS_FILING: "Adjournment attributed to procedural defects in case filings or documentation.",
+                DelayTactic.JUDGE_UNAVAILABLE: "Adjournment attributed to judge unavailability or bench non-assembly.",
+                DelayTactic.STAY_EXTENSION: "Adjournment attributed to continuation or extension of interim relief orders.",
+            }
+
+            explanation = tactic_explanations.get(
+                best_tactic, "Adjournment tactic classified but explanation unavailable."
+            )
+
             return TacticClassification(
-                tactic=DelayTactic.NO_TACTIC_IDENTIFIED,
+                tactic=best_tactic,
                 confidence=best_confidence,
                 matched_keywords=best_keywords,
-                explanation=f"No deliberate delay tactic detected (best match: {best_tactic.value}, confidence: {best_confidence:.2f}).",
+                explanation=explanation,
             )
 
-        tactic_explanations = {
-            DelayTactic.PROXY_COUNSEL: "Adjournment attributed to proxy counsel or party counsel unavailability.",
-            DelayTactic.FRIVOLOUS_FILING: "Adjournment attributed to procedural defects in case filings or documentation.",
-            DelayTactic.JUDGE_UNAVAILABLE: "Adjournment attributed to judge unavailability or bench non-assembly.",
-            DelayTactic.STAY_EXTENSION: "Adjournment attributed to continuation or extension of interim relief orders.",
-        }
-
-        explanation = tactic_explanations.get(
-            best_tactic, "Adjournment tactic classified but explanation unavailable."
-        )
-
-        return TacticClassification(
-            tactic=best_tactic,
-            confidence=best_confidence,
-            matched_keywords=best_keywords,
-            explanation=explanation,
-        )
+        except Exception as e:
+            # FINAL SAFETY NET: Any unexpected exception returns safe default
+            logger.error(f"Unexpected error in classify_tactic: {type(e).__name__}: {e}", exc_info=True)
+            return TacticClassification(
+                tactic=DelayTactic.NO_TACTIC_IDENTIFIED,
+                confidence=0.0,
+                matched_keywords=[],
+                explanation=f"Classification failed due to internal error: {type(e).__name__}",
+            )
 
 
 def detect_adjournment(

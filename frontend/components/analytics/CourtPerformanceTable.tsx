@@ -6,10 +6,9 @@ interface CourtPerformance {
   court_id: number;
   court_name: string;
   total_cases: number;
-  pending_cases: number;
   disposed_cases: number;
+  pending_cases: number;
   disposal_rate: number;
-  backlog_ratio: number;
 }
 
 interface PerformanceResponse {
@@ -26,8 +25,13 @@ export function CourtPerformanceTable() {
   const [data, setData] = useState<CourtPerformance[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [sortBy, setSortBy] = useState<keyof CourtPerformance>("disposal_rate");
+  const [sortBy, setSortBy] = useState<"court_name" | "total_cases" | "disposal_rate">("disposal_rate");
   const [sortAsc, setSortAsc] = useState(false);
+
+  const getSortIcon = (key: string): string => {
+    if (sortBy !== key) return "";
+    return sortAsc ? "↑" : "↓";
+  };
 
   useEffect(() => {
     async function fetchData() {
@@ -40,10 +44,11 @@ export function CourtPerformanceTable() {
           throw new Error(`Failed to fetch court performance: ${response.status}`);
         }
         const result = (await response.json()) as PerformanceResponse;
-        setData(result.courts);
+        setData(result.courts || []);
         setError(null);
       } catch (err) {
         setError(err instanceof Error ? err.message : "Unknown error");
+        setData([]);
       } finally {
         setLoading(false);
       }
@@ -51,7 +56,7 @@ export function CourtPerformanceTable() {
     fetchData();
   }, []);
 
-  const handleSort = (key: keyof CourtPerformance) => {
+  const handleSort = (key: "court_name" | "total_cases" | "disposal_rate") => {
     if (sortBy === key) {
       setSortAsc(!sortAsc);
     } else {
@@ -61,13 +66,34 @@ export function CourtPerformanceTable() {
   };
 
   const sortedData = [...data].sort((a, b) => {
-    const aVal = a[sortBy];
-    const bVal = b[sortBy];
+    let aVal: number | string = "";
+    let bVal: number | string = "";
+
+    switch (sortBy) {
+      case "court_name":
+        aVal = a.court_name;
+        bVal = b.court_name;
+        break;
+      case "total_cases":
+        aVal = a.total_cases ?? 0;
+        bVal = b.total_cases ?? 0;
+        break;
+      case "disposal_rate":
+        aVal = a.disposal_rate ?? 0;
+        bVal = b.disposal_rate ?? 0;
+        break;
+    }
+
     const direction = sortAsc ? 1 : -1;
 
     if (typeof aVal === "number" && typeof bVal === "number") {
       return (aVal - bVal) * direction;
     }
+
+    if (typeof aVal === "string" && typeof bVal === "string") {
+      return aVal.localeCompare(bVal) * direction;
+    }
+
     return 0;
   });
 
@@ -105,7 +131,7 @@ export function CourtPerformanceTable() {
                   onClick={() => handleSort("court_name")}
                   className="hover:text-ink"
                 >
-                  Court {sortBy === "court_name" ? (sortAsc ? "↑" : "↓") : ""}
+                  Court {getSortIcon("court_name")}
                 </button>
               </th>
               <th className="px-4 py-2 text-right text-ink/60">
@@ -113,23 +139,7 @@ export function CourtPerformanceTable() {
                   onClick={() => handleSort("total_cases")}
                   className="hover:text-ink"
                 >
-                  Total {sortBy === "total_cases" ? (sortAsc ? "↑" : "↓") : ""}
-                </button>
-              </th>
-              <th className="px-4 py-2 text-right text-ink/60">
-                <button
-                  onClick={() => handleSort("pending_cases")}
-                  className="hover:text-ink"
-                >
-                  Pending {sortBy === "pending_cases" ? (sortAsc ? "↑" : "↓") : ""}
-                </button>
-              </th>
-              <th className="px-4 py-2 text-right text-ink/60">
-                <button
-                  onClick={() => handleSort("disposed_cases")}
-                  className="hover:text-ink"
-                >
-                  Disposed {sortBy === "disposed_cases" ? (sortAsc ? "↑" : "↓") : ""}
+                  Total Cases {getSortIcon("total_cases")}
                 </button>
               </th>
               <th className="px-4 py-2 text-right text-ink/60">
@@ -137,7 +147,7 @@ export function CourtPerformanceTable() {
                   onClick={() => handleSort("disposal_rate")}
                   className="hover:text-ink"
                 >
-                  Disposal Rate {sortBy === "disposal_rate" ? (sortAsc ? "↑" : "↓") : ""}
+                  Disposal Rate {getSortIcon("disposal_rate")}
                 </button>
               </th>
             </tr>
@@ -146,17 +156,18 @@ export function CourtPerformanceTable() {
             {sortedData.map((court) => (
               <tr key={court.court_id} className="border-b border-ink/5 hover:bg-ink/5">
                 <td className="px-4 py-3 font-medium text-ink">{court.court_name}</td>
-                <td className="px-4 py-3 text-right">{court.total_cases.toLocaleString()}</td>
-                <td className="px-4 py-3 text-right text-clay">{court.pending_cases.toLocaleString()}</td>
-                <td className="px-4 py-3 text-right text-ocean">{court.disposed_cases.toLocaleString()}</td>
-                <td className="px-4 py-3 text-right font-medium text-ocean">
-                  {formatPercent(court.disposal_rate)}
-                </td>
+                <td className="px-4 py-3 text-right">{(court.total_cases ?? 0).toLocaleString()}</td>
+                <td className="px-4 py-3 text-right">{(court.disposal_rate ?? 0).toFixed(2)}%</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+      {data.length === 0 && !loading && !error && (
+        <div className="p-4 text-center text-ink/60">
+          No court performance data available
+        </div>
+      )}
     </article>
   );
 }

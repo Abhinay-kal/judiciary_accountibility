@@ -25,8 +25,20 @@ export function TrendChart() {
         if (!response.ok) {
           throw new Error(`Failed to fetch trend: ${response.status}`);
         }
-        const result = (await response.json()) as TrendData[];
-        setData(result);
+        interface TrendResponse {
+          months: string[];
+          data: number[];
+        }
+        const result = (await response.json()) as TrendResponse;
+        if (result.months && result.data && Array.isArray(result.months) && Array.isArray(result.data)) {
+          const chartData = result.data.map((count: number, idx: number) => ({
+            month: result.months[idx] || `Month ${idx + 1}`,
+            cases_filed: count,
+          }));
+          setData(chartData);
+        } else {
+          setData([]);
+        }
         setError(null);
       } catch (err) {
         setError(err instanceof Error ? err.message : "Unknown error");
@@ -49,6 +61,15 @@ export function TrendChart() {
 
   if (loading) {
     return <article className="card h-96 animate-pulse" />;
+  }
+
+  if (data.length === 0) {
+    return (
+      <article className="card">
+        <h3 className="mb-4 font-display text-lg">12-Month Case Filing Trend</h3>
+        <div className="text-center text-ink/40 py-12">No data available</div>
+      </article>
+    );
   }
 
   return (

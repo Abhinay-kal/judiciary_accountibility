@@ -25,8 +25,18 @@ export function DisposalStatusChart() {
         if (!response.ok) {
           throw new Error(`Failed to fetch disposal status: ${response.status}`);
         }
-        const result = (await response.json()) as Record<string, DisposalData[]>;
-        const chartData = result.disposal_distribution || result.pending_vs_pending || [];
+        interface DisposalResponse {
+          disposal_distribution: {
+            by_status: Array<{ status: string; count: number; percentage: number }>;
+          };
+        }
+        const result = (await response.json()) as DisposalResponse;
+        const chartData = (result.disposal_distribution?.by_status || []).map(
+          (item: { status: string; count: number }) => ({
+            status: item.status.charAt(0).toUpperCase() + item.status.slice(1),
+            count: item.count,
+          })
+        );
         setData(chartData);
         setError(null);
       } catch (err) {
@@ -50,6 +60,15 @@ export function DisposalStatusChart() {
 
   if (loading) {
     return <article className="card h-80 animate-pulse" />;
+  }
+
+  if (data.length === 0) {
+    return (
+      <article className="card">
+        <h3 className="mb-4 font-display text-lg">Disposal Status Distribution</h3>
+        <div className="text-center text-ink/40 py-12">No data available</div>
+      </article>
+    );
   }
 
   return (
