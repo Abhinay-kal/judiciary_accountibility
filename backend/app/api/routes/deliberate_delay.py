@@ -247,16 +247,26 @@ def analyze_case_delay(
         HTTPException(422): If case has no hearing outcomes
         HTTPException(502): If analysis fails
     """
+    import logging
+    logger = logging.getLogger(__name__)
+    
     try:
+        # Rollback any previous failed transaction
+        db.rollback()
+        
         from sqlalchemy import func
 
         from app.db.population_cache import PopulationCache
+        from app.db.session import SessionLocal
         from app.models import Case, Hearing
         from app.services.adjournment import classify_adjournment_tactic
         from app.services.delay_detection_phase2 import FeatureEngineer
         from app.services.delay_detection_phase3 import CaseAnomalyDetector
 
+        logger.info(f"Analyzing case {case_id}")
+        
         # ── Validate case exists ──────────────────────────────────────────────
+        logger.info("Querying case...")
         case = db.query(Case).filter(Case.id == case_id).first()
         if case is None or case.is_deleted:
             raise HTTPException(
@@ -265,6 +275,7 @@ def analyze_case_delay(
             )
 
         # ── Check for hearings ────────────────────────────────────────────────
+        logger.info("Counting hearings...")
         hearing_count = db.query(func.count(Hearing.id)).filter(
             Hearing.case_id == case_id
         ).scalar()
@@ -285,6 +296,7 @@ def analyze_case_delay(
             )
 
         # ── Phase 1: Classify adjournment tactics ─────────────────────────────
+        logger.info("Fetching hearings for Phase 1...")
         hearings = db.query(Hearing).filter(Hearing.case_id == case_id).all()
         tactic_frequencies = {}
 
@@ -304,12 +316,17 @@ def analyze_case_delay(
 
         if baseline is None:
             try:
-                baseline = detector.calculate_baselines(db)
-                cache.set_baseline_metrics(baseline)
+                # Use separate session for baseline calculation to avoid transaction issues
+                baseline_db = SessionLocal()
+                try:
+                    baseline = detector.calculate_baselines(baseline_db)
+                    cache.set_baseline_metrics(baseline)
+                finally:
+                    baseline_db.close()
             except Exception as calc_error:
                 # If baseline calc fails, use default baseline with zeros
                 from app.services.delay_detection_phase3 import BaselineMetrics
-                from datetime import datetime
+
                 baseline = BaselineMetrics(
                     density_mean=0.0,
                     density_std=0.0,
@@ -324,12 +341,13 @@ def analyze_case_delay(
                 )
                 # Log the error but continue
                 import logging
+
                 logger = logging.getLogger(__name__)
                 logger.warning(f"Baseline calculation failed: {str(calc_error)[:100]}")
 
         # Compute z-scores for debugging
         z_scores = detector.compute_z_scores(case, db, baseline)
-        
+
         # Compute final probability (will recalculate features and z-scores)
         probability = detector.compute_probability(case, db, baseline)
 
