@@ -1,20 +1,28 @@
 from logging.config import fileConfig
+import os
+import sys
 
 from alembic import context
 from sqlalchemy import engine_from_config, pool
 
-from app.core.config import get_settings
-from app.db.base import Base
-from app.models import *  # noqa: F401,F403
+# Add /app to path if not already there
+if '/app' not in sys.path:
+    sys.path.insert(0, '/app')
+
+try:
+    from app.core.config import get_settings
+    from app.db.base import Base
+    from app.models import *  # noqa: F401,F403
+    settings = get_settings()
+    db_url = settings.database_url
+    target_metadata = Base.metadata
+except ImportError:
+    # Fallback for alembic CLI without proper env setup
+    db_url = os.getenv('DATABASE_URL', 'postgresql+psycopg2://postgres:postgres@db:5432/judiciary_accountability')
+    target_metadata = None
 
 config = context.config
-settings = get_settings()
-config.set_main_option("sqlalchemy.url", settings.database_url)
-
-if config.config_file_name is not None:
-    fileConfig(config.config_file_name)
-
-target_metadata = Base.metadata
+config.set_main_option("sqlalchemy.url", db_url)
 
 
 def run_migrations_offline() -> None:

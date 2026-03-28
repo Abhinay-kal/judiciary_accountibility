@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.api.routes import admin_corrections, admin_data_overview, admin_feedback, admin_hearings, admin_importance, admin_judges, admin_population, analytics, cases, corrections, courts, feedback, flags, ingestion, investigation, judges, ml, open_data, provenance, queue_admin, stats, status, survival
+from app.api.routes import admin_corrections, admin_data_overview, admin_feedback, admin_hearings, admin_importance, admin_judges, admin_population, analytics, cases, corrections, courts, deliberate_delay, feedback, flags, ingestion, investigation, judges, ml, open_data, provenance, queue_admin, stats, status, survival
 
 api_router = APIRouter()
 api_router.include_router(courts.router, tags=["courts"])
@@ -11,6 +11,7 @@ api_router.include_router(flags.router, tags=["flags"])
 api_router.include_router(corrections.router, tags=["corrections"])
 api_router.include_router(feedback.router, tags=["feedback"])
 api_router.include_router(ml.router, tags=["ml"])
+api_router.include_router(deliberate_delay.router, tags=["delay-detection"])
 api_router.include_router(survival.router, tags=["survival"])
 api_router.include_router(ingestion.router, tags=["ingestion"])
 api_router.include_router(investigation.router, tags=["investigation"])

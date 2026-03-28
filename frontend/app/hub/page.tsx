@@ -20,6 +20,21 @@ const DelayBarChart = dynamic(
   { ssr: false, loading: () => <p className="text-sm text-ink/70">Loading chart...</p> }
 );
 
+const CaseDelaySearch = dynamic(
+  () => import("@/components/CaseDelaySearch").then((module) => module.CaseDelaySearch),
+  { ssr: false, loading: () => <p className="text-sm text-ink/70">Loading delay detection...</p> }
+);
+
+const BaselineMetrics = dynamic(
+  () => import("@/components/BaselineMetrics").then((module) => module.BaselineMetrics),
+  { ssr: false, loading: () => <p className="text-sm text-ink/70">Loading baseline...</p> }
+);
+
+const BatchDelayAnalysis = dynamic(
+  () => import("@/components/BatchDelayAnalysis").then((module) => module.BatchDelayAnalysis),
+  { ssr: false, loading: () => <p className="text-sm text-ink/70">Loading batch analysis...</p> }
+);
+
 type HubSectionKey =
   | "overview"
   | "search"
@@ -28,7 +43,8 @@ type HubSectionKey =
   | "open_data"
   | "corrections"
   | "feedback"
-  | "population";
+  | "population"
+  | "delay_detection";
 
 type CourtStat = {
   court_id: number;
@@ -116,6 +132,7 @@ const SECTIONS: Array<{ key: HubSectionKey; label: string; helper: string }> = [
   { key: "judges", label: "Judges", helper: "Judge list and performance stats" },
   { key: "heatmap", label: "Heatmap", helper: "Backlog intensity by court" },
   { key: "open_data", label: "Open Data", helper: "Catalog and download links" },
+  { key: "delay_detection", label: "Delay Detection", helper: "Deliberate delay analysis" },
   { key: "corrections", label: "Corrections", helper: "Submit and moderate requests" },
   { key: "feedback", label: "RtR Feedback", helper: "Moderate official responses" },
   { key: "population", label: "Population", helper: "Run and monitor full ingestion" },
@@ -710,6 +727,42 @@ function UnifiedHubInner() {
                 ))}
                 {datasets.length === 0 ? <p className="text-sm text-ink/70">No datasets available.</p> : null}
               </div>
+            </div>
+          ) : null}
+
+          {section === "delay_detection" || mountedSections.has("delay_detection") ? (
+            <div className={section === "delay_detection" ? "space-y-4" : "hidden"}>
+              <div className="card">
+                <h3 className="font-display text-xl">Deliberate Delay Detection</h3>
+                <p className="text-sm text-ink/70">ML-powered analysis of case adjournment patterns and delays. Analyze single cases or batch process up to 1,000 cases.</p>
+              </div>
+
+              {/* Tabs for delay detection sections */}
+              <div className="flex gap-2 overflow-x-auto">
+                <button
+                  onClick={() => {
+                    // This is handled in the components
+                  }}
+                  className="px-4 py-2 rounded-lg bg-ocean text-white font-medium whitespace-nowrap"
+                >
+                  Single Case
+                </button>
+                <button className="px-4 py-2 rounded-lg bg-ink/10 text-ink/70 font-medium whitespace-nowrap">
+                  Batch Analysis
+                </button>
+                <button className="px-4 py-2 rounded-lg bg-ink/10 text-ink/70 font-medium whitespace-nowrap">
+                  Baseline Metrics
+                </button>
+              </div>
+
+              {/* Single Case Search */}
+              <CaseDelaySearch />
+
+              {/* Baseline Metrics */}
+              <BaselineMetrics />
+
+              {/* Batch Analysis */}
+              <BatchDelayAnalysis />
             </div>
           ) : null}
 
