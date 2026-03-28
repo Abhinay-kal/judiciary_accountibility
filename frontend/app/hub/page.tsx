@@ -44,7 +44,8 @@ type HubSectionKey =
   | "corrections"
   | "feedback"
   | "population"
-  | "delay_detection";
+  | "delay_detection"
+  | "analytics";
 
 type CourtStat = {
   court_id: number;
@@ -131,6 +132,7 @@ const SECTIONS: Array<{ key: HubSectionKey; label: string; helper: string }> = [
   { key: "search", label: "Case Search", helper: "Find cases fast" },
   { key: "judges", label: "Judges", helper: "Judge list and performance stats" },
   { key: "heatmap", label: "Heatmap", helper: "Backlog intensity by court" },
+  { key: "analytics", label: "Analytics", helper: "Comprehensive case and court analytics" },
   { key: "open_data", label: "Open Data", helper: "Catalog and download links" },
   { key: "delay_detection", label: "Delay Detection", helper: "Deliberate delay analysis" },
   { key: "corrections", label: "Corrections", helper: "Submit and moderate requests" },
@@ -381,7 +383,7 @@ function UnifiedHubInner() {
   }, [section, searchParams, runSearch]);
 
   useEffect(() => {
-    const needsPublicData = section === "overview" || section === "judges" || section === "heatmap" || section === "open_data";
+    const needsPublicData = section === "overview" || section === "judges" || section === "heatmap" || section === "open_data" || section === "analytics";
     if (needsPublicData && !publicDataLoaded.current) {
       publicDataLoaded.current = true;
       loadPublicOverview();
@@ -683,6 +685,29 @@ function UnifiedHubInner() {
                   <p className="mt-2 text-sm text-ink/70">Pick a judge to view stats.</p>
                 )}
               </div>
+            </div>
+          ) : null}
+
+          {section === "analytics" ? (
+            <div className="card">
+              <h3 className="font-display text-xl">Analytics Dashboard</h3>
+              <p className="mt-2 text-sm text-ink/70">Comprehensive insights into case statistics and judicial performance across all courts.</p>
+              <p className="mt-3 text-sm">
+                Access detailed analytics including:
+              </p>
+              <ul className="mt-2 space-y-1 text-sm text-ink/70">
+                <li>• Case summary statistics (total, pending, disposed)</li>
+                <li>• Court performance metrics and comparative analysis</li>
+                <li>• Case distribution across courts and by type</li>
+                <li>• Disposal status trends and patterns</li>
+                <li>• 12-month filing trends and forecasts</li>
+              </ul>
+              <Link
+                href="/analytics"
+                className="mt-4 inline-block rounded bg-ocean px-4 py-2 text-sm text-white hover:bg-ocean/80 transition-colors"
+              >
+                Open Analytics Dashboard →
+              </Link>
             </div>
           ) : null}
 
