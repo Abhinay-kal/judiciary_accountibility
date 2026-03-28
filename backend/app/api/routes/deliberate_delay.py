@@ -497,8 +497,12 @@ def batch_analyze_cases(
         )
 
     try:
-        # Rollback any previous failed transaction
-        db.rollback()
+        # Rollback any previous failed transaction to get clean session
+        try:
+            db.rollback()
+            db.expunge_all()  # Clear any cached objects
+        except Exception:
+            pass  # Session might be fresh
         
         from app.db.population_cache import PopulationCache
         from app.db.session import SessionLocal
@@ -541,6 +545,11 @@ def batch_analyze_cases(
         results: List[CaseProbabilityAnalysis] = []
         probabilities_list: List[float] = []
         error_count = 0
+        error_details: List[dict] = []
+        
+        # Ensure baseline is available
+        if baseline is None:
+            raise ValueError("Failed to prepare baseline metrics for batch analysis")
 
         for case_id in case_ids:
             try:
@@ -552,6 +561,7 @@ def batch_analyze_cases(
 
                 if case is None:
                     error_count += 1
+                    error_details.append({"case_id": case_id, "error": "Not found"})
                     continue
 
                 # Compute probability
@@ -574,17 +584,25 @@ def batch_analyze_cases(
 
             except Exception as e:
                 import logging
+                import traceback
                 logger = logging.getLogger(__name__)
-                logger.error(f"Error analyzing case {case_id}: {str(e)[:200]}")
+                error_msg = str(e)[:200]
+                logger.error(f"Error analyzing case {case_id}: {error_msg}")
+                logger.error(traceback.format_exc())
+                error_details.append({"case_id": case_id, "error": error_msg})
                 error_count += 1
                 continue
 
         # Compute summary statistics
-        summary_stats = {}
+        summary_stats = {
+            "error_details": error_details,
+            "debug": "batch_v2",
+        }
+        
         if probabilities_list:
             from statistics import mean, stdev
 
-            summary_stats = {
+            stats = {
                 "count": len(probabilities_list),
                 "mean": mean(probabilities_list),
                 "min": min(probabilities_list),
@@ -593,6 +611,7 @@ def batch_analyze_cases(
                     len(probabilities_list) // 2
                 ],
             }
+            summary_stats.update(stats)
 
             if len(probabilities_list) > 1:
                 summary_stats["stdev"] = stdev(probabilities_list)
@@ -607,10 +626,17 @@ def batch_analyze_cases(
             analysis_timestamp=datetime.utcnow(),
         )
 
+    except HTTPException:
+        raise
     except Exception as e:
+        import logging
+        import traceback
+        logger = logging.getLogger(__name__)
+        logger.error(f"Batch analysis outer exception: {str(e)[:500]}")
+        logger.error(traceback.format_exc())
         raise HTTPException(
             status_code=502,
-            detail=f"Batch analysis failed: {str(e)}",
+            detail=f"Batch analysis failed: {str(e)[:500]}",
         )
 
 
