@@ -497,105 +497,55 @@ def batch_analyze_cases(
         )
 
     try:
-        # For batch, don't rollback - use fresh session from FastAPI
-        # Just ensure we have a clean state
+        # Use the single-case analyzer for each case to ensure consistency
+        from app.models import Case as CaseModel
         
-        from app.db.population_cache import PopulationCache
-        from app.db.session import SessionLocal
-        from app.models import Case
-        from app.services.delay_detection_phase3 import CaseAnomalyDetector
-        from app.services.delay_detection_phase2 import FeatureEngineer
-        from app.services.adjournment import classify_adjournment_tactic
-
-        # Prepare baseline
-        cache = PopulationCache(db)
-        baseline = cache.get_baseline_metrics()
-
-        if baseline is None:
-            try:
-                # Use separate session for baseline calculation
-                baseline_db = SessionLocal()
-                try:
-                    detector = CaseAnomalyDetector()
-                    baseline = detector.calculate_baselines(baseline_db)
-                    cache.set_baseline_metrics(baseline)
-                except Exception as calc_error:
-                    # If baseline calculation fails, use default baseline
-                    from app.services.delay_detection_phase3 import BaselineMetrics
-                    baseline = BaselineMetrics(
-                        density_mean=0.0,
-                        density_std=0.0,
-                        party_score_mean=0.0,
-                        party_score_std=0.0,
-                        dormancy_cv_mean=0.0,
-                        dormancy_cv_std=0.0,
-                        bench_hunting_mean=0.0,
-                        bench_hunting_std=0.0,
-                        sample_size=0,
-                        calculation_date=datetime.utcnow(),
-                    )
-                    logger = logging.getLogger(__name__)
-                    logger.warning(f"Baseline calculation failed: {str(calc_error)[:100]}")
-                finally:
-                    baseline_db.close()
-
-        # Analyze cases
         results: List[CaseProbabilityAnalysis] = []
         probabilities_list: List[float] = []
-        error_count = 0
         error_details: List[dict] = []
-        
-        # Ensure baseline is available
-        if baseline is None:
-            raise ValueError("Failed to prepare baseline metrics for batch analysis")
+        error_count = 0
 
         for case_id in case_ids:
             try:
-                case = (
-                    db.query(Case)
-                    .filter(Case.id == case_id, Case.is_deleted == False)
-                    .first()
-                )
-
-                if case is None:
-                    error_count += 1
-                    error_details.append({"case_id": case_id, "error": "Not found"})
-                    continue
-
-                # Compute probability
-                detector = CaseAnomalyDetector()
-                z_scores = detector.compute_z_scores(case, db, baseline)
-                probability_result = detector.compute_probability(case, db, baseline)
-
-                results.append(
-                    CaseProbabilityAnalysis(
-                        case_id=case_id,
-                        case_number=case.case_number,
-                        probability=probability_result.probability,
-                        risk_level=probability_result.risk_level,
-                        confidence=probability_result.confidence,
-                        primary_drivers=probability_result.primary_drivers,
+                # Re-use the single case analysis logic
+                single_result = analyze_case_delay(case_id, db)
+                
+                if single_result.status == "success":
+                    results.append(
+                        CaseProbabilityAnalysis(
+                            case_id=case_id,
+                            case_number=single_result.case_number,
+                            probability=single_result.probability,
+                            risk_level=single_result.risk_level,
+                            confidence=single_result.confidence,
+                            primary_drivers=single_result.primary_drivers,
+                        )
                     )
-                )
-
-                probabilities_list.append(probability_result.probability)
-
+                    probabilities_list.append(single_result.probability)
+                else:
+                    error_count += 1
+                    error_details.append({
+                        "case_id": case_id,
+                        "error": single_result.explanation
+                    })
+                    
             except Exception as e:
                 import logging
                 import traceback
                 logger = logging.getLogger(__name__)
                 error_msg = str(e)[:200]
-                logger.error(f"Error analyzing case {case_id}: {error_msg}")
+                logger.error(f"Error analyzing case {case_id} in batch: {error_msg}")
                 logger.error(traceback.format_exc())
-                error_details.append({"case_id": case_id, "error": error_msg})
+                error_detail = {
+                    "case_id": case_id,
+                    "error": error_msg
+                }
+                error_details.append(error_detail)
                 error_count += 1
                 continue
 
         # Compute summary statistics
-        summary_stats = {
-            "error_details": error_details,
-            "debug": "batch_v2",
-        }
+        summary_stats = {"test_value": 123, "test_list": [1, 2, 3]}
         
         if probabilities_list:
             from statistics import mean, stdev
@@ -614,7 +564,7 @@ def batch_analyze_cases(
             if len(probabilities_list) > 1:
                 summary_stats["stdev"] = stdev(probabilities_list)
 
-        return BatchDelayAnalysisResponse(
+        result = BatchDelayAnalysisResponse(
             analysis_type="batch_delay_analysis",
             total_cases_analyzed=len(case_ids),
             success_count=len(results),
@@ -623,6 +573,13 @@ def batch_analyze_cases(
             summary_stats=summary_stats,
             analysis_timestamp=datetime.utcnow(),
         )
+        
+        # Debug: return raw dict to bypass Pydantic
+        import logging
+        logger = logging.getLogger(__name__)
+        logger.info(f"Batch summary_stats before response: {summary_stats}")
+        
+        return result.model_dump()
 
     except HTTPException:
         raise
@@ -630,11 +587,18 @@ def batch_analyze_cases(
         import logging
         import traceback
         logger = logging.getLogger(__name__)
-        logger.error(f"Batch analysis outer exception: {str(e)[:500]}")
+        error_msg = f"Batch analysis outer exception: {type(e).__name__}: {str(e)[:500]}"
+        logger.error(error_msg)
         logger.error(traceback.format_exc())
-        raise HTTPException(
-            status_code=502,
-            detail=f"Batch analysis failed: {str(e)[:500]}",
+        # Return error response instead of raising HTTP 502
+        return BatchDelayAnalysisResponse(
+            analysis_type="batch_delay_analysis",
+            total_cases_analyzed=len(case_ids),
+            success_count=0,
+            error_count=len(case_ids),
+            results=[],
+            summary_stats={"error": error_msg},
+            analysis_timestamp=datetime.utcnow(),
         )
 
 
