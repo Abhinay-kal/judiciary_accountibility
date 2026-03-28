@@ -497,7 +497,11 @@ def batch_analyze_cases(
         )
 
     try:
+        # Rollback any previous failed transaction
+        db.rollback()
+        
         from app.db.population_cache import PopulationCache
+        from app.db.session import SessionLocal
         from app.models import Case
         from app.services.delay_detection_phase3 import CaseAnomalyDetector
         from app.services.delay_detection_phase2 import FeatureEngineer
@@ -508,9 +512,30 @@ def batch_analyze_cases(
         baseline = cache.get_baseline_metrics()
 
         if baseline is None:
-            detector = CaseAnomalyDetector()
-            baseline = detector.calculate_baselines(db)
-            cache.set_baseline_metrics(baseline)
+            try:
+                # Use separate session for baseline calculation
+                baseline_db = SessionLocal()
+                try:
+                    detector = CaseAnomalyDetector()
+                    baseline = detector.calculate_baselines(baseline_db)
+                    cache.set_baseline_metrics(baseline)
+                finally:
+                    baseline_db.close()
+            except Exception:
+                # If baseline calc fails, use default baseline
+                from app.services.delay_detection_phase3 import BaselineMetrics
+                baseline = BaselineMetrics(
+                    density_mean=0.0,
+                    density_std=0.0,
+                    party_score_mean=0.0,
+                    party_score_std=0.0,
+                    dormancy_cv_mean=0.0,
+                    dormancy_cv_std=0.0,
+                    bench_hunting_mean=0.0,
+                    bench_hunting_std=0.0,
+                    sample_size=0,
+                    calculation_date=datetime.utcnow(),
+                )
 
         # Analyze cases
         results: List[CaseProbabilityAnalysis] = []
@@ -532,7 +557,7 @@ def batch_analyze_cases(
                 # Compute probability
                 detector = CaseAnomalyDetector()
                 z_scores = detector.compute_z_scores(case, db, baseline)
-                probability_result = detector.compute_probability(z_scores, baseline)
+                probability_result = detector.compute_probability(case, db, baseline)
 
                 results.append(
                     CaseProbabilityAnalysis(
@@ -547,7 +572,10 @@ def batch_analyze_cases(
 
                 probabilities_list.append(probability_result.probability)
 
-            except Exception:
+            except Exception as e:
+                import logging
+                logger = logging.getLogger(__name__)
+                logger.error(f"Error analyzing case {case_id}: {str(e)[:200]}")
                 error_count += 1
                 continue
 
