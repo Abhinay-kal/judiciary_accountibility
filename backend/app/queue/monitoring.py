@@ -67,7 +67,7 @@ class QueueMonitor:
 
 def collect_queue_status(celery_app: Any, queues: list[str]) -> list[QueueStatus]:
     settings = get_settings()
-    monitor = QueueMonitor(settings.redis_url)
+    monitor = QueueMonitor(settings.celery_broker_url)
 
     consumers_by_queue: dict[str, int] = {queue: 0 for queue in queues}
     try:
@@ -103,7 +103,7 @@ def apply_ingestion_backpressure(celery_app: Any, max_depth: int = 2000) -> bool
     """Pause ingestion scheduler dispatch when queue backlog crosses threshold."""
 
     settings = get_settings()
-    monitor = QueueMonitor(settings.redis_url)
+    monitor = QueueMonitor(settings.celery_broker_url)
     depth = monitor.queue_depth("ingestion")
     overloaded = depth >= max_depth if depth >= 0 else False
 

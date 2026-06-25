@@ -1,0 +1,2978 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome to High Court of Tripura</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="High Court of Tripura" name="keywords" />
+    <meta content="High Court of Tripura Official Website" name="description" />
+
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon" />
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Google Fonts -->
+    <!--  <link href="css/googleapis.css" rel="stylesheet">
+          <script src="css/jquery.min.js"></script>
+          <script src="css/bootstrap.min.js"></script>-->
+
+    <script src="cssjs/jquery.min.js"></script>
+    <script src="cssjs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquerycssmenu.js"></script>
+    <script src="js/ModalPopupWindow.js" type="text/javascript"></script>
+    <link href="cssjs/video.css" rel="stylesheet" />
+    <script src="cssjs/video.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      function golinka() {
+        window.location.href = "https://thc.nic.in/leave.html";
+      }
+    </script>
+
+    <script type="text/javascript">
+      function golinkb() {
+        window.location.href = "https://thc.nic.in/leave_station.html";
+      }
+    </script>
+    <style>
+      .dropbtn {
+        background-color: #c3e2fb;
+        color: #151414;
+        /*                padding: 10px;*/
+        //width: 296px;
+        height: 33px;
+        font-size: 13px;
+        border: black;
+      }
+
+      .dropbtn3 {
+        background-color: #c3e2fb;
+        color: #151414;
+        /*                padding: 10px;*/
+        //width: 296px;
+        height: 33px;
+        font-size: 13px;
+        border: black;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #6ab6f6;
+        min-width: 190px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown:hover .dropbtn {
+        background-color: #a9cce3;
+      }
+
+      .dropdown-submenu {
+        position: relative;
+      }
+
+      .dropbtn4 {
+        background-color: #c3e2fb;
+        color: #151414;
+        /*                padding: 10px;*/
+        //width: 296px;
+        height: 43px;
+        font-size: 13px;
+        border: black;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $(".dropdown-submenu a.test").on("click", function (e) {
+          $(this).next("ul").toggle();
+          e.stopPropagation();
+          e.preventDefault();
+        });
+      });
+    </script>
+    <script>
+      var modalWin = new CreateModalPopUpObject();
+      modalWin.SetLoadingImagePath("images/loading1.gif");
+      modalWin.SetCloseButtonImagePath("images/remove.gif");
+      //Uncomment below line to make look buttons as link
+      //modalWin.SetButtonStyle("background:none;border:none;textDecoration:underline;cursor:pointer");
+
+      //FunctionCurrentYear
+	  
+	  //For 2026
+	  function ShowNewPage() {
+        var callbackFunctionArray = new Array(EnrollNow, EnrollLater);
+        modalWin.ShowURL(
+          "Calender2026.jpg",
+          800,
+          1000,
+          '<a href="#" style="text-decoration:none;" onclick="ShowNewPage2()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2015</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage3()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2016</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage4()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2017</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage5()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2018</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage6()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2019</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage7()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2020</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage8()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2021</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage9()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2022</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage9_1()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2023</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage10()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2024</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage_11()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2025</font></a>',
+          null,
+          callbackFunctionArray
+        );
+      }
+	  
+	  
+		// For 2025
+      function ShowNewPage_11() {
+        var callbackFunctionArray = new Array(EnrollNow, EnrollLater);
+        modalWin.ShowURL(
+          "Calendar2025.jpg",
+          800,
+          1000,
+          '<a href="#" style="text-decoration:none;" onclick="ShowNewPage2()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2015</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage3()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2016</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage4()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2017</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage5()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2018</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage6()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2019</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage7()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2020</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage8()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2021</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage9()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2022</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage9_1()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2023</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage10()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2024</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage_11()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2025</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2026</font></a>',
+          null,
+          callbackFunctionArray
+        );
+      }
+
+      //For 2024
+      function ShowNewPage10() {
+        var callbackFunctionArray = new Array(EnrollNow, EnrollLater);
+        modalWin.ShowURL(
+          "Calendar2024.jpg",
+          800,
+          1000,
+          '<a href="#" style="text-decoration:none;" onclick="ShowNewPage1()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2014</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage2()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2015</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage3()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2016</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage4()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2017</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage5()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2018</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage6()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2019</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage7()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2020</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage8()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2021</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage9()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2022</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage9_1()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2023</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage10()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2024</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage_11()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2025</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2026</font></a>',
+          null,
+          callbackFunctionArray
+        );
+      }
+	//For 2023
+	function ShowNewPage9_1() {
+        var callbackFunctionArray = new Array(EnrollNow, EnrollLater);
+        modalWin.ShowURL(
+          "Calendar2023.jpg",
+          800,
+          1000,
+          '<a href="#" style="text-decoration:none;" onclick="ShowNewPage1()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2014</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage2()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2015</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage3()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2016</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage4()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2017</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage5()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2018</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage6()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2019</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage7()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2020</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage8()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2021</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage9()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2022</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage9_1()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2023</font></a>&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage10()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2024</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage_11()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2025</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2026</font></a>',
+          null,
+          callbackFunctionArray
+        );
+      }
+     
+
+      //For 2022
+
+      function ShowNewPage9() {
+        var callbackFunctionArray = new Array(EnrollNow, EnrollLater);
+        modalWin.ShowURL(
+          "Calendar2022.jpg",
+          800,
+          1000,
+          '<a href="#" style="text-decoration:none;" onclick="ShowNewPage1()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2014</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage2()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2015</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage3()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2016</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage4()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2017</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage5()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2018</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage6()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2019</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage7()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2020</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage8()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2021</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage9()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2022</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage9_1()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2023</font></a> ||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage10()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2024</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage_11()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2025</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2026</font></a>',
+          null,
+          callbackFunctionArray
+        );
+      }
+
+      //For 2021
+
+      function ShowNewPage8() {
+        var callbackFunctionArray = new Array(EnrollNow, EnrollLater);
+        modalWin.ShowURL(
+          "Calendar2021.jpg",
+          800,
+          1000,
+          '<a href="#" style="text-decoration:none;" onclick="ShowNewPage1()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2014</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage2()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2015</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage3()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2016</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage4()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2017</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage5()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2018</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage6()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2019</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage7()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2020</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage9()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2022</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2023</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2024</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage_11()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2025</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2026</font></a>',
+          null,
+          callbackFunctionArray
+        );
+      }
+
+      //For 2020
+
+      function ShowNewPage7() {
+        var callbackFunctionArray = new Array(EnrollNow, EnrollLater);
+        modalWin.ShowURL(
+          "Calendar2020.jpg",
+          800,
+          1000,
+          '<a href="#" style="text-decoration:none;" onclick="ShowNewPage1()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2014</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage2()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2015</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage3()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2016</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage4()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2017</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage5()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2018</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage6()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2019</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage8()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2021</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage9()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2022</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2023</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2024</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage_11()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2025</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2026</font></a>',
+          null,
+          callbackFunctionArray
+        );
+      }
+
+      //For 2019
+
+      function ShowNewPage6() {
+        var callbackFunctionArray = new Array(EnrollNow, EnrollLater);
+        modalWin.ShowURL(
+          "Calendar2019.jpg",
+          800,
+          1000,
+          '<a href="#" style="text-decoration:none;" onclick="ShowNewPage1()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2014</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage2()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2015</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage3()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2016</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage4()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2017</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage5()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2018</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage7()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2020</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage8()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2021</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage9()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2022</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2023</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2024</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage_11()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2025</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2026</font></a>',
+          null,
+          callbackFunctionArray
+        );
+      }
+
+      //For2018
+
+      function ShowNewPage5() {
+        var callbackFunctionArray = new Array(EnrollNow, EnrollLater);
+        modalWin.ShowURL(
+          "Calendar2018.jpg",
+          800,
+          1000,
+          '<a href="#" style="text-decoration:none;" onclick="ShowNewPage1()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2014</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage2()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2015</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage3()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2016</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage4()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2017</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage6()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2019</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage7()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2020</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage8()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2021</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage9()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2022</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2023</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2024</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage_11()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2025</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2026</font></a>',
+          null,
+          callbackFunctionArray
+        );
+      }
+      //For2017
+
+      function ShowNewPage4() {
+        var callbackFunctionArray = new Array(EnrollNow, EnrollLater);
+        modalWin.ShowURL(
+          "Calendar2017.jpg",
+          800,
+          1000,
+          '<a href="#" style="text-decoration:none;" onclick="ShowNewPage1()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2014</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage2()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2015</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage3()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2016</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage5()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2018</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage6()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2019</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage7()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2020</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage8()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2021</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage9()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2022</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2023</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2024</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage_11()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2025</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2026</font></a>',
+          null,
+          callbackFunctionArray
+        );
+      }
+
+      //For2016
+
+      function ShowNewPage3() {
+        var callbackFunctionArray = new Array(EnrollNow, EnrollLater);
+        modalWin.ShowURL(
+          "Calendar2016.jpg",
+          800,
+          1000,
+          '<a href="#" style="text-decoration:none;" onclick="ShowNewPage1()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2014</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage2()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2015</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage4()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2017</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage5()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2018</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage6()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2019</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage7()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2020</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage8()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2021</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage9()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2022</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2023</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2024</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage_11()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2025</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2026</font></a>',
+          null,
+          callbackFunctionArray
+        );
+      }
+
+      //For2015
+
+      function ShowNewPage2() {
+        var callbackFunctionArray = new Array(EnrollNow, EnrollLater);
+        modalWin.ShowURL(
+          "Calendar2015.jpg",
+          800,
+          1000,
+          '<a href="#" style="text-decoration:none;" onclick="ShowNewPage1()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2014</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage3()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2016</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage4()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2017</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage5()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2018</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage6()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2019</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage7()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2020</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage8()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2021</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage9()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2022</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2023</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2024</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage_11()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2025</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2026</font></a>',
+          null,
+          callbackFunctionArray
+        );
+      }
+
+      //For2014
+
+      function ShowNewPage1() {
+        var callbackFunctionArray = new Array(EnrollNow, EnrollLater);
+        modalWin.ShowURL(
+          "Calendar2014.jpg",
+          800,
+          1010,
+          '<a href="#" style="text-decoration:none;" onclick="ShowNewPage2()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2015</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage3()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2016</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage4()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2017</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage5()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2018</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage6()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2019</font></a>&nbsp;&nbsp;||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage7()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2020</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage8()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2021</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage9()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2022</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2023</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;" >2024</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage_11()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2025</font></a>||&nbsp;&nbsp;<a href="#" style="text-decoration:none;" onclick="ShowNewPage()" value="Show URL Window" ><font style="color:#FFFFFF; font-weight:bold;">2026</font></a>',
+          null,
+          callbackFunctionArray
+        );
+      }
+
+      function ShowMessage() {
+        modalWin.ShowMessage(
+          "This Modal Popup Window using Javascript",
+          200,
+          400,
+          "User Information"
+        );
+      }
+
+      function ShowMessageNoDragging() {
+        modalWin.Draggable = false;
+        modalWin.ShowMessage(
+          "You can not drag this window",
+          200,
+          400,
+          "User Information"
+        );
+      }
+
+      function Action1() {
+        alert("Action1 is excuted");
+        modalWin.HideModalPopUp();
+      }
+
+      function Action2() {
+        alert("Action2 is excuted");
+        modalWin.HideModalPopUp();
+      }
+
+      function EnrollNow(msg) {
+        modalWin.HideModalPopUp();
+        modalWin.ShowMessage(msg, 200, 400, "User Information", null, null);
+      }
+
+      function EnrollLater() {
+        modalWin.HideModalPopUp();
+        modalWin.ShowMessage(msg, 200, 400, "User Information", null, null);
+      }
+
+      function HideModalWindow() {
+        modalWin.HideModalPopUp();
+      }
+    </script>
+    <style>
+      .dropbtn2 {
+        border: none;
+      }
+
+      .dropdown2 {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown2-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown2-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown2-content a:hover {
+        background-color: #ddd;
+      }
+      .dropdown2:hover .dropdown2-content {
+        display: block;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        var $affectedElements = $("p,div"); // Can be extended, ex. $(�div, p, span.someClass�)
+
+        // Storing the original size in a data attribute so size can be reset
+        $affectedElements.each(function () {
+          var $this = $(this);
+          $this.data("orig-size", $this.css("font-size"));
+        });
+        $("#btn-increase").click(function () {
+          changeFontSize(1);
+        });
+
+        $("#btn-decrease").click(function () {
+          changeFontSize(-1);
+        });
+
+        $("#btn-orig").click(function () {
+          $affectedElements.each(function () {
+            var $this = $(this);
+            $this.css("font-size", $this.data("orig-size"));
+          });
+        });
+
+        function changeFontSize(direction) {
+          $affectedElements.each(function () {
+            var $this = $(this);
+            $this.css(
+              "font-size",
+              parseInt($this.css("font-size")) + direction
+            );
+          });
+        }
+      });
+    </script>
+
+    <style>
+      /* Set black background color, white text and some padding */
+      footer {
+        background-image: url("n1.jpg");
+        //background-color: #555;
+        color: white;
+      }
+    </style>
+    <style>
+      body {
+        background-color: #7a7a7a;
+      }
+      .panel-heading {
+        background-image: url("n2.jpg");
+        height: 35px;
+      }
+      .navmain {
+        background-image: url("n1.jpg");
+        width: 100%;
+      }
+      .update {
+        background-image: url("n4.jpg");
+        height: 35px;
+        padding-top: 6px;
+      }
+      .maplo {
+        background-image: url("n2.jpg");
+        height: 35px;
+        margin-bottom: 6px;
+        color: white;
+        font-size: 12px;
+      }
+      .main-nav {
+        background-image: url("n1.jpg");
+        width: 100%;
+      }
+    </style>
+    <script>
+      function myFunction() {
+        document.body.style.backgroundColor = "#7A7A7A";
+        //document.getElementById("myDIV").style.backgroundColor = "#00E5EE";
+        document.getElementById("bdiv1").style.backgroundImage =
+          "url('r2.jpg')";
+        document.getElementById("bdiv2").style.backgroundImage =
+          "url('r2.jpg')";
+        document.getElementById("bdiv3").style.backgroundImage =
+          "url('r2.jpg')";
+        document.getElementById("bdiv4").style.backgroundImage =
+          "url('r2.jpg')";
+        document.getElementById("bdivmain").style.backgroundImage =
+          "url('r1.jpg')";
+        document.getElementById("bdivmain2").style.backgroundImage =
+          "url('r1.jpg')";
+        document.getElementById("latestup").style.backgroundImage =
+          "url('r4.jpg')";
+        document.getElementById("map").style.backgroundImage = "url('r2.jpg')";
+        document.getElementById("foot").style.backgroundImage = "url('r1.jpg')";
+        document.getElementById("banner").src = "img/main4_2022.jpg";
+        document.getElementById("txtcolo").style.color = "#00539CFF";
+        document.getElementById("txtcolo2").style.color = "#00539CFF";
+        document.getElementById("txtcolo3").style.color = "#00539CFF";
+        document.getElementById("txtcolo4").style.color = "#00539CFF";
+        document.getElementById("txtcolo5").style.color = "#00539CFF";
+        document.getElementById("txtcolo6").style.color = "#00539CFF";
+        document.getElementById("txtcolo7").style.color = "#00539CFF";
+        document.getElementById("txtcolo8").style.color = "#00539CFF";
+        document.getElementById("txtcolo9").style.color = "#00539CFF";
+        document.getElementById("txtcolo10").style.color = "#00539CFF";
+        document.getElementById("txtcolo11").style.color = "#00539CFF";
+        document.getElementById("txtcolo12").style.color = "#00539CFF";
+        document.getElementById("txtcolo13").style.color = "#00539CFF";
+        document.getElementById("txtcolo14").style.color = "#00539CFF";
+        document.getElementById("txtcolo15").style.color = "#00539CFF";
+        document.getElementById("txtcolo16").style.color = "#00539CFF";
+        //menu
+        document.getElementById("menu1").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu2").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu3").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu4").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu5").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu6").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu7").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu8").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu9").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu11").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu12").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu13").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu15").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu16").style.backgroundColor = "#A7F9F6";
+        //document.getElementById("menu17").style.backgroundColor = "#A7F9F6";
+        //document.getElementById("menu18").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu19").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu20").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu21").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu22").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu23").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu24").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu25").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menuN2").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menuN4").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menuN5").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menuN6").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menuN28082019").style.backgroundColor =
+          "#A7F9F6";
+        //document.getElementById("menuNJA").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu_may_1_2020").style.backgroundColor =
+          "#A7F9F6";
+        document.getElementById("menu_2_2020").style.backgroundColor =
+          "#A7F9F6";
+        document.getElementById("menuvc").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu_vc_live_2020").style.backgroundColor =
+          "#A7F9F6";
+        //document.getElementById("menu_annual_21").style.backgroundColor = "#A7F9F6";
+        //document.getElementById("menu_vision_21").style.backgroundColor = "#A7F9F6";
+        //document.getElementById("menu_eCourt_21").style.backgroundColor = "#A7F9F6";
+        document.getElementById("menu_eng_hindi_21").style.backgroundColor =
+          "#A7F9F6";
+        document.getElementById("menuefiling").style.backgroundColor =
+          "#A7F9F6";
+        document.getElementById("menueVirtualCourt").style.backgroundColor =
+          "#A7F9F6";
+        document.getElementById("menuePayment").style.backgroundColor =
+          "#A7F9F6";
+      }
+      function myFunction1() {
+        document.body.style.backgroundColor = "#7A7A7A";
+        document.getElementById("myDIV").style.backgroundColor = "#ffffff";
+        document.getElementById("bdiv1").style.backgroundImage =
+          "url('n2.jpg')";
+        document.getElementById("bdiv2").style.backgroundImage =
+          "url('n2.jpg')";
+        document.getElementById("bdiv3").style.backgroundImage =
+          "url('n2.jpg')";
+        document.getElementById("bdiv4").style.backgroundImage =
+          "url('n2.jpg')";
+        document.getElementById("bdivmain").style.backgroundImage =
+          "url('n1.jpg')";
+        document.getElementById("bdivmain2").style.backgroundImage =
+          "url('n1.jpg')";
+        document.getElementById("latestup").style.backgroundImage =
+          "url('n4.jpg')";
+        document.getElementById("map").style.backgroundImage = "url('n2.jpg')";
+        document.getElementById("foot").style.backgroundImage = "url('n1.jpg')";
+        document.getElementById("banner").src = "img/main1_2022.jpg";
+        document.getElementById("txtcolo").style.color = "#FFFFFF";
+        document.getElementById("txtcolo2").style.color = "#FFFFFF";
+        document.getElementById("txtcolo3").style.color = "#FFFFFF";
+        document.getElementById("txtcolo4").style.color = "#FFFFFF";
+        document.getElementById("txtcolo5").style.color = "#FFFFFF";
+        document.getElementById("txtcolo6").style.color = "#FFFFFF";
+        document.getElementById("txtcolo7").style.color = "#FFFFFF";
+        document.getElementById("txtcolo8").style.color = "#FFFFFF";
+        document.getElementById("txtcolo9").style.color = "#FFFFFF";
+        document.getElementById("txtcolo10").style.color = "#FFFFFF";
+        document.getElementById("txtcolo11").style.color = "#FFFFFF";
+        document.getElementById("txtcolo12").style.color = "#FFFFFF";
+        document.getElementById("txtcolo13").style.color = "#FFFFFF";
+        document.getElementById("txtcolo14").style.color = "#FFFFFF";
+        document.getElementById("txtcolo15").style.color = "#FFFFFF";
+        document.getElementById("txtcolo16").style.color = "#FFFFFF";
+        //menu
+        document.getElementById("menu1").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu2").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu3").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu4").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu5").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu6").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu7").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu8").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu9").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu11").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu12").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu13").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu15").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu16").style.backgroundColor = "#C3E2FB";
+        //document.getElementById("menu17").style.backgroundColor = "#C3E2FB";
+        //document.getElementById("menu18").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu19").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu20").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu21").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu22").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu23").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu24").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu25").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menuN2").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menuN4").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menuN5").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menuN6").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menuN28082019").style.backgroundColor =
+          "#C3E2FB";
+        //document.getElementById("menuNJA").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu_may_1_2020").style.backgroundColor =
+          "#C3E2FB";
+        document.getElementById("menu_2_2020").style.backgroundColor =
+          "#C3E2FB";
+        document.getElementById("menuvc").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu_vc_live_2020").style.backgroundColor =
+          "#C3E2FB";
+        document.getElementById("menu_rec_2020").style.backgroundColor =
+          "#C3E2FB";
+        //document.getElementById("menu_annual_21").style.backgroundColor = "#C3E2FB";
+        //document.getElementById("menu_vision_21").style.backgroundColor = "#C3E2FB";
+        //document.getElementById("menu_eCourt_21").style.backgroundColor = "#C3E2FB";
+        document.getElementById("menu_eng_hindi_21").style.backgroundColor =
+          "#C3E2FB";
+        document.getElementById("menuefiling").style.backgroundColor =
+          "#C3E2FB";
+        document.getElementById("menueVirtualCourt").style.backgroundColor =
+          "#C3E2FB";
+        document.getElementById("menuePayment").style.backgroundColor =
+          "#C3E2FB";
+      }
+      function myFunction2() {
+        document.body.style.backgroundColor = "#7A7A7A";
+        //document.getElementById("myDIV").style.backgroundColor = "#00E5EE";
+        document.getElementById("bdiv1").style.backgroundImage =
+          "url('g2.jpg')";
+        document.getElementById("bdiv2").style.backgroundImage =
+          "url('g2.jpg')";
+        document.getElementById("bdiv3").style.backgroundImage =
+          "url('g2.jpg')";
+        document.getElementById("bdiv4").style.backgroundImage =
+          "url('g2.jpg')";
+        document.getElementById("bdivmain").style.backgroundImage =
+          "url('g1.jpg')";
+        document.getElementById("bdivmain2").style.backgroundImage =
+          "url('g1.jpg')";
+        document.getElementById("latestup").style.backgroundImage =
+          "url('g4.jpg')";
+        document.getElementById("map").style.backgroundImage = "url('g2.jpg')";
+        document.getElementById("foot").style.backgroundImage = "url('g1.jpg')";
+        document.getElementById("banner").src = "img/main2_2022.jpg";
+        document.getElementById("txtcolo").style.color = "#FFFFFF";
+        document.getElementById("txtcolo2").style.color = "#FFFFFF";
+        document.getElementById("txtcolo3").style.color = "#FFFFFF";
+        document.getElementById("txtcolo4").style.color = "#FFFFFF";
+        document.getElementById("txtcolo5").style.color = "#FFFFFF";
+        document.getElementById("txtcolo6").style.color = "#FFFFFF";
+        document.getElementById("txtcolo7").style.color = "#FFFFFF";
+        document.getElementById("txtcolo8").style.color = "#FFFFFF";
+        document.getElementById("txtcolo9").style.color = "#FFFFFF";
+        document.getElementById("txtcolo10").style.color = "#FFFFFF";
+        document.getElementById("txtcolo11").style.color = "#FFFFFF";
+        document.getElementById("txtcolo12").style.color = "#FFFFFF";
+        document.getElementById("txtcolo13").style.color = "#FFFFFF";
+        document.getElementById("txtcolo14").style.color = "#FFFFFF";
+        document.getElementById("txtcolo15").style.color = "#FFFFFF";
+        document.getElementById("txtcolo16").style.color = "#FFFFFF";
+        //menu
+        document.getElementById("menu1").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu2").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu3").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu4").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu5").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu6").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu7").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu8").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu9").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu11").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu12").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu13").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu15").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu16").style.backgroundColor = "#C1CDC1";
+        //document.getElementById("menu17").style.backgroundColor = "#C1CDC1";
+        //document.getElementById("menu18").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu19").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu20").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu21").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu22").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu23").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu24").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu25").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menuN2").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menuN4").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menuN5").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menuN6").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menuN28082019").style.backgroundColor =
+          "#C1CDC1";
+        //document.getElementById("menuNJA").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu_may_1_2020").style.backgroundColor =
+          "#C1CDC1";
+        document.getElementById("menu_2_2020").style.backgroundColor =
+          "#C1CDC1";
+        document.getElementById("menuvc").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu_vc_live_2020").style.backgroundColor =
+          "#C1CDC1";
+        document.getElementById("menu_rec_2020").style.backgroundColor =
+          "#C1CDC1";
+        //document.getElementById("menu_annual_21").style.backgroundColor = "#C1CDC1";
+        //document.getElementById("menu_vision_21").style.backgroundColor = "#C1CDC1";
+        //document.getElementById("menu_eCourt_21").style.backgroundColor = "#C1CDC1";
+        document.getElementById("menu_eng_hindi_21").style.backgroundColor =
+          "#C1CDC1";
+        document.getElementById("menuefiling").style.backgroundColor =
+          "#C1CDC1";
+        document.getElementById("menueVirtualCourt").style.backgroundColor =
+          "#C1CDC1";
+        document.getElementById("menuePayment").style.backgroundColor =
+          "#C1CDC1";
+      }
+      function myFunction3() {
+        document.body.style.backgroundColor = "#7A7A7A";
+        //document.getElementById("myDIV").style.backgroundColor = "#00E5EE";
+        document.getElementById("bdiv1").style.backgroundImage =
+          "url('bw2.jpg')";
+        document.getElementById("bdiv2").style.backgroundImage =
+          "url('bw2.jpg')";
+        document.getElementById("bdiv3").style.backgroundImage =
+          "url('bw2.jpg')";
+        document.getElementById("bdiv4").style.backgroundImage =
+          "url('bw2.jpg')";
+        document.getElementById("bdivmain").style.backgroundImage =
+          "url('bw1.jpg')";
+        document.getElementById("bdivmain2").style.backgroundImage =
+          "url('bw1.jpg')";
+        document.getElementById("latestup").style.backgroundImage =
+          "url('bw4.jpg')";
+        document.getElementById("map").style.backgroundImage = "url('bw2.jpg')";
+        document.getElementById("foot").style.backgroundImage =
+          "url('bw1.jpg')";
+        document.getElementById("banner").src = "img/main3_2022.jpg";
+        document.getElementById("txtcolo").style.color = "#FFFFFF";
+        document.getElementById("txtcolo2").style.color = "#FFFFFF";
+        document.getElementById("txtcolo3").style.color = "#FFFFFF";
+        document.getElementById("txtcolo4").style.color = "#FFFFFF";
+        document.getElementById("txtcolo5").style.color = "#FFFFFF";
+        document.getElementById("txtcolo6").style.color = "#FFFFFF";
+        document.getElementById("txtcolo7").style.color = "#FFFFFF";
+        document.getElementById("txtcolo8").style.color = "#FFFFFF";
+        document.getElementById("txtcolo9").style.color = "#FFFFFF";
+        document.getElementById("txtcolo10").style.color = "#FFFFFF";
+        document.getElementById("txtcolo11").style.color = "#FFFFFF";
+        document.getElementById("txtcolo12").style.color = "#FFFFFF";
+        document.getElementById("txtcolo13").style.color = "#FFFFFF";
+        document.getElementById("txtcolo14").style.color = "#FFFFFF";
+        document.getElementById("txtcolo15").style.color = "#FFFFFF";
+        document.getElementById("txtcolo16").style.color = "#FFFFFF";
+        //menu
+        document.getElementById("menu1").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu2").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu3").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu4").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu5").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu6").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu7").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu8").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu9").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu11").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu12").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu13").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu15").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu16").style.backgroundColor = "#DCDCDC";
+        //document.getElementById("menu17").style.backgroundColor = "#DCDCDC";
+        //document.getElementById("menu18").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu19").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu20").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu21").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu22").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu23").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu24").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu25").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menuN2").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menuN4").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menuN5").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menuN6").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menuN28082019").style.backgroundColor =
+          "#DCDCDC";
+        //document.getElementById("menuNJA").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu_may_1_2020").style.backgroundColor =
+          "#DCDCDC";
+        document.getElementById("menu_2_2020").style.backgroundColor =
+          "#DCDCDC";
+        document.getElementById("menuvc").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu_vc_live_2020").style.backgroundColor =
+          "#DCDCDC";
+        document.getElementById("menu_rec_2020").style.backgroundColor =
+          "#DCDCDC";
+        //document.getElementById("menu_annual_21").style.backgroundColor = "#DCDCDC";
+        //document.getElementById("menu_vision_21").style.backgroundColor = "#DCDCDC";
+        //document.getElementById("menu_eCourt_21").style.backgroundColor = "#DCDCDC";
+        document.getElementById("menu_eng_hindi_21").style.backgroundColor =
+          "#DCDCDC";
+        document.getElementById("menuefiling").style.backgroundColor =
+          "#DCDCDC";
+        document.getElementById("menueVirtualCourt").style.backgroundColor =
+          "#DCDCDC";
+        document.getElementById("menuePayment").style.backgroundColor =
+          "#DCDCDC";
+      }
+    </script>
+
+    <style>
+      .buttonall {
+        background-color: #4caf50; /* Green */
+        border: none;
+        color: white;
+        //padding: 6px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        //font-size: 16px;
+        margin: 2px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+
+      .button2 {
+        background-color: white;
+        border-radius: 4px;
+        color: black;
+        border: 2px solid #008cba;
+      }
+
+      .button2:hover {
+        background-color: #008cba;
+        color: white;
+      }
+    </style>
+
+    <style>
+      .blink_me {
+        animation: blinker 3s linear infinite;
+      }
+
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
+    </style>
+
+    <style>
+      .cssmarquee {
+        height: 348px;
+        overflow: hidden;
+        position: relative;
+      }
+      .cssmarquee div {
+        position: absolute;
+        transform: translateY(100%);
+        animation: cssmarquee 38s linear infinite;
+        top: 6px;
+      }
+      .cssmarquee:hover div {
+        -webkit-animation-play-state: paused; /* Safari 4.0 - 8.0 */
+        animation-play-state: paused;
+      }
+      @keyframes cssmarquee {
+        0% {
+          transform: translateY(100%);
+        }
+        100% {
+          transform: translateY(-100%);
+        }
+      }
+    </style>
+    <style>
+      .cssmarquee2 {
+        height: 348px;
+        overflow: hidden;
+        position: relative;
+      }
+      .cssmarquee2 div {
+        position: absolute;
+        transform: translateY(100%);
+        animation: cssmarquee2 15s linear infinite;
+      }
+      .cssmarquee2:hover div {
+        -webkit-animation-play-state: paused; /* Safari 4.0 - 8.0 */
+        animation-play-state: paused;
+      }
+      @keyframes cssmarquee2 {
+        0% {
+          transform: translateY(100%);
+        }
+        100% {
+          transform: translateY(-100%);
+        }
+      }
+    </style>
+    <style>
+      .cssmarquee3 {
+        height: 348px;
+        overflow: hidden;
+        position: relative;
+      }
+      .cssmarquee3 div {
+        position: absolute;
+        transform: translateY(100%);
+        animation: cssmarquee3 12s linear infinite;
+      }
+      .cssmarquee3:hover div {
+        -webkit-animation-play-state: paused; /* Safari 4.0 - 8.0 */
+        animation-play-state: paused;
+      }
+      @keyframes cssmarquee3 {
+        0% {
+          transform: translateY(100%);
+        }
+        100% {
+          transform: translateY(-100%);
+        }
+      }
+    </style>
+    <style>
+      .cssmarquee4 {
+        height: 348px;
+        overflow: hidden;
+        position: relative;
+      }
+      .cssmarquee4 div {
+        position: absolute;
+        transform: translateY(100%);
+        animation: cssmarquee4 17s linear infinite;
+      }
+      .cssmarquee4:hover div {
+        -webkit-animation-play-state: paused; /* Safari 4.0 - 8.0 */
+        animation-play-state: paused;
+      }
+      @keyframes cssmarquee4 {
+        0% {
+          transform: translateY(100%);
+        }
+        100% {
+          transform: translateY(-100%);
+        }
+      }
+    </style>
+
+    <style>
+      /* The navbar */
+      .topnav {
+        overflow: hidden;
+        //background-color: #333;
+      }
+
+      /* Navbar links */
+      .topnav a {
+        float: right;
+        color: #0857d8;
+        text-align: right;
+        //padding: 14px 16px;
+        text-decoration: none;
+        font-size: 14px;
+      }
+    </style>
+    <style>
+      #menu_rec_label {
+        color: #151414;
+        font-weight: bold;
+        -webkit-animation: blink 1s infinite;
+        /* Safari 4+ */
+        -moz-animation: blink 1s infinite;
+        /* Fx 5+ */
+        -o-animation: blink 1s infinite;
+        /* Opera 12+ */
+        animation: blink 1s infinite;
+        /* IE 10+, Fx 29+ */
+      }
+
+      @keyframes blink {
+        0%,
+        49% {
+          color: #ff0000;
+        }
+        50%,
+        100% {
+          color: #151414;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <div
+        id="myDIV"
+        class="container text-center"
+        style="background-color: #ffffff"
+      >
+        <div class="row" id="myMenu">
+          <div>
+            <a href="index.html"
+              ><img
+                id="banner"
+                class="img-responsive"
+                height="1216"
+                src="img/main1_2023.jpg"
+                alt="Image"
+            /></a>
+            <div class="topnav">
+              <a href="sra.html"
+                ><strong
+                  ><b><i>Screen Reader Access</i></b></strong
+                ></a
+              >
+            </div>
+          </div>
+          <div id="bdivmain" class="navmain" style="">
+            <nav id="bdivmain2" class="main-nav float-right d-none d-lg-block">
+              <ul>
+                <li>
+                  <a
+                    id="txtcolo"
+                    style="color: #ffffff"
+                    href="https://thc.nic.in/"
+                    ><img height="24" src="Menu/HOME.png" alt="HOME"
+                  /></a>
+                </li>
+                <li>
+                  <a id="txtcolo2" style="color: #ffffff" href="history.html"
+                    ><img height="24" src="Menu/History.png" alt="History"
+                  /></a>
+                </li>
+                <li class="drop-down">
+                  <a id="txtcolo3" style="color: #ffffff"
+                    ><img
+                      height="24"
+                      src="Menu/JUDGE'S PROFILE.png"
+                      alt="JUDGE'S PROFILE"
+                  /></a>
+                  <ul>
+                    <li class="drop-down">
+                      <a>CJ & SITTING JUDGES</a>
+                      <ul>
+                        
+						
+						<li>
+                          <a href="CJ_MSRR.html">Hon'ble Chief Justice</a>
+                        </li>
+						<li>
+                          <a href="TAGprofile.html"
+                            >Hon'ble Justice Dr. T. Amarnath Goud
+                          </a>
+                        </li>						
+                        <li>
+                          <a href="SDPProfile.html"
+                            >Hon'ble Mr. Justice S. D. Purkayastha</a
+                          >
+                        </li>
+                        <li>
+                          <a href="BPalitProfile.html"
+                            >Hon'ble Mr. Justice B. Palit</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="drop-down">
+                      <a>FORMER CHIEF JUSTICE</a>
+                      <ul>
+                        <li>
+                          <a href="FCJprofile.html"
+                            >Hon'ble Mr Justice Deepak Gupta</a
+                          >
+                        </li>
+                        <li>
+                          <a href="FCJprofile-HTV.html"
+                            >Hon'ble Mr Justice T. Vaiphei</a
+                          >
+                        </li>
+                        <li>
+                          <a href="FCJprofile-HAR.html"
+                            >Hon'ble Mr. Justice Ajay Rastogi</a
+                          >
+                        </li>
+                        <li>
+                          <a href="FCJprofile-SK.html"
+                            >Hon'ble Mr. Justice Sanjay Karol</a
+                          >
+                        </li>
+                        <li>
+                          <a href="FCJprofile-AK.html"
+                            >Hon'ble Mr. Justice Akil Kureshi</a
+                          >
+                        </li>
+                        <li>
+                          <a href="FCJprofile_IM.html"
+                            >Hon'ble Mr. Justice Indrajit Mahanty</a
+                          >
+                        </li>
+                        <li>
+                          <a href="CJ_Jaswant_Singh.html">
+						  Hon'ble Mr. Justice Jaswant Singh</a>
+                        </li>
+						<li>
+                          <a href="CJ_AKSingh.html">
+						  Hon'ble Mr. Justice Aparesh Kumar Singh</a>
+                        </li>
+						
+                      </ul>
+                    </li>
+                    <li class="drop-down">
+                      <a>FORMER JUDGES</a>
+                      <ul>
+                        <li>
+                          <a href="UBSJprofile.html"
+                            >Hon'ble Mr. Justice U. B. Saha</a
+                          >
+                        </li>
+                        <li>
+                          <a href="SCDJprofile.html"
+                            >Hon'ble Mr. Justice S. C. Das</a
+                          >
+                        </li>
+                        <li>
+                          <a href="STJprofile.html"
+                            >Hon'ble Mr. Justice S. Talapatra</a
+                          >
+                        </li>
+                        <li>
+                          <a href="SGCJProfile.html"
+                            >Hon'ble Mr. Justice S.G. Chattopadhyay</a
+                          >
+                        </li>
+						<li>
+                          <a href="ALJprofile.html"
+                            >Hon'ble Mr. Justice A. Lodh</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="drop-down">
+                  <a id="txtcolo4" style="color: #ffffff"
+                    ><img
+                      height="24"
+                      src="Menu/REGISTRAR GENERAL.png"
+                      alt="REGISTRAR GENERAL"
+                  /></a>
+                  <ul>
+                    <li>
+                      <a href="sittingRG.html">SITTING REGISTRAR GENERAL</a>
+                    </li>
+                    <li class="drop-down">
+                      <a>FORMER REGISTRAR GENERAL</a>
+                      <ul>
+                        <li>
+                          <a href="formerRG-MC.html">SRI. M. CHAKRABARTI</a>
+                        </li>
+                        <li>
+                          <a href="FormarRG-SGC.html">SRI S.G. CHATTOPADHYAY</a>
+                        </li>
+                        <li>
+                          <a href="FormerRG-DMJ.html">SRI DATA MOHAN JAMATIA</a>
+                        </li>
+						<li>
+                          <a href="FormerRG-VPANDEY.html">SRI VISHWAJEET PANDEY</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="drop-down">
+                  <a id="txtcolo5" style="color: #ffffff"
+                    ><img height="24" src="Menu/GALLERY.png" alt="GALLERY"
+                  /></a>
+                  <ul>
+                    <li><a href="photogallery.html">PHOTO GALLERY</a></li>
+                    <li><a href="video.html">VIDEO GALLERY</a></li>
+                  </ul>
+                </li>
+                <!--          <li><a style="color: #FFFFFF;" href="photogallery.php" ><b>PHOTO GALLERY</b></a>            
+                                          </li>-->
+                <li class="drop-down">
+                  <a id="txtcolo6" style="color: #ffffff"
+                    ><img
+                      height="24"
+                      src="Menu/IMPORTANT LINK.png"
+                      alt="IMPORTANT LINK"
+                  /></a>
+                  <ul>
+                    <li>
+                      <a href="https://sci.gov.in/" target="_blank"
+                        >Supreme Court of India</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://ecommitteesci.gov.in/" target="_blank"
+                        >e-Committee,Supreme Court of India</a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://lawmin.gov.in/" target="_blank"
+                        >Ministry of Law & Justice</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="http://lawcommissionofindia.nic.in/"
+                        target="_blank"
+                        >Law Commission of India</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://mha.gov.in/" target="_blank"
+                        >Ministry of Home Affairs</a
+                      >
+                    </li>
+                    <li>
+                      <a href="http://www.nja.gov.in/" target="_blank"
+                        >National Judicial Academy</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://ecourts.gov.in/" target="_blank"
+                        >e-Courts of India</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://hctlsc.tripura.gov.in/" target="_blank"
+                        >High Court Legal Services Committee</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://slsa.tripura.gov.in/" target="_blank"
+                        >Tripura State Legal Services Authority</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://tja.tripura.gov.in/" target="_blank"
+                        >Tripura Judicial Academy</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://law.tripura.gov.in/" target="_blank"
+                        >Law and Parliamentary Affairs Department</a
+                      >
+                    </li>
+             <!--       <li>
+                      <a href="https://barcounciltripura.org.in" target="_blank"
+                        >Bar Council of Tripura</a
+                      >
+                    </li> -->
+                  </ul>
+                </li>
+                <li>
+                  <a id="txtcolo7" href="faq.html" style="color: #ffffff"
+                    ><img height="24" src="Menu/FAQs.png" alt="FAQs"
+                  /></a>
+                </li>
+              </ul>
+              <div align="right">
+                <!--
+								<label><input style="width: 60px;margin-top: 5px;" type="text" id="mySearch" onKeyUp="myFunctionSesrch()" placeholder=" Search "></label>
+								-->
+                <button
+                  id="btn-increase"
+                  style="alignment-adjust: right; margin-top: 5px"
+                >
+                  A+
+                </button>
+                <button style="margin-top: 5px" id="btn-orig">A</button>
+                <button
+                  style="margin-top: 5px; margin-right: 1px"
+                  id="btn-decrease"
+                >
+                  A-
+                </button>
+                <button
+                  onClick="myFunction2()"
+                  style="
+                    margin-top: 5px;
+                    margin-right: 1px;
+                    background-color: #2f4f4f;
+                    color: #ffffff;
+                  "
+                >
+                  A
+                </button>
+                <button
+                  onClick="myFunction()"
+                  style="
+                    margin-top: 5px;
+                    margin-right: 1px;
+                    background-color: aqua;
+                    color: #000000;
+                  "
+                >
+                  A
+                </button>
+                <button
+                  onClick="myFunction1()"
+                  style="
+                    margin-top: 5px;
+                    margin-right: 1px;
+                    background-color: #084b8a;
+                    color: #ffffff;
+                  "
+                >
+                  A
+                </button>
+                <button
+                  onClick="myFunction3()"
+                  style="
+                    margin-top: 5px;
+                    margin-right: 4px;
+                    background-color: #0f0f0f;
+                    color: #ffffff;
+                  "
+                >
+                  A
+                </button>
+              </div>
+            </nav>
+            <!-- .main-nav -->
+          </div>
+          <div class="col-sm-3 well">
+            <div class="panel panel-primary">
+              <div id="bdiv1" class="panel-heading">
+                <b id="txtcolo8">Services</b>
+              </div>
+              <div
+                id="menu1"
+                style="background-color: #c3e2fb; margin-top: 2px"
+              >
+                <div class="btn-group-vertical">
+                  <div class="dropdown" style="margin-top: 2px">
+                    <button id="menu2" class="dropbtn">
+                      <p>District Courts</p>
+                    </button>
+                    <div class="dropdown-content">
+                      <a
+                        target="_blank"
+                        href="https://southtripura.dcourts.gov.in/"
+                        class="w3-bar-item w3-button"
+                        >South Tripura District</a
+                      >
+                      <a
+                        target="_blank"
+                        href="https://gomatitrp.dcourts.gov.in/"
+                        class="w3-bar-item w3-button"
+                        >Gomati District</a
+                      >
+                      <a
+                        target="_blank"
+                        href="https://unakotitrp.dcourts.gov.in/"
+                        class="w3-bar-item w3-button"
+                        >Unakoti District</a
+                      >
+                      <a
+                        target="_blank"
+                        href="https://northtripura.dcourts.gov.in/"
+                        class="w3-bar-item w3-button"
+                        >North Tripura District</a
+                      >
+                      <a
+                        target="_blank"
+                        href="https://westtripura.dcourts.gov.in/"
+                        class="w3-bar-item w3-button"
+                        >West Tripura District</a
+                      >
+                      <a
+                        target="_blank"
+                        href="https://sepahijalatrp.dcourts.gov.in/"
+                        class="w3-bar-item w3-button"
+                        >Sepahijala District</a
+                      >
+                      <a
+                        target="_blank"
+                        href="https://khowaitrp.dcourts.gov.in/"
+                        class="w3-bar-item w3-button"
+                        >Khowai District</a
+                      >
+                      <a
+                        target="_blank"
+                        href="https://dhalaitrp.dcourts.gov.in/"
+                        class="w3-bar-item w3-button"
+                        >Dhalai District</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                id="menu3"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a class="btn" href="adminisorder.html"
+                  ><p>Administrative Orders</p></a
+                >
+              </div>
+              <div
+                id="menu4"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a class="btn" href="adminssetup.html"
+                  ><p>Administrative Setup</p></a
+                >
+              </div>
+              <div
+                id="menu5"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a href="library.html" class="btn"><p>High Court Library</p></a>
+              </div>
+              <div
+                id="menu6"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a onClick="ShowNewPage()" class="btn"><p>Calendar</p></a>
+              </div>
+			  <!-- Calender 2025
+              <div
+                id="menu5"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a href="\Calendar2025.jpg" class="btn">
+                  <p>High Court Calendar 2025 <img border="0" src="new_globe_ani.gif" width="33" height="16" alt="" /></p>
+                </a>
+              </div>
+			  -->
+              <div
+                id="menu7"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a href="rti_act_rules.html" class="btn"
+                  ><p>Right to Information(RTI)</p></a
+                >
+              </div>
+
+              <!--<div id="menu8" style="margin-top: 2px;height:33px;background-color: #C3E2FB;color: #151414;">                    
+                                <a target="_blank" href="https://barcounciltripura.org.in" class="btn"><p>Bar Council of Tripura</p></a>
+                            </div>
+							-->
+
+              <div
+                id="menu9"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a href="formats.html" class="btn"
+                  ><p>Formats for Statement Subordinate Judiciary</p></a
+                >
+              </div>
+              <div
+                id="menu_2_2020"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a href="enews.html" class="btn"
+                  ><p>eCommittee News letter</p></a
+                >
+              </div>
+              <div
+                id="menu040620212021"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a
+                  class="btn"
+                  target="_blank blink_me"
+                  href="https://judgments.ecourts.gov.in/pdfsearch/index.php"
+                  ><p style="color: #e72758">
+                    <b>Free Text Judgment Search / e-SCR</b>&nbsp;<img
+                      border="0"
+                      src="new_globe_ani.gif"
+                      width="33"
+                      height="16"
+                      alt=""
+                    /></p
+                ></a>
+              </div>
+              <div
+                id="menu11"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a
+                  href="https://www.youtube.com/live/zWfvIxkwxRI?feature=share"
+                  class="btn"
+                  ><p>eSCR Demo</p></a
+                >
+              </div>
+              <div
+                id="menu11"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a href="Report_HC.html" class="btn"
+                  ><p>Reports of the High Court</p></a
+                >
+              </div>
+              <div
+                id="menu12"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a href="contactUS.html" class="btn"><p>Contact Us</p></a>
+              </div>
+            </div>
+            <div class="panel panel-primary">
+              <div id="bdiv2" class="panel-heading">
+                <b id="txtcolo9">Other Information</b>
+              </div>
+              <div
+                id="menu_rec_2020"
+                style="margin-top: 2px; height: 33px; background-color: #c3e2fb"
+              >
+                <!-- <a target="_blank" id="menu_rec_label" class="btn" href="https://thcor.tripura.gov.in/index.jsp"><p>Recruitment [Online Application]</p></a> -->
+                <a
+                  target="_blank"
+                  class="btn"
+                  href="https://thcor.tripura.gov.in/index.jsp"
+                  ><p>Recruitment [Online Application]</p></a
+                >
+                <!--<a target="_blank" style="color:red;" class="btn blink_me" href="https://thcor.tripura.gov.in"><p><b>&nbsp;Recruitment [Online Application]&nbsp;</b></p></a>-->
+              </div>
+              <!--<div id="menu_vision_21" style="margin-top: 2px;height:51px;background-color: #C3E2FB;color: #151414;">
+                                <a target="_blank" class="btn" href="https://www.mygov.in/mygov-survey/survey-speedy-disposal-cheque-bouncing-cases/">
+								<p style="color: green;"><b>Survey for speedy disposal&nbsp;
+								<font><br />of cheque bouncing cases</b><img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""></font></p></a>                                
+                            </div>-->
+              <div
+                id="menu_vc_live_2020"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a
+                  class="btn"
+                  target="_blank"
+                  href="https://www.youtube.com/channel/UCsI5L97cCA3oYKmR-d-hR-Q"
+                >
+                  <p>
+                    <!--
+									<img src="img/youtube.png" alt="youtube" width="30" height="20"/>									
+									-->
+
+                    <i class="fa fa-youtube-play" style="color: red"></i>
+                    &nbsp;Official Youtube Channel&nbsp;
+                  </p>
+                </a>
+              </div>
+              <!-- <div id="menu0124052021" style="margin-top: 2px;height:51px;background-color: #C3E2FB;color: #151414;">
+                                <a class="btn" href="minutes.html">
+								<p>Minutes of the Meeting of&nbsp;
+								<font><br />High Powered Committee</font></p></a>
+                            </div> -->
+              <div
+                id="menu0224052021"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a class="btn" href="prison_occupancy.html"
+                  ><p>Daily data for Prison Occupancy&nbsp;</p></a
+                >
+              </div>
+              <!--<div id="menu13" style="margin-top: 2px;height:33px;background-color: #C3E2FB;color: #151414;">
+                                <a class="btn" href="5th_Conclave_2018.html"><p>5th Annual Conclave-2018</p></a>
+                            </div>
+							-->
+              <div
+                id="menu15"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a
+                  class="btn"
+                  href="https://hcservices.ecourts.gov.in/ecourtindiaHC/cases/s_order.php?state_cd=20&dist_cd=1&court_code=1&stateNm=Tripura"
+                  target="_blank"
+                  ><p>Reportable Judgement</p></a
+                >
+              </div>
+
+              <!--<div id="menu16" style="margin-top: 2px;height:33px;background-color: #C3E2FB;color: #151414;">                    
+                                <a target="_blank" class="btn" href="world_bank.pdf"><p>World Bank Lauds NJDG</p></a>
+                            </div> -->
+              <div
+                id="menuN28082019"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a class="btn" href="access.html"
+                  ><p>Profile of Judicial Officers</p></a
+                >
+              </div>
+              <div
+                id="menuN2"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a class="btn" href="ecourtsinfo.html"
+                  ><p>Information of eCourts</p></a
+                >
+              </div>
+              <!--<div id="menu_eCourt_21" style="margin-top: 2px;height:51px;background-color: #C3E2FB;color: #151414;">
+                                <a class="btn" href="eCourtMobile.html">
+								<p>e-Courts Services&nbsp;
+								<font><br />Mobile Application – Manual</font></p></a>                                
+                            </div>
+							-->
+              <div
+                id="menuN4"
+                style="background-color: #c3e2fb; margin-top: 2px"
+              >
+                <div class="btn-group-vertical" style="margin-top: 2px">
+                  <div class="dropdown">
+                    <button id="menuN5" class="dropbtn3">
+                      Digital Display
+                    </button>
+                    <div class="dropdown-content">
+                      <a
+                        target="_blank"
+                        href="http://www.hctripura.in/thc_display/web/"
+                        >High Court Display</a
+                      >
+                      <a href="district_court_display.html"
+                        >District Court Display</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                id="menu_eng_hindi_21"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a class="btn" href="miscellaneous.html"
+                  ><p>Miscellaneous</p></a
+                >
+              </div>
+              <div
+                id="menuN6"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a class="btn" href="cerjudge.html"
+                  ><p>Circulated Judgments</p></a
+                >
+              </div>
+              <!-- <div id="menuN7" style="background-color: #C3E2FB;margin-top: 2px;">
+                                <a class="btn" href="Activities&Achievements.html" ><p>Activities & Achievements</p></a>
+                            </div> -->
+              <div
+                id="menuN8"
+                style="background-color: #c3e2fb; margin-top: 2px"
+              >
+                <a class="btn" href="/Accessibility.html" target="_blank"
+                  ><p>Accessibility Committee for HC</p></a
+                >
+              </div>
+
+             <!-- <div
+                id="menuN8"
+                style="background-color: #c3e2fb; margin-top: 2px"
+              >
+               // <a class="btn" href="/mps-mls.html" target="_blank">
+                  <p>   </p>
+                </a>
+              </div>-->
+              <div
+                id="menuN9"
+                style="background-color: #c3e2fb; margin-top: 2px"
+              >
+                <a class="btn" href="/sopinfo.html" target="_blank">
+                  <p>
+                    SOP
+                    <img
+                      border="0"
+                      src="new_globe_ani.gif"
+                      width="33"
+                      height="16"
+                      alt=""
+                    />
+                  </p>
+                </a>
+              </div>
+
+              <div
+                id="menuN9"
+                style="background-color: #c3e2fb; margin-top: 2px"
+              >
+                <a
+                  class="btn"
+                  href="/gender_sensitisation_ICCommittee.pdf"
+                  target="_blank"
+                >
+                  <p>
+                    ANNUAL REPORT, 2024 of the <br />
+                    Gender Sensitisation and Internal Complaints <br />
+                    Committee of the High Court of Tripura
+                    <img
+                      border="0"
+                      src="new_globe_ani.gif"
+                      width="33"
+                      height="16"
+                      alt=""
+                    />
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <center></center>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="panel panel-default text-left">
+                  <div class="panel-body">
+                    <table border="0" width="100%">
+                      <tr>
+                        <!--                                                <td valign="left" width="190px;">
+                                                                                                    <img src="img/o & j.png" width="30" height="30" align="left"/>
+                                                                                                    <a href="https://services.ecourts.gov.in/ecourtindiaHC/index_highcourt.php?state_cd=20&dist_cd=1&stateNm=Tripura" style="text-decoration:none"  target="_blank">
+                                                                                                        <strong>
+                                                                                                            <font size=2 face="times new roman" color="#0099FF">&nbsp;ORDER/JUDGMENT</font>
+                                                                                                        </strong>
+                                                                                                    </a>
+                                                                                                </td>-->
+                        <td valign="left">
+                          <img
+                            src="img/njdglogo.png"
+                            alt="NJDG"
+                            width="30"
+                            height="30"
+                            align="left"
+                          />
+                          <a
+                            href="https://njdg.ecourts.gov.in/njdgnew/"
+                            style="text-decoration: none"
+                            target="_blank"
+                          >
+                            <strong>
+                              <font
+                                size="2"
+                                face="times new roman"
+                                color="#000000"
+                                >NJDG</font
+                              >
+                            </strong>
+                          </a>
+                        </td>
+                        <td>
+                          <img
+                            src="img/eCourtslogo.png"
+                            alt="eCourts"
+                            width="30"
+                            height="30"
+                            align="left"
+                          />
+                          <a
+                            href="https://ecourts.gov.in/"
+                            style="text-decoration: none"
+                            target="_blank"
+                          >
+                            <strong>
+                              <font
+                                size="2"
+                                face="times new roman"
+                                color="#000000"
+                                >eCourts</font
+                              >
+                            </strong>
+                          </a>
+                        </td>
+                        <td valign="left">
+                          <img
+                            src="img/li2.png"
+                            alt="eLibrary"
+                            width="34"
+                            height="34"
+                            align="left"
+                          />
+                          <a href="elaibry.html" style="text-decoration: none">
+                            <strong>
+                              <font
+                                size="2"
+                                face="times new roman"
+                                color="#000000"
+                                >eLibrary</font
+                              >
+                            </strong>
+                          </a>
+                        </td>
+
+                        <td valign="left">
+                          <img
+                            src="img/apk.png"
+                            alt="Download App"
+                            width="34"
+                            height="34"
+                            align="left"
+                          />
+                          <div class="dropdown">
+                            <strong>
+                              <font
+                                size="2"
+                                face="times new roman"
+                                color="#000000"
+                                >Download App
+                              </font>
+                            </strong>
+                            <div class="dropdown-content">
+                              <a
+                                target="_blank"
+                                href="https://play.google.com/store/apps/details?id=com.thc.thcapp"
+                                style="text-decoration: none"
+                                >High Court of Tripura</a
+                              >
+                              <a
+                                target="_blank"
+                                href="https://play.google.com/store/apps/details?id=displayboard.thc.com.thcdisplayboard"
+                                style="text-decoration: none"
+                                >Display Board(THC)</a
+                              >
+                              <a
+                                href="http://nstep.ecourts.gov.in/nstep/nstep_apks/NSTEP.apk"
+                                style="text-decoration: none"
+                                >NSTEP</a
+                              >
+                              <a
+                                target="_blank"
+                                href="https://justis.ecourts.gov.in/appstore/"
+                                style="text-decoration: none"
+                                >JustIS Mobile APP</a
+                              >
+                              <a
+                                target="_blank"
+                                href="https://ecommitteesci.gov.in/mobile-app-gims/"
+                                style="text-decoration: none"
+                                >Mobile app GIMS</a
+                              >
+                            </div>
+                          </div>
+                        </td>
+
+                        <td valign="left">
+                          <!--                                                    <img src="img/cause.png" width="30" height="30" align="left"/>
+                                                                                                        <a href="https://services.ecourts.gov.in/ecourtindiaHC/cases/highcourt_causelist.php?state_cd=20&dist_cd=1&court_code=1&stateNm=Tripura" style="text-decoration:none"  target="_blank">
+                                                                                                            <strong>
+                                                                                                                <font size=2 face="times new roman" color="#0099FF">CAUSE LIST&nbsp;&nbsp;</font>
+                                                                                                            </strong>
+                                                                                                        </a>-->
+                          <img
+                            src="img/video1.png"
+                            alt="video"
+                            width="30"
+                            height="30"
+                            align="left"
+                          />
+                          <div id="light">
+                            <a
+                              class="boxclose"
+                              id="boxclose"
+                              onClick="lightbox_close();"
+                            ></a>
+                            <video id="VisaChipCardVideo" width="600" controls>
+                              <source src="img/video.mp4" type="video/mp4" />
+                              <!--Browser does not support <video> tag -->
+                            </video>
+                          </div>
+
+                          <div id="fade" onClick="lightbox_close();"></div>
+
+                          <div>
+                            <a onClick="lightbox_open();">
+                              <strong>
+                                <font
+                                  size="2"
+                                  face="times new roman"
+                                  color="#000000"
+                                  >Video</font
+                                >
+                              </strong>
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="well">
+                  <div
+                    id="carousel-example"
+                    class="carousel slide slide-bdr"
+                    data-ride="carousel"
+                  >
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <img src="img/aa11reduce.jpg" alt="" />
+                      </div>
+                      <div class="item">
+                        <img src="img/aa22reduce.jpg" alt="" />
+                      </div>
+                      <div class="item">
+                        <img src="img/aa33reduce.jpg" alt="" />
+                      </div>
+                      <div class="item">
+                        <img src="img/nv1.jpg" alt="" />
+                      </div>
+                      <div class="item">
+                        <img src="img/nv2.jpg" alt="" />
+                      </div>
+                      <div class="item">
+                        <img src="img/nv3.jpg" alt="" />
+                      </div>
+                    </div>
+                    <!--INDICATORS-->
+                    <ol class="carousel-indicators">
+                      <li
+                        data-target="#carousel-example"
+                        data-slide-to="0"
+                        class="active"
+                      ></li>
+                      <li
+                        data-target="#carousel-example"
+                        data-slide-to="1"
+                      ></li>
+                      <li
+                        data-target="#carousel-example"
+                        data-slide-to="2"
+                      ></li>
+                      <li
+                        data-target="#carousel-example"
+                        data-slide-to="4"
+                      ></li>
+                      <li
+                        data-target="#carousel-example"
+                        data-slide-to="5"
+                      ></li>
+                      <li
+                        data-target="#carousel-example"
+                        data-slide-to="6"
+                      ></li>
+                    </ol>
+                    <!--PREVIUS-NEXT BUTTONS-->
+                    <!--                            <a class="left carousel-control-next" href="#carousel-example" data-slide="prev">
+                                                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                                                    </a>
+                                                                    <a class="right carousel-control-prev" href="#carousel-example" data-slide="next">
+                                                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                                                    </a>-->
+                  </div>
+                  <!--                                    <p>
+                                                                        <center>
+                                                                            <img class="img-responsive" height="40px" width="680px" src="img/aa1.JPG" />
+                                                                        </center>
+                                                                        <p>-->
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="panel panel-primary" style="height: 600px">
+                  <div id="latestup" class="update" style="">
+                    <b
+                      id="txtcolo10"
+                      style="background-color: white; color: black"
+                      >NOTIFICATIONS</b
+                    >
+                  </div>
+
+                  <div style="display: flex; justify-content: space-between">
+                    <button
+                      class="tablinks buttonall button2"
+                      onClick="openCity(event, 'latest')"
+                      id="defaultOpen"
+                    >
+                      Latest Updates
+                    </button>
+                    <button
+                      class="tablinks buttonall button2"
+                      onClick="openCity(event, 'tender')"
+                    >
+                      Tenders
+                    </button>
+                    <button
+                      class="tablinks buttonall button2"
+                      onClick="openCity(event, 'recruitment')"
+                    >
+                      Recruitment
+                    </button>
+                    <button
+                      class="tablinks buttonall button2"
+                      onClick="openCity(event, 'transfer')"
+                    >
+                      Transfer & Postings
+                    </button>
+                  </div>
+
+                  <!--Latest Update-->
+
+                  <div
+                    id="latest"
+                    class="tabcontent"
+                    style="margin-left: 5px; margin-right: 5px"
+                  >
+                    <b style="background-color: #c3e2fb">Latest Updates</b>
+                    <div class="cssmarquee" style="height: 500px">
+                      <div align="left">
+					  
+					   <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26559"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						RESULT Dated 02-04-2026: Final Merit List for the post of Personal Assistant Junior Grade (PA-II) pursuant to Advertisement No. FC 01/2024.</a>
+					<br/><br />
+					  
+					  
+					  <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26557"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						NOTIFICATION Dated 30-03-2026: Direction passed by the Hon’ble Supreme Court of India in connection with the Petition(s) for Special Leave to Appeal (Crl.) 7203 of 2023 [Sajid Vs. State of U.P.].</a>
+					<br/><br />
+					   <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26556"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						NOTIFICATION Dated 30-03-2026: Hon’ble the Chief Justice and other Hon’ble Judges will not sit for Judicial Work on 04.04.2026 (Saturday).</a>
+					<br/><br />
+					  
+					  <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26555"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						NOTIFICATION Dated 30-03-2026: Hon'ble the Chief Justice will not sit in Single Bench-I today i.e., on 30.03.2026 (Monday) till 02.04.2026 (Thursday).</a>
+					<br/><br />
+					  
+					  <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26554"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						NOTIFICATION dated 30-03-2026:Transfer and posting orders of the Officers of Tripura Judicial Service.</a>
+					<br/><br />
+					 
+					 <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26553"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						NOTIFICATION dated 27-03-2026: Guidelines for Weekly Sittings of Juvenile Justice Board by Principal Magistrates.</a>
+					<br/><br />
+					 
+					 <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26552"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						AWARD OF CONTRACT Dated 24-03-2026: Supply of Catering and Foods in connection with the 12th Annual Judicial Conclave scheduled to be held on 04.04.2026.</a>
+					<br/><br />
+					
+					<img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26551"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						AWARD OF CONTRACT Dated 24-03-2026: Decoration and other allied arrangements in connection with the 12th Annual Judicial Conclave scheduled to be held on 04.04.2026.</a>
+					<br/><br />
+					 
+					 <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26550"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						AWARD OF CONTRACT Dated 23.03.2026: Comprehensive Annual Maintenance Contract (CAMC) for all the UPSs (Online and Offline) including batteries and other consumable items of the Registry of High Court of Tripura.</a>
+					<br/><br />
+					<img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26549"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						NOTIFICATION Dated 23-03-2026: Hon’ble Mr. Justice B. Palit will not be available for judicial work from 24.03.2026 (Tuesday) to 27.03.2026 (Friday).</a>
+					<br/><br />
+					<img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26548"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						AWARD OF CONTRACT Dated 20.03.2026: Preparation of Stage with various components” in connection with the celebration of the 13th High Court Day on 04.04.2026.</a>
+					<br/><br />
+					 <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26547"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						AWARD OF CONTRACT Dated 20.03.2026: Supply and Catering of Foods for Dinner” in connection with the celebration of the 13th High Court Day on 04.04.2026.</a>
+					<br/><br />
+					<img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26545"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						TENDER Dated 18-03-2026: Award of Contract in pursuance to the NIT No.F.6(21)-HC/2025-26(eProc. Ph-III)/3740, dated 13.02.2026.</a>
+					<br/><br />
+					<img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26542"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						NOTIFICATION Dated 13-03-2026: Nomination of Shri Narayan Saha, System Analyst, High Court of Tripura and Shri Prasenjit Paul, Senior System Officer, High Court of Tripura to participate in the 
+																						National Conference on “Judicial Process Re engineering and Digital Transformation” on 11–12 April 2026 at the Supreme Court Additional Building Complex, New Delhi.</a>
+					<br/><br />
+					 <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26541"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						NOTIFICATION Dated 13-03-2026: Nomination of Shri Saamyajyoti Debnath, Deputy Registrar (Vigilance)- cum- CPC, High Court of Tripura to participate in the 
+																						National Conference on “Judicial Process Re engineering and Digital Transformation” on 11–12 April 2026 at the Supreme Court Additional Building Complex, New Delhi.</a>
+					<br/><br />
+					 <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26540"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						NOTIFICATION Dated 13-03-2026: Nomination of Hon’ble Justice Dr. T. Amarnath Goud (Chairman, High Court Computer Committee) and Hon’ble Mr. Justice S. Datta Purkayastha (Member, High Court Computer Committee), High Court of Tripura to participate in the 
+																						National Conference on “Judicial Process Re engineering and Digital Transformation” on 11–12 April 2026 at the Supreme Court Additional Building Complex, New Delhi.</a>
+					<br/><br />
+					<img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26538"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						NOTIFICATION dated 12-03-2026:modification of the extant Roster issued vide Notification No.F.40(1)-HCT/Judl/ROSTER/2026/394, dated 12.01.2026.</a>
+					<br/><br />
+					
+					<img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26522"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						NOTIFICATION dated 27-02-2026: Nomination of  Hon’ble Mr. Justice S. Datta Purkayastha, Judge, High Court of Tripura to participate in the
+																						“National Workshop for State Judicial Academies [P-1495]” scheduled on 04.04.2026 and 05.04.2026 at the National Judicial Academy (NJA), Bhopal.</a>
+					<br/><br />
+					
+					<img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26476"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						 	NOTIFICATION Dated 17-01-2026: Limited Departmental Competitive Examination (LDCE) will be held in the premises of the High Court of Tripura 
+																							on 25.04.2026 and 26.04.2026 for filling up 01(one) vacant post in Grade-II of TJS.</a>
+					<br/><br />
+					
+					
+					<br />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--Tender-->
+
+                  <div
+                    id="tender"
+                    class="tabcontent"
+                    style="margin-left: 5px; margin-right: 5px"
+                  >
+                    <b style="background-color: #c3e2fb">Tender</b>
+                    <div class="cssmarquee2" style="height: 500px">
+                      <div align="left">
+					  
+					  
+					  
+					
+					<img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26552"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						AWARD OF CONTRACT Dated 24-03-2026: Supply of Catering and Foods in connection with the 12th Annual Judicial Conclave scheduled to be held on 04.04.2026.</a>
+					<br/><br />
+					
+					<img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26551"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						AWARD OF CONTRACT Dated 24-03-2026: Decoration and other allied arrangements in connection with the 12th Annual Judicial Conclave scheduled to be held on 04.04.2026.</a>
+					<br/><br />
+					<img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26550"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						AWARD OF CONTRACT Dated 23.03.2026: Comprehensive Annual Maintenance Contract (CAMC) for all the UPSs (Online and Offline) including batteries and other consumable items of the Registry of High Court of Tripura.</a>
+					<br/><br />  
+					  <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26548"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						AWARD OF CONTRACT Dated 20.03.2026: Preparation of Stage with various components” in connection with the celebration of the 13th High Court Day on 04.04.2026.</a>
+					<br/><br />
+					  <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26547"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						AWARD OF CONTRACT Dated 20.03.2026: Supply and Catering of Foods for Dinner” in connection with the celebration of the 13th High Court Day on 04.04.2026..</a>
+					<br/><br />
+					  <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26545"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						NOTIFICATION Dated 10-03-2026: Extension of last date for submission of bids in respect of NITs bearing No.F.33(2)-HC/2026/4715 and NIT F.33(2)-HC/2026/4716 floated by the High Court on 23.02.2026 in connection with the High Court Day.</a>
+					<br/><br />
+					  <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26535"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						NOTIFICATION Dated 10-03-2026: Extension of last date for submission of bids in respect of NITs bearing No.F.33(2)-HC/2026/4715 and NIT F.33(2)-HC/2026/4716 floated by the High Court on 23.02.2026 in connection with the High Court Day.</a>
+					<br/><br />
+					  <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26533"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						MEMORANDUM Dated 07-03-2026: Opening of Financial Bid to the e-Tender No. e-Tender No. F.6(21)-HC/2025-26(eProc. Ph-III)/3740 dated 13.02.2026 for 
+																						Supply, Commissioning, Installation, Testing & Maintenance of Storage NAS 500 TB for the High Court of Tripura.</a>
+					<br/><br />
+					  <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26520"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						CORRIGENDUM Dated 27-02-2026 in connection with Tenders No. F.6(36)-HC/2025-26/3754 Dated 13.02.2026.</a>
+					<br/><br />
+					  
+					
+					
+					
+						
+						<br />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--Recruitment-->
+
+                  <div
+                    id="recruitment"
+                    class="tabcontent"
+                    style="margin-left: 5px; margin-right: 5px"
+                  >
+                    <b style="background-color: #c3e2fb">Recruitment</b>
+                    <div class="cssmarquee3" style="height: 500px">
+                      <div align="left">
+					   
+					   
+					  
+					  
+					  
+					  <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26524"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						NOTIFICATION Dated 02-03-2026: Result of Written Test held on 07.12.2025 for recruitment to the posts of Personal Assistant Junior Grade (PA-II) 
+																						for the establishment of Family Courts of Tripura in pursuance of the Advertisement No. FC 01/2024, dated 29.11.2024.</a>
+					<br/><br /> 
+					  <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26523"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						NOTIFICATION Dated 02-03-2026: Result of Written Test and the Viva Voce for recruitment to the posts of Daily Rated Worker for 
+																						the establishment of the High Court of Tripura in pursuance of the Advertisement No. HC 01/2025 dated 28.02.2025.</a>
+					<br/><br /> 
+					  <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26488"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						NOTIFICATION Dated 29-01-2026: Amendment of The High Court of Tripura Services (Appointment, Conditions of Service and Conduct) (13th Amendment) Rules, 2026.</a>
+					<br/><br /> 
+					   <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26477"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						RESULT Dated 21-01-2025:Written Test held on 30.11.2025 for recruitment to the posts of Daily Rated Worker (DRW)
+																						in pursuance of the Advertisement No. HC 01/2025 dated 28.02.2025.</a>
+					<br/><br />
+					   <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> 
+                                                <a href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26427"  style="TEXT-DECORATION: NONE; line-height:20px;">
+																						ADDENDUM Dated 01.12.2025: In connection with recruitment to the posts of Lower Division Clerk (LDC) for 
+																						the Family Courts of Tripura (Advertisement FC 01/2024, dated 29.11.2024).</a>
+					<br/><br />
+										
+                        <br />
+                      </div>
+                    </div>
+                  </div>
+                  <!--Transfer & Postings-->
+
+                  <div
+                    id="transfer"
+                    class="tabcontent"
+                    style="margin-left: 5px; margin-right: 5px"
+                  >
+                    <b style="background-color: #c3e2fb">Transfer & Postings</b>
+                    <div class="cssmarquee4" style="height: 500px">
+                      <div align="left">
+					  
+					  
+						<img
+                          border="0"
+                          src="new_globe_ani.gif"
+                          width="33"
+                          height="16"
+                          alt=""
+                        />
+                        <a
+                          href="https://thc.tripura.gov.in/page/Noticedettc.aspx?NoticeId=26526"
+                          style="text-decoration: NONE; line-height: 20px"
+                        >
+                      			NOTIFICATION Dated 02-03-2026: Transfer & Posting of Sri Angshuman Debbarma, District & Sessions Judge, North Tripura District, Dharmanagar as the Registrar General, High Court of Tripura, Agartala.</a
+                        >
+                        <br /><br />
+						
+
+                       
+                        <br />
+                      </div>
+                    </div>
+                  </div>
+                  <script>
+                    function openCity(evt, cityName) {
+                      var i, tabcontent, tablinks;
+                      tabcontent =
+                        document.getElementsByClassName("tabcontent");
+                      for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                      }
+                      tablinks = document.getElementsByClassName("tablinks");
+                      for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(
+                          " active",
+                          ""
+                        );
+                      }
+                      document.getElementById(cityName).style.display = "block";
+                      evt.currentTarget.className += " active";
+                    }
+
+                    // Get the element with id="defaultOpen" and click on it
+                    document.getElementById("defaultOpen").click();
+                  </script>
+                  <!--                                    <div class="panel-body" style="height: 292px;">                                        
+                                                                                                                                                                                <marquee id="test" behavior="scroll" direction="up" height="276"  bgcolor="#FFFFFF" scrolldelay="100" scrollamount="2" onMouseOver="document.all.test.stop()" onMouseOut="document.all.test.start()">
+                                                                                                                                                                                    
+                                                                                                                                                                                        <div align="justify">
+                                                                                                                                                                                            <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> <a href="notification/4977-78-15032019.pdf" title="Please Click here.." target="_blank"  style="TEXT-DECORATION: NONE; line-height:20px;">RESULT Dated 15-03-2019: Preliminary Written Examination (Screening Test) held on 17.02.2019 for filling up the vacancies in Grade-III of TJS.</a><br><br />
+                                                                                                                                                                                
+                                                                                                                                                                                            <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> <a href="notification/4928-15032019.pdf" title="Please Click here.." target="_blank"  style="TEXT-DECORATION: NONE; line-height:20px;">Memorandum dated 15.03.2019: Memorandum regarding etender for Computer and LAN under phase-II of the eCourts Project</a><br><br />
+                                                                                                                                                                                
+                                                                                                                                                                                            <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> <a href="notification/4936-15032019.pdf" title="Please Click here.." target="_blank"  style="TEXT-DECORATION: NONE; line-height:20px;">Memorandum dated 15.03.2019: Memorandum regarding etender for Rack Server, Pedestal Server and Justice Clock under Phase-II of the eCourts Project.</a><br><br />
+                                                                                                                                                                                
+                                                                                                                                                                                
+                                                                                                                                                                                            <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> <a href="notification/4616-08032019.pdf" title="Please Click here.." target="_blank"  style="TEXT-DECORATION: NONE; line-height:20px;">NOTIFICATION Dated 08-03-2019: First Amendment of the High Court of Tripura eCourts Services (Appointment, Conditions of Service & Conduct) Rule,2019</a><br><br />
+                                                                                                                                                                                
+                                                                                                                                                                                            <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> <a href="notification/-43_05032019.pdf" title="Please Click here.." target="_blank"  style="TEXT-DECORATION: NONE; line-height:20px;">NOTIFICATION Dated 05-03-2019: Declaration of result according to marks obtained by the candidates in the written examination held on 02.02.2019 & 03.02.2019 for filling up the vacant posts in Grade-I of TJS.</a><br><br />
+                                                                                                                                                                                
+                                                                                                                                                                                            <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> <a href="notification/-39.pdf" title="Please Click here.." target="_blank"  style="TEXT-DECORATION: NONE; line-height:20px;">NOTICE Dated 01-03-2019: Regarding collection of Paper Book within three working days.</a>
+                                                                                                                                                                                            <br />
+                                                                                                                                                                                            
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                </marquee>                                           			
+                                                                                                                                                                            </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 well">
+            <div class="panel panel-primary">
+              <div id="bdiv3" class="panel-heading">
+                <b id="txtcolo11">Judicial Services</b>
+              </div>
+              <div
+                id="menu19"
+                style="background-color: #c3e2fb; margin-top: 2px"
+              >
+                <div class="btn-group-vertical" style="margin-top: 2px">
+                  <div class="dropdown">
+                    <button id="menu20" class="dropbtn3">Cause List</button>
+                    <div class="dropdown-content">
+                       
+					  
+					<!--<a
+                        target="_blank"
+                        href="causelist/CauseList_23.02.2026.pdf"
+                        >Cause List for 23.02.2026 <img border="0" src="new_globe_ani.gif" width="33" height="16" alt=""> </a>-->
+					<a
+                        target="_blank"
+                        href="https://hcservices.ecourts.gov.in/ecourtindiaHC/cases/highcourt_causelist.php?state_cd=20&dist_cd=1&court_code=1&stateNm=Tripura"
+                        >Main Cause List</a
+                      >
+                      <a
+                        target="_blank"
+                        href="http://thc.tripura.gov.in/page/frmCauselist.aspx"
+                        >Lawazima Cause List</a
+                      >
+                      <a
+                        target="_blank"
+                        href="http://thc.tripura.gov.in/page/frmALCauselist.aspx"
+                        >Additional Lawazima Cause List</a
+                      >
+                      <a
+                        target="_blank"
+                        href="http://thc.tripura.gov.in/page/test.aspx?id=0"
+                        >Archive Cause List</a
+                      >
+                    </div>
+                  </div>
+                </div>  
+              </div>
+              <div
+                id="menu21"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a title="Case Status" href="cstatus.html" class="btn"
+                  ><p>Case Status</p></a
+                >
+              </div>
+              <div
+                id="menu22"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a title="Court Order" href="corder.html" class="btn"
+                  ><p>Court Order</p></a
+                >
+              </div>
+              <div
+                id="menu23"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a
+                  title="Judgement"
+                  target="_blank"
+                  href="https://hcservices.ecourts.gov.in/ecourtindiaHC/index_highcourt.php?state_cd=20&dist_cd=1&stateNm=Tripura"
+                  ><p style="color: #151414">Judgment</p></a
+                >
+              </div>
+              <div
+                id="menu24"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a href="monthly_Statement.html" class="btn"
+                  ><p>Monthly Statement</p></a
+                >
+              </div>
+              <div
+                id="menu_may_1_2020"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a href="insti_disp.html" class="btn"
+                  ><p>Institution & Disposal Data</p></a
+                >
+              </div>
+              <div
+                id="ccr_21"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a target="_blank" class="btn" href="case_clearance.html">
+                  <p>Case Clearance Rate&nbsp;</p></a
+                >
+              </div>
+              <div
+                id="menu25"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a
+                  target="_blank"
+                  href="http://thc.tripura.gov.in/page/NoticeMaintc.aspx"
+                  class="btn"
+                  ><p>Notifications</p></a
+                >
+              </div>
+              <div
+                id="menuvc"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a href="vc.html" class="btn"
+                  ><p>Video Conferencing &nbsp;</p></a
+                >
+              </div>
+              <div
+                id="menujc"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a href="justice_clock.html" class="btn"
+                  ><p>Virtual Justice Clock</p></a
+                >
+              </div>
+              <div
+                id="menuefiling"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a target="_blank" href="efiling.html" class="btn"
+                  ><p style="color: green"><b>eFiling of Cases &nbsp;</b></p></a
+                >
+                <!-- <a href="#" class="btn"><p style="color: green;"><b>eFiling of Cases &nbsp;</b></p></a>-->
+              </div>
+              <div
+                id="menueVirtualCourt"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a
+                  target="_blank"
+                  href="https://meet.google.com/wku-xmop-esx"
+                  class="btn"
+                  ><p style="color: green">
+                    <b>Virtual eSewa Kendra</b>
+                    <img
+                      border="0"
+                      src="new_globe_ani.gif"
+                      width="33"
+                      height="16"
+                      alt=""
+                    /></p
+                ></a>
+              </div>
+              <div
+                id="menueVirtualCourt"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a
+                  target="_blank"
+                  href="https://vcourts.gov.in/virtualcourt/"
+                  class="btn"
+                  ><p style="color: blue">
+                    <b>Virtual Court for Traffic e-Challan Cases</b>
+                  </p></a
+                >
+              </div>
+              <div
+                id="menuePayment"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a
+                  target="_blank"
+                  href="https://pay.ecourts.gov.in/epay/"
+                  class="btn"
+                  ><p style="color: #ff337a"><b>ePayment</b></p></a
+                >
+              </div>
+
+              <div
+                id="menujc"
+                style="
+                  margin-top: 2px;
+                  height: 33px;
+                  background-color: #c3e2fb;
+                  color: #151414;
+                "
+              >
+                <a href="AI_trans_judgment.html" class="btn"
+                  ><p>AI Translated Judgment</p></a
+                >
+              </div>
+            </div>
+            <div class="panel panel-primary">
+              <div id="bdiv4" class="panel-heading">
+                <b id="txtcolo12">Map & Location</b>
+              </div>
+              <div>
+                <a href="location.html" style="text-decoration: none">
+                  <img
+                    src="img/m11.png"
+                    alt="Click Here"
+                    width="28"
+                    height="50"
+                    align="left"
+                  />
+                </a>
+              </div>
+              <div>
+                <center>
+                  <p>
+                    <img
+                      src="img/All Districts 2.jpg"
+                      alt="State Map"
+                      class="img-responsive"
+                      width="200"
+                      height="259"
+                      border="0"
+                      usemap="#Map2"
+                    />
+                    <map name="Map2" id="Map2">
+                      <area
+                        shape="poly"
+                        coords="56,132,58,132,59,132,61,132,61,132,64,132,64,132,65,132,68,132,69,132,71,132,72,132,71,130,71,128,71,126,71,123,71,120,70,119,70,119,69,118,69,116,69,114,68,114,68,112,67,110,66,109,66,108,66,106,66,103,66,101,65,99,65,98,64,96,64,94,64,92,64,91,64,89,64,89,63,89,62,86,62,84,61,84,60,84,59,84,58,83,58,81,59,79,59,77,59,77,57,77,56,76,56,75,55,74,53,74,51,74,49,74,48,73,47,73,46,73,45,73,43,74,42,74,40,74,40,73,38,74,38,75,38,75,38,77,39,78,39,79,39,79,40,80,40,81,40,82,40,83,40,84,40,86,39,89,38,89,38,89,40,90,40,91,40,93,39,94,37,94,35,93,34,93,32,94,32,92,31,91,30,93,30,94,29,92,28,92,28,92,26,92,26,92,26,93,25,95,25,96,23,95,22,95,21,95,21,97,21,97,21,99,21,99,22,100,23,102,21,102,19,102,17,102,17,102,15,101,15,102,14,103,14,104,14,105,15,107,15,108,15,109,16,110,16,111,17,113,17,115,17,116,16,118,16,119,16,119,16,121,16,121,15,123,15,125,15,127,16,129,19,129,21,129,24,129,26,129,31,129,34,129,36,131,39,131,41,132,42,132,46,134,48,133,49,131,50,131,53,131"
+                        href="https://westtripura.dcourts.gov.in/"
+                        alt="West Tripura"
+                        target="_blank"
+                      />
+
+                      <area
+                        shape="poly"
+                        coords="33,203,35,200,35,196,36,194,37,191,39,189,39,189,40,188,40,187,40,185,40,183,40,182,40,179,41,179,42,179,43,177,43,174,43,172,43,170,43,169,43,168,44,166,46,165,47,163,47,162,48,160,48,158,48,157,49,155,51,153,53,152,53,151,55,149,56,148,56,147,57,146,59,143,61,142,63,140,64,139,66,139,67,137,69,136,70,135,72,135,73,133,73,132,73,132,72,132,71,133,70,133,69,133,68,133,66,134,64,133,63,133,61,134,58,134,57,133,56,132,56,130,54,130,51,130,49,130,48,131,48,132,47,133,46,133,45,131,44,131,43,130,40,130,40,130,37,130,35,131,34,132,32,132,32,132,30,131,29,129,25,130,22,129,20,129,18,130,16,130,14,130,12,130,9,130,8,130,6,130,5,131,4,133,3,134,1,137,0,138,2,138,3,138,5,139,5,139,8,139,8,139,11,140,11,142,11,143,10,144,9,145,8,145,7,147,7,147,6,147,5,146,3,147,3,147,2,147,2,149,4,149,4,151,4,153,5,153,6,154,8,154,8,156,11,158,11,159,12,160,12,161,12,163,12,164,12,166,13,166,14,168,15,170,16,170,18,170,18,170,20,171,21,172,21,173,21,173,22,175,23,176,24,178,23,179,24,180,24,181,25,183,26,184,26,185,28,188,28,190,28,192,29,193,31,194,32,197,30,198,30,199,32,202"
+                        href="https://sepahijalatrp.dcourts.gov.in/"
+                        alt="Sepahijala"
+                        target="_blank"
+                      />
+                      <area
+                        shape="poly"
+                        coords="88,257,88,255,90,251,91,251,94,251,95,251,96,251,98,250,99,249,101,249,102,249,103,249,104,247,106,247,108,247,108,245,108,244,108,243,109,242,109,242,110,242,110,241,111,241,112,239,112,237,112,236,113,236,116,237,119,235,120,233,118,232,116,230,116,230,115,229,114,226,113,224,112,221,111,219,110,216,109,215,109,213,108,211,106,209,104,209,103,208,101,205,100,203,100,202,99,200,98,199,96,199,95,199,94,197,93,196,92,195,91,193,89,192,86,192,85,192,84,192,82,191,82,189,80,189,80,189,77,189,75,188,74,187,72,186,70,186,68,185,65,185,64,183,61,183,59,184,56,185,56,187,56,187,55,187,52,187,52,188,51,189,50,189,50,190,49,191,48,191,48,192,46,194,46,195,45,196,44,197,41,198,41,198,39,198,38,199,38,199,37,201,36,203,35,204,35,205,35,206,34,208,34,209,34,210,35,212,35,212,35,215,35,215,37,217,37,219,37,221,37,221,37,223,38,225,38,227,39,227,40,229,40,230,40,230,40,232,41,233,43,234,44,235,46,237,47,238,48,238,49,239,51,238,52,236,51,233,50,232,49,230,48,229,48,227,48,225,47,223,47,221,46,220,46,219,46,217,46,215,46,214,47,212,47,211,47,210,47,209,48,208,49,207,50,207,52,208,53,208,54,209,56,210,56,210,58,212,59,213,60,214,61,215,63,216,64,217,64,219,64,219,64,221,64,222,64,224,64,225,65,226,66,227,66,227,67,227,68,228,68,229,67,230,67,232,69,232,70,233,70,234,71,235,71,236,71,236,71,238,72,239,72,239,72,241,72,242,72,242,72,242,74,244,75,245,75,248,76,247,78,249,79,251,80,251,81,251,83,251,85,251,86,252,86,254,86,255,86,256"
+                        href="https://southtripura.dcourts.gov.in/"
+                        alt="South Tripura"
+                        target="_blank"
+                      />
+
+                      <area
+                        shape="poly"
+                        coords="159,86,158,86,160,84,162,82,161,80,161,79,163,79,166,79,167,78,167,75,167,75,168,74,168,73,171,71,171,69,171,68,170,67,170,65,168,63,168,60,169,59,171,59,173,58,173,56,173,54,172,53,171,52,170,50,169,49,168,48,168,46,167,44,166,43,165,43,162,42,162,42,160,41,160,40,159,38,158,38,156,36,155,35,154,33,154,32,153,31,153,29,152,29,152,27,153,25,154,25,155,24,158,23,160,21,162,20,162,19,162,18,165,17,167,16,168,16,168,14,167,13,166,11,166,10,166,9,167,8,167,6,167,4,167,2,168,1,170,0,170,0,172,1,173,1,174,3,174,4,175,6,176,7,177,9,178,10,180,11,183,13,184,14,184,16,185,18,187,19,188,19,191,21,192,22,192,25,193,28,193,29,193,30,193,33,193,35,193,39,193,42,192,45,192,48,194,49,194,50,195,51,196,53,199,54,199,55,199,59,199,61,198,64,198,67,198,69,199,72,198,75,197,78,196,79,196,82,198,83,199,84,199,86,199,89,199,90,199,93,198,95,197,97,197,98,197,99,197,99,197,100,198,100,199,100,199,103,199,103,198,106,197,109,196,109,196,110,196,112,195,114,195,116,195,119,195,120,195,122,195,123,195,121,195,122,195,119,195,119,196,124,195,126,195,127,195,128,195,129,195,132,195,134,194,137,193,135,193,133,192,131,191,130,191,129,188,129,187,128,185,128,184,129,184,131,184,132,184,134,183,135,183,137,182,139,181,138,181,136,180,135,180,133,179,131,178,130,176,129,176,129,174,129,174,128,173,128,172,126,170,126,170,125,170,123,169,122,168,119,168,117,168,115,168,113,168,110,168,109,168,108,167,105,167,102,166,100,166,98,166,97,165,95,165,94,164,93,160,89"
+                        href="https://northtripura.dcourts.gov.in/"
+                        alt="North Tripura"
+                        target="_blank"
+                      />
+
+                      <area
+                        shape="poly"
+                        coords="158,85,158,83,160,83,160,80,160,79,162,78,165,78,166,76,166,73,167,72,168,72,169,72,170,69,170,67,170,64,170,63,168,62,168,60,168,59,171,58,172,57,172,54,171,53,170,52,169,50,168,49,168,48,168,48,167,46,165,45,164,44,162,43,161,42,160,41,158,40,157,39,157,39,155,36,154,36,153,34,152,32,152,30,152,28,150,26,147,26,145,24,144,24,142,24,139,26,138,25,137,25,136,25,135,25,135,27,137,28,139,29,140,29,140,31,138,34,137,33,136,32,136,31,136,31,135,31,134,29,133,29,131,30,130,30,128,31,128,32,128,34,128,35,129,36,129,37,129,38,130,39,130,40,131,41,131,43,131,45,131,46,130,48,130,49,129,52,128,54,128,55,128,57,128,57,128,59,128,60,128,61,126,62,125,64,125,65,127,66,128,67,128,69,129,69,130,70,131,71,133,72,136,74,138,76,140,76,142,74,142,73,144,72,146,71,148,70,149,69,152,69,152,71,152,73,153,74,154,76,154,77,154,79"
+                        href="https://unakotitrp.dcourts.gov.in/"
+                        alt="Unakoti"
+                        target="_blank"
+                      />
+
+                      <area
+                        shape="poly"
+                        coords="168,126,168,123,168,120,168,119,168,117,168,114,168,111,168,110,168,106,166,103,166,101,166,99,165,98,165,97,164,93,162,92,161,91,160,90,159,88,159,86,156,85,155,84,155,82,154,81,154,80,153,78,153,78,153,76,152,74,152,72,152,71,150,69,148,69,148,69,147,71,146,71,145,73,144,73,142,75,140,75,138,75,137,75,136,76,136,76,135,75,135,74,133,74,132,73,131,72,130,72,130,70,128,69,127,68,125,67,125,66,124,65,122,62,121,60,120,59,119,58,118,57,118,56,117,55,117,53,117,51,113,51,111,54,111,54,109,53,109,53,107,52,107,52,106,50,106,51,104,50,104,50,103,49,103,48,100,49,100,49,99,51,99,53,100,55,101,58,101,59,101,62,101,64,101,66,102,67,102,69,102,70,102,73,102,75,102,78,104,80,104,82,104,84,104,87,103,89,103,90,103,92,103,93,103,95,104,97,104,99,104,101,104,103,105,106,106,109,106,111,107,114,107,115,107,118,107,119,107,121,108,122,108,125,109,126,109,128,109,129,109,130,109,131,109,133,109,136,108,138,107,139,105,140,104,139,104,136,102,135,101,134,99,133,98,131,97,130,96,129,95,129,95,129,94,131,94,131,94,133,95,137,96,139,97,141,98,144,100,145,100,145,102,146,102,148,104,149,104,149,104,151,104,151,105,152,107,153,110,154,111,155,112,156,114,158,115,159,115,161,115,162,116,162,117,165,117,166,117,169,118,169,120,169,121,167,123,168,124,170,124,171,125,173,125,174,127,175,128,177,129,176,131,177,132,177,132,177,133,175,133,175,134,173,136,172,136,171,140,169,140,168,139,167,139,166,139,164,139,162,139,161,138,159,137,157,137,156,137,153,136,150,136,149,135,148,134,147,133,146,133,144,134,143,135,141,135,140,135,139,134,138,134,138,135,136,135,135,136,134,136,135,136,132,136,130,136,129,136,128,137,128,140,128,141,128,143,130,143,131,144,132,144,134,144,135,146,136,146,137,147,138,148,138,149,139,149,139,151,139,152,140,153,142,155,142,156,141,157,141,158,140,158,139,159,138,160,138,160,137,160,135,162,134,162,133,162,133,163,133,164,133,165,133,166,133,168,129,168,128"
+                        href="https://dhalaitrp.dcourts.gov.in/"
+                        alt="Dhalai"
+                        target="_blank"
+                      />
+
+                      <area
+                        shape="poly"
+                        coords="80,72,80,69,80,66,82,63,81,60,84,60,84,58,84,57,82,55,82,52,83,51,85,54,87,57,88,59,88,60,89,62,91,63,92,64,92,65,93,65,94,64,96,64,97,65,98,66,100,67,100,68,100,69,101,71,102,74,102,76,102,79,103,80,103,82,103,83,103,85,103,86,103,87,103,89,103,89,102,90,102,92,102,92,103,94,103,96,103,97,104,99,104,99,104,101,104,102,104,104,104,105,104,106,104,107,105,110,105,113,105,117,105,119,107,121,106,124,107,126,108,128,108,129,108,130,108,131,107,133,107,135,107,136,106,138,105,139,104,140,102,139,102,138,102,135,102,134,101,134,98,132,98,131,96,129,96,129,94,129,92,129,91,129,89,129,87,129,84,129,83,129,80,129,79,129,74,131,72,131,72,129,71,127,71,125,71,123,70,120,69,119,69,118,68,115,67,113,67,110,67,107,66,106,66,103,65,101,65,99,64,97,64,95,64,93,64,89,63,89,63,87,62,85,59,83,59,80,59,78,61,76,63,77,64,78,66,78,67,78,68,78,69,77,71,76,73,75,76,75,78,74"
+                        href="https://khowaitrp.dcourts.gov.in/"
+                        alt="Khowai"
+                        target="_blank"
+                      />
+
+                      <area
+                        shape="poly"
+                        coords="78,129,81,129,83,129,85,129,87,129,89,129,92,129,92,132,93,134,94,136,95,139,96,140,96,143,97,145,98,146,100,147,101,148,102,149,104,149,104,150,105,153,106,154,108,153,109,153,111,153,112,155,113,156,114,158,114,159,114,161,116,162,117,164,117,166,117,169,120,169,121,168,122,168,124,169,124,171,125,173,125,174,127,177,125,179,123,182,123,184,122,185,121,187,121,188,119,189,118,190,117,192,117,193,115,195,113,197,112,199,112,200,111,202,110,205,110,206,111,207,112,208,113,210,115,212,115,214,115,216,117,218,117,219,117,219,118,220,118,221,118,223,118,224,118,225,118,225,118,226,119,227,119,229,116,229,113,227,113,223,112,222,112,220,112,219,110,218,110,216,109,214,109,214,109,212,107,210,106,210,105,209,104,207,104,207,102,206,101,205,100,203,99,201,96,199,94,198,92,196,90,193,87,191,85,190,83,191,82,191,81,189,80,189,78,189,76,189,75,187,75,187,74,186,72,185,71,185,68,185,67,184,66,184,64,183,62,183,61,183,59,183,57,184,56,185,56,185,55,187,52,187,50,188,49,189,49,189,48,191,46,191,45,194,44,196,43,197,40,198,38,199,37,201,35,201,36,199,36,195,37,193,37,191,39,189,39,186,40,185,40,183,40,181,40,179,41,177,43,174,43,173,43,171,43,170,43,169,43,168,44,167,46,167,47,165,47,164,47,163,47,161,47,160,47,159,49,157,49,156,51,154,52,151,54,149,56,149,56,147,56,145,58,145,59,143,60,142,61,140,63,139,64,139,65,138,67,137,67,136,68,136,70,135,71,134,72,133,72,133"
+                        href="https://gomatitrp.dcourts.gov.in/"
+                        alt="Gomati"
+                        target="_blank"
+                      />
+                    </map>
+                  </p>
+                </center>
+              </div>
+            </div>
+            <div class="panel panel-primary">
+              <div id="map" class="maplo" style="">
+                <b style="background-color: white; color: black" id="txtcolo13"
+                  >Calendar of The High Court of Tripura</b
+                >
+                <br />
+                <i style="background-color: white; color: black" id="txtcolo14"
+                  >(With Working days & Holidays)</i
+                >
+              </div>
+
+              <embed
+                id="gToday:normal:agenda.js"
+                height="170"
+                name="gToday:normal:agenda.js"
+                src="Calendar 2023/iflateng.htm"
+                style="
+                  background-image: url('images/img07newcopy.gif');
+                  height: 80px;
+                "
+              />
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="col-md-3 col-sm-3 col-xs-6">
+            <div class="alert text-center">
+              <a href="https://india.gov.in/" target="_blank">
+                <img
+                  src="images/indiagov.jpg"
+                  alt="india.gov.in"
+                  width="150"
+                  height="31"
+              /></a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-6">
+            <div class="alert text-center">
+              <a href="https://goidirectory.gov.in/" target="_blank">
+                <img
+                  src="images/goid.jpg"
+                  alt="goidirectory.gov.in"
+                  width="150"
+                  height="31"
+              /></a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-6">
+            <div class="alert text-center">
+              <a href="https://tripura.gov.in/" target="_blank">
+                <img
+                  src="images/tri.jpg"
+                  alt="tripura.gov.in"
+                  width="150"
+                  height="31"
+              /></a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-6">
+            <div class="alert text-center">
+              <a href="form.html">
+                <img
+                  src="images/downw.png"
+                  alt="Download"
+                  width="150"
+                  height="31"
+              /></a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="container"
+          style="color: #000000; line-height: normal; font-size: 12px"
+        >
+          <center>
+            <b>Disclaimer :</b>
+            All the contents of this Site are only for general information or
+            use. They do not constitute advice and should not be relied upon in
+            making (or refraining from making) any decision. In case of any
+            omission or discrepancy, information in the original records will be
+            final and binding. It is also not guaranteed that information
+            published in this Website is up to date.
+          </center>
+          <p>
+            <br />
+            <b><font color="#0000CC">Last Update:20-03-2026</font></b>
+          </p>
+        </div>
+      </div>
+
+      <footer id="foot" class="container container-fluid text-center">
+        <p>
+          <center id="txtcolo15">
+            <font style="background-color: white; color: black">
+              Developed by: 
+              <a href="https://thc.nic.in/"
+                ><b style="color: black">High Court of Tripura</b></a
+              >
+              ,Agartala | Hosted by:
+              <a id="txtcolo16" target="_blank" href="https://www.nic.in/"
+                ><b style="color: black">National Informatic Centre</b></a
+              >
+              ,Tripura State Unit
+            </font>
+          </center>
+        </p>
+        <a class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+      </footer>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title"><b>CASE STATUS</b></h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Daily updates are available after <b>6pm</b>.</p>
+              <p>
+                Updates are subject to information made available by the court.
+              </p>
+              <center>
+                <a class="btn btn-info btn-lg" href="cstatus.html"
+                  >Click to Continue</a
+                >
+              </center>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-default"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal1" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title"><b>COURT ORDER</b></h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Daily updates are available after <b>6pm</b>.</p>
+              <p>
+                Updates are subject to information made available by the court.
+              </p>
+              <center>
+                <a class="btn btn-info btn-lg" href="corder.html"
+                  >Click to Continue</a
+                >
+              </center>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-default"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title"><b>JUDGMENT</b></h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Daily updates are available after <b>6pm</b>.</p>
+              <p>
+                Updates are subject to information made available by the court.
+              </p>
+              <center>
+                <a
+                  target="_blank"
+                  class="btn btn-info btn-lg"
+                  href="https://hcservices.ecourts.gov.in/ecourtindiaHC/index_highcourt.php?state_cd=20&dist_cd=1&stateNm=Tripura"
+                  >Click to Continue</a
+                >
+              </center>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-default"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Uncomment below i you want to use a preloader -->
+    <!-- <div id="preloader"></div> -->
+
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/mobile-nav/mobile-nav.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <!-- Commiit this for error issue -->
+    <!--<script src="lib/lightbox/js/lightbox.min.js"></script>-->
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
+
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

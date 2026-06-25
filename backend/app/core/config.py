@@ -11,7 +11,9 @@ class Settings(BaseSettings):
     api_prefix: str = "/api/v1"
 
     database_url: str = "postgresql+psycopg2://postgres:postgres@db:5432/justice_tracker"
-    redis_url: str = "redis://redis:6379/0"
+    celery_broker_url: str = "redis://redis-broker:6379/0"
+    celery_result_backend: str = "redis://redis-broker:6379/1"
+    redis_cache_url: str = "redis://redis-cache:6380/0"
 
     celery_task_default_queue: str = "ingestion"
     ingestion_worker_count: int = 6
@@ -47,6 +49,7 @@ class Settings(BaseSettings):
 
     judge_match_levenshtein_threshold: float = 0.18
     judge_match_confidence_threshold: float = 0.60
+    judge_match_similarity_threshold: float = 0.30
     enable_judge_ml_matcher: bool = False
     judge_provisional_retention_days: int = 365
     judge_atribution_batch_size: int = 500
@@ -116,6 +119,12 @@ class Settings(BaseSettings):
     log_level: str = "INFO"
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
+
+    @property
+    def redis_url(self) -> str:
+        """Backward-compatible alias for legacy broker Redis callers."""
+
+        return self.celery_broker_url
 
 
 @lru_cache

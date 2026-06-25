@@ -40,7 +40,7 @@ class MultiTierCache:
         self._version = settings.cache_key_version
         self._prefix = settings.cache_app_prefix
         self._l1 = L1MemoryCache(max_items=settings.cache_l1_max_items)
-        self._l2 = RedisCache(settings.redis_url)
+        self._l2 = RedisCache(settings.redis_cache_url)
 
     def _resource_ttls(self, resource: str, fresh_ttl: int | None) -> tuple[int, int]:
         if fresh_ttl is not None:

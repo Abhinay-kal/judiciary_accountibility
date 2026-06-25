@@ -16,10 +16,10 @@ import time
 from datetime import datetime, timedelta
 from typing import Optional
 
-from sqlalchemy import and_, func, text
+from sqlalchemy import and_, func
 from sqlalchemy.orm import Session
 
-from app.models import Adjournment, Case, Hearing, HearingOutcomeType
+from app.models import Adjournment, Case, CourtAnalyticalSnapshot, Hearing, HearingOutcomeType
 from app.models.entities import AdjournmentReasonType
 from app.schemas.delay_features import (
     AdjournmentDensityMetrics,
@@ -58,6 +58,32 @@ class DelayFeatureExtractor:
     def __init__(self, db: Session):
         """Initialize extractor with database session."""
         self.db = db
+
+    def _get_court_snapshot(self, court_id: int | None) -> CourtAnalyticalSnapshot | None:
+        if court_id is None:
+            return None
+        return (
+            self.db.query(CourtAnalyticalSnapshot)
+            .filter(CourtAnalyticalSnapshot.court_id == court_id)
+            .first()
+        )
+
+    @staticmethod
+    def _is_irregular_gap_pattern(
+        *,
+        mean_gap: float,
+        cv: float,
+        snapshot: CourtAnalyticalSnapshot | None,
+        population_median_cv: float | None,
+    ) -> bool:
+        if snapshot is not None:
+            median_gap_baseline = max(0.0, float(snapshot.median_time_between_hearings_days))
+            if median_gap_baseline > 0:
+                return mean_gap > (median_gap_baseline * 1.5)
+            return cv > 0.8
+
+        baseline_cv = 0.5 if population_median_cv is None else population_median_cv
+        return cv > baseline_cv
 
     # ========== FEATURE 1: Adjournment Density ==========
 
@@ -106,11 +132,11 @@ class DelayFeatureExtractor:
         if total_hearings > 0:
             density_percentage = (total_adjournments / total_hearings) * 100
 
-        # Calculate population statistics if not provided
+        snapshot = self._get_court_snapshot(case.court_id)
         if population_mean is None:
-            population_mean = self._calculate_population_mean_density()
+            population_mean = snapshot.mean_adjournment_rate if snapshot is not None else 0.0
         if population_std_dev is None:
-            population_std_dev = self._calculate_population_std_dev_density(population_mean)
+            population_std_dev = snapshot.std_dev_adjournment_rate if snapshot is not None else 0.0
 
         # Calculate z-score
         z_score = 0.0
@@ -119,6 +145,9 @@ class DelayFeatureExtractor:
 
         # Determine outlier status (> mean + 2*std_dev)
         is_outlier = density_percentage > (population_mean + 2 * population_std_dev)
+
+        if snapshot is None:
+            logger.warning("Court analytical snapshot missing for case_id=%s court_id=%s", case_id, case.court_id)
 
         return AdjournmentDensityMetrics(
             case_id=case_id,
@@ -130,47 +159,6 @@ class DelayFeatureExtractor:
             z_score=z_score,
             is_outlier=is_outlier,
         )
-
-    def _calculate_population_mean_density(self) -> float:
-        """Calculate mean adjournment density across all cases."""
-        result = self.db.execute(
-            text("""
-            SELECT AVG(adj_count::float / hearing_count) * 100 as mean_density
-            FROM (
-                SELECT 
-                    c.id,
-                    (SELECT COUNT(*) FROM hearings h WHERE h.case_id = c.id) as hearing_count,
-                    (SELECT COUNT(*) FROM adjournments a 
-                     WHERE a.case_id = c.id AND a.is_adjournment = true) as adj_count
-                FROM cases c
-                WHERE c.status NOT IN ('disposed', 'withdrawn')
-                  AND (SELECT COUNT(*) FROM hearings h WHERE h.case_id = c.id) > 0
-            ) stats
-            """)
-        )
-        return result.scalar() or 30.0  # Default: 30% if no data
-
-    def _calculate_population_std_dev_density(self, mean: float) -> float:
-        """Calculate standard deviation of adjournment density."""
-        result = self.db.execute(
-            text("""
-            SELECT SQRT(AVG(POWER(density - :mean, 2))) as std_dev
-            FROM (
-                SELECT 
-                    (adj_count::float / hearing_count) * 100 as density
-                FROM (
-                    SELECT 
-                        (SELECT COUNT(*) FROM hearings h WHERE h.case_id = c.id) as hearing_count,
-                        (SELECT COUNT(*) FROM adjournments a 
-                         WHERE a.case_id = c.id AND a.is_adjournment = true) as adj_count
-                    FROM cases c
-                    WHERE (SELECT COUNT(*) FROM hearings h WHERE h.case_id = c.id) > 0
-                ) stats
-            ) densities
-            """),
-            {"mean": mean},
-        )
-        return result.scalar() or 15.0  # Default: 15% if no data
 
     # ========== FEATURE 2: Party-Driven Delay Score ==========
 
@@ -303,12 +291,13 @@ class DelayFeatureExtractor:
             std_dev = 0.0
             cv = 0.0
 
-        # Get population median CV if not provided
-        if population_median_cv is None:
-            population_median_cv = self._calculate_population_median_cv()
-
-        # Irregular pattern: CV > population median
-        is_irregular = cv > population_median_cv
+        snapshot = self._get_court_snapshot(case.court_id)
+        is_irregular = self._is_irregular_gap_pattern(
+            mean_gap=mean_gap,
+            cv=cv,
+            snapshot=snapshot,
+            population_median_cv=population_median_cv,
+        )
 
         return DormancyVarianceMetrics(
             case_id=case_id,
@@ -321,33 +310,6 @@ class DelayFeatureExtractor:
             coefficient_of_variation=round(cv, 3),
             is_irregular_pattern=is_irregular,
         )
-
-    def _calculate_population_median_cv(self) -> float:
-        """Calculate median coefficient of variation across all cases."""
-        result = self.db.execute(
-            text("""
-            SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY cv) as median_cv
-            FROM (
-                SELECT 
-                    c.id,
-                    CASE 
-                        WHEN AVG(gap) > 0 THEN SQRT(SUM(POWER(gap - AVG(gap), 2)) / COUNT(gap)) / AVG(gap)
-                        ELSE 0
-                    END as cv
-                FROM cases c
-                JOIN (
-                    SELECT 
-                        case_id,
-                        EXTRACT(DAY FROM (LEAD(date) OVER (PARTITION BY case_id ORDER BY date) - date)) as gap
-                    FROM hearings
-                    WHERE date IS NOT NULL
-                ) gaps ON c.id = gaps.case_id
-                WHERE gaps.gap IS NOT NULL AND gaps.gap >= 0
-                GROUP BY c.id
-            ) cvs
-            """)
-        )
-        return result.scalar() or 0.5  # Default: 0.5 if no data
 
     # ========== FEATURE 4: Bench Hunting Index ==========
 
@@ -373,14 +335,6 @@ class DelayFeatureExtractor:
         primary_court_id = case.court_id
 
         # Get all distinct courts in case hearings
-        courts_in_hearings = (
-            self.db.query(Hearing.case_id)
-            .filter(Hearing.case_id == case_id)
-            .join(Case, Hearing.case_id == Case.id)
-            .group_by(Case.court_id)
-            .count()
-        )
-
         # Get distinct courts (in this case, just the one)
         unique_courts = set()
         unique_courts.add(primary_court_id)
@@ -479,8 +433,8 @@ class DelayFeatureExtractor:
                 dormancy_variance=dormancy_variance,
                 bench_hunting=bench_hunting,
             )
-        except Exception as e:
-            logger.error(f"Error extracting features for case {case_id}: {e}")
+        except Exception:
+            logger.exception("Error extracting features for case %s", case_id)
             raise
 
     def extract_batch_features(self, case_ids: list[int]) -> FeatureExtractionResult:

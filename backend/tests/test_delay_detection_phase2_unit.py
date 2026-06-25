@@ -35,7 +35,7 @@ class TestFeatureDataClasses:
 
         assert density.total_hearings == 10
         assert density.adjournment_count == 3
-        assert density.density == 30.0
+        assert density.density == pytest.approx(30.0)
         assert density.trend == "increasing"
 
     def test_party_driven_delay_score_creation(self):
@@ -49,7 +49,7 @@ class TestFeatureDataClasses:
             explanation="Test explanation",
         )
 
-        assert score.score == 75.5
+        assert score.score == pytest.approx(75.5)
         assert 0 <= score.score <= 100
         assert score.tactic_diversity == 3
 
@@ -65,9 +65,9 @@ class TestFeatureDataClasses:
             pattern_type="irregular",
         )
 
-        assert variance.mean_days_between_hearings == 45.2
+        assert variance.mean_days_between_hearings == pytest.approx(45.2)
         assert variance.pattern_type == "irregular"
-        assert variance.coefficient_of_variation == 0.392
+        assert variance.coefficient_of_variation == pytest.approx(0.392)
 
     def test_bench_hunting_index_creation(self):
         """Test BenchHuntingIndex dataclass."""
@@ -235,16 +235,14 @@ class TestScoreCalculationLogic:
         density_factor = min(density / 100 * 15, 15)  # 6.0
 
         base_score = proxy_score + frivolous_score + diversity_bonus + density_factor
-        # 16 + 6 + 11.25 + 6 = 39.25
 
-        assert proxy_score == 16.0
-        assert frivolous_score == 6.0
-        assert diversity_bonus == 11.25
+        assert proxy_score == pytest.approx(16.0)
+        assert frivolous_score == pytest.approx(6.0)
+        assert diversity_bonus == pytest.approx(11.25)
         assert base_score == pytest.approx(39.25, abs=0.01)
 
     def test_recurrence_multiplier(self):
         """Test recurrence multiplier calculation."""
-        # Multiplier = 1.0 + (recurrence_factor * 0.5)
         recurrence_factors = [0.0, 0.4, 0.8, 1.0]
         expected_multipliers = [1.0, 1.2, 1.4, 1.5]
 
@@ -276,7 +274,7 @@ class TestEdgeCases:
         )
 
         assert density.adjournment_count == 0
-        assert score.score == 0.0
+        assert score.score == pytest.approx(0.0)
 
     def test_all_adjournments(self):
         """Test handling of all adjournments."""
@@ -289,7 +287,7 @@ class TestEdgeCases:
         )
 
         assert density.adjournment_count == density.total_hearings
-        assert density.density == 100.0
+        assert density.density == pytest.approx(100.0)
 
     def test_insufficient_hearings(self):
         """Test handling of insufficient hearing history."""

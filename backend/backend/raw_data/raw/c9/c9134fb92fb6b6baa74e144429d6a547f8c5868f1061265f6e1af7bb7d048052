@@ -1,0 +1,1628 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><title>
+	The High Court of Judicature at Patna
+</title><meta content="Patna High Court" name="Description" /><meta name="author" content="Amit Kumar 1" /><meta content="judiciary,legal, India, Patna, laws, legal system, national, india, asia, cause list,amit, judgement" name="Keywords" /><meta content="Copyright of the content belongs to the High Court of the Judicature at Patna. Copyright of the code belongs Patna High Court. 2013, All the rights reserved." name="Copyrights" />
+    <script nonce="5Yxf7UKR50OAqukXnDcFdQ==" src='libs/jquery-3.7.1/jquery-3.7.1.min.js' type="text/javascript"></script>
+    <script nonce="5Yxf7UKR50OAqukXnDcFdQ==" src='libs/jquery-ui-1.14.1.custom/jquery-ui.min.js' type="text/javascript"></script>
+    <script nonce="5Yxf7UKR50OAqukXnDcFdQ==" src='libs/datatable/jquery.dataTables.min.js' type="text/javascript"></script>
+    <script nonce="5Yxf7UKR50OAqukXnDcFdQ==" src='libs/datatable/date-dd-MMM-yyyy.js' type="text/javascript"></script>
+
+    <script nonce="5Yxf7UKR50OAqukXnDcFdQ==" src='Scripts/ddlevelsmenu.js' type="text/javascript"></script>
+    
+    <script nonce="5Yxf7UKR50OAqukXnDcFdQ==" src='Scripts/ThemeSwitcher.js' type="text/javascript"></script>
+
+    <link href="libs/jquery-ui-1.14.1.custom/jquery-ui.css" rel="stylesheet" type="text/css" /><link href="libs/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" /><link href="libs/datatable/jquery.dataTables.min.css" rel="stylesheet" type="text/css" /><link href="Styles/menu.css?4" rel="stylesheet" type="text/css" /><link href="Styles/TableCSSCode.css" rel="stylesheet" type="text/css" /><link href="styles/tables.css" rel="stylesheet" type="text/css" /><link href="Styles/Site.css?d=1" rel="stylesheet" type="text/css" /><link href="Styles/paging.css?1" rel="stylesheet" type="text/css" /><link href="Styles/Common.css" rel="stylesheet" type="text/css" /><link href="Styles/upgraded/phc.css?1" rel="stylesheet" /><link href="Styles/upgraded/accessibility.css" rel="stylesheet" />
+
+    <script nonce="5Yxf7UKR50OAqukXnDcFdQ==" src='libs/flatpickr/flatpickr.min.js' type="text/javascript"></script>
+    <script nonce="5Yxf7UKR50OAqukXnDcFdQ==" src='libs/flatpickr/PopCalendarCSP_DRP.js' type="text/javascript"></script>
+    <link href="libs/flatpickr/flatpickr.min.css" rel="stylesheet" /><link href="libs/flatpickr/light.css" rel="stylesheet" />
+
+    <script nonce="5Yxf7UKR50OAqukXnDcFdQ==" type="text/javascript">
+        function GetParameterValues(param) {
+            var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < url.length; i++) {
+                var urlparam = url[i].split('=');
+                if (urlparam[0] == param) {
+                    return urlparam[1];
+                }
+            }
+        }
+        $(function () {
+
+            var p = parseInt(GetParameterValues('p'));
+
+            if ((isNaN(p)))
+                p = 0;
+            $("#accordion").accordion({
+                heightStyle: "content",
+                active: p
+
+
+            });
+
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+
+            document.querySelectorAll(".validateBtn").forEach(function (btn) {
+
+                btn.addEventListener("click", function (e) {
+
+                    let activeGroup = this.dataset.group;   // grp1 or grp2
+
+                    // Remove required from ALL
+                    let allFields = document.querySelectorAll(".req");
+                    allFields.forEach(f => f.removeAttribute("required"));
+
+                    // Add required back only to active group
+                    let groupFields = document.querySelectorAll("." + activeGroup);
+                    groupFields.forEach(f => f.setAttribute("required", "required"));
+
+                    // Validate only the active group
+                    for (let field of groupFields) {
+                        if (!field.checkValidity()) {
+                            field.reportValidity();
+                            e.preventDefault();
+                            return; // 🔥 FIX — prevents reverse order validation
+                        }
+                    }
+
+                });
+            });
+        });
+
+
+
+    </script>
+
+
+
+    <script nonce="5Yxf7UKR50OAqukXnDcFdQ==" type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+
+            var $txt = $("#ctl00_txtSearch");
+
+            $txt.autocomplete({
+
+                minLength: 2,
+                delay: 300,
+
+                source: function (request, response) {
+                    $.ajax({
+                        type: "POST",
+                        url: "../services/search.asmx/GetSuggestion",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        data: JSON.stringify({ term: request.term }),
+
+                        success: function (res) {
+                            // alert(res);
+                            response($.map(res.d, function (item) {
+                                return {
+                                    label: item.Label,
+                                    url: item.TargetUrl
+                                };
+                            }));
+                        }
+                    });
+                },
+
+                select: function (event, ui) {
+                    event.preventDefault();
+                    if (ui.item.url != null)
+                        window.location.href = ui.item.url;
+                    else
+                        window.location.href = "/search/" + ui.item.label;
+                }
+            });
+        });
+    </script>
+    <script nonce="5Yxf7UKR50OAqukXnDcFdQ==" type="text/javascript">
+
+        function PlaySound(id) {
+
+            document.getElementById(id).play();
+
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".audio")
+                .forEach(function (el) {
+                    el.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        PlaySound('ctl00_MainContent_captchaaudio');
+                    });
+                });
+        });
+    </script>
+    <script nonce="5Yxf7UKR50OAqukXnDcFdQ==" type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+
+            document.querySelectorAll(".rbl-bootstrap input[type='radio']")
+                .forEach(rb => {
+                    rb.addEventListener("change", function () {
+
+
+                        const uniqueName = rb.name;   // ASP.NET gives same name to the group
+
+                        __doPostBack(uniqueName, "");
+                    });
+                });
+
+
+
+            document.querySelectorAll(".csp-btn").forEach(btn => {
+                btn.addEventListener("click", function () {
+
+                    const target = btn.dataset.event;
+                    const cmd = btn.dataset.cmd || "";
+                    const arg = btn.dataset.arg || "";
+
+                    __doPostBack(target, arg);
+                });
+            });
+
+
+            document.querySelectorAll(".form-select-autopostback").forEach(ddl => {
+                ddl.addEventListener("change", function () {
+                    const uniqueName = ddl.name;   // ASP.NET unique ID/name
+                    __doPostBack(uniqueName, "");
+                });
+            });
+            document.querySelectorAll(".autopostback").forEach(ctl => {
+                ctl.addEventListener("change", function () {
+                    const uniqueName = ctl.name;   // ASP.NET unique ID/name
+                    __doPostBack(uniqueName, "");
+                });
+            });
+
+            document.querySelectorAll(".csp-check input[type='checkbox']").forEach(cb => {
+                cb.addEventListener("change", function () {
+                    __doPostBack(cb.name, "");
+                });
+            });
+
+        });
+
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll("input, textarea").forEach(el => {
+                el.setAttribute("autocomplete", "off");
+                el.setAttribute("autocorrect", "off");
+                el.setAttribute("spellcheck", "false");
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            var btn = document.getElementById("ctl00_btnFontLarge");
+
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Enter" && document.activeElement !== btn) {
+                    e.preventDefault();
+                }
+            });
+            var btn = document.getElementById("ctl00_btnFontNormal");
+
+            var buttons = document.querySelectorAll(".SubmitButton");
+
+            if (buttons.length !== 1) {
+
+                document.addEventListener("keydown", function (e) {
+
+                    if (e.key === "Enter") {
+                        var active = document.activeElement;
+
+                        // allow textarea
+                        if (active && active.tagName === "TEXTAREA") return;
+
+                        e.preventDefault();
+                    }
+
+                });
+
+                return;
+            }
+
+            var btn = buttons[0];
+
+            document.querySelectorAll("input[type='text'], input[type='password'], input[type='email']")
+                .forEach(function (input) {
+
+                    input.addEventListener("keydown", function (e) {
+                        if (e.key === "Enter") {
+                            e.preventDefault();
+                            btn.click();
+                        }
+
+                    });
+
+                });
+
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+
+            var txt = document.getElementById("ctl00_txtSearch");
+            var btn = document.getElementById("ctl00_btnSearch");
+
+            if (txt && btn) {
+                txt.addEventListener("keydown", function (e) {
+                    if (e.key === "Enter") {
+                        e.preventDefault();
+                        btn.click();
+                    }
+                });
+            }
+
+        });
+    </script>
+    <script nonce="5Yxf7UKR50OAqukXnDcFdQ==" type='text/javascript'> $(document).ready(function () {changeFontSize(''); }); </script></head>
+<body>
+    <form name="aspnetForm" method="post" action="./" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+        <div class="page">
+            <div class="AccessibilityHeader">
+                <a href="#divMainContent">Skip to main content</a> &nbsp;&nbsp;||&nbsp;&nbsp;
+            <a id="ctl00_HyperLink52" href="screenreader.aspx">Screen Reader Access</a>
+                &nbsp;&nbsp;||&nbsp; Text Size<input type="submit" name="ctl00$btnFontLarge" value="A+" id="ctl00_btnFontLarge" class="fontSize" formnovalidate="" />
+                |              
+                <input type="submit" name="ctl00$btnFontNormal" value="A-" id="ctl00_btnFontNormal" class="fontSize" formnovalidate="" />
+                &nbsp;||&nbsp;Select Theme
+            <input type="submit" name="ctl00$btnDark" value="A" id="ctl00_btnDark" class="fontColorDark" formnovalidate="" />
+                <input type="submit" name="ctl00$btnNormal" value="A" id="ctl00_btnNormal" class="fontColorNormal" formnovalidate="" />
+            </div>
+            <div class="header align-right">
+                <img id="ctl00_Image5" src='/Images/IndianFlag.gif' alt="Flag" class="mt-10px mr-10px" />
+            </div>
+            <div class="fixedmenu">
+                <table width="100%" cellspacing="0">
+                    <tr>
+                        <td align="right" class="clear topscroll1">
+                            <table cellspacing="0" class="TopMenuSP1">
+                                <tr>
+                                    <td>
+                                        <div id="Div12" class="mattblackmenu1">
+                                            <ul>
+                                                <li>
+                                                    <a id="ctl00_HyperLink1" rel="ddsubmenutop1" href="./">Home</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div id="ddtopmenubar4" class="mattblackmenu">
+                                            <ul>
+                                                <li><a href="#" rel="ddsubmenutop4">About Us</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div id="MenuCalendar" class="mattblackmenu">
+                                            <ul>
+                                                <li>
+                                                    <a id="ctl00_HyperLink5" href="calendar">Calendar</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div id="ddtopmenubar1" class="mattblackmenu">
+                                            <ul>
+
+                                                <li>
+                                                    <a id="ctl00_HyperLink34" href="causelist/home">Cause List</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div id="ddtopmenubar2" class="mattblackmenu">
+                                            <ul>
+                                                <li>
+                                                    <a id="ctl00_HyperLink16" rel="ddsubmenutop1" href="it_activities">I.T. Activities</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div id="ddtopmenubar3" class="mattblackmenu">
+                                            <ul>
+                                                <li>
+                                                    <a id="ctl00_HyperLinkVirtualCourt" href="efiling">
+                                                        E-Filing Guide
+                                                   
+                                                    </a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div id="Div9" class="mattblackmenusearch">
+                                            <ul>
+                                                <li class="valign-middle">
+                                                 
+                                                    <input name="ctl00$txtSearch" type="text" id="ctl00_txtSearch" class="form-control" placeholder="Search" AutoComplete="Off" aria-label="Search Text" />
+                                                    <button id="ctl00_btnSearch" type="button" id="ctl00_btnSearch" data-event="ctl00$btnSearch" data-cmd="Search" class="csp-btn img-btn valign-middle"><img src='Images/search.png' class='w-20px' alt='' /></button>
+                                                      
+                                                  
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="pageBody">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td valign="top" class="leftPart">
+                            <div>
+
+                                <div id="ctl00_Menu1" class="markermenu">
+                                    <ul>
+
+                                        <li><a href='judge/NDA4-XCWIsv9KXq4='
+                                            rel="ddsubmenuside5">Hon'ble The Chief Justice</a> </li>
+
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Menu2" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink3" rel="ddsubmenuside5" href="judges/">Hon'ble Judges</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Menu3" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink6" rel="ddsubmenuside5" href="Judges_esc">Hon'ble Judges Elevated to Supreme Court</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Menu4" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink7" rel="ddsubmenuside5" href="retired_cj">Former Chief Justices</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_MenuT" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink231" rel="ddsubmenuside5" href="judges_t">Hon'ble Judges Elevated/ Transferred to Other High Courts</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_MenuFT" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink23" rel="ddsubmenuside5" href="judges_ft">Former Judges Transferred/ Elevated as Chief Justice</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_MenuRet" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink8" rel="ddsubmenuside5" href="judges_ret">Retired Judges</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_MenuConst" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink17" rel="ddsubmenuside5" href="Constitutions_of_benches">Constitutions of Benches/ Roster</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Div4" class="markermenu">
+                                    <ul>
+                                        <li>
+
+
+
+                                            <a href='getpdffile/TElTVF9DT01NSVRURUUucGRm-uhT7RJQTAVs='>List of Hon'ble Committees</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Div13" class="markermenu">
+                                    <ul>
+                                        <li>
+
+
+
+                                            <a href='getpdffile/TElTVF9FTVBBTkVMTEVEX0hPU1BJVEFMUy5wZGY=-li3PGVdq7mI=?-8584259825216965516'>Empanelled Hospitals</a>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Div11" class="markermenu">
+                                    <ul>
+                                        <li>
+
+
+
+                                            <a href='Annual_Report'>Annual Report
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Div17" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink41" class="new-item" href="republicday">Republic Day 2026
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Div3" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink19" href="judicialorders/hindi">हिंदी में अनुवादित निर्णय/आदेश</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div id="ctl00_Menu7" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink9" rel="ddsubmenuside5" href="officers_of_registry">Officers of Registry</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ddsidemenubarSJO" class="markermenu">
+                                    <ul>
+                                        <li><a href="#" rel="ddsubmenusideSJO">State Judicial Officers</a></li>
+                                    </ul>
+                                </div>
+                                <div id="ddsidemenubarsleave" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink21" href="leave/login">Leave Management System for Judicial Officers</a>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Menu8" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink12" rel="ddsubmenuside5" href="online_display_board" target="_blank">Online Display Board</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Div6" class="markermenu">
+                                    <ul>
+                                        <li>
+
+                                            <a id="ctl00_HyperLink22" rel="ddsubmenuside5" href="hybrid/list" target="_blank">Virtual Hybrid Hearing</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ddsidemenubarejustice" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink10" rel="ddsubmenuside5" href="jc/ejusticeclock" target="_blank">e-Justice Clock</a>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ddsidemenubaresewa" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink1220" rel="ddsubmenuside5" href="esewa" target="_blank">e-Sewa Kendra</a>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Menu9" class="markermenu">
+                                    <ul>
+                                        <li>
+
+                                            <a id="ctl00_HyperLink4" rel="ddsubmenuside5" href="EPASS">
+                                                e-Pass For Advocates
+                                           
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div id="ddsidemenubar3" class="markermenu">
+                                    <ul>
+                                        <li><a href="#" rel="ddsubmenuside3">Right to Information Act</a></li>
+                                    </ul>
+                                </div>
+                                <div id="ddsidemenubarerti" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink20" rel="ddsubmenuside5" href="erti" target="_blank">RTI Online Portal </a>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ddsidemenubarecc" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink42" class="new-item" rel="ddsubmenuside5" href="eccopy" target="_blank">ई-सत्यापित प्रतिलिपि</a>
+
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div id="ddsidemenubar2" class="markermenu">
+                                    <ul>
+                                        <li><a href="#" rel="ddsubmenuside2">Downloads</a></li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Div2" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_lnkOdb" href="javascript:__doPostBack(&#39;ctl00$lnkOdb&#39;,&#39;&#39;)">
+                                                Download Latest Mobile APP (Android)
+                                           
+                                            </a></li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Divsuvas15" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink38" class="new-item" href="suvas/" target="_blank">
+                                                Suvas Cell Portal
+                                            </a></li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Div7" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink26" href="ILR/search/">
+                                                e-ILR (Patna Series)
+                                            </a></li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Div8" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink28" href="ehcr/">
+                                                e-PHCR
+                                            </a></li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_MenuECourt" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink25" href="ecourts_ph3">
+                                                E Courts Project
+                                            </a></li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Menu12" class="markermenu">
+                                    <ul>
+                                        <li>
+
+                                            <a id="ctl00_HyperLink54" href="hclsc" target="_blank">Patna High Court Legal Services Committee, Patna</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Menu13" class="markermenu">
+                                    <ul>
+                                        <li>
+
+                                            <a id="ctl00_HyperLink55" rel="ddsubmenuside5" href="bslsa">Bihar State Legal Services Authority</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Div14" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink30" rel="ddsubmenuside5" href="bja">Bihar Judicial Academy</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Div16" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink35" rel="ddsubmenuside5" href="jjs">Juvenile Justice Monitoring Committee</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div id="ctl00_Div1" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink18" rel="ddsubmenuside5" href="POSH">
+                                                Prevention of Sexual Harassment Committee
+                                         
+                                            </a>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_MenuRules" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink11" href="notices/rules">High Court Rules</a></li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_MenuRecruitment" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink14" href="notices/recruitments">
+                                                Recruitments                                
+                                            </a></li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_MenuTenders" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink13" href="notices/tenders">
+                                                Tenders
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Div5" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink29" href="ediary_login">
+                                            E-Diary</a></li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_MenuLibrary" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink377" href="library">
+                                           Library Catalogue
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_MenuLeave" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink51" href="leave_details">
+                                                Leave Details
+                                         
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Div15" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink39" class="new-item" href="compensation" target="_blank">
+                                                Compensation Cases Dashboard 
+                                               
+
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_MenuComCourt" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink32" href="com_court_statistics">
+                                            Statistics Related to Commercial Court, Commercial Division and Commercial Appellate
+                                            Division of the High Courts(Amendment) Ordinance 2018
+                                            </a></li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_MenuCCR" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink53" href="case_clearance_rate">
+                                           Case Clearance Rate (C.C.R.)
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_MenuSearch" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink31" href="notices/search">Search in Notices and Notifications</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_Div10" class="markermenu">
+                                    <ul>
+                                        <li>
+
+
+
+                                            <a href='getpdffile/U0NIRU1FX0xBV19BU1NJU1RBTlQucGRm-wCBUcgcp5rw='>Scheme for Law Assistants</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_MenuVC" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink33" href="courts_through_vc">Courts through VC </a></li>
+                                    </ul>
+                                </div>
+                                <div class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink24" href="http://joams.patnahighcourt.gov.in/MPsMLAsReports">M.P./M.L.A. Cases</a></li>
+                                    </ul>
+                                </div>
+                                <div class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink27" href="login">Login</a></li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_MenuContactUs" class="markermenu">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink122" href="contactus">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                                <div id="ctl00_DivMap" class="markermenu-map">
+                                    <ul>
+                                        <li>
+                                            <a id="ctl00_HyperLink50" href="https://ecourts.gov.in/ecourts_home/index.php?p=dist_court/bihar">
+                                                
+                                                  <img id="ctl00_Image2" src='Images/bihar.png' alt="Bihar" />
+                                            </a>
+                                            <br />
+                                            <span id="ctl00_Label1">Link to District Courts through Map</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                        <td valign="top">
+                            <div id="divMainContent">
+                                
+    <div class="HomeScrollHeader">
+        <div id="scroller">
+            <div id="ctl00_MainContent_scrolling" class="scrollingtext">
+               
+                
+            </div>
+        </div>
+
+    </div>
+
+    <div id="accordion">
+        <h3>Notices and Notifications</h3>
+        <div class="MenuItem">
+            <div id="ctl00_MainContent_div1" class="SubHeading">
+                <table>
+                    <tr>
+                        <td>Notices related to causelist
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <ul class="icon  notice">
+                
+                        <li id="ctl00_MainContent_repTop_ctl00_Li2" class="circle">
+                            <a id="ctl00_MainContent_repTop_ctl00_HyperLink1" href="/causelist/home" target="_blank"><span class='new-item'><font  color='Green'><strong>View Causelist (With new facilities and parameters)</strong></font></span></a>
+                        </li>
+                    
+                        <li id="ctl00_MainContent_repTop_ctl01_Li2" class="circle">
+                            <a id="ctl00_MainContent_repTop_ctl01_HyperLink1" href="getfile/MTA0NzQ=-moBFb5tmguk=" target="_blank">Notice regarding the board of Hon'ble Mr. Justice Jitendra Kumar for 08.04.2026.</a>
+                        </li>
+                    
+            </ul>
+
+
+            <div id="ctl00_MainContent_divNotice" class="SubHeading">
+                <table class="w-100">
+                    <tr>
+                        <td>General Notices
+                        </td>
+                        <td class="text-right">
+                            <a id="ctl00_MainContent_HyperLink6" class="text-red" href="notices/search"> more...  </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <ul class="icon notice">
+                
+                        <li class="circle">
+                            <a id="ctl00_MainContent_repNot_ctl00_HyperLink1" href="getfile/MTAzNDg=-FIdd2NDEaPo=" target="_blank">Bihar Judicial Officers Conduct (1st Amendment) Rules, 2026.</a>
+                        </li>
+                    
+                        <li class="circle">
+                            <a id="ctl00_MainContent_repNot_ctl01_HyperLink1" href="getfile/OTUyMg==---am1--o9neTGVfEM=" target="_blank">Action Plan for Arrears Reduction in District Judiciary (APAaR-DJ) Phase IV (July - December, 2025) and Phase V (January - June, 2026).</a>
+                        </li>
+                    
+                        <li class="circle">
+                            <a id="ctl00_MainContent_repNot_ctl02_HyperLink1" href="getfile/Nzk0MQ==-guzyYZF006Y=" target="_blank">List of Subject Group</a>
+                        </li>
+                    
+            </ul>
+            <div id="ctl00_MainContent_divTransfer" class="SubHeading">
+                <table class="w-100">
+                    <tr>
+                        <td>Notices & Notifications Related to State Judicial Officers
+                        </td>
+                        <td class="text-right">
+                            <a id="ctl00_MainContent_HyperLink3" class="text-red" href="notices/transfer_and_postings/"> more...  </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <ul class="icon notice">
+                
+                        <li id="ctl00_MainContent_repTransfer_ctl00_Li1" class="circle">
+                            <a id="ctl00_MainContent_repTransfer_ctl00_HyperLink2" href="getfile/MTA0NzE=-B2fMak0L5mc=" target="_blank"><span class='new-item'>Notification regarding officers who are confirmed in the cadre of Bihar Superior Judicial Service.</span></a>
+                        </li>
+                    
+                        <li id="ctl00_MainContent_repTransfer_ctl01_Li1" class="circle">
+                            <a id="ctl00_MainContent_repTransfer_ctl01_HyperLink2" href="getfile/MTA0NzA=-0--ak1--VneqeidsE=" target="_blank"><span class='new-item'>Notification regarding officers who are confirmed in the cadre of Bihar Superior Judicial Service.</span></a>
+                        </li>
+                    
+                        <li id="ctl00_MainContent_repTransfer_ctl02_Li1" class="circle">
+                            <a id="ctl00_MainContent_repTransfer_ctl02_HyperLink2" href="getfile/MTA0NDA=-fR6esET3mmQ=" target="_blank">Notification regarding transfer and posting of Civil Judge (Senior Division).</a>
+                        </li>
+                    
+                        <li id="ctl00_MainContent_repTransfer_ctl03_Li1" class="circle">
+                            <a id="ctl00_MainContent_repTransfer_ctl03_HyperLink2" href="getfile/MTA0Mzk=-M63Gh35gY--ak1--c=" target="_blank">Notification regarding transfer and posting of District and Additional Sessions Judges</a>
+                        </li>
+                    
+                        <li id="ctl00_MainContent_repTransfer_ctl04_Li1" class="circle">
+                            <a id="ctl00_MainContent_repTransfer_ctl04_HyperLink2" href="getfile/MTA0Mzg=-ypdQsryePiY=" target="_blank">Notification regarding transfer and posting of Civil Judge (Junior Division).</a>
+                        </li>
+                    
+                        <li id="ctl00_MainContent_repTransfer_ctl05_Li1" class="circle">
+                            <a id="ctl00_MainContent_repTransfer_ctl05_HyperLink2" href="getfile/MTA0Mzc=-ZxVhaI8m5QQ=" target="_blank">Notification regarding transfer and posting of Principal District and Sessions Judges.</a>
+                        </li>
+                    
+                        <li id="ctl00_MainContent_repTransfer_ctl06_Li1" class="circle">
+                            <a id="ctl00_MainContent_repTransfer_ctl06_HyperLink2" href="getfile/MTA0MzY=-Ekk1mwTBdAI=" target="_blank">Notification regarding Sri Shiv Gopal Mishra, Principal District and Sessions Judge, Darbhanga.</a>
+                        </li>
+                    
+                        <li id="ctl00_MainContent_repTransfer_ctl07_Li1" class="circle">
+                            <a id="ctl00_MainContent_repTransfer_ctl07_HyperLink2" href="getfile/MTA0Mjc=-Q4J8Yw2h--am1--ww=" target="_blank">Notification regarding Ms. Pallavi Anand, Secretary, D.L.S.A., Patna</a>
+                        </li>
+                    
+                        <li id="ctl00_MainContent_repTransfer_ctl08_Li1" class="circle">
+                            <a id="ctl00_MainContent_repTransfer_ctl08_HyperLink2" href="getfile/MTA0MjY=-rZqN2lxmtwo=" target="_blank">Notification regarding Sri Mukesh Kumar-1, District & Additional Sessions Judge, Katihar</a>
+                        </li>
+                    
+                        <li id="ctl00_MainContent_repTransfer_ctl09_Li1" class="circle">
+                            <a id="ctl00_MainContent_repTransfer_ctl09_HyperLink2" href="getfile/MTA0MjU=-iA--ak1--RPaFYICM=" target="_blank">Notification regarding Sri Suvash Chandra Sharma, District & Additional Sessions Judge, Nawada</a>
+                        </li>
+                    
+                        <li id="ctl00_MainContent_repTransfer_ctl10_Li1" class="circle">
+                            <a id="ctl00_MainContent_repTransfer_ctl10_HyperLink2" href="getfile/OTk2Mw==-roMGHsGg6r0=" target="_blank">Handbook on the Annual Confidential Report (A.C.R.) alongwith the New Format of Model ACR.</a>
+                        </li>
+                    
+            </ul>
+            <div id="ctl00_MainContent_divTenders" class="SubHeading">
+                <table class="w-100">
+                    <tr>
+                        <td>Notices Regarding Tenders
+                        </td>
+                        <td class="text-right">
+                            <a id="ctl00_MainContent_HyperLink4" class="text-red" href="notices/tenders"> more...  </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <ul class="icon notice">
+                
+                        <li id="ctl00_MainContent_repTenders_ctl00_Li1" class="circle">
+                            <a id="ctl00_MainContent_repTenders_ctl00_HyperLink2" href="getfile/MTA0NzI=-Tc--ak1----ak1--Sr--ak1--Cu5s=" target="_blank"><span class='new-item'>Sealed Quotations are invited from Original Equipment Manufacturer(OEM)/ Reputed Authorized Dealers/Suppliers/Service Provider/Vendor of OEM for supply of 12V 42Ah batteries for use in 2 units of 20 KVA online UPS along with buyback of old/existing 12V 42Ah batteries.</span></a>
+                        </li>
+                    
+                        <li id="ctl00_MainContent_repTenders_ctl01_Li1" class="circle">
+                            <a id="ctl00_MainContent_repTenders_ctl01_HyperLink2" href="getfile/MTA0NTk=-z4FpRWKOdfY=" target="_blank"><span class='new-item'>Notice regarding extension of Quotation submission period in Tender Notice No. 02/2026 dated- 23.03.2026 A.D. (Establishment).</span></a>
+                        </li>
+                    
+                        <li id="ctl00_MainContent_repTenders_ctl02_Li1" class="circle">
+                            <a id="ctl00_MainContent_repTenders_ctl02_HyperLink2" href="getfile/MTA0NTY=-WIQVpYE6pkI=" target="_blank"><span class='new-item'>Sealed quotations are invited from the bona-fide and reputed registered firms/OEM authorized dealers for supply of mobile phones for this Hon'ble Court.</span></a>
+                        </li>
+                    
+                        <li id="ctl00_MainContent_repTenders_ctl03_Li1" class="circle">
+                            <a id="ctl00_MainContent_repTenders_ctl03_HyperLink2" href="getfile/MTA0Mjk=-NuganNNFJR8=" target="_blank"><span class='new-item'>Sealed quotations are invited from the bona-fide and reputed registered firms/OEM authorized dealers (having office located at Patna) for installation of intercom facility.</span></a>
+                        </li>
+                    
+            </ul>
+            <div id="ctl00_MainContent_divRecruit" class="SubHeading">
+                <table class="w-100">
+                    <tr>
+                        <td>Notices Regarding Recruitment
+                        </td>
+                        <td class="text-right">
+                            <a id="ctl00_MainContent_HyperLink5" class="text-red" href="notices/recruitments"> more...  </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <ul class="icon notice">
+                
+                        <li id="ctl00_MainContent_repRecruit_ctl00_Li1" class="circle">
+                            <a id="ctl00_MainContent_repRecruit_ctl00_HyperLink2" href="https://phc-recruitment.com/" target="_blank"><span class='new-item'><font  color='Green'><strong>Link to apply for Technical Assistant Recruitment Examination, 2026</strong></font></span></a>
+                        </li>
+                    
+                        <li id="ctl00_MainContent_repRecruit_ctl01_Li1" class="circle">
+                            <a id="ctl00_MainContent_repRecruit_ctl01_HyperLink2" href="/Exam/RM.aspx" target="_blank"><span class='new-item'><font  color='Green'><strong>Notice regarding scorecard of Regular Mazdoor Recruitment Examination, 2025</strong></font></span></a>
+                        </li>
+                    
+                        <li id="ctl00_MainContent_repRecruit_ctl02_Li1" class="circle">
+                            <a id="ctl00_MainContent_repRecruit_ctl02_HyperLink2" href="getfile/MTA0NTA=-HhVvcKWA0ms=" target="_blank"><span class='new-item'><font  color='Green'><strong>Notice regarding vacancy position (existing / anticipated) (cadre / quota wise) for the year 2024-25</strong></font></span></a>
+                        </li>
+                    
+                        <li id="ctl00_MainContent_repRecruit_ctl03_Li1" class="circle">
+                            <a id="ctl00_MainContent_repRecruit_ctl03_HyperLink2" href="getfile/MTA0NTE=-OWWksZGt--am1--Bo=" target="_blank"><span class='new-item'><font  color='Green'><strong>Notice Regarding District Judge (Entry Level), Direct From Bar Exam-2026</strong></font></span></a>
+                        </li>
+                    
+                        <li id="ctl00_MainContent_repRecruit_ctl04_Li1" class="circle">
+                            <a id="ctl00_MainContent_repRecruit_ctl04_HyperLink2" href="getfile/MTA0NTQ=-q0vlRLd1RTE=" target="_blank"><span class='new-item'><font  color='Green'><strong>Detailed Advertisement regarding Technical Assistant Recruitment Examination, 2026.</strong></font></span></a>
+                        </li>
+                    
+                        <li id="ctl00_MainContent_repRecruit_ctl05_Li1" class="circle">
+                            <a id="ctl00_MainContent_repRecruit_ctl05_HyperLink2" href="/exam/ADJQP/ADJDefaultQP.aspx" target="_blank">Previous Years Question Papers of District Judge(Entry Level), Direct From Bar Exam and Limited Competitive Examination</a>
+                        </li>
+                    
+            </ul>
+        </div>
+        <h3>State Judicial Officers</h3>
+        <div class="MenuItem">
+            <table class="accordItem">
+                <tr>
+                    <td valign="top" class="halfPart">
+                        <ul>
+                            <li><a href='officers/district_and_sessions_judges'>Principal District and Sessions Judges</a></li>
+                            <li><a href='officers/addtional_district_and_sessions_judges'>District and Additional Sessions Judges</a></li>
+                            <li><a href='officers/ad_hoc_adj'>Ad-hoc ADJ (FTC)</a></li>
+                            <li><a href='officers/sub_judge_cum_cjm_cum_asj'>Civil Judge (Sr. Div.)-Cum-Chief Judicial Magistrate</a></li>
+                            <li><a href='officers/civil_judge_sr_division'>Civil Judge Sr. Division</a></li>
+                            <li><a href='officers/civil_judge_jr_division'>Civil Judge Jr. Division</a></li>
+                            <li><a href='officers/sdjm'>Sub Divisional Judicial Magistrate</a></li>
+                            <li><a href='officers/all'>All Officers</a>
+                            </li>
+                            <li>
+                                <a id="ctl00_MainContent_HyperLink49" href="officers_search">Search</a>
+                            </li>
+                            <li>
+                                <a href='getpdffile/QUNSIEhBTkRCT09LLnBkZg==-IIPkskEQ550=' class="new-item">Handbook on the Annual Confidential Report(A.C.R.) alongwith the New Format of Model ACR </a>
+
+                            </li>
+                        </ul>
+                    </td>
+                    <td valign="top">
+                        <ul>
+                            <li><a href='officers/judicial_officer_deputation'>Judicial Officers on Deputation</a></li>
+                            <li><a href='officers_judgeship_wise'>Judicial Officers - Judgeship wise</a></li>
+                            <li><a href='officers/railway_magistrate'>Railway Magistrate</a></li>
+                            <li>
+                                <a id="ctl00_MainContent_HyperLink1" href="notices/transfer_and_postings/">Court Notifications</a></li>
+                            <li><a href="http://joams.patnahighcourt.gov.in" target="_blank">Judicial Officers Activities
+                                Monitoring System </a></li>
+                            <li><a href='officers/principal_magistrate_JJB'>Principal Magistrate, Juvenile Justice Board</a> </li>
+                            <li>
+                                <a id="ctl00_MainContent_HyperLink26" href="login">District Court Infrastructure</a></li>
+
+                            <li>
+                                <a id="ctl00_MainContent_HyperLink7" href="leave/login">Leave Management System for Judicial Officers</a>
+                            </li>
+                            <li>
+                                <a id="ctl00_MainContent_HyperLink8" class="new-item" href="notices/general_letters/">General Letters</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <h3>Learned Advocates</h3>
+        <div class="MenuItem">
+            <ul>
+
+                <li><a href='getpdffile/U2VuaW9yX0Fkdl9BY3RpdmVfTGlzdC5wZGY=-QwD6tmaL--am1--i0='>List of Active Senior Advocates</a></li>
+                <li><a href="auin/search">Advocate Unique Identification Number Search</a></li>
+                <li><a href="government_counsels">Government Counsels</a></li>
+
+                <li><a href="retainer_advocate">Advocate AppeAring on Behalf of Department</a></li>
+                <li><a href="case_filing_at_glance">Civil and Criminal Case Filing at a Glance</a></li>
+                <li><a href="daily_filing">Daily Filing Report</a> </li>
+                <li><a href="ia_filing_at_glance">IA Filing at a Glance</a></li>
+                <li><a href="ao_filing_at_glance">AO Filing at a Glance</a></li>
+                <li><a href="TrainingVideo_VitualHybridHearing.mp4">Training video regarding Virtual Hybrid Hearing</a></li>
+            </ul>
+        </div>
+        <h3>Case Status</h3>
+        <div class="MenuItem">
+            <table class="accordItem">
+                <tr>
+                    <td>
+                        <div id="ctl00_MainContent_Panel2" class="halfPart">
+	
+                            <table class="CSSTableGeneratorNotice">
+                                <tr>
+                                    <th colspan="2">CIVIL CASES
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="ctl00_MainContent_ddlCTypeCivil" id="ctl00_MainContent_lblTypeCv" class="form-label">Type:</label>
+                                    </td>
+                                    <td>
+                                        <select name="ctl00$MainContent$ddlCTypeCivil" id="ctl00_MainContent_ddlCTypeCivil" class="grp1 req form-select">
+		<option value="42">ADMIRALITY SUIT[ADM. SUIT]</option>
+		<option value="39">CERTIFICATE APPEAL[CRT. APPEAL]</option>
+		<option value="44">CIVIL MISCELLANEOUS JURISDICTION[C.Misc.]</option>
+		<option value="12">CIVIL REFERENCE[C.REF.]</option>
+		<option value="11">CIVIL REVIEW[C. REV.]</option>
+		<option value="8">CIVIL REVISION[C.R.]</option>
+		<option value="15">Civil Writ Jurisdiction Case[CWJC]</option>
+		<option value="50">COMMERCIAL APPEAL[COMMERCIAL APP]</option>
+		<option value="13">COMPANY APPEAL[COMP. APP]</option>
+		<option value="37">COMPANY APPEAL (SJ)[COMP. APP. (SJ)]</option>
+		<option value="38">COMPANY APPEAL(DB)[COMP. APP.(DB)]</option>
+		<option value="20">COMPANY APPLICATION[COMP. APPLIC]</option>
+		<option value="21">COMPANY PETITION[COMP PET]</option>
+		<option value="34">Compensation Appeal[COMPAN. APP]</option>
+		<option value="14">ELECTION PETITION[E.P.]</option>
+		<option value="1">FIRST APPEAL[FA]</option>
+		<option value="3">Letters Patent Appeal[L.P.A]</option>
+		<option value="19">MATRIMONIAL REF.[MAT. REF.]</option>
+		<option value="33">MATRIMONIAL SUIT[MAT. SUIT]</option>
+		<option value="2">Miscellaneous Appeal[MA]</option>
+		<option value="10">Miscellaneous Jurisdiction Case[MJC]</option>
+		<option value="41">MONEY SUIT[MONEY SUIT]</option>
+		<option value="30">PATENT CASE[PATENT CASE]</option>
+		<option value="36">REQUEST CASE[REQ. CASE]</option>
+		<option value="9">SECOND APPEAL[SA]</option>
+		<option value="51">SPECIAL LEAVE PETITION[SLP]</option>
+		<option value="40">SUPREME COURT APPEAL[SCA]</option>
+		<option value="4">TAX CASES[TAX]</option>
+		<option value="17">TEST CASE[TEST CASE]</option>
+		<option value="18">TEST SUIT[TEST SUIT]</option>
+		<option value="22">TITLE SUIT[T.S.]</option>
+
+	</select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="ctl00_MainContent_txtCaseNoCivil" id="ctl00_MainContent_lvlCaseNoCv" class="form-label">Case No.:</label>
+                                    </td>
+                                    <td>
+                                        <input name="ctl00$MainContent$txtCaseNoCivil" type="text" maxlength="7" id="ctl00_MainContent_txtCaseNoCivil" class="grp1 req form-control" />
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="ctl00_MainContent_txtCaseYear" id="ctl00_MainContent_lblCaseNoYearCv" class="form-label">Year:</label>
+                                    </td>
+                                    <td>
+                                        <input name="ctl00$MainContent$txtCaseYear" type="text" maxlength="4" id="ctl00_MainContent_txtCaseYear" class="grp1 req form-control" />
+
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="ctl00_MainContent_txtCaptchaCv" id="ctl00_MainContent_lblCaptchaCv" class="form-label">Captcha:</label>
+                                    </td>
+                                    <td>
+                                        <table class="captcha">
+                                            <tr>
+                                                <td>
+                                                    <img class="HeaderCurv" src='captcha' alt="Captcha" />
+                                                </td>
+                                                <td>
+                                                    <img class="audio" src='images/audio.png' alt="Play CAPTCHA Audio" />
+
+                                                </td>
+                                                <td>
+                                                    <input name="ctl00$MainContent$txtCaptchaCv" type="text" maxlength="3" id="ctl00_MainContent_txtCaptchaCv" class="grp1 req form-control" />
+                                                </td>
+                                                <td>
+
+                                                    <audio id="ctl00_MainContent_captchaaudiocv" type="audio/wav" preload="none">
+                                                        Audio not supported.</audio>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <input type="submit" name="ctl00$MainContent$btnSearchCivil" value="Search" id="ctl00_MainContent_btnSearchCivil" class="validateBtn ui-button ui-widget ui-corner-all" data-group="grp1" />
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <span id="ctl00_MainContent_lblMsgCv"></span></td>
+
+                                </tr>
+                            </table>
+
+                        
+</div>
+                    </td>
+                    <td valign="top">
+                        <div id="ctl00_MainContent_Panel1" class="halfPart">
+	
+                            <table class="CSSTableGeneratorNotice" width="100%">
+                                <tr>
+                                    <th colspan="2">CRIMINAL CASES
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="ctl00_MainContent_ddlCTypeCri" id="ctl00_MainContent_lblTypeCr" class="form-label">Type:</label>
+                                    </td>
+                                    <td>
+                                        <select name="ctl00$MainContent$ddlCTypeCri" id="ctl00_MainContent_ddlCTypeCri" class="grp2 req form-control">
+		<option value="35">CR. APP. 341 CR. P.C.[CR. APP(341]</option>
+		<option value="5">CRIMINAL APPEAL (DB)[CR. APP (DB)]</option>
+		<option value="24">CRIMINAL APPEAL (SJ)[CR. APP (SJ)]</option>
+		<option value="27">CRIMINAL APPEAL (U/S)[CR.APP(U/S)]</option>
+		<option value="6">CRIMINAL MISCELLANEOUS[CR. MISC.]</option>
+		<option value="29">CRIMINAL REFERENCE[CR. REF.]</option>
+		<option value="7">CRIMINAL REVISION[CR. REV.]</option>
+		<option value="16">Criminal Writ Jurisdiction Case[CR. WJC]</option>
+		<option value="28">DEATH REFERENCE[D. REF.]</option>
+		<option value="25">GOVT. APPEAL (DB)[G. APP. (DB)]</option>
+		<option value="31">GOVT. APPEAL (SJ)[G.APP.(SJ)]</option>
+		<option value="23">Or. Criminal Miscellaneous[OR. CR. MISC]</option>
+		<option value="32">Or. Criminal Miscellaneous (DB)[OCR.MISC(DB)]</option>
+		<option value="26">SPECIAL LEAVE APPLICATION[SLA]</option>
+
+	</select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="ctl00_MainContent_txtCaseNoCri" id="ctl00_MainContent_lblCaseNoCr" class="form-label">Case No:</label>
+                                    </td>
+                                    <td>
+                                        <input name="ctl00$MainContent$txtCaseNoCri" type="text" maxlength="7" id="ctl00_MainContent_txtCaseNoCri" class="grp2 req form-control" />
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="ctl00_MainContent_txtCaseYearCri" id="ctl00_MainContent_lblYearCr" class="form-label">Year:</label>
+                                    </td>
+                                    <td>
+                                        <input name="ctl00$MainContent$txtCaseYearCri" type="text" maxlength="4" id="ctl00_MainContent_txtCaseYearCri" class="grp2 req form-control" />
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="ctl00_MainContent_txtCaptcha" id="ctl00_MainContent_lblCaptchaCr" class="form-label">Captcha:</label>
+                                    </td>
+                                    <td>
+                                        <table class="captcha">
+                                            <tr>
+                                                <td>
+                                                    <img class="HeaderCurv" src='captcha'
+                                                        alt="Captcha" />
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <img class="audio" src="images/audio.png" alt="Play CAPTCHA Audio">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <input name="ctl00$MainContent$txtCaptcha" type="text" maxlength="3" id="ctl00_MainContent_txtCaptcha" class="grp2 req form-control" />
+                                                </td>
+                                                <td>
+
+                                                    <audio src="captcha/audio/MjMx-ft5eg0w5yDs=" id="ctl00_MainContent_captchaaudio" type="audio/wav" preload="none">
+                                                        Audio not supported.</audio>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <input type="submit" name="ctl00$MainContent$btnSearchCri" value="Search" id="ctl00_MainContent_btnSearchCri" class="validateBtn ui-button ui-widget ui-corner-all" data-group="grp2" />
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <span id="ctl00_MainContent_lblMsgCr"></span></td>
+
+                                </tr>
+                            </table>
+
+                        
+</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" colspan="2">
+                        <table width="100%" class="CSSTableGeneratorNotice">
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li><a href="casesearch/cnr_no">By CNR Number</a></li>
+                                        <li><a href="casesearch/token_no">By Token No.</a></li>
+                                        <li><a href="casesearch/name">By Petitioner / Respondent Name</a></li>
+                                        <li><a href="casesearch/main_case_no">By Main Case Number</a>
+                                        </li>
+                                        <li><a href="casesearch/auin">By AUIN</a></li>
+                                    </ul>
+                                </td>
+                                <td valign="top">
+                                    <ul>
+                                        <li><a href="certified_copy">Certified Copy Status</a></li>
+                                        <li><a href="fax_status">Fax Status</a></li>
+                                        <li><a href="casesearch/ps">By Police Station</a></li>
+                                        <li><a href="casesearch/advance">Advance Case Search</a></li>
+                                        <li><a href="defective_tokens">List of Defective Tokens</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <h3>Judgments & Orders
+        </h3>
+        <div class="MenuItem">
+            <table width="80%" cellpadding="0" cellspacing="0">
+                <tr>
+                    <th class="HeaderCurv">Judgment
+                    </th>
+                    <th class="HeaderCurv">Orders
+                    </th>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <ul>
+                            <li><a href="judgmentslist/ALL">Judge Name Wise</a></li>
+                            <li><a href="judgments/caseno">Case Number</a></li>
+                            <li><a href="judgments/partyname">Petitioner / Respondent Name</a></li>
+                            <li><a href="judgments/advname">Advocate Name</a></li>
+                            <li><a href="judgments/date">Judgement Date</a></li>
+                            <li><a href="judgmentslist/AFR">AFR Judgement</a></li>
+                            <li><a href="judgmentslist/NAFR">Non-AFR Judgement</a></li>
+                            <li><a href="judgments/dist">District Wise Judgment</a></li>
+                            <li><a href="free_text_search">Free Text Search</a></li>
+                            <li><a href="lokadalatorders">Lok Adalat Orders/Awards</a></li>
+                        </ul>
+                    </td>
+                    <td valign="top">
+                        <ul>
+                            <li><a href="orderslist/ALL">Judge Name Wise</a></li>
+                            <li><a href="orders/caseno">Case Number</a></li>
+                            <li><a href="orders/partyname">Petitioner's Name</a></li>
+                            <li><a href="orders/advname">Petitioner's Advocate Name</a></li>
+                            <li><a href="orders/date">Order Date</a></li>
+                            <li><a href="orderslist/AFR">AFR Orders</a></li>
+                            <li><a href="orderslist/NAFR">Non-AFR Orders</a></li>
+                            <li><a href="orders/dist">District Wise Orders</a></li>
+
+                            <li><a href="orderslist/F">Final Orders</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <h3>Links
+        </h3>
+
+        <div class="MenuItem">
+            <ul>
+                <li><a href="http://supremecourtofindia.nic.in/" target="_blank">Supreme Court of India</a></li>
+                <li><a href="/supreme_court_chronicles/" target="_blank">Supreme Court Chronicles</a></li>
+
+                <li><a href="http://ecourts.gov.in/" target="_blank">National Judicial Datagrid</a></li>
+                <li><a href="https://districts.ecourts.gov.in/bihar" target="_blank">Websites of District
+                    Courts</a></li>
+
+                <li><a href="hclsc/default.aspx" target="_blank">Patna High Court Legal Services Committee,
+                    Patna </a></li>
+
+                <li><a href="http://patnahighcourt.gov.in/bslsa/" target="_blank">Bihar State Legal
+                    Services Authority </a></li>
+
+                <li><a href="http://patnahighcourt.gov.in/bja/" target="_blank">Bihar Judicial Academy</a></li>
+
+                <li><a href="http://patnahighcourt.gov.in/jjs/" target="_blank">Patna High Court Juvenile 
+                    Justice Monitoring Committee</a></li>
+                <li><a href="http://scrb.bihar.gov.in/View_FIR.aspx" target="_blank">FIR Tracking System:
+                    State Crime Records Bureau, Bihar</a></li>
+                <li><a href="http://patnahighcourt.gov.in/POSH/" target="_blank">Prevention of Sexual Harassment Committee</a></li>
+                <li><a href="https://judgments.ecourts.gov.in" target="_blank">e-SCR, Judgments Search 
+                    
+
+                </a></li>
+                <li><a href="https://www.youtube.com/watch?v=zWfvIxkwxRI" target="_blank">Online Demo Link of e-SCR</a></li>
+                <li><a href="http://patnahighcourt.gov.in/flagcode/" target="_blank">Flag Code of India, 2002</a></li>
+                <li><a href="https://advocategeneral.bihar.gov.in/" target="_blank" class="new-item">Official Website of the Office of the Advocate General, Bihar</a></li>
+                <li><a href='getpdffile/Tm90aWNlX05hdGlvbmFsX3NvbmcucGRm-VUB33dNh1b0=?-8584259825216965516' target="_blank"  class="new-item">Orders relating to the National Song of India
+                   
+                </a></li>
+            </ul>
+        </div>
+    </div>
+    <script nonce="5Yxf7UKR50OAqukXnDcFdQ==" type="text/javascript">
+        $(document).ready(function () {
+
+            //this is the useful function to scroll a text inside an element...
+            function startScrolling(scroller_obj, velocity, start_from) {
+                //bind animation  inside the scroller element
+                scroller_obj.bind('marquee', function (event, c) {
+                    //text to scroll
+                    var ob = $(this);
+                    //scroller width
+                    var sw = parseInt(ob.parent().width());
+
+                    //text width
+                    var tw = parseInt(ob.width());
+
+                    tw = tw - 10;
+                    //text left position relative to the offset parent
+                    var tl = parseInt(ob.position().left);
+                    //velocity converted to calculate duration
+                    var v = velocity > 0 && velocity < 100 ? (100 - velocity) * 1000 : 5000;
+                    //same velocity for different text's length in relation with duration
+                    var dr = (v * tw / sw) + v;
+
+                    //is it scrolling from right or left?
+                    switch (start_from) {
+                        case 'right':
+                            //is it the first time?
+                            if (typeof c == 'undefined') {
+                                //if yes, start from the absolute right
+                                ob.css({
+                                    left: (sw - 10)
+                                });
+                                sw = -tw;
+                            } else {
+                                //else calculate destination position
+                                sw = tl - (tw + sw);
+                            };
+                            break;
+                        default:
+                            if (typeof c == 'undefined') {
+                                //start from the absolute left
+                                ob.css({
+                                    left: -tw
+                                });
+                            } else {
+                                //else calculate destination position
+                                sw += tl + tw;
+                            };
+                    }
+                    //attach animation to scroller element and start it by a trigger
+                    ob.animate({
+                        left: sw
+                    }, {
+                        duration: dr,
+                        easing: 'linear',
+                        complete: function () {
+                            ob.trigger('marquee');
+                        },
+                        step: function () {
+                            // check if scroller limits are reached
+                            if (start_from == 'right') {
+                                if (parseInt(ob.position().left) < -parseInt(ob.width())) {
+                                    //we need to stop and restart animation
+                                    ob.stop();
+                                    ob.trigger('marquee');
+                                };
+                            } else {
+                                if (parseInt(ob.position().left) > parseInt(ob.parent().width())) {
+                                    ob.stop();
+                                    ob.trigger('marquee');
+                                };
+                            };
+                        }
+                    });
+                }).trigger('marquee');
+                //pause scrolling animation on mouse over
+                scroller_obj.mouseover(function () {
+                    $(this).stop();
+                });
+                //resume scrolling animation on mouse out
+                scroller_obj.mouseout(function () {
+                    $(this).trigger('marquee', ['resume']);
+                });
+            };
+
+            //the main app starts here...
+
+            //settings to pass to function
+            var scroller = $('.scrollingtext'); // element(s) to scroll
+            var scrolling_velocity = 85; // 1-99
+            var scrolling_from = 'right'; // 'right' or 'left'
+
+            //call the function and start to scroll..
+            startScrolling(scroller, scrolling_velocity, scrolling_from);
+        });
+    </script>
+
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <center>
+                                <div class="footer">
+                                    This Application is developed and managed by Programmers Team, Hon'ble Patna High
+                                Court. Email : <strong>hcpat-bih[at]nic.in</strong>
+                                    <br />
+                                    <b>Copyright © Patna High Court 2013. All rights reserved. </b>
+                                </div>
+                            </center>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="KtC8DQ9kS3P324BGZBBXNkWyfEkdeCMb4iFFD4scp3CNlBdaL+cxuSSyeGzqrSJTxbgWbSRzL1G7YDd564lI+EYWBBz8bT0GfDVTi2hnOAbdjZFJhju8585t6a3qW3sEU+sGaJpTY7CwbyKTraYRL/d0p58yaZonicxjJASg81mnmx2UwvZYwhqT9F6sdyD2FvQzi1i2lH4aT1Yr1O2AUd0DU6cL/agUSGde1nxdfPnhpHohIN9lM0ZNOIx0aATkeWfAZVFV5RIheGgBLjP/+cdLg/DOBC2LDRhEMquOtE0HjlNSQBlUwjC8UIcWrDyXOCTlMqdeIwi/my0qn0CuMBENa4uiGCWwr+Rc6pGMBKDEzX2W21GkS6cSVqM2dV2hEbJ9hX92hVKMKILjetnDR2b9YSK4p0xWnygv+2U219+DdPr2SpEUbgNFnEMYcueDLj+SOJ/HL3rKnwMxF1r08Goz7rwBhx+zXfPhLXSW5ZstNuuL81PJm1o5wX2fVqIrYy8pSOdW0ZA2hVhg1Zt77xuyF3qI5G729Hlm9Qs5/84dc5B5LdGicYxJtfmlKIJgAyivxD5kusZZWl+Q7Vo/ZgdPSeQoFrPj4RAVLUZWHKMHmLq8hPBBCYe8/nVJGQCjm8O3Qcwclco4cjJhOBDovSmXZrxoMFsdwzfgO9xwzYqORLB9/Bby93/FYeFv9hNtmfiL4WuxTGwXceooUwC/HpX9ohc5AvbrxgMVi/S57u6BLavfNZMoZG3g4Rp7JakmlAYd9xUg3QjHDRzPLfd3WPjxt7rMdSaAEqWingnh8Lup/gvh1eqmTeSGhaUfNApdjporz1FnwE1QZ9lpYKFbPiUaVJTJ56XQ0mylUD85LmK7OqmuJGBtyFtd8HpwlZG8iYiSPkHllrgCe1ELazGsigSKSGOnoI1C60Bs9J4v4Wvg9N5IflEnFXpQbKbbV9m+sq0lIcU9VadOoGmC/UxphsaXzG/mxyaiGLFfrL7R+xHCPMooFL+k1XLp00XDcjOlrHRgQZ/ccf5vd3h+TenBbwO5ozMJZDlTvnupnkjoq0+qMDWrb+OonbofueOCC2g6T54gFSeHa3TMLp7J39zRjHJHIaoPhFG//AfiUt/hhaZkZOkXMMWHv0S4cvW8XK4QwZH+EADeQ1LRZVNWyBIDd+BmqQx5+9qATf/WiaxBKXEFn2jfTeVCv8MARlxGjdE+nQf/0bWLrf96UfSkrjK8k2uWmgT3+h/zo7BJERPkuuhFhuReatT3/chGXuH39cUHCfck/J6OzdL+qvgxffS+O49vylJke9+m715iFU/E3QFo5NlRcFcKDdcQoB0jsm9IkCXQ0yf5Ml/akFhhz9GKNqvgMd9tYcHpc9/pTEsekeqbTvfAhKV7EqDNfwitv2asSxKdsnZOeGLT3Q7ZmU+3K+M+8Ad3SDDzMXPs63reTWg=" />
+</div>
+
+<script nonce="5Yxf7UKR50OAqukXnDcFdQ==" type="text/javascript">
+//<![CDATA[
+document.addEventListener('DOMContentLoaded', function() {   var tb = document.getElementById('ctl00_MainContent_txtCaseNoCivil');   if (!tb) return;   tb.addEventListener('keypress', function(e) {       if (e.key < '0' || e.key > '9') {           e.preventDefault();       }   });   tb.addEventListener('blur', function() {       var v = tb.value.replace(/\D/g, '');       if (v.length === 0) {           tb.value = '';           return;       }       tb.value = v;   });});document.addEventListener('DOMContentLoaded', function() {   var tb = document.getElementById('ctl00_MainContent_txtCaseNoCri');   if (!tb) return;   tb.addEventListener('keypress', function(e) {       if (e.key < '0' || e.key > '9') {           e.preventDefault();       }   });   tb.addEventListener('blur', function() {       var v = tb.value.replace(/\D/g, '');       if (v.length === 0) {           tb.value = '';           return;       }       tb.value = v;   });});document.addEventListener('DOMContentLoaded', function() {   var tb = document.getElementById('ctl00_MainContent_txtCaseYear');   if (!tb) return;   tb.addEventListener('keypress', function(e) {       if (e.key < '0' || e.key > '9') {           e.preventDefault();       }   });   tb.addEventListener('blur', function() {       var v = tb.value.replace(/\D/g, '');       if (v.length === 0) {           tb.value = '';           return;       }       tb.value = v;   });});document.addEventListener('DOMContentLoaded', function() {   var tb = document.getElementById('ctl00_MainContent_txtCaseYearCri');   if (!tb) return;   tb.addEventListener('keypress', function(e) {       if (e.key < '0' || e.key > '9') {           e.preventDefault();       }   });   tb.addEventListener('blur', function() {       var v = tb.value.replace(/\D/g, '');       if (v.length === 0) {           tb.value = '';           return;       }       tb.value = v;   });});//]]>
+</script>
+</form>
+    <script nonce="5Yxf7UKR50OAqukXnDcFdQ==" type="text/javascript">
+        ddlevelsmenu.setup("ddsidemenubar2", "sidebar")
+        ddlevelsmenu.setup("ddsidemenubar3", "sidebar")
+        ddlevelsmenu.setup("ddsidemenubarSJO", "sidebar")
+        ddlevelsmenu.setup("ddtopmenubar4", "topbar")
+    </script>
+
+    <ul id="ddsubmenuside2" class="ddsubmenustyle ">
+        <li>
+
+            <a href='getpdffile/TGlzdENyU3lub3BzaXMucGRm-TCrDdg6AbTw='>Criminal Appeal Synopsis Form</a>
+            <a href='court_rules/cv/'>Civil Court Rules (Volume-II) Forms</a>
+            <a href='court_rules/cr/'>Criminal Court Rules (Volume-II) Forms</a>
+
+        </li>
+
+    </ul>
+    <ul id="ddsubmenusideSJO" class="ddsubmenustyle ">
+        <li>
+            <a href='officers/district_and_sessions_judges'>Principal District and Sessions Judges</a>
+        </li>
+        <li>
+            <a href='officers/addtional_district_and_sessions_judges'>District and Additional Sessions Judges</a>
+        </li>
+        <li>
+            <a href='officers/ad_hoc_adj'>Ad-hoc ADJ (FTC)</a>
+        </li>
+        <li>
+            <a href='officers/sub_judge_cum_cjm_cum_asj'>Civil Judge (Sr. Div.)-Cum-Chief Judicial Magistrate</a>
+        </li>
+        <li>
+            <a href='officers/civil_judge_sr_division'>Civil Judge Sr. Division</a>
+        </li>
+        <li>
+            <a href='officers/civil_judge_jr_division'>Civil Judge Jr. Division</a>
+        </li>
+        <li>
+            <a href='officers/sdjm'>Sub Divisional Judicial Magistrate</a>
+        </li>
+        <li>
+            <a href='officers/judicial_officer_deputation'>Judicial Officers on Deputation</a>
+        </li>
+        <li>
+            <a href='officers_judgeship_wise'>Judicial Officers - Judgeship wise</a>
+        </li>
+        <li>
+            <a href='officers/railway_magistrate'>Railway Magistrate</a>
+        </li>
+        <li>
+            <a id="ctl00_HyperLink36" href="notices/transfer_and_postings/">Court Notifications</a></li>
+        <li><a href="http://apps.bih.nic.in/joas2/" target="_blank">Judicial Officers Activities
+            Monitoring System </a></li>
+        <li>
+            <a id="ctl00_HyperLink37" href="login">District Court Infrastructure</a></li>
+        <li>
+            <a id="ctl00_HyperLink49" href="officers_search">Search</a>
+        </li>
+        <li>
+            <a href='officers/all'>All Officers</a>
+        </li>
+    </ul>
+    <ul id="ddsubmenuside3" class="ddsubmenustyle blackwhite">
+        <li>
+
+            <a href='viewpdf/UlRJLVBIQy5wZGY=-Ve29jvLpyFU='>Patna High Court (Right to Information)
+            Rules, 2005</a>
+        </li>
+        <li>
+
+            <a href='viewpdf/cnRpXzIwMDkucGRm-iCwA2MzFNV0='>Patna High Court RTI Rules, 2005 (Ist ammendment)
+            Rules, 2008</a>
+
+        </li>
+        <li>
+
+
+            <a href='viewpdf/cnRpXzIwMTYucGRm-isxej0iXl4U='>Patna High Court RTI Rules, 2005 (2nd ammendment)
+            Rules, 2011</a>
+        </li>
+        <li>
+
+
+            <a href='viewpdf/UElPQVBJTy5wZGY=-ONVvMOWaC74='>Appelate Authority - PIO / APIO</a>
+        </li>
+        <li>
+
+            <a href='viewpdf/R1ozMC5wZGY=-TUX1ipdfmBY='>Gazette Notification No.30 dated 23/7/2014</a>
+        </li>
+        <li>
+
+            <a href='viewpdf/R1o0NzUucGRm-wDeRghMJwPE='>Gazette Notification No.475 dated 3/6/2014</a>
+        </li>
+        <li>
+
+            <a href='viewpdf/VVBMT0FERUQvMjcwOC5QREY=-rrGOonRFdCg='>Patna High Court (RTI) 3rd Amendment Rules, 2018.</a>
+        </li>
+        <li>
+
+            <a href='rti_disclosure'>Disclosure under Section 4</a>
+        </li>
+    </ul>
+
+
+    <ul id="ddsubmenutop4" class="ddsubmenustyle">
+        <li class="ddsubmenu w-350px">
+            <table>
+                <tr>
+                    <th>About Patna High Court
+                    </th>
+                </tr>
+                <tr>
+                    <td align="justify">The Judiciary is a distinct and independent arm of Government entrusted with judicial
+                        authority, and mandated to administer and deliver justice to the people of India.
+                        It plays a fundamental role in the promotion of law and order, human rights, social
+                        justice, morality and good governance.
+                        <br />
+                        <br />
+                        The independence of the Judiciary is guaranteed by the constitution in a number
+                        of its provisions regarding among others, the appointment, removal, salary and other
+                        conditions of service of judicial officers. The core of the Judiciary's independence
+                        is the absence of any interference for the Executive or the Legislature in judicial
+                        decisions.
+                        <br />
+                        <br />
+                        The mandate of the Judiciary is to establish and facilitate effective and efficient
+                        machinery capable of functioning as an adjudicating authority in India and of quickly
+                        administering and delivering justice and related services to the people of India.
+                        The key function of the Judiciary is therefore, the adjudication of civil and criminal
+                        cases. In addition, it interprets the constitution and gives effect to its provisions,
+                        as well as providing the expertise in interpreting of the laws. Further, the Judiciary
+                        performs other related duties in promotion of human rights, social justice and morality.
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <a id="ctl00_HyperLink15" href="AboutUs">more...</a>
+                    </td>
+                </tr>
+            </table>
+        </li>
+    </ul>
+
+    <div id="dialog" class="dialog">
+    </div>
+</body>
+</html>

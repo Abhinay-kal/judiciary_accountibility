@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
+from typing import Annotated
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from fastapi.responses import Response
@@ -20,6 +21,9 @@ from app.investigation import (
 from app.models import Case
 
 router = APIRouter(prefix="/investigation", tags=["investigation"])
+
+# Error message constants
+CASE_NOT_FOUND = "Case not found"
 
 
 def _canonical(case_id: int, version_number: int | None = None) -> str:
@@ -50,14 +54,14 @@ def _hydrate_snapshot(db: Session, case_id: int) -> tuple[dict, dict]:
 
 @router.get("/search")
 def search_investigations(
-    importance_score_min: float | None = Query(default=None),
-    delay_severity: str | None = Query(default=None),
-    court: str | None = Query(default=None),
-    state: str | None = Query(default=None),
-    case_type: str | None = Query(default=None),
-    page: int = Query(default=1, ge=1),
-    page_size: int = Query(default=20, ge=1, le=100),
-    db: Session = Depends(get_db),
+    importance_score_min: Annotated[float | None, Query()] = None,
+    delay_severity: Annotated[str | None, Query()] = None,
+    court: Annotated[str | None, Query()] = None,
+    state: Annotated[str | None, Query()] = None,
+    case_type: Annotated[str | None, Query()] = None,
+    page: Annotated[int, Query(ge=1)] = 1,
+    page_size: Annotated[int, Query(ge=1, le=100)] = 20,
+    db: Annotated[Session, Depends(get_db)] = None,
 ) -> dict:
     query = db.query(Case).filter(Case.is_deleted.is_(False))
     if importance_score_min is not None:
@@ -99,15 +103,21 @@ def search_investigations(
     }
 
 
-@router.get("/{case_id}")
+@router.get(
+    "/{case_id}",
+    responses={
+        200: {"description": "Investigation page successfully retrieved"},
+        404: {"description": "Case not found"},
+    },
+)
 def get_investigation_page(
     case_id: int,
-    format: str = Query(default="json", pattern="^(json|html)$"),
-    refresh: bool = Query(default=False),
-    db: Session = Depends(get_db),
+    format: Annotated[str, Query(pattern="^(json|html)$")] = "json",
+    refresh: Annotated[bool, Query()] = False,
+    db: Annotated[Session, Depends(get_db)] = None,
 ):
     if db.query(Case).filter(Case.id == case_id, Case.is_deleted.is_(False)).one_or_none() is None:
-        raise HTTPException(status_code=404, detail="Case not found")
+        raise HTTPException(status_code=404, detail=CASE_NOT_FOUND)
 
     cache_key = f"{case_id}:current"
 
@@ -137,12 +147,18 @@ def get_investigation_page(
     return payload
 
 
-@router.get("/{case_id}/v/{version_number}")
+@router.get(
+    "/{case_id}/v/{version_number}",
+    responses={
+        200: {"description": "Investigation version successfully retrieved"},
+        404: {"description": "Investigation snapshot version not found"},
+    },
+)
 def get_investigation_version(
     case_id: int,
     version_number: int,
-    format: str = Query(default="json", pattern="^(json|html)$"),
-    db: Session = Depends(get_db),
+    format: Annotated[str, Query(pattern="^(json|html)$")] = "json",
+    db: Annotated[Session, Depends(get_db)] = None,
 ):
     snapshots = SnapshotService(db)
     row = snapshots.get_version(case_id, version_number)
@@ -173,7 +189,7 @@ def get_investigation_version(
 
 
 @router.get("/{case_id}/versions")
-def list_investigation_versions(case_id: int, db: Session = Depends(get_db)) -> dict:
+def list_investigation_versions(case_id: int, db: Annotated[Session, Depends(get_db)] = None) -> dict:
     snapshots = SnapshotService(db)
     return {
         "case_id": case_id,
@@ -182,13 +198,13 @@ def list_investigation_versions(case_id: int, db: Session = Depends(get_db)) -> 
 
 
 @router.get("/{case_id}/export/json")
-def export_investigation_json(case_id: int, db: Session = Depends(get_db)) -> dict:
+def export_investigation_json(case_id: int, db: Annotated[Session, Depends(get_db)] = None) -> dict:
     report, snapshot_meta = _hydrate_snapshot(db, case_id)
     return export_json_package(report, snapshot_meta=snapshot_meta)
 
 
 @router.get("/{case_id}/export/pdf")
-def export_investigation_pdf(case_id: int, db: Session = Depends(get_db)) -> Response:
+def export_investigation_pdf(case_id: int, db: Annotated[Session, Depends(get_db)] = None) -> Response:
     report, snapshot_meta = _hydrate_snapshot(db, case_id)
     payload = export_pdf_bytes(report, snapshot_meta=snapshot_meta)
     return Response(
@@ -199,7 +215,7 @@ def export_investigation_pdf(case_id: int, db: Session = Depends(get_db)) -> Res
 
 
 @router.get("/{case_id}/export/archive")
-def export_investigation_archive(case_id: int, db: Session = Depends(get_db)) -> Response:
+def export_investigation_archive(case_id: int, db: Annotated[Session, Depends(get_db)] = None) -> Response:
     report, snapshot_meta = _hydrate_snapshot(db, case_id)
     payload = export_offline_archive(
         report,
@@ -217,11 +233,17 @@ def export_investigation_archive(case_id: int, db: Session = Depends(get_db)) ->
 # ACCOUNTABILITY ANALYSIS ENDPOINTS
 # New endpoints for tactic detection and advocate attribution
 
-@router.get("/{case_id}/accountability/attributions")
+@router.get(
+    "/{case_id}/accountability/attributions",
+    responses={
+        200: {"description": "Delay attributions successfully retrieved"},
+        404: {"description": "Case not found"},
+    },
+)
 def get_delay_attributions(
     case_id: int,
-    min_confidence: float = Query(default=0.50, ge=0.0, le=1.0),
-    db: Session = Depends(get_db),
+    min_confidence: Annotated[float, Query(ge=0.0, le=1.0)] = 0.50,
+    db: Annotated[Session, Depends(get_db)] = None,
 ):
     """
     Get delay attributions for a case.
@@ -259,10 +281,16 @@ def get_delay_attributions(
     }
 
 
-@router.get("/{case_id}/accountability/adjournments")
+@router.get(
+    "/{case_id}/accountability/adjournments",
+    responses={
+        200: {"description": "Adjournment analysis successfully retrieved"},
+        404: {"description": "Case not found"},
+    },
+)
 def get_adjournment_analysis(
     case_id: int,
-    db: Session = Depends(get_db),
+    db: Annotated[Session, Depends(get_db)] = None,
 ):
     """
     Get tactic classification for all adjournments in a case.
@@ -279,7 +307,7 @@ def get_adjournment_analysis(
     
     case = db.query(Case).filter(Case.id == case_id, Case.deleted_at.is_(None)).first()
     if not case:
-        raise HTTPException(status_code=404, detail="Case not found")
+        raise HTTPException(status_code=404, detail=CASE_NOT_FOUND)
     
     adjournments = db.query(Adjournment).filter(
         Adjournment.case_id == case_id,
@@ -322,10 +350,16 @@ def get_adjournment_analysis(
     }
 
 
-@router.get("/{case_id}/accountability/interim-apps")
+@router.get(
+    "/{case_id}/accountability/interim-apps",
+    responses={
+        200: {"description": "Interim applications frivolity assessment successfully retrieved"},
+        404: {"description": "Case not found"},
+    },
+)
 def get_interim_app_analysis(
     case_id: int,
-    db: Session = Depends(get_db),
+    db: Annotated[Session, Depends(get_db)] = None,
 ):
     """
     Get frivolity assessment for all interim applications in a case.
@@ -346,7 +380,7 @@ def get_interim_app_analysis(
     
     case = db.query(Case).filter(Case.id == case_id, Case.deleted_at.is_(None)).first()
     if not case:
-        raise HTTPException(status_code=404, detail="Case not found")
+        raise HTTPException(status_code=404, detail=CASE_NOT_FOUND)
     
     interim_apps = db.query(InterimApplication).filter(
         InterimApplication.case_id == case_id,
@@ -385,10 +419,16 @@ def get_interim_app_analysis(
     }
 
 
-@router.get("/advocates/{advocate_id}/performance")
+@router.get(
+    "/advocates/{advocate_id}/performance",
+    responses={
+        200: {"description": "Advocate performance successfully retrieved"},
+        404: {"description": "Advocate not found"},
+    },
+)
 def get_advocate_performance(
     advocate_id: int,
-    db: Session = Depends(get_db),
+    db: Annotated[Session, Depends(get_db)] = None,
 ):
     """
     Get advocate performance scorecard from materialized view.
@@ -432,10 +472,16 @@ def get_advocate_performance(
     }
 
 
-@router.get("/advocates/{advocate_id}/adjournment-stats")
+@router.get(
+    "/advocates/{advocate_id}/adjournment-stats",
+    responses={
+        200: {"description": "Advocate adjournment statistics successfully retrieved"},
+        404: {"description": "Advocate not found"},
+    },
+)
 def get_advocate_adjournment_stats(
     advocate_id: int,
-    db: Session = Depends(get_db),
+    db: Annotated[Session, Depends(get_db)] = None,
 ):
     """
     Get adjournment statistics for an advocate from materialized view.
@@ -477,10 +523,16 @@ def get_advocate_adjournment_stats(
     }
 
 
-@router.get("/advocates/{advocate_id}/interim-app-activity")
+@router.get(
+    "/advocates/{advocate_id}/interim-app-activity",
+    responses={
+        200: {"description": "Advocate interim application activity successfully retrieved"},
+        404: {"description": "Advocate not found or no interim app activity"},
+    },
+)
 def get_advocate_interim_app_activity(
     advocate_id: int,
-    db: Session = Depends(get_db),
+    db: Annotated[Session, Depends(get_db)] = None,
 ):
     """
     Get interim application filing patterns for an advocate.

@@ -23,11 +23,15 @@ if [ -z "${DATABASE_URL:-}" ]; then
   fail "DATABASE_URL is not set"
 fi
 
-if [ -z "${REDIS_URL:-}" ]; then
-  fail "REDIS_URL is not set"
+if [ -z "${CELERY_BROKER_URL:-}" ]; then
+  fail "CELERY_BROKER_URL is not set"
 fi
 
-log "Waiting for Postgres and Redis"
+if [ -z "${REDIS_CACHE_URL:-}" ]; then
+  fail "REDIS_CACHE_URL is not set"
+fi
+
+log "Waiting for Postgres, Redis broker, and Redis cache"
 PYTHONPATH=/app python - <<'PY'
 import os
 import socket
@@ -72,7 +76,8 @@ def ensure_alembic_table_capacity(url: str) -> None:
         conn.execute(text("ALTER TABLE alembic_version ALTER COLUMN version_num TYPE VARCHAR(64)"))
 
 
-wait_for_redis(os.environ["REDIS_URL"])
+wait_for_redis(os.environ["CELERY_BROKER_URL"])
+wait_for_redis(os.environ["REDIS_CACHE_URL"])
 wait_for_db(os.environ["DATABASE_URL"])
 ensure_alembic_table_capacity(os.environ["DATABASE_URL"])
 print("Dependencies are ready")

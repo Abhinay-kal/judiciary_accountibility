@@ -70,6 +70,12 @@ INGEST_HTTP_ERRORS = Counter(
     ["source_name", "status_code"],
 )
 
+SCRAPER_SCHEMA_DRIFT_TOTAL = Counter(
+    "scraper_schema_drift_total",
+    "Schema drift events detected by ingestion firewall",
+    ["source"],
+)
+
 # Source health encodes the enum as a numeric (0=HEALTHY, 1=DEGRADED, 2=FAILED, 3=DISABLED)
 INGEST_SOURCE_HEALTH = Gauge(
     "justice_ingest_source_health",

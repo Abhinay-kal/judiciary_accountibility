@@ -78,7 +78,7 @@ def run_ingestion_scheduler(self) -> dict:
     from app.ingestion.scheduler import schedule_due_sources
 
     settings = get_settings()
-    monitor = QueueMonitor(settings.redis_url)
+    monitor = QueueMonitor(settings.celery_broker_url)
     if apply_ingestion_backpressure(celery_app, max_depth=settings.ingestion_queue_max_depth):
         return {"dispatched_source_ids": [], "count": 0, "paused": True, "reason": "backpressure"}
 

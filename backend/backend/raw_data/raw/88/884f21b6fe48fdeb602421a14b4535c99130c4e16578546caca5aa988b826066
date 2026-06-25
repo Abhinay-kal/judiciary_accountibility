@@ -1,0 +1,810 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Income Tax Appellate Tribunal | Welcome</title>
+    <link rel="icon" href="https://itat.gov.in/public/files/resource/img/flag.png" type="image/png">
+    <link href="https://itat.gov.in/public/files/resource/css/5.3.3-bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://itat.gov.in/public/files/resource/css/itat_custom.css" />
+    <link rel="stylesheet" href="https://itat.gov.in/public/files/resource/css/form_custom.css" />
+    <link rel="stylesheet" href="https://itat.gov.in/public/files/resource/css/allpages.css" />
+    <link rel="stylesheet" href="https://itat.gov.in/public/files/resource/css/tt.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
+    <link href="https://itat.gov.in/public/files/resource/css/1.13.2-jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://itat.gov.in/public/files/resource/css/choices.min.css">
+    <link rel="stylesheet" href="https://itat.gov.in/public/files/resource/css/captcha.css">
+    <link rel="stylesheet" href="https://itat.gov.in/public/files/resource/css/home_content.css">
+    <link href="https://itat.gov.in/public/files/resource/css/2.0.2-dataTables.dataTables.css" rel="stylesheet">
+    <script type="text/javascript" src="https://itat.gov.in/public/files/resource/js/3.7.1-jquery.min.js"></script>
+    <script type="text/javascript" src="https://itat.gov.in/public/files/resource/js/font-size.js"></script>
+    <script type="text/javascript" src="https://itat.gov.in/public/files/resource/js/appeal.js"></script>
+    <script type="text/javascript"
+        src="https://itat.gov.in/public/files/resource/js/5.3.3-bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="https://itat.gov.in/public/files/resource/js/form_custom.js"></script>
+    <script type="text/javascript" src="https://itat.gov.in/public/files/resource/js/1.13.2-jquery-ui.js"></script>
+    <script src="https://itat.gov.in/public/files/resource/js/2.0.2-js-dataTables.min.js"></script>
+    <script src="https://itat.gov.in/public/files/resource/js/jsencrypt.min.js"></script>
+</head>
+
+<body id="fontSize">
+    <noscript>
+        <div class="nojsit">JavaScript must be enabled in order for you to use the Site in standard view. However, it
+            seems JavaScript is either disabled or not supported by your browser. To use standard view, enable
+            JavaScript by changing your browser options.</div>
+    </noscript>
+
+    <div class="container-fluid">
+        <div class="row ">
+            <nav class="navbar navbar-expand-lg d-none d-lg-block mb-lg-0 top-nav">
+                <div class="container">
+                    <div class="navbar-nav ">
+                        <div class=" text-white text-wrap gov-text text-end">भारत सरकार <br>Goverment of India</div>
+                        <div class=" text-white text-wrap gov-text-m">विधि एवं न्याय मंत्रालय <br>Ministry of Law and
+                            Justice </div>
+                    </div>
+                    <div class="navbar-nav nav-list">
+                        <ul class="a-wrap">
+
+															
+                            <li>
+                                <a href="#manunav" class="font_small_size"><img
+                                        src="https://itat.gov.in/public/files/resource/img/ico-skip.png"
+                                        alt="Skip Main Content" title="Skip Main Content"></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" onclick="set_font_size('increase')"
+                                    class="font_small_size">A+</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" onclick="set_font_size('decrease')"
+                                    class="font_small_size">A-</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" onclick="set_font_size('')" class="font_small_size">A</a>
+                            </li>
+							<!--
+                            <li><a data-bs-toggle="modal" href="#SearchToggle" role="button"><img class="mt-2 me-2" style="margin-left: 11px; margin-right: 5px;" src="https://itat.gov.in/public/files/resource/img/search.png" alt="Search" title="Search" width="16"></a> 
+                            </li>
+							-->
+                            <li style="padding-right: 4px;"><a
+                                    href="https://itat.gov.in/home/lang"
+                                    class="font_small_size nav-item lang-chnge">
+                                    हिंदी                                </a>
+                            </li>
+                            <li>
+                                <a href="https://itat.gov.in/home/archives" 
+                                    class="font_small_size">Archives</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <nav class="navbar navbar-expand-sm justify-content-center pt-0 pb-0">
+                <div class="container col-md-12 logoimg">
+                    <div class="col-md-6">
+                        <div class="logo">
+                            <a href="https://itat.gov.in/" title="Go to home" class="site_logo" rel="home">
+                                <img id="logo" class="emblem"
+                                    src="https://itat.gov.in/public/files/resource/img/itat_logo_home.png "
+                                    alt="img">
+                                <div class="logo_text ">
+                                    <strong lang="">आयकर अपीलीय अधिकरण </strong>
+                                    <h4 class="h4-logo fw-bold">INCOME TAX APPELLATE TRIBUNAL</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 logo_text text-end" style="padding-top:3px;">
+                                                        <img src="https://itat.gov.in/public/files/resource/img/sb.png" height="80px"
+                                    alt="Swachh Bharat Logo">
+                                <img src="https://itat.gov.in/public/files/resource/img/gov_logo.png" height="80px"
+                                    alt="Government of India Logo">
+                                            </div>
+                </div>
+            </nav>
+            <nav class="navbar navbar-expand-xl navbar-wrapper navbar-dark"
+                style="background: linear-gradient(90deg, #ff9c15, #47915b) 0 0 no-repeat padding-box padding-box transparent;height: auto;padding: 0px;"
+                id="manunav">
+                <div class="container all-show">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuItems"
+                        aria-controls="menuItems" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="menuItems">
+                        <ul class="navbar-nav mr-auto mb-2 mb-lg-0  nav-list">
+                                                            <li style="margin-top: 8px;">
+                                    <a style="background-color: #B63B1A;padding: 11px;" href="https://itat.gov.in/"><img src="https://itat.gov.in/public/files/resource/img/home.png" width="25"></a>
+                                </li>
+                            
+                            <li class="nav-item dropdown nav-item-list border-end">
+                        <a class="dropdown-item menu_link" href="#">About ITAT</a><ul class="dropdown-menu"><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/about_tribunal">About Tribunal</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/about_president">About the President</a></li><li><a class="dropdown-item menu-hover minwid200 " href="#">Who is who</a><ul class="dropdown-menu dropdown-submenu"><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/vice_presidents">Vice Presidents</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/members">Members</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/registrar">Registrar</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/deputy_registrars">Deputy Registrars</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/assistant_registrars">Assistant Registrars</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/past_presidents">Past Presidents</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/past_vice_presidents">Past Vice Presidents</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/past_members">Past Members</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/past_registrars">Past Registrars</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/past_registry_officers">Past Registry Officers</a></li></ul></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/benches_of_tribunal">Benches of the Tribunal</a></li></ul></li><li class="nav-item dropdown nav-item-list border-end">
+                        <a class="dropdown-item menu_link" href="#">Judicial Information</a><ul class="dropdown-menu"><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/judicial/casestatus">Case Status</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/judicial/tribunalorders">Tribunal Orders</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/judicial/notice_board">Notice Board (Judicial Info)</a></li></ul></li><li class="nav-item dropdown nav-item-list border-end">
+                        <a class="dropdown-item menu_link" href="#">General Information</a><ul class="dropdown-menu"><li><a class="dropdown-item menu-hover minwid200 " href="#">RTI Act, 2005</a><ul class="dropdown-menu dropdown-submenu"><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/rti_disclosure">Disclosure under RTI Act, 2005</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/rti_orders_circulars">RTI Orders & Circulars</a></li></ul></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/holiday_lists">Holiday Lists</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/recruitment_news">Recruitment News</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/employees_corner">Employees Corner</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/official_language_news">Official Language News</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/tenders_auctions">Tenders Auctions</a></li></ul></li><li class="nav-item dropdown nav-item-list border-end">
+                        <a class="dropdown-item menu_link" href="#">Media Gallery</a><ul class="dropdown-menu"><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/speeches">Articles, Speeches and Lectures</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/press_releases">Press Releases</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/foundation_day">Foundation Day Celebrations</a></li></ul></li><li class="nav-item dropdown nav-item-list border-end">
+                        <a class="dropdown-item menu_link" href="#">Contact Us </a><ul class="dropdown-menu"><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/contactus">Contact Us</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/feedback">Feedback</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/terms">Terms & Conditions</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/help">Help</a></li><li><a class="dropdown-item menu-hover minwid200 " href="https://itat.gov.in/page/telephone_directory">Telephone Directory</a></li></ul></li><li class="nav-item dropdown nav-item-list border-end">
+                        <a class="dropdown-item menu_link" href="https://itat.gov.in/efiling">e-Filing Portal</a></li>                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            
+            
+
+        </div>
+    </div>
+
+    <!-- search input -->
+    <div class="modal fade" id="SearchToggle" aria-hidden="true" aria-labelledby="SearchToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content search-input">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Type to Search" style="height: 60px;">
+                    <button class="btn search-btn" type="button">Search</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- slider start -->
+<section>
+	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-indicators">
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+					aria-current="true" aria-label="Slide 1"></button>
+								<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class=""
+					aria-current="true" aria-label="Slide 2"></button>
+								<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class=""
+					aria-current="true" aria-label="Slide 3"></button>
+								<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" class=""
+					aria-current="true" aria-label="Slide 4"></button>
+								<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" class=""
+					aria-current="true" aria-label="Slide 5"></button>
+								<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" class=""
+					aria-current="true" aria-label="Slide 6"></button>
+								<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" class=""
+					aria-current="true" aria-label="Slide 7"></button>
+								<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" class=""
+					aria-current="true" aria-label="Slide 8"></button>
+						</div>
+		<div class="carousel-inner">
+							<div class="carousel-item active">
+											<img src="https://itat.gov.in/public/files/slider/RPV5UsEj-_DSC8386.JPG" class="d-block w-100 carousel-image" alt="Slide Image">
+					
+					
+						
+					<div class="carousel-caption d-none d-md-block">
+        
+        			<p>Mr. Justice (Retd.) C.V. Bhadang, President, ITAT presenting Constitution to Shri C.P. Radhakrishnan, Honourable Governor of Maharashtra on the occasion of of All India Members Conference, 2025 at Goa on 12th July 2025.                                    </p>
+      				</div>
+				</div>
+								<div class="carousel-item ">
+											<img src="https://itat.gov.in/public/files/slider/eFQCThWY-_DSC0164.JPG" class="d-block w-100 carousel-image" alt="Slide Image">
+					
+					
+						
+					<div class="carousel-caption d-none d-md-block">
+        
+        			<p>Group Photo of Members of ITAT with Shri Arjun Ram Meghwal, Honourable Law Minister and other dignitaries on the occasion of All India Members Conference, 2025 at Goa on 13th July 2025.                                                                      </p>
+      				</div>
+				</div>
+								<div class="carousel-item ">
+											<img src="https://itat.gov.in/public/files/slider/pcfA8wbQ-_DSC9946.JPG" class="d-block w-100 carousel-image" alt="Slide Image">
+					
+					
+						
+					<div class="carousel-caption d-none d-md-block">
+        
+        			<p>Mr. Justice (Retd.) C.V. Bhadang, President, ITAT presenting Coffee Table Book to Shri Arjun Ram Meghwal, Honourable Law Minister on the occasion of of All India Members Conference, 2025 at Goa on 13th July 2025.                                           </p>
+      				</div>
+				</div>
+								<div class="carousel-item ">
+											<img src="https://itat.gov.in/public/files/slider/MhVYkH4a-_DSC8446.JPG" class="d-block w-100 carousel-image" alt="Slide Image">
+					
+					
+						
+					<div class="carousel-caption d-none d-md-block">
+        
+        			<p>Shri C.P. Radhakrishan, Honourable Governor of Maharashtra addressing the gathering on the occasion of All India Members Conference, 2025 at Goa on 12th July 2025.                                                                                            </p>
+      				</div>
+				</div>
+								<div class="carousel-item ">
+											<img src="https://itat.gov.in/public/files/slider/RFmPH3tE-_DSC0101.JPG" class="d-block w-100 carousel-image" alt="Slide Image">
+					
+					
+						
+					<div class="carousel-caption d-none d-md-block">
+        
+        			<p>Shri Arjun Ram Meghwal, Honourable Law Minister addressing the gathering on the occasion of All India Members Conference, 2025 at Goa on 13th July 2025.                                                                                                       </p>
+      				</div>
+				</div>
+								<div class="carousel-item ">
+											<img src="https://itat.gov.in/public/files/slider/DqFnJJ8A-_DSC9997.JPG" class="d-block w-100 carousel-image" alt="Slide Image">
+					
+					
+						
+					<div class="carousel-caption d-none d-md-block">
+        
+        			<p>Shri Ravi Agrawal, Honourable Chairman, CBDT addressing the gathering on the occasion of All India Members Conference, 2025 at Goa on 13th July 2025.                                                                                                          </p>
+      				</div>
+				</div>
+								<div class="carousel-item ">
+											<img src="https://itat.gov.in/public/files/slider/9NeqESu5-_DSC0039.JPG" class="d-block w-100 carousel-image" alt="Slide Image">
+					
+					
+						
+					<div class="carousel-caption d-none d-md-block">
+        
+        			<p>Honourable Mr. Justice Ashwin Damodar Bhobe addressing the gathering on the occasion of All India Members Conference, 2025 at Goa on 12th July 2025.                                                                                                           </p>
+      				</div>
+				</div>
+								<div class="carousel-item ">
+											<img src="https://itat.gov.in/public/files/slider/xshxGMgc-_DSC9932.JPG" class="d-block w-100 carousel-image" alt="Slide Image">
+					
+					
+						
+					<div class="carousel-caption d-none d-md-block">
+        
+        			<p>Honourable Mr. Justice (Retd) C.V. Bhadang addressing the gathering on the occasion of All India Members Conference, 2025 at Goa on 13th July 2025.                                                                                                            </p>
+      				</div>
+				</div>
+						</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+	</div>
+</section>
+<!-- slider end -->
+<!-- main content start -->
+<section>
+	<div class="container mt-3">
+
+
+		<div class="col-lg-12 row">
+			<div class="col-lg-6">
+				<div>
+					<div class="card mb-2 card-bg-tribunal card-border">
+						<h5 class="card-header card-radious ">ABOUT THE TRIBUNAL</h5>
+						<div class="card-body">
+							<p class="card-text" style="text-align: justify; padding-right: 10px;">
+								ITAT is a quasi judicial institution set up in January, 1941 and specializes in dealing with appeals under the Direct Taxes Acts. The orders passed by the ITAT are final, an appeal lies to the High Court only if a substantial question of law arises for determination.
+
+Starting in 1941 with six Members constituting three Benches - one each at Delhi, Kolkata (Calcutta) and Mumbai (Bombay),...							</p>
+						</div>
+						<h6 class="card-footer m-0 p-0 ">
+						<div class="container">
+							<div class="row">
+								<div class="col-2 arrow-button text-center">
+									<img src="https://itat.gov.in/public/files/resource/img/arrow-right.png" width="28">
+									</div>
+									<div class="col-10 p-0">
+										<div class="read-more"><a href="https://itat.gov.in/page/about_tribunal">Click here to know more about
+												the Tribunal </a></div>
+									</div>
+								</div>
+							</div>
+						</h6>
+
+					</div>
+				</div>
+				<div>
+					<div class="card card-bg-president ">
+						<h5 class="card-header card-radious">ABOUT THE PRESIDENT</h5>
+						<div class="row">
+							<div class="col-12 col-lg-12 ">
+								<div class="card abut_presidnt">
+									<div class="row align-items-md-center ">
+										<div class="col-md-4">
+											<img src="https://itat.gov.in/public/files/profiles/1631702523-CVB.jpg"
+												class="img-fluid pb-3 d-block w-100"
+												alt=""
+												height=auto>
+										</div>
+										<div class="col-md-8">
+											<p class="namecls mb-0 mt-3 ms-3" style="font-size: 15px;"><strong>
+												MR. JUSTICE CHANDRAKANT VASANT BHADANG</strong> </p>
+											<div class="card-body pb-3">
+												<p style="text-align: justify; padding-right: 10px;">Born on 5 November 1960 at Khamgaon, District Buldhana. Graduated in Science from G.S. College of Commerce, Science, and Arts, Khamgaon in 1981. Obtained LL.B. Degree from Nagpur University and was enrolled as an Advocate on 5 December 1984. Comes from a family of Lawyers. Practiced mainly on the Civil and Criminal side, in the District Court and for some time at the Nagpur Bench of the...
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+											<h6 class="card-footer m-0 p-0 ">
+						<div class="container">
+							<div class="row">
+								<div class="col-2 arrow-button text-center">
+									<img src="https://itat.gov.in/public/files/resource/img/arrow-right.png" width="28">
+														</div>
+														<div class="col-10 p-0">
+															<div class="read-more"><a href="https://itat.gov.in/page/about_president">Click here to know more about the
+									President, ITAT</a></div>
+														</div>
+													</div>
+												</div>
+											</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-6">
+				<div class="card mb-auto card-bg-tribunal card-border d-flex flex-column flex-fill">
+					<h5 class="card-header card-radious ">WHAT'S NEW IN THE SITE</h5>
+					<div class="card-body " style="padding: 0!important; margin: 0!important;">
+						<marquee direction="up" class="whats_new_list " scrollamount="2" onmouseover="this.stop()"
+							onmouseout="this.start()">
+							<div class="main-list-aggregate">
+								<div class="block-hdnews">
+									<div class="list-wrpaaer">
+										<ul class="list-aggregate" id="marquee-vertical">
+																							<li>
+
+													<p>Notification dated 27 February 2026 for Recruitment Rule for the post of Library and Information Assistant in Income Tax Appellate Tribunal
+
+														<a href='public/files/upload/1775133744-CZMpQP8v-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;1,572.745 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Mumbai - Final Cause List for 06 to 09 April, 2026.
+
+														<a href='public/files/upload/1775132499-BHZNyKZ8-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;2,119.880 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Pune-Cause list 06.04.2026 to 10.04.2026
+
+														<a href='public/files/upload/1775131750-2CVN39a5-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;1,949.025 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Indore Bench Cause list from 6 to 10.4.2026
+
+														<a href='public/files/upload/1775128393-WfyPYxQh-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;2,048.571 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Lucknow- Constitution and Cause List from 06.04.2026 to 09.04.2026
+
+														<a href='public/files/upload/1775128253-NdK6hQr3-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;5,877.604 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Chennai - Cause List from 6 - 9 April 2026
+
+														<a href='public/files/upload/1775127276-fMWqxCea-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;4,965.897 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Patna - Constitution and Cause List of DB &amp; SMC Bench from 06-09 April, 2026.
+
+														<a href='public/files/upload/1775124945-2dTCesnk-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;1,931.030 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Chennai - Constitution from 6 - 9 April 2026
+
+														<a href='public/files/upload/1775122625-HfTtwX3j-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;427.140 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Pune- Friday Cause List  03.04.2026
+
+														<a href='public/files/upload/1775112744-RMNhGHKg-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;47.355 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Cuttack-Constitution and Cause List from 06-09 April, 2026
+
+														<a href='public/files/upload/1775112117-ST6fFBNz-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;9,702.642 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Guwahati - Cause list of DB and SMC w.e.f. 6-8 April-2026
+
+														<a href='public/files/upload/1775046908-Thaxbs7m-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;2,186.760 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Delhi - Notice regarding submission of full accurate details of Applications in prescribed format 
+
+														<a href='public/files/upload/1775042544-YYPrUMYT-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;77.784 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Mumbai - Constitution for 30 March, 2026 to 23 April, 2026
+
+														<a href='public/files/upload/1774616250-NxFWWZeB-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;122.310 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Ahmedabad - Constitution for 30th March, 2026 to 02nd April, 2026. and 06th April, 2026 to 09th April, 2026.
+
+														<a href='public/files/upload/1774608041-DavCYzwJ-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;979.652 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Notice Inviting Objections if any from Assessee &amp; Department for Weeding out of Old appeal Record
+
+														<a href='public/files/upload/1774603029-wY2TTbUX-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;64.135 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Pune-Constitution 06.04.2026 to 10.04.2026.
+
+														<a href='public/files/upload/1774602863-4CVDn85g-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;129.531 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Pune-Constitution 30.03.2026 to 02.04.2026
+
+														<a href='public/files/upload/1774602800-7h4vH89G-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;119.380 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Dehradun - Constitution for the period from 06/04/2026 to 10/04/2026 (Cause list attached) through hybrid mode
+
+														<a href='public/files/upload/1774597381-T84DbwQg-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;509.775 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Chandigarh - Cause list for 30 March  - 10 April 2026.
+
+														<a href='public/files/upload/1774589467-MpHjVWjq-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;2,499.638 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Chandigarh - Constitution for  30  March - 10 April 2026.
+
+														<a href='public/files/upload/1774589347-83ASdgcM-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;426.877 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Delhi - Notice regarding Weeding Out of Appeal Records Disposed of during the period from 01.01.2019 to 31.12.2019
+
+														<a href='public/files/upload/1774586903-JCe9B8aj-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;99.848 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Delhi - Constitution of Benches from 30.03.2026, 01.04.2026,02.04.2026 &amp; from 06.04.2026 to 09.04.2026, 13.04.2026 to 16.04.2026 &amp; 20.04.2026 to 23.04.2026 for Hearings through Hybrid Mode as per enclosed cause list
+
+														<a href='public/files/upload/1774455374-f5ufEbFt-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;8,147.444 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Chandigarh -  Constitution of  Special Bench in the case of Malwa Gramin Bank, Sangrur fixed for re hearing on 08.04.2026
+
+														<a href='public/files/upload/1773655167-j39XKMGa-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;482.567 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Kolkata - Constitution from 16-19 March 2026.
+
+														<a href='public/files/upload/1773224095-Y838uqqt-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;618.351 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Guwahati - Holiday list for 2026
+
+														<a href='public/files/upload/1769168657-4Rdccx6Q-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;192.167 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Nagpur - Holiday List - 2026 
+
+														<a href='public/files/upload/1767770134-V5YtmZeu-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;1,214.930 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Guwahati - ITAT Amendment Rules 2025
+
+														<a href='public/files/upload/1767696954-sAupvUnk-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;1,181.345 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Lucknow- Holiday list of 2026
+
+														<a href='public/files/upload/1767694389-MsUK4v9T-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;339.005 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Jodhpur - Holiday List and R.H. List for the year 2026.
+
+														<a href='public/files/upload/1764930289-S4nTxZP5-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;150.146 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Ahmedabad - Holiday List for the year 2026.
+
+														<a href='public/files/upload/1762433278-GzGysWbZ-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;2,537.027 kb															<br>
+					
+																											</p>
+												</li>
+																							<li>
+
+													<p>Guwahati - Holiday list for 2025
+
+														<a href='public/files/upload/1756471617-9T83SYaA-CMS.pdf' target='_blank'>Download PDF</a> &nbsp;188.592 kb															<br>
+					
+																											</p>
+												</li>
+																					</ul>
+									</div>
+								</div>
+							</div>
+						</marquee>
+						<br><br>
+						<div class="d-flex mb-auto mx-3">
+
+						</div>
+					</div>
+					<h6 class="card-footer m-0 p-0 ">
+						<div class="container">
+							<div class="row">
+								<div class="col-2 arrow-button text-center">
+									<img src="https://itat.gov.in/public/files/resource/img/arrow-right.png"
+										width="28">
+								</div>
+								<div class="col-10 p-0">
+									<div class="read-more"><a href="https://itat.gov.in/page/whatsnew">Click here
+											to view more</a></div>
+								</div>
+							</div>
+						</div>
+					</h6>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="d-flex  align-items-center mt-3">
+			<button class="fw-bold "
+				style="background-color: #B63B1A; color: white; text-decoration: none; border: none">Important
+				Links</button>
+		</div>
+		<!-- <a href="#" class="btnimplinkit">Important Links</a><br> -->
+		<div id="carouselExampleControls" class="carousel carousel-dark slide implinkit-slide" data-bs-ride="carousel">
+			<div class="container ">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<div class="card-wrapper d-flex  justify-content-center">
+							<div class="  ">
+								<a href="https://www.sci.gov.in/" target="_blank" onclick="confirmation()">
+									<img src="https://itat.gov.in/public/files/resource/img/1453446561.jpg"
+										class="card-img-top" alt="Link to Supreme Court of India Website" width="200"
+										height="150" draggable="false"></a>
+							</div>
+							<div class="">
+								<a href="https://financialservices.gov.in/beta/en" target="_blank"
+									onclick="confirmation()">
+									<img src="https://itat.gov.in/public/files/resource/img/1453446632.jpg"
+										class="card-img-top" alt="Link to Ministry of Finance, Govt. of India"
+										width="200" height="150" draggable="false"></a>
+							</div>
+							<div class="">
+								<a href="https://www.india.gov.in/" target="_blank" onclick="confirmation()">
+									<img src="https://itat.gov.in/public/files/resource/img/india.gov.png"
+										class="card-img-top" alt="Link to National Portal of India" width="200"
+										height="150" draggable="false"></a>
+							</div>
+							<div class="  ">
+								<a href="https://lawmin.gov.in/" target="_blank" onclick="confirmation()">
+									<img src="https://itat.gov.in/public/files/resource/img/1453446511.jpg"
+										class="card-img-top" alt="Link to Ministry of Law & Justice" width="200"
+										height="150" draggable="false"> </a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="card-wrapper  d-flex justify-content-center">
+							<div class="">
+								<a href="https://igod.gov.in/" target="_blank" onclick="confirmation()">
+									<img src="https://itat.gov.in/public/files/resource/img/1453446660.jpg"
+										class="card-img-top" alt="Link to Integrated Govt. Online Directory" width="200"
+										height="150" draggable="false"></a>
+							</div>
+							<div class="">
+								<a href="https://igod.gov.in/" target="_blank" onclick="confirmation()">
+									<img src="https://itat.gov.in/public/files/resource/img/1453446660.jpg"
+										class="card-img-top" alt="Link to Integrated Govt. Online Directory" width="200"
+										height="150" draggable="false"></a>
+							</div>
+							<div class="">
+								<a href="https://igod.gov.in/" target="_blank" onclick="confirmation()">
+									<img src="https://itat.gov.in/public/files/resource/img/1453446660.jpg"
+										class="card-img-top" alt="Link to Integrated Govt. Online Directory" width="200"
+										height="150" draggable="false"></a>
+							</div>
+							<div class="">
+								<a href="https://igod.gov.in/" target="_blank" onclick="confirmation()">
+									<img src="https://itat.gov.in/public/files/resource/img/1453446660.jpg"
+										class="card-img-top" alt="Link to Integrated Govt. Online Directory" width="200"
+										height="150" draggable="false"></a>
+							</div>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+						data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+						data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+</section>
+
+<script>
+	function confirmation() {
+		if (confirm("This link shall take you to a page outsite ITAT website (https://www.itat.gov.in/). For any query regarding the contents of the linked page, please contact the webmaster of the concerned website.")) {
+			return true;
+		}
+		else {
+			return false;
+		}
+
+	}
+
+	.carousel - item img {
+		max - width: 200px;
+		height: auto;
+	}
+		.carousel - inner {
+		display: flex;
+		justify - content: center;
+		align - items: center;
+	}
+		.card - wrapper {
+		display: flex;
+		flex - wrap: wrap;
+		justify - content: center;
+		gap: 15px;
+	}
+		.carousel - control - prev, .carousel - control - next {
+		filter: invert(1); /* Ensures controls are visible on dark backgrounds */
+	}
+	
+</script>
+<style>
+	.carousel-image {
+		height: 600px; /* Set the desired height */
+		object-fit: cover; /* Ensure the image covers the area without stretching */
+	}
+	@media (max-width: 768px) {
+		.carousel-image {
+			height: 300px; /* Height for tablets and small screens */
+		}
+	}
+
+	@media (max-width: 576px) {
+		.carousel-image {
+			height: 200px; /* Height for mobile devices */
+		}
+	}
+	
+</style>
+<!-- main content end --><script>
+    document.getElementById("logout").addEventListener("click", function (event) {
+         event.preventDefault();
+        if (confirm("Are you sure you want to log out?")) {
+            window.location.href = this.getAttribute("href");
+        }
+    });
+</script>
+
+<footer class="bg-dark text-center text-lg-start mt-4" >
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark footer-nav">
+    <div class="container-fluid">
+      <span class="navbar-text">Footer Menu</span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="https://itat.gov.in/page/website_policy">WEBSITE POLICIES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://itat.gov.in/page/terms">TERMS AND CONDITIONS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://itat.gov.in/page/contactus">CONTACT US</a>
+          </li>
+         <!--   <li class="nav-item">
+            <a class="nav-link" href="https://itat.gov.in/page/sitemap">SITEMAP</a>
+          </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Last Updated : 14-mar-2024 </a>
+          </li> -->
+        </li>
+      </ul>
+    </div>
+  
+  </div>
+</nav>
+<!-- <hr style="border: 1px solid #ce9928;"> -->
+<div class="row d-flex justify-content-center align-items-center g-0">
+  <div class="col-sm-12 col-md-10 col-xl-8 col-auto text-center p-1">
+    <div class="text-white">
+    <span>
+     Website content owned and managed by Income Tax Appellate Tribunal, Department of Legal Affairs, Ministry of Law & Justice, Government of India. <br> Designed and developed by Income Tax Appellate Tribunal, Department of Legal Affairs, Ministry of Law & Justice, Government of India. <br>Hosted by National Informatics Centre (NIC), Ministry of Electronics & Information Technology, Government of India.
+   </span>
+    </div>  
+  </div>
+</div>
+</footer>

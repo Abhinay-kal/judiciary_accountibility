@@ -1,0 +1,507 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="Pragma" content="no-cache">
+      <meta http-equiv="Expires" content="-1">
+      <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- Tell the browser to be responsive to screen width -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Welcome to the Official Website of the High Court of Judicature at Allahabad and its Bench at Lucknow, U.P., India</title>
+      <meta name="keywords" contents="High Court of Judicature at Allahabad, Allahabad High Court, High Court, High Court Allahabad, High Court Lucknow Bench, History of Allahabad High Court, Chief Justices/Judges of the High Court, Administrative Setup, Cause List,INDIAN LAW REPORTS Allahabad Series, District Courts of Uttar Pradesh, Web Articles, Picture Gallery, Indian Supreme Court & High Courts, Calendar">
+      <link href="/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="StyleSheet" href="/css/alldhc_new.css" type="text/css">
+      <link rel="StyleSheet" href="/css/ald_style_new.css" type="text/css">
+      <link rel="StyleSheet" href="/css/accessibility.css" type="text/css">
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
+      <!--[if lt IE 9]>
+         <script src="https:**oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https:**oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <script src="/alldhc_org.js"></script>
+      <style>
+         .counter span {
+            display: inline-block;
+            //padding: 1px 2px 1px;
+            //border:1px solid #a5a4a4;
+           // border-radius: 10px;
+           // background: #dbdbdb;
+            margin: 1px 1px;
+            font-size: 1.0rem;
+         }
+         .counter{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            margin-bottom: 0px;
+            padding: 0px;
+         }
+         .message {
+            //color: #ccc6e3;
+            text-align: center;
+            margin-top: 0px;
+         }
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+      </style>
+
+<style>
+  /* Hide page by default */
+  html { display : none; }
+</style>
+
+<script>
+  if (self == top) {
+    // Everything checks out, show the page.
+    document.documentElement.style.display = 'block';
+  } else {
+    // Break out of the frame.
+    top.location = self.location;
+  }
+</script>
+
+   </head>
+   <body onLoad="bodyOnLoad()">
+      <section class="container">
+         <div class="pre-header">
+            <div class="row">
+               <div class="col-md-12 text-center">
+                  <h2 class="text-center heading"><strong>HIGH COURT OF JUDICATURE AT ALLAHABAD</strong></h2>
+               </div>
+            </div>       
+         </div>
+         <!-- Very Important Notice Section Start -->
+         <section class="text-center">
+            <em class="switch flex-end">
+               <ul>
+                  <li><button class="inner-switch-dark" onclick="darkMode()" title="Enable Contrast Mode">A</button></li>
+                  <li><button id="btn-decrease">A-</button></li>
+                  <li><button id="btn-orig">A</button></li>
+                  <li><button id="btn-increase">A+</button></li>
+               </ul>
+            </em>
+         </section>
+         <section class="text-center">
+            <div style="margin-bottom: 0px">
+               <table border="0" width="100%">
+                  <tr>
+                     <td width="40%">&nbsp;</td>
+                     <td width="40%">&nbsp;</td>
+                     <!--<td width="33%" valign="top"><img alt="75 Azadi Ka Amrit Mahotsav" align="middle" BORDER="0" SRC="images/amrit-mahotsav.png"></td>-->
+                     <td align="right" valign="top">
+                        
+                        <div class="counter" style="font-size: 6pt; margin-top: 0; margin-bottom: 0">
+                           <span id="counter"></span>
+                        </div>
+                        <div class="message" style="font-size: 6pt; margin-top: 0; margin-bottom: 3pt;">
+                           <!--Visitor's Count since Nov 07, 2021-->
+                        </div>
+                     </td>
+                  </tr>
+               </table>
+            </div>
+         </section>
+
+         <section class="text-center">
+            <div style="margin-bottom: 0px">
+               <table align="center" width="60%">
+                  <tr>
+                     <td>
+                        <div class="slideshow-container">
+                           <div class="mySlides fade">
+                              <img src="image/building/ald/main/azadiamrit09.jpeg" height="240" width="100%">
+                              <!--<div class="text">Caption Text</div>-->
+                           </div>
+                           <div class="mySlides fade">
+                              <img src="image/building/lko/new/azadiamrit02.jpeg" height="240" width="100%">
+                              <!--<div class="text">Caption Text</div>-->
+                           </div>
+                           <div class="mySlides fade">
+                              <img src="image/building/ald/main/azadiamrit12.jpeg" height="240" width="100%">
+                           </div>
+<div class="mySlides fade">
+  <!--<div class="numbertext">3 / 3</div>-->
+  <img src="image/building/lko/new/azadiamrit03.jpeg" height="240" width="100%">
+  <!--<div class="text">Caption Three</div>-->
+</div>
+
+<div class="mySlides fade">
+  <!--<div class="numbertext">4 / 3</div>-->
+  <img src="image/building/ald/main/azadiamrit13.jpeg" height="240" width="100%">
+  <!--<div class="text">Caption Three</div>-->
+</div>
+<div class="mySlides fade">
+  <!--<div class="numbertext">4 / 3</div>-->
+  <img src="image/building/lko/new/azadiamrit04.jpeg" height="240" width="100%">
+  <!--<div class="text">Caption Three</div>-->
+</div>
+
+<div class="mySlides fade">
+  <!--<div class="numbertext">5 / 3</div>-->
+  <img src="image/building/ald/main/azadiamrit14.jpeg" height="240" width="100%">
+  <!--<div class="text">Caption Three</div>-->
+</div>
+<div class="mySlides fade">
+  <!--<div class="numbertext">5 / 3</div>-->
+  <img src="image/building/lko/new/azadiamrit06.jpeg" height="240" width="100%">
+  <!--<div class="text">Caption Three</div>-->
+</div>
+
+<div class="mySlides fade">
+  <!--<div class="numbertext">6 / 3</div>-->
+  <img src="image/building/ald/main/azadiamrit07.jpeg" height="240" width="100%">
+  <!--<div class="text">Caption Three</div>-->
+</div>
+<div class="mySlides fade">
+  <!--<div class="numbertext">6 / 3</div>-->
+  <img src="image/building/lko/new/azadiamrit07.jpeg" height="240" width="100%">
+  <!--<div class="text">Caption Three</div>-->
+</div>
+
+
+</div>
+<br>
+
+<div style="display:none; text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <!--<span class="dot"></span> 
+  <span class="dot"></span>-->
+</div>
+                     </td>
+                     
+                  </tr>
+                  <!--<tr>
+                     <td colspan="3" width="33%"><marquee behavior="scroll" direction="left" scrollamount="5">Hon'ble Courts at the High Court of Judicature at Allahabad & its Bench at Lucknow shall function in virtual mode only.</marquee></td>
+                  </tr>-->
+            
+               </table>
+            </div>
+         </section>
+         <!-- Very Important Notice Section End -->
+         <!-- Header Start -->
+         <div class="header resizable">
+            <!-- top Navigation with search Start -->
+            <div class="row">
+               <div class="col-md-1"></div>
+               <div class="col-md-12 text-center">
+                  <nav class="navbar navbar-expand-lg navbar-light text-center bg-tmb" style="padding:0.4rem 0.4rem">
+                  <div class="pull-right">
+                     <form class="form-inline pull-right" method=get action="https://www.google.com/search">
+                        <input type=hidden name=ie value=UTF-8>
+                        <input type=hidden name=oe value=UTF-8>
+                        <input type=text name=q class="search form-control mr-sm-2" placeholder="Search" aria-label="Search" value="">
+                        <input type=submit name=btnG value="Search" class="btn btn-default">
+                        <input type=hidden name=domains value="allahabadhighcourt.in">
+                        <input type="hidden" name="sitesearch" value="www.allahabadhighcourt.in">
+                     </form>
+                  </div>
+                  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb" style="background-color: #fff;">
+                  <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse pull-right" id="navb">
+                     <ul class="navbar-nav pull-right" style="padding:0 15%">
+                        <li class="nav-item">
+                           <a class="nav-link" target="_blank" href="efiling_21042021_landing.html">eFiling</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="vc.html">Video Conferencing</a>
+                           <!--<a class="nav-link" href="/event/event_9302_16-04-2021.pdf">Video Conferencing</a>-->
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="egatepass.html">eGate Pass</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="https://mail.allahabadhighcourt.in/mail/WebmailLogin.html">Webmail</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="/calendar">Web Diary</a>
+                        </li>
+                     </ul>
+                  </div>
+                  </nav>
+               </div>
+               <div class="col-md-1"></div>
+            </div>
+            <!-- top Navigation with search End -->
+         </div>
+         <!-- Header End -->
+         <div class="main">
+            <div class="row">
+            <!-- Sidebar Menu Start -->
+               <div class="col-md-4">
+                  <aside class="left-sidebar">
+                     <nav id="sidemenu">
+                        <ul>
+                           <li><a href="/service">Judges</a></li>
+                           <li><a href="/causelist">Cause List</a></li>
+                           <li><a href="https://courtview2.allahabadhighcourt.in/">Display Board</a></li>
+                           <li><a href="case_status.html">Status Reports</a></li>
+                           <li><a href="jo.htm">Judgments/Orders</a></li>
+                       <!--    <li><a href="http://elegalix.allahabadhighcourt.in/elegalix/WebStartFullBenchSearch.do">Full Bench Decisions</a></li> 
+                           <li><a href="/ILR">Indian Law Reports</a></li>-->
+                           <li><a href="https://www2.allahabadhighcourt.in/ilr">Indian Law Reports</a></li>
+                           <li><a href="/calendar/itemWiseList.jsp?group=11">Roster/Constitution</a></li>
+                           <li><a href="jclock.html">Justice Clock</a></li>
+			<!--   <li><a href="https://elegalix.allahabadhighcourt.in/elegalix/translation/vernacular2.html">अनुवादित निर्णय</a></li> -->
+			<!--   <li><a href="https://www2.allahabadhighcourt.in/ahcr/">ई-इलाहाबाद उच्च न्यायालय निर्णय पत्रिका</a></li> -->
+  			   <li><a href="https://www2.allahabadhighcourt.in/misc/suvas/index.html">ई-इलाहाबाद उच्च न्यायालय निर्णय पत्रिका (e-AHCR)</a></li>
+			   <li><a href="https://www2.allahabadhighcourt.in/misc/suvas/nyayabha.html">न्यायाभा - न्याय की किरण</a><img alt="New Update" src="/image/new.gif"></li>
+                        </ul>
+                     </nav>
+                  </aside>
+               </div>
+               <!-- Sidebar Menu End -->
+
+            <!-- Judgement Headlines Start -->
+            <div class="col-md-4 text-center">
+              <aside class="right-sidebar">
+                <div id="sidebar1">
+                  <div class="col-md-12">
+                    <h6>Judgment Headlines <a href="https://elegalix.allahabadhighcourt.in/elegalix/rssfeed.do" class="rss"><img alt="RSS Feed" src="/image/rss.gif"></a></h6>
+                    <script>
+                      var iframesrc1="https://elegalix.allahabadhighcourt.in/elegalix/ScrollingHeadLines.do"
+                      document.write('<iframe id="datamain1" src="'+iframesrc1+'" width="200px" height="240px" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" STYLE="background-color: transparent"></iframe>')
+                     </script>
+                  </div>
+               </div>
+             </aside>
+            </div>
+            <!-- Judgement Headlines End -->
+
+            <!-- Other Headlines Start -->
+            <div class="col-md-4">
+              <aside class="right-sidebar">
+                <div id="sidebar2">
+                  <div class="col-md-12">
+                    <h6>Other Headlines <a href="/calendar/rssHeadlines.jsp" class="rss"><img alt="RSS Feed" src="/image/rss.gif"></a></h6>
+                     <script>
+                      var iframesrc2="/calendar/latest.jsp"
+                      document.write('<iframe id="datamain2" src="'+iframesrc2+'" width="200px" height="240px" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" STYLE="background-color: transparent"></iframe>')
+                     </script>
+                  </div>
+               </div>
+             </aside>
+            </div>
+            <!-- Other Headlines end -->
+          </div>
+        </div>
+        
+	<!-- Important Notice Section Start --> 
+
+         <div class="row">
+    	    <div class="col-md-12 text-center">
+            <ul class="text-left" style="display:inline-block;vertical-align:middle; font-size:8pt; list-style-type: none;">
+               <li><A target="_blank" HREF="/event/event_19076_02-07-2024.pdf">Notice for providing authentic details/informations/photographs related to the enlisted former Hon. Judges</A><br></li>		
+               <li><A target="_blank" HREF="/event/event_12355_24-07-2022.pdf">Special Arrears Committee to monitor expeditious disposal of Execution Petitions/ Applications U/s 34 of the Arbitration and Conciliation Act, 1996</A><br></li>
+               	<li><A target="_blank" HREF="/event/event_16207_11-09-2023.pdf">Press Release regarding facility to argue cases listed before Hon'ble Court through virtual mode (video conferencing)</A><br></li>
+               	<!--<li><A target="_blank" HREF="/event/event_10683_07-01-2022.html">List of Fresh Cases to be taken up on day-to-day basis at Allahabad</A><br></li>-->
+               	<li><A target="_blank" HREF="/calendar/cleardefectivelist.jsp">List of Case Files Reported Defective</A><br></li>
+                <li><A target="_blank" HREF="/event/event_9318_20-04-2021.pdf">Digital Courts Vision & Roadmap (Draft) Phase III of the eCourts Project</A><br></li>
+	   </ul>
+    	   </div>
+  	</div> 
+
+        
+       <!-- Important Notice Section End -->
+
+        <div class="footer">
+          <!-- Footer Menu Start -->
+          <div class="col-md-12 footer-navigation text-center">
+            <ul>
+              <li><a href="javascript:helpdesk()">Help Desk Number</a></li>
+              <li><a href="intro.htm">About Us</a></li>
+              <li><a href="https://advch.allahabadhighcourt.in" target="_blank">Chamber Allocation</a></li>
+              <li><a href="https://hclko.allahabadhighcourt.in/jjclko/" target="_blank">High Court Juvenile Justice Committee</a></li>
+              <li><a href="https://www2.allahabadhighcourt.in/accessibility/htm/index.html" target="_blank">Accessibility Committee</a></li>
+              <li><a href="/admin">Administration</a></li>
+              <li><a href="/event/event_6115_12-07-2019.html">Android App</a></li>
+              <li><a href="/Calendar/calendar.htm">Calendar</a></li>
+              <li><a href="https://www2.allahabadhighcourt.in/ccourt/ReportsT.jsp">Commercial Court/Division</a></li>
+              <li><a href="contact.htm">Contact Us</a></li>
+              <li><a href="dc.htm">District Courts</a></li>
+              <li><a href="https://dc.allahabadhighcourt.in" target="_blank">e-Services for Judicial Officers</a></li>
+              <li><a href="hclsc.html">HC Legal Services</a></li>
+              <li><a href="https://cbp.igotkarmayogi.gov.in/author/content-detail/do_1142849324072960001312/overview-v2?preview=true&editMode=true" target="_blank">iGOT Portal for Training Videos on NSTEP & BOMS</a></li>
+              <li><a href="/iccomm" target="_blank">Internal Committee under Sexual Harassment Act</a></li>
+              <li><a href="https://www2.allahabadhighcourt.in/internshipTech/htm/index.html" target="_blank">Internship Program For IT Students</a></li>
+              <li><a href="https://www2.allahabadhighcourt.in/internship/htm/" target="_blank">Internship Program For Law Students</a></li>
+              <li><a href="/mngt/pisj/registry.jsp" target="_blank">Judicial Officers in Registry</a></li>
+              <li><a href="https://www2.allahabadhighcourt.in/misc/museum/index.html">Law Museum & Archives</a></li>
+              <li><a href="/library">Library</a></li>
+              <li><a href="/mediation">Mediation</a></li>
+              <li><a href="https://apps2.allahabadhighcourt.in/mediation/index.html">ePayment for Mediation</a></li>
+              <li><a href="/mig/index.html">MIG Legal Aid Society</a></li>
+              <li><a href="https://www2.allahabadhighcourt.in/OCRegistration/htm/index.html"><b>Non Official Oath Commissioner-2026</b></a></li>
+              <li><a href="pgsmail.html">Public Grievances & Suggestions</a></li>
+              
+              <li><a href="publications.html">Publications</a></li>
+              <li><a href="/calendar/itemWiseList.jsp?group=7">Recruitment</a></li>
+              <li><a href="/advocate">Roll of Advocates</a></li>
+              <li><a href="/rti">RTI</a></li>
+              <li><a href="https://sclsc.gov.in/">SC Legal Services</a></li>
+              <!--<li><a href="https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/index&escr_flag=Y">eSCR</a></li>-->
+              <li><a href="https://scr.sci.gov.in/scrsearch/">SCR</a></li>
+              <li><a href="links.htm">Web Links</a></li>
+              <li><a href="/calendar/itemWiseList.jsp?group=5">Notification/Order</a></li>
+              <li><a href="javascript:screenreading()">Screen Reading</a></li>
+              <li><a href="/misc/tribunal_vacancy.html">Tribunal Vacancy</a></li>
+              <li><a href="https://apps.allahabadhighcourt.in/hjs/" target="_blank">U.P.H.J.S.-2023</a></li>
+<!--              <li><a href="uphjs.html" target="_blank"><b>U.P.H.J.S.-2023</b></a></li>-->
+              <li><a href="/misc/vacancy_chart.html">Vacancy Position</a></li>
+              <li><a href="javascript:disclaimer()">Disclaimer</a></li>
+            </ul>
+          </div>
+          <!-- Footer Menu End -->
+         <!--<div class="counter">
+               <span class="counter-item">0</span>
+               <span class="counter-item">0</span>
+               <span class="counter-item">0</span>
+               <span class="counter-item">0</span>
+               <span class="counter-item">0</span>
+               <span class="counter-item">0</span>
+               <span class="counter-item">0</span>
+               <span class="counter-item">0</span>
+               <span class="counter-item">0</span>
+               <span class="counter-item">0</span>
+            </div>
+            <div class="message">
+             Unique Visits to this Website
+            </div>-->
+        </div>
+      </section>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/mscript.js"></script>
+    <script src="/js/counter_new.js"></script>
+    <script src="/js/accessibility.js"></script>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+</script>
+    <script>
+      <!--
+         message = "Welcome to the Official Website of the High Court of Judicature at Allahabad and its Bench at Lucknow, U.P., India^" + "^"
+         scrollSpeed = 50
+         lineDelay   = 2500
+         txt         = ""
+         function scrollText(pos) {
+            if (message.charAt(pos) != '^') {
+               txt    = txt + message.charAt(pos)
+               status = txt
+               pauze  = scrollSpeed
+            }
+            else {
+               pauze = lineDelay
+               txt   = ""
+               if (pos == message.length-1) pos = -1
+            }
+            pos++
+            setTimeout("scrollText('"+pos+"')",pauze)
+         }
+         //-->
+         scrollText(0)
+      </script>
+
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-199006-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+  </body>
+</html>

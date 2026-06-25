@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
+import type { Route } from "next";
 import React, { Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 const AdminCorrectionQueue = dynamic(
@@ -178,6 +179,7 @@ function UnifiedHubInner() {
   const [section, setSection] = useState<HubSectionKey>(() => asSection(searchParams.get("section")));
   const [mountedSections, setMountedSections] = useState<Set<HubSectionKey>>(() => new Set([asSection(searchParams.get("section"))]));
   const [message, setMessage] = useState("");
+  const [showSectionMenu, setShowSectionMenu] = useState(false);
 
   const [courtStats, setCourtStats] = useState<CourtStat[]>([]);
   const [flags, setFlags] = useState<FlagItem[]>([]);
@@ -270,7 +272,7 @@ function UnifiedHubInner() {
   );
 
   const fetchJsonDedup = useCallback(
-    async <T,>(key: string, url: string): Promise<T> => {
+    async function fetchJsonDedupInner<T>(key: string, url: string): Promise<T> {
       const existing = inFlightRequests.current.get(key);
       if (existing) {
         return existing as Promise<T>;
@@ -536,102 +538,256 @@ function UnifiedHubInner() {
   }
 
   return (
-    <div className="space-y-4">
-      <header className="card flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-        <div>
-          <h1 className="font-display text-3xl text-ink">Unified Operations Hub</h1>
-          <p className="text-sm text-ink/70">
-            One place for public insights and admin actions. Use the left menu to switch sections without changing pages.
-          </p>
+    <div className="space-y-8">
+      {/* Header Section */}
+      <header className="flex items-start justify-between gap-4">
+        <div className="flex-1 space-y-1">
+          <p className="text-xs font-semibold tracking-widest text-ocean/70 uppercase">Sustainable Data</p>
+          <h1 className="font-display text-5xl font-bold text-ink">Unified Operations Hub</h1>
         </div>
-        <div className="flex flex-wrap gap-2 text-xs">
-          <Link href="/legacy" className="rounded-lg border border-ink/20 px-3 py-2 hover:bg-white/70">Legacy Home</Link>
-          <a href={BACKEND_DOCS_URL} className="rounded-lg border border-ink/20 px-3 py-2 hover:bg-white/70" target="_blank" rel="noreferrer">API Docs</a>
-          <Link href="/admin/population" className="rounded-lg border border-ink/20 px-3 py-2 hover:bg-white/70">Population Page</Link>
+        <div className="flex gap-2 pt-2">
+          <Link
+            href="/analytics"
+            className="text-xs font-semibold text-ocean hover:underline whitespace-nowrap"
+          >
+            View Analytics →
+          </Link>
+          <button
+            onClick={() => setShowSectionMenu(!showSectionMenu)}
+            className="text-2xl hover:opacity-70 transition-opacity"
+            title="Toggle navigation menu"
+          >
+            ☰
+          </button>
         </div>
       </header>
 
-      {message ? <p className="rounded-lg border border-ink/20 bg-white/70 px-3 py-2 text-sm text-ink/80">{message}</p> : null}
-
-      <div className="grid gap-4 lg:grid-cols-[280px_minmax(0,1fr)]">
-        <aside className="card h-fit lg:sticky lg:top-6">
-          <h2 className="font-display text-xl">Sections</h2>
-          <p className="mt-1 text-xs text-ink/65">Everything is available in this single interface.</p>
-          <nav className="mt-3 space-y-2">
-            {SECTIONS.map((item) => (
-              <button
-                key={item.key}
-                className={`w-full rounded-lg border px-3 py-2 text-left ${
-                  section === item.key
-                    ? "border-ocean/60 bg-ocean/10"
-                    : "border-ink/10 bg-white/70 hover:bg-white"
-                }`}
-                onClick={() => setSection(item.key)}
-              >
-                <p className="text-sm font-semibold text-ink">{item.label}</p>
-                <p className="text-xs text-ink/70">{item.helper}</p>
-              </button>
-            ))}
-          </nav>
-
-          <div className="mt-4 space-y-2 rounded-xl border border-ink/10 bg-white/80 p-3 text-xs">
-            <p><span className="font-semibold">Total Cases:</span> {totalCases}</p>
-            <p><span className="font-semibold">Flags:</span> {flags.length}</p>
-            <p><span className="font-semibold">Pending Feedback:</span> {feedbackRows.length}</p>
-            <p><span className="font-semibold">Active Runs:</span> {populationRuns.filter((run) => ACTIVE_STATUSES.has(run.status)).length}</p>
-          </div>
-        </aside>
-
-        <section className="space-y-4">
-          {section === "overview" || mountedSections.has("overview") ? (
-            <div className={section === "overview" ? "space-y-4" : "hidden"}>
-              {isLoadingPublic && courtStats.length === 0 ? <SectionSkeleton rows={5} /> : null}
-              <div className="grid gap-3 md:grid-cols-3">
-                <div className="card"><p className="text-xs text-ink/60">Total Cases</p><p className="font-display text-3xl">{totalCases}</p></div>
-                <div className="card"><p className="text-xs text-ink/60">Pending Cases</p><p className="font-display text-3xl">{pendingCases}</p></div>
-                <div className="card"><p className="text-xs text-ink/60">Disposed Cases</p><p className="font-display text-3xl">{disposedCases}</p></div>
+      {/* Section Navigation Drawer */}
+      {showSectionMenu && (
+        <div className="fixed inset-0 z-50 bg-black/30 backdrop-blur-sm" onClick={() => setShowSectionMenu(false)}>
+          <div className="fixed inset-y-0 left-0 w-64 bg-white shadow-xl overflow-auto" onClick={(e) => e.stopPropagation()}>
+            <div className="p-6 space-y-4">
+              <div className="flex items-center justify-between gap-4 mb-6">
+                <h2 className="font-display text-2xl font-bold text-ink">Sections</h2>
+                <button
+                  onClick={() => setShowSectionMenu(false)}
+                  className="text-2xl hover:opacity-70"
+                >
+                  ✕
+                </button>
               </div>
-
-              <DelayBarChart
-                data={courtStats
-                  .slice()
-                  .sort((a, b) => b.pending_cases - a.pending_cases)
-                  .slice(0, 8)
-                  .map((item) => ({ court: item.court_name, pending: item.pending_cases }))}
-              />
-
-              <div className="card">
-                <h3 className="font-display text-xl">Recent flagged cases</h3>
-                <ul className="mt-3 space-y-2 text-sm">
-                  {flags.map((item) => (
-                    <li key={item.id} className="rounded-lg border border-ink/10 bg-white p-2">
-                      <p className="font-semibold">Case #{item.case_id} - {item.flag_type}</p>
-                      {item.details?.summary ? <p className="mt-1 text-xs text-ink/70">{item.details.summary}</p> : null}
-                    </li>
-                  ))}
-                  {flags.length === 0 ? <li>No flagged cases yet.</li> : null}
-                </ul>
-              </div>
+              <nav className="space-y-2">
+                {[
+                  { key: "overview", label: "Overview", icon: "📊" },
+                  { key: "search", label: "Search Cases", icon: "🔍" },
+                  { key: "judges", label: "Judges", icon: "⚖️" },
+                  { key: "heatmap", label: "Court Heatmap", icon: "🔥" },
+                  { key: "analytics", label: "Analytics", icon: "📈" },
+                  { key: "delay_detection", label: "Delay Detection", icon: "⚡" },
+                  { key: "corrections", label: "Corrections", icon: "✏️" },
+                  { key: "feedback", label: "Right-to-Respond", icon: "💬" },
+                  { key: "population", label: "Population", icon: "🔄" },
+                  { key: "open_data", label: "Open Data", icon: "📂" },
+                ].map((item) => (
+                  <button
+                    key={item.key}
+                    onClick={() => {
+                      setSection(item.key as HubSectionKey);
+                      setShowSectionMenu(false);
+                      setMountedSections(new Set([...mountedSections, item.key as HubSectionKey]));
+                    }}
+                    className={`w-full text-left px-4 py-2 rounded-lg transition-colors ${
+                      section === item.key
+                        ? "bg-ocean/10 border border-ocean/60"
+                        : "border border-ink/10 hover:bg-white/70"
+                    }`}
+                  >
+                    <p className="text-sm font-semibold text-ink">
+                      <span className="mr-2">{item.icon}</span>
+                      {item.label}
+                    </p>
+                  </button>
+                ))}
+              </nav>
             </div>
-          ) : null}
+          </div>
+        </div>
+      )}
 
-          {section === "search" || mountedSections.has("search") ? (
-            <div className={section === "search" ? "space-y-4" : "hidden"}>
-              <div className="card">
-                <h3 className="font-display text-xl">Search cases</h3>
-                <p className="text-sm text-ink/70">Find cases by case number, court, or party keywords.</p>
-                <form onSubmit={submitSearch} className="mt-3 flex gap-2">
-                  <input
-                    className="w-full rounded-lg border border-ink/20 bg-white p-3"
-                    value={searchQuery}
-                    onChange={(event) => setSearchQuery(event.target.value)}
-                    placeholder="Enter case number, court, or party keyword"
-                  />
-                  <button className="rounded-lg bg-ocean px-4 py-2 text-white" type="submit">Search</button>
-                </form>
+      {/* Stats Grid */}
+      <section className="grid gap-6 md:grid-cols-3">
+        <div className="rounded-xl border border-ink/10 bg-white p-6 shadow-sm">
+          <p className="text-sm font-medium text-ink/60">Total Cases Initiated</p>
+          <p className="mt-3 font-display text-4xl font-bold text-ink">{totalCases}</p>
+        </div>
+        <div className="rounded-xl border border-ink/10 bg-white p-6 shadow-sm">
+          <p className="text-sm font-medium text-ink/60">Pending Cases</p>
+          <p className="mt-3 font-display text-4xl font-bold text-ocean">{pendingCases}</p>
+        </div>
+        <div className="rounded-xl border border-ink/10 bg-white p-6 shadow-sm">
+          <p className="text-sm font-medium text-ink/60">Disposed Cases</p>
+          <p className="mt-3 font-display text-4xl font-bold text-ink">{disposedCases}</p>
+        </div>
+      </section>
+
+      {/* Top Delayed Courts */}
+      <section className="space-y-4">
+        <div>
+          <h2 className="font-display text-2xl font-bold text-ink">Top Delayed Courts</h2>
+          <p className="mt-1 text-sm text-ink/60">Comparative analysis of judicial bottlenecks across regional jurisdictions based on active case data.</p>
+        </div>
+
+        {isLoadingPublic && courtStats.length === 0 ? (
+          <div className="space-y-3">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <div key={i} className="h-14 rounded-lg bg-ink/5 animate-pulse" />
+            ))}
+          </div>
+        ) : (
+          <div className="space-y-2">
+            {courtStats
+              .slice()
+              .sort((a, b) => b.pending_cases - a.pending_cases)
+              .slice(0, 5)
+              .map((court) => {
+                const maxPending = Math.max(...courtStats.map((c) => c.pending_cases), 1);
+                const percentage = (court.pending_cases / maxPending) * 100;
+                return (
+                  <div key={court.court_id} className="rounded-lg border border-ink/10 bg-white p-4">
+                    <div className="flex items-center justify-between gap-4 mb-2">
+                      <p className="text-sm font-semibold text-ink flex-1">{court.court_name}</p>
+                      <p className="text-right">
+                        <span className="text-xs text-ink/60">11 Dec 2024</span>
+                      </p>
+                    </div>
+                    <div className="h-2 w-full overflow-hidden rounded-full bg-ink/10">
+                      <div
+                        className="h-full bg-gradient-to-r from-ocean to-ocean/70 transition-all"
+                        style={{ width: `${percentage}%` }}
+                      />
+                    </div>
+                    <div className="mt-2 flex justify-between">
+                      <p className="text-xs text-ink/60">Pending cases</p>
+                      <p className="font-semibold text-ink text-sm">{court.pending_cases}</p>
+                    </div>
+                  </div>
+                );
+              })}
+          </div>
+        )}
+      </section>
+
+      {/* Recent Flagged Cases */}
+      <section className="space-y-4">
+        <div>
+          <h2 className="font-display text-2xl font-bold text-ink">Recent Flagged Cases</h2>
+        </div>
+
+        {flags.length === 0 && !isLoadingPublic ? (
+          <div className="rounded-lg border border-ink/10 bg-white/50 p-12 text-center">
+            <p className="text-sm text-ink/60">No flagged cases at this time</p>
+          </div>
+        ) : (
+          <div className="space-y-2">
+            {flags.slice(0, 5).map((flag) => (
+              <div key={flag.id} className="rounded-lg border border-ink/10 bg-white p-4 hover:border-ink/20 transition-colors">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex-1">
+                    <p className="font-semibold text-ink">Case #{flag.case_id}</p>
+                    <p className="mt-1 text-sm text-ink/60 capitalize">{flag.flag_type}</p>
+                    {flag.details?.summary && (
+                      <p className="mt-2 text-sm text-ink/70 line-clamp-2">{flag.details.summary}</p>
+                    )}
+                  </div>
+                  <Link
+                    href={`/cases/${flag.case_id}`}
+                    className="text-xs font-medium text-ocean hover:underline whitespace-nowrap"
+                  >
+                    View
+                  </Link>
+                </div>
               </div>
+            ))}
+          </div>
+        )}
+      </section>
 
-              <div className="card">
+      {/* Quick Navigation */}
+      <section className="space-y-4">
+        <h2 className="font-display text-2xl font-bold text-ink">Quick Access</h2>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <Link
+            href="/search"
+            className="rounded-lg border border-ink/10 bg-white p-5 hover:border-ink/20 hover:bg-white/80 transition-colors group"
+          >
+            <div className="h-10 w-10 rounded-lg bg-ocean/10 flex items-center justify-center group-hover:bg-ocean/20 transition-colors">
+              <span className="text-lg">🔍</span>
+            </div>
+            <p className="mt-3 font-semibold text-ink">Case Search</p>
+            <p className="mt-1 text-xs text-ink/60">Find cases by number</p>
+          </Link>
+
+          <Link
+            href={"/judges" as Route}
+            className="rounded-lg border border-ink/10 bg-white p-5 hover:border-ink/20 hover:bg-white/80 transition-colors group"
+          >
+            <div className="h-10 w-10 rounded-lg bg-ocean/10 flex items-center justify-center group-hover:bg-ocean/20 transition-colors">
+              <span className="text-lg">⚖️</span>
+            </div>
+            <p className="mt-3 font-semibold text-ink">Judges</p>
+            <p className="mt-1 text-xs text-ink/60">Judge performance</p>
+          </Link>
+
+          <Link
+            href="/analytics"
+            className="rounded-lg border border-ink/10 bg-white p-5 hover:border-ink/20 hover:bg-white/80 transition-colors group"
+          >
+            <div className="h-10 w-10 rounded-lg bg-ocean/10 flex items-center justify-center group-hover:bg-ocean/20 transition-colors">
+              <span className="text-lg">📊</span>
+            </div>
+            <p className="mt-3 font-semibold text-ink">Analytics</p>
+            <p className="mt-1 text-xs text-ink/60">Court statistics</p>
+          </Link>
+
+          <Link
+            href="/delay-detection"
+            className="rounded-lg border border-ink/10 bg-white p-5 hover:border-ink/20 hover:bg-white/80 transition-colors group"
+          >
+            <div className="h-10 w-10 rounded-lg bg-ocean/10 flex items-center justify-center group-hover:bg-ocean/20 transition-colors">
+              <span className="text-lg">⚡</span>
+            </div>
+            <p className="mt-3 font-semibold text-ink">Delay Detection</p>
+            <p className="mt-1 text-xs text-ink/60">ML-powered analysis</p>
+          </Link>
+        </div>
+      </section>
+
+      {/* Detailed Section Content */}
+      {(section !== "overview" && mountedSections.has(section)) && (
+        <section className="border-t border-ink/10 pt-8 mt-8 space-y-6">
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => setSection("overview")}
+              className="text-xs text-ocean hover:underline"
+            >
+              ← Back to Overview
+            </button>
+          </div>
+
+          {section === "search" && (
+            <div className="card">
+              <h3 className="font-display text-xl">Search cases</h3>
+              <p className="text-sm text-ink/70">Find cases by case number, court, or party keywords.</p>
+              <form onSubmit={submitSearch} className="mt-3 flex gap-2">
+                <input
+                  className="w-full rounded-lg border border-ink/20 bg-white p-3"
+                  value={searchQuery}
+                  onChange={(event) => setSearchQuery(event.target.value)}
+                  placeholder="Enter case number, court, or party keyword"
+                />
+                <button className="rounded-lg bg-ocean px-4 py-2 text-white" type="submit">Search</button>
+              </form>
+              <div className="card mt-4">
                 <h3 className="font-display text-xl">Results</h3>
                 {isLoadingSearch ? <SectionSkeleton rows={4} /> : null}
                 <ul className="mt-3 space-y-2 text-sm">
@@ -646,10 +802,10 @@ function UnifiedHubInner() {
                 </ul>
               </div>
             </div>
-          ) : null}
+          )}
 
-          {section === "judges" || mountedSections.has("judges") ? (
-            <div className={section === "judges" ? "space-y-4" : "hidden"}>
+          {section === "judges" && (
+            <div className="space-y-4">
               <div className="card">
                 <h3 className="font-display text-xl">Judge directory</h3>
                 <p className="text-sm text-ink/70">Select a judge to load stats in this panel.</p>
@@ -668,7 +824,6 @@ function UnifiedHubInner() {
                   ))}
                 </div>
               </div>
-
               <div className="card">
                 <h3 className="font-display text-xl">Judge stats</h3>
                 {isLoadingJudgeStats ? <SectionSkeleton rows={2} /> : null}
@@ -692,33 +847,36 @@ function UnifiedHubInner() {
                 )}
               </div>
             </div>
-          ) : null}
+          )}
 
-          {section === "analytics" ? (
+          {section === "analytics" && (
             <div className="card">
               <h3 className="font-display text-xl">Analytics Dashboard</h3>
               <p className="mt-2 text-sm text-ink/70">Comprehensive insights into case statistics and judicial performance across all courts.</p>
-              <p className="mt-3 text-sm">
-                Access detailed analytics including:
-              </p>
-              <ul className="mt-2 space-y-1 text-sm text-ink/70">
-                <li>• Case summary statistics (total, pending, disposed)</li>
-                <li>• Court performance metrics and comparative analysis</li>
-                <li>• Case distribution across courts and by type</li>
-                <li>• Disposal status trends and patterns</li>
-                <li>• 12-month filing trends and forecasts</li>
-              </ul>
               <Link
                 href="/analytics"
                 className="mt-4 inline-block rounded bg-ocean px-4 py-2 text-sm text-white hover:bg-ocean/80 transition-colors"
               >
-                Open Analytics Dashboard →
+                Open Full Analytics Dashboard →
               </Link>
             </div>
-          ) : null}
+          )}
 
-          {section === "heatmap" || mountedSections.has("heatmap") ? (
-            <div className={section === "heatmap" ? "card" : "hidden"}>
+          {section === "delay_detection" && (
+            <div className="card">
+              <h3 className="font-display text-xl">Deliberate Delay Detection</h3>
+              <p className="text-sm text-ink/70">ML-powered analysis of case adjournment patterns and delays.</p>
+              <Link
+                href="/delay-detection"
+                className="mt-4 inline-block rounded bg-ocean px-4 py-2 text-sm text-white hover:bg-ocean/80 transition-colors"
+              >
+                Open Delay Detection Tool →
+              </Link>
+            </div>
+          )}
+
+          {section === "heatmap" && (
+            <div className="card">
               <h3 className="font-display text-xl">Court delay heatmap</h3>
               {isLoadingPublic && courtStats.length === 0 ? <SectionSkeleton rows={4} /> : null}
               <div className="mt-3 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
@@ -734,71 +892,10 @@ function UnifiedHubInner() {
                 })}
               </div>
             </div>
-          ) : null}
+          )}
 
-          {section === "open_data" || mountedSections.has("open_data") ? (
-            <div className={section === "open_data" ? "card" : "hidden"}>
-              <h3 className="font-display text-xl">Open data catalog</h3>
-              <p className="text-sm text-ink/70">Download datasets directly from this hub.</p>
-              {isLoadingPublic && datasets.length === 0 ? <SectionSkeleton rows={3} /> : null}
-              <div className="mt-3 space-y-2">
-                {datasets.map((dataset) => (
-                  <article key={dataset.dataset_id} className="rounded-lg border border-ink/10 bg-white p-3">
-                    <div className="flex flex-wrap items-center justify-between gap-2">
-                      <p className="font-semibold">{dataset.name}</p>
-                      <span className="rounded-full bg-ink/5 px-2 py-1 text-xs">v{dataset.version}</span>
-                    </div>
-                    <p className="mt-1 text-sm text-ink/70">{dataset.description}</p>
-                    <div className="mt-2 flex flex-wrap gap-2 text-xs">
-                      <a className="rounded bg-ocean px-2 py-1 text-white" href={`/api/v1/datasets/${dataset.dataset_id}/download?format=csv`}>CSV</a>
-                      <a className="rounded bg-accent px-2 py-1 text-white" href={`/api/v1/datasets/${dataset.dataset_id}/download?format=json`}>JSON</a>
-                      <a className="rounded border border-ink/20 px-2 py-1" href={`/api/v1/datasets/${dataset.dataset_id}/schema`}>Schema</a>
-                    </div>
-                  </article>
-                ))}
-                {datasets.length === 0 ? <p className="text-sm text-ink/70">No datasets available.</p> : null}
-              </div>
-            </div>
-          ) : null}
-
-          {section === "delay_detection" || mountedSections.has("delay_detection") ? (
-            <div className={section === "delay_detection" ? "space-y-4" : "hidden"}>
-              <div className="card">
-                <h3 className="font-display text-xl">Deliberate Delay Detection</h3>
-                <p className="text-sm text-ink/70">ML-powered analysis of case adjournment patterns and delays. Analyze single cases or batch process up to 1,000 cases.</p>
-              </div>
-
-              {/* Tabs for delay detection sections */}
-              <div className="flex gap-2 overflow-x-auto">
-                <button
-                  onClick={() => {
-                    // This is handled in the components
-                  }}
-                  className="px-4 py-2 rounded-lg bg-ocean text-white font-medium whitespace-nowrap"
-                >
-                  Single Case
-                </button>
-                <button className="px-4 py-2 rounded-lg bg-ink/10 text-ink/70 font-medium whitespace-nowrap">
-                  Batch Analysis
-                </button>
-                <button className="px-4 py-2 rounded-lg bg-ink/10 text-ink/70 font-medium whitespace-nowrap">
-                  Baseline Metrics
-                </button>
-              </div>
-
-              {/* Single Case Search */}
-              <CaseDelaySearch />
-
-              {/* Baseline Metrics */}
-              <BaselineMetrics />
-
-              {/* Batch Analysis */}
-              <BatchDelayAnalysis />
-            </div>
-          ) : null}
-
-          {section === "corrections" || mountedSections.has("corrections") ? (
-            <div className={section === "corrections" ? "space-y-4" : "hidden"}>
+          {section === "corrections" && (
+            <div className="space-y-4">
               <div className="card">
                 <h3 className="font-display text-xl">Submit correction</h3>
                 <p className="text-sm text-ink/70">Configure target type and target id, then submit in one step.</p>
@@ -839,10 +936,10 @@ function UnifiedHubInner() {
                 <AdminCorrectionQueue />
               </div>
             </div>
-          ) : null}
+          )}
 
-          {section === "feedback" || mountedSections.has("feedback") ? (
-            <div className={section === "feedback" ? "card space-y-3" : "hidden"}>
+          {section === "feedback" && (
+            <div className="card space-y-3">
               <h3 className="font-display text-xl">Right-to-Respond moderation</h3>
               <label className="block text-sm">
                 Admin ID
@@ -852,7 +949,6 @@ function UnifiedHubInner() {
                   onChange={(event) => setFeedbackAdminId(event.target.value)}
                 />
               </label>
-
               <div className="space-y-2">
                 {isLoadingFeedback && feedbackRows.length === 0 ? <SectionSkeleton rows={4} /> : null}
                 {feedbackRows.map((item) => (
@@ -872,10 +968,10 @@ function UnifiedHubInner() {
                 {feedbackRows.length === 0 ? <p className="text-sm text-ink/70">No pending feedback items.</p> : null}
               </div>
             </div>
-          ) : null}
+          )}
 
-          {section === "population" || mountedSections.has("population") ? (
-            <div className={section === "population" ? "space-y-4" : "hidden"}>
+          {section === "population" && (
+            <div className="space-y-4">
               <div className="card">
                 <h3 className="font-display text-xl">Population run controls</h3>
                 <p className="text-sm text-ink/70">Start and monitor full-source ingestion directly from this panel.</p>
@@ -956,9 +1052,82 @@ function UnifiedHubInner() {
                 </article>
               </div>
             </div>
-          ) : null}
+          )}
+
+          {section === "open_data" && (
+            <div className="card">
+              <h3 className="font-display text-xl">Open data catalog</h3>
+              <p className="text-sm text-ink/70">Download datasets directly from this hub.</p>
+              {isLoadingPublic && datasets.length === 0 ? <SectionSkeleton rows={3} /> : null}
+              <div className="mt-3 space-y-2">
+                {datasets.map((dataset) => (
+                  <article key={dataset.dataset_id} className="rounded-lg border border-ink/10 bg-white p-3">
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <p className="font-semibold">{dataset.name}</p>
+                      <span className="rounded-full bg-ink/5 px-2 py-1 text-xs">v{dataset.version}</span>
+                    </div>
+                    <p className="mt-1 text-sm text-ink/70">{dataset.description}</p>
+                    <div className="mt-2 flex flex-wrap gap-2 text-xs">
+                      <a className="rounded bg-ocean px-2 py-1 text-white" href={`/api/v1/datasets/${dataset.dataset_id}/download?format=csv`}>CSV</a>
+                      <a className="rounded bg-accent px-2 py-1 text-white" href={`/api/v1/datasets/${dataset.dataset_id}/download?format=json`}>JSON</a>
+                      <a className="rounded border border-ink/20 px-2 py-1" href={`/api/v1/datasets/${dataset.dataset_id}/schema`}>Schema</a>
+                    </div>
+                  </article>
+                ))}
+                {datasets.length === 0 ? <p className="text-sm text-ink/70">No datasets available.</p> : null}
+              </div>
+            </div>
+          )}
         </section>
-      </div>
+      )}
+      <footer className="border-t border-ink/10 pt-8 mt-8">
+        <div className="grid gap-8 md:grid-cols-3">
+          <div>
+            <h4 className="font-semibold text-ink text-sm uppercase tracking-wider">Foundation</h4>
+            <p className="mt-3 text-xs text-ink/60 leading-relaxed">
+              A comprehensive platform for judicial accountability and case tracking across Indian courts.
+            </p>
+          </div>
+          <div>
+            <h4 className="font-semibold text-ink text-sm uppercase tracking-wider">Technical</h4>
+            <ul className="mt-3 space-y-2 text-xs">
+              <li>
+                <a
+                  href={BACKEND_DOCS_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-ink/60 hover:text-ocean transition-colors"
+                >
+                  API Documentation
+                </a>
+              </li>
+              <li>
+                <Link href="/legacy" className="text-ink/60 hover:text-ocean transition-colors">
+                  Legacy Interface
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold text-ink text-sm uppercase tracking-wider">Admin</h4>
+            <ul className="mt-3 space-y-2 text-xs">
+              <li>
+                <Link href="/admin/population" className="text-ink/60 hover:text-ocean transition-colors">
+                  Population Controls
+                </Link>
+              </li>
+              <li>
+                <Link href="/admin/corrections" className="text-ink/60 hover:text-ocean transition-colors">
+                  Moderation Queue
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-8 pt-6 border-t border-ink/10 text-center text-xs text-ink/50">
+          <p>© 2026 Judicial Accountability Archive. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 }

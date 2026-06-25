@@ -13,7 +13,7 @@ from app.queue.retry import IdempotencyGuard, RETRY_POLICIES, retry_countdown
 
 logger = logging.getLogger(__name__)
 settings = get_settings()
-_guard = IdempotencyGuard(settings.redis_url)
+_guard = IdempotencyGuard(settings.celery_broker_url)
 
 
 @celery_app.task(name="app.tasks.notifications.send_feedback_token_notification", bind=True, max_retries=RETRY_POLICIES["notifications"].max_retries)

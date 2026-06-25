@@ -167,7 +167,7 @@ def reprocess_raw_payload(
     5. Returns a summary dict with counts.
 
     This function is **idempotent** — the underlying upsert logic
-    deduplicates records by ``case_id``.
+    deduplicates records by ``(case_number, filing_year)``.
 
     Raises
     ------
@@ -178,8 +178,9 @@ def reprocess_raw_payload(
     """
     from app.ingestion.pipeline import ResilientIngestionPipeline  # noqa: PLC0415
     from app.services.normalization import (  # noqa: PLC0415
+        is_connection_loss_error,
         normalize_case_record,
-        upsert_case_from_normalized,
+        upsert_cases_from_normalized_bulk,
     )
 
     run: Optional[IngestionRun] = (
@@ -225,29 +226,38 @@ def reprocess_raw_payload(
         raw_storage_path=raw_path,
     )
 
-    inserted = 0
+    normalized_records: list[dict[str, Any]] = []
     failed = 0
     try:
         records = scraper.parse(raw_result) or []
     except Exception as exc:
-        logger.error("Re-parse error for run '%s': %s", run_id, exc)
+        logger.exception("Re-parse error for run '%s': %s", run_id, exc)
         return {"status": "parse_error", "error": str(exc), "inserted": 0, "failed": 0}
 
     for rec in records:
         try:
-            normalized = normalize_case_record(rec)
-            upsert_case_from_normalized(db, normalized)
-            inserted += 1
+            normalized_records.append(normalize_case_record(rec))
         except Exception as exc:
-            logger.error("Upsert error during reprocess of run '%s': %s", run_id, exc)
+            logger.exception("Normalization error during reprocess of run '%s': %s", run_id, exc)
             failed += 1
 
-    try:
-        db.commit()
-    except Exception as exc:
-        db.rollback()
-        logger.error("Commit failed during reprocess of run '%s': %s", run_id, exc)
-        return {"status": "commit_error", "error": str(exc), "inserted": 0, "failed": 0}
+    inserted = 0
+    if normalized_records:
+        try:
+            with db.begin_nested():
+                inserted = upsert_cases_from_normalized_bulk(db, normalized_records)
+        except Exception as exc:
+            db.rollback()
+            if is_connection_loss_error(exc):
+                logger.exception("Connection loss during reprocess upsert for run '%s': %s", run_id, exc)
+            else:
+                logger.exception("Bulk upsert failed during reprocess of run '%s': %s", run_id, exc)
+            return {
+                "status": "commit_error",
+                "error": str(exc),
+                "inserted": 0,
+                "failed": failed + len(normalized_records),
+            }
 
     logger.info(
         "Reprocessed run '%s': inserted=%d, failed=%d.", run_id, inserted, failed

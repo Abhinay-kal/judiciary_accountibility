@@ -5,7 +5,11 @@ from app.queue import apply_multi_queue_config
 
 settings = get_settings()
 
-celery_app = Celery("justice_tracker", broker=settings.redis_url, backend=settings.redis_url)
+celery_app = Celery(
+    "justice_tracker",
+    broker=settings.celery_broker_url,
+    backend=settings.celery_result_backend,
+)
 apply_multi_queue_config(celery_app)
 
 celery_app.conf.imports = (
@@ -22,6 +26,7 @@ celery_app.conf.imports = (
     "app.tasks.cache_tasks",
     "app.tasks.notifications",
     "app.tasks.population",
+    "app.tasks.analytics",
 )
 
 celery_app.autodiscover_tasks(["app.tasks"])

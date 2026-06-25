@@ -1,6 +1,42 @@
-# Court Case Delay & Justice Tracker - India
+# Court Case Delay & Justice Tracker - India ⚖️🇮🇳
 
-Public accountability MVP for tracking court timelines, adjournments, delay patterns, disposal rates, and potential public-official involvement in Indian court cases.
+> *"Justice delayed is justice denied. This project is a voluntary, community-driven effort to bring transparency and accountability to the Indian judicial system."*
+
+A public accountability platform built as a **voluntary initiative** for the citizens of India. I developed this project to showcase my engineering skills to recruiters while contributing to a cause I deeply care about. This platform tracks court timelines, adjournments, delay patterns, disposal rates, and potential public-official involvement in Indian court cases. My goal was to leverage my technical abilities—spanning from data engineering and machine learning to full-stack development—to build something impactful for my country.
+
+---
+
+## 🌟 Why I Built This (Community & Voluntary Work)
+
+As a citizen deeply invested in the progress of India, I realized that one of the biggest hurdles to equitable justice is the opacity of court delays. This platform was born out of a desire to volunteer my software engineering skills for a cause greater than myself. By scraping, normalizing, and analyzing public judicial data, this project aims to provide researchers, journalists, and citizens with the insights they need to advocate for a more accountable judicial system. It's my small way of giving back to the community and working towards a better India.
+
+**For Recruiters:** This repository demonstrates my capability to architect and deliver complex, end-to-end data-intensive applications. You'll find evidence of clean system design, production-grade ingestion pipelines, machine learning integration, and robust backend engineering. We have used `graphify` to map out the system architecture and provide visual insights into the codebase and relationships.
+
+---
+
+## System Architecture & Insights (Generated via Graphify)
+
+To help recruiters and contributors quickly understand the architecture of this platform, I have mapped the codebase using [Graphify](https://github.com/safishamsi/graphify). This provides a complete knowledge graph of the system. 
+
+### 🗺️ Interactive System Diagram
+An interactive HTML diagram of the system design has been generated. 
+**Open `graphify-out/graph.html` in your browser to explore the interactive system architecture.**
+
+### ⚡ Architectural Insights (God Nodes)
+These are the most highly-connected core abstractions in the codebase, showcasing robust modular design:
+1. `IngestionSource` - Core model for our resilient data pipelines (76 edges)
+2. `Base` - SQLAlchemy declarative base (64 edges)
+3. `RTIGenerator` - Automated Right-to-Information request generator (51 edges)
+4. `FeatureEngineer` - Machine Learning feature extraction for delays (49 edges)
+5. `StorageClient` - Cloud-agnostic object storage wrapper (48 edges)
+
+### 🔗 Surprising/Implicit Connections
+Graphify surfaced several cross-module dependencies that highlight the system's integration:
+- `_serialize_case()` (API routes) calls `build_delay_summary_text()` (Analytics) 
+- `KaplanMeierResult` (Hazard models) bridges directly with the `km.py` estimators for survival curves.
+- `UploadFile` (FastAPI) triggers `FeedbackService` for automated moderation and public feedback gathering.
+
+---
 
 ## One-Click Start
 

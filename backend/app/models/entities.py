@@ -7,7 +7,7 @@ from typing import Optional
 
 from sqlalchemy import Boolean, Date, DateTime, Enum, Float, ForeignKey, Index, Integer, String, Text, UniqueConstraint, func
 from sqlalchemy.dialects.postgresql import JSONB
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+from sqlalchemy.orm import Mapped, mapped_column, relationship, synonym
 
 from app.db.base import Base
 
@@ -339,6 +339,7 @@ class JudgeRegistry(Base):
         default=lambda: str(uuid.uuid4()),
     )
     canonical_name: Mapped[str] = mapped_column(String(255), nullable=False)
+    name: Mapped[str] = synonym("canonical_name")
     name_variants: Mapped[dict] = mapped_column(JSONB, nullable=False, default=dict)
     phonetic_keys: Mapped[dict] = mapped_column(JSONB, nullable=False, default=dict)
     service_number: Mapped[Optional[str]] = mapped_column(String(100), nullable=True, index=True)
@@ -430,7 +431,7 @@ class CaseCounsel(TimestampSoftDeleteMixin, Base):
 class Case(TimestampSoftDeleteMixin, Base):
     __tablename__ = "cases"
     __table_args__ = (
-        UniqueConstraint("case_number", "court_id", name="uq_case_number_court"),
+        UniqueConstraint("case_number", "filing_year", name="uq_case_number_filing_year"),
         Index("idx_cases_status_state", "status", "state"),
         Index("idx_cases_court_status_next_hearing", "court_id", "status", "next_hearing_date"),
         Index("idx_cases_state_case_type_filing", "state", "case_type", "filing_date"),
@@ -447,6 +448,7 @@ class Case(TimestampSoftDeleteMixin, Base):
     bench: Mapped[Optional[str]] = mapped_column(String(255), nullable=True)
     judges_text: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     filing_date: Mapped[Optional[date]] = mapped_column(Date, nullable=True)
+    filing_year: Mapped[int] = mapped_column(Integer, nullable=False, default=0, index=True)
     next_hearing_date: Mapped[Optional[date]] = mapped_column(Date, nullable=True)
     case_type: Mapped[Optional[str]] = mapped_column(String(100), nullable=True, index=True)
     status: Mapped[str] = mapped_column(String(50), nullable=False, index=True)
@@ -1027,6 +1029,24 @@ class DelayBaseline(Base):
     sample_size: Mapped[int] = mapped_column(Integer, nullable=False)
     window_years: Mapped[int] = mapped_column(Integer, nullable=False, default=7)
     computed_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+
+
+class CourtAnalyticalSnapshot(Base):
+    __tablename__ = "court_analytical_snapshots"
+    __table_args__ = (
+        Index("idx_court_analytical_snapshots_court_id_unique", "court_id", unique=True),
+    )
+
+    court_id: Mapped[int] = mapped_column(ForeignKey("courts.id"), primary_key=True)
+    mean_adjournment_rate: Mapped[float] = mapped_column(Float, nullable=False)
+    std_dev_adjournment_rate: Mapped[float] = mapped_column(Float, nullable=False)
+    median_time_between_hearings_days: Mapped[float] = mapped_column(Float, nullable=False)
+    calculated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True),
+        server_default=func.now(),
+        onupdate=func.now(),
+        nullable=False,
+    )
 
 
 class SurvivalCurve(Base):

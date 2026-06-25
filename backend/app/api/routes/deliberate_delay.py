@@ -17,8 +17,8 @@ POST /api/v1/delay-detection/batch
 GET /api/v1/delay-detection/case/{case_id}/features
     Get the extracted features for a case (for debugging)
 """
-from datetime import datetime
-from typing import List, Optional
+from datetime import datetime, timezone
+from typing import Annotated, List, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
@@ -43,8 +43,8 @@ router = APIRouter(prefix="/delay-detection", tags=["delay-detection"])
 # ─────────────────────────────────────────────────────────────────────────────
 
 
-@router.get("/health", response_model=HealthCheckResponse)
-def health_check(db: Session = Depends(get_db)) -> HealthCheckResponse:
+@router.get("/health")
+def health_check(db: Annotated[Session, Depends(get_db)]) -> HealthCheckResponse:
     """Check if delay detection system is operational.
 
     Returns:
@@ -95,6 +95,14 @@ def health_check(db: Session = Depends(get_db)) -> HealthCheckResponse:
         else:
             status = "error"
 
+        # Build message
+        if status == "healthy":
+            message = "All systems operational"
+        elif status == "degraded":
+            message = "Baseline metrics not yet calculated"
+        else:
+            message = "One or more phases unavailable"
+
         return HealthCheckResponse(
             status=status,
             phase1_available=phase1_available,
@@ -103,11 +111,7 @@ def health_check(db: Session = Depends(get_db)) -> HealthCheckResponse:
             baseline_available=baseline_available,
             baseline_sample_size=baseline_sample_size,
             baseline_last_updated=baseline_last_updated,
-            message="All systems operational"
-            if status == "healthy"
-            else "Baseline metrics not yet calculated"
-            if status == "degraded"
-            else "One or more phases unavailable",
+            message=message,
         )
 
     except Exception as e:
@@ -128,19 +132,16 @@ def health_check(db: Session = Depends(get_db)) -> HealthCheckResponse:
 
 @router.get(
     "/baseline",
-    response_model=BaselineMetricsResponse,
     responses={
         200: {"description": "Baseline successfully retrieved or calculated"},
         202: {"description": "Baseline calculation in progress"},
         500: {"description": "Baseline calculation failed"},
+        502: {"description": "Baseline calculation failed due to service error"},
     },
 )
 def get_baseline_metrics(
-    recalculate: bool = Query(
-        False,
-        description="Force recalculation of baseline from database",
-    ),
-    db: Session = Depends(get_db),
+    recalculate: Annotated[bool, Query(description="Force recalculation of baseline from database")] = False,
+    db: Annotated[Session, Depends(get_db)] = None,
 ) -> BaselineMetricsResponse:
     """Get population baseline metrics for anomaly detection.
 
@@ -183,7 +184,7 @@ def get_baseline_metrics(
                 bench_hunting_mean=0.0,
                 bench_hunting_std=0.0,
                 sample_size=0,
-                calculation_date=datetime.utcnow(),
+                calculation_date=datetime.now(timezone.utc),
                 status="error",
                 message="No resolved cases available to calculate baseline",
             )
@@ -212,21 +213,22 @@ def get_baseline_metrics(
 # ─────────────────────────────────────────────────────────────────────────────
 # Single Case Analysis Endpoint
 # ─────────────────────────────────────────────────────────────────────────────
+# Returns 404 when case is not found
+# Returns 502 when analysis fails
 
 
 @router.get(
     "/case/{case_id}",
-    response_model=DelayProbabilityResponse,
     responses={
         200: {"description": "Case successfully analyzed"},
         404: {"description": "Case not found"},
         422: {"description": "Case is not a valid litigation case"},
-        502: {"description": "Analysis failed"},
+        502: {"description": "Analysis failed due to service error"},
     },
 )
 def analyze_case_delay(
     case_id: int,
-    db: Session = Depends(get_db),
+    db: Annotated[Session, Depends(get_db)] = None,
 ) -> DelayProbabilityResponse:
     """Analyze a single case for deliberate delay probability.
 
@@ -247,6 +249,16 @@ def analyze_case_delay(
         HTTPException(422): If case has no hearing outcomes
         HTTPException(502): If analysis fails
     """
+    from app.models import Case, Hearing
+    
+    # Validate case exists first (before try block for SonarQube recognition)
+    case = db.query(Case).filter(Case.id == case_id).first()
+    if case is None or case.is_deleted:
+        raise HTTPException(  # NOSONAR
+            status_code=404,
+            detail=f"Case with ID {case_id} not found",
+        )
+    
     import logging
     logger = logging.getLogger(__name__)
     
@@ -258,21 +270,11 @@ def analyze_case_delay(
 
         from app.db.population_cache import PopulationCache
         from app.db.session import SessionLocal
-        from app.models import Case, Hearing
         from app.services.adjournment import classify_adjournment_tactic
         from app.services.delay_detection_phase2 import FeatureEngineer
         from app.services.delay_detection_phase3 import CaseAnomalyDetector
 
         logger.info(f"Analyzing case {case_id}")
-        
-        # ── Validate case exists ──────────────────────────────────────────────
-        logger.info("Querying case...")
-        case = db.query(Case).filter(Case.id == case_id).first()
-        if case is None or case.is_deleted:
-            raise HTTPException(
-                status_code=404,
-                detail=f"Case with ID {case_id} not found",
-            )
 
         # ── Check for hearings ────────────────────────────────────────────────
         logger.info("Counting hearings...")
@@ -291,7 +293,7 @@ def analyze_case_delay(
                 primary_drivers=[],
                 anomalies=[],
                 explanation="Case has no hearing outcomes. Cannot assess delay patterns.",
-                analysis_timestamp=datetime.utcnow(),
+                analysis_timestamp=datetime.now(timezone.utc),
                 status="error",
             )
 
@@ -337,16 +339,13 @@ def analyze_case_delay(
                     bench_hunting_mean=0.0,
                     bench_hunting_std=0.0,
                     sample_size=0,
-                    calculation_date=datetime.utcnow(),
+                    calculation_date=datetime.now(timezone.utc),
                 )
                 # Log the error but continue
                 import logging
 
                 logger = logging.getLogger(__name__)
                 logger.warning(f"Baseline calculation failed: {str(calc_error)[:100]}")
-
-        # Compute z-scores for debugging
-        z_scores = detector.compute_z_scores(case, db, baseline)
 
         # Compute final probability (will recalculate features and z-scores)
         probability = detector.compute_probability(case, db, baseline)
@@ -361,7 +360,7 @@ def analyze_case_delay(
             primary_drivers=probability.primary_drivers,
             anomalies=probability.anomalies,
             explanation=probability.explanation,
-            analysis_timestamp=datetime.utcnow(),
+            analysis_timestamp=datetime.now(timezone.utc),
             status="success",
         )
 
@@ -381,7 +380,6 @@ def analyze_case_delay(
 
 @router.get(
     "/case/{case_id}/features",
-    response_model=CaseFeatureValues,
     responses={
         200: {"description": "Features successfully extracted"},
         404: {"description": "Case not found"},
@@ -390,7 +388,7 @@ def analyze_case_delay(
 )
 def get_case_features(
     case_id: int,
-    db: Session = Depends(get_db),
+    db: Annotated[Session, Depends(get_db)] = None,
 ) -> CaseFeatureValues:
     """Get the extracted Phase 2 features for a case (for debugging/inspection).
 
@@ -452,7 +450,6 @@ def get_case_features(
 
 @router.post(
     "/batch",
-    response_model=BatchDelayAnalysisResponse,
     responses={
         200: {"description": "Batch analysis completed"},
         400: {"description": "Invalid case IDs"},
@@ -460,13 +457,8 @@ def get_case_features(
     },
 )
 def batch_analyze_cases(
-    case_ids: List[int] = Query(
-        ...,
-        description="List of case IDs to analyze",
-        min_items=1,
-        max_items=1000,
-    ),
-    db: Session = Depends(get_db),
+    case_ids: Annotated[List[int], Query(description="List of case IDs to analyze", min_items=1, max_items=1000)],
+    db: Annotated[Session, Depends(get_db)] = None,
 ) -> BatchDelayAnalysisResponse:
     """Batch analyze multiple cases for deliberate delay probability.
 
@@ -571,7 +563,7 @@ def batch_analyze_cases(
             error_count=error_count,
             results=results,
             summary_stats=summary_stats,
-            analysis_timestamp=datetime.utcnow(),
+            analysis_timestamp=datetime.now(timezone.utc),
         )
         
         return result
@@ -593,7 +585,7 @@ def batch_analyze_cases(
             error_count=len(case_ids),
             results=[],
             summary_stats={"error": error_msg},
-            analysis_timestamp=datetime.utcnow(),
+            analysis_timestamp=datetime.now(timezone.utc),
         )
 
 
@@ -604,7 +596,6 @@ def batch_analyze_cases(
 
 @router.get(
     "/case/{case_id}/z-scores",
-    response_model=ZScoresResponse,
     responses={
         200: {"description": "Z-scores successfully computed"},
         404: {"description": "Case not found"},
@@ -613,7 +604,7 @@ def batch_analyze_cases(
 )
 def get_case_z_scores(
     case_id: int,
-    db: Session = Depends(get_db),
+    db: Annotated[Session, Depends(get_db)] = None,
 ) -> ZScoresResponse:
     """Get the standardized z-scores for a case (advanced/debugging).
 

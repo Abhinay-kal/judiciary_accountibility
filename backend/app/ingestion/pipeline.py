@@ -17,7 +17,7 @@ failures are isolated and recorded — never silent:
     history.
 7.  **Raw-payload storage** — persists raw bytes to disk (size-limited).
 8.  **Upsert normalised records** — calls
-    :func:`~app.services.normalization.upsert_case_from_normalized`.
+    :func:`~app.services.normalization.upsert_cases_from_normalized_bulk`.
 9.  **Prometheus metrics** — updated atomically after upsert.
 10. **Source health update** — transitions the source health FSM.
 
@@ -31,7 +31,7 @@ from __future__ import annotations
 import logging
 import time
 import uuid
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Optional
 
@@ -55,6 +55,7 @@ from app.ingestion.metrics import (
     RAW_BYTES_INGESTED,
     record_health_gauge,
 )
+from app.ingestion.firewall import validate_and_route_ingestion_batch
 from app.ingestion.models import (
     HEALTH_DISABLED,
     RUN_FAILED,
@@ -404,31 +405,70 @@ class ResilientIngestionPipeline:
         records: list[dict],
         run: IngestionRun,
     ) -> tuple[int, int]:
-        from app.services.normalization import normalize_case_record, upsert_case_from_normalized
+        from app.services.normalization import (
+            is_connection_loss_error,
+            normalize_case_record,
+            upsert_cases_from_normalized_bulk,
+        )
 
-        inserted = 0
-        failed = 0
-        for raw_rec in records:
+        normalized_records: list[dict] = []
+        validated_payloads = validate_and_route_ingestion_batch(records)
+        failed = len(records) - len(validated_payloads)
+
+        for payload in validated_payloads:
             try:
-                normalized = normalize_case_record(raw_rec)
-                upsert_case_from_normalized(self._db, normalized)
-                inserted += 1
+                normalized_records.append(
+                    normalize_case_record(
+                        {
+                            "case_uid": (
+                                f"{source.source_name}::"
+                                f"{payload.case_number}::"
+                                f"{payload.filing_year}"
+                            ),
+                            "case_number": payload.case_number,
+                            "filing_date": date(payload.filing_year, 1, 1),
+                            "next_hearing_date": payload.hearing_date,
+                            "court_name": source.source_name,
+                            "court_level": "district",
+                            "state": "Unknown",
+                            "status": "pending",
+                            "source_url": source.base_url,
+                            "source_fields": {
+                                "raw_bench_string": payload.raw_bench_string,
+                                "raw_outcome_text": payload.raw_outcome_text,
+                                "ingestion_run_id": run.run_id,
+                            },
+                        }
+                    )
+                )
             except Exception as exc:
                 failed += 1
-                logger.error(
-                    "Upsert failed for source '%s', record %r: %s",
+                logger.exception(
+                    "Normalization failed after firewall for source '%s', case=%s: %s",
                     source.source_name,
-                    raw_rec.get("case_id"),
+                    payload.case_number,
                     exc,
                 )
 
-        if records:
-            try:
-                self._db.flush()
-            except Exception as exc:
-                logger.error("DB flush error for '%s': %s", source.source_name, exc)
+        if not normalized_records:
+            return 0, failed
 
-        return inserted, failed
+        try:
+            with self._db.begin_nested():
+                inserted = upsert_cases_from_normalized_bulk(self._db, normalized_records)
+            return inserted, failed
+        except Exception as exc:
+            self._db.rollback()
+            if is_connection_loss_error(exc):
+                logger.exception(
+                    "Bulk upsert failed due to database connection loss for '%s': %s",
+                    source.source_name,
+                    exc,
+                )
+            else:
+                logger.exception("Bulk upsert failed for source '%s': %s", source.source_name, exc)
+
+            return 0, failed + len(normalized_records)
 
     @staticmethod
     def _compute_confidence(

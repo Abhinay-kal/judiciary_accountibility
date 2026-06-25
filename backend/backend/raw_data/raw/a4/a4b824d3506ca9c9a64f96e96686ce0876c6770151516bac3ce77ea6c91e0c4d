@@ -1,0 +1,1598 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Orissa High Court, Cuttack</title>  
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="-1">
+        <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta http-equiv="Content-Security-Policy">
+<meta name="keywords" content="Orissa High court, High Court, Cuttack">
+<meta name="author" content="National Informatics Centre (NIC, Orissa)">
+<meta name="description" content=" Orissa High Court , Cuttack, India, developed with an objective to enable a single window access to information and services being provided by the OHC and lot more..."> 
+
+<link rel="shortcut icon" href="https://orissahighcourt.nic.in/images/favicon.png" type="image/x-icon">
+<link href="https://orissahighcourt.nic.in/css/bootstrap.min.css" rel="stylesheet">
+<!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">-->
+<link href="https://orissahighcourt.nic.in/css/animate.min.css" rel="stylesheet">
+<link href="https://orissahighcourt.nic.in/css/owl.carousel.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://orissahighcourt.nic.in/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://orissahighcourt.nic.in/css/magnific-popup.css">
+<link href="https://orissahighcourt.nic.in/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css"/>
+<link href="https://orissahighcourt.nic.in/css/jquery.datepick.css" rel="stylesheet">
+<link href="https://orissahighcourt.nic.in/css/jPages.css" rel="stylesheet">
+<link href="https://orissahighcourt.nic.in/css/lightgallery.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://orissahighcourt.nic.in/css/simple-calendar.css">
+<link rel="stylesheet" href="https://orissahighcourt.nic.in/css/demo.css">
+<link rel="stylesheet" href="https://orissahighcourt.nic.in/css/ken-burns.css">
+<link rel="stylesheet" href="https://orissahighcourt.nic.in/css/datepicker.css">
+<link href="https://orissahighcourt.nic.in/css/style_new-v1.css" rel="stylesheet">
+<link href="https://orissahighcourt.nic.in/css/media-query.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://orissahighcourt.nic.in/js/html5shiv.min.js"></script>
+<script src="https://orissahighcourt.nic.in/js/respond.min.js"></script>
+<![endif]-->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DSS10CLKD5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DSS10CLKD5');
+</script>
+
+<meta name="facebook-domain-verification" content="9j3hjnjuhyl783wlu2r4fh7x2yici8" />        <style>
+            .modal {
+                z-index: 9999999;
+            }
+            .modal-backdrop {
+                z-index: 99999;
+            }
+            #noticeModal .modal-dialog {
+                margin-top: 185px;
+            }
+            .notice-link {
+                color: darkgreen; text-decoration: underline;
+                text-align: center;
+                display: block;
+                width: 80%;
+                margin: 0 auto;
+            }
+            .notice-message {
+                font-weight: bold; color: red; text-align: center; font-size: 14px;
+            }
+            @media screen and (max-width: 767px){
+                #noticeModal .modal-dialog {
+                    margin-top: 70px;
+                } 
+            }
+        </style>
+    </head>
+    <body class="">
+
+        <div class="modal fade in" id="noticeModal" tabindex="-1" role="dialog" aria-labelledby="noticeModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" style="color: red;">NOTICE</h4>
+                    </div>
+                    <div class="modal-body">                
+
+                        <p class="notice-message" style="width: 98%; margin: 0 auto;">
+                        Learned Advocates and Parties can now file their cases electronically by using the e-Filing portal. <a href="https://www.orissahighcourt.nic.in/e-filing/" target="_blank">Click here </a> to read e-filing Notification & Guidelines and to access the e-filing portal as well as other relevant links.
+                        </p>
+                        
+                    </div>                   
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+         
+            <!-- <div class="home-page-popup">
+                 <div class="popup-container">
+                     <img src="https://orissahighcourt.nic.in/images/home-page-popup.jpg"/>
+                     <a href="javascript:void(0)" aria-label="Click Here To Proceed" class="proceed">Proceed</a>
+                 </div>
+             </div>-->
+
+        
+        <!-- Popup modal for external link -->
+<div id="external" class="modal fade modal-zindex" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Alert</h4>
+            </div>
+            <div class="modal-body">
+            <!--<p>You are being redirected to the external website. Are you sure?</p>-->
+                <p>"This link shall take you to a page outside the (http://www.orissahighcourt.nic.in/). For any query regarding the contents of the linked page, please contact the webmaster of the concerned website."</p>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" >Proceed</a>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+<!-- Popup modal for external link -->
+<!--   ----------------------------------------------------------
+HEADER START
+----------------------------------------------------------------->
+<div class="menu-overlay"></div>
+<header class="stricky">
+    <a href="javascript:void(0);" title="Setting Icon" aria-label="second link"  class="tooltip-button">
+        <i class="fa fa-angle-down"></i>
+    </a>
+    <div class="top-header">
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                        <!-- <ul class="top-menu left">
+                            <li id="date"></li>
+                            <li id='clock'></li>
+                        </ul> -->
+                    </div>
+                    <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 setting-responsive">
+                        <div class="top-right">
+                            <ul class="top-menu">
+                                <li><a href='javascript:void(0)' class='skiper' >Skip To Main Content</a></li>
+                                <li><a href='$base_url/screen-reader-access/'>Screen Reader Access</a></li>
+                                <li>
+                                    <div class="topbar-font">
+                                        <div class="f-btn"> 
+                                            <a href="javascript:void(0)"  aria-label="Decrease Font Size Button" id="btn-decrease">A-</a> 
+                                            <a href="javascript:void(0)"   aria-label="Normalize Font Size Button" id="btn-orig">&nbsp;A</a> 
+                                            <a href="javascript:void(0)"  aria-label="Increase Font Size Button" id="btn-increase"> &nbsp; A+</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="a-btn">
+                                        <a onclick="changeContrast('inactivate')" href="javascript:void(0)" aria-label="Reset Contrast" role="buton" id="c-active">T</a>
+                                        <a onclick="changeContrast('activate')" href="javascript:void(0)" aria-label="High Contrast" role="buton" id="c-inactive" >T</a>
+                                    </div>
+                                </li>
+                               <li>
+                                
+                                <!-- <form method="POST" class="change-lang">
+                                    <input type="submit" value="or" id="or" name="lang"><span>ଓଡ଼ିଆ</span>
+                                    <input type="submit" value="en" name="lang"><span>English</span>
+                                </form>  -->
+                                </li>
+                                <!-- <li>                                    
+                                    <a onclick="changelang('or')" href="javascript:void(0)" aria-label="Odia Language Selection" id="or">ଓଡ଼ିଆ</a>
+                                    <a onclick="changelang('en')" href="https://orissahighcourt.nic.in/" aria-label="English Language Selection" id="or">English</a>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="logo-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                    </div>
+                    <div class="col-sm-6">
+                         <!-- <img src="https://orissahighcourt.nic.in/logo-75.jpeg" class="logo-75" > -->
+                        <div class="logo transition1">
+                            <a class="logo-main" href="https://orissahighcourt.nic.in/">
+
+                                <img src="https://orissahighcourt.nic.in/logo-new.png" aria-label="Orissa High Court Logo" alt="Orissa High Court Logo" class="img-responsive"></a>
+                            <a class="logo-contracts" href="https://orissahighcourt.nic.in/"><img src="https://orissahighcourt.nic.in/images/logo-contracts.png" aria-label="Orissa High Court Logo" alt="Orissa High Court Logo" class="img-responsive"></a>
+                           
+                        </div>
+                    </div>
+                    <div class="col-sm-3 search-holder pull-right">
+                        <div class="search-box">
+                            <form method="get" action="https://orissahighcourt.nic.in/search.php">
+                                <input type="text" placeholder="Search" name="q" aria-label="Search">
+                                <button class="search-buton" role="button" aria-label="Search"><span class="sr-only">Search</span></button>
+                            </form>
+                        </div>
+                        <!--<form method="get" action="https://orissahighcourt.nic.in/search.php">
+                            <input type="text" name="q" placeholder="Search and hit enter" autocomplete="off" aria-label="Search">
+                        </form>-->
+                    </div>
+                    <style type="text/css">
+                            .logo-menu .col-sm-6{
+                                padding-left: 50px;
+                            }
+                            .search-holder{
+                                margin-right: 0!important;
+                            }
+                            .logo-menu .logo-75{
+                                width: 80px;
+                                            height: auto;
+                                            float: left;
+                            }
+                            @media (max-width: 767px) {
+                                .logo-menu .logo-75 {
+                                    height: 39px!important;
+                                        width: auto!important;
+                                }
+                                .search-box button{
+                                    top: 32px!important;
+                                }
+                            }
+                        </style> 
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="main_nav main-nav2">
+        <div class="container"  style="width: 1350px;">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="menu-right">
+                        <div class="menu-btns menu-icon hamburger-menu hidden-bar-opener">
+                            <p>Menu</p>
+                            <div class="menu-toggle menu-animation ">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div> 
+                    </div>
+                    <ul class="main-ul animated main-ul2">
+                        <li><a href="https://orissahighcourt.nic.in/">Home</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/history.pdf">History</a></li>
+                            <!--<ul class="" role="menu">
+                                <li><a href="https://orissahighcourt.nic.in/about-orissa-high-court/history/">History</a></li>-->
+                                                                <!--<li><a href="https://orissahighcourt.nic.in/about-orissa-high-court/organogram/" >Organogram</a></li>
+                                <li><a href="https://orissahighcourt.nic.in/about-orissa-high-court/photo-gallery/">Photo Gallery</a></li>
+                            </ul>-->
+                        <li><a href="javascript:void(0)">Judges <span class="toggle-arrow"></span></a>
+                            <ul class="">
+                                <li><a href="https://orissahighcourt.nic.in/judges/chief-justice/">Chief Justice</a></li>
+                                <!-- <li><a href="https://orissahighcourt.nic.in/judges/acting-chief-justice/">Acting Chief Justice</a></li> -->
+                                <li><a href="https://orissahighcourt.nic.in/judges/judges-profile/">Judges</a></li>
+                                <!-- Added on 21-02-22 -->
+                                <li><a href="https://orissahighcourt.nic.in/judges/transfer-judges/"> Judges Transferred to other High Courts</a></li>
+                                <li><a href="https://orissahighcourt.nic.in/judges/chief-justices-judges-appointed-as-chief-justices-of-india/">Chief Justices/ Judges Appointed as Chief Justice of India</a></li>
+                                <li><a href="https://orissahighcourt.nic.in/judges/chief-justices-judges-elevated-to-supreme-court/">Chief Justices/ Judges Elevated to Supreme Court</a></li>
+
+                                <li><a href="https://orissahighcourt.nic.in/judges/former-chief-justices/">Former Chief Justices</a></li>
+                                <li><a href="https://orissahighcourt.nic.in/judges/former-judges/">Former Judges</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=wPzTxEk3Mn0" target="_blank">Video of All Judges</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0)">Rules <span class="toggle-arrow"></span></a>
+                            <ul class="">
+                            	<!--<li><a href="https://orissahighcourt.nic.in/rti/">Orissa High Court RTI Rules, 2005 and Information u/s 4(1)(b) of RTI Act, 2005</a></li>-->
+                                <li><a href="https://orissahighcourt.nic.in//rules/orissa-high-court-vc-rules-2025/">The High Court of Orissa and District Courts Use of Electronic Communication and Audio-Video Electronic Means Rules, 2025</a></li>
+                                <!--<li><a href="https://orissahighcourt.nic.in//uploads/vc_rules_2025/vc_rules_2025.pdf">The High Court of Orissa and District Courts Use of Electronic Communication and Audio-Video Electronic Means Rules, 2025</a></li>-->
+                                <li><a href="https://orissahighcourt.nic.in//rules/DesignationSeniorAdvocateRules/">High Court of Orissa (Designation of Senior Advocate) Rules, 2025</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/rules/efiling/eFiling_High_Court.pdf">e-Filing Rules for the High Court of Orissa, 2024</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/rules/efiling/eFiling_District_Courts.pdf">e-Filing Rules for District Courts and Tribunals under Control and Supervision of the High Court of Orissa, 2024</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//rti/orissa-high-court-rti-rules-2005/">The Orissa High Court RTI Rules, 2005 </a></li>
+                               <!-- <li><a href="https://orissahighcourt.nic.in//rules/DesignationSeniorAdvocateRules/">High Court of Orissa (Designation of Senior Advocate) Rules, 2019</a></li>-->
+                                <li><a href="https://orissahighcourt.nic.in//rules/OSJS_OJS_rules/">Orissa Superior Judicial Service and Orissa Judicial Service Rules, 2007</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//rules/Appointment_Special_Judicial_Magistrate_Rules/">The Appointment of Special Judicial Magistrate (Orissa) Rules, 2000</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//rules/SubordinateRules/">The Odisha District and Civil Courts' Judicial Staff Services (Method of Recruitment and Conditions of Service) Rules, 2008</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//rules/District_Courts_Group_D_Employees_Rules/">The Odisha District and Subordinate Courts’ Group-D Employees (Method of Recruitment and Conditions of Service) Rules, 2021</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//rules/InspectionSubordinateCourtsRules/">The Orissa Inspection of Subordinate Courts (by the High Court) Rules, 2004</a></li>
+                                <!--<li><a href="https://orissahighcourt.nic.in//InspRules.pdf">The Orissa Inspection of Subordinate Courts (by the High Court) Rules, 2004</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//rules/orissa-high-court-vc-rules-2020/">The Orissa High Court Video Conferencing for Courts Rules, 2020</a></li>-->
+                                <li><a href="https://orissahighcourt.nic.in//live_streaming_2021.pdf">High Court of Orissa Live Streaming of Court Proceedings Rules, 2021</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//rules/orissa-highcourt-rules/">Rules of The High Court of Orissa</a></li>                                
+                                <li><a href="https://orissahighcourt.nic.in//rules/rules/arbitration-rule/">The Arbitration Handbook</a></li>
+                                <!-- <li><a href="https://orissahighcourt.nic.in//compendium.pdf">Compedium of General Letters and Circular (Criminal) 1916-1987</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//family1990.pdf">Family Courts (Orissa) Rules, 1990</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//family2010.pdf">Family Courts (Court) Rules, 2010</a></li>-->
+                                <li><a href="https://orissahighcourt.nic.in//cmrules2020.pdf">Odisha Senior Court Manager and Court Manager of the High Court and District Courts Rules, 2020</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//rules/high-court-guest-house-rule/">High Court Guest House Rule</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//rules/pil/">PIL</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//rules/civil-procedure-mediation-rules/">Civil Procedure Mediation Rules</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//rules/alternate-dispute-resolution-rules/">Alternate Dispute Resolution Rules</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//rules/general-rules-and-circular-orders/">General Rules and Circular Orders</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//rules/appointment-of-staff-and-conditions-of-service-rules/">Appointment of Staff and Conditions of Service Rules</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//research-asst.pdf">Scheme for Selection and Appointment of Research Assistant in the High Court of Orissa</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//ecourtsrule.pdf">The Orissa High Court (Method of Recruitment and Condition of Service of Sr. System Officer, SO and SA under e-Courts Service) Rules, 2013</a></li>                                <li><a href="https://orissahighcourt.nic.in//rules/vwdc-scheme/">The High Court of Orissa Guidelines for Recording Evidence of Vulnerable Witnesses and Functioning of Vulnerable Witnesses Deposition Centres, 2024</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//rules/familycourt-rules/">Family Court Rules</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//rules/cglc-rules/">Compendium of General Letters and Circulars</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//Admiralty_Rules2020.pdf">The Orissa High Court Admiralty Rules, 2020</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//rules/Scheme_Retention_Purchase_Furnishing_Articles_Judges/">Scheme for Retention and Purchase of Furnishing Articles of Judges of the High Court of Orissa, 2024</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//subject-category/">Subject Category</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0)">Statistics<span class="toggle-arrow"></span></a>
+                            <ul class="">
+                                <li>
+                                    <a href="https://orissahighcourt.nic.in/">High Court of Orissa</a>
+                                    <ul  class="sub-sub-menu">
+                                        <!--<li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/2020.pdf">2020</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/2021.pdf">2021</a></li>-->
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/2022.pdf">2022</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/2023.pdf">2023</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/2024.pdf">2024</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/2025.pdf">2025</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/2026.pdf">2026</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/Comparative2025-26.pdf">Institution-Disposal Comparative Figure of 2025 & 2026</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/Comparative2024-25.pdf">Institution-Disposal Comparative Figure of 2024 & 2025</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/Comparative2023-24.pdf">Institution-Disposal Comparative Figure of 2023 & 2024</a></li>                                         
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/Comparative2022-23.pdf">Institution-Disposal Comparative Figure of 2022 & 2023</a></li>
+                                        <!--<li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/Comparative2021-22.pdf">Institution-Disposal Comparative Figure of 2021 & 2022</a></li>--> 
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/hc_Judgement_Glance.pdf">No. of Judgments at a Glance</a></li> 
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/Glance_2026.pdf">Case Statistics at a Glance, 2026</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="https://orissahighcourt.nic.in/">District Courts</a>
+                                    <ul  class="sub-sub-menu">
+                                    <!--<li><a href="https://orissahighcourt.nic.in//uploads/statistics/dc/dc_2021.pdf">2021</a></li>--> 
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dc/dc_2022.pdf">2022</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dc/dc_2023.pdf">2023</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dc/dc_2024.pdf">2024</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dc/dc_2025.pdf">2025</a></li> 
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dc/dc_2026.pdf">2026</a></li> 
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dc/dc_Comparative2025_2026.pdf">Comparative Figures of Institution & Disposal of 2025 & 2026</a></li>   
+                                                                       
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dc/dc_Comparative2024_2025.pdf">Comparative Figures of Institution & Disposal of 2024 & 2025</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dc/dc_Comparative2022_2023.pdf">Comparative Figures of Institution & Disposal of 2022 & 2023</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dc/dc_Judgments_Glance.pdf">No. of Judgments at a Glance</a></li>                                
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="https://orissahighcourt.nic.in/">RRDC (Record Room Digitization Centre)</a>
+                                    <ul class="sub-sub-menu">
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/rrdc/Civil_RRDC.pdf">Civil</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/rrdc/Criminal_RRDC.pdf">Criminal</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/rrdc/Cumulative_RRDC.pdf">Cumulative Report</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="https://orissahighcourt.nic.in/">DCDC (District Court Digitization Centre)</a>
+                                    <ul class="sub-sub-menu">
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Angul.pdf">DCDC-Angul</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Balangir.pdf">DCDC-Balangir</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Balasore.pdf">DCDC-Balasore</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Bargarh.pdf">DCDC-Bargarh</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Bhadrak.pdf">DCDC-Bhadrak</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Cuttack.pdf">DCDC-Cuttack</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Deogarh.pdf">DCDC-Deogarh</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Dhenkanal.pdf">DCDC-Dhenkanal</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Gajapati.pdf">DCDC-Gajapati</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Ganjam.pdf">DCDC-Ganjam</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Jagatsinghpur.pdf">DCDC-Jagatsinghpur</a></li>                                        
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Jajpur.pdf">DCDC-Jajpur</a></li>   
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Jharsuguda.pdf">DCDC-Jharsuguda</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Kalahandi.pdf">DCDC-Kalahandi</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Kandhamal.pdf">DCDC-Kandhamal</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Kendrapara.pdf">DCDC-Kendrapara</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Keonjhar.pdf">DCDC-Keonjhar</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Koraput.pdf">DCDC-Koraput</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Malkangiri.pdf">DCDC-Malkangiri</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Mayurbhanj.pdf">DCDC-Mayurbhanj</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Nabarangpur.pdf">DCDC-Nabarangpur</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Nayagarh.pdf">DCDC-Nayagarh</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Puri.pdf">DCDC-Puri</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Sambalpur.pdf">DCDC-Sambalpur</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Sonepur.pdf">DCDC-Sonepur</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Sundargarh.pdf">DCDC-Sundargarh</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/Cumulative_DCDC.pdf">Cumulative Report</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="https://orissahighcourt.nic.in/justice-clock/">Justice Clock</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/e-filing/">e-Filing 3.0</a></li>
+                        
+						<li><a href="javascript:void(0)">Annual Report & Souvenir<img src="https://orissahighcourt.nic.in/images/new14.gif" style="max-height: 12px;padding-left: 4px;"/><span class="toggle-arrow"></span></a>
+                        <ul class="">
+                                <li><a href="https://orissahighcourt.nic.in/">Annual Report 2024<img src="https://orissahighcourt.nic.in/images/new14.gif" style="max-height: 12px;padding-left: 4px;" /></a>
+                                    <ul  class="sub-sub-menu">
+                                        <li><a href="https://orissahighcourt.nic.in/annual_report_2024.pdf">View in PDF</a></li>
+                                        <li><a href="https://ohcar.co.in/ar2024/" target="_blank">View Web Version</a></li>                                                            
+                                    </ul>
+                                </li>
+                                
+                           
+                                <li><a href="https://orissahighcourt.nic.in/">Annual Report 2023</a>
+                                    <ul  class="sub-sub-menu">
+                                        <li><a href="https://orissahighcourt.nic.in/annual_report_2023.pdf">View in PDF</a></li>
+                                        <li><a href="https://ohcar.co.in/annualreport2023/" target="_blank">View Web Version</a></li>                                                            
+                                    </ul>
+                                </li>
+                                
+                                <li><a href="https://orissahighcourt.nic.in/">Annual Report 2022</a>
+                                    <ul  class="sub-sub-menu">
+                                        <li><a href="https://orissahighcourt.nic.in/annual_report_2022.pdf">View in PDF</a></li>
+                                        <li><a href="http://ohcar2022.co.in" target="_blank">View Web Version</a></li>  
+                                    </ul>
+                                </li>    
+                                <li><a href="https://orissahighcourt.nic.in/">Annual Report 2021</a>
+                                    <ul  class="sub-sub-menu">
+                                        <li><a href="https://orissahighcourt.nic.in/annual_report_2021.pdf">View in PDF</a></li>
+                                        <li><a href="http://ohcar.co.in" target="_blank">View Web Version</a></li>                                                            
+                                    </ul>
+                                </li>
+                                <li><a href="https://orissahighcourt.nic.in/">Souvenir for 75th Year, High Court of Orissa</a>
+                                    <ul  class="sub-sub-menu">
+                                        <li><a href="https://orissahighcourt.nic.in/souvenir.pdf">View in PDF</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0)" style="color: #fff863; padding: 16px 10px !important;">e-Services<span class="toggle-arrow"></span> </a>
+                            <ul>
+                                <li><a href="https://orissahighcourt.nic.in/ecourtfees/" target="_blank">e-Court Fees</a></li>
+                                <li><a href="https://orissahighcourt.nic.in/epay-fine/" target="_blank">e-Payment of Fine </a></li>
+                                <li><a href="https://orissahighcourt.nic.in/virtual-courts/" target="_blank">Virtual Courts (Traffic) </a></li>
+                                <li><a href="https://orissahighcourt.nic.in/mobile-app/" target="_blank">High Court of Orissa eServices Mobile App</a></li>
+                                <li><a href="https://orissahighcourt.nic.in/e-courts-services-mobile-app-manual/">e-Courts Services Mobile App</a></li>
+                                <li><a href="https://orissahighcourt.nic.in/esewa/" target="_blank">e-Sewa Kendra</a></li>
+                                <li><a href="https://orissahighcourt.nic.in/onlinememo/" target="_blank">Online Mentioning</a></li>
+                                <li><a href="https://orissahighcourt.nic.in/onlinecertifiedcopy/" target="_blank">Online Certified Copy</a></li>
+                                <!--<li><a href="https://orissahighcourt.nic.in/onlinerti/" target="_blank">Apply Online for RTI<img src="https://orissahighcourt.nic.in/images/new14.gif" style="max-height: 10px;padding-left: 2px;" /></a></li>-->
+                                
+                                <li><a href="https://ohceservices.nic.in/wifi/">Free Campus Wi-Fi</a></li>
+                                <li><a href="http://112.133.226.244/einspection/">e-Inspection of Case Records</a></li>
+                                  
+                                <li><a href="https://www.youtube.com/channel/UCtTgN30THhZfQ6sQ_v3KBHQ" target="_blank">Live Streaming</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li><a href="https://orissahighcourt.nic.in/about-orissa-high-court/event-gallery-mon/" style="padding: 16px 10px !important;" target="_blank">Event Calendar </a></li>
+
+                        <li><a href="javascript:void(0)">RTI <img src="https://orissahighcourt.nic.in/images/new14.gif" style="max-height: 10px;padding-left: 2px;" /><span class="toggle-arrow"></span></a>
+                            <ul class="">
+                                <li><a href="https://orissahighcourt.nic.in/rti/state-public-information-officer-and-first-appellate-authority/">State Public Information Officer & First Appellate Authority</a></li>
+                                <li><a href="https://orissahighcourt.nic.in/onlinerti/">Apply Online for RTI </a></li>
+                                <li><a href="https://orissahighcourt.nic.in/4(1)(b)RTI.pdf">Information u/s 4(1)(b) of the Right to Information Act, 2005</a></li>
+                                
+                            </ul>
+                        </li>
+
+						<li><a href="http://112.133.226.244/judicial_arc/">Centre for Judicial Archives</a></li>
+                                
+                        <li><a href="javascript:void(0)">Museum of Justice<span class="toggle-arrow"></span></a>
+                            <ul class="">
+                                <!--<li><a href="https://orissahighcourt.nic.in/">2022<img src="https://orissahighcourt.nic.in/images/new14.gif" style="max-height: 10px;padding-left: 2px;" /></a>-->
+                                <li><a href="https://orissahighcourt.nic.in/museum.pdf">View in PDF</a></li>
+                                <li><a href="https://orissahighcourt.nic.in/pg_museum.pdf">Photo Gallery</a></li>
+                                <li><a href="https://orissahighcourt.nic.in/Newspaper_Pulications.pdf">Newspaper items</a></li>
+                                <li><a href="https://youtu.be/3RR8WITh9Es" target="_blank">Video of Museum of Justice</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//sale_of_book_Vol-I_Vol-II.pdf">Sale of Book – Judicial History of Odisha (Vol-I & Vol-II)</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="https://orissahighcourt.nic.in/vernacular_judgments/">Judgments in Vernacular Language</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/pil-portal/">PIL Portal</a></li>
+                        <li><a target="_blank" href="https://orissahighcourt.nic.in/MP_MLA/" >Cases Involving MPs/MLAs</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/commercialcourt/" >Commercial Courts Data</a></li>
+                        
+                        <!--<li><a href="https://orissahighcourt.nic.in/Judl_Calendar.pdf">Judicial Calendar of Odisha<img src="https://orissahighcourt.nic.in/images/new14.gif" style="max-height: 10px;padding-left: 2px;"/></a></li>
+                        
+                        <li><a href="https://orissahighcourt.nic.in/puc.pdf">PIL Portal</a></li>-->
+                        <li><a href="javascript:void(0)">e-HCR<img src="https://orissahighcourt.nic.in//images/new14.gif" style="max-height: 10px;padding-left: 2px;" /><span class="toggle-arrow"></span></a>  
+                            <ul class="">
+                        		<li><a href="https://ilr.odisha.gov.in/ilr/">e-HCR</a></li>
+                                <li><a href="javascript:void(0)">QR Code for e-HCR Portal<img src="https://orissahighcourt.nic.in//images/qr-ilr.png" style="max-height: 55px;padding-left: 50px;" /></a></li>
+                            </ul>
+                        </li>
+                    </ul> 
+                                                      
+                </div>               
+            </div>
+        </div>
+    </nav>
+    
+</header>
+
+<!-- Hidden Navigation Bar -->
+<section class="hidden-bar right-align">
+    <!--    <div class="hiddeb-bar-wrapper1"></div>
+        <div class="hiddeb-bar-wrapper2"></div>-->
+    <div class="popup_close hidden-bar-closer" id="menu-close"> 
+        <div class="menu-close-x"></div> 
+        <!-- <div class="popup_close_cont">
+                       <div class="popup_close_bar"></div>
+                        <div class="popup_close_bar"></div>
+            
+        </div> -->
+    </div>
+
+    <!-- Hidden Bar Wrapper -->
+   
+    <div class="hidden-bar-wrapper">
+        <!-- .logo -->
+        <div class="side-menu-logo text-center">
+            <a href="https://orissahighcourt.nic.in/"><img src="https://orissahighcourt.nic.in/images/logo.png" aria-label="Orissa High Court Logo" alt="Orissa High Court Logo"></a>         
+        </div>
+        <div class="clearfix"></div>
+
+        <!-- .Side-menu -->
+        <div class="side-menu">
+            <!-- .navigation -->
+            <ul class="navigation one-page-nav">
+                <li><a href="https://orissahighcourt.nic.in/">Home</a></li>
+                <!--<li class="dropdown"><a href="javascript:void(0)">About <span class="toggle-arrow"></span></a>-->
+                <li><a href="https://orissahighcourt.nic.in/history.pdf">History</a></li>
+                <!--<ul class="" role="menu">
+                <li><a href="https://orissahighcourt.nic.in/about-orissa-high-court/history/">History</a></li>
+                                <li><a href="https://orissahighcourt.nic.in/about-orissa-high-court/organogram/" >Organogram</a></li>
+                <li><a href="https://orissahighcourt.nic.in/about-orissa-high-court/photo-gallery/">Photo Gallery</a></li>
+                    </ul>-->
+                <li class="dropdown"><a href="javascript:void(0)">Judges <span class="toggle-arrow"></span></a>
+                    <ul class="">
+                        <li><a href="https://orissahighcourt.nic.in/judges/chief-justice/">Chief Justice</a></li>
+                        <!-- <li><a href="https://orissahighcourt.nic.in/judges/acting-chief-justice/">Acting Chief Justice</a></li> -->
+                        <li><a href="https://orissahighcourt.nic.in/judges/judges-profile/">Judges</a></li>
+                        <!-- Added on 21-02-22 -->
+                        <li><a href="https://orissahighcourt.nic.in/judges/transfer-judges/"> Judges Transferred to other High Courts</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/judges/chief-justices-judges-appointed-as-chief-justices-of-india/">Chief Justices/ Judges Appointed as Chief Justice of India</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/judges/chief-justices-judges-elevated-to-supreme-court/">Chief Justices/ Judges Elevated to Supreme Court</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/judges/former-chief-justices/">Former Chief Justices</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/judges/former-judges/">Former Judges</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=wPzTxEk3Mn0" target="_blank">Video of All Judges</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="javascript:void(0)">Rules <span class="toggle-arrow"></span></a>
+                    <ul class="">
+                        <!-- <li><a href="https://orissahighcourt.nic.in/rti/">Orissa High Court RTI Rules, 2005 and Information u/s 4(1)(b) of RTI Act, 2005</a></li> -->
+                        <li><a href="https://orissahighcourt.nic.in//rules/orissa-high-court-vc-rules-2025/">The High Court of Orissa and District Courts Use of Electronic Communication and Audio-Video Electronic Means Rules, 2025</a></li>
+                        <!--<li><a href="https://orissahighcourt.nic.in//uploads/vc_rules_2025/vc_rules_2025.pdf">The High Court of Orissa and District Courts Use of Electronic Communication and Audio-Video Electronic Means Rules, 2025</a></li>-->
+                        <li><a href="https://orissahighcourt.nic.in//rules/DesignationSeniorAdvocateRules/">High Court of Orissa (Designation of Senior Advocate) Rules, 2025</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/uploads/rules/efiling/eFiling_High_Court.pdf">e-Filing Rules for the High Court of Orissa, 2024</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/uploads/rules/efiling/eFiling_District_Courts.pdf">e-Filing Rules for District Courts and Tribunals under Control and Supervision of the High Court of Orissa, 2024</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/rti/orissa-high-court-rti-rules-2005/">The Orissa High Court RTI Rules, 2005 </a></li>
+                        <!--<li><a href="https://orissahighcourt.nic.in/rules/DesignationSeniorAdvocateRules/">High Court of Orissa (Designation of Senior Advocate) Rules, 2019</a></li>-->
+                        <li><a href="https://orissahighcourt.nic.in/rules/OSJS_OJS_rules/">Orissa Superior Judicial Service and Orissa Judicial Service Rules, 2007</a></li>
+                       	<li><a href="https://orissahighcourt.nic.in/rules/Appointment_Special_Judicial_Magistrate_Rules/">The Appointment of Special Judicial Magistrate (Orissa) Rules, 2000</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/rules/SubordinateRules/">The Odisha District and Civil Courts' Judicial Staff Services (Method of Recruitment and Conditions of Service) Rules, 2008</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/rules/District_Courts_Group_D_Employees_Rules/">The Odisha District and Subordinate Courts’ Group-D Employees (Method of Recruitment and Conditions of Service) Rules, 2021</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/rules/InspectionSubordinateCourtsRules/">The Orissa Inspection of Subordinate Courts (by the High Court) Rules, 2004</a></li>
+                        <!--<li><a href="https://orissahighcourt.nic.in/InspRules.pdf">The Orissa Inspection of Subordinate Courts (by the High Court) Rules, 2004</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/rules/orissa-high-court-vc-rules-2020/">The Orissa High Court Video Conferencing for Courts Rules, 2020</a></li>-->
+                        <li><a href="https://orissahighcourt.nic.in/live_streaming_2021.pdf">High Court of Orissa Live Streaming of Court Proceedings Rules, 2021</a></li>                                
+                        <li><a href="https://orissahighcourt.nic.in/rules/orissa-highcourt-rules/">Rules of The High Court of Orissa</a></li>                                
+                        <li><a href="https://orissahighcourt.nic.in/rules/rules/arbitration-rule/">The Arbitration Handbook</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/cmrules2020.pdf">Odisha Senior Court Manager and Court Manager of the High Court and District Courts Rules, 2020</a></li>      
+                        <li><a href="https://orissahighcourt.nic.in/rules/high-court-guest-house-rule/">High Court Guest House Rule</a></li>                       
+						<li><a href="https://orissahighcourt.nic.in/rules/pil/">PIL</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/rules/civil-procedure-mediation-rules/">Civil Procedure Mediation Rules</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/rules/alternate-dispute-resolution-rules/">Alternate Dispute Resolution Rules</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/rules/general-rules-and-circular-orders/">General Rules and Circular Orders</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/rules/appointment-of-staff-and-conditions-of-service-rules/">Appointment of Staff and Conditions of Service Rules</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/research-asst.pdf">Scheme for Selection and Appointment of Research Assistant in the High Court of Orissa</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/ecourtsrule.pdf">The Orissa High Court (Method of Recruitment and Condition of Service of Sr. System Officer, SO and SA under e-Courts Service) Rules, 2013</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/rules/vwdc-scheme/">The High Court of Orissa Guidelines for Recording Evidence of Vulnerable Witnesses and Functioning of Vulnerable Witnesses Deposition Centres, 2024</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/rules/familycourt-rules/">Family Court Rules</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/rules/cglc-rules/">Compendium of General Letters and Circulars</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/Admiralty_Rules2020.pdf">The Orissa High Court Admiralty Rules, 2020</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/subject-category/">Subject Category</a></li>
+                        
+                    </ul>
+                </li>
+                <!--<li><a href="           .pdf">Statistics</a></li>-->
+                        
+                <li class="dropdown"><a href="javascript:void(0)">Statistics<span class="toggle-arrow"></span></a>
+                    <ul class="">
+                        <li class="dropdown">
+                            <a href="https://orissahighcourt.nic.in/">High Court of Orissa</a>
+                            <ul  class="sub-sub-menu">
+                                <!--<li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/2020.pdf">2020</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/2021.pdf">2021</a></li>-->
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/2022.pdf">2022</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/2023.pdf">2023</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/2024.pdf">2024</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/2025.pdf">2025</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/2026.pdf">2026</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/Comparative2025-26.pdf">Institution-Disposal Comparative Figure of 2025 & 2026</a></li>  
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/Comparative2024-25.pdf">Institution-Disposal Comparative Figure of 2024 & 2025</a></li>  
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/Comparative2023-24.pdf">Institution-Disposal Comparative Figure of 2023 & 2024</a></li>                                         
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/Comparative2022-23.pdf">Institution-Disposal Comparative Figure of 2022 & 2023</a></li>
+                                <!--<li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/Comparative2021-22.pdf">Institution-Disposal Comparative Figure of 2021 & 2022</a></li>--> 
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/hc_Judgement_Glance.pdf">No. of Judgments at a Glance</a></li> 
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/hc/Glance_2026.pdf">Case Statistics at a Glance, 2026</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="https://orissahighcourt.nic.in/">District Courts</a>
+                            <ul  class="sub-sub-menu">
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dc/dc_2021.pdf">2021</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dc/dc_2022.pdf">2022</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dc/dc_2023.pdf">2023</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dc/dc_2024.pdf">2024</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dc/dc_2025.pdf">2025</a></li>                                
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dc/dc_Comparative2024_2025.pdf">Comparative Figures of Institution & Disposal of 2024 & 2025</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dc/dc_Comparative2022_2023.pdf">Comparative Figures of Institution & Disposal of 2022 & 2023</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dc/dc_Comparative2021_2022.pdf">Comparative Figures of Institution & Disposal of 2021 & 2022</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dc/dc_Judgments_Glance.pdf">No. of Judgments at a Glance</a></li>                                
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="https://orissahighcourt.nic.in/">RRDC (Record Room Digitization Centre)</a>
+                            <ul class="sub-sub-menu">
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/rrdc/Civil_RRDC.pdf">Civil</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/rrdc/Criminal_RRDC.pdf">Criminal</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/rrdc/Cumulative_RRDC.pdf">Cumulative Report</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="https://orissahighcourt.nic.in/">DCDC (District Court Digitization Centre)</a>
+                            <ul class="sub-sub-menu">
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Angul.pdf">DCDC-Angul</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Balangir.pdf">DCDC-Balangir</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Balasore.pdf">DCDC-Balasore</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Bargarh.pdf">DCDC-Bargarh</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Bhadrak.pdf">DCDC-Bhadrak</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Cuttack.pdf">DCDC-Cuttack</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Deogarh.pdf">DCDC-Deogarh</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Dhenkanal.pdf">DCDC-Dhenkanal</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Gajapati.pdf">DCDC-Gajapati</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Ganjam.pdf">DCDC-Ganjam</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Jagatsinghpur.pdf">DCDC-Jagatsinghpur</a></li>                                        
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Jajpur.pdf">DCDC-Jajpur</a></li>   
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Jharsuguda.pdf">DCDC-Jharsuguda</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Kalahandi.pdf">DCDC-Kalahandi</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Kandhamal.pdf">DCDC-Kandhamal</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Kendrapara.pdf">DCDC-Kendrapara</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Keonjhar.pdf">DCDC-Keonjhar</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Koraput.pdf">DCDC-Koraput</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Malkangiri.pdf">DCDC-Malkangiri</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Mayurbhanj.pdf">DCDC-Mayurbhanj</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Nabarangpur.pdf">DCDC-Nabarangpur</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Nayagarh.pdf">DCDC-Nayagarh</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Puri.pdf">DCDC-Puri</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Sambalpur.pdf">DCDC-Sambalpur</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Sonepur.pdf">DCDC-Sonepur</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/DCDC_Sundargarh.pdf">DCDC-Sundargarh</a></li>
+                                <li><a href="https://orissahighcourt.nic.in//uploads/statistics/dcdc/Cumulative_DCDC.pdf">Cumulative Report</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    
+                </li>
+                <!--<li><a href="https://orissahighcourt.nic.in/rti/">RTI</a></li>-->
+                <!-- <li><a href="https://orissahighcourt.nic.in/forms/">Forms</a></li> -->
+
+                <li><a href="https://orissahighcourt.nic.in/justice-clock/">Justice Clock</a></li>
+                <li><a href="https://orissahighcourt.nic.in/e-filing/">e-Filing 3.0</a></li>
+                        
+                <!-- <li><a href="https://orissahighcourt.nic.in/annual-report/">Annual Report<img src="https://orissahighcourt.nic.in/images/new14.gif" style="max-height: 10px;padding-left: 2px;" /></a></li> -->
+                        
+                <li class="dropdown"><a href="javascript:void(0)">Annual Report & Souvenir<img src="https://orissahighcourt.nic.in/images/new14.gif" style="max-height: 12px;padding-left: 4px;"/><span class="toggle-arrow"></span></a>
+                    <ul class="">
+                        <li class="dropdown"><a href="https://orissahighcourt.nic.in/">Annual Report 2023<img src="https://orissahighcourt.nic.in/images/new14.gif" style="max-height: 12px;padding-left: 4px;" /></a>
+                        	<ul  class="sub-sub-menu">
+                                <li><a href="https://orissahighcourt.nic.in/annual_report_2023.pdf">View in PDF</a></li>
+                                <li><a href="https://ohcar.co.in/annualreport2023/" target="_blank">View Web Version</a></li>
+                            </ul>
+                        </li>
+                            
+                        <li class="dropdown"><a href="https://orissahighcourt.nic.in/">Annual Report 2022</a>
+                            <ul  class="sub-sub-menu">
+                                <li><a href="https://orissahighcourt.nic.in/annual_report_2022.pdf">View in PDF</a></li>
+                                <li><a href="http://ohcar2022.co.in" target="_blank">View Web Version</a></li>  
+                            </ul>
+                        </li>   
+                        <li class="dropdown"><a href="https://orissahighcourt.nic.in/">Annual Report 2021</a>
+                            <ul  class="sub-sub-menu">
+                                <li><a href="https://orissahighcourt.nic.in/annual_report_2021.pdf">View in PDF</a></li>
+                                <li><a href="http://ohcar.co.in" target="_blank">View Web Version</a></li>
+                            </ul>
+                        </li>                              
+                        <li class="dropdown"><a href="https://orissahighcourt.nic.in/">Souvenir for 75th Year, High Court of Orissa</a>
+                            <ul  class="sub-sub-menu">
+                                <li><a href="https://orissahighcourt.nic.in/souvenir.pdf">View in PDF</a></li>
+							</ul>
+                        </li>
+                    </ul>
+                </li> 
+                <!-- <li class="dropdown"><a href="#">Annual Report <span class="toggle-arrow"></span></a>
+                    <ul>
+                        <li><a href="https://orissahighcourt.nic.in/annual-report/" target="_blank">View in PDF</a></li>
+                        <li><a href="http://ohcar.co.in" target="_blank">View Web Version</a></li>
+                    </ul>
+                </li>-->
+
+                <li class="dropdown"><a href="javascript:void(0)" style="color: #ff0000;">e-Services</a>
+                    <ul>
+                        <li><a href="https://orissahighcourt.nic.in/ecourtfees/" target="_blank">e-Court Fees</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/epay-fine/" target="_blank">e-Payment of Fine</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/virtual-courts/" target="_blank">Virtual Courts (Traffic)</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/mobile-app/" target="_blank">High Court of Orissa eServices Mobile App</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/e-courts-services-mobile-app-manual/">e-Courts Services Mobile App</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/esewa/" target="_blank">e-Sewa Kendra</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/onlinememo/" target="_blank">Online Mentioning</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/onlinecertifiedcopy/" target="_blank">Online Certified Copy</a></li>
+                        <!--<li><a href="https://orissahighcourt.nic.in/onlinerti/" target="_blank">Apply Online for RTI <img src="https://orissahighcourt.nic.in/images/new14.gif" style="max-height: 10px;padding-left: 2px;" /></a></li>-->
+                        
+                        <li><a href="https://ohceservices.nic.in/wifi/">Free Campus Wi-Fi</a></li>
+                        <li><a href="http://112.133.226.244/einspection/">e-Inspection of Case Records</a></li>
+                        
+                        <li><a href="https://www.youtube.com/channel/UCtTgN30THhZfQ6sQ_v3KBHQ">Live Streaming</a></li>
+                    </ul>
+                </li>
+                
+        		<li><a href="https://orissahighcourt.nic.in/about-orissa-high-court/event-gallery-mon/">Event Calendar</a></li> 
+                <li class="dropdown"><a href="javascript:void(0)">RTI<span class="toggle-arrow"></span></a>
+                    <ul class="">
+                        <li><a href="https://orissahighcourt.nic.in/rti/state-public-information-officer-and-first-appellate-authority/">State Public Information Officer & First Appellate Authority</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/onlinerti/">Apply Online for RTI </a></li>
+                        <li><a href="https://orissahighcourt.nic.in/4(1)(b)RTI.pdf">Information u/s 4(1)(b) of the Right to Information Act, 2005</a></li>
+                    </ul>
+                </li>
+                        
+				<li><a href="http://112.133.226.244/judicial_arc/">Centre for Judicial Archives</a></li>
+                
+                <li class="dropdown"><a href="javascript:void(0)">Museum of Justice<span class="toggle-arrow"></span></a>
+                    <ul class="">
+                        <!--<li><a href="https://orissahighcourt.nic.in/">2022<img src="https://orissahighcourt.nic.in/images/new14.gif" style="max-height: 10px;padding-left: 2px;" /></a>-->
+                        <li><a href="https://orissahighcourt.nic.in/museum.pdf">View in PDF</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/pg_museum.pdf">Photo Gallery</a></li>
+                        <li><a href="https://orissahighcourt.nic.in/Newspaper_Pulications.pdf">Newspaper items</a></li>
+                        <li><a href="https://youtu.be/3RR8WITh9Es" target="_blank">Video of Museum of Justice</a></li>
+                        <li><a href="https://orissahighcourt.nic.in//sale_of_book_Vol-I_Vol-II.pdf">Sale of Book – Judicial History of Odisha (Vol-I & Vol-II)</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://orissahighcourt.nic.in/vernacular_judgments/">Judgments in Vernacular Language</a></li>
+				<!-- <li><a href="https://orissahighcourt.nic.in/CA1083-2022.pdf">Judgments in Odia</a></li> -->
+                <li><a href="https://orissahighcourt.nic.in/pil-portal/">PIL Portal</a></li>
+                <li><a href="https://orissahighcourt.nic.in/MP_MLA/" >Cases Involving MPs/MLAs</a></li>
+                <li><a href="https://orissahighcourt.nic.in/commercialcourt/" >Commercial Courts Data</a></li>
+                                
+								
+                <li class="dropdown"><a href="javascript:void(0)">e-HCR<img src="https://orissahighcourt.nic.in//images/new14.gif" style="max-height: 10px;padding-left: 2px;" /><span class="toggle-arrow"></span></a>  
+                    <ul class="">
+                        <li><a href="https://ilr.odisha.gov.in/ilr/">e-HCR</a></li>
+                        <li><a href="javascript:void(0)">QR Code for e-HCR Portal<img src="https://orissahighcourt.nic.in//images/qr-ilr.png" style="max-height: 55px;padding-left: 50px;" /></a></li>
+                    </ul>
+                </li>
+            </ul>
+                    
+        </div><!-- /.Side-menu -->
+
+    </div><!-- / Hidden Bar Wrapper -->
+
+</section>
+<!-- / Hidden Bar -->
+
+<style type="text/css">
+    .main-ul .sub-sub-menu{
+        left: 250px!important;
+        top: 0!important;
+    }
+    .change-lang input{
+        background: none;
+        border: none;
+        position: absolute;
+        opacity: 0;
+        width: -webkit-fill-available;
+    }
+    .change-lang span{
+        padding: 2px 4px;
+    border: 1px solid #80808078;
+    }
+</style>
+
+<!--   ----------------------------------------------------------
+HEADER END
+
+
+
+        <!--   ---------------------------------------------
+        BANNER PART START
+        --------------------------------------------------->
+        <section class="banner-new banner-new-3">
+<!--            <img class="banner-img" src="images/banner.jpg" alt="banner"/>-->
+            <div class="" >  
+                <div class="banner-wrap">
+                    <div class="owl-carousel banner-slider owl-theme">
+                        
+                        <!--<div class="item">
+                            <img src="images/new-slider/flaggif.gif" style="height:342px; width:200px; margin-left:600px;" alt="slider 15"/>                            
+                        </div>-->
+                                                                                               
+                                                
+                        <div class="item">
+                            <img src="images/new-slider/s11_13.jpg" alt="s11_13"/>   
+                        </div>
+                                                
+                        <div class="item">
+                            <img src="images/new-slider/s4_7.jpg" alt="slider s4_7"/>                            
+                        </div>
+                        
+                        
+                         <!--<div class="item">
+                            <img src="images/new-slider/s05012022.jpg" alt="slider s7"/>                            
+                        </div>-->
+                        
+                        
+                        <div class="item">
+                            <img src="images/new-slider/s05012023.jpg" alt="slider s23"/>                            
+                        </div>
+                         
+                        <div class="item">
+                            <img src="images/new-slider/mj1.jpg" alt="slider mj1"/>                            
+                        </div>
+
+                        <div class="item">
+                            <img src="images/new-slider/mj2.jpg" alt="slider mj2"/>                            
+                        </div>
+                         
+                        <div class="item">
+                            <img src="images/new-slider/Banner-14_07022022.jpg" alt="slider 14"/>   
+                        </div>
+                                                                    
+                        <div class="item">
+                            <img src="images/new-slider/Banner-updated-6.jpg" alt="slider 06"/>   
+                        </div>
+                        <div class="item">
+
+                            <img src="images/new-slider/Banner-updated-10_edit.jpg" alt="slider 10"/>   
+                        </div>
+
+                        <div class="item">
+                            <img src="images/new-slider/Banner-updated-1.jpg" alt="slider 01"/>                            
+                        </div>
+                        
+                        
+                        
+                                     
+                    </div>
+                    <div id="carouselButtons">
+                        <button  type="button" alt="btn" title="" role="button" aria-hidden="btn" class="btn btn-default btn-xs banner-control-new pauseButton">
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="banner-sidebar-new">
+                    <div class="arrows" id="arrows"></div>
+                    <ul>
+                                                    <li>
+
+                                <i><img src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1565179378.png" alt="Icon"></i>
+                                <a href="https://hcservices.ecourts.gov.in/ecourtindiaHC/index_highcourt.php?state_cd=11&dist_cd=1&stateNm=Odisha/"  target="_blank" rel="noopener noreferrer" role="Quick Link" aria-label="Case Status / Cause List / Orders / Judgments" class="hvr-sweep-to-right2 external"><span>Case Status / Cause List / Orders / Judgments</span></a>
+                            </li>
+                                                    <li>
+
+                                <i><img src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1565179447.png" alt="Icon"></i>
+                                <a href="cause-list/"  role="Quick Link" aria-label="Cause List (In PDF Format)" class="hvr-sweep-to-right2 "><span>Cause List (In PDF Format)</span></a>
+                            </li>
+                                                    <li>
+
+                                <i><img src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1565179459.png" alt="Icon"></i>
+                                <a href="new-cases-filed/"  role="Quick Link" aria-label="New Cases Filed/ Defect List" class="hvr-sweep-to-right2 "><span>New Cases Filed/ Defect List</span></a>
+                            </li>
+                                                    <li>
+
+                                <i><img src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1565179475.png" alt="Icon"></i>
+                                <a href="case-pendency-report/"  role="Quick Link" aria-label="Case Pendency/ Disposal Report" class="hvr-sweep-to-right2 "><span>Case Pendency/ Disposal Report</span></a>
+                            </li>
+                                                    <li>
+
+                                <i><img src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1565179496.png" alt="Icon"></i>
+                                <a href="http://www.ohcdb.in//"  target="_blank" rel="noopener noreferrer" role="Quick Link" aria-label="Display Board" class="hvr-sweep-to-right2 external"><span>Display Board</span></a>
+                            </li>
+                                                    <li>
+
+                                <i><img src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1570596828.png" alt="Icon"></i>
+                                <a href="certified-copy-status/"  role="Quick Link" aria-label="Certified Copy Status" class="hvr-sweep-to-right2 "><span>Certified Copy Status</span></a>
+                            </li>
+                                            </ul>
+                </div>
+            </div>
+        </section>
+        <!--   ---------------------------------------------
+        BANNER PART END
+        --------------------------------------------------->        
+
+
+        <section class="announcement-section announcement-section2" id="skip-to-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                        <div class="announcement-heading">
+                            <p>Announcements</p>                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                        <div class="scrolling-text-cont">
+                            <ul class="marquee">
+                                                                    <li><a href="https://orissahighcourt.nic.in/announcement/announcement-pdf-view/1359/"  target="_blank" rel="noopener noreferrer" aria-label="Tender for hiring of outsourcing Security Services (Watch and Ward) (Without Arms) at Museum of Justice, Killa Fort, Cuttack" class="blinkk ">Tender for hiring of outsourcing Security Services (Watch and Ward) (Without Arms) at Museum of Justice, Killa Fort, Cuttack<!-- LOK Adalat will be held on 11th May, 2019 (Saturday) --></a></li>
+                                                                    <li><a href="https://orissahighcourt.nic.in/announcement/announcement-pdf-view/1351/"  target="_blank" rel="noopener noreferrer" aria-label="2nd National Lok Adalat scheduled to be held on 09-05-2026 (Saturday)" class="blinkk ">2nd National Lok Adalat scheduled to be held on 09-05-2026 (Saturday)<!-- LOK Adalat will be held on 11th May, 2019 (Saturday) --></a></li>
+                                                                    <li><a href="https://orissahighcourt.nic.in/announcement/announcement-pdf-view/1346/"  target="_blank" rel="noopener noreferrer" aria-label="Official Database Form for Retired Judicial Officers/Pensioners/Family Pensioners for preparation of centralized database under the Odisha Judicial Officers (Medical Attendance) Order, 2013" class="blinkk ">Official Database Form for Retired Judicial Officers/Pensioners/Family Pensioners for preparation of centralized database under the Odisha Judicial Officers (Medical Attendance) Order, 2013<!-- LOK Adalat will be held on 11th May, 2019 (Saturday) --></a></li>
+                                                                    <li><a href="https://orissahighcourt.nic.in/announcement/announcement-pdf-view/1344/"  target="_blank" rel="noopener noreferrer" aria-label="List of candidates eligible to appear in the preliminary examination to be held on 05.04.2026 (Sunday) for recruitment to the posts of Translator pursuant to Advt. No. 02 of 2026" class="blinkk ">List of candidates eligible to appear in the preliminary examination to be held on 05.04.2026 (Sunday) for recruitment to the posts of Translator pursuant to Advt. No. 02 of 2026<!-- LOK Adalat will be held on 11th May, 2019 (Saturday) --></a></li>
+                                                                    <li><a href="https://orissahighcourt.nic.in/announcement/announcement-pdf-view/1343/"  target="_blank" rel="noopener noreferrer" aria-label="List of candidates eligible to appear in the preliminary examination to be held on 05.04.2026 (Sunday) for recruitment to the posts of Junior Grade Typist/ D.E.O. pursuant to Advt. No. 01 of 2026" class="blinkk ">List of candidates eligible to appear in the preliminary examination to be held on 05.04.2026 (Sunday) for recruitment to the posts of Junior Grade Typist/ D.E.O. pursuant to Advt. No. 01 of 2026<!-- LOK Adalat will be held on 11th May, 2019 (Saturday) --></a></li>
+                                                                    <li><a href="https://orissahighcourt.nic.in/announcement/announcement-pdf-view/1342/"  target="_blank" rel="noopener noreferrer" aria-label="Notice for Morning sitting of District and Subordinate Courts" class="blinkk ">Notice for Morning sitting of District and Subordinate Courts<!-- LOK Adalat will be held on 11th May, 2019 (Saturday) --></a></li>
+                                                            </ul>
+                            <a href="javascript:void(0)" aria-label="Play and Pause" class="play-pause-option pause"></a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- 25-01  -->
+                <div class="col-lg-12" style=" margin-top: 17px;font-weight: 600;">
+                    <a href="https://orissahighcourt.nic.in/sop_sc_wpc6432015.pdf" style="text-decoration: none;"><span>1. SOP in line with the judgment dtd 04.01.2024 of the Hon'ble Supreme Court of India passed in WP(C) No 643 of 2015</span></a>
+                </div>
+                
+                <div class="col-lg-12" style=" margin-top: 17px;font-weight: 600;">
+                    <a href="https://orissahighcourt.nic.in//sop_contact_details05042024.pdf" style="text-decoration: none;"><span>2. Contact details of Nodal Agencies (Both State Level & District Level) declared in paragarph-6 of SOP vide Court's Notification No. 159/A dtd. 25.01.2024</span></a>
+                </div>
+                
+                <div class="col-lg-12" style=" margin-top: 17px;font-weight: 600;">
+                    <a href="https://orissahighcourt.nic.in//drawal_homeorderly_05092024.pdf" style="text-decoration: none;"><span>3. Drawal of Home Orderly and Domestic Help Allowance by the Judicial Officers, Pensioners and Family Pensioners of the District Judiciary of the State</span></a>
+                </div>                
+                
+                <div class="col-lg-12" style=" margin-top: 17px;font-weight: 600;">
+                    <a href="https://orissahighcourt.nic.in//nodal_officer_11042025.pdf" style="text-decoration: none;"><span>4. Functioning of office of the Nodal Officer in the premises of the High Court</span></a>
+                </div>
+                                
+                
+                <div class="col-lg-12" style=" margin-top: 17px;font-weight: 600;">
+                    <a href="https://orissahighcourt.nic.in//medical.pdf" style="text-decoration: none;"><span>5. The Odisha Judicial Officers (Medical Attendance)(Amendment) Order, 2025</span></a>
+                </div>
+                
+                
+                <div class="col-lg-12" style=" margin-top: 17px;font-weight: 600;">
+                    <a href="https://orissahighcourt.nic.in//official_database_26032026.pdf" style="text-decoration: none;"><span>6. Official Database Form for Retired Judicial Officers/Pensioners/Family Pensioners for preparation of centralized database under the Odisha Judicial Officers (Medical Attendance) Order, 2013</span></a>
+                </div>
+                
+                
+            </div> 
+        </section>       
+
+        <!--   ---------------------------------------------
+        ABOUT US PART START
+        --------------------------------------------------->
+        <section class="wrapper about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="announcement-section media-section">
+                            <h3 class='head-section'>Directories</h3>                            
+                                                            <div class="dir-con dir-new-format">
+                                    <a href="https://orissahighcourt.nic.in/directories-pdf-view/99/" aria-label="Civil List" class="">
+                                        <span>Civil List</span>
+                                        <i class="directories-icon"></i>
+                                    </a>
+                                </div>
+                                                            <div class="dir-con dir-new-format">
+                                    <a href="https://orissahighcourt.nic.in/directories-pdf-view/100/" aria-label="Station Wise Judicial Officers" class="">
+                                        <span>Station Wise Judicial Officers</span>
+                                        <i class="directories-icon"></i>
+                                    </a>
+                                </div>
+                                                            <div class="dir-con dir-new-format">
+                                    <a href="https://orissahighcourt.nic.in/directories-pdf-view/104/" aria-label="High Court Registry" class="">
+                                        <span>High Court Registry</span>
+                                        <i class="directories-icon"></i>
+                                    </a>
+                                </div>
+                                                        <!-- <div class="dir-con dir-new-format">
+                                <a href="https://orissahighcourt.nic.in/highcourt_registry/" aria-label="High Court Registry" class="" rel="noopener noreferrer">
+                                    <span>High Court Registry</span>
+                                    <i class="directories-icon"></i>
+                                </a>
+                            </div> -->
+                            <div class="dir-con dir-new-format state-jo">
+                                <a href="javascript:void(0)" aria-label="Station Wise Judicial Officers" class="" rel="noopener noreferrer">
+                                    <span>State Judicial Officers</span>
+                                    <!-- <i class="directories-icon"></i> -->
+                                </a>
+                                <div class="sjo-hideElement main-nav">
+                                    <ul>
+                                        <li><a href="https://orissahighcourt.nic.in/list_of_judicial_officers/1/" rel="noopener noreferrer">Officers in the cadre of District Judge</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in/list_of_judicial_officers/2/" rel="noopener noreferrer" >Officers in the cadre of Civil Judge (Senior Division)</a></li>
+                                        <li><a href="https://orissahighcourt.nic.in/list_of_judicial_officers/3/" rel="noopener noreferrer" >Officers in the cadre of Civil Judge (Junior Division)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <article class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="media-section media2">
+                            <div class="home-page-tab ilr-cuttack">
+                                <!--<div class="arrows"></div>-->
+                                <h3 class='head-section'>Court news</h3>                                <ul id="">
+                                                                            <li><a href="https://orissahighcourt.nic.in/court-news-pdf-view/75/"><i class="pdf-icon"></i><h4>eCommittee Newsletter August-2025</h4> <span class="date">Aug-2025</span> <span class="size">2.47 MB</span></a></li> 
+                                                                            <li><a href="https://orissahighcourt.nic.in/court-news-pdf-view/74/"><i class="pdf-icon"></i><h4>eCommittee Newsletter July-2025</h4> <span class="date">Jul-2025</span> <span class="size">2.33 MB</span></a></li> 
+                                                                            <li><a href="https://orissahighcourt.nic.in/court-news-pdf-view/73/"><i class="pdf-icon"></i><h4>eCommittee Newsletter June-2025</h4> <span class="date">Jun-2025</span> <span class="size">1.8 MB</span></a></li> 
+                                                                            <li><a href="https://orissahighcourt.nic.in/court-news-pdf-view/72/"><i class="pdf-icon"></i><h4>eCommittee Newsletter May-2025</h4> <span class="date">May-2025</span> <span class="size">1.73 MB</span></a></li> 
+                                    
+
+                                </ul>
+                                <div class="footer-section">
+                                    <a href="https://orissahighcourt.nic.in/court-news/" aria-label="Link to view more about Court News">View All</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="announcement-section media-section media-section-new-demo">
+                            <h3 class='head-section'>Important Notices</h3>                            <ul id="announcements-vertical-news-new"> 
+
+                                                                    <li>
+                                        <a href="https://orissahighcourt.nic.in/important-notices-pdf-view/notification/1205/">Tender for hiring of outsourcing Security Services (Watch and Ward) (Without Arms) at Museum of Just... 
+                                            <span>09/ Apr /2026</span>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://orissahighcourt.nic.in/important-notices-pdf-view/notification/1203/">2nd National Lok Adalat scheduled to be held on 09-05-2026 (Saturday)... 
+                                            <span>31/ Mar /2026</span>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://orissahighcourt.nic.in/important-notices-pdf-view/notification/1204/">Declaration of 02.04.2026 as a Holiday... 
+                                            <span>31/ Mar /2026</span>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://orissahighcourt.nic.in/important-notices-pdf-view/notification/1201/">Notice regarding further consideration pursuant to Court&#039;s Tender Notice No. 820 dtd. 17.01.202... 
+                                            <span>26/ Mar /2026</span>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://orissahighcourt.nic.in/important-notices-pdf-view/notification/1202/">Official Database Form for Retired Judicial Officers/Pensioners/Family Pensioners for preparation of... 
+                                            <span>26/ Mar /2026</span>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://orissahighcourt.nic.in/important-notices-pdf-view/notification/1198/">List of candidates eligible to appear in the preliminary examination to be held on 05.04.2026 (Sunda... 
+                                            <span>25/ Mar /2026</span>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://orissahighcourt.nic.in/important-notices-pdf-view/notification/1199/">List of candidates eligible to appear in the preliminary examination to be held on 05.04.2026 (Sunda... 
+                                            <span>25/ Mar /2026</span>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://orissahighcourt.nic.in/important-notices-pdf-view/notification/1200/">Notice for award of Tender in connection with purchase of 50 nos. office chairs... 
+                                            <span>25/ Mar /2026</span>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://orissahighcourt.nic.in/important-notices-pdf-view/notification/1196/">Notice regarding inviting suggestions/views of Advocates-on-Record/Advocates who have applied for de... 
+                                            <span>24/ Mar /2026</span>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://orissahighcourt.nic.in/important-notices-pdf-view/notification/1197/">Notice for Morning sitting of District and Subordinate Courts... 
+                                            <span>24/ Mar /2026</span>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://orissahighcourt.nic.in/important-notices-pdf-view/notification/1195/">Appointment Letter to the newly selected Assistant Section Officers of the Court... 
+                                            <span>16/ Mar /2026</span>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://orissahighcourt.nic.in/important-notices-pdf-view/notification/1194/">Selected Counsels as Panel Lawyers in the High Court Legal Services Committee, Orissa, Cuttack... 
+                                            <span>13/ Mar /2026</span>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://orissahighcourt.nic.in/important-notices-pdf-view/notification/1193/">Select list of candidates for recruitment to the posts of Assistant Section Officer pursuant to Adve... 
+                                            <span>09/ Mar /2026</span>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://orissahighcourt.nic.in/important-notices-pdf-view/notification/1192/">Notification No. 590 dated 10.02.2026 regarding the Odisha Superior Judicial Service and Odisha Judi... 
+                                            <span>28/ Feb /2026</span>
+                                        </a>
+                                    </li>
+                                                            </ul>
+                            <div class="footer-section">
+                                <a href="https://orissahighcourt.nic.in/important-notices/" aria-label="Link to view more about Important Notices">View All</a>
+                                <div class="c-navigation c-nav1">
+                                    <span class="control-icon-pause" id="ticker-pause"></span>
+                                    <span class="control-icon-play" id="ticker-play"></span>            
+                                    <span class="control-icon-next" id="ticker-next-a"></span>
+                                    <span class="control-icon-preview" id="ticker-previous-a"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <!--   ---------------------------------------------
+        ABOUT US PART END
+        --------------------------------------------------->
+
+        <!--   ---------------------------------------------
+        CITIZEN PART START
+        --------------------------------------------------->
+        <section class="wrapper citizen quicklinks-demo">
+            <div class="container">
+                <h3 class='heading sam text-center'>Quick Links</h3>                  
+
+                <div class="clearfix"></div>
+                <div class="row">
+                    <!-- Orissa High Court arbitration center -->
+                                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 moon">
+                            <a href="https://icc.odisha.gov.in/icc"  target="_blank" rel="noopener noreferrer" aria-label="Internal Complaints Committee" class="hover-box external">
+                                <div class="main-box">
+
+                                    <div class="c-box hover-right">
+                                        <h2>Internal Complaints Committee</h2>
+                                    </div>  
+                                </div> <!-- images/searchicon.png --> 
+                                <span class="circle ico-1"><img alt="Internal Complaints Committee" src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1733140228.png"/></span>                        
+                            </a>
+                        </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 moon">
+                            <a href="https://shebox.wcd.gov.in/"  target="_blank" rel="noopener noreferrer" aria-label="SHe-Box" class="hover-box external">
+                                <div class="main-box">
+
+                                    <div class="c-box hover-right">
+                                        <h2>SHe-Box</h2>
+                                    </div>  
+                                </div> <!-- images/searchicon.png --> 
+                                <span class="circle ico-1"><img alt="SHe-Box" src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1763462237.png"/></span>                        
+                            </a>
+                        </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 moon">
+                            <a href="https://scr.sci.gov.in/scrsearch/"  target="_blank" rel="noopener noreferrer" aria-label="SCR (Supreme Court Reports)" class="hover-box external">
+                                <div class="main-box">
+
+                                    <div class="c-box hover-right">
+                                        <h2>SCR (Supreme Court Reports)</h2>
+                                    </div>  
+                                </div> <!-- images/searchicon.png --> 
+                                <span class="circle ico-1"><img alt="SCR (Supreme Court Reports)" src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1675778833.png"/></span>                        
+                            </a>
+                        </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 moon">
+                            <a href="mediation_centre/"  target="_blank" rel="noopener noreferrer" aria-label="High Court of Orissa Mediation Centre" class="hover-box ">
+                                <div class="main-box">
+
+                                    <div class="c-box hover-right">
+                                        <h2>High Court of Orissa Mediation Centre</h2>
+                                    </div>  
+                                </div> <!-- images/searchicon.png --> 
+                                <span class="circle ico-1"><img alt="High Court of Orissa Mediation Centre" src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1686204601.png"/></span>                        
+                            </a>
+                        </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 moon">
+                            <a href="https://orissahighcourt.nic.in/notification/"  aria-label="Notification" class="hover-box ">
+                                <div class="main-box">
+
+                                    <div class="c-box hover-right">
+                                        <h2>Notification</h2>
+                                    </div>  
+                                </div> <!-- images/searchicon.png --> 
+                                <span class="circle ico-1"><img alt="Notification" src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1570884717.png"/></span>                        
+                            </a>
+                        </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 moon">
+                            <a href="https://orissahighcourt.nic.in/recruitment-corner/"  aria-label="Recruitment Corner" class="hover-box ">
+                                <div class="main-box">
+
+                                    <div class="c-box hover-right">
+                                        <h2>Recruitment Corner</h2>
+                                    </div>  
+                                </div> <!-- images/searchicon.png --> 
+                                <span class="circle ico-1"><img alt="Recruitment Corner" src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1570884699.png"/></span>                        
+                            </a>
+                        </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 moon">
+                            <a href="https://orissahighcourt.nic.in/tender-notice/"  aria-label="Tender Notice" class="hover-box ">
+                                <div class="main-box">
+
+                                    <div class="c-box hover-right">
+                                        <h2>Tender Notice</h2>
+                                    </div>  
+                                </div> <!-- images/searchicon.png --> 
+                                <span class="circle ico-1"><img alt="Tender Notice" src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1570884676.png"/></span>                        
+                            </a>
+                        </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 moon">
+                            <a href="juvenile-justice-committee/"  target="_blank" rel="noopener noreferrer" aria-label="Juvenile Justice Committee" class="hover-box ">
+                                <div class="main-box">
+
+                                    <div class="c-box hover-right">
+                                        <h2>Juvenile Justice Committee</h2>
+                                    </div>  
+                                </div> <!-- images/searchicon.png --> 
+                                <span class="circle ico-1"><img alt="Juvenile Justice Committee" src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1570883972.png"/></span>                        
+                            </a>
+                        </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 moon">
+                            <a href="https://orissahighcourt.nic.in/sensitization-of-family-court-matters/"  aria-label="Sensitization of Family Court Matters" class="hover-box ">
+                                <div class="main-box">
+
+                                    <div class="c-box hover-right">
+                                        <h2>Sensitization of Family Court Matters</h2>
+                                    </div>  
+                                </div> <!-- images/searchicon.png --> 
+                                <span class="circle ico-1"><img alt="Sensitization of Family Court Matters" src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1570883823.png"/></span>                        
+                            </a>
+                        </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 moon">
+                            <a href="https://orissahighcourt.nic.in/legal-services-committee/"  aria-label="High Court Legal Services Committee" class="hover-box ">
+                                <div class="main-box">
+
+                                    <div class="c-box hover-right">
+                                        <h2>High Court Legal Services Committee</h2>
+                                    </div>  
+                                </div> <!-- images/searchicon.png --> 
+                                <span class="circle ico-1"><img alt="High Court Legal Services Committee" src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1570883799.png"/></span>                        
+                            </a>
+                        </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 moon">
+                            <a href="http://112.133.226.244/jrp/"  target="_blank" rel="noopener noreferrer" aria-label="Judicial Officers&#039; Redressal Portal" class="hover-box external">
+                                <div class="main-box">
+
+                                    <div class="c-box hover-right">
+                                        <h2>Judicial Officers&#039; Redressal Portal</h2>
+                                    </div>  
+                                </div> <!-- images/searchicon.png --> 
+                                <span class="circle ico-1"><img alt="Judicial Officers&#039; Redressal Portal" src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1716464630.png"/></span>                        
+                            </a>
+                        </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 moon">
+                            <a href="https://oja.odisha.gov.in/"  target="_blank" rel="noopener noreferrer" aria-label="Odisha Judicial Academy" class="hover-box external">
+                                <div class="main-box">
+
+                                    <div class="c-box hover-right">
+                                        <h2>Odisha Judicial Academy</h2>
+                                    </div>  
+                                </div> <!-- images/searchicon.png --> 
+                                <span class="circle ico-1"><img alt="Odisha Judicial Academy" src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1570883286.png"/></span>                        
+                            </a>
+                        </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 moon">
+                            <a href="https://orissahighcourt.nic.in/orissa-arbitration-centre/"  aria-label="Orissa High Court Arbitration Centre" class="hover-box ">
+                                <div class="main-box">
+
+                                    <div class="c-box hover-right">
+                                        <h2>Orissa High Court Arbitration Centre</h2>
+                                    </div>  
+                                </div> <!-- images/searchicon.png --> 
+                                <span class="circle ico-1"><img alt="Orissa High Court Arbitration Centre" src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1570884607.png"/></span>                        
+                            </a>
+                        </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 moon">
+                            <a href="https://orissahighcourt.nic.in/corrigendum/"  aria-label="Corrigendum Notice" class="hover-box ">
+                                <div class="main-box">
+
+                                    <div class="c-box hover-right">
+                                        <h2>Corrigendum Notice</h2>
+                                    </div>  
+                                </div> <!-- images/searchicon.png --> 
+                                <span class="circle ico-1"><img alt="Corrigendum Notice" src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1702453893.png"/></span>                        
+                            </a>
+                        </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 moon">
+                            <a href="https://ecourts.gov.in/ecourts_home/"  target="_blank" rel="noopener noreferrer" aria-label="eCourt" class="hover-box external">
+                                <div class="main-box">
+
+                                    <div class="c-box hover-right">
+                                        <h2>eCourt</h2>
+                                    </div>  
+                                </div> <!-- images/searchicon.png --> 
+                                <span class="circle ico-1"><img alt="eCourt" src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1570883866.png"/></span>                        
+                            </a>
+                        </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 moon">
+                            <a href="https://ecourts.gov.in/ecourts_home/index.php?p=dist_court/odisha"  target="_blank" rel="noopener noreferrer" aria-label="District Court Websites" class="hover-box external">
+                                <div class="main-box">
+
+                                    <div class="c-box hover-right">
+                                        <h2>District Court Websites</h2>
+                                    </div>  
+                                </div> <!-- images/searchicon.png --> 
+                                <span class="circle ico-1"><img alt="District Court Websites" src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1570883890.png"/></span>                        
+                            </a>
+                        </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 moon">
+                            <a href="https://orissahighcourt.nic.in/forms/"  aria-label="Forms" class="hover-box ">
+                                <div class="main-box">
+
+                                    <div class="c-box hover-right">
+                                        <h2>Forms</h2>
+                                    </div>  
+                                </div> <!-- images/searchicon.png --> 
+                                <span class="circle ico-1"><img alt="Forms" src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1646302998.png"/></span>                        
+                            </a>
+                        </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 moon">
+                            <a href="https://orissahighcourt.nic.in/judges_library/"  aria-label="Judges Library" class="hover-box ">
+                                <div class="main-box">
+
+                                    <div class="c-box hover-right">
+                                        <h2>Judges Library</h2>
+                                    </div>  
+                                </div> <!-- images/searchicon.png --> 
+                                <span class="circle ico-1"><img alt="Judges Library" src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1570884630.png"/></span>                        
+                            </a>
+                        </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 moon">
+                            <a href="https://sclsc.gov.in/"  target="_blank" rel="noopener noreferrer" aria-label="Supreme Court Legal Services Committee" class="hover-box external">
+                                <div class="main-box">
+
+                                    <div class="c-box hover-right">
+                                        <h2>Supreme Court Legal Services Committee</h2>
+                                    </div>  
+                                </div> <!-- images/searchicon.png --> 
+                                <span class="circle ico-1"><img alt="Supreme Court Legal Services Committee" src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1570883848.png"/></span>                        
+                            </a>
+                        </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 moon">
+                            <a href="https://main.sci.nic.in/sci_accessibility/"  target="_blank" rel="noopener noreferrer" aria-label="Questionnaires on Accessibilty" class="hover-box external">
+                                <div class="main-box">
+
+                                    <div class="c-box hover-right">
+                                        <h2>Questionnaires on Accessibilty</h2>
+                                    </div>  
+                                </div> <!-- images/searchicon.png --> 
+                                <span class="circle ico-1"><img alt="Questionnaires on Accessibilty" src="https://orissahighcourt.nic.in/../uploads/banner_icon/icon-1677220766.png"/></span>                        
+                            </a>
+                        </div>
+                    
+                </div>
+                
+                <a href='#' id='loadMore' >Load More</a>                </a>
+
+
+            </div>
+        </section>
+        <!--   ---------------------------------------------
+        CITIZEN PART END
+        --------------------------------------------------->
+        <div class="clearfix"></div>
+
+
+
+        <!--   ---------------------------------------------
+        MEDIA  PART START
+        --------------------------------------------------->
+        <section class="wrapper media-section">
+            <div class="container">
+                <div class="row">                    
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.9s" data-wow-offset="100">
+                        <div class="news-section ilr-cuttack">
+                        <h3 class='head-section'>ILR Cuttack</h3>                            <ul id="">
+                                 
+                                    <li><a href="https://orissahighcourt.nic.in/ilr-cuttack-pdf-view/137/" target="_blank" rel="noopener noreferrer"><i class="pdf-icon"></i><h4>ILR Cuttack December-2025</h4> <span class="date">Dec-2025</span> <span class="size">17.41 MB</span></a></li>
+                                 
+                                    <li><a href="https://orissahighcourt.nic.in/ilr-cuttack-pdf-view/136/" target="_blank" rel="noopener noreferrer"><i class="pdf-icon"></i><h4>ILR Cuttack November-2025</h4> <span class="date">Nov-2025</span> <span class="size">13.26 MB</span></a></li>
+                                 
+                                    <li><a href="https://orissahighcourt.nic.in/ilr-cuttack-pdf-view/135/" target="_blank" rel="noopener noreferrer"><i class="pdf-icon"></i><h4>ILR Cuttack October-2025</h4> <span class="date">Oct-2025</span> <span class="size">17.52 MB</span></a></li>
+                                 
+                                    <li><a href="https://orissahighcourt.nic.in/ilr-cuttack-pdf-view/134/" target="_blank" rel="noopener noreferrer"><i class="pdf-icon"></i><h4>ILR Cuttack September-2025</h4> <span class="date">Sep-2025</span> <span class="size">15.08 MB</span></a></li>
+                                
+
+                            </ul>
+                            <div class="footer-section">
+                                <a href="https://orissahighcourt.nic.in/ilr-cuttack/" aria-label="Link to view more about ILR Cuttack">
+                                View All                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s" data-wow-offset="100">
+
+                        <div class="home-page-tab ilr-cuttack">
+                        <h3 class='head-section'>Court  Article</h3>
+                            <ul id="" class="court-arti court-arti-min-height">
+                                                                    <li><a href="https://orissahighcourt.nic.in/court-article-pdf-view/1/"><i class="pdf-icon"></i><h4>Rights of UTPs, need for speedy trial, f... </h4> <span class="date">5th FEB 19</span> <span class="size">1006.88 KB</span></a></li>
+                                                                    <li><a href="https://orissahighcourt.nic.in/court-article-pdf-view/2/"><i class="pdf-icon"></i><h4>Contribution of the OHC to the developme... </h4> <span class="date">1st JAN 18</span> <span class="size">86.04 KB</span></a></li>
+                                                                    <li><a href="https://orissahighcourt.nic.in/court-article-pdf-view/5/"><i class="pdf-icon"></i><h4>Role of High Court in delay and arrears ... </h4> <span class="date">1st DEC 18</span> <span class="size">954.78 KB</span></a></li>
+                                
+
+                            </ul>
+                            <div class="footer-section">
+                                <a href="https://orissahighcourt.nic.in/court-article/" aria-label="Link to view more about Court  Article">
+                                View All                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" data-wow-offset="100" >
+                        <!--<div id="inlineDatepicker"></div>-->
+
+                        <div class="infographic-section">
+
+
+                            <div id="event-cal-container" class="calendar-container"></div>
+                                                        <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <a href="https://orissahighcourt.nic.in/calendar-pdf-view/ohc-court/" aria-label="View OHC Calendar" class="calendar-link ohc-calendar hvr-float-shadow"><span>
+                                    OHC Calender                                    </span></a>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <a href="https://orissahighcourt.nic.in/calendar-pdf-view/lower-court/"  aria-label="View Subordinate Court Holidays" class="calendar-link other-calendar hvr-float-shadow"><span>
+                                    District Court Holidays                                    </span></a>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <!--<a href="https://orissahighcourt.nic.in/     .pdf" target="_blank" aria-label="View Subordinate Court Holidays" class="calendar-link other-calendar hvr-float-shadow" rel="noopener noreferrer" style="background-color: #0e77cb;"><span>
+                                    </span></a>
+                                </div>-->
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--   ---------------------------------------------
+        MEDIA  PART END
+        --------------------------------------------------->
+        <div class="clearfix"></div>
+
+
+
+        <!--   ---------------------------------------------
+        IMPORTANT LINKS PART START
+        --------------------------------------------------->
+        <section class="important-links wrapper">
+            <div class="container">
+            <h3 class='heading sam text-center'>Important Links</h3>                <div class="clearfix"></div>
+                <div class="row link-box-row">
+                                            <div class="link-container col-md-3 col-sm-6"><a href="http://lawmin.gov.in/" target="_blank" rel="noopener noreferrer" aria-label="Ministry of Law & Justice"  class="imp-links hvr-underline-from-center external"><span>Ministry of Law & Justice</span><i class="link-icon"></i></a></div>
+                                            <div class="link-container col-md-3 col-sm-6"><a href="https://sci.gov.in/" target="_blank" rel="noopener noreferrer" aria-label="Supreme Court of India"  class="imp-links hvr-underline-from-center external"><span>Supreme Court of India</span><i class="link-icon"></i></a></div>
+                                            <div class="link-container col-md-3 col-sm-6"><a href="https://doj.gov.in/" target="_blank" rel="noopener noreferrer" aria-label="Department of Justice"  class="imp-links hvr-underline-from-center external"><span>Department of Justice</span><i class="link-icon"></i></a></div>
+                                            <div class="link-container col-md-3 col-sm-6"><a href="http://indiancourts.nic.in/" target="_blank" rel="noopener noreferrer" aria-label="indiancourts.nic.in"  class="imp-links hvr-underline-from-center external"><span>indiancourts.nic.in</span><i class="link-icon"></i></a></div>
+                                            <div class="link-container col-md-3 col-sm-6"><a href="https://www.egazetteodisha.nic.in/" target="_blank" rel="noopener noreferrer" aria-label="Odisha Gazette"  class="imp-links hvr-underline-from-center external"><span>Odisha Gazette</span><i class="link-icon"></i></a></div>
+                                            <div class="link-container col-md-3 col-sm-6"><a href="https://tendersodisha.gov.in/nicgep/app" target="_blank" rel="noopener noreferrer" aria-label="Tenders Orissa"  class="imp-links hvr-underline-from-center external"><span>Tenders Orissa</span><i class="link-icon"></i></a></div>
+                                            <div class="link-container col-md-3 col-sm-6"><a href="https://indiankanoon.org/" target="_blank" rel="noopener noreferrer" aria-label="indiankanoon.org"  class="imp-links hvr-underline-from-center external"><span>indiankanoon.org</span><i class="link-icon"></i></a></div>
+                                            <div class="link-container col-md-3 col-sm-6"><a href="https://egazette.gov.in/(S(rhcss3wxfixyt1n2y20x4gmn))/Default.aspx" target="_blank" rel="noopener noreferrer" aria-label="The Gazette of India"  class="imp-links hvr-underline-from-center external"><span>The Gazette of India</span><i class="link-icon"></i></a></div>
+                                            <div class="link-container col-md-3 col-sm-6"><a href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer" aria-label="india.gov.in"  class="imp-links hvr-underline-from-center external"><span>india.gov.in</span><i class="link-icon"></i></a></div>
+                                            <div class="link-container col-md-3 col-sm-6"><a href="https://www.odisha.gov.in/" target="_blank" rel="noopener noreferrer" aria-label="orissa.gov.in"  class="imp-links hvr-underline-from-center external"><span>orissa.gov.in</span><i class="link-icon"></i></a></div>
+                                            <div class="link-container col-md-3 col-sm-6"><a href="https://oslsa.odisha.gov.in/" target="_blank" rel="noopener noreferrer" aria-label="Odisha State Legal Services Authority"  class="imp-links hvr-underline-from-center external"><span>Odisha State Legal Services Authority</span><i class="link-icon"></i></a></div>
+                                            <div class="link-container col-md-3 col-sm-6"><a href="http://lawcommissionofindia.nic.in/" target="_blank" rel="noopener noreferrer" aria-label="Law Commission of India"  class="imp-links hvr-underline-from-center external"><span>Law Commission of India</span><i class="link-icon"></i></a></div>
+                                            <div class="link-container col-md-3 col-sm-6"><a href="http://www.highcourtbar.org/" target="_blank" rel="noopener noreferrer" aria-label="The High Court Bar Association, Odisha"  class="imp-links hvr-underline-from-center external"><span>The High Court Bar Association, Odisha</span><i class="link-icon"></i></a></div>
+                    
+                    <div class="link-container col-md-3 col-sm-6"><a href="javascript:void(0)" aria-label="Second Link" class="imp-links hvr-underline-from-center"><span></span></a></div>
+                    <div class="link-container col-md-3 col-sm-6"><a href="javascript:void(0)" aria-label="Second Link" class="imp-links hvr-underline-from-center"><span></span></a></div>
+                    <div class="link-container col-md-3 col-sm-6"><a href="javascript:void(0)" aria-label="Second Link" class="imp-links hvr-underline-from-center"><span></span></a></div>
+
+
+
+
+
+
+                </div>
+            </div>
+
+
+        </section>
+
+
+        <div id="calendar"></div>
+
+        <!--   ---------------------------------------------
+        IMPORTANT LINKS PART ENDS
+        --------------------------------------------------->
+        <style>
+            .state-jo{
+                position: initial;
+            }
+            .state-jo ul li{
+                min-height: 20px;
+            }
+            .sjo-hideElement{
+                display: none;
+            }
+            .state-jo:hover .sjo-hideElement {
+                display: block;
+                opacity: 1;
+                transform: scaleY(1);
+                visibility: visible;
+                z-index: 999;
+                color: red;
+            }
+            .sjo-hideElement{
+                position: absolute;
+                left: 61%;
+                top: 81%;
+                width: 250px !important;
+                background: #ffffff;
+                box-shadow: 1px 3px 8px #85c5f5;
+            }
+            @media screen and (max-width: 991px){
+                .sjo-hideElement{
+                    left: 2%;
+                    top: 95%;
+                }
+            }
+            .c-box h2{
+                font-size: 14px !important;
+            }  
+        </style>
+
+        <div class="clearfix"></div>
+<!--   ---------------------------------------------
+FOOTER PART START
+--------------------------------------------------->
+<footer>
+    <section class="footer-section-first">
+        <div class="container">
+            <ul>
+                                    <!-- <li><a href="https://orissahighcourt.nic.in/copyrights/" aria-label="Copyright">Copyright</a></li> -->
+                    <li><a href="https://orissahighcourt.nic.in/disclaimer/" aria-label="Disclaimer">Disclaimer</a></li>
+                    <li><a href="https://orissahighcourt.nic.in/website-policy/" aria-label="Website Policy">Website Policy</a></li>
+                    <li><a href="https://orissahighcourt.nic.in/contact-us/" aria-label="Contact Us">Contact Us</a> </li>
+                    <li><a href="https://orissahighcourt.nic.in/sitemap/" aria-label="Sitemap">Sitemap</a></li>
+                    <li><a href="https://orissahighcourt.nic.in/location-guide/" aria-label="Location guide">Location Guide</a></li>
+                <!--<li><a href="https://orissahighcourt.nic.in/faq/" aria-label="FAQ">FAQ</a></li> -->
+
+
+            </ul>
+            <ul class="contact-list">
+                <li><a href="javascript:void(0)" aria-label="Email Id">Emails: highcourt[dot]or[at]nic[dot]in, </a> <a href="javascript:void(0)" aria-label="Email Id"> cpc-ori[at]aij[dot]gov[dot]in</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="footer-section-last">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <p class="copyright">Copyright © 2019 Orissa High Court, Cuttack, Odisha</p>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <p class="designedby">Website Designed by NIC, Odisha State Centre &nbsp; <span style="font-size: 5px;">OPE0052406</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
+<div id="gotoTop" class="arrow_up"></div>
+<!--   ---------------------------------------------
+FOOTER PART END
+--------------------------------------------------->
+        <script src="https://orissahighcourt.nic.in/js/jquery-2.2.2.min.js" type="text/javascript"></script>
+<script src="https://orissahighcourt.nic.in/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="https://orissahighcourt.nic.in/js/wow.min.js" type="text/javascript"></script>
+
+<script src="https://orissahighcourt.nic.in/js/jquery.mCustomScrollbar.concat.min.js" type="text/javascript"></script>
+<script src="https://orissahighcourt.nic.in/js/pagenav.js" type="text/javascript"></script>
+<script src="https://orissahighcourt.nic.in/js/jquery.magnific-popup.min.js"></script>
+<script src="https://orissahighcourt.nic.in/js/jquery.newsTicker.js" type="text/javascript"></script>
+<script src="https://orissahighcourt.nic.in/js/owl.carousel.min.js" type="text/javascript"></script>
+
+<script src="https://orissahighcourt.nic.in/js/lightgallery-all.min.js" type="text/javascript"></script>
+<script src="https://orissahighcourt.nic.in/js/jquery.plugin.min.js" type="text/javascript"></script>
+<script src="https://orissahighcourt.nic.in/js/jquery.datepick.min.js" type="text/javascript"></script>
+<script src="https://orissahighcourt.nic.in/js/jPages.min.js" type="text/javascript"></script>
+<script src="https://orissahighcourt.nic.in/js/waypoints.min.js" type="text/javascript"></script>
+<script src="https://orissahighcourt.nic.in/js/jquery.counterup.min.js" type="text/javascript"></script>
+<script src="https://orissahighcourt.nic.in/js/jquery.simple-calendar.js" type="text/javascript"></script>
+
+<script src="https://orissahighcourt.nic.in/js/moment.js" type="text/javascript"></script>
+<script src="https://orissahighcourt.nic.in/js/jquery.marquee.min.js" type="text/javascript"></script>
+<script src="https://orissahighcourt.nic.in/js/jquery.pause.js" type="text/javascript"></script>
+<script src="https://orissahighcourt.nic.in/js/bootstrap-datepicker.js" type="text/javascript"></script>
+<script src="https://orissahighcourt.nic.in/js/table.min.js" type="text/javascript"></script>
+<script src="https://orissahighcourt.nic.in/js/form-validation-by-pk.js" type="text/javascript"></script>
+<script src="https://orissahighcourt.nic.in/js/custom-script-new.js" type="text/javascript"></script>
+<script src="https://orissahighcourt.nic.in/js/search.js" type="text/javascript"></script>
+<script src="https://orissahighcourt.nic.in/js/html-table-search.js" type="text/javascript"></script>        <script>
+            /*
+            $(function () {
+                $("#noticeModal").modal('show');
+            });
+            */
+        </script>
+    </body>
+</html>

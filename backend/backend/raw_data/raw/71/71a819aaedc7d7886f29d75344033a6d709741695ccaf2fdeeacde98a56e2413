@@ -1,0 +1,2700 @@
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'html' -->
+<!-- FILE NAME SUGGESTIONS:
+   * html--front.html.twig
+   * html--node--178.html.twig
+   * html--node--%.html.twig
+   * html--node.html.twig
+   x html.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/layout/html.html.twig' -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/hcs/sites/default/files/logo.png" type="image/png" />
+<link rel="canonical" href="/hcs/mypage" />
+<link rel="shortlink" href="/hcs/node/178" />
+<link rel="revision" href="/hcs/mypage" />
+<link rel="create" href="/hcs/node?node=178" />
+
+    <title>Home | High Court of Sikkim</title>
+    <style media="all">
+@import url("/hcs/core/themes/stable/css/system/components/ajax-progress.module.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/system/components/align.module.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/system/components/autocomplete-loading.module.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/system/components/fieldgroup.module.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/system/components/container-inline.module.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/system/components/clearfix.module.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/system/components/details.module.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/system/components/hidden.module.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/system/components/item-list.module.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/system/components/js.module.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/system/components/nowrap.module.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/system/components/position-container.module.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/system/components/progress.module.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/system/components/reset-appearance.module.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/system/components/resize.module.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/system/components/sticky-header.module.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/system/components/system-status-counter.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/system/components/system-status-report-counters.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/system/components/system-status-report-general-info.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/system/components/tabledrag.module.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/system/components/tablesort.module.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/system/components/tree-child.module.css?tcyqpa");
+@import url("/hcs/core/themes/stable/css/views/views.module.css?tcyqpa");
+</style>
+<link rel="stylesheet" href="/hcs/sites/default/files/asset_injector/animation_accordin.css?tcyqpa" media="all" />
+<link rel="stylesheet" href="/hcs/sites/default/files/asset_injector/contract_style.css?tcyqpa" media="all" />
+<link rel="stylesheet" href="/hcs/sites/default/files/asset_injector/districtjudiciarycss.css?tcyqpa" media="all" />
+<link rel="stylesheet" href="/hcs/sites/default/files/asset_injector/judgeprofile.css?tcyqpa" media="all" />
+<link rel="stylesheet" href="/hcs/sites/default/files/asset_injector/side_bar.css?tcyqpa" media="all" />
+<link rel="stylesheet" href="/hcs/sites/default/files/asset_injector/table.css?tcyqpa" media="all" />
+<style media="all">
+@import url("/hcs/themes/mytheme/bootstrap.min.css?tcyqpa");
+@import url("/hcs/themes/mytheme/main.css?tcyqpa");
+@import url("/hcs/themes/mytheme/bootstrap-datepicker.min.css?tcyqpa");
+@import url("/hcs/themes/mytheme/aria-accordion.min.css?tcyqpa");
+@import url("/hcs/themes/mytheme/jquery.dataTables.min.css?tcyqpa");
+@import url("/hcs/themes/mytheme/jquery-ui.min.css?tcyqpa");
+</style>
+
+    
+<!--[if lte IE 8]>
+<script src="/hcs/core/assets/vendor/html5shiv/html5shiv.min.js?v=3.7.3"></script>
+<![endif]-->
+
+  </head>
+  <body>
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'off_canvas_page_wrapper' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/content/off-canvas-page-wrapper.html.twig' -->
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'page' -->
+<!-- FILE NAME SUGGESTIONS:
+   * page--front.html.twig
+   * page--node--178.html.twig
+   * page--node--%.html.twig
+   * page--node.html.twig
+   x page.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/mytheme/page.html.twig' -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>High Court of Sikkim</title>
+</head>
+
+<body id="topHeaderBody">
+
+	<div class="text-right" id="topHeader"> <a style="color:#fff;font-weight:bolder;" href="https://hcs.gov.in/hcs/screenreader"> Screen Reader</a>  <span id="spanone"> <a href="#"> A- </a> </span> <span id="spantwo"> <a href="#"> A</a></span> <span id="spanthree"><a href="#">A+</a></span> <span id="spanfour"> <a href="#"> A </a></span> <span id="spanfive"> <a href="#"> A</a> </span>  </div>
+	<div class="clearfix"></div>
+          <!-- header Nav Start -->
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                  <div class="logoheader" width="30%">
+                <a  href="/hcs">
+                    <img  src="/hcs/sites/default/files/new logo by op_0.png" height=100px padding-top="10px" alt="Logo">
+                    <h3 class="h2header " font-weight: bold> High Court of Sikkim</h3>
+                </a>
+                  </div>
+                 
+              </div>
+             
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <div class="firstulbar">
+                  <ul class="nav navbar-nav navbar-right myulbar">
+				<li class="mylibar">
+						<a href="/hcs" class="current">                
+ 							<img src="/hcs/sites/default/files/inline-images/home.png" height=65px alt="home"/>
+							<br/>
+								Home 
+						</a>
+				 </li>
+
+				<li class="mylibar">
+					<a href="/hcs/JudgesProfile">                
+ 						<img src="/hcs/sites/default/files/inline-images/jugde.png" height=65px alt="judge-profile"/>
+						<br/>
+						 Judge-Profile 
+
+					</a>
+				</li>
+
+				<li class="mylibar">
+					<a href="/hcs/establishment-rule">                
+ 							<img src="/hcs/sites/default/files/inline-images/rules.png" height=65px alt="Rules"/>
+ 							<br/>
+ 							Rules 
+							</a>
+				</li>
+
+				<li class="mylibar">
+					<a href="/hcs/jo">                
+ 						<img src="/hcs/sites/default/files/inline-images/jo.png" height=65px alt="Judicial Officer"/>
+ 						<br/>
+ 						District<br/> Judiciary 
+						</a>
+				</li>
+                                   <li class="mylibar">
+                                        <a href="/hcs/hcregistry">
+                                                 <img src="/hcs/sites/default/files/inline-images/committe_1.png" height=65px alt="High Court Registry"/>
+                                                        <br/>
+                                                        High Court <br/> Registry
+                                                        </a>
+                                </li>
+
+				<li class="mylibar">
+					<a href="/hcs/photogallary">                
+ 						<img src="/hcs/sites/default/files/inline-images/GALLERY.png" height=65px alt="Image Gallery"/>
+ 						<br/>
+ 						Gallery 
+						</a>
+				</li>
+
+				<li class="mylibar">
+						<a href="/hcs/Calendar">                
+ 							<img src="/hcs/sites/default/files/inline-images/CALENDER.png" height=65px alt="Calender"/>
+							 <br/>
+ 								Calendar
+								</a> 
+				</li>
+
+				<li class="mylibar">
+					<a href="/hcs/CaseStatement">                
+						 <img src="/hcs/sites/default/files/inline-images/CASESTATEMENTS.png" height=65px alt="Case Statement"/>
+ 							<br/>
+ 							Case Statement
+							</a>    
+				</li>
+                  </ul>
+                    </div>
+                </div><!-- /.navbar-collapse -->
+               
+              </div><!-- /.container-fluid -->
+            </nav>
+                    
+<nav class="navbar navbar-default marginBottom-zero hidden">
+	<div class="container-fluid">
+	
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--primary-menu.html.twig
+   x region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/layout/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--mytheme-main-menu.html.twig
+   * block--system-menu-block--main.html.twig
+   x block--system-menu-block.html.twig
+   * block--system.html.twig
+   * block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/block/block--system-menu-block.html.twig' -->
+<nav role="navigation" aria-labelledby="block-mytheme-main-menu-menu" id="block-mytheme-main-menu">
+            
+  <h2 class="visually-hidden" id="block-mytheme-main-menu-menu">Main navigation</h2>
+  
+
+        
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'menu__main' -->
+<!-- FILE NAME SUGGESTIONS:
+   * menu--main.html.twig
+   x menu.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/navigation/menu.html.twig' -->
+
+              <ul>
+              <li>
+        <a href="/hcs/index.php/" data-drupal-link-system-path="&lt;front&gt;" class="is-active">Home</a>
+              </li>
+          <li>
+        <a href="/hcs/index.php/Calendar1" data-drupal-link-system-path="node/9">Calendar1</a>
+              </li>
+          <li>
+        <a href="/hcs/index.php/DistrictCourts" data-drupal-link-system-path="node/5">District Courts</a>
+              </li>
+          <li>
+        <a href="/hcs/index.php/ECourtsMMP" data-drupal-link-system-path="node/7">ECourts MMP</a>
+              </li>
+          <li>
+        <a href="/hcs/index.php/JudgesProfile" data-drupal-link-system-path="node/2021">Judges Profile</a>
+              </li>
+          <li>
+        <a href="/hcs/index.php/Judges" data-drupal-link-system-path="node/4">Judges</a>
+              </li>
+          <li>
+        <a href="/hcs/index.php/Rules" data-drupal-link-system-path="node/6">Rules</a>
+              </li>
+        </ul>
+  
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/navigation/menu.html.twig' -->
+
+
+  </nav>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/block/block--system-menu-block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/layout/region.html.twig' -->
+
+
+ 	</div>
+</nav>
+
+<div class="col-md-2 padding-zero mynav">
+	<ul class="leftMenu hidden">
+		
+	</ul>
+</div>
+<div class="clearfix"></div>
+<div>
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--headercontent.html.twig
+   x region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/layout/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--homepageimage.html.twig
+   * block--block-content--f71a885e-5055-4e54-8b0b-ebaa90e0d733.html.twig
+   * block--block-content.html.twig
+   * block--block-content.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/block/block.html.twig' -->
+<div id="block-homepageimage">
+  
+    
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--body--basic.html.twig
+   * field--block-content--body.html.twig
+   * field--block-content--basic.html.twig
+   * field--body.html.twig
+   * field--text-with-summary.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
+
+            <div><div data-ride="carousel" id="carousel-example-generic"><!-- Indicators -->
+<ol class="carousel-indicators"></ol><!-- Wrapper for slides --><div class="carousel-inner" role="listbox">
+<div class="item active"><img alt="highcourtofsikkim_1" class="img-responsive" src="/hcs/sites/default/files/inline-images/homepage_slider2.jpg" style="height:600px!important;width:100%;" /></div>
+</div>
+</div>
+</div>
+      
+<!-- END OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/block/block.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--importantblock.html.twig
+   * block--block-content--400dd6fb-83d0-445e-8717-5e623dfc39c1.html.twig
+   * block--block-content.html.twig
+   * block--block-content.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/block/block.html.twig' -->
+<div id="block-importantblock">
+  
+    
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--body--basic.html.twig
+   * field--block-content--body.html.twig
+   * field--block-content--basic.html.twig
+   * field--body.html.twig
+   * field--text-with-summary.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
+
+            <div><div class="col-md-3 text-center">
+<div class="col-md-4"><a href="/hcs/cause-list"><img alt="cause list" height="70px" src="/hcs/sites/default/files/inline-images/causelist.png" /></a></div>
+
+<div class="col-md-8">
+<p><a href="/hcs/cause-list">Causelist</a></p>
+</div>
+</div>
+
+<div class="col-md-3 padding-zero">
+<div class="col-md-4"><img alt="ecourt newslatter" class="img-circle" height="65px" src="/hcs/sites/default/files/inline-images/ecourtnewletter.png" style="background-color: #337ab7;" /></div>
+
+<div class="col-md-8">
+<p><a href="/hcs/efiling" style="font-size:12px!important">e-Filing and e-Payment </a></p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="col-md-4"><img alt="cause status" height="70px" src="/hcs/sites/default/files/inline-images/CASESTATUS.png" /></div>
+
+<div class="col-md-8">
+<p><a href="/hcs/hcourt/hg_case_search">Case Status </a></p>
+
+<p> </p>
+</div>
+</div>
+
+<div class="col-md-3 padding-zero">
+<div class="col-md-4"><a href="https://hcs.gov.in/hcs/notification-recruitment" target="_blank"><img alt="subordinate" height="70px" src="/hcs/sites/default/files/inline-images/recruitments.png" /></a></div>
+
+<div class="col-md-8">
+<p><a href="https://hcs.gov.in/hcs/notification-recruitment" target="_blank">Recruitments  </a></p>
+</div>
+</div>
+</div>
+      
+<!-- END OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/layout/region.html.twig' -->
+
+
+
+</div>
+
+
+
+
+<div class="col-md-2 padding-zero mynav">
+
+
+
+</div>
+<div class="col-md-10 padding-zero" id="mainContainer">
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--content.html.twig
+   x region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/layout/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'node' -->
+<!-- FILE NAME SUGGESTIONS:
+   * node--178--full.html.twig
+   * node--178.html.twig
+   * node--page--full.html.twig
+   * node--page.html.twig
+   * node--full.html.twig
+   x node.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/content/node.html.twig' -->
+<article data-history-node-id="178" role="article" about="/hcs/mypage" typeof="schema:WebPage">
+
+  
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'rdf_metadata' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/misc/rdf-metadata.html.twig' -->
+  <span property="schema:name" content="Home " class="hidden"></span>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/misc/rdf-metadata.html.twig' -->
+
+
+
+  
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'links__node' -->
+<!-- FILE NAME SUGGESTIONS:
+   * links--node.html.twig
+   x links.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/navigation/links.html.twig' -->
+
+<!-- END OUTPUT from 'core/themes/stable/templates/navigation/links.html.twig' -->
+
+
+  </div>
+
+</article>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/content/node.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/layout/region.html.twig' -->
+
+
+
+</div>
+
+<div class="col-md-2 hidden" id="NotificationBlock">
+
+<h2 class="text-center">Notification</h2>
+<div class="clearfix"></div>
+<hr/>
+
+</div>
+
+<div class="clearfix"></div>
+
+<div class="col-md-4" id="impblock_one">
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--impblock-one.html.twig
+   x region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/layout/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--views-block--notification-block-1-4.html.twig
+   * block--views-block--notification-block-1.html.twig
+   * block--views-block.html.twig
+   * block--views.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/block/block.html.twig' -->
+<div class="views-element-container" id="block-views-block-notification-block-1-4">
+  
+      <h2>Notification</h2>
+    
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'container' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/container.html.twig' -->
+<div>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view.html.twig' -->
+<div class="js-view-dom-id-5d424401a4599483fc44cd18f082db6b5a5be9df7b7ebad178edc5228f8bb37d">
+  
+  
+  
+
+      <header>
+      
+    </header>
+  
+  
+  
+
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_list' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-list.html.twig' -->
+<div class="item-list">
+  
+  <ul>
+
+          <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<span class="views-field views-field-field-gifimage"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+<img src="/hcs/sites/default/files/gif/blink_2_0_57_53_175_0_335.gif" width="22" height="9" alt="New" typeof="foaf:Image" />
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-order"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+Circular No.06/ESTT.HCS - It has been observed that officers and staff of the High Court are proceeding on leave without obtaining prior sanction. All concerned are directed to secure approval from the competent authority before proceeding on leave.
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-officeorderview"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'file_link' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+<span class="file file--mime-application-pdf file--application-pdf"><a href="https://hcs.gov.in/hcs/sites/default/files/Notification/06_3.pdf" type="application/pdf; length=616399" title="06.pdf">View</a></span>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+</li>
+          <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<span class="views-field views-field-field-gifimage"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+<img src="/hcs/sites/default/files/gif/blink_2_0_57_53_175_0_334.gif" width="22" height="9" alt="New" typeof="foaf:Image" />
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-order"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+Notification No.38/HCS - The Hon&#039;ble the Chief Justice is pleased to constitute High Court Level Accessibility Committee.
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-officeorderview"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'file_link' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+<span class="file file--mime-application-pdf file--application-pdf"><a href="https://hcs.gov.in/hcs/sites/default/files/Notification/38%20Accessiblity%20Committe.pdf" type="application/pdf; length=248713" title="38 Accessiblity Committe.pdf">View</a></span>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+</li>
+          <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<span class="views-field views-field-field-gifimage"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+<img src="/hcs/sites/default/files/gif/blink_2_0_57_53_175_0_331.gif" width="22" height="9" alt="New" typeof="foaf:Image" />
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-order"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+Notification No. 8(35)AConfdl/HCS/37 dated 31.03.2026 - The following advocates who were appointed as Oath Commissioner vide Notification No.48/HCS 
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-officeorderview"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'file_link' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+<span class="file file--mime-application-pdf file--application-pdf"><a href="https://hcs.gov.in/hcs/sites/default/files/Notification/37-1.pdf" type="application/pdf; length=401418" title="37-1.pdf">View</a></span>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+</li>
+          <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<span class="views-field views-field-field-gifimage"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+<img src="/hcs/sites/default/files/gif/blink_2_0_57_53_210.gif" width="22" height="9" alt="New" typeof="foaf:Image" />
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-order"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+Notification No. 36/HCS, dated 24.03.2026 - Revocation of Enhanced Pay Scales
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-officeorderview"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'file_link' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+<span class="file file--mime-application-pdf file--application-pdf"><a href="https://hcs.gov.in/hcs/sites/default/files/Notification/36_3.pdf" type="application/pdf; length=429248" title="36.pdf">View</a></span>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+</li>
+          <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<span class="views-field views-field-field-gifimage"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+<img src="/hcs/sites/default/files/gif/blink_2_0_57_53_175_0_330.gif" width="22" height="9" alt="New" typeof="foaf:Image" />
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-order"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+Notification No. 35/HCS, dated 23.03.2026 - Hon&#039;ble the Chief Justice is pleased to appoint the following Advocates as Oath Commissioners for Gangtok District for a term of 02 (two) years.
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-officeorderview"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'file_link' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+<span class="file file--mime-application-pdf file--application-pdf"><a href="https://hcs.gov.in/hcs/sites/default/files/Notification/35_3.pdf" type="application/pdf; length=696602" title="35.pdf">View</a></span>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+</li>
+          <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<span class="views-field views-field-field-gifimage"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+<img src="/hcs/sites/default/files/gif/blink_2_0_57_53_175_0_329.gif" width="22" height="9" alt="new" typeof="foaf:Image" />
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-order"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+Notification No. 34/HCS, dated 20.03.2026 - The Hon&#039;ble Chief Justice, High Court of Sikkim is pleased to appoint Ms. Jyoti Kharka, Registrar, High Court of Sikkim as  Secretary of the High Court Legal Services Committee 
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-officeorderview"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'file_link' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+<span class="file file--mime-application-pdf file--application-pdf"><a href="https://hcs.gov.in/hcs/sites/default/files/Notification/34HCS.pdf" type="application/pdf; length=362589" title="34HCS.pdf">View</a></span>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+</li>
+          <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<span class="views-field views-field-field-gifimage"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+<img src="/hcs/sites/default/files/gif/blink_2_0_57_53_175_0_328.gif" width="22" height="9" alt="New" typeof="foaf:Image" />
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-order"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+Notification No. 31/HCS/MUS, dated 18.03.2026 - Regarding constitution of Museum Committee of the High Court of Sikkim.
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-officeorderview"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'file_link' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+<span class="file file--mime-application-pdf file--application-pdf"><a href="https://hcs.gov.in/hcs/sites/default/files/Notification/31_2.pdf" type="application/pdf; length=577124" title="31.pdf">View</a></span>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+</li>
+          <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<span class="views-field views-field-field-gifimage"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+<img src="/hcs/sites/default/files/gif/blink_2_0_57_53_209.gif" width="22" height="9" alt="New" typeof="foaf:Image" />
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-order"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+Notification No. 32/HCS, dated 19.03.2026 - Internal Complaints Committee of the Sexual Harassment of Women at Workplace to receive and inquire into the complaints of sexual harassment at workplace regarding all Judicial Officers of the State.
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-officeorderview"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'file_link' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+<span class="file file--mime-application-pdf file--application-pdf"><a href="https://hcs.gov.in/hcs/sites/default/files/Notification/32_4.pdf" type="application/pdf; length=481860" title="32.pdf">View</a></span>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+</li>
+          <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<span class="views-field views-field-field-gifimage"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+<img src="/hcs/sites/default/files/gif/blink_2_0_57_53_208.gif" width="22" height="9" alt="New" typeof="foaf:Image" />
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-order"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+Notification No. 33/HCS, dated 19.03.2025 - Internal Complaints Committee of the Sexual Harassment of Women at Workplace.
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-officeorderview"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'file_link' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+<span class="file file--mime-application-pdf file--application-pdf"><a href="https://hcs.gov.in/hcs/sites/default/files/Notification/33_3.pdf" type="application/pdf; length=456628" title="33.pdf">View</a></span>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+</li>
+          <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<span class="views-field views-field-field-gifimage"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+<img src="/hcs/sites/default/files/gif/blink_2_0_57_53_175_0_327.gif" width="22" height="9" alt="New" typeof="foaf:Image" />
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-order"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+Notification No. V (124) / Confdl /HCS/30, dated 18.03.2026 - Appointment of &quot;Visitor&quot; of the Juvenile Observation Home ( JOH ), Pakyong.
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-officeorderview"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'file_link' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+<span class="file file--mime-application-pdf file--application-pdf"><a href="https://hcs.gov.in/hcs/sites/default/files/Notification/30_4.pdf" type="application/pdf; length=335953" title="30.pdf">View</a></span>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+</li>
+          <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<span class="views-field views-field-field-gifimage"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+<img src="/hcs/sites/default/files/gif/blink_2_0_57_53_175_0_326.gif" width="22" height="9" alt="New" typeof="foaf:Image" />
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-order"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+Notification No. 29/HCS, dated 17.03.2025 -Committee to prepare a comprehensive roadmap and oversee the implementation of paperless judicial system in the High Court of Sikkim. 
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-officeorderview"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'file_link' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+<span class="file file--mime-application-pdf file--application-pdf"><a href="https://hcs.gov.in/hcs/sites/default/files/Notification/29_2.pdf" type="application/pdf; length=608814" title="29.pdf">View</a></span>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+</li>
+          <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<span class="views-field views-field-field-gifimage"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+<img src="/hcs/sites/default/files/gif/blink_2_0_57_53_175_0_325.gif" width="22" height="9" alt="New" typeof="foaf:Image" />
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-order"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+Office Order No. 276/HCS, dated 12.03.2026 - Pursuant to the resolution of Hon&#039;ble Full Court meeting held on 10.03.2026 at agenda no. 5(A), the following Circulars stands revoked with immediate effect
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-officeorderview"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'file_link' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+<span class="file file--mime-application-pdf file--application-pdf"><a href="https://hcs.gov.in/hcs/sites/default/files/Notification/276.pdf" type="application/pdf; length=610619" title="276.pdf">View</a></span>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+</li>
+          <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<span class="views-field views-field-field-gifimage"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+<img src="/hcs/sites/default/files/gif/blink_2_0_57_53_175_0_324.gif" width="22" height="9" alt="New" typeof="foaf:Image" />
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-order"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+Office Order No. 275/HCS, dated 12.03.2026- Pursuant to the resolution of Hon&#039;ble Full Court in its meeting held on 10.03.2026, at agenda no.5(A)(vi), Circular No. 10/HCS dated 10.08.2018 stands modified. 
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-officeorderview"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'file_link' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+<span class="file file--mime-application-pdf file--application-pdf"><a href="https://hcs.gov.in/hcs/sites/default/files/Notification/275.pdf" type="application/pdf; length=467138" title="275.pdf">View</a></span>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+</li>
+          <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<span class="views-field views-field-field-gifimage"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+<img src="/hcs/sites/default/files/gif/blink_2_0_57_53_175_0_323.gif" width="22" height="9" alt="New" typeof="foaf:Image" />
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-order"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+Office Order No. 268/HCS, dated 10.03.2026, Regarding ACRs of Officers and staff
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-officeorderview"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'file_link' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+<span class="file file--mime-application-pdf file--application-pdf"><a href="https://hcs.gov.in/hcs/sites/default/files/Notification/268_1.pdf" type="application/pdf; length=383672" title="268.pdf">View</a></span>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+</li>
+          <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<span class="views-field views-field-field-gifimage"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+<img src="/hcs/sites/default/files/gif/blink_2_0_57_53_175_0_322.gif" width="22" height="9" alt="New" typeof="foaf:Image" />
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-order"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+Notification No. 28/HCS, dated 05.03.2026 - Regarding constitution of Grievance Committee to address grievances of former Hon&#039;ble Chief Justice and former Hon&#039;ble Judges of High Court of Sikkim.
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-officeorderview"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'file_link' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+<span class="file file--mime-application-pdf file--application-pdf"><a href="https://hcs.gov.in/hcs/sites/default/files/Notification/28_2.pdf" type="application/pdf; length=332745" title="28.pdf">View</a></span>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+</li>
+          <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<span class="views-field views-field-field-gifimage"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+<img src="/hcs/sites/default/files/gif/blink_2_0_57_53_175_0_321.gif" width="22" height="9" alt="New" typeof="foaf:Image" />
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-order"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+Circular No. 05/Judl./HCS- Regarding strict compliance to the mandate of Section 33(7) of the Protection of Children from Sexual Offences (POCSO) Act, 2012
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-officeorderview"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'file_link' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+<span class="file file--mime-application-pdf file--application-pdf"><a href="https://hcs.gov.in/hcs/sites/default/files/Notification/05_2.pdf" type="application/pdf; length=388183" title="05.pdf">View</a></span>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+</li>
+          <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<span class="views-field views-field-field-gifimage"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-order"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+Notification No. 145/HCS, dated 25.02.2026 - The officers and staffs members will continue to be governed by the Rules applicable to the employees of State Government for medical reimbursement
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-officeorderview"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'file_link' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+<span class="file file--mime-application-pdf file--application-pdf"><a href="https://hcs.gov.in/hcs/sites/default/files/Notification/145.pdf" type="application/pdf; length=361906" title="145.pdf">View</a></span>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+</li>
+          <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<span class="views-field views-field-field-gifimage"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-order"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+Notification No: 25/Confdl./HCS Dated 27/02/2026 General Information that 04.03.2026(Wednesday) is declared holiday
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-officeorderview"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'file_link' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+<span class="file file--mime-application-pdf file--application-pdf"><a href="https://hcs.gov.in/hcs/sites/default/files/Notification/25_2.pdf" type="application/pdf; length=719632" title="25.pdf">View</a></span>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+</li>
+          <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<span class="views-field views-field-field-gifimage"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-order"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+Notice No. 04/HCS/ESTT Dated 27.02.2026 In Pursuance to abridged advertisement bearing reference no 07/ESTT./HCS dated 27.01.2026, for Filling up two (02) vacant post of Law Clerk-cum-Legal Research Assistants, the following candidates, have been selected
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-officeorderview"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'file_link' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+<span class="file file--mime-application-pdf file--application-pdf"><a href="https://hcs.gov.in/hcs/sites/default/files/Notification/04_1.pdf" type="application/pdf; length=260175" title="04.pdf">View</a></span>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+</li>
+          <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<span class="views-field views-field-field-gifimage"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-order"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+Notification No. 09/ESTT/HCS Dated 19/02/2026. The Chief Justice is pleased to re-constitute Departmental Promotion Committee
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span><span class="views-field views-field-field-officeorderview"><span class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'file_link' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+<span class="file file--mime-application-pdf file--application-pdf"><a href="https://hcs.gov.in/hcs/sites/default/files/Notification/09_4.pdf" type="application/pdf; length=364809" title="09.pdf">View</a></span>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/field/file-link.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</span></span>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+</li>
+    
+  </ul>
+
+</div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-list.html.twig' -->
+
+
+  
+  
+
+  
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'container' -->
+<!-- FILE NAME SUGGESTIONS:
+   * container--more-link.html.twig
+   * container--more-link--notification.html.twig
+   * container--more-link--block.html.twig
+   * container--more-link--notification--block.html.twig
+   * container--more-link--block-1.html.twig
+   * container--more-link--notification--block-1.html.twig
+   x container.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/container.html.twig' -->
+<div class="more-link"><a href="/hcs/notification-all">more</a></div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/form/container.html.twig' -->
+
+
+
+  
+  
+</div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view.html.twig' -->
+
+</div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/form/container.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/layout/region.html.twig' -->
+
+
+</div>
+<div class="col-md-4">
+ 
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--impblock-two.html.twig
+   x region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/layout/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--newsletter-block.html.twig
+   * block--block-content--f60f41a2-9df5-4cdc-9a86-9e4da89bc3a0.html.twig
+   * block--block-content.html.twig
+   * block--block-content.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/block/block.html.twig' -->
+<div id="block-newsletter-block">
+  
+    
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--body--basic.html.twig
+   * field--block-content--body.html.twig
+   * field--block-content--basic.html.twig
+   * field--body.html.twig
+   * field--text-with-summary.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
+
+            <div><div>
+<div>
+<h2 class="text-center">Important Links         </h2>
+
+<div class="alert alert-info hidden">
+<p style="text-align:center;"><b style="font-size:20px;color:#a94442;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="350" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/_be5OmrteGo" title="SWEARING -IN CEREMONY OF HON'BLE JUSTICE A. MAHMUD MUSTAQUE AS CHIEF JUSTICE OF HIGH COURT OF SIKKIM" width="420"></iframe></b></p>
+</div>
+
+<div class="clearfix"> </div>
+
+<div class="alert alert-danger" style="text-align:center;">
+<p style="font-size:18px; font-weight:bolder;text-align:center"><b class="blink" style="font-size:20px;color:#a94442;">Free Legal Aid is available to all who are eligible under section 12 of the Legal Services Authorities Act, 1987.<br />
+One may contact Sikkim State Legal Services Authority.<br /><a href="https://sikkimslsa.nic.in/" target="_blank">Click Here </a></b></p>
+</div>
+
+<div class="col-md-12">
+<div class="alert alert-info ">
+<p style="text-align:center;"><b style="font-size:20px;color:#a94442;"><a href="https://hcs.gov.in/hcs/sites/default/files/HCJ_Interview.pdf" style="font-size:14px; font-weight:bolder;" target="_blank">An interview with Hon’ble Mr. Justice A. Muhamed Mustaque, Chief Justice of the High Court of Sikkim, as published in Chronicles - High Court of Kerala  (Volume 23, November 2025) </a></b></p>
+</div>
+</div>
+
+<p style="text-align:left; clear:both; margin:10px 0;"><a href="https://eservices.hcs.nic.in/dslr" style="display:flex; align-items:center; padding-left:10%; text-decoration:none;"><img alt="Free Text Search" data-entity-type="file" data-entity-uuid="c4473999-9ecc-4292-ad7e-c858565ea0df" height="70" src="/hcs/sites/default/files/inline-images/FREEE_0.png" style="margin-right:12px;" /><span style="font-weight:bold; display:inline-block;">Digital Law Reports</span> </a></p>
+
+<p style="text-align:left; clear:both; margin:10px 0;"><a href="https://eservices.hcs.nic.in/eslr" style="display:flex; align-items:center; padding-left:10%; text-decoration:none;"><img alt="Sikkim Law Reports" data-entity-type="file" data-entity-uuid="24e7ef01-ad96-4f10-a882-5ba757ad7573" height="70" src="/hcs/sites/default/files/inline-images/slrlogo_1.png" style="margin-right:12px;" /><span style="font-weight:bold; display:inline-block;">e-Sikkim Law Reports</span> </a></p>
+
+<p style="text-align:left; clear:both; margin:10px 0;"><a style="display:flex; align-items:center; padding-left:10%; text-decoration:none;"> <img alt="Translated Orders in Nepali" data-entity-type="file" height="70" src="/hcs/sites/default/files/inline-images/nepali.png" style="margin-right:12px;" /><span style="font-weight:bold; display:inline-block;">Translated Judgments in Regional Languages</span> </a></p>
+
+<p style="text-align:center; clear:both; margin:10px 0;"><a style="display:flex; align-items:center; padding-left:30%; text-decoration:none;"> </a><a href="https://eservices.hcs.nic.in/dslr/translated-judgement-sc"><strong>Supreme Court</strong></a><br /><a href="https://eservices.hcs.nic.in/eslr/translated-judgement-hc"><strong>High Court</strong></a></p>
+
+<p><b class="blink" style="font-size:20px;color:#a94442;"> </b></p>
+
+<p style="text-align:left; clear:both; margin:10px 0;"><a href="https://crshcs.nic.in/login" style="display:flex; align-items:center; padding-left:10%; text-decoration:none;"><img alt="Certified Copy" data-entity-type="file" data-entity-uuid="f9ba2bb1-7d24-48be-baff-5f2753aedba4" height="70" src="/hcs/sites/default/files/inline-images/certifiedcopy_0.png" style="margin-right:12px;" /><span style="font-weight:bold; display:inline-block;">Certified Copy</span> </a></p>
+
+<p class="hidden" style="text-align:left; clear:both; margin:10px 0;"><a href="https://hcs.gov.in/hcs/chiefsecretariat" style="display:flex; align-items:center; padding-left:10%; text-decoration:none;"><img alt="Committee" data-entity-type="file" data-entity-uuid="23d91118-bae1-4b61-97fe-9353873ed3ea" height="70" src="/hcs/sites/default/files/inline-images/committe_1.png" style="margin-right:12px;" /><span style="font-weight:bold; display:inline-block;">Chief Justice's Secretariat</span> </a></p>
+
+<p style="text-align:left; clear:both; margin:10px 0;"><a href="https://hcs.gov.in/virtualjusticeclock/clock.php" style="display:flex; align-items:center; padding-left:10%; text-decoration:none;"><img alt="Virtual Justice Clock" data-entity-type="file" data-entity-uuid="92c34630-7e4c-4167-8e69-11c0a698eeda" height="70" src="/hcs/sites/default/files/inline-images/justice_clock_1.png" style="margin-right:12px;" /><span style="font-weight:bold; display:inline-block;">Virtual Justice Clock</span> </a></p>
+
+<p style="text-align:left; clear:both; margin:10px 0;"><a href="https://hcs.gov.in/hcs/hcourt/displayboard" style="display:flex; align-items:center; padding-left:10%; text-decoration:none;"><img alt="Display Board" data-entity-type="file" data-entity-uuid="d111ebd9-5dd9-4fe4-bb71-c7d774119788" height="70" src="/hcs/sites/default/files/inline-images/report_1.png" style="margin-right:12px;" /><span style="font-weight:bold; display:inline-block;">Display Board</span> </a></p>
+
+<p style="text-align:left; clear:both; margin:10px 0;"><a href="https://eservices.hcs.nic.in/es" style="display:flex; align-items:center; padding-left:10%; text-decoration:none;"><img alt="Right to Information" data-entity-type="file" data-entity-uuid="6d80eefb-d488-4b93-b78f-5e3bd34860ee" height="70" src="/hcs/sites/default/files/inline-images/rti_1.png" style="margin-right:12px;" /><span style="font-weight:bold; display:inline-block;">Online RTI Application</span> </a></p>
+
+<p style="text-align:left; clear:both; margin:10px 0;"><a href="https://hcs.gov.in/hcs/gazette" style="display:flex; align-items:center; padding-left:10%; text-decoration:none;"><img alt="Gazette" height="70" src="/hcs/sites/default/files/inline-images/ECOURT.png" style="margin-right:12px;" /><span style="font-weight:bold; display:inline-block;">Gazette Notifications</span> </a></p>
+
+<p class="hidden" style="text-align:left; clear:both; margin:10px 0;"><a style="display:flex; align-items:center; padding-left:10%; text-decoration:none;"> <img alt="e-SCR, Judgments and Orders" data-entity-type="file" data-entity-uuid="fa5d9c25-00c7-40a4-a3f0-f810dbda777d" height="70" src="/hcs/sites/default/files/inline-images/escr_0.png" style="margin-right:12px;" /><span style="font-weight:bold; display:inline-block;">e-SCR, Judgments and Orders</span> </a></p>
+
+<p style="text-align:left; clear:both; margin:10px 0;"><a href="https://hcs.gov.in/hcs/sites/default/files/Notification/Compilations.pdf" style="display:flex; align-items:center; padding-left:10%; text-decoration:none;"><img alt="Compilation" height="70" src="/hcs/sites/default/files/inline-images/ECOURT.png" style="margin-right:12px;" /><span style="font-weight:bold; display:inline-block;">Compilation of Notifications/Circulars/Orders/Guidelines (W.E.F 12.10.2021 to W.E.F 26.02.2025)</span> </a></p>
+
+<p><b class="blink" style="font-size:20px;color:#a94442;"><strong><strong><strong><strong> </strong></strong></strong></strong></b></p>
+
+<p><b class="blink" style="font-size:20px;color:#a94442;"><strong><strong><strong><strong> </strong></strong></strong></strong></b></p>
+</div>
+</div>
+</div>
+      
+<!-- END OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/layout/region.html.twig' -->
+
+
+</div>
+<div class="col-md-4">
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--impblock-three.html.twig
+   x region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/layout/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--foobarblock-3.html.twig
+   * block--block-foobarblk.html.twig
+   * block--article.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/block/block.html.twig' -->
+<div id="block-foobarblock-3">
+  
+      <h2>Latest Judgments/ Final Orders</h2>
+    
+      <hr /> <div class="demo1">  <ul><li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/201300000102025_13.pdf"> <b>2026-04-06</b> -  MAC App./10/2025  - The Branch Manager, Cholamandalam Ms General Insurance Company Ltd.   v/s   Dal Bahadur Thapa and Ors.</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/200200000032024_13.pdf"> <b>2026-04-06</b> -  FAO/3/2024  - Mrs. Srijana Gurung and Anr.   v/s   The Union of India and Ors.</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/201100000562025_5.pdf"> <b>2026-04-02</b> -  WP(C)/56/2025  - Sikkim Public Service Commission   v/s   Sikkim Information Commission and Ano.</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/201700000022026_1.pdf"> <b>2026-03-31</b> -  Cont. Cas(C)/2/2026  - Dil Bahadur Pradhan   v/s   State of Sikkim and Ors.</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/201100000602025_5.pdf"> <b>2026-03-31</b> -  WP(C)/60/2025  - Sailesh Shrestha   v/s   District Magistrate, Gangtok and Ors.</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/202100000212023_12.pdf"> <b>2026-03-31</b> -  Crl. A./21/2023  - SAROJ PRADHAN   v/s   STATE OF SIKKIM</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/201500000012026_2.pdf"> <b>2026-03-31</b> -  Arb.P./1/2026  - Swadhi Health Management LLP   v/s   State of Sikkim</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/201100000332025_4.pdf"> <b>2026-03-31</b> -  WP(C)/33/2025  - Karmapa Charitable Trust and Ors.   v/s   State of Sikkim and Ors.</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/201300000192025_3.pdf"> <b>2026-03-30</b> -  MAC App./19/2025  - THE BRANCH MANAGER NATIONAL  INSURANCE CO. LTD   v/s   Mrs. SARITA GUPTA</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/203600000032026_1.pdf"> <b>2026-03-24</b> -  WA/3/2026  - IRCON International Limited   v/s   State of Sikkim and Ors.</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/203600000022026_1.pdf"> <b>2026-03-24</b> -  WA/2/2026  - IRCON International Limited   v/s   State of Sikkim and Ors.</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/201900000022025_8.pdf"> <b>2026-03-23</b> -  CRL. REV. P/2/2025  - Bidhan trikhatri and Ano.   v/s   State of Sikkim</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/201300000052025_9.pdf"> <b>2026-03-20</b> -  MAC App./5/2025  - Nikhil Subba and Ors.   v/s   The Branch Manager, ICICI Lombard General Insurance Company and Ors</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/201300000252024_11.pdf"> <b>2026-03-20</b> -  MAC App./25/2024  - The Branch Manager, National Insurance Company Limited   v/s   Hasmukh Pannalal Punamiya and Ors.</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/201100000152025_11.pdf"> <b>2026-03-19</b> -  WP(C)/15/2025  - M/s. Elevar Digitel Infrastructure Private Limited   v/s   State of Sikkim and Ano.</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/201100000492025_5.pdf"> <b>2026-03-09</b> -  WP(C)/49/2025  - Vikash   v/s   Union of India and Ors.</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/202200000032024_11.pdf"> <b>2026-03-06</b> -  Crl. M. C./3/2024  - BIJAY CHAMLING   v/s   STATE OF SIKKIM</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/201100000782025_3.pdf"> <b>2026-03-05</b> -  WP(C)/78/2025  - State Bank of India and Ano.   v/s   District Magistrate, Soreng District and Ors.</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/201100000342024_9.pdf"> <b>2026-02-23</b> -  WP(C)/34/2024  - M/s A2Z Infra Engineering Ltd.   v/s   Assistant Commissioner and Ors.</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/200100000032024_13.pdf"> <b>2026-02-23</b> -   I.A No. 04 of 2026 <b> in  </b> RFA/3/2024  - MAHESH CHANDRA SHARMA   v/s   SMT ANIKIT LEPCHA AND ORS.</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/204600000052025_6.pdf"> <b>2026-02-19</b> -  Tax App./5/2025  - Commissioner of Central Goods and Services Tax, and Central Excise, Siliguri Commissionerate   v/s   M/s Intas Pharma Ltd.</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/204600000042025_6.pdf"> <b>2026-02-19</b> -  Tax App./4/2025  - Commissioner of Central Goods and Services Tax and Central Excise   v/s   M/s Intas Pharma Ltd.</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/203200000032025_8.pdf"> <b>2026-02-16</b> -  CRL.L.P/3/2025  - STATE OF SIKKIM   v/s   HARI GAJMER</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/201100000702025_3.pdf"> <b>2026-02-13</b> -  WP(C)/70/2025  - Tulushi Sharma Dhakal   v/s   State of Sikkim and Ors.</a> </li> <li class="news-item"><a target="_blank" href="https://hcs.gov.in/hcs/hg_orders/203600000012026_1.pdf"> <b>2026-02-13</b> -  WA/1/2026  - NHPC Limited   v/s   Homnath Neopaney and Ors.</a> </li>  </ul> </div> <div class="clearfix"></div> <div class="text-right"> <a href="/hcs/hcourt/hg_judgement_search"> View all </a>    </div> 
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/layout/region.html.twig' -->
+
+
+</div>
+
+<div class="clearfix"></div>
+
+
+<div class="clearfix"></div>
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--footer-impblock.html.twig
+   x region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/layout/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--footerimportantblock.html.twig
+   * block--block-content--179a56b6-4827-4bd0-bfef-8492aafa3309.html.twig
+   * block--block-content.html.twig
+   * block--block-content.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/block/block.html.twig' -->
+<div id="block-footerimportantblock">
+  
+    
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--body--basic.html.twig
+   * field--block-content--body.html.twig
+   * field--block-content--basic.html.twig
+   * field--body.html.twig
+   * field--text-with-summary.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
+
+            <div><div class="liner"> </div>
+
+<div class="clearfix"> </div>
+
+<div class="imp-info">
+<div class="col-md-2 text-center" style="border-right: 1px dotted #337ab7;">
+<div class="col-md-12"><img alt="rti" src="/hcs/sites/default/files/inline-images/rti.png" /><div class="clearfix"> </div>
+<a href="/hcs/contact"> Grievances Redressal </a></div>
+</div>
+
+<div class="col-md-2 text-center" style="border-right: 1px dotted #337ab7;">
+<div class="col-md-12"><a href="/hcs/elibrary"><img alt="library" src="/hcs/sites/default/files/inline-images/library.png" /></a>
+
+<div class="clearfix"> </div>
+<a href="/hcs/elibrary">Library </a></div>
+</div>
+
+<div class="col-md-2 text-center" style="border-right: 1px dotted #337ab7;">
+<div class="col-md-12"><a href="/hcs/TelephoneNumbers"><img alt="telephone" src="/hcs/sites/default/files/inline-images/telephone.png" /></a>
+
+<div class="clearfix"> </div>
+<a href="/hcs/TelephoneNumbers">Telephone Numbers </a></div>
+</div>
+
+<div class="col-md-2 text-center" style="border-right: 1px dotted #337ab7;">
+<div class="col-md-12"><a href="https://judgments.ecourts.gov.in/pdfsearch/index.php"><img alt="telephone" src="/hcs/sites/default/files/inline-images/escr_0.png" /></a>
+
+<div class="clearfix"> </div>
+<a href="https://judgments.ecourts.gov.in/pdfsearch/index.php">e-SCR </a></div>
+</div>
+
+<div class="col-md-4 text-center" style="border-right:1px dotted #337ab7;">
+<div class="col-md-12"><a href="/hcs/notification-recruitment">Other Recruitments </a>
+
+<hr class="imp-info-hr" /><div class="col-md-6" style="padding-left:0px;font-weight:normal;text-align:left;">
+<ul style="list-style-type:circle;padding:0;"><li><a href="https://gangtok.dcourts.gov.in/notice-category/recruitments/" target="_blank"> Gangtok District &amp; Sessions Court</a> </li>
+	<li> <a href="https://namchi.dcourts.gov.in/notice-category/recruitments/" target="_blank">Namchi District &amp; Sessions Court </a></li>
+	<li><a href="https://gyalshing.dcourts.gov.in/notice-category/recruitments/" target="_blank"> Gyalshing District &amp; Sessions Court </a></li>
+</ul></div>
+
+<div class="col-md-6" style="padding-left:0px; padding-right:0px;font-weight:normal;text-align:left;">
+<ul style="list-style-type:circle;padding:0;"><li><a href="https://mangan.dcourts.gov.in/notice-category/recruitments/" target="_blank">Mangan District &amp; Sessions Court</a></li>
+	<li><a href="https://sikkimjudicialacademy.nic.in/sja/advertisement" target="_blank">Sikkim Judicial Academy</a></li>
+	<li><a href="https://sikkimslsa.nic.in/notification/employment_notice.html" target="_blank">Sikkim State Legal Services Authority</a></li>
+</ul></div>
+
+<div class="clearfix"> </div>
+</div>
+</div>
+</div>
+</div>
+      
+<!-- END OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/layout/region.html.twig' -->
+
+
+
+<ul tabindex="0" id="myhighlist" style="display:none;z-index:40000;color:#fff;background-color:#000;">
+
+<li><a href="https://www.allahabadhighcourt.in/" target="new" id="link1" title="External website that opens in a new window">Allahabad High Court</a></li>
+
+<li><a href="https://aphc.gov.in/" target="new" title="External website that opens in a new window">Andhra Pradesh High Court</a></li>
+<li><a href="https://bombayhighcourt.nic.in/" target="new" title="External website that opens in a new window">Bombay High Court</a></li>
+<li><a href="https://calcuttahighcourt.gov.in/" target="new" title="External website that opens in a new window">Calcutta High Court</a></li>
+<li><a href="https://highcourt.cg.gov.in/" target="new" title="External website that opens in a new window">Chhattisgarh High Court</a></li>
+<li><a href="https://delhihighcourt.nic.in/" target="new" title="External website that opens in a new window">Delhi High Court</a></li>
+
+<li><a href="https://ghconline.gov.in/" target="new" title="External website that opens in a new window">Gauhati High Court</a></li>
+
+<li><a href="https://gujarathighcourt.nic.in/" target="new" title="External website that opens in a new window">Gujarat High Court</a></li>
+
+<li><a href="https://hphighcourt.nic.in/" target="new" title="External website that opens in a new window">Himachal Pradesh High Court</a></li>
+
+<li><a href="https://jkhighcourt.nic.in/" target="new" title="External website that opens in a new window">Jammu &amp; Kashmir High Court</a></li>
+
+<li><a href="https://jharkhandhighcourt.nic.in/" target="new" title="External website that opens in a new window">Jharkhand High Court</a></li>
+
+<li><a href="https://karnatakajudiciary.kar.nic.in/" target="new" title="External website that opens in a new window">Karnataka High Court</a></li>
+
+<li><a href="https://highcourt.kerala.gov.in/" target="new" title="External website that opens in a new window">Kerala High Court</a></li>
+
+<li><a href="https://mphc.gov.in/" target="new" title="External website that opens in a new window">Madhya Pradesh High Court</a></li>
+
+<li><a href="https://hcmadras.tn.gov.in/" target="new" title="External website that opens in a new window">Madras High Court</a></li>
+
+<li><a href="https://hcmimphal.nic.in/" target="new" title="External website that opens in a new window">Manipur High Court</a></li>
+<li><a href="https://meghalayahighcourt.nic.in/" target="new" title="External website that opens in a new window">Meghalaya High Court</a></li>
+
+<li><a href="https://www.orissahighcourt.nic.in/" target="new" title="External website that opens in a new window">Orissa High Court</a></li>
+
+<li><a href="https://patnahighcourt.gov.in/" target="new" title="External website that opens in a new window">Patna High Court</a></li>
+
+<li><a href="https://highcourtchd.gov.in/" target="new" title="External website that opens in a new window">Punjab &amp; Haryana High Court</a></li>
+
+<li><a href="https://hcraj.nic.in/" target="new" title="External website that opens in a new window">Rajasthan High Court</a></li>
+
+<li><a href="https://tshc.gov.in/" target="new" title="External website that opens in a new window">Telangana High Court</a></li>
+
+<li><a href="https://thc.nic.in/" target="new" title="External website that opens in a new window">Tripura High Court</a></li>
+
+<li><a href="https://highcourtofuttarakhand.gov.in/" target="new" title="External website that opens in a new window">Uttarakhand High Court</a></li>
+
+</ul>
+
+
+<footer>
+	<div class="col-md-2">
+		
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--first-footer.html.twig
+   x region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/layout/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--views-block--quick-links-block-1.html.twig
+   * block--views-block--quick-links-block-1.html.twig
+   * block--views-block.html.twig
+   * block--views.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/block/block.html.twig' -->
+<div class="views-element-container" id="block-views-block-quick-links-block-1">
+  
+      <h2>Quick Links</h2>
+    
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'container' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/container.html.twig' -->
+<div>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view.html.twig' -->
+<div class="js-view-dom-id-3f527f08de98d794e9978a47ba495fe784d83aab31754d366cccc4c3d905ad8e">
+  
+  
+  
+
+  
+  
+  
+
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_unformatted' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-unformatted.html.twig' -->
+    <div class="views-row">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-internal-link"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+<a href="/hcs/index.php/slr">Sikkim Law Reports</a>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+
+  </div>
+    <div class="views-row">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-internal-link"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+<a href="/hcs/index.php/speeches">Judges Speeches</a>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+
+  </div>
+    <div class="views-row">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-internal-link"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+<a href="/hcs/index.php/ecourt-newsletter">E-committee Newsletters</a>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+
+  </div>
+    <div class="views-row">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-internal-link"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+<a href="/hcs/index.php/newsletter">High Court Newsletters</a>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+
+  </div>
+    <div class="views-row">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-internal-link"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+<a href="/hcs/index.php/SLR_Form">Subscription of Sikkim Law Reports</a>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+
+  </div>
+    <div class="views-row">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-internal-link"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+<a href="/hcs/index.php/rti">Right to Information</a>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-unformatted.html.twig' -->
+
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view.html.twig' -->
+
+</div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/form/container.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/layout/region.html.twig' -->
+
+
+                
+
+	</div>
+	<div class="col-md-2">
+		
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--second-footer.html.twig
+   x region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/layout/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--views-block--important-external-links-block-1.html.twig
+   * block--views-block--important-external-links-block-1.html.twig
+   * block--views-block.html.twig
+   * block--views.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/block/block.html.twig' -->
+<div class="views-element-container" id="block-views-block-important-external-links-block-1">
+  
+      <h2>Important External Links</h2>
+    
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'container' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/container.html.twig' -->
+<div>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view.html.twig' -->
+<div class="js-view-dom-id-4106424b804fd408a595dedd1da76bafeff238866dbb7361ebba71d7bcd40126">
+  
+  
+  
+
+  
+  
+  
+
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_unformatted' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-unformatted.html.twig' -->
+    <div class="views-row">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-external-link"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+<a href="http://highcourtofsikkim.nic.in">High Courts of India</a>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+
+  </div>
+    <div class="views-row">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-external-link"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+<a href="http://hcsmuseum.nic.in/">High Court of Sikkim Museum</a>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+
+  </div>
+    <div class="views-row">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-external-link"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+<a href="http://sikkimslsa.nic.in/">Sikkim SLSA</a>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+
+  </div>
+    <div class="views-row">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-external-link"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+<a href="http://lawmin.gov.in/">Ministry of Law and Justice </a>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+
+  </div>
+    <div class="views-row">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-external-link"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+<a href="http://njdg.ecourts.gov.in/njdg_public/">National Judicial Data Grid</a>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+
+  </div>
+    <div class="views-row">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-external-link"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+<a href="http://www.sci.gov.in/">Supreme Court of India</a>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+
+  </div>
+    <div class="views-row">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-external-link"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+<a href="http://www.sclsc.nic.in/">Supreme Court Legal Services Committee</a>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+
+  </div>
+    <div class="views-row">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-external-link"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+<a href="http://sikkimjudicialacademy.nic.in/">Sikkim Judicial Academy</a>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+
+  </div>
+    <div class="views-row">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-external-link"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+<a href="https://main.sci.nic.in/sci_accessibility/">SCI Accessibility Questionnaires </a>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+
+  </div>
+    <div class="views-row">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-external-link"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+<a href="https://eservices.hcs.nic.in/mact/">MACT Claims Dashboard</a>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-fields.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-unformatted.html.twig' -->
+
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/views/views-view.html.twig' -->
+
+</div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/form/container.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/layout/region.html.twig' -->
+
+
+		 <a href="#" class="districtShow"> District Courts of Sikkim </a>
+                <div id="heredistrict"  class="heredistrict" style="display:none;z-index:40000;color:#fff;background-color:#000;">
+                <li><a href="https://mangan.dcourts.gov.in" target="_blank" title="External website that opens in a new window"> District & Sessions Court, Mangan</a></li>
+                <li><a href="https://gangtok.dcourts.gov.in" target="_blank" title="External website that opens in a new window">District & Sessions Court, Gangtok</a></li>
+                <li><a href="https://namchi.dcourts.gov.in" target="_blank" title="External website that opens in a new window">District & Sessions Court, Namchi</a></li>
+                <li><a href="https://gyalshing.dcourts.gov.in" target="_blank" title="External website that opens in a new window">District & Sessions Court, Gyalshing</a></li>
+                </div>               
+ 
+	</div>
+	<div class="col-md-8">
+		
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--third-footer.html.twig
+   x region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/layout/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--visit-2.html.twig
+   * block--block-content--21e86d18-0a1f-49a1-87c1-81aa592c527c.html.twig
+   * block--block-content.html.twig
+   * block--block-content.html.twig
+   x block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/block/block.html.twig' -->
+<div id="block-visit-2">
+  
+      <h2>Visit </h2>
+    
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--block-content--body--basic.html.twig
+   * field--block-content--body.html.twig
+   * field--block-content--basic.html.twig
+   * field--body.html.twig
+   * field--text-with-summary.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
+
+            <div><div class="col-md-2" style="margin-bottom:10px;"><img alt="QR Code of the High Court of Sikkim" height="100" src="/hcs/sites/default/files/inline-images/highcourtqr.jpg" /><br /><br /><a href="https://hcservices.ecourts.gov.in/ecourtindiaHC/"><img alt="ecourt Services" style="margin-left:5px;" data-entity-type="file" data-entity-uuid="6bcf7ed5-fe2b-4121-92f6-916bf14a173a" height="80" src="/hcs/sites/default/files/inline-images/png100.png" /></a></div>
+
+<div class="col-md-5 hidden-md"><iframe allowfullscreen="" frameborder="0" height="200" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d745.1202278186015!2d88.61421798974604!3d27.331675694075237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e6a5400716127d%3A0x4ade8bf69e188d82!2sHIGH+COURT+OF+SIKKIM!5e0!3m2!1sen!2sin!4v1524202624920" style="border:0" width="100%"></iframe></div>
+
+<div class="col-md-2  hidden-sm hidden-xs"><a href="http://doj.gov.in/" target="_blank"><img alt="QR Code of the High Court of Sikkim" height="65" src="/hcs/sites/default/files/inline-images/mm3.png" width="100%" /></a>
+
+<div class="clearfix"> </div>
+<a href="http://ecourts.gov.in/" target="_blank"><img alt="QR Code of the High Court of Sikkim" height="65" src="/hcs/sites/default/files/inline-images/mm4.png" width="100%" /></a>
+
+<div class="clearfix"> </div>
+<a href="https://docs.google.com/spreadsheets/d/1HbHrrnUc8Uc8LHr33gztalGL3VwZVFiU/edit?usp=sharing&amp;ouid=115273733574393037634&amp;rtpof=true&amp;sd=true" style="margin-top:20px;" target="_blank"><img alt="Google Drive" height="65" src="/hcs/sites/default/files/inline-images/FormatJuvenileJustice.png" style="border-radius:10px;" width="100%" /></a></div>
+
+<div class="col-md-2 text-center hidden-sm hidden-xs"><a href="https://www.india.gov.in/" target="_blank"><img alt="QR Code of the High Court of Sikkim" height="65" src="/hcs/sites/default/files/inline-images/mm1.png" width="100%" /></a>
+
+<div class="clearfix"> </div>
+<a href="https://www.sikkim.gov.in/" target="_blank"> <img alt="Government of Sikkim" height="65" src="/hcs/sites/default/files/inline-images/mm2.png" width="100%" /></a>
+
+<div class="clearfix"> </div>
+<a href="https://www.mohfw.gov.in/" target="_blank"> <img alt="moh" data-entity-type="file" data-entity-uuid="911fe4a4-ac7f-4cc4-b6a3-4cf7401ea56e" src="/hcs/sites/default/files/inline-images/MoHFW%20%20%20Home.png" style="height:65px;border-radius:10px;" /></a></div>
+
+<div class="clearfix"> </div>
+</div>
+      
+<!-- END OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/layout/region.html.twig' -->
+
+
+	</div>
+
+	<div class="clearfix"></div>
+
+<div style="background-color:#020202;margin-top:30px;margin-bottom:20px;padding-top:10px;border-top:1px solid #337ab7;opacity:0.6;">      
+   
+	<div class="col-lg-2 hidden-md"></div>
+	<div class="col-lg-8 col-md-10 text-center">
+       
+
+        <div class="clearfix"></div>
+
+         <div class ="col-md-12 text-center">
+          
+         </div>
+
+        <div class="clearfix"></div>
+
+              
+        <div class="col-md-4"><a href="https://play.google.com/store/apps/details?id=com.highcourtofsikkim.roothere.mydemoapp" target="_blank"><b> Download the highcourt app from : </b>    <img src="/hcs/sites/default/files/inline-images/googleplay.png" height="30"  alt="Download the app of high court of Sikkim">   </a>      </div>
+        <div class="col-md-2"><a href="/hcs/disclaimer" style="color:#337ab7;text-decoration:underline;">Disclaimer</a> </div>
+        <div class="col-md-2"> <a href="/hcs/terms-conditions"  style="color:#337ab7;text-decoration:underline;">Terms and Conditions</a></div>
+        <div class="col-md-2"> <a href="/hcs/policies"  style="color:#337ab7;text-decoration:underline;">Policies</a> </div>
+        <div class="col-md-2"> <a href="/hcs/contactus" style="color:#337ab7;text-decoration:underline;">Contact Us</a> </div>
+
+	
+
+	<div class="clearfix"></div>
+	<div class="col-md-12 text-center" style="margin-top:20px;margin-bottom:20px;">
+	<b>	Designed and developed by Computer Cell of High Court and Hosted by NIC </b>
+	</div>
+        <div class="clearfix"></div>
+ </div>
+
+  <div class="clearfix"></div>
+       <div class="col-md-12 text-center" style="margin-bottom:10px;margin-top:10px;"> 
+
+</div>
+	<div id="takeToTop">
+	 <a href="#topHeaderBody">  <img alt="Go to Top" src="/hcs/themes/mytheme/taketotop.jpg" height="50px" /></a>
+	</div>
+
+</footer>
+</body>
+</html>
+
+<!-- END OUTPUT from 'themes/mytheme/page.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/content/off-canvas-page-wrapper.html.twig' -->
+
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/hcs\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/178","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"asset_injector\/css\/animation_accordin,asset_injector\/css\/contract_style,asset_injector\/css\/districtjudiciarycss,asset_injector\/css\/judgeprofile,asset_injector\/css\/side_bar,asset_injector\/css\/table,asset_injector\/js\/districthideshow,asset_injector\/js\/seperate_tab_,asset_injector\/js\/treeview,core\/html5shiv,mytheme\/mylibrarynew,statistics\/drupal.statistics,system\/base,views\/views.ajax,views\/views.module","theme":"mytheme","theme_token":null},"ajaxTrustedUrl":[],"views":{"ajax_path":"\/hcs\/views\/ajax","ajaxViews":{"views_dom_id:5d424401a4599483fc44cd18f082db6b5a5be9df7b7ebad178edc5228f8bb37d":{"view_name":"notification","view_display_id":"block_1","view_args":"","view_path":"\/hcs\/mypage","view_base_path":"notification-all","view_dom_id":"5d424401a4599483fc44cd18f082db6b5a5be9df7b7ebad178edc5228f8bb37d","pager_element":0}}},"statistics":{"data":{"nid":"178"},"url":"\/hcs\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"72f5ae8e5f6710ac1eb13a2e50121ce58729a49fa7f24b8dbd6d32f021c92c58"}}</script>
+<script src="/hcs/core/assets/vendor/domready/ready.min.js?v=1.0.8"></script>
+<script src="/hcs/core/assets/vendor/jquery/jquery.min.js?v=3.2.1"></script>
+<script src="/hcs/core/assets/vendor/jquery-once/jquery.once.min.js?v=2.2.0"></script>
+<script src="/hcs/core/misc/drupalSettingsLoader.js?v=8.5.3"></script>
+<script src="/hcs/core/misc/drupal.js?v=8.5.3"></script>
+<script src="/hcs/core/misc/drupal.init.js?v=8.5.3"></script>
+<script src="/hcs/sites/default/files/asset_injector/districthideshow.js?tcyqpa"></script>
+<script src="/hcs/sites/default/files/asset_injector/seperate_tab_.js?tcyqpa"></script>
+<script src="/hcs/sites/default/files/asset_injector/treeview.js?tcyqpa"></script>
+<script src="/hcs/themes/mytheme/jquery.jcryption.3.1.0.js?tcyqpa"></script>
+<script src="/hcs/themes/mytheme/bootstrap.min.js?tcyqpa"></script>
+<script src="/hcs/themes/mytheme/bootstrap-datepicker.min.js?tcyqpa"></script>
+<script src="/hcs/themes/mytheme/jquery.vticker.min.js?tcyqpa"></script>
+<script src="/hcs/themes/mytheme/jquery.easy-ticker.min.js?tcyqpa"></script>
+<script src="/hcs/themes/mytheme/jquery.dataTables.min.js?tcyqpa"></script>
+<script src="/hcs/themes/mytheme/aria-accordion.min.js?tcyqpa"></script>
+<script src="/hcs/themes/mytheme/main.js?tcyqpa"></script>
+<script src="/hcs/themes/mytheme/html5gallery.js?tcyqpa"></script>
+<script src="/hcs/themes/mytheme/turn.min.js?tcyqpa"></script>
+<script src="/hcs/themes/mytheme/jquery-ui.min.js?tcyqpa"></script>
+<script src="/hcs/core/assets/vendor/jquery-form/jquery.form.min.js?v=3.51"></script>
+<script src="/hcs/core/misc/progress.js?v=8.5.3"></script>
+<script src="/hcs/core/modules/responsive_image/js/responsive_image.ajax.js?v=8.5.3"></script>
+<script src="/hcs/core/misc/ajax.js?v=8.5.3"></script>
+<script src="/hcs/core/modules/views/js/base.js?v=8.5.3"></script>
+<script src="/hcs/core/modules/views/js/ajax_view.js?v=8.5.3"></script>
+<script src="/hcs/core/modules/statistics/statistics.js?v=8.5.3"></script>
+
+  </body>
+</html>
+
+<!-- END OUTPUT from 'core/themes/stable/templates/layout/html.html.twig' -->
+

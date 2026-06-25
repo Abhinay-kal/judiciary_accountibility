@@ -68,6 +68,10 @@ celery_app.conf.beat_schedule = {
         "schedule": crontab(minute=45, hour=7),
         "args": (_settings.delay_update_batch_size,),
     },
+    "daily-court-analytical-snapshots": {
+        "task": "app.tasks.analytics.compute_court_analytical_snapshots",
+        "schedule": crontab(minute=55, hour=7),
+    },
     "daily-admin-population-run": {
         "task": "app.tasks.population.start_population_run",
         "schedule": crontab(minute=15, hour=3),

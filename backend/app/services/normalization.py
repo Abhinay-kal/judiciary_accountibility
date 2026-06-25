@@ -1,8 +1,11 @@
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import date, datetime, timezone
 from typing import Any
 
+from sqlalchemy import func
+from sqlalchemy.dialects.postgresql import insert
+from sqlalchemy.exc import DBAPIError, OperationalError
 from sqlalchemy.orm import Session
 
 from app.core.config import get_settings
@@ -19,6 +22,46 @@ from app.services.judge_resolution import (
 settings = get_settings()
 
 
+def _derive_filing_year(filing_date: Any) -> int:
+    if filing_date is None:
+        return 0
+    if isinstance(filing_date, datetime):
+        return int(filing_date.year)
+    if isinstance(filing_date, date):
+        return int(filing_date.year)
+    if isinstance(filing_date, int):
+        return max(0, int(filing_date))
+    if isinstance(filing_date, str):
+        stripped = filing_date.strip()
+        if not stripped:
+            return 0
+        if stripped.isdigit() and len(stripped) == 4:
+            return int(stripped)
+        try:
+            return datetime.fromisoformat(stripped).year
+        except ValueError:
+            return 0
+    return 0
+
+
+def is_connection_loss_error(exc: Exception) -> bool:
+    if isinstance(exc, OperationalError):
+        return True
+    if isinstance(exc, DBAPIError) and exc.connection_invalidated:
+        return True
+    message = str(exc).lower()
+    return any(
+        token in message
+        for token in (
+            "connection refused",
+            "connection reset",
+            "connection closed",
+            "could not connect",
+            "server closed the connection",
+        )
+    )
+
+
 def normalize_case_record(record: dict[str, Any]) -> dict[str, Any]:
     """Normalize source records into unified case schema."""
 
@@ -32,60 +75,140 @@ def normalize_case_record(record: dict[str, Any]) -> dict[str, Any]:
         "bench": record.get("bench"),
         "judges_text": record.get("judges_text"),
         "filing_date": record.get("filing_date"),
+        "filing_year": _derive_filing_year(record.get("filing_date")),
         "next_hearing_date": record.get("next_hearing_date"),
         "case_type": record.get("case_type"),
         "status": (record.get("status") or "pending").lower(),
         "source_url": record.get("source_url", ""),
         "source_fields": record.get("source_fields") or {},
-        "last_source_updated_at": datetime.utcnow(),
+        "last_source_updated_at": datetime.now(timezone.utc),
     }
 
 
-def upsert_case_from_normalized(db: Session, normalized: dict[str, Any]) -> Case:
-    """Idempotent upsert for case records."""
+def upsert_cases_from_normalized_bulk(db: Session, normalized_records: list[dict[str, Any]]) -> int:
+    """Deterministic, atomic-friendly PostgreSQL bulk upsert for case records."""
+    if not normalized_records:
+        return 0
 
-    court = db.query(Court).filter(Court.name == normalized["court_name"], Court.is_deleted.is_(False)).first()
-    if not court:
-        court = Court(name=normalized["court_name"], level=normalized["court_level"], state=normalized["state"])
+    sorted_records = sorted(
+        normalized_records,
+        key=lambda item: (str(item.get("case_number") or ""), int(item.get("filing_year") or 0)),
+    )
+
+    court_names = sorted({str(item.get("court_name") or "Unknown Court") for item in sorted_records})
+    existing_courts = (
+        db.query(Court)
+        .filter(Court.name.in_(court_names), Court.is_deleted.is_(False))
+        .all()
+    )
+    court_by_name = {court.name: court for court in existing_courts}
+
+    for item in sorted_records:
+        court_name = str(item.get("court_name") or "Unknown Court")
+        if court_name in court_by_name:
+            continue
+        court = Court(
+            name=court_name,
+            level=str(item.get("court_level") or "district"),
+            state=str(item.get("state") or "Unknown"),
+        )
         db.add(court)
         db.flush()
+        court_by_name[court_name] = court
 
-    case = db.query(Case).filter(Case.case_uid == normalized["case_uid"], Case.is_deleted.is_(False)).first()
-    if not case:
-        case = Case(
-            case_uid=normalized["case_uid"],
-            cnr=normalized["cnr"],
-            case_number=normalized["case_number"],
-            court_id=court.id,
-            court_level=normalized["court_level"],
-            state=normalized["state"],
-            bench=normalized["bench"],
-            judges_text=normalized["judges_text"],
-            filing_date=normalized["filing_date"],
-            next_hearing_date=normalized["next_hearing_date"],
-            case_type=normalized["case_type"],
-            status=normalized["status"],
-            source_url=normalized["source_url"],
-            source_fields=normalized["source_fields"],
-            last_source_updated_at=normalized["last_source_updated_at"],
+    list_of_mappings: list[dict[str, Any]] = []
+    for item in sorted_records:
+        court_name = str(item.get("court_name") or "Unknown Court")
+        court = court_by_name[court_name]
+        list_of_mappings.append(
+            {
+                "case_uid": item["case_uid"],
+                "cnr": item.get("cnr"),
+                "case_number": str(item.get("case_number") or "Unknown"),
+                "court_id": court.id,
+                "court_level": str(item.get("court_level") or "district"),
+                "state": str(item.get("state") or "Unknown"),
+                "bench": item.get("bench"),
+                "judges_text": item.get("judges_text"),
+                "filing_date": item.get("filing_date"),
+                "filing_year": int(item.get("filing_year") or 0),
+                "next_hearing_date": item.get("next_hearing_date"),
+                "case_type": item.get("case_type"),
+                "status": str(item.get("status") or "pending"),
+                "source_url": str(item.get("source_url") or ""),
+                "source_fields": item.get("source_fields") or {},
+                "last_source_updated_at": item.get("last_source_updated_at") or datetime.now(timezone.utc),
+            }
         )
-        db.add(case)
-    else:
-        case.case_number = normalized["case_number"]
-        case.status = normalized["status"]
-        case.next_hearing_date = normalized["next_hearing_date"]
-        case.source_url = normalized["source_url"]
-        case.source_fields = normalized["source_fields"]
-        case.last_source_updated_at = normalized["last_source_updated_at"]
 
+    stmt = insert(Case)
+    stmt = stmt.on_conflict_do_update(
+        index_elements=["case_number", "filing_year"],
+        set_={
+            "case_uid": stmt.excluded.case_uid,
+            "cnr": stmt.excluded.cnr,
+            "court_id": stmt.excluded.court_id,
+            "court_level": stmt.excluded.court_level,
+            "state": stmt.excluded.state,
+            "bench": stmt.excluded.bench,
+            "judges_text": stmt.excluded.judges_text,
+            "filing_date": stmt.excluded.filing_date,
+            "next_hearing_date": stmt.excluded.next_hearing_date,
+            "case_type": stmt.excluded.case_type,
+            "status": stmt.excluded.status,
+            "source_url": stmt.excluded.source_url,
+            "source_fields": stmt.excluded.source_fields,
+            "last_source_updated_at": stmt.excluded.last_source_updated_at,
+            "updated_at": func.now(),
+        },
+    )
+    db.execute(stmt, list_of_mappings)
     db.flush()
 
     if settings.importance_fastpass_enabled:
         from app.services.importance import CaseImportanceScorer
 
-        CaseImportanceScorer(db).score_and_persist_case(case, fast_pass=True)
+        scorer = CaseImportanceScorer(db)
+        case_uids = [item["case_uid"] for item in list_of_mappings]
+        touched_cases = (
+            db.query(Case)
+            .filter(Case.case_uid.in_(case_uids), Case.is_deleted.is_(False))
+            .all()
+        )
+        for case in touched_cases:
+            scorer.score_and_persist_case(case, fast_pass=True)
 
-    return case
+    return len(list_of_mappings)
+
+
+def upsert_case_from_normalized(db: Session, normalized: dict[str, Any]) -> Case:
+    """Idempotent upsert for case records."""
+    normalized_with_year = {
+        **normalized,
+        "filing_year": int(normalized.get("filing_year") or _derive_filing_year(normalized.get("filing_date"))),
+    }
+    upsert_cases_from_normalized_bulk(db, [normalized_with_year])
+
+    case = (
+        db.query(Case)
+        .filter(Case.case_uid == normalized_with_year["case_uid"], Case.is_deleted.is_(False))
+        .first()
+    )
+    if case is not None:
+        return case
+
+    fallback = (
+        db.query(Case)
+        .filter(
+            Case.case_number == normalized_with_year["case_number"],
+            Case.filing_year == normalized_with_year["filing_year"],
+            Case.is_deleted.is_(False),
+        )
+        .first()
+    )
+    if fallback is None:
+        raise LookupError("Upsert succeeded but case lookup failed")
+    return fallback
 
 
 def create_ingestion_log(

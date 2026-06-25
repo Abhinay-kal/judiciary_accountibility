@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Welcome to National Company Law Tribunal | National Company Law Tribunal</title>
+    <link rel="stylesheet" media="all" href="/core/assets/vendor/normalize-css/normalize.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/misc/normalize-fixes.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/ajax-progress.module.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/align.module.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/autocomplete-loading.module.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/fieldgroup.module.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/container-inline.module.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/clearfix.module.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/details.module.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/hidden.module.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/item-list.module.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/js.module.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/nowrap.module.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/position-container.module.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/progress.module.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/reset-appearance.module.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/resize.module.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/sticky-header.module.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/system-status-counter.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/system-status-report-counters.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/system-status-report-general-info.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/tabledrag.module.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/tablesort.module.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/tree-child.module.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/views/views.module.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/modules/views_slideshow/modules/views_slideshow_cycle/css/views_slideshow_cycle.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/modules/views_slideshow/css/views-slideshow-pager-bullets.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/modules/views_slideshow/css/controls_text.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/modules/nice_menus/libraries/css/nice_menus.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/modules/nice_menus/libraries/css/nice_menus_default.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/action-links.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/breadcrumb.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/button.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/collapse-processed.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/container-inline.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/details.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/exposed-filters.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/field.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/form.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/icons.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/inline-form.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/item-list.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/link.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/links.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/menu.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/more-link.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/pager.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/tabledrag.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/tableselect.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/tablesort.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/tabs.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/textarea.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/ui-dialog.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/messages.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/themes/nclt/css/bootstrap.min.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/themes/nclt/css/jquery-ui.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/themes/nclt/css/owl.carousel.min.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/themes/nclt/css/font-awesome.min.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/themes/nclt/css/material.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/themes/nclt/css/scrollBar.css?tcefp9" />
+<link rel="stylesheet" media="all" href="/themes/nclt/css/style.css?tcefp9" />
+
+    
+<!--[if lte IE 8]>
+<script src="/core/assets/vendor/html5shiv/html5shiv.min.js?v=3.7.3"></script>
+<![endif]-->
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>National Company Law Tribunal</title>
+	
+  </head>
+  <body class="layout-no-sidebars">
+
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<header>
+	<div class="top-header">
+	<div class="container-fluid">
+	<div class="row align-items-center">
+	<div class="col-12 col-sm-12 col-md-5 col-lg-5">
+	  <div class="region region-header-menu">
+    
+<nav role="navigation" aria-labelledby="block-headermenu-menu" id="block-headermenu" class="block block-menu navigation menu--header-menu">
+            
+  <h2 class="visually-hidden" id="block-headermenu-menu">Header Menu</h2>
+  
+
+        <div class="content">
+            <div class="menu-toggle-target menu-toggle-target-show" id="show-block-headermenu"></div>
+      <div class="menu-toggle-target" id="hide-block-headermenu"></div>
+      <a class="menu-toggle" href="#show-block-headermenu">Show &mdash; Header Menu</a>
+      <a class="menu-toggle menu-toggle--hide" href="#hide-block-headermenu">Hide &mdash; Header Menu</a>
+      
+              <ul class="clearfix menu">
+                    <li class="menu-item">
+        <a href="https://archive.nclt.gov.in/" target="_blank">Old Orders and Judgments</a>
+              </li>
+        </ul>
+  
+
+
+    </div>
+  </nav>
+
+  </div>
+
+	</div>
+	<div class="col-12 col-sm-12 col-md-7 col-lg-7 top-right-nav">
+	<ul>
+	<li><a href="#mid-section">Skip to Main Content</a></li>
+	<li class="nobdr"><a href="screen-reader">Screen Reader Access</a></li>
+	<li class="nobdr text-size"><a href="#" onclick="fontDecrease()">A<sup>-</sup></a>
+								<a href="#" onclick="fontNormal()">A</a>
+								<a href="#" onclick="fontIncrease()">A <sup>+</sup></a></li>
+	<!-- <li class="nobdr theme"><span class="wt"></span><span class="blak"></span></li> -->
+	<li class="nobdr lang">
+	<select>
+	<option>English</option>
+	<option>Hindi</option>
+	</select></li>
+	<!-- <li class="nobdr register"><a href="#">Login</a></li> -->
+	</ul>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<div class="logo-sec-wraper">
+	<div class="container-fluid">
+	<div class="d-flex justify-content-between flex-wrap align-items-center wt-bg">
+	<div class="col-12 col-sm-12 col-md-6 col-lg-5 logo-sec">
+	<a href="/">
+	<img src="/themes/nclt/images/logo.png" alt="emblem">
+	</a>
+	</div>
+	<div class="col-12 col-sm-12 col-md-6 col-lg-7 search-sec">
+	  <div class="region region-search">
+    <div class="search-block-form block block-search container-inline" data-drupal-selector="search-block-form" id="block-nclt-search" role="search">
+  
+    
+      <div class="content container-inline">
+      <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8" class="search-form search-block-form">
+  <div class="js-form-item form-item js-form-type-search form-type-search js-form-item-keys form-item-keys form-no-label">
+      <label for="edit-keys" class="visually-hidden">Search</label>
+        <input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-search" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input class="search-form__submit button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" />
+</div>
+
+</form>
+
+    </div>
+  </div>
+
+  </div>
+
+	<ul>
+	<!--<li class="serch"><input type="text" placeholder="search" /><input type="submit" value=""/></li>-->
+		 <li class="nobdr register"><a href="/user/login">Login</a></li>
+	 	
+	</ul>
+	</div>
+	</div>
+	</div>
+	</div>
+	<div class="col-12 col-sm-12 col-md-12 col-lg-12 flash-sec">
+	  <div class="region region-flash-message1">
+    <div id="block-notification" class="block block-block-content block-block-contentbd64f483-e406-4679-af21-dab24ea08b61">
+  
+    
+      <div class="content">
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="text-center"><img src="/sites/default/files/2024-01/new-icon-gif-2.jpg" style="width:25px; height:20px;" />  <a class="text-font" href="/sites/default/files/tender/circulars/publicnotices/Stage%20I%20Result.pdf" target="_blank">List of Shortlisted candidates for stage II &amp; III of LRA Examination 2025</a></div>
+
+<div class="text-center"><img src="/sites/default/files/2024-01/new-icon-gif-2.jpg" style="width:25px; height:20px;" />  <a class="text-font" href="/sites/default/files/2026-02/Notice%20dated%2030.01.2026%20%20Scrutiny%20Pendency%20Report%20%281%29.pdf" target="_blank">ALL OVER INDIA  SCRUTINY REPORT AS ON 30.01.2026 TIME 3PM</a>
+
+<div class="text-center"><img src="/sites/default/files/2024-01/new-icon-gif-2.jpg" style="width:25px; height:20px;" />  <a class="text-font" href="https://nclt.gov.in/sites/default/files/2025-09/VID-20250909-WA0009.mp4" target="_blank">Details of work Carried out by NCLT for renovation of Block-12 CGO Complex, New Delhi</a></div>
+
+<div class="text-center"><img src="/sites/default/files/2024-01/new-icon-gif-2.jpg" style="width:25px; height:20px;" />  <a class="text-font" href="/sites/default/files/tender/circulars/publicnotices/New%20Doc%2009-30-2025%2011.30%20%281%29.pdf">Relocation of Scrutiny Bench and Registry Department to Block 12</a></div>
+
+<div class="text-center"><img src="/sites/default/files/2024-01/new-icon-gif-2.jpg" style="width:25px; height:20px;" />  <a class="text-font" href="/sites/default/files/objection_list/OBJECTIONS%20LIST%20DATED%2018.02.2026%20TO%2015.03.2026_0.pdf">OBJECTIONS LIST DATED 18.02.2026 TO 15.03.2026</a></div>
+<!-- <div class="text-center"><img src="/sites/default/files/2024-01/new-icon-gif-2.jpg" style="width:25px; height:20px;" />&nbsp; <a class="text-font" href="/sites/default/files/objection_list/OBJECTIONS%20LIST%20DATED%2031.12.2025%20TO%2018.02.2026%20%282%29.pdf">Objection List Dated 31.12.2025 TO 18.02.2026</a></div> --> <!--<div class="text-center"><img src="/sites/default/files/2024-01/new-icon-gif-2.jpg" style="width:25px; height:20px;" />&nbsp; <a class="text-font" href="/sites/default/files/tender/circulars/publicnotices/New%20Doc%2009-30-2025%2011.41%20%281%29.pdf">All India Scrutiny Pendency Report dated 26.09.2025</a></div>--><!--<div class="text-center"><img src="/sites/default/files/2024-01/new-icon-gif-2.jpg" style="width:25px; height:20px;" />&nbsp; <a class="text-font" href="/sites/default/files/2025-10/Circular%20dated%2022.10.2025-NCLT%20E-filing%20portal%20%20%20CIS%20Application%20unavailable%20due%20to%20scheduled%20maintenance%20.pdf">Circular dated 22.10.2025-NCLT E-filing portal CIS Application unavailable due to scheduled maintenance </a></div>-->
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+.blink {
+    animation: blinker 1.5s linear infinite;
+    color: #d93025;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    font-family: sans-serif;
+	}
+
+.text-font {
+  font-size: 20px; 
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+}
+
+@keyframes blinker {
+    0%{color: #d93025;}
+    49%{color: #d93025;}
+    60%{color: transparent;}
+    99%{color:transparent;}
+    100%{color: #d93025;}
+}
+
+/*--><!]]>*/
+</style></div>
+</div>
+      
+    </div>
+  </div>
+
+  </div>
+
+	</div>
+	<!-- main menu -->
+	<div class="menu-sec-wraper">
+	<div class="container-fluid">
+	<div class="d-flex justify-content-between wt-bg">
+	<div class="col-12 col-sm-12 col-md-12 col-lg-12 menu-sec">
+	<nav class="navbar navbar-expand-lg">
+	<button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navb" aria-expanded="false">
+	<i class="fas fa-bars"></i>
+	</button>
+	
+	<div class="navbar-collapse collapse" id="navb">
+		  <div class="region region-main-menu">
+    <div id="block-nicemenus" class="block block-nice-menus block-nice-menus-block">
+  
+    
+      <div class="content">
+      
+              <ul class="nice-menu mr-auto navbar-nav nice-menu-main-menu nice-menu-right clearfix toolbar-menu">
+                    <li class="menu-item">
+        <a href="/" class="toolbar-icon toolbar-icon-menu-link-content:a8673cd9-65e4-4d63-b615-df0a9b55dda9 is-active" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                <li class="menuparent menu-item menu-item--expanded">
+        <a href="/about-nclt" class="toolbar-icon toolbar-icon-menu-link-content:aae63c3d-ec07-4848-97d1-c1afeb104a77" data-drupal-link-system-path="node/139">About Us</a>
+                                <ul class="toolbar-menu">
+                    <li class="menu-item">
+        <a href="/national-company-law-tribunal" class="toolbar-icon toolbar-icon-menu-link-content:c9b7aec1-9eca-45f4-bfff-23e076e5de0e" data-drupal-link-system-path="node/127">Organisation</a>
+              </li>
+                <li class="menuparent menu-item menu-item--expanded">
+        <a href="/" class="toolbar-icon toolbar-icon-menu-link-content:665fd768-e25b-48c2-a13c-b2e7c8d0e8af is-active" data-drupal-link-system-path="&lt;front&gt;">Profile of Hon&#039;ble President &amp; Sitting Members</a>
+                                <ul class="toolbar-menu">
+                    <li class="menu-item">
+        <a href="/nclt-judicial-member" class="toolbar-icon toolbar-icon-menu-link-content:019fb366-9e79-44b1-9bf0-7d7d2db239a4" data-drupal-link-system-path="nclt-judicial-member">Judicial Members</a>
+              </li>
+                <li class="menu-item">
+        <a href="/nclt-technical-member" class="toolbar-icon toolbar-icon-menu-link-content:eaf10659-9126-4349-a475-f95bb50dbe36" data-drupal-link-system-path="nclt-technical-member">Technical Members</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/former-members" class="toolbar-icon toolbar-icon-menu-link-content:9c00109e-8b77-4172-93f5-1ede2071ee2f" data-drupal-link-system-path="former-members">Profile of Former President and Members</a>
+              </li>
+                <li class="menu-item">
+        <a href="/status_of_members" class="toolbar-icon toolbar-icon-menu-link-content:943c5abf-371a-4c7f-93f1-e607a1147e46" data-drupal-link-system-path="node/29525">Status Of Members</a>
+              </li>
+                <li class="menuparent menu-item menu-item--expanded">
+        <a href="/" class="toolbar-icon toolbar-icon-menu-link-content:ef9279f1-5045-4763-bdfe-4049ac19b567 is-active" data-drupal-link-system-path="&lt;front&gt;">Annual Report</a>
+                                <ul class="toolbar-menu">
+                    <li class="menu-item">
+        <a href="https://nclt.gov.in/sites/default/files/2026-02/Anual%20Report%2022-23_web%20file.pdf" class="toolbar-icon toolbar-icon-menu-link-content:9b650118-df9e-498c-a570-a638e3c87a44">Annual Report 22-23</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://nclt.gov.in/sites/default/files/2026-02/AR23-24%20web_file.pdf" class="toolbar-icon toolbar-icon-menu-link-content:e4fc0ac8-fd9f-42b3-a8cc-c89450743247">Annual Report 23-24</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://nclt.gov.in/sites/default/files/2026-02/AR%2024-25%20web_file.pdf" class="toolbar-icon toolbar-icon-menu-link-content:0fd64540-7f30-4b08-b90b-b3d0d88db306">Annual Report 24-25</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/all-couse-list" class="toolbar-icon toolbar-icon-menu-link-content:4b10bd72-a28f-4185-b9a2-971332c1e802" data-drupal-link-system-path="all-couse-list">Cause List</a>
+              </li>
+                <li class="menu-item">
+        <a href="/diary-number-wise" class="toolbar-icon toolbar-icon-menu-link-content:830dfdc3-2514-4a0d-bb48-94c6d813d5cb" data-drupal-link-system-path="diary-number-wise">Case Status</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://efiling.nclt.gov.in/casehistorybeforeloginmenutrue.drt" class="toolbar-icon toolbar-icon-menu-link-content:c46f4434-4889-4bf0-a686-58f2c16cd12f" target="_blank">Case History</a>
+              </li>
+                <li class="menuparent menu-item menu-item--expanded">
+        <a href="" class="toolbar-icon toolbar-icon-menu-link-content:5f8c250f-5793-4026-80a2-918e517451f8">Judgement/Orders By</a>
+                                <ul class="toolbar-menu">
+                    <li class="menu-item">
+        <a href="/order-date-wise" class="toolbar-icon toolbar-icon-menu-link-content:8d227102-d7ca-4a11-b872-097c2874319c" data-drupal-link-system-path="order-date-wise">Order Date</a>
+              </li>
+                <li class="menu-item">
+        <a href="/order-cp-wise" class="toolbar-icon toolbar-icon-menu-link-content:e34a737b-9201-4d52-adaf-43342e2a56b5" data-drupal-link-system-path="order-cp-wise">Case No.</a>
+              </li>
+                <li class="menu-item">
+        <a href="/order-party-wise" class="toolbar-icon toolbar-icon-menu-link-content:73f68a57-8f54-4299-b067-947088625f2c" data-drupal-link-system-path="order-party-wise">Petitioner/Respondent</a>
+              </li>
+                <li class="menu-item">
+        <a href="/order-advocate-wise" class="toolbar-icon toolbar-icon-menu-link-content:d1af3fce-c103-41b2-a3ac-c9b468f89091" data-drupal-link-system-path="order-advocate-wise">Advocate Name</a>
+              </li>
+                <li class="menu-item">
+        <a href="/order-judgement-date-wise" class="toolbar-icon toolbar-icon-menu-link-content:4a5b8835-dadb-4090-acc4-19d8b1958fc0" data-drupal-link-system-path="order-judgement-date-wise">Judgment Date</a>
+              </li>
+                <li class="menu-item">
+        <a href="/order-judge-wise" class="toolbar-icon toolbar-icon-menu-link-content:7c01aa7a-ef3d-4930-b1b3-aa23bfa09c1d" data-drupal-link-system-path="order-judge-wise">By Judge</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/notifcations" class="toolbar-icon toolbar-icon-menu-link-content:a5789027-0516-4df3-8d7e-7a47d9d6f69e" data-drupal-link-system-path="node/19184">Notification</a>
+              </li>
+                <li class="menu-item">
+        <a href="/circulars" class="toolbar-icon toolbar-icon-menu-link-content:a206d0d8-a161-4300-a219-54e195a43e3c" data-drupal-link-system-path="node/19183">Circulars</a>
+              </li>
+                <li class="menu-item">
+        <a href="/rti" class="toolbar-icon toolbar-icon-menu-link-content:40aea739-3733-4a26-a78c-2e6728168369" data-drupal-link-system-path="node/155">Right To Information</a>
+              </li>
+                <li class="menuparent menu-item menu-item--expanded">
+        <a href="" class="toolbar-icon toolbar-icon-menu-link-content:1e90e6e3-cd7f-459d-b6f6-4f1da6e1870b">Case Data Overview</a>
+                                <ul class="toolbar-menu">
+                    <li class="menu-item">
+        <a href="https://nclt.gov.in/sites/default/files/2025-05/CSR%20Report%20March%2C%202025a.pdf" target="_blank" class="toolbar-icon toolbar-icon-menu-link-content:bdaefb94-a3d8-4f53-97ca-ee6e931f43d7">Case Status Report</a>
+              </li>
+                <li class="menu-item">
+        <a href="/section-7-9-and-10" class="toolbar-icon toolbar-icon-menu-link-content:746f0439-2b44-4521-8378-02467912100a" data-drupal-link-system-path="node/8962">IBC</a>
+              </li>
+                <li class="menu-item">
+        <a href="/nclt-performance" class="toolbar-icon toolbar-icon-menu-link-content:56f37688-0e42-4c7b-81e9-54a5ada21ced" data-drupal-link-system-path="node/33978">Reports</a>
+              </li>
+                <li class="menu-item">
+        <a href="/section-230-232" class="toolbar-icon toolbar-icon-menu-link-content:dd378d2f-01af-4c2b-80d6-41f08d2d0e73" data-drupal-link-system-path="node/8968">Companies Act</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/careers" class="toolbar-icon toolbar-icon-menu-link-content:67d1c43e-c4d5-40be-89eb-9cbf47f9a685" data-drupal-link-system-path="node/156">Careers</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://nclt.gov.in/dBWeb/" target="_blank" class="toolbar-icon toolbar-icon-menu-link-content:a0602d9f-27c1-4e4c-ba4e-f710aa391c3c">Display Board</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://efiling.nclt.gov.in/mainPage.drt" target="_blank" class="toolbar-icon toolbar-icon-menu-link-content:d0eb0312-177e-4719-b175-1704987ce38e">E-Filing</a>
+              </li>
+                <li class="menu-item">
+        <a href="/contact-us-list" class="toolbar-icon toolbar-icon-menu-link-content:772e4750-7b73-4684-b4fd-19bb04acf568" data-drupal-link-system-path="contact-us-list">Contact Us</a>
+              </li>
+        </ul>
+  
+
+
+    </div>
+  </div>
+
+  </div>
+
+	</div>
+	</nav>
+	</div>
+	</div>
+	</div>
+	</div>
+	<!-- main menu -->
+	</header>		
+	<script>
+ function fontIncrease() {
+curSize = parseInt( jQuery( 'body' ).css( 'font-size' ) ) + 1;
+if ( curSize > 20 ) {
+return false;
+}
+jQuery( 'body' ).css( 'font-size', curSize );
+}
+function fontNormal() {
+jQuery( 'body' ).css( 'font-size', 14);
+}
+function fontDecrease() {
+curSize = parseInt( jQuery( 'body' ).css( 'font-size' ) ) - 1;
+if ( curSize < 10 ) {
+return false;
+}
+jQuery( 'body' ).css( 'font-size', curSize );
+}          
+</script><div class="home-slider-sec">
+	
+	  <div class="region region-home-banner">
+    <div class="views-element-container block block-views block-views-blockhome-banner-view-block-1" id="block-views-block-home-banner-view-block-1">
+  
+    
+      <div class="content">
+      <div><div class="view view-home-banner-view view-id-home_banner_view view-display-id-block_1 js-view-dom-id-25d681ded428b7bbc08c6023a6bfced71df940500d9aa5bc2caad83abdfeb4dc">
+  
+    
+      
+      <div class="view-content">
+        <div class="skin-default">
+    
+    <div id="views_slideshow_cycle_main_home_banner_view-block_1" class="views_slideshow_cycle_main views_slideshow_main">
+    <div id="views_slideshow_cycle_teaser_section_home_banner_view-block_1"  class="views_slideshow_cycle_teaser_section">
+     <div id="views_slideshow_cycle_div_home_banner_view-block_1_0"  class="views_slideshow_cycle_slide views_slideshow_slide views-row-1 views-row-odd">
+      <div  class="views-row views-row-0 views-row-odd views-row-first">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="home-title">
+  <img src="/sites/default/files/homebanner/banner_1.jpg" width="1366" height="550" alt="Home banner 10" typeof="Image" />
+
+
+</div>
+
+</span></div>
+</div>
+
+  </div>
+
+     <div id="views_slideshow_cycle_div_home_banner_view-block_1_1"  class="views_slideshow_cycle_slide views_slideshow_slide views-row-2 views_slideshow_cycle_hidden views-row-even">
+      <div  class="views-row views-row-1 views-row-even">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="home-title">
+  <img src="/sites/default/files/homebanner/banner_2.jpg" width="1366" height="550" alt="Home banner 10" typeof="Image" />
+
+
+</div>
+
+</span></div>
+</div>
+
+  </div>
+
+     <div id="views_slideshow_cycle_div_home_banner_view-block_1_2"  class="views_slideshow_cycle_slide views_slideshow_slide views-row-3 views_slideshow_cycle_hidden views-row-odd">
+      <div  class="views-row views-row-2 views-row-odd">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="home-title">
+  <img src="/sites/default/files/homebanner/banner_3_0.jpg" width="1366" height="550" alt="Home banner 12" typeof="Image" />
+
+
+</div>
+
+</span></div>
+</div>
+
+  </div>
+
+     <div id="views_slideshow_cycle_div_home_banner_view-block_1_3"  class="views_slideshow_cycle_slide views_slideshow_slide views-row-4 views_slideshow_cycle_hidden views-row-even">
+      <div  class="views-row views-row-3 views-row-even">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="home-title">
+  <img src="/sites/default/files/homebanner/banner_4_0.jpg" width="1366" height="550" alt="Home banner 14" typeof="Image" />
+
+
+</div>
+
+</span></div>
+</div>
+
+  </div>
+
+     <div id="views_slideshow_cycle_div_home_banner_view-block_1_4"  class="views_slideshow_cycle_slide views_slideshow_slide views-row-5 views_slideshow_cycle_hidden views-row-odd">
+      <div  class="views-row views-row-4 views-row-odd">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="home-title">
+  <img src="/sites/default/files/homebanner/banner_5_1.jpg" width="1366" height="550" alt="Home banner 15" typeof="Image" />
+
+
+</div>
+
+</span></div>
+</div>
+
+  </div>
+
+     <div id="views_slideshow_cycle_div_home_banner_view-block_1_5"  class="views_slideshow_cycle_slide views_slideshow_slide views-row-6 views_slideshow_cycle_hidden views-row-even">
+      <div  class="views-row views-row-5 views-row-even">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="home-title">
+  <img src="/sites/default/files/homebanner/banner_6.jpg" width="1366" height="550" alt="Home banner 16" typeof="Image" />
+
+
+</div>
+
+</span></div>
+</div>
+
+  </div>
+
+     <div id="views_slideshow_cycle_div_home_banner_view-block_1_6"  class="views_slideshow_cycle_slide views_slideshow_slide views-row-7 views_slideshow_cycle_hidden views-row-odd">
+      <div  class="views-row views-row-6 views-row-odd">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="home-title">
+  <img src="/sites/default/files/homebanner/banner_7.jpg" width="1366" height="550" alt="Home banner 17" typeof="Image" />
+
+
+</div>
+
+</span></div>
+</div>
+
+  </div>
+
+     <div id="views_slideshow_cycle_div_home_banner_view-block_1_7"  class="views_slideshow_cycle_slide views_slideshow_slide views-row-8 views_slideshow_cycle_hidden views-row-even">
+      <div  class="views-row views-row-7 views-row-even">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="home-title">
+  <img src="/sites/default/files/homebanner/banner_8.jpg" width="1366" height="550" alt="Home banner 18" typeof="Image" />
+
+
+</div>
+
+</span></div>
+</div>
+
+  </div>
+
+     <div id="views_slideshow_cycle_div_home_banner_view-block_1_8"  class="views_slideshow_cycle_slide views_slideshow_slide views-row-9 views_slideshow_cycle_hidden views-row-odd">
+      <div  class="views-row views-row-8 views-row-odd">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="home-title">
+  <img src="/sites/default/files/homebanner/banner_9.jpg" width="1366" height="550" alt="Home banner 19" typeof="Image" />
+
+
+</div>
+
+</span></div>
+</div>
+
+  </div>
+
+     <div id="views_slideshow_cycle_div_home_banner_view-block_1_9"  class="views_slideshow_cycle_slide views_slideshow_slide views-row-10 views_slideshow_cycle_hidden views-row-even">
+      <div  class="views-row views-row-9 views-row-even">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="home-title">
+  <img src="/sites/default/files/homebanner/banner_10.jpg" width="1366" height="550" alt="Home banner 20" typeof="Image" />
+
+
+</div>
+
+</span></div>
+</div>
+
+  </div>
+
+     <div id="views_slideshow_cycle_div_home_banner_view-block_1_10"  class="views_slideshow_cycle_slide views_slideshow_slide views-row-11 views_slideshow_cycle_hidden views-row-odd">
+      <div  class="views-row views-row-10 views-row-odd">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="home-title">
+  <img src="/sites/default/files/homebanner/banner_11.jpg" width="1366" height="550" alt="Home banner 21" typeof="Image" />
+
+
+</div>
+
+</span></div>
+</div>
+
+  </div>
+
+     <div id="views_slideshow_cycle_div_home_banner_view-block_1_11"  class="views_slideshow_cycle_slide views_slideshow_slide views-row-12 views_slideshow_cycle_hidden views-row-even">
+      <div  class="views-row views-row-11 views-row-even">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="home-title">
+  <img src="/sites/default/files/homebanner/banner_12.jpg" width="1366" height="550" alt="Home banner 22" typeof="Image" />
+
+
+</div>
+
+</span></div>
+</div>
+
+  </div>
+
+     <div id="views_slideshow_cycle_div_home_banner_view-block_1_12"  class="views_slideshow_cycle_slide views_slideshow_slide views-row-13 views_slideshow_cycle_hidden views-row-odd">
+      <div  class="views-row views-row-12 views-row-odd">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="home-title">
+  <img src="/sites/default/files/homebanner/banner_13.jpg" width="1366" height="550" alt="Home banner 23" typeof="Image" />
+
+
+</div>
+
+</span></div>
+</div>
+
+  </div>
+
+     <div id="views_slideshow_cycle_div_home_banner_view-block_1_13"  class="views_slideshow_cycle_slide views_slideshow_slide views-row-14 views_slideshow_cycle_hidden views-row-even">
+      <div  class="views-row views-row-13 views-row-even">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="home-title">
+  <img src="/sites/default/files/homebanner/banner_14.jpg" width="1366" height="550" alt="Home banner 24" typeof="Image" />
+
+
+</div>
+
+</span></div>
+</div>
+
+  </div>
+
+     <div id="views_slideshow_cycle_div_home_banner_view-block_1_14"  class="views_slideshow_cycle_slide views_slideshow_slide views-row-15 views_slideshow_cycle_hidden views-row-odd">
+      <div  class="views-row views-row-14 views-row-odd">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="home-title">
+  <img src="/sites/default/files/homebanner/banner_15.jpg" width="1366" height="550" alt="Home banner 25" typeof="Image" />
+
+
+</div>
+
+</span></div>
+</div>
+
+  </div>
+
+     <div id="views_slideshow_cycle_div_home_banner_view-block_1_15"  class="views_slideshow_cycle_slide views_slideshow_slide views-row-16 views_slideshow_cycle_hidden views-row-even">
+      <div  class="views-row views-row-15 views-row-even views-row-last">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="home-title">
+  <img src="/sites/default/files/homebanner/banner_16.jpg" width="1366" height="550" alt="Home banner 26" typeof="Image" />
+
+
+</div>
+
+</span></div>
+</div>
+
+  </div>
+
+  </div>
+
+</div>
+
+
+          <div class="views-slideshow-controls-bottom clearfix">
+        <div id="views_slideshow_controls_text_home_banner_view-block_1"  class="views_slideshow_controls_text">
+  <span id="views_slideshow_controls_text_previous_home_banner_view-block_1"  class="views_slideshow_controls_text_previous">
+  <a href="#">Previous</a>
+</span>
+
+  <span id="views_slideshow_controls_text_pause_home_banner_view-block_1"  class="views_slideshow_controls_text_pause  views-slideshow-controls-text-status-play">
+  <a href="#">Pause</a>
+</span>
+
+  <span id="views_slideshow_controls_text_next_home_banner_view-block_1"  class="views_slideshow_controls_text_next">
+  <a href="#">Next</a>
+</span>
+
+</div>
+
+<div class="item-list"><ul class="widget_pager widget_pager_bottom views-slideshow-pager-bullets views_slideshow_pager_field" id="widget_pager_bottom_home_banner_view-block_1"><li id="views_slideshow_pager_field_item_bottom_home_banner_view-block_1_0">0</li><li id="views_slideshow_pager_field_item_bottom_home_banner_view-block_1_1">1</li><li id="views_slideshow_pager_field_item_bottom_home_banner_view-block_1_2">2</li><li id="views_slideshow_pager_field_item_bottom_home_banner_view-block_1_3">3</li><li id="views_slideshow_pager_field_item_bottom_home_banner_view-block_1_4">4</li><li id="views_slideshow_pager_field_item_bottom_home_banner_view-block_1_5">5</li><li id="views_slideshow_pager_field_item_bottom_home_banner_view-block_1_6">6</li><li id="views_slideshow_pager_field_item_bottom_home_banner_view-block_1_7">7</li><li id="views_slideshow_pager_field_item_bottom_home_banner_view-block_1_8">8</li><li id="views_slideshow_pager_field_item_bottom_home_banner_view-block_1_9">9</li><li id="views_slideshow_pager_field_item_bottom_home_banner_view-block_1_10">10</li><li id="views_slideshow_pager_field_item_bottom_home_banner_view-block_1_11">11</li><li id="views_slideshow_pager_field_item_bottom_home_banner_view-block_1_12">12</li><li id="views_slideshow_pager_field_item_bottom_home_banner_view-block_1_13">13</li><li id="views_slideshow_pager_field_item_bottom_home_banner_view-block_1_14">14</li><li id="views_slideshow_pager_field_item_bottom_home_banner_view-block_1_15">15</li></ul></div>
+
+      </div>
+        </div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
+  </div>
+<div id="block-popup-2" class="block block-block-content block-block-contentccfe85f9-4e60-4fa2-82f8-db4702de357f">
+  
+    
+      <div class="content">
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><!-- <style type="text/css">.modal {top:100px;}
+.modal-body p {
+    font-size: 14px;
+font-weight: 800;
+
+    text-align: center;
+}
+.modal-dialog {
+    max-width: 1000px;
+}
+.pop-mss {font-size: 22px; font-weight: 800; color: #007bff;}
+.pop-msss {font-size: 22px; font-weight: 800; color: black;}
+.welliconimag{border-radius: 94px;
+} -->
+<!-- </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+<div class="bs-example">
+<div class="modal fade" id="myModal">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header text-align-justify"><button class="btn-close" data-bs-dismiss="modal" type="button">X</button></div>
+ -->
+<!-- <div class="modal-body">
+<center>
+<p class="text-align-justify"><img class="welliconimag" src="/sites/default/files/2024-09/wellicon1.PNG" style="width:23px; height:24px;" />&nbsp;<span class="pop-msss">Important Notice</span><br />
+<a href="https://www.youtube.com/live/RKzYrwVFaGA" target="_blank"><span class="pop-mss">National Company Law Tribunal Live Streaming of Swearing In Ceremony of Newly appointed NCLT Members on 20/01/2025 14:30 Hrs is available at https://www.youtube.com/live/RKzYrwVFaGA</span></a> <!--<img src="/sites/default/files/2024-01/new-icon-gif-2.jpg" style="width:50px; height:36px;" /></p>
+
+<p>&nbsp;</p>
+<!-- <p class="text-align-justify"><a href="
+https://nclt.gov.in/sites/default/files/tender/circulars/publicnotices/Circular%20dated%2030.4.2024-%20NCLT%20New%20Delhi.pdf" target="_blank">Court proceedings of NCLT New Delhi will be suspended for the post lunch session today on 30.04.2024</a><img src="/sites/default/files/2024-01/new-icon-gif-2.jpg" style="width:50px; height:36px;" /></p></center>
+</div>
+</div>
+</div>
+</div>
+</div> -->
+
+<!-- <p><a href="/sites/default/files/2024-02/BID_0.pdf" target="_blank"><script>
+    jQuery(window).on('load',function(){
+       jQuery('#myModal').modal('show');
+    });
+    setTimeout(function(){
+         jQuery('#myModal').modal('hide');
+    });
+</script></a></p> -->
+</div>
+      
+    </div>
+  </div>
+
+  </div>
+
+	
+</div>
+
+
+<div class="welcome-section"  id ="mid-section">
+	<div class="container">		
+	<!--div class="marquee-sec">
+		
+		
+		</div-->
+	
+	      <div class="region region-welcome-msg">
+    <div id="block-welcometonationalcompanylawtribunal" class="block block-block-content block-block-contente5e919ab-07e8-4862-849c-b1b81a15a54c">
+  
+    
+      <div class="content">
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="row">
+<div class="col-12 col-sm-12 col-md-6 col-xl-6 wel-wrap">
+<!-- <div class="flash-message">
+<p style="color:red; font-size:18px;"><marquee behavior="scroll" direction="left" onmouseout="this.start();" onmouseover="this.stop();" scrollamount="7">Due to maintenance activities NCLT API i.e Bench selection option will not be available till date 15-01-2024. For alternatively you can check status from<a href="https://efiling.nclt.gov.in/casehistorybeforeloginmenutrue.drt">case history</a>tab. Sorry for the inconvenience.</marquee></p>
+</div>-->
+<!-- <div class="flash-message">
+<p><marquee behavior="scroll" direction="left" onmouseout="this.start();" onmouseover="this.stop();" scrollamount="7"><a href="https://nclt.gov.in/sites/default/files/tender/circulars/publicnotices/GeM-Bidding-5587891%20%281%29.pdf" target="_blank">Bid Submission Date Extended upto 11/12/2023 for Supplying Installation Commissioning and Testing of Hybrid Court System in 31 Courts of NCLT - Bid Document</a></marquee></p>
+</div> -->
+
+<div class="wel-bdr-heading"><span>Welcome to</span></div>
+
+<div class="wel-heading">National Company Law Tribunal</div>
+
+<p class="text-align-justify">"The Central Government has constituted National Company Law Tribunal (NCLT) under section 408 of the Companies Act, 2013 (18 of 2013) w.e.f. 01st June 2016. In the first phase the Ministry of Corporate Affairs has set up eleven Benches, one Principal Bench at New Delhi and ten other Benches at New Delhi, Ahmedabad, Allahabad, Bengaluru, Chandigarh, Chennai, Guwahati, Hyderabad, Kolkata and Mumbai. These Benches are headed by the President Chief Justice (Retd.) Ramalingam Sudhakar and comprises of sixteen Judicial Members and nine Technical Members at different locations. Subsequently, more Benches at Cuttack, Jaipur, Kochi, Amravati, and Indore have been setup and new members have joined"</p>
+<!-- <div class="read-more mt-4 mb-4"><a href="about-nclt">Read More </a></div> -->
+
+<div class="president-sec">
+<div class="ps-left"><img src="" /><span>Chief Justice (Retd) Ramalingam Sudhakar</span>
+
+<div class="pname">Hon'ble President</div>
+</div>
+
+<div class="ps-right">
+<div class="read-more mt-4 mb-4"> </div>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-sm-12 col-md-6 col-xl-6 judgement-wrap">
+<div id="exTab1">
+<ul class="nav nav-pills"><li class="active"><a class="active show" data-toggle="tab" href="#datewise">Order Date Wise</a></li>
+	<li><a data-toggle="tab" href="#benchwise">Judgement Date Wise</a></li>
+</ul><div class="tab-content clearfix">
+<div class="tab-pane active" id="datewise">
+<div class="judg-heading"><img src="themes/nclt/images/judgment.png" /><span>Order</span></div>
+
+<div class="wise-heading mb-3">Date Wise</div>
+
+<p>Status of a Case / Filing / Order Status could be found through either of the following options.</p>
+
+<div class="form-sec">
+<form action="order-date-wise-search" id="search-case-number-form" method="GET" name="search-case-number" onsubmit="return validFilterOrderDateWise();">
+<div class="row">
+<div class="col-12 col-sm-12 col-md-4 col-xl-4">
+<div class="form-group"><select class="form-control" id="bench" name="bench" required=""><option value="">Select Bench</option><option value="delhi_1">Principal Bench</option><option value="delhi">Delhi Bench</option><option value="ahmedabad">Ahmedabad</option><option value="allahabad">Allahabad</option><option value="amravati">Amravati</option><option value="bengaluru">Bengaluru</option><option value="chandigarh">Chandigarh</option><option value="chennai">Chennai</option><option value="cuttak">Cuttak</option><option value="guwahati">Guwahati</option><option value="hyderabad">Hyderabad</option><option value="indore">Indore</option><option value="jaipur">Jaipur</option><option value="kochi">Kochi</option><option value="kolkata">Kolkata</option><option value="mumbai">Mumbai</option></select></div>
+</div>
+
+<div class="col-12 col-sm-12 col-md-4 col-xl-4">
+<div class="form-group"><input autocomplete="off" class="form-control datepicker1" id="fromdate" name="start_date" placeholder="From Date" required="required" type="text" /></div>
+</div>
+
+<div class="col-12 col-sm-12 col-md-4 col-xl-4">
+<div class="form-group"><input autocomplete="off" class="form-control datepicker1" id="todate" name="end_date" placeholder="To Date" required="required" type="text" /></div>
+</div>
+
+<div class="col-12 col-sm-12 col-md-12 col-xl-12 text-center"><button class="btn submit-btn" type="submit">Search</button></div>
+
+<div class="col-12 col-sm-12 col-md-12 col-xl-12 clk-here">
+<p>Please <a href="https://archive.nclt.gov.in/" target="_blank" title="Old Website">click here</a> for data prior to <span>31 August, 2021</span></p>
+</div>
+
+<div class="col-12 col-sm-12 col-md-12 col-xl-12 mt-4">
+<div class="disclamer">Disclaimer: Case wise search is on the Free Text basis where the information may not be accurate. You may check other options to get the orders.</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+
+<div class="tab-pane" id="benchwise">
+<div class="judg-heading"><img src="themes/nclt/images/judgment.png" /><span>Judgement</span></div>
+
+<div class="wise-heading mb-3">Bench Wise</div>
+
+<p>Status of a Case / Filing / Order Status could be found through either of the following options.</p>
+
+<div class="form-sec">
+<form action="order-judgement-date-wise-search" id="search-case-number-form" method="GET" name="search-case-number" onsubmit="return validFilterOrderJudgementWise();">
+<div class="row">
+<div class="col-12 col-sm-12 col-md-4 col-xl-4">
+<div class="form-group"><select class="form-control" id="bench1" name="bench" required=""><option value="">Select Bench</option><option value="delhi">Delhi Bench</option><option value="ahmedabad">Ahmedabad</option><option value="allahabad">Allahabad</option><option value="amravati">Amravati</option><option value="bengaluru">Bengaluru</option><option value="chandigarh">Chandigarh</option><option value="chennai">Chennai</option><option value="cuttak">Cuttak</option><option value="guwahati">Guwahati</option><option value="hyderabad">Hyderabad</option><option value="indore">Indore</option><option value="jaipur">Jaipur</option><option value="kochi">Kochi</option><option value="kolkata">Kolkata</option><option value="mumbai">Mumbai</option></select></div>
+</div>
+
+<div class="col-12 col-sm-12 col-md-4 col-xl-4">
+<div class="form-group"><input autocomplete="off" class="form-control datepicker2" id="fromdate1" name="start_date" placeholder="From Date" required="required" type="text" /></div>
+</div>
+
+<div class="col-12 col-sm-12 col-md-4 col-xl-4">
+<div class="form-group"><input autocomplete="off" class="form-control datepicker2" id="todate1" name="end_date" placeholder="To Date" required="required" type="text" /></div>
+</div>
+
+<div class="col-12 col-sm-12 col-md-12 col-xl-12 text-center"><button class="btn submit-btn" type="submit">Search</button></div>
+
+<div class="col-12 col-sm-12 col-md-12 col-xl-12 clk-here">
+<p>Please <a href="https://archive.nclt.gov.in/" target="_blank" title="Old Website">click here</a> for data prior to <span>31 August,2021</span></p>
+</div>
+
+<div class="col-12 col-sm-12 col-md-12 col-xl-12 mt-4">
+<div class="disclamer">Disclaimer: Case wise search is on the Free Text basis where the information may not be accurate. You may check other options to get the orders.</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+      
+    </div>
+  </div>
+<div id="block-flashmessage" class="block block-block-content block-block-content06e3bba9-6b69-4fbf-a6f7-595738593ce9">
+  
+    
+      <div class="content">
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><marquee behavior="scroll" direction="left" onmouseout="this.start();" onmouseover="this.stop();" scrollamount="7"><a href="/sites/default/files/tender/circulars/publicnotices/Inviting%20Bids%20for%20Monthly%20Basis%20Cab%20%26%20Taxi%20Hiring%20Services%20at%20NCLT%20Chennai%20Bench.pdf">Inviting Bids for Monthly Basis Cab &amp; Taxi Hiring Services at NCLT Chennai Bench </a><img src="/sites/default/files/2024-01/new-icon-gif-2.jpg" style="width:30px; height:15px;" /></marquee><marquee behavior="scroll" direction="left" onmouseout="this.start();" onmouseover="this.stop();" scrollamount="7"><a href="/sites/default/files/tender/circulars/publicnotices/Adobe%20Scan%2018%20May%202025.pdf" target="_blank">Constitution of Single Bench in NCLT Kolkata Bench for hearing of cases u/s 73(4) Companies Act- Reg.</a> <img src="/sites/default/files/2024-01/new-icon-gif-2.jpg" style="width:30px; height:15px;" /></marquee></p>
+<marquee behavior="scroll" direction="left" onmouseout="this.start();" onmouseover="this.stop();" scrollamount="7"><a href="/sites/default/files/2025-05/AMAs%20at%20NCLT%20Chennai%20Bench.pdf">Calling for willingness from RMPs for appointment as Authorized Medical Attendants at NCLT Chennai Bench </a></marquee><!-- <p>&nbsp;</p> 
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>--><!-- <p><marquee behavior="scroll" direction="left" onmouseout="this.start();" onmouseover="this.stop();" scrollamount="7"> <a href="/sites/default/files/tender/circulars/publicnotices/14.01.2025%20Response%20to%20Newspaper%20Report-1.pdf" target="_blank"> News Report Dated 14.01.2025 - NCLT Mumbai Staff on Strike Over Non Payment of Salary (Reg)- Clarification</a> <img src="/sites/default/files/2024-01/new-icon-gif-2.jpg" style="width:30px; height:15px;" /></marquee></p> --><!-- <p>&nbsp;</p>
+
+<p>&nbsp;</p> --><p> </p>
+
+<p><marquee behavior="scroll" direction="left" onmouseout="this.start();" onmouseover="this.stop();" scrollamount="7"><a href="/sites/default/files/tender/circulars/publicnotices/GeM-Bidding-7384919%20dt%2016012025.pdf" target="_blank">Inviting Bids for Monthly Basis Cab &amp; Taxi Hiring Services at Chennai Bench</a> </marquee></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+</div>
+      
+    </div>
+  </div>
+
+  </div>
+
+	    </div>
+	
+</div>
+<!-- Welcome Section End -->
+<div class="National-sec">
+	<div class="container">
+		<div class="national-bench-heading text-center"><span>NCLT Benches</span></div>
+		  <div class="region region-benches-list">
+    <div class="views-element-container block block-views block-views-blockbenches-list-block-1" id="block-views-block-benches-list-block-1">
+  
+    
+      <div class="content">
+      <div><div class="view view-benches-list view-id-benches_list view-display-id-block_1 js-view-dom-id-0b8e6fe622023ea56f7a32dbff0787cfbbefb2cbfacae1f8211799c143b093bd">
+  
+    
+      
+      <div class="view-content">
+      <div class="item-list">
+  
+  <ul class="owl-carousel benches-slider">
+
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/guwahati-bench">  <img src="/sites/default/files/styles/thumbnail/public/default_images/download.jpg?itok=7p2KWoJA" width="100" height="62" alt="Blanckimage" typeof="Image" class="image-style-thumbnail" />
+
+
+<span>Guwahati</span></a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/kolkata-bench">  <img src="/sites/default/files/styles/thumbnail/public/default_images/download.jpg?itok=7p2KWoJA" width="100" height="62" alt="Blanckimage" typeof="Image" class="image-style-thumbnail" />
+
+
+<span>Kolkata</span></a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/kochi-bench">  <img src="/sites/default/files/styles/thumbnail/public/default_images/download.jpg?itok=7p2KWoJA" width="100" height="62" alt="Blanckimage" typeof="Image" class="image-style-thumbnail" />
+
+
+<span>Kochi</span></a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/indore-bench">  <img src="/sites/default/files/styles/thumbnail/public/default_images/download.jpg?itok=7p2KWoJA" width="100" height="62" alt="Blanckimage" typeof="Image" class="image-style-thumbnail" />
+
+
+<span>Indore</span></a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/cuttack-bench">  <img src="/sites/default/files/styles/thumbnail/public/default_images/download.jpg?itok=7p2KWoJA" width="100" height="62" alt="Blanckimage" typeof="Image" class="image-style-thumbnail" />
+
+
+<span>Cuttack</span></a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/chandigarh-bench">  <img src="/sites/default/files/styles/thumbnail/public/default_images/download.jpg?itok=7p2KWoJA" width="100" height="62" alt="Blanckimage" typeof="Image" class="image-style-thumbnail" />
+
+
+<span>Chandigarh</span></a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/amravati-bench">  <img src="/sites/default/files/styles/thumbnail/public/default_images/download.jpg?itok=7p2KWoJA" width="100" height="62" alt="Blanckimage" typeof="Image" class="image-style-thumbnail" />
+
+
+<span>Amravati</span></a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/allahabad-bench">  <img src="/sites/default/files/styles/thumbnail/public/default_images/download.jpg?itok=7p2KWoJA" width="100" height="62" alt="Blanckimage" typeof="Image" class="image-style-thumbnail" />
+
+
+<span>Allahabad</span></a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/jaipur-bench">  <img src="/sites/default/files/styles/thumbnail/public/default_images/download.jpg?itok=7p2KWoJA" width="100" height="62" alt="Blanckimage" typeof="Image" class="image-style-thumbnail" />
+
+
+<span>Jaipur</span></a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/chennai-bench">  <img src="/sites/default/files/styles/thumbnail/public/default_images/download.jpg?itok=7p2KWoJA" width="100" height="62" alt="Blanckimage" typeof="Image" class="image-style-thumbnail" />
+
+
+<span>Chennai</span></a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/hyderabad-bench">  <img src="/sites/default/files/styles/thumbnail/public/default_images/download.jpg?itok=7p2KWoJA" width="100" height="62" alt="Blanckimage" typeof="Image" class="image-style-thumbnail" />
+
+
+<span>Hyderabad</span></a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/bengaluru-bench">  <img src="/sites/default/files/styles/thumbnail/public/default_images/download.jpg?itok=7p2KWoJA" width="100" height="62" alt="Blanckimage" typeof="Image" class="image-style-thumbnail" />
+
+
+<span>Bengaluru</span></a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/mumbai-benchs">  <img src="/sites/default/files/styles/thumbnail/public/default_images/download.jpg?itok=7p2KWoJA" width="100" height="62" alt="Blanckimage" typeof="Image" class="image-style-thumbnail" />
+
+
+<span>Mumbai</span></a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/ahmedabad-bench">  <img src="/sites/default/files/styles/thumbnail/public/default_images/download.jpg?itok=7p2KWoJA" width="100" height="62" alt="Blanckimage" typeof="Image" class="image-style-thumbnail" />
+
+
+<span>Ahmedabad</span></a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/new-delhi-bench">  <img src="/sites/default/files/styles/thumbnail/public/default_images/download.jpg?itok=7p2KWoJA" width="100" height="62" alt="Blanckimage" typeof="Image" class="image-style-thumbnail" />
+
+
+<span>Delhi</span></a></span></div></li>
+    
+  </ul>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+		<a class="carousel-control-prev" href="#gallery-carousel" data-slide="prev">
+			<i class="fas fa-chevron-left"></i>
+		</a>
+		<a class="carousel-control-next" href="#gallery-carousel" data-slide="next">
+			<i class="fas fa-chevron-right"></i>
+		</a>
+		<div class="benches-slider-bottom-sec">
+			<div class="row m-0">
+				<div class="col-12 col-sm-12 col-md-3 col-lg-3 tender-section">
+					<div class="tender-heading-sec mb-3">
+					<span class="tender-heading">Tenders</span>
+					</div>
+					<div>
+						  <div class="region region-tenders">
+    <div class="views-element-container block block-views block-views-blocktender-notification-circulars-block-1" id="block-views-block-tender-notification-circulars-block-1">
+  
+    
+      <div class="content">
+      <div><div class="view view-tender-notification-circulars view-id-tender_notification_circulars view-display-id-block_1 js-view-dom-id-57cf3f06458274bb68c62189e9fd7c02d20ff55ab598a87ac26a38ad734e598c">
+  
+    
+      
+      <div class="view-content">
+      <div class="myTicker">
+  
+  <ul>
+
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/sites/default/files/tender/circulars/publicnotices/Inviting%20Bids%20for%20Monthly%20Basis%20Cab%20%26%20Taxi%20Hiring%20Services%20at%20NCLT%20Chennai%20Bench.pdf" target="_blank">Inviting Bids for Monthly Basis Cab &amp; Taxi Hiring Services at NCLT Chennai Bench</a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/sites/default/files/tender/circulars/publicnotices/Invitation%20of%20Bids%20through%20GeM%20for%20AMC%20of%20IT%20Assets%20at%20NCLT%2C%20Chennai%20Bench.pdf" target="_blank">Invitation of Bids through GeM for AMC IT Assets at NCLT, Chennai Bench</a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/sites/default/files/tender/circulars/publicnotices/GeM-Bidding-7384919%20dt%2016012025.pdf" target="_blank">Inviting Bids for Monthly Basis Cab &amp; Taxi Hiring Services at NCLT Chennai Bench</a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/sites/default/files/tender/circulars/publicnotices/Scan20250102145745.pdf" target="_blank">Auction of Goods at First Floor, NCLT, Block-12 CGO Complex, Lodhi Road, New Delhi</a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/sites/default/files/tender/circulars/publicnotices/GeM-Bidding-7257546.pdf" target="_blank">Inviting Bids for Monthly Basis Cab &amp; Taxi Hiring Services at Chennai Bench</a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/sites/default/files/tender/circulars/publicnotices/Order%20dated%206.9.2024-%20Difference%20of%20Opinion%20at%20NCLT%20Mumbai%20Court%20no.%20IV-Sahara%20Hospitality%20Limited.pdf" target="_blank">Order dated 6.9.2024- Difference of Opinion at NCLT Mumbai Court no. IV-Sahara Hospitality Limited</a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/sites/default/files/tender/circulars/publicnotices/doc00764020240111175934.pdf" target="_blank">Inviting Bids for Storage of Furniture Items Present at Block 12 CGO Complex, Lodhi Road, New Delhi</a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/sites/default/files/tender/circulars/publicnotices/GeM-Bidding-5587891%20%281%29.pdf" target="_blank">Supplying installation commissioning and testing of Hybrid Court System in 31 Courts of NCLT</a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/sites/default/files/tender/circulars/publicnotices/OFFICE%20LETTER-2.pdf" target="_blank">OFFICE LETTER-2</a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/sites/default/files/tender/circulars/publicnotices/Bid%20Document%20GeM-Bidding-4972318.pdf" target="_blank">Bid Document GeM-Bidding-4972318</a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/sites/default/files/tender/circulars/publicnotices/OFFICE%20LETTER%20G-2_0.pdf" target="_blank">E-auction of old and obsolete items of National Company Law Tribunal, Block No.3, 7th Floor CGO Complex, New Delhi</a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/sites/default/files/tender/circulars/publicnotices/Eauction.pdf" target="_blank">E-auction of old and obsolete items in STC Building Janpath</a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/sites/default/files/tender/circulars/publicnotices/6Bidding%20Doc.pdf" target="_blank">Bidding document from Ahmadabad Bench</a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/sites/default/files/tender/circulars/publicnotices/5New%20Tender%20Notice.pdf" target="_blank">Awarding of contract for providing of manpower services for a Period of two years in NCLT, Cuttack Bench</a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/sites/default/files/tender/circulars/publicnotices/4New%20Tender%20notice%20for%20hiring%20Car.pdf" target="_blank">Tender Notice for Annual Contract for hiring of Taxis/Cars for the year 2019-21 </a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/sites/default/files/tender/circulars/publicnotices/3.pdf" target="_blank">Notice Inviting Tender For Shredding And Disposal of Court Files/File Boards, Paper, Periodicals, Newspapers &amp; ETC</a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/sites/default/files/tender/circulars/publicnotices/2img20200917_14264107.pdf" target="_blank">Notice Inviting Price Quotation for Video Conferencing Software License/ Subscription for one year. </a></span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><a href="/sites/default/files/tender/circulars/publicnotices/img20200925_17423247.pdf" target="_blank">Inviting of expression of interest from the recognized professional agencies having adequate experience in making recruitment in Central Government,Public Sector,Under Takings,Tribunals and the like,for filling up posts by direct recruitment in NCLT</a></span></div></li>
+    
+  </ul>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+					</div>
+					<div class="read-more mt-4 mb-4"><a href="/tenders">View All <i class="fas fa-arrow-right"></i></a></div>
+				</div>
+				
+				<div class="col-12 col-sm-12 col-md-5 col-lg-5 event-section">
+					<div class="tender-heading-sec mb-3">
+					<span class="tender-heading">Events</span><span class="pause-btn btnToggle1"><a title="NCLT Calender" href="/nclt-calender"><i class="fas fa-calendar - mr-2"></i>NCLT Calendar </span></a></div>
+					  <div class="region region-events">
+    <div class="views-element-container block block-views block-views-blockphoto-gallery-block-2" id="block-views-block-photo-gallery-block-2">
+  
+    
+      <div class="content">
+      <div><div class="view view-photo-gallery view-id-photo_gallery view-display-id-block_2 js-view-dom-id-3344c73e567c2daf3e0d6e2bb167affe0a4a74a9bcf5d5490f3afd0e6cd8c2f1">
+  
+    
+      
+      <div class="view-content">
+      <div class="item-list">
+  
+  <ul class="events-section owl-carousel event-slider">
+
+          <li><div class="views-field views-field-nothing"><span class="field-content"><div class="event-img"></div>
+<p><span><strong>Nov 25, 2020</strong></span></br>Details of work Carried out by NCLT for renovation of Block-12 CGO Complex, New Delhi</p>
+</span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><div class="event-img"></div>
+<p><span><strong>Nov 25, 2020</strong></span></br>Invite for the Inauguration of the Lounge , wireless &amp; Virtual hearing facility for Members of the Bar/Professionals in Chennai.</p>
+</span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><div class="event-img">  <img src="/sites/default/files/styles/medium/public/latestnewsandevent/ss.jpg?itok=J8Pgzlk7" width="220" height="124" alt="" typeof="Image" class="image-style-medium" />
+
+
+</div>
+<p><span><strong>March 19, 2023</strong></span></br><a href="https://nclt.gov.in/sites/default/files/2023-03/Hon%27ble%20Prime%20Minister%20recognizes%20the%20work%20of%20NCLT.mp4" target="_blank">Honble Prime Minister recognizes the work of NCLT</a></p>
+</span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><div class="event-img"></div>
+<p><span><strong>March 03, 2023</strong></span></br><a href="/sites/default/files/2023-03/Colloquium%2003.03.2023.pdf" target="_blank">NCLT Colloquium Report-2022</a></p>
+</span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><div class="event-img">  <img src="/sites/default/files/styles/medium/public/latestnewsandevent/event2_1.png?itok=EBEiXizy" width="220" height="129" alt="" typeof="Image" class="image-style-medium" />
+
+
+</div>
+<p><span><strong>Nov 25, 2020</strong></span></br>Celebrating  Constitution Day of India 26 January</p>
+</span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><div class="event-img">  <img src="/sites/default/files/styles/medium/public/latestnewsandevent/event2_0.png?itok=k6B0_NXU" width="220" height="129" alt="" typeof="Image" class="image-style-medium" />
+
+
+</div>
+<p><span><strong>Nov 25, 2020</strong></span></br>5th Colloquium of Hon&#039;ble Member of NCLT on Companies</p>
+</span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><div class="event-img">  <img src="/sites/default/files/styles/medium/public/latestnewsandevent/event1.png?itok=ALk39-af" width="220" height="129" alt="" typeof="Image" class="image-style-medium" />
+
+
+</div>
+<p><span><strong>Nov 25, 2020</strong></span></br>5th Colloquium of Hon&#039;ble Member of NCLT on Companies</p>
+</span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content"><div class="event-img">  <img src="/sites/default/files/styles/medium/public/latestnewsandevent/event2.png?itok=2eqGeJVt" width="220" height="129" alt="" typeof="Image" class="image-style-medium" />
+
+
+</div>
+<p><span><strong>Nov 25, 2020</strong></span></br>5th Colloquium of Hon&#039;ble Member of NCLT on Companies</p>
+</span></div></li>
+    
+  </ul>
+
+</div>
+
+    </div>
+  
+      
+          </div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+					<div class="read-more mt-4 mb-4"><a href="/event-detail">Read More <i class="fas fa-arrow-right"></i></a></div>
+					</div>
+					
+				<div class="col-12 col-sm-12 col-md-4 col-lg-4 latest-sec">
+				  <div class="tabarea whatsnew">
+					 <ul class="nav nav-tabs" id="myTab" role="tablist">
+							<!--li class="nav-item">
+								<a class="nav-link active" id="news-tab" data-toggle="tab" href="#news" role="tab" aria-controls="news" aria-selected="true">Latest News</a>
+							</li-->
+							<li class="nav-item">
+								<a class="nav-link active" id="judgment-tab" data-toggle="tab" href="#judgment" role="tab" aria-controls="judgment" aria-selected="true">Latest Judgements</a>
+							</li>
+						</ul>
+						<div class="tab-content" id="myTabContent">
+							<!--div class="tab-pane fade show active" id="news" role="tabpanel" aria-labelledby="news-tab">
+								  <div class="region region-latest-news">
+    <div class="views-element-container block block-views block-views-blockphoto-gallery-block-4" id="block-views-block-photo-gallery-block-4">
+  
+    
+      <div class="content">
+      <div><div class="view view-photo-gallery view-id-photo_gallery view-display-id-block_4 js-view-dom-id-a2087b8283ddbdc4745461693f785e557f9e3ad6118be228c33c564b68aaa255">
+  
+    
+      
+      <div class="view-content">
+      <div class="myTicker">
+  
+  <ul>
+
+          <li><div class="views-field views-field-nothing"><span class="field-content">	
+
+  <div class="news-img">  <img src="/sites/default/files/styles/large/public/latestnewsandevent/news-img1_1.png?itok=vgsdk6fL" width="75" height="67" alt="" typeof="Image" class="image-style-large" />
+
+
+ </div><a href="/disposal-data">Details of Cases disposed under IBC &amp; Companies Act</a><span></span>
+
+
+
+</span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content">	
+
+ <div class="news-img">  <img src="/sites/default/files/styles/large/public/latestnewsandevent/news-img1_0.png?itok=JCm1wG88" width="75" height="67" alt="" typeof="Image" class="image-style-large" />
+
+
+ </div><a href="/sites/default/files/2021-10/LRA%20Advertisement.pdf">LRA Advertisement</a><span>October 13, 2021</span>
+
+
+</span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content">	
+
+<div class="news-img">  <img src="/sites/default/files/styles/large/public/latestnewsandevent/news-img1.png?itok=ELPAow9T" width="75" height="67" alt="" typeof="Image" class="image-style-large" />
+
+
+ </div>NCLT Bengaluru Bench Permits A Resolution Applicant To Withdraw The Resolution Plan<span>February 20, 2020</span>
+
+
+</span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content">	
+
+<div class="news-img">  <img src="/sites/default/files/styles/large/public/latestnewsandevent/news-img3_0.png?itok=lR9QAHXS" width="75" height="67" alt="" typeof="Image" class="image-style-large" />
+
+
+ </div>NCLT Bengaluru Bench Permits A Resolution Applicant To Withdraw The Resolution Plan<span>September 20, 2020</span>
+
+
+</span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content">	
+
+<div class="news-img">  <img src="/sites/default/files/styles/large/public/latestnewsandevent/news-img3.png?itok=x7uvriBF" width="75" height="67" alt="" typeof="Image" class="image-style-large" />
+
+
+ </div>NCLT expected to witness surge in insolvency and bankruptcy cases<span></span>
+
+
+</span></div></li>
+    
+  </ul>
+
+</div>
+
+    </div>
+  
+      
+          </div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+								<div class="read-more mt-4 mb-4"><a href="/latest-news">View All <i class="fas fa-arrow-right"></i></a></div>
+							</div-->
+							
+							<div class="tab-pane fade show active" id="judgment" role="tabpanel" aria-labelledby="judgment-tab">
+								
+							</div>
+						</div>
+			          </div>
+			        </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="photogallery-section">
+	<div class="container">
+		<div class="row m-0">
+			<div class="col-12 col-sm-12 col-md-4 col-lg-4 quick-sec">
+				<div class="tender-heading-sec mb-3">
+				<span class="tender-heading">Quick Links</span></div>
+				  <div class="region region-quick-links">
+    
+<nav role="navigation" aria-labelledby="block-quicklinks-menu" id="block-quicklinks" class="block block-menu navigation menu--quick-links">
+            
+  <h2 class="visually-hidden" id="block-quicklinks-menu">Quick Links</h2>
+  
+
+        <div class="content">
+            <div class="menu-toggle-target menu-toggle-target-show" id="show-block-quicklinks"></div>
+      <div class="menu-toggle-target" id="hide-block-quicklinks"></div>
+      <a class="menu-toggle" href="#show-block-quicklinks">Show &mdash; Quick Links</a>
+      <a class="menu-toggle menu-toggle--hide" href="#hide-block-quicklinks">Hide &mdash; Quick Links</a>
+      
+              <ul class="clearfix menu">
+                    <li class="menu-item">
+        <a href="https://efiling.nclt.gov.in/casehistorybeforeloginmenutrue.drt" target="_blank">Case History</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/judge-roster-current" data-drupal-link-system-path="judge-roster-current">Judge Rosters</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://nclt.gov.in/dBWeb/" target="_blank">Display Board</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://efiling.nclt.gov.in/mainPage.drt" target="_blank">E-filling</a>
+              </li>
+                <li class="menu-item">
+        <a href="/act-rule" data-drupal-link-system-path="act-rule">Acts &amp; Rules</a>
+              </li>
+                <li class="menu-item">
+        <a href="/list-of-objection-list" data-drupal-link-system-path="list-of-objection-list">List of Common Objections</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://evisitors.nic.in/NVIP/PublicSite/CandidateLogin.aspx">Online eVisitor                (Permanent Entry Pass Form)</a>
+              </li>
+        </ul>
+  
+
+
+    </div>
+  </nav>
+
+  </div>
+
+			</div>
+			
+			
+			<div class="col-12 col-sm-12 col-md-8 col-lg-8 gallery-sec">
+						  <div class="region region-photo-gallery">
+    <div class="views-element-container block block-views block-views-blockphotos-gallery-block-1" id="block-views-block-photos-gallery-block-1">
+  
+    
+      <div class="content">
+      <div><div class="view view-photos-gallery view-id-photos_gallery view-display-id-block_1 js-view-dom-id-d6261af805dd86627bfef810f5e755c2dcc905197147b5a360fb0fdd97104b96">
+  
+    
+      <div class="view-header">
+      <div class="tender-heading-sec mb-3">
+						<span class="tender-heading">Photo Gallery</span>
+						<div class="read-more "><strong>
+						<a href="/photos-gallery">View All <i class="fas fa-arrow-right"></i></a></strong></div>
+					</div>
+<style>
+<!--/*--><![CDATA[/* ><!--*/
+
+p.phot-block {
+    background: #ececec;
+    height: 120px !important;
+    display: flex;
+    justify-content: center;
+    padding: 5px 10px;
+    font-size: 14px;}
+	
+.phot-block a{color: #00438b;}
+.phot-block a:hover{color: #0056b3;}
+
+/*--><!]]>*/
+</style>
+    </div>
+      
+      <div class="view-content">
+        <div class="skin-default">
+    
+    <div id="views_slideshow_cycle_main_photos_gallery-block_1" class="views_slideshow_cycle_main views_slideshow_main">
+    <div id="views_slideshow_cycle_teaser_section_photos_gallery-block_1"  class="views_slideshow_cycle_teaser_section">
+     <div id="views_slideshow_cycle_div_photos_gallery-block_1_0"  class="views_slideshow_cycle_slide views_slideshow_slide views-row-1 views-row-odd">
+      <div  class="views-row views-row-0 views-row-odd views-row-first">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="photo-gallery-card">
+<p>  <img src="/sites/default/files/styles/photo_gallery_view/public/2024-05/DSC05498.jpg?itok=XxRfZplz" width="330" height="290" alt="" typeof="Image" class="image-style-photo-gallery-view" />
+
+
+</p>
+<p class="phot-block"><strong><a href="/taxonomy/term/129" target="_blank">NCLT Colloqium, Bhubaneswar- March 2024</a></strong></p>
+    
+    </div>
+</span></div>
+</div>
+
+      <div  class="views-row views-row-0 views-row-odd views-row-first">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="photo-gallery-card">
+<p>  <img src="/sites/default/files/styles/photo_gallery_view/public/2024-05/0113_0.jpg?itok=ssD1p3fs" width="330" height="290" alt="" typeof="Image" class="image-style-photo-gallery-view" />
+
+
+</p>
+<p class="phot-block"><strong><a href="/taxonomy/term/130" target="_blank">NCLT Colloqium, Chennai - November 2023</a></strong></p>
+    
+    </div>
+</span></div>
+</div>
+
+  </div>
+
+     <div id="views_slideshow_cycle_div_photos_gallery-block_1_1"  class="views_slideshow_cycle_slide views_slideshow_slide views-row-2 views_slideshow_cycle_hidden views-row-even">
+      <div  class="views-row views-row-1 views-row-even">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="photo-gallery-card">
+<p>  <img src="/sites/default/files/styles/photo_gallery_view/public/2024-05/9_PIC_0207.jpg?itok=o00dnNe9" width="330" height="290" alt="" typeof="Image" class="image-style-photo-gallery-view" />
+
+
+</p>
+<p class="phot-block"><strong><a href="/taxonomy/term/131" target="_blank">Sixth Annual Day,IBBI</a></strong></p>
+    
+    </div>
+</span></div>
+</div>
+
+      <div  class="views-row views-row-1 views-row-even">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="photo-gallery-card">
+<p>  <img src="/sites/default/files/styles/photo_gallery_view/public/2024-05/3_1.jpg?itok=j1QaCsC4" width="330" height="290" alt="" typeof="Image" class="image-style-photo-gallery-view" />
+
+
+</p>
+<p class="phot-block"><strong><a href="/taxonomy/term/132" target="_blank">8th International Day of Yoga (IDY) was observed on 21st June 2022 at NCLT, Principal Bench &amp; New Delhi Benches</a></strong></p>
+    
+    </div>
+</span></div>
+</div>
+
+  </div>
+
+     <div id="views_slideshow_cycle_div_photos_gallery-block_1_2"  class="views_slideshow_cycle_slide views_slideshow_slide views-row-3 views_slideshow_cycle_hidden views-row-odd">
+      <div  class="views-row views-row-2 views-row-odd">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="photo-gallery-card">
+<p>  <img src="/sites/default/files/styles/photo_gallery_view/public/2024-05/_NKJ0469_2.jpg?itok=2Lcqd8z9" width="330" height="290" alt="" typeof="Image" class="image-style-photo-gallery-view" />
+
+
+</p>
+<p class="phot-block"><strong><a href="/taxonomy/term/133" target="_blank">NCLT Colloqium March&#039;22</a></strong></p>
+    
+    </div>
+</span></div>
+</div>
+
+      <div  class="views-row views-row-2 views-row-odd">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="photo-gallery-card">
+<p>  <img src="/sites/default/files/styles/photo_gallery_view/public/2024-05/WhatsApp%20Image%202024-01-10%20at%2010.35.10.jpeg?itok=tnMAlMLU" width="330" height="290" alt="" typeof="Image" class="image-style-photo-gallery-view" />
+
+
+</p>
+<p class="phot-block"><strong><a href="/taxonomy/term/134" target="_blank">Others</a></strong></p>
+    
+    </div>
+</span></div>
+</div>
+
+  </div>
+
+     <div id="views_slideshow_cycle_div_photos_gallery-block_1_3"  class="views_slideshow_cycle_slide views_slideshow_slide views-row-4 views_slideshow_cycle_hidden views-row-even">
+      <div  class="views-row views-row-3 views-row-even">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="photo-gallery-card">
+<p>  <img src="/sites/default/files/styles/photo_gallery_view/public/2024-07/WhatsApp%20Image%202024-07-23%20at%202.58.05%20PM.jpg?itok=pGptGHeW" width="330" height="290" alt="" typeof="Image" class="image-style-photo-gallery-view" />
+
+
+</p>
+<p class="phot-block"><strong><a href="/taxonomy/term/135" target="_blank">Yoga Day celebration 2024 at National Company Law Tribunal</a></strong></p>
+    
+    </div>
+</span></div>
+</div>
+
+      <div  class="views-row views-row-3 views-row-even">
+  <div class="views-field views-field-nothing"><span class="field-content"><div class="photo-gallery-card">
+<p>  <img src="/sites/default/files/styles/photo_gallery_view/public/2024-07/1.jpeg?itok=oVxIgGr_" width="330" height="290" alt="" typeof="Image" class="image-style-photo-gallery-view" />
+
+
+</p>
+<p class="phot-block"><strong><a href="/taxonomy/term/136" target="_blank">A New Chapter:- Court and Case Management - Organisation Transformation. (Work done during Summer vacation i.e. 18.06.2024 to 29.06.2024)</a></strong></p>
+    
+    </div>
+</span></div>
+</div>
+
+  </div>
+
+  </div>
+
+</div>
+
+
+        </div>
+
+    </div>
+  
+      
+          </div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+ 
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer-top-slider">
+	  <div class="region region-footer-first">
+    <div id="block-topfooterslider" class="block block-block-content block-block-content6a1498c6-8d80-48e4-9b23-65b65ed1254d">
+  
+    
+      <div class="content">
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="container">
+<ul class="owl-carousel otherlink-slider"><li><a href="nclt-calender"><img alt=" images" src="themes/nclt/images/impo-link1.png" /><span>NCLT Calendar</span></a></li>
+	<!--<li><a href="coming-soon"><img alt=" images" src="themes/nclt/images/impo-link2.png" /><span>Publication</span></a></li>-->
+	<li><a href="/sites/default/files/2025-11/doc01328920251125175013.pdf" target="_blank"><img alt=" images" src="themes/nclt/images/impo-link3.png" /><span>E-Citizen</span></a></li>
+	<li><a href="https://efiling.nclt.gov.in/mainPage.drt"><img alt=" images" src="themes/nclt/images/impo-link4.png" /><span>E-Filing</span></a></li>
+	<!--<li><a href="coming-soon"><img alt=" images" src="themes/nclt/images/impo-link5.png" /><span>Download Forms</span></a></li>
+<!--<li><a href="coming-soon"><img alt=" images" src="themes/nclt/images/impo-link6.png" /><span>In media</span></a></li>
+<li><a href="coming-soon"><img alt=" images" src="themes/nclt/images/impo-link7.png" /><span>Useful Link</span></a></li>-->
+	<li><a href="rti"><img alt=" images" src="themes/nclt/images/impo-link8.png" /><span>Right to Information</span></a></li>
+	<li><a href="general"><img alt=" images" src="themes/nclt/images/impo-link2.png" /><span>General</span></a></li>
+</ul></div>
+</div>
+      
+    </div>
+  </div>
+
+  </div>
+
+</div>
+
+<!-- footer logo section -->
+<footer>
+	<div class="footer-bottom-slider">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div id="footer-bottom-slider" class="owl-carousel owl-theme">
+					
+					   <a href="https://india.gov.in/" title="MCA" target="_blank">
+					 <img class="indi-img" src="/sites/default/files/basicpage/bottom-logo1.png">
+						</a>
+						<a href="https://www.mca.gov.in/content/mca/global/en/home.html" title="MCA" target="_blank">
+							<img src="/themes/nclt/images/weblink1.png">
+						</a>
+						<!-- <a href="https://nclat.nic.in/" title="NCLAT" target="_blank">
+							<img src="/themes/nclt/images/weblink2.png">
+						</a> -->
+						<a href="https://www.ibbi.gov.in/" title="IBBI" target="_blank">
+							<img src="/themes/nclt/images/weblink3.png">
+						</a>
+						<a href="https://egazette.gov.in/(S(o34a1yzriusi3vqdrabkf3g2))/default.aspx" title="egazette" target="_blank">
+							<img src="/sites/default/files/basicpage/eGazette2.png" alt="egazette">
+						</a>
+						<!-- <a href="https://swachhbharat.mygov.in/" title="Swachh Bharat" target="_blank">
+							<img src="/themes/nclt/images/weblink4.png">
+						</a>
+						<a href="https://nsdcindia.org/" title="NSDC" target="_blank">
+							<img src="/themes/nclt/images/weblink5.png">
+						</a>
+						<a href="https://www.digitalindia.gov.in/" title="Digital India" target="_blank">
+							<img src="/themes/nclt/images/weblink6.png">
+						</a> -->
+						 <a href="https://india.gov.in/" title="MCA" target="_blank">
+					 <img class="indi-img" src="/sites/default/files/basicpage/bottom-logo1.png">
+						</a>
+						<a href="https://www.mca.gov.in/content/mca/global/en/home.html" title="MCA" target="_blank">
+							<img src="/themes/nclt/images/weblink1.png">
+						</a>
+						<a href="https://www.ibbi.gov.in/" title="IBBI" target="_blank">
+							<img src="/themes/nclt/images/weblink3.png">
+						</a>
+						<a href="https://egazette.gov.in/(S(o34a1yzriusi3vqdrabkf3g2))/default.aspx" title="egazette" target="_blank">
+							<img src="/sites/default/files/basicpage/eGazette2.png" alt="egazette">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom-sec" >
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-9 col-lg-9 copyright-sec">
+					<div class="footer-nav-sec">
+						  <div class="region region-footer-fifth">
+    
+<nav role="navigation" aria-labelledby="block-nclt-footer-menu" id="block-nclt-footer" class="block block-menu navigation menu--footer">
+            
+  <h2 class="visually-hidden" id="block-nclt-footer-menu">Footer menu</h2>
+  
+
+        <div class="content">
+            <div class="menu-toggle-target menu-toggle-target-show" id="show-block-nclt-footer"></div>
+      <div class="menu-toggle-target" id="hide-block-nclt-footer"></div>
+      <a class="menu-toggle" href="#show-block-nclt-footer">Show &mdash; Footer menu</a>
+      <a class="menu-toggle menu-toggle--hide" href="#hide-block-nclt-footer">Hide &mdash; Footer menu</a>
+      
+              <ul class="clearfix menu">
+                    <li class="menu-item">
+        <a href="/contact-us-list" data-drupal-link-system-path="contact-us-list">Contact Us</a>
+              </li>
+                <li class="menu-item">
+        <a href="/feedback" data-drupal-link-system-path="webform/feedback">Feedback</a>
+              </li>
+                <li class="menu-item">
+        <a href="/copyright-policy" data-drupal-link-system-path="node/137">Copyright Policy</a>
+              </li>
+                <li class="menu-item">
+        <a href="/help" data-drupal-link-system-path="node/138">Help</a>
+              </li>
+                <li class="menu-item">
+        <a href="/hyper-linking-policy" data-drupal-link-system-path="node/135">Hyperlinking Policy</a>
+              </li>
+                <li class="menu-item">
+        <a href="/privacy-policy" data-drupal-link-system-path="node/136">Privacy Policy</a>
+              </li>
+                <li class="menu-item">
+        <a href="/terms-conditions" data-drupal-link-system-path="node/134">Terms &amp; Conditions</a>
+              </li>
+        </ul>
+  
+
+
+    </div>
+  </nav>
+<div id="block-nclt-powered" class="block block-system block-system-powered-by-block">
+  
+    
+      <div class="content">
+      <span>Powered by <a href="https://www.drupal.org">Drupal</a></span>
+    </div>
+  </div>
+
+  </div>
+
+					</div>
+					<p>Copyright © 2026. All Rights Reserved by National Company Law Tribunal, India.</p>
+				</div>
+				
+				<div class="col-12 col-sm-12 col-md-3 col-lg-3 visitor-sec">
+				<div class="mt-1 mb-2 text-right"><p>Page last updated on: 05/04/2026</p></div>
+				
+			</div>
+			<!-- 	<div class="col-12 col-sm-12 col-md-4 col-lg-4 visitor-sec">
+					<div class="mt-1 mb-2 text-right">Connect With Us</div>
+					<div class="text-right social-media"><a href="#"><span class="mdi mdi-facebook"></span></a><a href="#"><span class="mdi mdi-linkedin"></span></a><a href="#"><span class="mdi mdi-twitter"></span></a><a href="#"><span class="mdi mdi-google-plus"></span></a></div>
+			</div> -->
+			</div>
+		</div>
+	</div>
+</footer>
+<style>
+img.indi-img {height: 75px;}
+</style>
+<!-- footer logo section -->
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"viewsSlideshowCycle":{"#views_slideshow_cycle_main_photos_gallery-block_1":{"num_divs":4,"id_prefix":"#views_slideshow_cycle_main_","div_prefix":"#views_slideshow_cycle_div_","vss_id":"photos_gallery-block_1","effect":"scrollLeft","transition_advanced":0,"timeout":5000,"speed":700,"delay":0,"sync":1,"random":0,"pause":1,"pause_on_click":0,"action_advanced":1,"start_paused":0,"remember_slide":0,"remember_slide_days":1,"pause_in_middle":0,"pause_when_hidden":0,"pause_when_hidden_type":"full","amount_allowed_visible":"","nowrap":0,"fixed_height":1,"items_per_slide":2,"items_per_slide_first":0,"items_per_slide_first_number":1,"wait_for_image_load":1,"wait_for_image_load_timeout":3000,"cleartype":0,"cleartypenobg":0,"advanced_options":"{}","advanced_options_choices":0,"advanced_options_entry":""},"#views_slideshow_cycle_main_home_banner_view-block_1":{"num_divs":16,"id_prefix":"#views_slideshow_cycle_main_","div_prefix":"#views_slideshow_cycle_div_","vss_id":"home_banner_view-block_1","effect":"scrollLeft","transition_advanced":1,"timeout":5000,"speed":700,"delay":0,"sync":1,"random":0,"pause":1,"pause_on_click":0,"action_advanced":0,"start_paused":0,"remember_slide":0,"remember_slide_days":1,"pause_in_middle":0,"pause_when_hidden":0,"pause_when_hidden_type":"full","amount_allowed_visible":"","nowrap":0,"fixed_height":1,"items_per_slide":1,"items_per_slide_first":0,"items_per_slide_first_number":1,"wait_for_image_load":1,"wait_for_image_load_timeout":3000,"cleartype":0,"cleartypenobg":0,"advanced_options":"{}","advanced_options_choices":0,"advanced_options_entry":""}},"viewsSlideshow":{"photos_gallery-block_1":{"methods":{"goToSlide":["viewsSlideshowSlideCounter","viewsSlideshowPager","viewsSlideshowCycle"],"nextSlide":["viewsSlideshowSlideCounter","viewsSlideshowPager","viewsSlideshowCycle"],"pause":["viewsSlideshowControls","viewsSlideshowCycle"],"play":["viewsSlideshowControls","viewsSlideshowCycle"],"previousSlide":["viewsSlideshowSlideCounter","viewsSlideshowPager","viewsSlideshowCycle"],"transitionBegin":["viewsSlideshowSlideCounter","viewsSlideshowPager"],"transitionEnd":[]},"paused":0},"home_banner_view-block_1":{"methods":{"goToSlide":["viewsSlideshowSlideCounter","viewsSlideshowPager","viewsSlideshowCycle"],"nextSlide":["viewsSlideshowSlideCounter","viewsSlideshowPager","viewsSlideshowCycle"],"pause":["viewsSlideshowControls","viewsSlideshowCycle"],"play":["viewsSlideshowControls","viewsSlideshowCycle"],"previousSlide":["viewsSlideshowSlideCounter","viewsSlideshowPager","viewsSlideshowCycle"],"transitionBegin":["viewsSlideshowSlideCounter","viewsSlideshowPager"],"transitionEnd":[]},"paused":0}},"viewsSlideshowPagerFields":{"home_banner_view-block_1":{"bottom":{"activatePauseOnHover":null}}},"viewsSlideshowPager":{"home_banner_view-block_1":{"bottom":{"type":"viewsSlideshowPagerBullets"}}},"viewsSlideshowControls":{"home_banner_view-block_1":{"bottom":{"type":"viewsSlideshowControlsText"}}},"nice_menus_options":{"delay":800,"speed":"slow"},"ajaxTrustedUrl":{"\/search\/node":true},"user":{"uid":0,"permissionsHash":"6b6d0c21ffcc7f4851f2c557add38074f53e03a262b019b448cbadba0acd112e"}}</script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=3.5.1"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=8.9.14"></script>
+<script src="/core/misc/drupal.js?v=8.9.14"></script>
+<script src="/core/misc/drupal.init.js?v=8.9.14"></script>
+<script src="/themes/nclt/js/jquery.min.js?v=1.x"></script>
+<script src="/themes/nclt/js/jquery-ui.js?v=1.x"></script>
+<script src="/themes/nclt/js/popper.min.js?v=1.x"></script>
+<script src="/themes/nclt/js/jquery.easy-ticker.min.js?v=1.x"></script>
+<script src="/themes/nclt/js/bootstrap.js?v=1.x"></script>
+<script src="/themes/nclt/js/owl.carousel.min.js?v=1.x"></script>
+<script src="/themes/nclt/js/custom.js?v=1.x"></script>
+<script src="/libraries/json2/json2.js?v=2"></script>
+<script src="/libraries/jquery.cycle/jquery.cycle.all.js?v=3.0.3"></script>
+<script src="/modules/views_slideshow/modules/views_slideshow_cycle/js/views_slideshow_cycle.js?tcefp9"></script>
+<script src="/libraries/jquery.hoverIntent/jquery.hoverIntent.js?v=1.9"></script>
+<script src="/modules/views_slideshow/js/views_slideshow.js?v=8.9.14"></script>
+<script src="/modules/nice_menus/libraries/js/jquery.hoverIntent.js?v=1.8.0"></script>
+<script src="/modules/nice_menus/libraries/js/superfish.js?v=1.7.9"></script>
+<script src="/modules/nice_menus/libraries/js/nice_menus.js?v=1"></script>
+
+  </body>
+</html>

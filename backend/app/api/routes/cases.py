@@ -2,6 +2,7 @@ from datetime import date
 from typing import Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query
+from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 from app.core.cache import get_or_set_json, get_or_set_json_meta, invalidate_for_event
@@ -25,7 +26,7 @@ from app.analytics.survival.dataset import compute_duration_and_event
 from app.analytics.survival.km import KaplanMeierResult
 from app.analytics.survival.prediction import case_survival_prediction
 from app.moderation.renderer import render_public_text
-from app.models import Case, Hearing, SurvivalCurve
+from app.models import Adjournment, Case, CourtAnalyticalSnapshot, Hearing, SurvivalCurve
 from app.provenance.conflict import find_field_conflicts
 from app.provenance.queries import get_entity_provenance, get_primary_for_field
 from app.schemas.common import CaseOut, HearingOut
@@ -85,6 +86,54 @@ def _serialize_case(case: Case, db: Session) -> dict:
     payload["last_activity_date"] = case.last_activity_date
     payload["dormancy_last_updated"] = case.dormancy_last_updated
     return payload
+
+
+def _compute_adjournment_rates_for_cases(db: Session, case_ids: list[int]) -> dict[int, float]:
+    if not case_ids:
+        return {}
+
+    hearing_counts = {
+        int(case_id): int(total)
+        for case_id, total in (
+            db.query(Hearing.case_id, func.count(Hearing.id))
+            .filter(Hearing.case_id.in_(case_ids), Hearing.is_deleted.is_(False))
+            .group_by(Hearing.case_id)
+            .all()
+        )
+    }
+    adjournment_counts = {
+        int(case_id): int(total)
+        for case_id, total in (
+            db.query(Adjournment.case_id, func.count(Adjournment.id))
+            .filter(
+                Adjournment.case_id.in_(case_ids),
+                Adjournment.is_deleted.is_(False),
+                Adjournment.is_adjournment.is_(True),
+            )
+            .group_by(Adjournment.case_id)
+            .all()
+        )
+    }
+
+    rates: dict[int, float] = {}
+    for case_id in case_ids:
+        hearings = hearing_counts.get(case_id, 0)
+        if hearings <= 0:
+            rates[case_id] = 0.0
+            continue
+        rates[case_id] = float(adjournment_counts.get(case_id, 0)) / float(hearings)
+    return rates
+
+
+def _get_snapshot_map(db: Session, court_ids: list[int]) -> dict[int, CourtAnalyticalSnapshot]:
+    if not court_ids:
+        return {}
+    snapshots = (
+        db.query(CourtAnalyticalSnapshot)
+        .filter(CourtAnalyticalSnapshot.court_id.in_(court_ids))
+        .all()
+    )
+    return {snapshot.court_id: snapshot for snapshot in snapshots}
 
 
 def _compute_case_dormancy(case: Case, db: Session) -> dict:
@@ -212,8 +261,33 @@ def list_cases(
         query = apply_case_filters(query, filters)
         items, total = paginate(query, page, page_size)
 
+        case_ids = [item.id for item in items]
+        court_ids = sorted({item.court_id for item in items if item.court_id is not None})
+        adjournment_rate_map = _compute_adjournment_rates_for_cases(db, case_ids)
+        snapshot_map = _get_snapshot_map(db, court_ids)
+
+        serialized_items: list[dict] = []
+        for item in items:
+            payload = _serialize_case(item, db)
+            case_adjournment_rate = float(adjournment_rate_map.get(item.id, 0.0))
+            snapshot = snapshot_map.get(item.court_id)
+
+            if snapshot is None:
+                payload["adjournment_rate"] = case_adjournment_rate
+                payload["is_court_adjournment_anomaly"] = False
+                payload["court_anomaly_snapshot_missing"] = True
+            else:
+                threshold = snapshot.mean_adjournment_rate + (2.0 * snapshot.std_dev_adjournment_rate)
+                payload["adjournment_rate"] = case_adjournment_rate
+                payload["is_court_adjournment_anomaly"] = case_adjournment_rate > threshold
+                payload["court_anomaly_snapshot_missing"] = False
+                payload["court_adjournment_anomaly_threshold"] = threshold
+                payload["court_analytical_snapshot_calculated_at"] = snapshot.calculated_at
+
+            serialized_items.append(payload)
+
         return {
-            "items": [_serialize_case(item, db) for item in items],
+            "items": serialized_items,
             "total": total,
             "page": page,
             "page_size": page_size,

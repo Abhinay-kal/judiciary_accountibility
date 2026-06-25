@@ -12,10 +12,27 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
-  redis:
+  redis-broker:
     image: redis:7-alpine
     ports:
       - "6379:6379"
+    command: ["redis-server", "--maxmemory-policy", "noeviction"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  redis-cache:
+    image: redis:7-alpine
+    ports:
+      - "6380:6380"
+    command: ["redis-server", "--port", "6380", "--maxmemory", "256mb", "--maxmemory-policy", "allkeys-lru"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "-p", "6380", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
 
   backend:
     build:
@@ -23,8 +40,12 @@ services:
     env_file:
       - .env
     depends_on:
-      - db
-      - redis
+      db:
+        condition: service_started
+      redis-broker:
+        condition: service_healthy
+      redis-cache:
+        condition: service_healthy
     ports:
       - "8000:8000"
     volumes:
@@ -37,9 +58,14 @@ services:
       - .env
     command: celery -A app.celery_app.celery_app worker --loglevel=INFO
     depends_on:
-      - backend
-      - redis
-      - db
+      backend:
+        condition: service_started
+      db:
+        condition: service_started
+      redis-broker:
+        condition: service_healthy
+      redis-cache:
+        condition: service_healthy
     volumes:
       - ./backend:/app
 
@@ -50,8 +76,12 @@ services:
       - .env
     command: celery -A app.celery_app.celery_app beat --loglevel=INFO
     depends_on:
-      - worker
-      - redis
+      worker:
+        condition: service_started
+      redis-broker:
+        condition: service_healthy
+      redis-cache:
+        condition: service_healthy
     volumes:
       - ./backend:/app
 

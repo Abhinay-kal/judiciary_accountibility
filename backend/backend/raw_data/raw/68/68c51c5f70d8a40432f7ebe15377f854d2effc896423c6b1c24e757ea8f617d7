@@ -1,0 +1,1702 @@
+  <html lang="en">
+<head>
+    <title>Rajasthan High Court</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	
+	<meta http-equiv="Content-Security-Policy" >
+	<meta name="robots" content="nofollow">      
+	<meta http-equiv="cache-control" content="max-age=0" />
+	
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="pragma" content="no-cache">        
+	<meta http-equiv="cache-control" content="private" />
+	<meta http-equiv="cache-control" content="pre-check=0" />
+	<meta http-equiv="cache-control" content="post-check=0" />
+	<meta http-equiv="cache-control" content="must-revalidate" />
+	<meta http-equiv="content-language" content="en">
+	<meta name="robots" content="DISALLOW">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8; X-Content-Type-Options=nosniff" />
+	<meta http-equiv="content-script-type" content="text/javascript">
+	<meta http-equiv="content-language" content="en">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8; X-Content-Type-Options=nosniff" />
+	<meta http-equiv="content-script-type" content="text/javascript">
+	<meta name="description" content="Rajasthan High Court" />
+	<meta name="keywords" content="Rajasthan High Court" />
+	
+	<!-- core CSS -->
+    <link href="css/nit.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main9.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">     
+    <link rel="shortcut icon" href="images/ico/logo.png">
+    <link rel="stylesheet" href="css/tstyle7.css">
+    <link rel="stylesheet" href="css/ttheme7.css">
+    <link rel="stylesheet" href="css/vegas.min.css">
+    <link rel="stylesheet" type="text/css" href="css/carouselTicker.css" media="screen">
+	<link rel="stylesheet" href="css/loader.css" type="text/css">
+	<link rel="stylesheet" href="css/custom.css" type="text/css">
+	<!--- for blinking-text------>
+	  <style>
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .blinking-text {
+           
+            color: red;
+            animation: blink 1s infinite; 
+        }
+    </style><!--- end----->	  
+	<style>
+		.mysli{
+			list-style: none;
+		}
+		.dropdown-menu-s .mysli>a{
+			    display: block;
+			    padding: 3px 20px;
+			    clear: both;
+			    font-weight: normal;
+			    line-height: 1.428571429;
+			    color: #333;
+			    /*white-space: nowrap;*/
+		}
+		.dropdown-menu-s .mysli>a:hover {
+		    background: #000!important;
+		    color: #fff!important;
+		}
+		.dropdown-menu-s .mysli>a:hover, .dropdown-menu-s .mysli>a:focus {
+		    color: #262626;
+		    text-decoration: none;
+		    background-color: none;
+		}
+		.dropdown-menu-s{
+			position: absolute;
+		    top: -330.2%;
+		    left: 3.3%;
+		    z-index: 1000;
+		    display: none;
+		    float: left;
+		    min-width: 93.3%;
+		    padding: 5px 0;
+		    margin: 2px 0 0;
+		    font-size: 14px;
+		    list-style: none;
+		    background-color: #f1f1f1;
+		    border: 1px solid #f1f1f1;
+		    border: 1px solid #f1f1f1;
+		    
+		    background-clip: padding-box;
+
+		}
+		.subselect{
+			padding: 4px;
+			opacity: 1;
+			background: #f1f1f1;
+		}
+		.subselect>h4{
+			color:#000!important;
+		}
+		.vegas-timer.vegas-timer-running {
+		    display: none;
+		}
+		.domains-slider{width:100%;clear:both;overflow:hidden;padding:4px 10px;box-sizing:border-box;height:34px;border-top: 1px solid #CBCBCB;border-bottom: 1px solid #CBCBCB;}.domains-slider ul{list-style:none;margin:0;padding:0;overflow:hidden;height:25px}.domains-slider ul li{display:inline-block;padding:0 7px;/*border-right:1px solid #dae1e2*/}.domains-slider ul li a{color: #CBCBCB;font-family: geneva;text-transform: capitalize;font-size:12px;padding:5px 8px;line-height:14px;text-decoration:none;transition:all .18s ease-in-out;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;text-transform:uppercase;display:inline-block}	
+		.js-marquee-wrapper {
+			transform: translate(-800px, 0%);
+		}
+		.modal-body {
+			padding-bottom: 0;
+		}
+		/* css for reportable judgements starts here */
+		.box{
+		  margin: 15px auto;
+		  /*width: 300px;*/
+		  /*width: 98%;*/
+		  height: 50px;
+		  position: fixed;
+		  cursor: pointer;
+		  /*top: 50%;*/
+		}
+
+		.container-2{
+		  /*width: 300px;*/
+		  vertical-align: middle;
+		  white-space: nowrap;
+		  position: relative;
+		}
+
+		.container-2 #search{
+		  width: 48px;
+		  height: 253px;
+		  background: #2b303b;
+		  border: none;
+		  font-size: 10pt;
+		  float: left;
+		  color: #262626;
+		  padding-left: 47px;
+		  -webkit-border-radius: 5px;
+		  -moz-border-radius: 5px;
+		  border-radius: 5px;
+		  color: #fff;
+		 
+		  -webkit-transition: width .55s ease;
+		  -moz-transition: width .55s ease;
+		  -ms-transition: width .55s ease;
+		  -o-transition: width .55s ease;
+		  transition: width .55s ease;
+		}
+
+		.container-2 #search::-webkit-input-placeholder {
+		   color: #65737e;
+		}
+		 
+		.container-2 #search:-moz-placeholder { /* Firefox 18- */
+		   color: #65737e;  
+		}
+		 
+		.container-2 #search::-moz-placeholder {  /* Firefox 19+ */
+		   color: #65737e;  
+		}
+		 
+		.container-2 #search:-ms-input-placeholder {  
+		   color: #65737e;  
+		}
+
+		.container-2 .icon{
+		  position: absolute;
+		  top: 50%;
+		  margin-left: 8px;
+		  margin-top: 11px;
+		  z-index: 1;
+		  /*color: #4f5b66;*/
+		  color: #ffffff52;
+		  font-size: 16px;
+    	  font-weight: bold;
+		}
+
+		
+		#search td{
+			color:#93a2ad;
+			cursor: pointer;
+		}
+		/*.container-2:hover .myrepjudtbl{
+			display: block;
+			padding: 2%;
+		}*/
+		 
+		.container-2:hover .icon{
+		  color: #93a2ad;
+		}
+		#bottom{
+			margin-top: 3px;
+		}
+		.nav-tabs>li.active>a:after{
+			display:none;
+		}
+		.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+		    color: #fff;
+		    cursor: default;
+		    background-color: #000;
+		    border: 1px solid #ddd;
+		    border-bottom-color: transparent;
+		}
+		.nav-tabs>li>a {
+		    margin-right: 2px;
+		    line-height: 1.428571429;
+		    border: 1px solid transparent;
+		    border-radius: 4px 4px 0 0;
+		}
+		.myrepjudtbl td {
+			font-size: 12px;
+		}
+		.myrepjudtbl {
+			margin-bottom: 0px;
+		}
+		.contrastTheme {
+			width:15px;
+			/* height:25px; */
+			background:#000;
+			border:1px solid #fff;
+			border-radius:50%;
+			color:#fff;
+			text-align:center;
+			line-height:20px;
+		}
+		.defaultTheme {
+			width: 15px;
+			/* height: 25px; */
+			background: #fff;
+			border: 1px solid #000;
+			border-radius: 50%;
+			color: #000;
+			text-align: center;
+			line-height: 20px;
+		}
+
+		/* css for reportable judgements ends here */
+	</style>
+</head>
+<body ondragstart="return false"  class="homepage mypagebody " id="boxscroll" style="overflow: auto;">
+	<div class="loading" id="loading" style="display: none;z-index: 999999;"><img src="img/loader.svg" style="margin-left: -74px;" alt="Loading Content" /></div>
+	
+	<div class="pre-header mybodyhov" style="/*background: #f1f1f1;*/">
+	<div class="row" style="margin-right: 0px;margin-left: 0px;">
+		<!-- BEGIN TOP BAR LEFT PART -->
+		<div class="col-md-6 col-sm-4 col-xs-6" style="padding: 5px;">
+			<div class="col-md-1 col-sm-2" style="text-align: right;">
+				<a class="site-logo" href="index.php" style="float:none;text-decoration: none;">
+					<img src="img/logo.png" alt="Rajasthan High Court"  height="50px" style="z-index: 10; opacity: 1;">
+				</a>
+			</div>
+			<div class="col-md-6 col-sm-10">
+				<a class="site-logo" href="" style="float:none;text-decoration: none;padding: 1px;">
+					<b class="fontdiv3_1" style="color:#000; font-family:verdana;font-size: 20px;" id="">Rajasthan High Court</b><br/>
+					<b class="fontdiv3_2" style="color:#000; font-family:verdana;font-size: 16px;" id="">(राजस्थान उच्च न्यायालय)</b>
+				</a>
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-4" style="text-align: left;padding: 1px;">
+			<img src="img/logo12102023.png" alt="Rajasthan High Court" width="13%" style="z-index: 10; opacity: 1;">
+		</div>	
+		<div class="col-md-2 col-sm-4 col-xs-6 myheadbtnhdr" style="background: #000;opacity: 0.6;border-bottom-left-radius: 56px;padding-right: 7px;padding-left: 0px;height: 32px;">
+			<div class="myheadbtn" style="padding: 3px;float: right;/*margin-left: 127px;*/">
+				<button id="btndecfont" >A-</button>
+				<button style="padding-left: 10px;padding-right: 10px;" id="btnresetfont">A</button>
+				<button id="btnincfont" >A+</button>
+				<button class="whitelink" id="Defaultcontrast" title="Default contrast" ><div class="defaultTheme">A</div></button>
+				<button class="blacklink1" id="Highcontrast" title="High contrast" ><div class="contrastTheme">A</div></button>
+							
+			</div>
+			<div id="todayDateTime" style="color:#000000; font-weight:600; opacity:1 !important; float:right;">
+				Sunday April 05, 2026			</div>
+		</div>
+	</div>
+</div>
+	<style>
+	.navbar-nav {
+		margin-top: 7px;
+	}
+	.navbar {
+		background: #000;
+		opacity: 0.6;
+		z-index: 9999;
+	}
+	.navbar:hover {
+		opacity: 1;
+	   
+	}
+	.navbar-nav>li 
+	{
+		 padding-bottom: 5px; 
+	}
+	.navbar-toggle
+	{
+			margin-right: 29px;
+	}
+	.navbar-inverse .navbar-nav .dropdown-menu
+	{
+		background-color: #fff;
+		margin-top: -9%;
+	}
+	.dropdown-submenu {
+		position: relative;
+	}
+
+	.dropdown-submenu {
+		position: relative;
+	}
+
+	.dropdown-submenu>.dropdown-menu {
+		top: 0;
+		left: 100%;
+		margin-top: -6px;
+		margin-left: -1px;
+		-webkit-border-radius: 0 6px 6px 6px;
+		-moz-border-radius: 0 6px 6px;
+		border-radius: 0 6px 6px 6px;
+	}
+
+	.dropdown-submenu:hover>.dropdown-menu {
+		display: block;
+		left: 100%;
+		margin-top: 0px;
+	}
+
+	.dropdown-submenu>a:after {
+		display: block;
+		content: " ";
+		float: right;
+		width: 0;
+		height: 0;
+		border-color: transparent;
+		border-style: solid;
+		border-width: 5px 0 5px 5px;
+		border-left-color: #ccc;
+		margin-top: 5px;
+		margin-right: -10px;
+	}
+
+	.dropdown-submenu:hover>a:after {
+		border-left-color: #fff;
+	}
+
+	.dropdown-submenu.pull-left {
+		float: none;
+	}
+
+	.dropdown-submenu.pull-left>.dropdown-menu {
+		left: -100%;
+		margin-left: 10px;
+		-webkit-border-radius: 6px 0 6px 6px;
+		-moz-border-radius: 6px 0 6px 6px;
+		border-radius: 6px 0 6px 6px;
+	}
+	.dropdownmainmenu:hover>.dropdown-menu {
+		display: block;
+		
+	}
+	.myheadbtn button {
+		border: 1px solid #000;
+		border-radius: 3px;
+		color: #000;
+		display: inline-block;
+		font-size: 12px;
+		font-weight: bold;
+		background: #fff !important;
+		opacity: 1 !important;
+	}
+	.dropdown-menu>li>a:hover{
+		background: #000!important;
+		color: #fff!important;
+	}
+	.pre-header{
+		/*margin-top: -22px;*/
+	}
+</style>
+<div class="header mybodyhov" >
+  	<nav class="navbar navbar-inverse" role="banner" style="padding: 0px;">
+		<div class="container" style="padding-right: 0px;padding-left: 0px;margin-right: unset;margin-left: unset; width:100%;">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse navbar-left" style="max-height: 444px;">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index.php">Home</a></li>
+					<li class="dropdownmainmenu">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu&nbsp;<i class="fa fa-angle-down"></i></a>
+						<ul class="dropdown-menu multi-level fontdiv">
+							<li><a href="history.php" style="color: #000;">History</a></li>
+							
+							<li><a href="registrars.php"  style="color: #000;">Registrar General</a></li>
+							<li><a href="adminsetup.php"  style="color: #000;">Administrative Setup</a></li>
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">Administrative Orders</a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="standing-order.php" style="color: #000;white-space: unset;">Standing Orders</a></li>
+									<li><a href="pi-order.php" style="color: #000;white-space: unset;">PI Orders</a></li>
+									<li><a href="transfer-posting-order.php" style="color: #000;white-space: unset;">Transfer/Postings</a></li>
+									<li><a href="govt-order.php" style="color: #000;white-space: unset;">Govt. Orders/Rules</a></li>
+									<li><a href="misc-order.php"  style="color: #000;white-space: unset;">Misc. Orders</a></li>
+									<li><a href="circulated-judgements.php"  style="color: #000;white-space: unset;">Circulated Judgments-References</a></li>
+								</ul>
+							</li>
+							<li><a href="rules.php">Rules</a></li>
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">Publications</a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="courtnews.php"  style="color: #000;white-space: unset;">Newsletter</a></li>
+									<li><a href="Allfiles/AnnualReport2022.pdf" rel = "noopener noreferrer" target="_blank" style="color: #000;white-space: unset;">Rajasthan High Court Annual Report 2022 <i class="fa fa-file-pdf-o"></i></a></li>
+									<li><a href="Allfiles/AnnualReport2021.pdf" rel = "noopener noreferrer" target="_blank" style="color: #000;white-space: unset;">Rajasthan High Court Annual Report 2021 <i class="fa fa-file-pdf-o"></i></a></li>
+									<li><a href="Allfiles/AnnualReport2020.pdf" rel = "noopener noreferrer" target="_blank" style="color: #000;white-space: unset;">Rajasthan High Court Annual Report 2020 <i class="fa fa-file-pdf-o"></i></a></li>
+									<li><a href="latestupdates/ANNUALREPORT2019.pdf" rel = "noopener noreferrer" target="_blank" style="color: #000;white-space: unset;">Rajasthan High Court Annual Report 2019 <i class="fa fa-file-pdf-o"></i></a></li>
+									<li><a href="latestupdates/ANNUALREPORT2018.pdf" rel = "noopener noreferrer" target="_blank" style="color: #000;white-space: unset;">Rajasthan High Court Annual Report 2018 <i class="fa fa-file-pdf-o"></i></a></li>
+									<li><a href="latestupdates/ANNUAL REPORT 2017.pdf" rel = "noopener noreferrer" target="_blank" style="color: #000;white-space: unset;">Rajasthan High Court Annual Report 2017 <i class="fa fa-file-pdf-o"></i></a></li>
+									<li><a href="Allfiles/Annualreport2016.pdf" rel = "noopener noreferrer" target="_blank" style="color: #000;white-space: unset;">Rajasthan High Court Annual Report 2016 <i class="fa fa-file-pdf-o"></i></a></li>
+									<li><a href="Allfiles/Raj_High_Court_Handbook2015.pdf" rel = "noopener noreferrer" target="_blank" style="color: #000;white-space: unset;">Rajasthan High Court Handbook 2015 <i class="fa fa-file-pdf-o"></i></a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">Articles/References Speeches</a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="paperspeech.php" style="color: #000;white-space: unset;">Articles & Speeches </a></li>
+									<li><a href="reference.php" style="color: #000;white-space: unset;">Reference Speeches </a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">Photo Gallery</a>
+								<ul class="dropdown-menu fontdiv">
+									<!--<li><a href="rjs2015.php" style="color: #000;white-space: unset;">RJS Induction Training 2015</a></li>
+									<li><a href="photographs.php"  style="color: #000;white-space: unset;">West Zone Regional Conference 2015</a></li>
+									<li><a href="women_empowermnet.php"  style="color: #000;white-space: unset;">Conference on Women Empowerment</a></li>-->
+									<li><a href="platinum-jubilee-videos.php" style="color: #000;white-space: unset;">Platinum Jubilee Celebration of Rajasthan High Court</a></li>
+									<li><a href="creche-photos.php"  style="color: #000;white-space: unset;">Creche Facility in Rajasthan High Court Bench Jaipur</a></li>
+									<li><a href="newbuildingphotos.php"  style="color: #000;white-space: unset;">New High Court Building</a></li>
+									<li><a href="ecourtsphotos.php"  style="color: #000;white-space: unset;">E-Court Events</a></li>
+									<li><a href="vcphotos.php"  style="color: #000;white-space: unset;">Video Conferencing</a></li>
+									<!--<li><a href="websiteold.php"  style="color: #000;white-space: unset;">Website</a></li>-->
+									<li><a href="inauguStckHold.php"  style="color: #000;white-space: unset;">E-Stamp Facility</a></li>
+									<li><a href="inauguCenterlzdFil.php"  style="color: #000;white-space: unset;">Centralized Filing</a></li>
+									<li><a href="valedictory-ceremony.php"  style="color: #000;white-space: unset;">Valedictory Ceremony</a></li>
+									<li><a href="workshop-speedy-civil-cases.php"  style="color: #000;white-space: unset;">Workshop on Speedy & Qualitative Disposal of Civil Cases</a></li>
+									<li><a href="workshop-local-laws.php"  style="color: #000;white-space: unset;">Workshop on Local Laws</a></li>
+									<li><a href="spdy-qual-disp-session-cases.php"  style="color: #000;white-space: unset;">Speedy & Qualitative Disposal of Session Cases</a></li>
+									<li><a href="training-trainee-civil-judges.php"  style="color: #000;white-space: unset;">Training to Trainee Civil Judges Batch 2017</a></li>
+									<li><a href="impevents.php"  style="color: #000;white-space: unset;">Other Major Events</a></li>
+								</ul>
+							</li>
+							
+							<li><a href="http://164.100.222.238/lms/" style="color: #000;">Leave Management System</a></li>
+							
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">Judl. Officers' Leave Orders</a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="leave.php"  style="color: #000;white-space: unset;">Sanctioned Leave Orders</a></li>
+									<li><a href="leaver.php" style="color: #000;white-space: unset;">Rejected Leave Orders</a></li>
+									<li><a href="leaveccl.php" style="color: #000;white-space: unset;">Child Care Leave Orders</a></li>
+								</ul>
+							</li>
+							<li><a href="latestNews.php">News & Events</a></li>
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">Downloads</a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="mobile.php" style="color: #000;white-space: unset;">Mobile Apps</a></li>
+									
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">Calendar</a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="img/HC_Cal_2026_revised.pdf" target="_blank" style="color: #000;" >High Court 2026</a></li>
+									<li><a href="img/CC_Cal_2026.pdf" target="_blank" style="color: #000;" >Civil Court 2026</a></li>
+									<li><a href="img/HC_Cal_2025.pdf" target="_blank" style="color: #000;" >High Court 2025</a></li>
+									<li><a href="img/CC_Cal_2025.pdf" target="_blank" style="color: #000;" >Civil Court 2025</a></li>
+									<li><a href="img/HC_Cal_2024.pdf" target="_blank" style="color: #000;" >High Court 2024</a></li>
+									<li><a href="img/DC_Cal_2024.pdf" target="_blank" style="color: #000;" >Civil Court 2024</a></li>
+									<li><a href="img/HC_Cal_2023.pdf" target="_blank" style="color: #000;" >High Court 2023</a></li>
+									<li><a href="img/DC_Cal_2023.pdf" target="_blank" style="color: #000;" >Civil Court 2023</a></li>
+									<li><a href="img/HC_Cal_2022.pdf" target="_blank" style="color: #000;" >High Court 2022</a></li>
+									<li><a href="img/CC_Cal_2022.pdf" target="_blank" style="color: #000;" >Civil Court 2022</a></li>
+									
+								</ul>
+							</li>
+							
+						</ul>
+					</li>
+					<li class="dropdownmainmenu">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Cause List&nbsp;<i class="fa fa-angle-down"></i></a>
+						<ul class="dropdown-menu fontdiv">
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">Jodhpur</a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="https://hcraj.nic.in/quick-causelist-jdp/" target="_blank" style="color: #000;white-space: unset;">Quick Download</a></li>
+									
+									<li><a href="https://hcraj.nic.in/cishcraj-jdp/causelists/" target="_blank" style="color: #000;white-space: unset;">High Court Server</a></li>
+									<!--<li><a href="https://services.ecourts.gov.in/ecourtindiaHC/cases/highcourt_causelist.php?state_cd=9&dist_cd=1&court_code=2&stateNm=Rajasthan" target="_blank" style="color: #000;white-space: unset;">e-Courts Server</a></li>-->
+									<li><a href="https://hcservices.ecourts.gov.in/ecourtindiaHC/cases/highcourt_causelist.php?state_cd=9&dist_cd=1&court_code=2&stateNm=Rajasthan" target="_blank" style="color: #000;white-space: unset;">e-Courts Server</a></li>
+								</ul>
+							</li>
+							
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">Jaipur</a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="https://hcraj.nic.in/quick-causelist-jp/" target="_blank" style="color: #000;white-space: unset;">Quick Download</a></li>
+									
+									<li><a href="https://hcraj.nic.in/cishcraj-jp/causelists/" target="_blank" style="color: #000;white-space: unset;">High Court Server</a></li>
+									<!--<li><a href="Causelist/supplementary_22072021_c1_jaipur82.pdf" target="_blank" style="color: #000;white-space: unset;">Second Supplementary List 22.07.2021 Court No. 1</a></li>-->
+									<li><a href="https://hcservices.ecourts.gov.in/ecourtindiaHC/cases/highcourt_causelist.php?state_cd=9&dist_cd=1&court_code=1&stateNm=Rajasthan" target="_blank" style="color: #000;white-space: unset;">e-Courts Server</a></li>
+								</ul>
+							</li>
+							
+													 	<!--<li><a href="lokadalat.php" style="color: #000;" rel = "noopener noreferrer" target="_blank">Lok Adalat and Mediation</a></li>-->
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">Mediation Centre</a>
+								<ul class="dropdown-menu fontdiv">
+									<!--li><a href="https://rlsa.rajasthan.gov.in/causelistjodhpur.html" target="_blank" style="color: #000;white-space: unset;">Jodhpur</a></li-->
+									<!--li><a href="https://rlsa.rajasthan.gov.in/causelist.html" target="_blank" style="color: #000;white-space: unset;">Jaipur</a></li-->
+									<li><a href="https://rajasthan.nalsa.gov.in/cause-list-mediation-centre-jodhpur/" target="_blank" style="color: #000;white-space: unset;">Jodhpur</a></li>
+									<li><a href="https://rajasthan.nalsa.gov.in/cause-list-mediation-centre-jaipur/" target="_blank" style="color: #000;white-space: unset;">Jaipur</a></li>
+								</ul>
+							</li>
+							<!--<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;"></a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="https://rlsa.rajasthan.gov.in/NLACauselistJodhpur.html" target="_blank" style="color: #000;white-space: unset;">Jodhpur</a></li>
+									<li><a href="https://rlsa.rajasthan.gov.in/NLACauselist.html" target="_blank" style="color: #000;white-space: unset;">Jaipur</a></li>
+								</ul>
+							</li> -->
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">National Lok Adalat</a>
+								<ul class="dropdown-menu fontdiv">
+									<!--li><a href="https://rlsa.rajasthan.gov.in/NLACauselistJodhpur.html" target="_blank" style="color: #000;white-space: unset;">Jodhpur</a></li>
+									<li><a href="https://rlsa.rajasthan.gov.in/NLACauselist.html" target="_blank" style="color: #000;white-space: unset;">Jaipur</a></li-->
+									<li><a href="https://rajasthan.nalsa.gov.in/cause-list-national-lok-adalat-jodhpur/" target="_blank" style="color: #000;white-space: unset;">Jodhpur</a></li>
+									<li><a href="https://rajasthan.nalsa.gov.in/cause-list-national-lok-adalat-jaipur/" target="_blank" style="color: #000;white-space: unset;">Jaipur</a></li>
+									
+								</ul>
+							</li>
+							<!--<li><a href="Causelist/daily_RHC_Jodhpur_19052023.html" rel = "noopener noreferrer" target="_blank" style="color: #000;">RHCJodhpurDaily190523</a></li>
+							<li><a href="Causelist/supplementary_RHC_Jodhpur_19052023.html" rel = "noopener noreferrer" target="_blank" style="color: #000;">RHCJodhpurSuppl190523</a></li>-->
+						</ul>
+					</li>
+					<li class="dropdownmainmenu">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Case Status&nbsp;<i class="fa fa-angle-down"></i></a>
+						<ul class="dropdown-menu fontdiv">
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">Jodhpur</a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="https://hcraj.nic.in/cishcraj-jdp/" target="_blank" style="color: #000;white-space: unset;">High Court Server</a></li>
+									<li><a href="https://hcservices.ecourts.gov.in/ecourtindiaHC/index_highcourt.php?state_cd=9&dist_cd=1&court_code=2&stateNm=Rajasthan" target="_blank" style="color: #000;white-space: unset;">e-Courts Server</a></li>
+								</ul>
+							</li>
+							
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">Jaipur</a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="https://hcraj.nic.in/cishcraj-jp/" target="_blank" style="color: #000;white-space: unset;">High Court Server</a></li>
+									<li><a href="https://hcservices.ecourts.gov.in/ecourtindiaHC/index_highcourt.php?state_cd=9&dist_cd=1&stateNm=Rajasthan" target="_blank" style="color: #000;white-space: unset;">e-Courts Server</a></li>
+								</ul>
+							</li>
+							
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">Filing/Defect Status</a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="https://hcraj.nic.in/cishcraj-jdp/defects/" target="_blank" style="color: #000;white-space: unset;">Jodhpur</a></li>
+									<li><a href="https://hcraj.nic.in/cishcraj-jp/defects/" target="_blank" style="color: #000;white-space: unset;">Jaipur</a></li>
+									<li><a href="defects.php" style="color: #000;white-space: unset;">Common Defects</a></li>
+								</ul>
+							</li>
+							
+							<li><a href="https://services.ecourts.gov.in/ecourtindia_v6/" rel = "noopener noreferrer" target="_blank" style="color: #000;">District Court</a></li>
+							<!--<li><a href="http://courtnic.nic.in/" rel = "noopener noreferrer" target="_blank" style="color: #000;">Others</a></li>-->
+						</ul>
+					</li>
+<li class="dropdownmainmenu">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Live List Advocate Wise&nbsp;<i class="fa fa-angle-down"></i></a>&nbsp;<img src="img/new2.gif" style="width: 30px;padding: 0px 0px 2px;">
+                                                <ul class="dropdown-menu fontdiv">
+                                                        <li><a href="https://hcraj.nic.in/quickadvjodhpur/index.php" rel = "noopener noreferrer" target="_blank" style="color: #000;" >Jodhpur</a></li>
+                                                        <li><a href="https://hcraj.nic.in/quickadvocate/index.php" rel = "noopener noreferrer" target="_blank" style="color: #000;">Jaipur</a></li>
+                                                </ul>
+                                        </li>
+
+
+
+					<li class="dropdownmainmenu">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Judgments&nbsp;<i class="fa fa-angle-down"></i></a>
+						<ul class="dropdown-menu fontdiv">
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">Jodhpur</a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="https://hcraj.nic.in/cishcraj-jdp/JudgementFilters/" target="_blank" style="color: #000;white-space: unset;">High Court Server</a></li>
+									<li><a href="https://hcraj.nic.in/cishcraj-jdp/fts" target="_blank" style="color: #000;white-space: unset;">Free Text Search</a></li>
+									<li><a href="https://hcservices.ecourts.gov.in/ecourtindiaHC/index_highcourt.php?state_cd=9&dist_cd=1&court_code=2&stateNm=Rajasthan" target="_blank" style="color: #000;white-space: unset;">e-Courts Server</a></li>
+								</ul>
+							</li>
+							
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">Jaipur</a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="https://hcraj.nic.in/cishcraj-jp/JudgementFilters/" target="_blank" style="color: #000;white-space: unset;">High Court Server</a></li>
+									<li><a href="https://hcraj.nic.in/cishcraj-jp/fts" target="_blank" style="color: #000;white-space: unset;">Free Text Search</a></li>
+									<li><a href="https://hcservices.ecourts.gov.in/ecourtindiaHC/index_highcourt.php?state_cd=9&dist_cd=1&stateNm=Rajasthan" target="_blank" style="color: #000;white-space: unset;">e-Courts Server</a></li>
+								</ul>
+							</li>
+							
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">Vernacular Judgments</a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="translated_jud_sci.php" target="_blank" style="color: #000;white-space: unset;">Supreme Court of India</a></li>
+									<li><a href="translated_jud_rhc.php" target="_blank" style="color: #000;white-space: unset;">Jodhpur</a></li>
+									<li><a href="translated_jud_rhcb.php" target="_blank" style="color: #000;white-space: unset;">Jaipur</a></li>
+								</ul>
+							</li>
+							
+							<li><a href="https://services.ecourts.gov.in/ecourtindia_v6/" rel = "noopener noreferrer" target="_blank" style="color: #000;">District Court</a></li>
+							<!--<li><a href="http://judis.nic.in/" rel = "noopener noreferrer" target="_blank" style="color: #000;">Others</a></li>-->
+							
+							
+						</ul>
+					</li>
+					<!--li class="dropdownmainmenu">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Certified Copy&nbsp;<i class="fa fa-angle-down"></i></a>
+						<ul class="dropdown-menu fontdiv">
+							<li><a href="https://hcraj.nic.in/ciscopying-status-jdp/index.php" rel = "noopener noreferrer" target="_blank" style="color: #000;" >Jodhpur</a></li>
+							<li><a href="https://hcraj.nic.in/ciscopying-status/index.php" rel = "noopener noreferrer" target="_blank" style="color: #000;">Jaipur</a></li>
+						</ul>
+					</li-->
+					<li class="dropdownmainmenu">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">e-True Copy&nbsp;<i class="fa fa-angle-down"></i> <img src="img/new2.gif" style="width: 30px;padding: 0px 0px 2px;"></a>
+						<ul class="dropdown-menu fontdiv">
+							<li><a href="https://hcraj.nic.in/sso/" rel="noopener noreferrer" target="_blank" style="color: #000;">Apply</a></li>
+							<li><a href="https://hcraj.nic.in/e_true_copy/udrn_verify" rel="noopener noreferrer" target="_blank" style="color: #000;">Authenticate</a></li>
+
+							<li class="dropdown-submenu">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">Old Application Status</a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="https://hcraj.nic.in/ciscopying-status-jdp/index.php" rel = "noopener noreferrer" target="_blank" style="color: #000;" >Jodhpur</a></li>
+									<li><a href="https://hcraj.nic.in/ciscopying-status/index.php" rel = "noopener noreferrer" target="_blank" style="color: #000;">Jaipur</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					
+					
+
+<!-- <li class="dropdownmainmenu">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Live List Advocate Wise&nbsp;<i class="fa fa-angle-down"></i></a>&nbsp;<img src="img/new2.gif" style="width: 30px;padding: 0px 0px 2px;">
+                                                <ul class="dropdown-menu fontdiv">
+                                                        <li><a href="https://hcraj.nic.in/quickadvjodhpur/index.php" rel = "noopener noreferrer" target="_blank" style="color: #000;" >Jodhpur</a></li>
+                                                        <li><a href="https://hcraj.nic.in/quickadvocate/index.php" rel = "noopener noreferrer" target="_blank" style="color: #000;">Jaipur</a></li>
+                                                </ul>
+                                        </li> -->
+
+
+
+					<!--li class="dropdownmainmenu">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Calendar&nbsp;<i class="fa fa-angle-down"></i></a>
+						<ul class="dropdown-menu fontdiv">
+							<li><a href="img/HC_Cal_2024.pdf" target="_blank" style="color: #000;" >High Court 2024</a></li>
+							<li><a href="img/DC_Cal_2024.pdf" target="_blank" style="color: #000;" >Civil Court 2024</a></li>
+							<li><a href="img/HC_Cal_2023.pdf" target="_blank" style="color: #000;" >High Court 2023</a></li>
+							<li><a href="img/DC_Cal_2023.pdf" target="_blank" style="color: #000;" >Civil Court 2023</a></li>
+							<li><a href="img/HC_Cal_2022.pdf" target="_blank" style="color: #000;" >High Court 2022</a></li>
+							<li><a href="img/CC_Cal_2022.pdf" target="_blank" style="color: #000;" >Civil Court 2022</a></li>
+							<!--<li><a href="hccal2021.php" style="color: #000;" >High Court 2021</a></li>
+							<li><a href="cccal2021.php" style="color: #000;" >Civil Court 2021</a></li>
+							<!--<li><a href="hccal2020.php" style="color: #000;" >High Court 2020</a></li>
+							<li><a href="cccal2020.php" style="color: #000;" >Civil Court 2020</a></li>-->
+							<!--<li><a href="hccal2019.php" style="color: #000;" >High Court 2019</a></li>
+							<li><a href="cccal2019.php" style="color: #000;" >Civil Court 2019</a></li>
+							<li><a href="hccal2018.php" style="color: #000;" >High Court 2018</a></li>
+							<li><a href="cccal2018.php" style="color: #000;" >Civil Court 2018</a></li>-->
+						<!--/ul>
+					<!--/li-->
+					<li><a href="latestUpdate.php">Latest Updates</a></li>
+					<li class="dropdownmainmenu">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Archive&nbsp;<i class="fa fa-angle-down"></i></a>
+						<ul class="dropdown-menu fontdiv">
+							<li><a href="latestUpdate_archive.php">Latest Updates</a></li>
+							<li><a href="calendar.php"  style="color: #000;">Calendar</a></li>
+							<li><a href="roster.php"  style="color: #000;">Roster</a></li>
+							<li><a href="tender_archive.php"  style="color: #000;">Procurement</a></li>
+						</ul>
+					</li>
+					
+					<!--<li><a href="https://hcraj.nic.in/mentioning/" target="_blank">Urgent Listing</a></li>-->
+					
+					<li class="dropdownmainmenu">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">e-Services&nbsp;<i class="fa fa-angle-down"></i></a>
+						<ul class="dropdown-menu fontdiv">
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">e-Filing</a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="https://filing.ecourts.gov.in/pdedev/" target="_blank" style="color: #000;white-space: unset;">e-Filing Portal</a></li>
+									<li><a href="efiling.php" style="color: #000;white-space: unset;">Notification & Guidelines</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">e-Pay</a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="https://pay.ecourts.gov.in/" target="_blank" style="color: #000;white-space: unset;">e-Pay Portal</a></li>
+									<li><a href="Allfiles/eCourtFeesBilingual.pdf" target="_blank" style="color: #000;white-space: unset;">User Manual for Court Fees</a></li>
+									<li><a href="Allfiles/eFineBilingual.pdf" target="_blank" style="color: #000;white-space: unset;">User Manual for Fine</a></li>
+								</ul>
+							</li>
+							<!--<li><a href="egatepass.php" rel="noopener noreferrer" target="_blank" style="color: #000;">e-Pass and Upload Vaccination Certificate</a></li>-->
+							<li><a href="https://hcraj.nic.in/sso/" rel="noopener noreferrer" target="_blank" style="color: #000;">e-Gate Pass <img src="img/new2.gif" style="width: 30px;padding: 0px 0px 2px;"></a></li>
+							<li><a href="urgent_mentioning.php" rel="noopener noreferrer" target="_blank" style="color: #000;">Urgent Listing</a></li>
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">Advocate Details</a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="https://hcraj.nic.in/eservices/get-adv-detail-jdp.php" target="_blank" style="color: #000;white-space: unset;">Jodhpur</a></li>
+									<li><a href="https://hcraj.nic.in/eservices/get-adv-detail-jp.php" target="_blank" style="color: #000;white-space: unset;">Jaipur</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">e-Directory</a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="https://hcraj.nic.in/hcraj/directory/index.php" target="_blank" style="color: #000;white-space: unset;">e-Directory</a></li>
+									<li><a href="https://hcraj.nic.in/hcraj/directory/birthday.php" target="_blank" style="color: #000;white-space: unset;">Birthday Wishes</a></li>
+									<li><a href="https://hcraj.nic.in/hcraj/directory/joinedtoday.php" target="_blank" style="color: #000;white-space: unset;">Joined Today</a></li>
+									<li><a href="https://hcraj.nic.in/hcraj/directory/superannuation.php" target="_blank" style="color: #000;white-space: unset;">Superannuation</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">e-Library</a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="library_jodhpur.php" style="color: #000;white-space: unset;">Jodhpur</a></li>
+									<li><a href="library_jaipur.php" style="color: #000;white-space: unset;">Jaipur</a></li>
+								</ul>
+							</li>
+							<li><a href="http://164.100.222.238/intrahc/" rel="noopener noreferrer" target="_blank" style="color: #000;">RHC e-Portal <img src="img/new2.gif" style="width: 30px;padding: 0px 0px 2px;"></a></li>
+							
+							<li class="dropdown-submenu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #000;">E-Courts Project</a>
+								<ul class="dropdown-menu fontdiv">
+									<li><a href="https://ecommitteesci.gov.in/" rel = "noopener noreferrer" target="_blank" style="color: #000;white-space: unset;">e-Committee, Supreme Court of India</a></li>
+									<li><a href="https://njdg.ecourts.gov.in/" rel = "noopener noreferrer" target="_blank" style="color: #000;white-space: unset;">NJDG</a></li>
+									<li><a href="Allfiles/action-plan-ecourt-phase-II.pdf" rel = "noopener noreferrer" target="_blank" style="color: #000;white-space: unset;">Action Plan for Phase-II</a></li>
+									<li><a href="site-preparation-guidelines.pdf" rel = "noopener noreferrer" target="_blank" style="color: #000;white-space: unset;">Site Preparation Instruction</a></li>
+									<li><a href="ecourtnews.php" rel = "noopener noreferrer" target="_blank" style="color: #000;white-space: unset;">eCommittee Newsletter</a></li>
+									<li><a href="Allfiles/vpnobb.pdf" rel = "noopener noreferrer" target="_blank" style="color: #000;white-space: unset;">Procedure to Configure VPNoBB</a></li>
+									<li><a href="Allfiles/F1-3-1997-21-01-2016.pdf" rel = "noopener noreferrer" target="_blank" style="color: #000;white-space: unset;">Printer Retention</a></li>
+									<li><a href="pdf/CIS%203.0%20final.pdf" rel = "noopener noreferrer" target="_blank"  style="color: #000;white-space: unset;">Case Management through CIS 3.0</a></li>
+									<li><a href="pdf/Management%20Manual%20Case%20Management%20through%20CIS.pdf" rel = "noopener noreferrer" target="_blank" style="color: #000;white-space: unset;">Management Manual</a></li>
+								</ul>
+							</li>
+							
+							<li><a href="eservices-help.php" rel="noopener noreferrer" target="_blank" style="color: #000;">e-Services Help Videos</a></li>
+						</ul>
+					</li>
+					<!--<li><a href="urgent_mentioning.php">Urgent Listing</a></li>-->
+					<li class="dropdownmainmenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Virtual Justice Clock</a><i class="fa fa-angle-down"></i>
+                                        <ul class="dropdown-menu fontdiv">
+                                                <li>
+
+                <table id='nitesh'>
+  <tr><th bgcolor='brown' colspan='4'>PENDENCY STATISTICS</th></tr>
+  <tr>
+    <th bgcolor='brown'>CASE TYPES</th>
+    <th bgcolor='brown'>RHC JODHPUR</th>
+    <th bgcolor='brown'>RHCB JAIPUR</th>
+    <th bgcolor='brown'>TOTAL</th>
+  </tr>
+  <tr><td bgcolor='red'>CIVIL CASES</td>
+    <td bgcolor='red'>66157</td>
+    <td bgcolor='brown'>98293</td>
+    <td bgcolor='blue'>164450</td></tr><td bgcolor='brown'>CRIMINAL CASES</td>
+    <td bgcolor='red'>70419</td>
+    <td bgcolor='brown'>116387</td>
+    <td bgcolor='blue'>186806</td></tr><td bgcolor='blue'>WRIT PETITIONS</td>
+    <td bgcolor='red'>155947</td>
+    <td bgcolor='brown'>175743</td>
+    <td bgcolor='blue'>331690</td></tr>
+    <tr><td bgcolor='black'colspan='4'>FOR MORE STATISTICS ON NJDG<br/> <a href='https://njdg.ecourts.gov.in/hcnjdgnew/?p=main/index&state_code=8~9' target='_BLANK'><font size='4'>CLICK HERE</font></a></td></tr>
+<tr><td bgcolor='black'colspan='4'>FOR DISTRICT COURT VIRTUAL CLOCK <a href='https://justiceclock.ecourts.gov.in/justiceClock/?p=home/state&fstate_code=9' target='_BLANK'><font size='4'>CLICK HERE</font></a></td></tr>
+<tr><td bgcolor='black'colspan='4'>E-COURT PROJECT PHASE III <br/><a href='ecourtphase3promotion.pdf' target='_BLANK'><font size='4'>CLICK HERE</font></a></td></tr>
+</table></li>
+</ul>
+</li>
+
+
+
+					<li><a href="https://hcraj.nic.in/commercial-court/">Commercial Courts</a></li>
+					<li><a href="https://hcraj.nic.in/elr-raj/">eLR-Raj Portal</a></li>
+					<li><a href="https://hcraj.nic.in/jjc/">JJC</a></li>
+					
+					<!--<li class="dropdownmainmenu">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Invitation-cum-entry Pass for Platinum Jubilee Celebration&nbsp;<i class="fa fa-angle-down"></i></a>&nbsp;<img src="img/new2.gif" style="width: 30px;padding: 0px 0px 2px;">
+						<ul class="dropdown-menu fontdiv">
+							<li><a href="Allfiles/Invitation_Platinum_Hindi.pdf" rel = "noopener noreferrer" target="_blank" style="color: #000;">Invitation</a></li>
+							<li><a href="/pj-epass/" rel = "noopener noreferrer" target="_blank" style="color: #000;">Invitation-cum-entry Pass Portal</a></li>
+						</ul>
+					</li>-->
+					
+					<!--<li><a href="latestNews.php">News & Events</a></li>
+					<!--<li><a href="https://hcraj.nic.in/sradvinfo" target="_blank" >Senior Advocate Details</a>
+					<img src="img/new2.gif" style="width: 30px;padding: 0px 0px 2px;"></li>-->
+				</ul>
+			</div>		
+		</div><!--/.container-->
+	</nav>
+</div>
+    
+	<input type="hidden" id="hiddenDatattribute"/>
+	
+	<div class="box" onclick="myrepjudmodal(this);">
+	  <div class="container-2">
+	  	  <div class="row">
+	  	  	<div class="col-md-6">
+	  	  		<div class="col-xs-1">
+	  	  			<span class="icon vertical-tex" style="writing-mode: vertical-rl;transform: rotate(180deg);">Recent Reportable Judgments</span>
+	  	  		</div>
+	  	  	</div>
+	  	  </div>
+	      <div class="searchform1" id="search" >
+	      	
+	      	<a href="" class="downloadFile" id="downloadFile" tabindex="-1" target="_blank" style="display: none;">Ignore</a>
+	      </div>
+	    <!--<form action="" class="searchform1" method="post">
+	      <input type="text" name="searchtxt1" class="searchtxt1" id="search" placeholder="Search on Site" onchange="MySearchTxt1(this);" />
+	      
+	      	<ul>
+	      		<li>1</li>
+	      		<li>1</li>
+	      		<li>1</li>
+	      	</ul>
+	      </form>-->
+	  </div>
+	</div>
+	
+	
+    <section id="feature" style="margin-bottom:0px;padding-top: 10px;/*background: #000;opacity: 0.8;*/margin-top: 348px;" >
+        <div class="container-fluid myfeaturecon">
+            <div class="row">
+            	<div class="col-lg-12">
+                <div class="features">
+                	<div class="row">
+						<div class="col-md-1"></div>		  
+                		<div class="col-md-2 col-sm-12 myjudhov1x mrgn-8 dropdown cust_pding">
+                			<a class="myjudhov" >
+                				<div class="feature-wrap celeste-services">
+									<i class="fa fa-gavel"></i>
+									<h4 class="fontdiv1" style="color: #fff;">Judges</h4>
+								</div>
+							</a>
+							<ul class="dropdown-menu-s" style="top: -400%;">
+								<li class="mysli"><a href="jphoto.php" style="color: #000;">The Chief Justice & Judges</a></li>
+								<li class="mysli"><a href="formercj.php" style="color: #000;">Former Chief Justices</a></li>
+								<li class="mysli"><a href="formerj.php" style="color: #000;">Former Judges</a></li>
+								<li class="mysli"><a href="photocj2sc.php" style="color: #000;">Chief Justices Elevated to Supreme Court</a></li>
+								<li class="mysli"><a href="photoj2sc.php" style="color: #000;">Judges Elevated to Supreme Court</a></li>
+								<li class="mysli"><a href="photocj2ohc.php" style="color: #000;">Judges Elevated as Chief Justices of Other High Courts</a></li>
+							</ul>
+	                    </div>
+	                    <div class="col-md-2 col-sm-12 myjudhov1x mrgn-8 dropdown cust_pding">
+	                        <a href="https://judgments.ecourts.gov.in/" rel="noopener noreferrer" target="_blank">
+								<div class="feature-wrap celeste-services">
+									<i class="fa fa-book"></i>
+									<h4 class="fontdiv1" style="color: #fff;">eSCR / Judgment Search</h4>
+								</div>
+							</a>
+	                    </div>
+						<div class="col-md-2 col-sm-12 myjudhov1x mrgn-8 dropdown cust_pding">
+	                        <a class="myjudhov"  >
+								<div class="feature-wrap celeste-services">
+									<i class="fa fa-etsy"></i>
+									<h4 class="fontdiv1" style="color: #fff;">Roster</h4>
+								</div>
+							</a>
+							<ul class="dropdown-menu-s" style="top: -126.2%;">
+								<li class="mysli"><a href="rosterJodhpur.php" rel = "noopener noreferrer" target="_blank" style="color: #000;">Jodhpur</a></li>
+								<li class="mysli"><a href="rosterJaipur.php" rel = "noopener noreferrer" target="_blank" style="color: #000;">Jaipur</a></li>
+							</ul>
+						</div>
+	                    <div class="col-md-2 col-sm-12 myjudhov1x mrgn-8 dropdown cust_pding">
+	                        <a  class="myjudhov"  >
+								<div class="feature-wrap celeste-services">
+									<i class="fa fa-address-card"></i>
+									<h4  class="fontdiv1" style="color: #fff;">Recruitment</h4>
+								</div>
+							</a>
+							<ul class="dropdown-menu-s" style="top: -126.2%;">
+								<li class="mysli"><a href="recruitment.php"  style="color: #000;">Recruitment</a></li>
+								<li class="mysli"><a href="oldpaperexam.php" style="color: #000;">Previous Year Exam Papers</a></li>
+								
+							</ul>
+	                    </div>
+						<div class="col-md-2 col-sm-12 myjudhov1x mrgn-8 dropdown cust_pding">
+	                        <a class="myjudhov"  >
+								<div class="feature-wrap celeste-services">
+									<i class="fa fa-file-text"></i>
+									<h4 class="fontdiv1 blinking-text" style="color: #e9ce0f;">Accessibility Committee</h4>
+								</div>
+							</a>
+							<ul class="dropdown-menu-s" style="top: -126.2%;">
+								<li class="mysli"><a href="accessibilityjdp.php" rel = "noopener noreferrer" style="color: #000;">Jodhpur</a></li>
+								<li class="mysli"><a href="accessibilityjp.php" rel = "noopener noreferrer" style="color: #000;">Jaipur</a></li>
+								<li class="mysli"><a href="accessibility/login_dist.php" rel = "noopener noreferrer" target="_blank" style="color: #000;">District</a></li>
+							</ul>
+	                    </div>
+						<div class="col-md-1"></div>
+					</div>
+						
+						
+						<div class="row">
+						<div class="col-md-1"></div>
+						<div class="col-md-2 col-sm-12 myjudhov1x mrgn-8 dropdown cust_pding">
+	                        <a class="myjudhov" >
+								<div class="feature-wrap celeste-services">
+									<i class="fa fa-search"></i>
+									<h4 class="fontdiv1" style="color: #fff;">Right to Information</h4>
+								</div>
+							</a>
+							<ul class="dropdown-menu-s" style="top: -64%;">
+								<li class="mysli"><a href="rti.php" target = "_blank" style="color: #000;">Right to Information</a></li>
+								<li class="mysli"><a href="https://hcraj.nic.in/erti/"  target = "_blank" style="color: #000;">Online RTI Portal</a></li>
+								
+							</ul>
+	                    </div>
+	                    <div class="col-md-2 col-sm-12 mrgn-8 dropdown cust_pding">
+	                        <a href="tender.php">
+								<div class="feature-wrap celeste-services">
+									<i class="fa fa-book"></i>
+									<h4 class="fontdiv1" style="color: #fff;">Procurement</h4>
+								</div>
+							</a>
+	                    </div>
+						<!--<div class="col-md-2 col-sm-12 myjudhov1x mrgn-8 dropdown cust_pding">
+	                        <a class="myjudhov"  >
+								<div class="feature-wrap celeste-services">
+									<i class="fa fa-columns"></i>
+									<h4 class="fontdiv1" style="color: #fff;">E-Courts Project</h4>
+								</div>
+							</a>
+							<ul class="dropdown-menu-s" style="top: -510%;">
+								<li class="mysli"><a href="https://ecommitteesci.gov.in/" rel = "noopener noreferrer" target="_blank" style="color: #000;">e-Committee, Supreme Court of India</a></li>
+								<li class="mysli"><a href="https://njdg.ecourts.gov.in/" rel = "noopener noreferrer" target="_blank" style="color: #000;">NJDG</a></li>
+								<li class="mysli"><a href="Allfiles/action-plan-ecourt-phase-II.pdf" rel = "noopener noreferrer" target="_blank" style="color: #000;">Action Plan for Phase-II</a></li>
+								<li class="mysli"><a href="site-preparation-guidelines.pdf" rel = "noopener noreferrer" target="_blank" style="color: #000;">Site Preparation Instruction</a></li>
+								<li class="mysli"><a href="ecourtnews.php" rel = "noopener noreferrer" target="_blank" style="color: #000;">eCommittee Newsletter</a></li>
+								<li class="mysli"><a href="Allfiles/vpnobb.pdf" rel = "noopener noreferrer" target="_blank" style="color: #000;">Procedure to Configure VPNoBB</a></li>
+								<li class="mysli"><a href="Allfiles/F1-3-1997-21-01-2016.pdf" rel = "noopener noreferrer" target="_blank" style="color: #000;">Printer Retention</a></li>
+								<li class="mysli"><a href="pdf/CIS%203.0%20final.pdf" rel = "noopener noreferrer" target="_blank"  style="color: #000;">Case Management through CIS 3.0</a></li>
+								<li class="mysli"><a href="pdf/Management%20Manual%20Case%20Management%20through%20CIS.pdf" rel = "noopener noreferrer" target="_blank" style="color: #000;">Management Manual</a></li>
+							</ul>
+	                    </div>-->
+						<!--<div class="col-md-3 col-sm-6 myjudhov1x mrgn-8">
+							<a class="myjudhov"  >
+								<div class="feature-wrap celeste-services">
+									<i class="fa fa-bank"></i>
+									<h4 class="fontdiv1" style="color: #fff;">E-Library</h4>
+								</div>
+							</a>
+							<ul class="dropdown-menu-s" style="top: -126.2%;">
+								<li class="mysli"><a href="library_jodhpur.php"  style="color: #000;">Jodhpur E-Library</a></li>
+								<li class="mysli"><a href="library_jaipur.php"  style="color: #000;">Jaipur E-Library</a></li>
+							</ul>
+						</div>-->
+	                    <div class="col-md-2 col-sm-12 myjudhov1x mrgn-8 dropdown cust_pding">
+	                        <a class="myjudhov"  >
+								<div class="feature-wrap celeste-services">
+									<i class="fa fa-desktop"></i>
+									<h4 class="fontdiv1" style="color: #fff;">Display Board</h4>
+								</div>
+							</a>
+							<ul class="dropdown-menu-s" style="top: -126.2%;">
+								<li class="mysli"><a href="https://hcraj.nic.in/displayboard/jodhpur.php" rel = "noopener noreferrer" target="_blank"  style="color: #000;">Jodhpur</a></li>
+								<li class="mysli"><a href="https://hcraj.nic.in/displayboard/jaipur.php" rel = "noopener noreferrer" target="_blank" style="color: #000;">Jaipur</a></li>
+							</ul>
+	                    </div>
+						<div class="col-md-2 col-sm-12 mrgn-8 dropdown cust_pding">
+	                        <a href="Allfiles/MPMLA_Cases_31122025.pdf" rel="noopener noreferrer" target="_blank" download>
+								<div class="feature-wrap celeste-services">
+									<i class="fa fa-file-pdf-o"></i>
+									<h4 class="fontdiv1" style="color: #fff;">MP/MLA Cases</h4>
+								</div>
+							</a>
+	                    </div>
+						<div class="col-md-2 col-sm-12 myjudhov1x mrgn-8 dropdown cust_pding">
+	                        <a class="myjudhov"  >
+								<div class="feature-wrap celeste-services">
+									<i class="fa fa-file-text"></i>
+									<h4 class="fontdiv1 blinking-text" style="color: #e9ce0f;">GSIC Committee</h4>
+								</div>
+							</a>
+							<ul class="dropdown-menu-s" style="top: -126.2%;">
+								<li class="mysli"><a href="gsicc_jodhpur.php" rel = "noopener noreferrer" style="color: #000;">Jodhpur</a></li>
+								<li class="mysli"><a href="gsicc_jaipur.php" rel = "noopener noreferrer" style="color: #000;">Jaipur</a></li>
+							</ul>
+	                    </div>
+						<div class="col-md-1"></div>										 
+					</div>
+                </div><!--/.services-->
+				</div>
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#feature-->
+
+	<section  style="padding: 2px 0;margin-top: -3%;opacity: 1;white-space: unset;background: #000;" class="mybodyhov">
+		<div class="domains-slider marquee">
+            <ul>
+				<!--<li><a rel = "noopener noreferrer" href="Allfiles/JitsiSOP.pdf" target="_blank"><span>1.</span> SOP for VC through Jitsi Meet App <i class="fa fa-file-pdf-o" style="color:red"></i> <img src="img/new2.gif" style="width: 30px;padding: 0px 0px 2px;"></a></li>
+				
+				<li><a rel = "noopener noreferrer" href="Allfiles/JitsiMeetManual.pdf" target="_blank"><span>2.</span> User Manual for VC through Jitsi Meet App <i class="fa fa-file-pdf-o" style="color:red"></i> <img src="img/new2.gif" style="width: 30px;padding: 0px 0px 2px;"></a></li>
+				
+				<li><a rel = "noopener noreferrer" href="Allfiles/HC_COVID_30052020.pdf" target="_blank"><span>3.</span> COVID-19 Notifications for Rajasthan High Court <i class="fa fa-file-pdf-o" style="color:red"></i> <img src="img/new2.gif" style="width: 30px;padding: 0px 0px 2px;"></a></li>
+				
+				<li><a rel = "noopener noreferrer" href="Allfiles/DC_COVID_30052020.pdf" target="_blank"><span>4.</span> COVID-19 Notifications for Subordinate Courts <i class="fa fa-file-pdf-o" style="color:red"></i> <img src="img/new2.gif" style="width: 30px;padding: 0px 0px 2px;"></a></li>
+				
+				<li><a rel = "noopener noreferrer"  style="cursor: pointer;" href="Allfiles/ExpedtiousDisposalofCases.pdf" target="_blank"><span>5.</span> Best Practices for expeditious disposal of cases <i class="fa fa-file-pdf-o" style="color:red"></i></a></li>-->
+				
+				<!--<li><a rel = "noopener noreferrer"    target="_blank"><span>2.</span> Update of Android Mobile App available on Play Store <i  style="color:red"></i> <img src="img/new2.gif" style="width: 30px;padding: 0px 0px 2px;"></a></li>-->
+				
+				<!--<li><a rel = "noopener noreferrer" href="Allfiles/eFilingNotification.pdf" target="_blank"><span>3.</span> e-Filing in Rajasthan High Court <i class="fa fa-file-pdf-o" style="color:red"></i> <img src="img/new2.gif" style="width: 30px;padding: 0px 0px 2px;"></a></li>-->
+				
+				<!--<li><a rel = "noopener noreferrer"  style="cursor: pointer;" href="http://vedantsynergy.in" target="_blank"><span>4.</span> Online Form for RFID Identity Cards and Tags for the New Building, Rajasthan High Court, Jodhpur <img src="img/new2.gif" style="width: 30px;padding: 0px 0px 2px;"></a></li>-->
+				<li>
+					<!--a href="https://wa.me/917023103132?text=An%20official%20chat%20bot%20to%20refer%20cases%20for%20mediation."
+					target="_blank"
+					style="background:#25D366;color:white;padding:10px 16px;
+							border-radius:5px;text-decoration:none;font-weight:bold;">
+					💬 SULAH WhatsApp Chat Bot <img src="img/new2.gif" alt="New" style="width: 30px;padding: 0px 0px 2px;">
+					</a-->
+					<a href="https://wa.me/917023103132?text=hi"
+					target="_blank" 
+					style="background:#25D366;color:white;padding:10px 16px;
+							border-radius:5px;text-decoration:none;font-weight:bold;"><span>1.</span>
+					💬 SULAH WhatsApp Chat Bot to refer cases for mediation <img src="img/new2.gif" alt="New" style="width: 30px;padding: 0px 0px 2px;">
+					</a>
+				</li>
+									<li>
+						<a href="hcraj_admin/uploadfile/ticker/List_of_RPCs_at_remote_points_in_rajasthan_10032026177329561018.pdf" target="_blank" rel = "noopener noreferrer"  style="cursor: pointer;" ><span>2. </span>VC Remote Point Coordinators at Remote Points in Rajasthan 
+							
+							<i class="fa fa-file-pdf-o" style="color:red"></i> 
+													
+							<img src="img/new2.gif" alt="New" style="width: 30px;padding: 0px 0px 2px;"> 
+												</a>
+					</li>
+									<li>
+						<a href="https://hcraj.nic.in/hcraj/accessibility/login_dist.php" target="_blank" rel = "noopener noreferrer"  style="cursor: pointer;" ><span>3. </span>Accessibility committee 
+													
+							<img src="img/new2.gif" alt="New" style="width: 30px;padding: 0px 0px 2px;"> 
+												</a>
+					</li>
+									<li>
+						<a href="hcraj_admin/uploadfile/ticker/sop171774850979.pdf" target="_blank" rel = "noopener noreferrer"  style="cursor: pointer;" ><span>4. </span>Revised SOP for participating in court proceedings through Cisco Webex 
+							
+							<i class="fa fa-file-pdf-o" style="color:red"></i> 
+																		</a>
+					</li>
+									<li>
+						<a href="https://t.me/hcrajtc" target="_blank" rel = "noopener noreferrer"  style="cursor: pointer;" ><span>5. </span>Official Telegram Channel of Rajasthan High Court 
+																		</a>
+					</li>
+									<li>
+						<a href="hcraj_admin/uploadfile/ticker/Compliance_WP_Crl_No_274_202027.pdf" target="_blank" rel = "noopener noreferrer"  style="cursor: pointer;" ><span>6. </span>In compliance of order dated 01.02.2022 in W.P. (Crl) No. 274/2020, In Re Children In Street Situations 
+							
+							<i class="fa fa-file-pdf-o" style="color:red"></i> 
+																		</a>
+					</li>
+									<li>
+						<a href="hcraj_admin/uploadfile/ticker/ExpedtiousDisposalofCases13.pdf" target="_blank" rel = "noopener noreferrer"  style="cursor: pointer;" ><span>7. </span>BEST PRACTICES FOR EXPEDITIOUS DISPOSAL OF CASES 
+							
+							<i class="fa fa-file-pdf-o" style="color:red"></i> 
+																		</a>
+					</li>
+								
+			</ul>
+        </div>
+	</section>
+	
+	<!-- Modal for reportable judgements starts -->
+	<div id="repJudModal" class="modal fade bs-modal-lg" role="dialog" style="top: 32px; z-index: 999999; /*opacity: 0.5;*/">
+		<div class="modal-dialog modal-lg">
+			<!-- Modal content-->
+			<div class="modal-content modal-content col-md-12" style="margin-top:-6%; /*width: 95%;*/ border-radius: 25px;">
+				<div class="modal-header" style="padding-bottom: 7px;">
+					<center>
+						<b style="color: red; font-size: 20px;">Recent Reportable Judgments</b>
+					</center>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="portlet light">
+								<div class="portlet-body" style="min-height: 240px;">
+									<ul class="nav nav-tabs">
+										<li class="active">
+											<a href="#tab_1_1" data-toggle="tab">Jodhpur</a>
+										</li>
+										<li>
+											<a href="#tab_1_2" data-toggle="tab">Jaipur</a>
+										</li>
+									</ul>
+									<div class="tab-content" style="padding: 0px;">
+										<div class="tab-pane fade active in" id="tab_1_1">
+											<table class="myrepjudtbl table table-hover">
+																								<tr>
+														<td>1</td>
+																														<td onclick="DownloadOrdJud(this,'V');" data-filename="205400074532025_3.pdf" data-fileyear="2025" data-loc="cishcraj-jdp" style="cursor: pointer;">CRLMP / 7453 / 2025 (MAHAVEER VS STATE OF RAJASTHAN) Date of Order/Judgment: 07/02/2026<br />Petitioner sought quashing of orders directing police &amp; FSL to investigate the matter in a particular manner. HELD- though Court may direct further investigation u/Sec.173(8) CrPC, it cannot control manner of investigation or prescribe mode of collecting evidence, such power lies in exclusive domain of Investigating Agency, Court may monitor but not supervise. Such directions are unwarranted hence set aside to that extent. Petition partly allowed and pending applications disposed of.</td>
+																											</tr>
+																									<tr>
+														<td>2</td>
+																														<td onclick="DownloadOrdJud(this,'V');" data-filename="205400076622025_6.pdf" data-fileyear="2025" data-loc="cishcraj-jdp" style="cursor: pointer;">CRLMP / 7662 / 2025 (DEEPAK ARORA VS STATE OF RAJASTHAN) Date of Order/Judgment: 07/02/2026<br />Petitioner sought quashing of FIR and consequential proceedings for offences under BNS and SC/ST Act arising out of alleged incident in Director’s office. HELD- even if FIR is taken at face value, incident within “four corners of the office” is not in “public views” mere presence of few employees is not public. Sec 3 (1) (r) &amp; (s) not made out. Use of word “neech” is not caste-based and “mens rea” to humiliate is missing; continuation amounts to abuse of process of Court. FIR quashed.</td>
+																											</tr>
+																									<tr>
+														<td>3</td>
+																														<td onclick="DownloadOrdJud(this,'V');" data-filename="205600001032026_1.pdf" data-fileyear="2026" data-loc="cishcraj-jdp" style="cursor: pointer;">CRLR / 103 / 2026 (SUMITRA VS ASHISH) Date of Order/Judgment: 04/02/2026<br />Accused sought quashing of appellate judgment setting aside conviction &amp; remanding matter for fresh trial. HELD- appeal u/ proviso of Sec 372 CrPC not maintainable as it lies only against acquittal, lesser conviction or inadequate compensation grant of probation is part of sentencing. Appellate court committed fundamental jurisdictional error &amp; made unwarranted assumption. Remand giving prosecution “2nd opportunity” is impermissible. Revision allowed, trial court’s judgment restored.</td>
+																											</tr>
+																									<tr>
+														<td>4</td>
+																														<td onclick="DownloadOrdJud(this,'V');" data-filename="206800006852005_1.pdf" data-fileyear="2005" data-loc="cishcraj-jdp" style="cursor: pointer;">CW / 685 / 2005 (SUNIL KUMAR VS UNION OF INDIA AND ORS.) Date of Order/Judgment: 02/02/2026<br />Petitioner sought quashing of punishment, appellate and revisional orders arising from departmental proceedings. HELD- Rule 28(b) of the CRPF Rules, 1955 bars appeal against punishment of censure; right of appeal is purely statutory and must be expressly provided. Entertaining such appeal was without jurisdiction; appellate and revisional proceedings stand vitiated, impugned orders quashed, original censure order survives, petition allowed and pending applications disposed of.</td>
+																											</tr>
+																									<tr>
+														<td>5</td>
+																														<td onclick="DownloadOrdJud(this,'V');" data-filename="206200023582025_2.pdf" data-fileyear="2025" data-loc="cishcraj-jdp" style="cursor: pointer;">CRLW / 2358 / 2025 (PRADEEP KUMAR SARWOGI VS UNION OF INDIA) Date of Order/Judgment: 29/01/2026<br />Petitioner sought direction for renewal of passport despite pendency of criminal proceedings. HELD- Sec.6 (2) (f) of the Passports Act does not impose an absolute embargo on renewal merely due to pendency. Restriction is regulatory and purpose-oriented. Renewal is distinct from travel abroad. Insistence on prior NOC is procedural formalism unsupported by the statutory scheme, denial isn’t proportionate. Passport directed to be renewed, subject to court’s permission for travel.</td>
+																											</tr>
+																							</table>
+											
+											<div class="modal-footer" style="padding-top: 0px; padding-bottom: 13px; margin-top: 0px;">
+												<center>
+													<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+													<button type="button" class="btn btn-primary" style="background-color: #1d74c9;" onclick="viewAllRepJudgments('P')">View All</button>
+												</center>
+											</div>
+										</div>
+										
+										<div class="tab-pane fade" id="tab_1_2">
+											<table class="myrepjudtbl table table-hover">
+																								<tr>
+														<td>1</td>
+																														<td onclick="DownloadOrdJud(this,'V');" data-filename="203800160642025_3.pdf" data-fileyear="2025" data-loc="cishcraj-jp" style="cursor: pointer;">CRLMB / 16064 / 2025 (VIVEK YADAV S/O MUKESH YADAV VS STATE OF RAJASTHAN) Date of Order/Judgment: 31/01/2026<br />Peti. sought grant of second bail after completion of investigation &amp; filing of charge-sheet. HELD- at the stage of bail, detailed analysis of evidence is wholly impermissible and Court only examines “prima facie case”. Considering gravity, huge unauthorized transactions and multiple cyber complaints, grounds for bail not found, no change in circumstances; applications dismissed. Court also noted rising cybercrimes &amp; need for strict measures, awareness &amp; safeguards to protect public.</td>
+																											</tr>
+																									<tr>
+														<td>2</td>
+																														<td onclick="DownloadOrdJud(this,'V');" data-filename="205200174622025_5.pdf" data-fileyear="2025" data-loc="cishcraj-jp" style="cursor: pointer;">CW / 17462 / 2025 (SMT. SHABBO W/O SHRI ABDUL RAHIM VS M/S. SAJNI MEHNDI PRODUCT) Date of Order/Judgment: 27/01/2026<br />Petitioner sought quashing of orders passed Commercial Court rejecting application and deciding preliminary issue regarding effect of non-adherence of Sec.12A of the Commercial Courts Act, 2015. HELD- while deciding application u/O.7 R.11 CPC, only the averments made in the plaint are to be considered and no amount of evidence can be looked into; issue is of law. Where suit contemplates urgent interim relief, Sec.12A is not attracted hence no interference called for. Writ petitions dismissed.</td>
+																											</tr>
+																									<tr>
+														<td>3</td>
+																														<td onclick="DownloadOrdJud(this,'V');" data-filename="207800022042024_5.pdf" data-fileyear="2024" data-loc="cishcraj-jp" style="cursor: pointer;">SOSA / 2204 / 2024 (RAJESH KUSHWAH S/O SHRI RAMSHAKAL KUSHWAH VS STATE OF RAJASTHAN) Date of Order/Judgment: 24/01/2026<br />The applicant sought recall of the condition requiring deposit of fine amount imposed while suspending sentence. HELD- imposing a condition impossible for a convict to comply with defeats the right of appeal and violates Art 21. Continued detention despite suspension of sentence was unjustified. The condition was recalled, release was directed forthwith, the application was allowed, and all pending applications stood disposed of as per law duly.</td>
+																											</tr>
+																									<tr>
+														<td>4</td>
+																														<td onclick="DownloadOrdJud(this,'V');" data-filename="202500000122023_21.pdf" data-fileyear="2023" data-loc="cishcraj-jp" style="cursor: pointer;">CR / 12 / 2023 (M/S ANONDITA HEALTHCARE, VS FAIZ MOHAMMAD S/O ABDUL RAHIM) Date of Order/Judgment: 24/01/2026<br />The petitioners sought setting aside of the order maintaining attachment of machines and rejection of objections under Section 47 CPC. HELD- executing court cannot travel beyond the decree or adjudicate matters not forming part of the decree, and doing so amounts to exercise of jurisdiction not vested in law and material irregularity. The objections were allowed, attachment set aside, machines directed to be released, and all pending applications stood disposed of in law duly.</td>
+																											</tr>
+																									<tr>
+														<td>5</td>
+																														<td onclick="DownloadOrdJud(this,'V');" data-filename="201100048432025_4.pdf" data-fileyear="2025" data-loc="cishcraj-jp" style="cursor: pointer;">CMA / 4843 / 2025 (M/S ANAMIKA CONDUCTORS PRIVATE LIMITED VS SE (MM) AJMER VIDYUT VITRAN NIGAM LIMITED) Date of Order/Judgment: 20/01/2026<br />The appellant sought setting aside of the order rejecting objections u/S 34 of the Arbitration Act as barred by limitation. HELD- objections must be filed within 3 months, extendable by only 30 days &amp; limitation cannot be extended beyond 120 days. The Facilitation Council had unequivocally and with a unanimous decision that proceedings before the Settlement Committee were independent and had no bearing on limitation. The appeals were dismissed and all pending applications stood disposed of.</td>
+																											</tr>
+																							</table>
+											<div class="modal-footer" style="padding-top: 0px; padding-bottom: 13px; margin-top: 0px;">
+												<center>
+													<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+													<button type="button" class="btn btn-primary" style="background-color: #1d74c9;" onclick="viewAllRepJudgments('B')">View All</button>
+												</center>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<!--<div class="modal-footer" style="padding-top: 0px; padding-bottom: 13px; margin-top: 0px;">
+					<center>
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+					</center>
+				</div>-->
+			</div>	
+		</div>
+	</div>
+	<!-- Ends -->
+	
+		<div id="ShowModalTextmsg" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<!-- Modal content-->
+			<div class="modal-content modal-content col-md-12" style="margin-top:25%;">
+				<form class="form-horizontal">			
+					<div class="modal-body" style="padding:0 !important;">
+						<div class="alert" style="text-align:center; color:red; font-size:14px">
+							<span id="modelText">
+								The Mobile App is available at Google Play Store with the name<br/>
+								<b>Rajasthan High Court eServices</b>
+							</span>
+						</div>
+					</div>
+					<div class="modal-footer" style="padding: 0px 18px 0px !important;">
+						<center>
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+						</center>
+					</div>
+				</form>
+			</div>	
+		</div>
+	</div>
+	
+    <section id="bottom" class="mybodyhov">
+        <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3 class="fontdiv2">Important Links</h3>
+                        <ul class="fontdiv">
+                        	<li><a href="http://presidentofindia.nic.in/" rel = "noopener noreferrer" target="_blank" >The President of India</a></li>
+		                    <li><a href="http://www.pmindia.gov.in/en/" rel = "noopener noreferrer" target="_blank" >Prime Minister of India</a></li>
+		                    <li><a href="http://sci.gov.in/" rel = "noopener noreferrer" target="_blank" >Supreme Court of India</a></li>
+							<li><a href="https://ecommitteesci.gov.in" rel = "noopener noreferrer" target="_blank" >e-Committee, Supreme Court of India</a></li>
+		                    <li><a href="http://parliamentofindia.nic.in/" rel = "noopener noreferrer" target="_blank" >Indian Parliament</a></li>
+							<li><a href="http://indiacode.nic.in/" rel = "noopener noreferrer" target="_blank" >Central Acts and Rules</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget" style="margin-top: 12%;">
+                        <ul class="fontdiv">
+                            <li><a href="http://ecourts.gov.in/" rel = "noopener noreferrer" target="_blank" >Indian Courts</a></li>
+		                    <li><a href="http://india.gov.in/" rel = "noopener noreferrer" target="_blank" >Government Of India</a></li>
+		                    <li><a href="http://www.rajasthan.gov.in/Pages/default.aspx" rel = "noopener noreferrer" target="_blank" >Government of Rajasthan</a></li>
+		                    <li><a href="http://rajasthanassembly.nic.in/" rel = "noopener noreferrer" target="_blank" >Rajasthan Legislative Assembly</a></li>
+							<li><a href="https://nalsa.gov.in/" rel = "noopener noreferrer" target="_blank" >National Legal Services Authority</a></li>
+							<li><a href="https://rajasthan.nalsa.gov.in/" rel = "noopener noreferrer" target="_blank" >Rajasthan State Legal Services Authority</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">                	
+                    <div class="widget">
+                    	<ul class="fontdiv" style="margin-top: 12%;">  
+                    		<li><a href="http://www.sclsc.nic.in/" rel = "noopener noreferrer" target="_blank" >Supreme Court Legal Services Committee</a></li>
+							<li><a href="http://www.nja.nic.in/" rel = "noopener noreferrer" target="_blank" >National Judicial Academy</a></li>
+							<li><a href="http://rajasthanjudicialacademy.nic.in/" rel = "noopener noreferrer" target="_blank" >State Judicial Academy</a></li>                          
+		                    <li><a href="https://ecourts.gov.in/ecourts_home/index.php?p=dist_court/rajasthan" rel = "noopener noreferrer" target="_blank" >District Courts</a></li>
+							<!--<li><a href="https://judgments.ecourts.gov.in/" rel = "noopener noreferrer" target="_blank" >Judgment Search Portal</a></li>-->
+							<li><a href="screen_reader_access.php" rel = "noopener noreferrer" target="_blank" >Screen Reader Access</a></li>
+                        </ul>
+                    	<!--<div>
+                    		<a href="http://gandhi.gov.in/" target="_blank" rel = "noopener noreferrer">
+								<img src="img/glogo2.jpg"  alt="150 Years of Celebrating The Mahatma" style="width: 60%;"/>
+							</a>
+						</div>-->
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3 class="fontdiv2">GET IN TOUCH</h3>
+						<div class="row margin-top10 fontdiv">
+							<div class="col-md-2 footer-get-in-touch">
+								<i class="fa fa-map-marker"></i>
+							</div>
+							<div class="col-md-10">
+								<p>Rajasthan High Court Principal Seat Jodhpur<br/><b>e-Services Helpline: 9414056204<br/>hc-rj[at]nic[dot]in<br/> 0291-2888500-04</P>
+							</div>
+						</div>
+						<div class="row margin-top10 fontdiv">
+							<div class="col-md-2 footer-get-in-touch">
+								<i class="fa fa-map-marker"></i>
+							</div>
+							<div class="col-md-10">
+								<p>Rajasthan High Court Bench Jaipur<br/><b>e-Services Helpline: 7023103127<br/>hcjaipur-rj[at]nic[dot]in<br/>0141-2227124</P>
+							</div>
+						</div>
+                    </div>    
+                </div><!--/.col-md-3-->
+            </div>
+        </div>
+    </section><!--/#bottom-->
+
+    <style>
+		.hitcount{
+			border: 1px solid #e6e2e0;
+			border-right-color: #000;
+			padding: 0px 1px 0px 0px;
+			background: #e6e2e0;
+			color: #000;
+			font-weight: bold;
+			
+		}
+	</style>
+	
+    <footer id="footer" class="midnight-blue mybodyhov">
+        <div class="container-fluid">
+            <div class="row" style="margin-left: 20px;">
+                <div class="col-sm-9 fontdiv">
+                    Site Developed and Hosted by National Informatics Centre and Content owned, maintained and updated by Rajasthan High Court. <a href="disclaimer.php" rel = "noopener noreferrer" target="_blank" class="fontdiv" style="color: cyan;font-size: 14px;">Disclaimer</a>
+                </div>
+                <div class="col-sm-3 fontdiv">
+                	                	<div>
+                	Total Hits &nbsp;
+                						<span class="hitcount">3</span>	
+										<span class="hitcount">0</span>	
+										<span class="hitcount">9</span>	
+										<span class="hitcount">7</span>	
+										<span class="hitcount">1</span>	
+										<span class="hitcount">1</span>	
+										<span class="hitcount">7</span>	
+										<span class="hitcount">2</span>	
+										<span class="hitcount">7</span>	
+					                		
+                	</div>
+                	
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+	
+	<script src="js/jquery.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#todayDateTime').css('color','#000000');
+			$('#todayDateTime').css('opacity','1');
+		});
+		
+		function CountApp(elem){
+			$("#ShowModalTextmsg").modal({
+				backdrop: 'static',
+				keyboard: false
+			});
+			$('#ShowModalTextmsg').modal('show');
+		}
+   </script>
+   <!--<script type="text/javascript">
+		function googleTranslateElementInit() {
+		  new google.translate.TranslateElement({pageLanguage: 'en',includedLanguages: 'hi,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+		}
+	</script>
+	<script type="text/javascript" src="js/google.js"></script>-->
+     <script>
+    	$(document).ready(function() {
+    		$('body').addClass('fontdiv');
+    		$('th').addClass('fontdiv');
+    		$('td').addClass('fontdiv');
+    		$('.my-page-li > a').addClass('fontdiv');
+			var divtxt 	= $('.fontdiv');
+			var divtxt1 = $('.fontdiv1');
+			var divtxt2 = $('.dropdown-menu-s');
+			var divtxt3 = $('.domains-slider');
+			var divtxt4 = $('.fontdiv2');
+			var divtxt5 = $('.fontdiv3_1');
+			var divtxt6 = $('.fontdiv3_2');
+			var divtxt7 = $('.fontdiv1_1');
+			var divtxt8 = $('.caption');
+			var divtxt9 = $('.portlet-body');
+			//For Index Page Start
+			$('#btnresetfont').click(function() {
+					$(divtxt).css("font-size", "14px");
+					$(divtxt1).css("font-size", "16px");
+					$(divtxt2).css("font-size", "14px");
+					$(divtxt3).css("font-size", "14px");
+					$(divtxt4).css("font-size", "22px");
+					$(divtxt5).css("font-size", "20px");
+					$(divtxt6).css("font-size", "16px");
+			});
+			$('#btnincfont').click(function() {
+				var curSize = divtxt.css('font-size');
+				var curSize1 = divtxt1.css('font-size');
+				var curSize2 = divtxt2.css('font-size');
+				var curSize3 = divtxt3.css('font-size');
+				var curSize4 = divtxt4.css('font-size');
+				var curSize5 = divtxt5.css('font-size');
+				var curSize6 = divtxt6.css('font-size');
+				//alert(curSize);
+				var newSize = parseInt(curSize.replace("px", "")) + 1;
+				var newSize1 = parseInt(curSize1.replace("px", "")) + 1;
+				var newSize2 = parseInt(curSize2.replace("px", "")) + 1;
+				var newSize3 = parseInt(curSize3.replace("px", "")) + 1;
+				var newSize4 = parseInt(curSize4.replace("px", "")) + 1;
+				var newSize5 = parseInt(curSize5.replace("px", "")) + 1;
+				var newSize6 = parseInt(curSize6.replace("px", "")) + 1;
+				if(newSize <= 16)
+				{
+					$(divtxt).css("font-size", newSize + "px");
+					$(divtxt1).css("font-size", newSize1 + "px");
+					$(divtxt2).css("font-size", newSize2 + "px");
+					$(divtxt3).css("font-size", newSize3 + "px");
+					$(divtxt4).css("font-size", newSize4 + "px");
+					$(divtxt5).css("font-size", newSize5 + "px");
+					$(divtxt6).css("font-size", newSize6 + "px");
+				}
+				
+			});
+			$('#btndecfont').click(function() {
+				var curSize = divtxt.css('font-size');
+				var curSize1 = divtxt1.css('font-size');
+				var curSize2 = divtxt2.css('font-size');
+				var curSize3 = divtxt3.css('font-size');
+				var curSize4 = divtxt4.css('font-size');
+				var curSize5 = divtxt5.css('font-size');
+				var curSize6 = divtxt6.css('font-size');
+				var newSize = parseInt(curSize.replace("px", "")) - 1;
+				var newSize1 = parseInt(curSize1.replace("px", "")) - 1;
+				var newSize2 = parseInt(curSize2.replace("px", "")) - 1;
+				var newSize3 = parseInt(curSize3.replace("px", "")) - 1;
+				var newSize4 = parseInt(curSize4.replace("px", "")) - 1;
+				var newSize5 = parseInt(curSize5.replace("px", "")) - 1;
+				var newSize6 = parseInt(curSize6.replace("px", "")) - 1;
+				if(newSize > 10)
+				{
+					$(divtxt).css("font-size", newSize + "px");
+					$(divtxt1).css("font-size", newSize1 + "px");
+					$(divtxt2).css("font-size", newSize2 + "px");
+					$(divtxt3).css("font-size", newSize3 + "px");
+					$(divtxt4).css("font-size", newSize4 + "px");
+					$(divtxt5).css("font-size", newSize5 + "px");
+					$(divtxt6).css("font-size", newSize6 + "px");
+				}
+			});
+			//For Index Page End
+			//For Inner Page Start
+			$('#btnresetfont_inner').click(function() {
+					$(divtxt).css("font-size", "14px");
+					$(divtxt1).css("font-size", "16px");
+					$(divtxt2).css("font-size", "14px");
+					$(divtxt3).css("font-size", "14px");
+					$(divtxt4).css("font-size", "22px");
+					$(divtxt5).css("font-size", "20px");
+					$(divtxt6).css("font-size", "16px");
+					$(divtxt7).css("font-size", "14px");
+					$(divtxt8).css("font-size", "18px");
+					$(divtxt9).css("font-size", "14px");
+			});
+			$('#btnincfont_inner').click(function() {
+				var curSize = divtxt.css('font-size');
+				//var curSize1 = divtxt1.css('font-size');
+				var curSize2 = divtxt2.css('font-size');
+				//var curSize3 = divtxt3.css('font-size');
+				var curSize4 = divtxt4.css('font-size');
+				var curSize5 = divtxt5.css('font-size');
+				var curSize6 = divtxt6.css('font-size');
+				var curSize7 = divtxt7.css('font-size');
+				var curSize8 = divtxt8.css('font-size');
+				var curSize9 = divtxt9.css('font-size');
+				//alert(curSize);
+				var newSize = parseInt(curSize.replace("px", "")) + 1;
+				//var newSize1 = parseInt(curSize1.replace("px", "")) + 1;
+				var newSize2 = parseInt(curSize2.replace("px", "")) + 1;
+				//var newSize3 = parseInt(curSize3.replace("px", "")) + 1;
+				var newSize4 = parseInt(curSize4.replace("px", "")) + 1;
+				var newSize5 = parseInt(curSize5.replace("px", "")) + 1;
+				var newSize6 = parseInt(curSize6.replace("px", "")) + 1;
+				var newSize7 = parseInt(curSize7.replace("px", "")) + 1;
+				var newSize8 = parseInt(curSize8.replace("px", "")) + 1;
+				var newSize9 = parseInt(curSize9.replace("px", "")) + 1;
+				if(newSize <= 16)
+				{
+					$(divtxt).css("font-size", newSize + "px");
+					//$(divtxt1).css("font-size", newSize1 + "px");
+					$(divtxt2).css("font-size", newSize2 + "px");
+					//$(divtxt3).css("font-size", newSize3 + "px");
+					$(divtxt4).css("font-size", newSize4 + "px");
+					$(divtxt5).css("font-size", newSize5 + "px");
+					$(divtxt6).css("font-size", newSize6 + "px");
+					$(divtxt7).css("font-size", newSize7 + "px");
+					$(divtxt8).css("font-size", newSize8 + "px");
+					$(divtxt9).css("font-size", newSize9 + "px");
+				}
+				
+			});
+			$('#btndecfont_inner').click(function() {
+				var curSize = divtxt.css('font-size');
+				//var curSize1 = divtxt1.css('font-size');
+				var curSize2 = divtxt2.css('font-size');
+				//var curSize3 = divtxt3.css('font-size');
+				var curSize4 = divtxt4.css('font-size');
+				var curSize5 = divtxt5.css('font-size');
+				var curSize6 = divtxt6.css('font-size');
+				var curSize7 = divtxt7.css('font-size');
+				var curSize8 = divtxt8.css('font-size');
+				var curSize9 = divtxt9.css('font-size');
+				var newSize = parseInt(curSize.replace("px", "")) - 1;
+				//var newSize1 = parseInt(curSize1.replace("px", "")) - 1;
+				var newSize2 = parseInt(curSize2.replace("px", "")) - 1;
+				//var newSize3 = parseInt(curSize3.replace("px", "")) - 1;
+				var newSize4 = parseInt(curSize4.replace("px", "")) - 1;
+				var newSize5 = parseInt(curSize5.replace("px", "")) - 1;
+				var newSize6 = parseInt(curSize6.replace("px", "")) - 1;
+				var newSize7 = parseInt(curSize7.replace("px", "")) - 1;
+				var newSize8 = parseInt(curSize8.replace("px", "")) - 1;
+				var newSize9 = parseInt(curSize9.replace("px", "")) - 1;
+				if(newSize > 10)
+				{
+					$(divtxt).css("font-size", newSize + "px");
+					//$(divtxt1).css("font-size", newSize1 + "px");
+					$(divtxt2).css("font-size", newSize2 + "px");
+					//$(divtxt3).css("font-size", newSize3 + "px");
+					$(divtxt4).css("font-size", newSize4 + "px");
+					$(divtxt5).css("font-size", newSize5 + "px");
+					$(divtxt6).css("font-size", newSize6 + "px");
+					$(divtxt7).css("font-size", newSize7 + "px");
+					$(divtxt8).css("font-size", newSize8 + "px");
+					$(divtxt9).css("font-size", newSize9 + "px");
+				}
+			});
+			
+			//for high contrast
+			$('.blacklink1').click(function (){
+				$('link[href="css/main9.css"]').attr('href','css/main9-highcontrast.css');
+			});
+			$('.whitelink').click(function (){
+				$('link[href="css/main9-highcontrast.css"]').attr('href','css/main9.css');
+			});
+		<!--	<style> .dropdown-menu-s { transition: all 10.0s ease-in-out; } </style> --> 
+			function mediaSize() { 
+				/* Set the matchMedia */
+				if (window.matchMedia('(max-width: 767px)').matches) {
+				/* Changes when we reach the min-width  */
+					$('.myjudhov').click(function(e) {
+						e.preventDefault();
+						$('.dropdown-menu-s').slideUp('normal');
+						if ($(this).next().is(':hidden') === true) {
+							$(this).addClass('on');
+							$(this).next().slideDown('normal');
+						}
+				
+					});
+					
+				}
+			}
+			
+			/* Call the function */
+			mediaSize();
+			/* Attach the function to the resize event listener */
+	<!--		window.addEventListener('resize', mediaSize, false); -->
+			
+		});
+	
+    </script>
+	
+    <script>
+    	function MySearchTxt(elem){
+			var searchtxt = $('.searchtxt').val();
+			if(searchtxt == '')
+			{
+				alert('Please Enter Search Text...!');
+			}
+			else
+			{
+				$('.searchform').submit();
+			}
+		}
+		$('#formbody').on('keyup keypress', function(e) {
+			var keyCode = e.keyCode || e.which;
+			if (keyCode === 13)
+			{	
+				e.preventDefault(); 
+				MySearchTxt()		
+			}
+		});
+	</script>
+	
+	
+	<!--<script src="js/jquery.nicescroll.min.js"></script>-->
+	<script src='js/jquery.marquee.min.js'></script>
+	<!--<script src="js/jquery.nicescroll.min.js"></script>-->
+	<script src="js/vegas.min.js"></script>
+	
+	<script type="text/javascript">	
+		function MyNewLink(elem){
+			var url = $(elem).children('a').attr('href');
+			window.open(url, '_blank');
+		}
+		
+        jQuery(document).ready(function() {
+        	$(".header").hover(
+				function() {
+					$('.myfeaturecon').hide();
+					$('#feature').css('margin-bottom','102');
+				}, 
+				function() {
+					$('#feature').css('margin-bottom','0');
+				  $('.myfeaturecon').show();
+				}
+			);
+        	$('body').vegas({
+			  overlay: true,
+			  transition: 'blur', 
+			  transitionDuration: 1500,
+			  delay: 10000,
+			  color: 'red',
+			  //cover:true,
+			  slides: [
+			  	/*{ src: 'images/slider/19122019/rhcp_new_building.JPG' },
+			  	{ src: 'images/slider/19122019/rhcp_old_building.JPG' },
+			    { src: 'images/slider/19122019/rhcb.JPG' },
+			    { src: 'images/slider/19122019/rhcb_heritage.JPG' },
+			    { src: 'images/slider/NEW/bg_new_4.JPG' },
+			    { src: 'images/slider/NEW/bg_new_2_2.JPG' },
+			    { src: 'images/slider/NEW/bg_new_2.JPG' },
+			    { src: 'images/slider/NEW/bg_new_1.JPG' },
+			  	{ src: 'images/slider/NEW/HM.JPG' },
+				{ src: 'images/slider/31102020/rhcp_new_building.JPG' },*/
+				{ src: 'images/slider/31102020/rhcp_new_building2.JPG' },
+			  	//{ src: 'images/slider/31102020/rhcp_old_building.JPG' },
+			    { src: 'images/slider/31102020/rhcb_heritage.JPG' },
+			    { src: 'images/slider/31102020/rhcb.JPG' },
+				{ src: 'images/slider/31102020/bg_new_4.JPG' },
+			    //{ src: 'images/slider/31102020/bg_new_2_2.JPG' },
+			    { src: 'images/slider/31102020/rslsa_new.JPG' },
+			    { src: 'images/slider/31102020/bg_new_2.JPG' },
+			    { src: 'images/slider/31102020/bg_new_1.JPG' },
+			  	{ src: 'images/slider/31102020/HM.JPG' },
+			  ]
+			});
+			if( navigator.userAgent.toLowerCase().indexOf('firefox') > -1 ){
+				$('.myssmenu-3').css('top','-434.2%');
+			}
+        });       
+    </script>
+	<script>
+		jQuery(window).load(function() { 
+		  jQuery('.marquee').marquee({
+			duration: 20 * jQuery('.marquee').width(),
+			duplicated: true,
+			pauseOnHover: true
+		  });
+		});
+	</script>
+	
+	<!-- Script for reportable judgements starts -->
+	<script>
+		function myrepjudmodal(elem){
+			$("#repJudModal").modal({
+				//backdrop: 'static',
+				keyboard: false
+			});
+			$('#repJudModal').modal('show');
+		}
+		function DownloadOrdJud(elem, act){
+			var filename 	= $(elem).attr('data-filename');
+			var fileyear	= $(elem).attr('data-fileyear');
+			var loc			= $(elem).attr('data-loc');
+			var ftype		= 'PDF';
+			
+			$('#loading').show();
+			//$('.close-icon-css').show();
+			request = $.ajax ({
+				type: 'post',
+				evalScripts: true,
+				url:'https://hcraj.nic.in/'+loc+'/DwonloadOrdJud.php',
+				data:'filename='+btoa(filename)+'&fileyear='+btoa(fileyear),
+				success:function(data){
+					if(data != 'NAN'){
+						
+						var linkurl = '';
+						
+						if(act == 'V')
+						{
+							linkurl = 'https://hcraj.nic.in/cishcraj-jp/pdfjs-dist/web/viewer.php?file=https://hcraj.nic.in/'+loc+'/'+data;
+							$('.downloadFile').removeAttr('download');
+						}
+						
+						
+						$('.downloadFile').attr('href',linkurl);
+						
+						//$('.downloadFile').get(0).click();
+						var element = document.getElementById('downloadFile');
+						var eventObj = document.createEvent('MouseEvents');
+						eventObj.initEvent('click',true,true);
+						element.dispatchEvent(eventObj);
+					}
+					else{
+						alert('Order/Judgement could not be downloaded at this moment. Please try again after some time.');
+					}
+					$('#loading').hide();
+					$('.close-icon-css').hide();
+				}			
+			});
+		}
+		
+		function viewAllRepJudgments(estt) {
+			window.open('repJudgments.php?estt=' + estt, '_blank');
+		}
+	</script>
+	
+	
+	<!-- Script for reportable judgements ends -->
+					</body>
+</html>

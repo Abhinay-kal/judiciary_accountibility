@@ -390,6 +390,9 @@ def detect_adjournment(
 def classify_adjournment_tactic(outcome_text: str | None) -> TacticClassification:
     """Classify deliberate delay tactic from adjournment outcome text.
 
+    DIAGNOSTIC VERSION: Aggressive runtime introspection with full state dumping.
+    Captures all variable states at failure point for debugging poisoned data.
+
     High-level function wrapping the AdjournmentTacticClassifier for external use.
 
     Args:
@@ -397,6 +400,7 @@ def classify_adjournment_tactic(outcome_text: str | None) -> TacticClassificatio
 
     Returns:
         TacticClassification containing identified tactic and confidence score.
+        Always returns safe default on any exception with diagnostic logging.
 
     Example:
         >>> result = classify_adjournment_tactic("Adjourned, proxy counsel appears")
@@ -405,4 +409,221 @@ def classify_adjournment_tactic(outcome_text: str | None) -> TacticClassificatio
         >>> print(f"Confidence: {result.confidence:.2%}")
         Confidence: 89.50%
     """
-    return AdjournmentTacticClassifier.classify_tactic(outcome_text)
+    # ============================================================================
+    # DIAGNOSTIC CHECKPOINT 1: Input State Inspection
+    # ============================================================================
+    try:
+        input_type = type(outcome_text).__name__
+        input_length = len(outcome_text) if hasattr(outcome_text, '__len__') else "N/A"
+        input_is_none = outcome_text is None
+        
+        logger.critical(
+            f"[DIAG-INPUT] outcome_text state: "
+            f"type={input_type} | length={input_length} | is_none={input_is_none} | "
+            f"repr={repr(outcome_text)[:200] if outcome_text else 'None'}"
+        )
+    except Exception as diag_e:
+        logger.critical(f"[DIAG-FAIL] Could not inspect input: {type(diag_e).__name__}: {diag_e}")
+
+    try:
+        # ========================================================================
+        # CHECKPOINT 2: Call classifier with isolation
+        # ========================================================================
+        logger.critical("[DIAG-ENTER] Calling AdjournmentTacticClassifier.classify_tactic()")
+        
+        result = AdjournmentTacticClassifier.classify_tactic(outcome_text)
+        
+        # ========================================================================
+        # CHECKPOINT 3: Result State Inspection
+        # ========================================================================
+        logger.critical(
+            f"[DIAG-RESULT] Classification output: "
+            f"tactic={result.tactic if hasattr(result, 'tactic') else 'MISSING'} | "
+            f"confidence={result.confidence if hasattr(result, 'confidence') else 'MISSING'} | "
+            f"keywords_count={len(result.matched_keywords) if hasattr(result, 'matched_keywords') else 'MISSING'} | "
+            f"explanation={repr(result.explanation)[:100] if hasattr(result, 'explanation') else 'MISSING'}"
+        )
+        
+        return result
+        
+    except AttributeError as ae:
+        # Result object missing expected attributes
+        logger.critical(
+            f"[DIAG-EXCEPTION-ATTRIBUTE] AttributeError in result handling: {ae}",
+            exc_info=True,
+            extra={
+                "exception_type": type(ae).__name__,
+                "exception_msg": str(ae),
+                "outcome_text_type": type(outcome_text).__name__,
+                "outcome_text_len": len(outcome_text) if hasattr(outcome_text, '__len__') else "unknown",
+            }
+        )
+        return TacticClassification(
+            tactic=DelayTactic.NO_TACTIC_IDENTIFIED,
+            confidence=0.0,
+            matched_keywords=[],
+            explanation=f"[DIAG] Result attribute missing: {str(ae)[:100]}",
+        )
+    
+    except TypeError as te:
+        # Type mismatch or invalid operation
+        logger.critical(
+            f"[DIAG-EXCEPTION-TYPE] TypeError during classification: {te}",
+            exc_info=True,
+            extra={
+                "exception_type": type(te).__name__,
+                "exception_msg": str(te),
+                "outcome_text_type": type(outcome_text).__name__,
+                "outcome_text_value": repr(outcome_text)[:200] if outcome_text else "None",
+                "outcome_text_callable": callable(outcome_text),
+            }
+        )
+        return TacticClassification(
+            tactic=DelayTactic.NO_TACTIC_IDENTIFIED,
+            confidence=0.0,
+            matched_keywords=[],
+            explanation=f"[DIAG] Type error: {str(te)[:100]}",
+        )
+    
+    except ValueError as ve:
+        # Invalid value passed to function
+        logger.critical(
+            f"[DIAG-EXCEPTION-VALUE] ValueError during classification: {ve}",
+            exc_info=True,
+            extra={
+                "exception_type": type(ve).__name__,
+                "exception_msg": str(ve),
+                "outcome_text_type": type(outcome_text).__name__,
+                "outcome_text_repr": repr(outcome_text)[:300],
+            }
+        )
+        return TacticClassification(
+            tactic=DelayTactic.NO_TACTIC_IDENTIFIED,
+            confidence=0.0,
+            matched_keywords=[],
+            explanation=f"[DIAG] Value error: {str(ve)[:100]}",
+        )
+    
+    except KeyError as ke:
+        # Missing key in dictionary lookup
+        logger.critical(
+            f"[DIAG-EXCEPTION-KEY] KeyError during classification: {ke}",
+            exc_info=True,
+            extra={
+                "exception_type": type(ke).__name__,
+                "exception_msg": str(ke),
+                "missing_key": str(ke),
+                "outcome_text_type": type(outcome_text).__name__,
+            }
+        )
+        return TacticClassification(
+            tactic=DelayTactic.NO_TACTIC_IDENTIFIED,
+            confidence=0.0,
+            matched_keywords=[],
+            explanation=f"[DIAG] Missing key: {str(ke)[:100]}",
+        )
+    
+    except IndexError as ie:
+        # Invalid list/sequence index
+        logger.critical(
+            f"[DIAG-EXCEPTION-INDEX] IndexError during classification: {ie}",
+            exc_info=True,
+            extra={
+                "exception_type": type(ie).__name__,
+                "exception_msg": str(ie),
+                "outcome_text_type": type(outcome_text).__name__,
+                "outcome_text_len": len(outcome_text) if hasattr(outcome_text, '__len__') else "unknown",
+            }
+        )
+        return TacticClassification(
+            tactic=DelayTactic.NO_TACTIC_IDENTIFIED,
+            confidence=0.0,
+            matched_keywords=[],
+            explanation=f"[DIAG] Index error: {str(ie)[:100]}",
+        )
+    
+    except UnicodeError as ue:
+        # Encoding/decoding failure
+        logger.critical(
+            f"[DIAG-EXCEPTION-UNICODE] UnicodeError during classification: {ue}",
+            exc_info=True,
+            extra={
+                "exception_type": type(ue).__name__,
+                "exception_msg": str(ue),
+                "outcome_text_type": type(outcome_text).__name__,
+                "outcome_text_repr_bytes": repr(outcome_text)[:100] if isinstance(outcome_text, bytes) else "not bytes",
+            }
+        )
+        return TacticClassification(
+            tactic=DelayTactic.NO_TACTIC_IDENTIFIED,
+            confidence=0.0,
+            matched_keywords=[],
+            explanation=f"[DIAG] Unicode error: {str(ue)[:100]}",
+        )
+    
+    except RecursionError as re:
+        # Stack overflow from deep recursion
+        logger.critical(
+            f"[DIAG-EXCEPTION-RECURSION] RecursionError during classification: {re}",
+            exc_info=True,
+            extra={
+                "exception_type": type(re).__name__,
+                "exception_msg": str(re),
+                "outcome_text_type": type(outcome_text).__name__,
+            }
+        )
+        return TacticClassification(
+            tactic=DelayTactic.NO_TACTIC_IDENTIFIED,
+            confidence=0.0,
+            matched_keywords=[],
+            explanation="[DIAG] Recursion error: Stack overflow",
+        )
+    
+    except MemoryError as me:
+        # Out of memory
+        logger.critical(
+            f"[DIAG-EXCEPTION-MEMORY] MemoryError during classification: {me}",
+            exc_info=True,
+            extra={
+                "exception_type": type(me).__name__,
+                "outcome_text_type": type(outcome_text).__name__,
+            }
+        )
+        return TacticClassification(
+            tactic=DelayTactic.NO_TACTIC_IDENTIFIED,
+            confidence=0.0,
+            matched_keywords=[],
+            explanation="[DIAG] Memory error: Out of memory",
+        )
+    
+    except Exception as e:
+        # UNIVERSAL CATCH: Any other exception type
+        import inspect
+        import traceback
+        
+        # Get detailed call stack information
+        frame_info = inspect.currentframe()
+        stack_depth = len(inspect.stack())
+        tb_lines = traceback.format_exc().split('\n')
+        
+        logger.critical(
+            f"[DIAG-EXCEPTION-GENERIC] Uncaught exception in classify_adjournment_tactic: {type(e).__name__}",
+            exc_info=True,
+            extra={
+                "exception_type": type(e).__name__,
+                "exception_msg": str(e),
+                "exception_repr": repr(e)[:300],
+                "outcome_text_type": type(outcome_text).__name__,
+                "outcome_text_value": repr(outcome_text)[:200] if outcome_text else "None",
+                "outcome_text_id": id(outcome_text),
+                "stack_depth": stack_depth,
+                "traceback_lines": tb_lines[:10],
+            }
+        )
+        
+        return TacticClassification(
+            tactic=DelayTactic.NO_TACTIC_IDENTIFIED,
+            confidence=0.0,
+            matched_keywords=[],
+            explanation=f"[DIAG] Unhandled error: {type(e).__name__}: {str(e)[:100]}",
+        )

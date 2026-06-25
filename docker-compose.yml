@@ -16,13 +16,26 @@ services:
       timeout: 3s
       retries: 20
 
-  redis:
+  redis-broker:
     image: redis:7-alpine
-    container_name: justice-tracker-redis
+    container_name: justice-tracker-redis-broker
     ports:
       - "6379:6379"
+    command: ["redis-server", "--maxmemory-policy", "noeviction"]
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  redis-cache:
+    image: redis:7-alpine
+    container_name: justice-tracker-redis-cache
+    ports:
+      - "6380:6380"
+    command: ["redis-server", "--port", "6380", "--maxmemory", "256mb", "--maxmemory-policy", "allkeys-lru"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "-p", "6380", "ping"]
       interval: 5s
       timeout: 3s
       retries: 20
@@ -38,7 +51,9 @@ services:
     depends_on:
       db:
         condition: service_healthy
-      redis:
+      redis-broker:
+        condition: service_healthy
+      redis-cache:
         condition: service_healthy
     ports:
       - "8000:8000"
@@ -61,7 +76,9 @@ services:
     depends_on:
       backend:
         condition: service_healthy
-      redis:
+      redis-broker:
+        condition: service_healthy
+      redis-cache:
         condition: service_healthy
       db:
         condition: service_healthy
@@ -85,7 +102,9 @@ services:
         condition: service_healthy
       celery-worker:
         condition: service_started
-      redis:
+      redis-broker:
+        condition: service_healthy
+      redis-cache:
         condition: service_healthy
       db:
         condition: service_healthy

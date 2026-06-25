@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- <meta http-equiv="refresh" content="330"> -->
+      <title>High Court of Andhra Pradesh</title>
+                  <meta charset="utf-8">
+      <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+      <link href="css/style2.css" rel="stylesheet">
+      <link href="css/responsive.css" rel="stylesheet">
+      <link href="css/mobile.css" rel="stylesheet">
+      <link href="css/hover.css" rel="stylesheet">
+      <link href="css/hover.min.css" rel="stylesheet">
+      <link href="css/animate.css" rel="stylesheet">
+      <link href="css/acc.css" rel="stylesheet">
+      <link rel="stylesheet" href="calendar/css/style.css" />
+      <link href="assets/owl-carousel/css/owl.carousel.css" rel="stylesheet">
+      <link href="assets/owl-carousel/css/owl.theme.css" rel="stylesheet">
+      <link href="assets/css/css2.css" rel="stylesheet">
+      <script type="text/javascript" src="css/profile.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="assets/jquery/jquery-3.1.1.min.js"></script>
+      <link href="css/acc.css" rel="stylesheet">
+   </head>
+   <body onload="updateTime()">
+      <div class="container-fluid">
+         
+<div class="row nav_ribbon">
+   <div class="col-lg-4 col-12">
+      <div class="top_bar_left translatable">
+         Saturday, 2026-04-11,            &nbsp;<span id="currentTime"></span>
+      </div>
+      </div>
+   
+   <div class=" offset-lg-5 col-lg-3 offset-1 col-10">
+      <ul class="top_bar_right">
+                    <li class="tbr"><a href=""><b>ENGLISH</b></a></li>
+            <!-- <li class="tbr"><a href="javascript:void(0);" id="translateButton_en"><b>ENG</b></a></li>
+            <li class="tbr"><a href="javascript:void(0);" id="translateButton_hi"><b>हिंदी</b></a></li> -->
+            <li class="tbr"><a href="javascript:void(0);" id="translateButton_te"><b>తెలుగు</b></a></li>
+                <li class="tbr acce_linkss">
+          <a href="javascript:void(0);" class="acc-icon-trigger">
+            <img src="images/acc-icon.png" class="acc-icon" alt="Accessibility">
+          </a>
+          
+          <div class="acc_links">
+            <div class="accessiblelinks textSizing">
+               <!-- <div class="heading5 text-center acc_heading">Accessibility Tools</div> -->
+                  <!-- <div class="acc_heading">Color Contrast</div> -->
+                  <div class="row controls" aria-label="Color Contrast controls">
+                      <div class="col-lg-3 col-sm-6 col-12">
+                          <div class="highContrast dark tog-con">
+                              <button class="btn btn-block acc_icon_btn btn-outline-secondary" id="high_contrast" style="width: 100% !important;">
+                               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="100%"><path d="M480-288.46 531.54-340H620v-88.46L671.54-480 620-531.54V-620h-88.46L480-671.54 428.46-620H340v88.46L288.46-480 340-428.46V-340h88.46L480-288.46Zm0-81.54v-220q45.77 0 77.88 32.12Q590-525.77 590-480q0 45.77-32.12 77.88Q525.77-370 480-370ZM172.31-180Q142-180 121-201q-21-21-21-51.31v-455.38Q100-738 121-759q21-21 51.31-21h615.38Q818-780 839-759q21 21 21 51.31v455.38Q860-222 839-201q-21 21-51.31 21H172.31Zm0-60h615.38q4.62 0 8.46-3.85 3.85-3.84 3.85-8.46v-455.38q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H172.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46v455.38q0 4.62 3.85 8.46 3.84 3.85 8.46 3.85ZM160-240v-480 480Z"></path></svg>
+                               <div>High Contrast</div>
+                               <!-- <span class="fa fa-check-circle accessibility-active" aria-hidden="true"></span> -->
+                           </button>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-sm-6 col-12">
+                          <div class="highlight-links">
+                                <button class="btn btn-block acc_icon_btn btn-outline-secondary" id="highlighted_links" tabindex="0" title="Highlight Links" aria-label="Highlight Links" style="width: 100% !important;">
+                                   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M432.31-298.46H281.54q-75.34 0-128.44-53.1Q100-404.65 100-479.98q0-75.33 53.1-128.44 53.1-53.12 128.44-53.12h150.77v60H281.54q-50.39 0-85.96 35.58Q160-530.38 160-480q0 50.38 35.58 85.96 35.57 35.58 85.96 35.58h150.77v60ZM330-450v-60h300v60H330Zm197.69 151.54v-60h150.77q50.39 0 85.96-35.58Q800-429.62 800-480q0-50.38-35.58-85.96-35.57-35.58-85.96-35.58H527.69v-60h150.77q75.34 0 128.44 53.1Q860-555.35 860-480.02q0 75.33-53.1 128.44-53.1 53.12-128.44 53.12H527.69Z"></path></svg>
+                                   <div>Highlight Links</div>
+                                </button>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-sm-6 col-12">
+                          <div>
+                                <button class="btn btn-block acc_icon_btn btn-outline-secondary" id="invert" tabindex="0" title="Invert Color" aria-label="Invert Color" style="width: 100% !important;">
+                                   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480.07-100q-78.84 0-148.21-29.92t-120.68-81.21q-51.31-51.29-81.25-120.63Q100-401.1 100-479.93q0-78.84 29.92-148.21t81.21-120.68q51.29-51.31 120.63-81.25Q401.1-860 479.93-860q78.84 0 148.21 29.92t120.68 81.21q51.31 51.29 81.25 120.63Q860-558.9 860-480.07q0 78.84-29.92 148.21t-81.21 120.68q-51.29 51.31-120.63 81.25Q558.9-100 480.07-100ZM510-161.85q121.31-11.53 205.65-101.42Q800-353.15 800-480t-83.96-216.35q-83.96-89.5-206.04-101.8v636.3Z"></path></svg>
+                                   <div>Invert</div>
+                                   <!-- <span class="fa fa-check-circle accessibility-active" aria-hidden="true"></span> -->
+                               </button>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-sm-6 col-12">
+                          <div>
+                                <button class="btn btn-block acc_icon_btn btn-outline-secondary" id="saturate" tabindex="0" title="Saturation" aria-label="Saturation" style="width: 100% !important;">
+                               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-140q-124.92 0-212.46-86.35Q180-312.69 180-435.62q0-62.53 23.66-114.69 23.65-52.15 64.19-93.84L480-852.31l212.15 208.16q40.54 41.69 64.19 94.42Q780-497 780-435.62q0 122.93-87.54 209.27Q604.92-140 480-140Zm0-60v-568L310-600q-35 33-52.5 74.69T240-435.62q0 97 70 166.31T480-200Z"></path></svg>
+                               <div>Saturation</div>
+                               <!-- <span class="fa fa-check-circle accessibility-active" aria-hidden="true"></span> -->
+                           </button>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-sm-6 col-12">
+                          <div class="fontSizeEvent">
+                                <button class="btn btn-block acc_icon_btn btn-outline-secondary" id="fontIncreaseButton" data-selected-text="selected" data-event-type="increase" tabindex="0" data-label="Font Size Increase" title="Font Size Increase" aria-label="Font Size Increase" style="width: 100% !important;">
+                               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m52.31-210 210.77-540h69.23l210.77 540h-72.16l-54.46-144.15H177.38L122.92-210H52.31Zm146.77-204h195.69l-95.2-252h-4.65l-95.84 252Zm528.61 84v-120h-120v-60h120v-120h60v120h120v60h-120v120h-60Z"></path></svg>
+                               <div>Font Increase</div>
+                                </button>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-sm-6 col-12">
+                          <div class="fontSizeEvent">
+                                <button class="btn btn-block acc_icon_btn btn-outline-secondary" id="fontNormalButton" data-selected-text="selected" data-event-type="normal" tabindex="0" data-label="Normal Font" title="Normal Font - selected" aria-label="Normal Font - selected" class="link-selected" style="width: 100% !important;">
+                                   <p class="text-center">A</p>
+                                   <div>Normal Font</div>
+                                   <!-- <span class="fa fa-check-circle accessibility-active" aria-hidden="true"></span> -->
+                               </button>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-sm-6 col-12">
+                          <div class="fontSizeEvent">
+                                <button class="btn btn-block acc_icon_btn btn-outline-secondary" id="fontDecreaseButton" data-selected-text="selected" data-event-type="decrease" tabindex="0" data-label="Font Size Decrease" 
+                                    title="Font Size Decrease" aria-label="Font Size Decrease" style="width: 100% !important;">
+                                   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m52.31-210 210.77-540h69.23l210.77 540h-72.16l-54.46-144.15H177.38L122.92-210H52.31Zm146.77-204h195.69l-95.08-252h-4.77l-95.84 252Zm408.61-36v-60h300v60h-300Z"></path></svg>
+                                   <div>Font Decrease</div>
+                                </button>
+                          </div>
+                      </div>
+                      <div class="col-lg-3 col-sm-6 col-12">
+                          <div>
+                                <button class="btn btn-block acc_icon_btn btn-outline-secondary" id="addletterspacing" data-selected-text="selected" tabindex="0" data-label="Text Spacing" title="Text Spacing" aria-label="Text Spacing" style="width: 100% !important;">
+                                   <img src="includes/text-spacing.png" width="15%">
+                                   <div>Text Spacing</div>
+                                   <!-- <span class="fa fa-check-circle accessibility-active" aria-hidden="true"></span> -->
+                               </button>
+                            </div>
+                       </div>
+                   </div>                   
+               </div>
+            </div>
+        </li>
+      </ul>
+
+   </div>
+</div>
+<div class="row logo_ribbon">
+   <div class="col-lg-4">
+      <a href="index.php"><img src="images/logo.png" style="width:100%" alt="High Court Logo"></a>
+   </div>
+   <div class="offset-lg-5 col-lg-3 pt-4 pb-3">
+      <form action="search.php" method="post" role="search">
+        <input type="search" id="search-box" class="form-control search_bar" placeholder="Search..." name="query" minlength="4" required aria-label="Search" oninvalid="this.setCustomValidity('Please enter at least 4 characters')" oninput="this.setCustomValidity('')" />
+      </form>
+   </div>
+   <!-- <div class="col-lg-2 pt-lg-4 pb-3 text-center">
+      <a href="https://aphc.ap.gov.in/ubuntu-24.04.3-2025.12.05-desktop-amd64.iso" download=""><button class="btn btn-warning btn-block">Download Ubuntu 24.04 LTS</button></a>
+   </div> -->
+   <!-- <div class="col-lg-3 pt-lg-4 pb-3 text-center">
+      <a href="https://aphc.gov.in/aphc_old/" target="_blank"><button class="btn btn-primary btn-block">Old Website Link</button></a>
+   </div> -->
+</div>         <div class="row nav_ribbon">
+            
+<header id="navbar">
+   <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container-fluid">
+         <a class="navbar-brand d-lg-none d-block translatable translatable2" >Menu</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <!-- Navbar collapses for lg and below -->
+         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+               <li class="nav-item">
+                  <a class="nav-link translatable translatable2" href="index.php">Home</a>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle translatable translatable2"  id="navbarDropdown3" role="button"  aria-expanded="false">
+                  About Us
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                     <li><a class="dropdown-item translatable translatable2" href="aboutus.php?abt=hc" >High Court </a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="aboutus.php?abt=digi">Digitization</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="aboutus.php?abt=efiling" >eFiling</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="aboutus.php?abt=rec" >Recruitment</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="under_con.php" >Infrastructure</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle translatable translatable2"  id="navbarDropdown3" role="button" aria-expanded="false">Profiles</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                     <li><a class="dropdown-item translatable translatable2" href="profiles.php">CJ & Sitting Judges</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="administrativejudges.php">Administrative Judges</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="formerjudges.php?type=former_elevated">Judges Elevated to Supreme Court</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="formerjudges.php?type=former_transfer">Judges Transferred to other High Courts</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="formerjudges.php?type=former_cj">Former Chief Justices</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="formerjudges.php?type=former_judges">Former Judges</a></li>                     <li><a class="dropdown-item translatable translatable2" href="https://digi-services.aphc.ap.gov.in/judgemate/index.php" target="_blank">Judges Dashboard</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle translatable translatable2"  id="navbarDropdown3" role="button" aria-expanded="false">
+                  Acts & Rules 
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                     <li><a class="dropdown-item translatable translatable2" href="rules.php?type=1">Constitution & Major Acts</a></li><li><a class="dropdown-item translatable translatable2" href="rules.php?type=2">High Court Rules</a></li><li><a class="dropdown-item translatable translatable2" href="rules.php?type=3">District Judiciary Rules</a></li><li><a class="dropdown-item translatable translatable2" href="rules.php?type=4">RTI Rules</a></li><li><a class="dropdown-item translatable translatable2" href="rules.php?type=5">Guidelines / SOP</a></li>                     <li><a class="dropdown-item translatable translatable2" href="https://www.indiacode.nic.in/" target="_blank">India Code</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle translatable translatable2" id="navbarDropdown3" role="button" aria-expanded="false">
+                  Judicial Info
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                     <li><a class="dropdown-item translatable translatable2" href="https://www.sci.gov.in/" target="_blank">Supreme Court of India</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="hc_jud_info.php">High Courts</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="https://ecourts.gov.in/ecourts_home/index.php?p=dist_court/ap" target="_blank">District courts</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="https://ecourts.gov.in/ecourts_home/" target="_blank">eCourt Services</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle translatable translatable2"  id="navbarDropdown2" role="button"  aria-expanded="false">
+                  e-Services
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                     <li><a class="dropdown-item translatable translatable2" href="online_cd_v4_info.html" target="_blank">Online CD App</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="https://digi-courts.aphc.ap.gov.in/RTI-AP" target="_blank" >Online RTI Portal</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="https://digi-services.aphc.ap.gov.in/mact/" target="_blank">MACT ClaimMate</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="https://aphc.ap.gov.in/lawcounsel" target="_blank">Law Officers</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="https://aphc.ap.gov.in/scounsel" target="_blank">Standing Counsels</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="https://digi-apply.aphc.ap.gov.in/visitorpass/index.php" target="_blank" >ePass</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="https://aphc.gov.in/protocol/" target="_blank">eProtocol Services</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="https://digi-services.aphc.ap.gov.in/eaphcr/" target="_blank" >eAPHCR</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="https://aphc.ap.gov.in/CIMS/index.php" target="_blank" >CIMS</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle translatable translatable2"  id="navbarDropdown2" role="button"  aria-expanded="false">
+                  Digi Services
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                     <li><a class="dropdown-item translatable translatable2" href="efiling.php">eFiling</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="https://aphc.gov.in/e-pay/" target="_blank">APHC e-Court Fee</a></li>
+                     <!-- <li><a class="dropdown-item translatable translatable2" href="#" target="_blank">APHC e-Court Fee</a></li> -->
+                     <li><a class="dropdown-item translatable translatable2" href="https://digi-courts.aphc.ap.gov.in/pconline" target="_blank">Paperless Courts</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="https://digi-courts.aphc.ap.gov.in/dts/" target="_blank" >Digitization</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="https://digi-services.aphc.ap.gov.in/mact/macd/index.php" target="_blank"> MACD Dashboard</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="https://digi-services.aphc.ap.gov.in/mact/labour_court/index.php" target="_blank"> Labour Courts Dashboard</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle translatable translatable2"  id="navbarDropdown3" role="button" aria-expanded="false">
+                  Statistics
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                     <li><a class="dropdown-item translatable translatable2" href="https://digi-services.aphc.ap.gov.in/vclock/" target="_blank">Virtual Justice Clock</a></li>
+                     <li id="stathub_dj"><a class="dropdown-item translatable translatable2" href="https://aphc.ap.gov.in/stathub/user" target="_blank">District Judiciary</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="ccc.php">Commercial Courts</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="splmpmlac.php">Spl. Courts for MPs & MLAs</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="https://aphc.gov.in/dds/" target="_blank">Daily Disposals (JO)</a></li>
+                     <li id="stathub"><a class="dropdown-item translatable translatable2" href="https://aphc.ap.gov.in/stathub/" target="_blank">STATHUB 2.0</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle translatable translatable2" id="navbarDropdown3" role="button"  aria-expanded="false">
+                  Registry
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                     <li><a class="dropdown-item translatable translatable2" href="registry.php">Registrars</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="hcregistry.php?cadre=2">Joint Registrars</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="hcregistry.php?cadre=3">Deputy Registrars</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="hcregistry.php?cadre=4">Assistant Registrars</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="https://digi-courts.aphc.ap.gov.in/cms">Meetings eScheduler</a></li>
+                     <!-- <li id="cms"><a class="dropdown-item translatable translatable2" href="https://aphc.gov.in/maintenance.php">Meetings eScheduler</a></li> -->
+                     <li><a class="dropdown-item translatable translatable2" href="aphcwebup/">Admin Login</a></li>
+                  </ul>
+               </li>                                                                 
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle translatable translatable2"  id="navbarDropdown3" role="button"  aria-expanded="false">
+                  District Judiciary
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                    <li><a class="dropdown-item translatable translatable2" href="pdj.php">Principal District Judges</a></li>
+                    <li><a class="dropdown-item translatable translatable2" href="judges.php?cadre=osd">Officers on Special Duty</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="judges.php?cadre=dj">District Judges (All Cadres)</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="judges.php?cadre=scj">Civil Judges (Senior Division)</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="judges.php?cadre=jcj"> Civil Judges (Junior Division) </a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="docs/list_of_retired_jos.pdf"> List of Retired Judicial Officers</a></li>
+                     <li id="joec"><a class="dropdown-item translatable translatable2" href="https://aphc.gov.in/maintenance.php" target="_blank" >Judicial Officers eCorner (JOeC)</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="https://digi-services.aphc.ap.gov.in/buildings/public/" target="_blank" >Court Complex Infra ( CCI )</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle translatable translatable2"  id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Galleries
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                     <li><a class="dropdown-item translatable translatable2" href="gallery.php">Photo Gallery</a></li>
+                     <!-- <li><a class="dropdown-item" href="#">Video Gallery</a></li> -->
+                     <li><a class="dropdown-item translatable translatable2" href="https://aphc.ap.gov.in/JudgesLibrary/" target="_blank">Judges eLibrary</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="annualreports.php">Annual Reports</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="calendars.php">Calendars</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="newsletters.php" target="_blank">e-Committee Newsletters</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle translatable translatable2"  id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Phone Directories
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                     <li><a class="dropdown-item translatable translatable2" href="td1/" target="_blank">High Court</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="aatd/" target="_blank">Advocate Association</a></li>
+                     <li><a class="dropdown-item translatable translatable2" href="actd/" target="_blank">Advocate Clerks</a></li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+</header>
+         </div>
+         <div class="row carousel_div" style="background: #24343f; display: none;">
+            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                  <img src="images/11_12.webp" alt="APHC" class="d-block" style="width: 100%;height: 200px;" />
+               </div>
+            </div>
+         </div>
+         <div class="row pt-1 mobile_padding">
+            <div class="col-lg-9 mobile_view_row" style="position: relative;">
+               <div id="demo">
+                  <div class="carousel-item active">
+                     <img src="images/11_12.webp" alt="High Court of AP" class="img slider_img" />
+                                       </div>
+               </div>
+               <div class="overlay">
+                  <div class="row">
+                     <div class="col-lg-2 col-sm-6 col-6 overlay_div">
+                        <div class="overlay-blk">
+                           <a href="/Hcdbs/search.jsp" class="index_anchor_text" target="_blank">
+                           <img src="images/list-t.png" class="img img_overlay" alt="Cause List View" />
+                           <span class=" translatable">Cause List</span>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-sm-6 col-6 overlay_div">
+                        <div class="overlay-blk">
+                           <a href="/Hcdbs/displayboard.jsp" class="index_anchor_text" target="_blank">
+                           <img src="images/display-t.webp" class="img img_overlay"  alt="Display Board View"/>
+                           <span class=" translatable">Display Board</span>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-sm-6 col-6 overlay_div">
+                        <div class="overlay-blk">
+                           <a href="/Hcdbs/upload/roster.pdf" class="index_anchor_text" target="_blank">
+                           <img src="images/roster-t.webp" class="img img_overlay"  alt="Roster View"/>
+                           <span class=" translatable">Roster</span>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-sm-6 col-6 overlay_div">
+                        <div class="overlay-blk">
+                           <a href="/Hcdbs/upload/notice.pdf" class="index_anchor_text" target="_blank">
+                           <img src="images/notice-t.webp" class="img img_overlay"  alt="Notice View"/>
+                           <span class=" translatable">Notice</span>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-sm-6 col-6 overlay_div">
+                        <div class="overlay-blk" id="aphccsis">
+                           <a href="https://digi-courts.aphc.ap.gov.in/csis_ap/" target="_blank" class="index_anchor_text">
+                              <!-- <a href="#" class="index_anchor_text"> -->
+                              <img src="images/clk-t.webp" class="img img_overlay"  alt="APHC Case Status View"/>
+                              <span class=" translatable">APHC Case Status</span>
+                           </a>
+                        </div>
+                     </div>
+                     <!-- code deleted here cis ip address check code -->
+                     <div class="col-lg-2 col-sm-6 col-6 overlay_div">
+                        <div class="overlay-blk">
+                           <a href="case_status.php" class="index_anchor_text" target="_blank">
+                           <img src="images/clk-t.webp" class="img img_overlay"  alt="NJDG Case Status View"/>
+                           <span class=" translatable">NJDG Case Status</span>
+                           </a>
+                        </div>
+                     </div>
+                     <!-- <div class="col-lg-2 col-sm-6 col-6 overlay_div">
+                        <div class="overlay-blk">
+                            <a href="../../lawcounsel/" class="index_anchor_text" target="_blank">
+                                <img src="images/order-t.webp" class="img img_overlay" />
+                                Law Officers
+                            </a>
+                        </div>
+                        </div> -->
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-3 mobile_view_row">
+               <div class="cj_div" style="position:relative;">
+                  <div class="text-center cj_div_inner">
+                     <img src="images/hcjap.webp" class="img img-thumbnail cj_img" alt="The Hon'ble The Chief Justice Sri Justice Dhiraj Singh Thakur">
+                     <div class="cj_name_div">
+                        <h4 class="cj_name">
+                           <span class="translatable">Sri Justice Dhiraj Singh Thakur</span><br />
+                           <span class="translatable">The Hon'ble The Chief Justice</span>
+                        </h4>
+                     </div>
+                     <div style="border: 1px solid #fff; margin-top: 17px; background: rgb(0, 0, 0); background: rgb(0 0 0 / 65%);position:absolute;bottom: 0;width: 100%;">
+                        <p class="message_box_text">
+                           <span class="translatable">"Learn to live in this world with self-respect". For Original Handwritten Constitution <a href="/COI/" style="color: #71d1ff;text-shadow: 0 0 BLACK;text-decoration: underline;" target="_blank"> Click Here</a></span><br />
+                        </p>
+                        <!-- flip/ url deleted -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row pt-1">
+            <div class="how-does-wrapper">
+               <div class="container pt-4 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                  <div class="title">
+                     <span class="title-border-img"><img src="images/hc-white.webp" alt="HC Background1" /></span>
+                     <h2 class="p-2 translatable">Important Announcements</h2>
+                  </div>
+                  <div class="row pt-4 pb-5">
+                     <div class="notification-carousel">
+                        <div class="swiper hcSwiper">
+                           <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                 <a href="https://aphc.ap.gov.in/training-material.php"  target="_blank">
+                                 <span class="item-count">1</span>
+                                 <span style="text-align: justify;" class="translatable">
+                                 To download Training Material relating to "CREATION/CONVERSION OF COURT ROOMS INTO VULNERABLE WITNESS DEPOSITION CENTERS" - <span class="text-primary">Click Here</span>                                      
+                                 </span>
+                                 </a>
+                              </div>
+                              <div class="swiper-slide">
+                                 <a href="https://aphc.ap.gov.in/ubuntu-24.04.3-2025.12.05-desktop-amd64.iso"  download="">
+                                 <span class="item-count">2</span>
+                                 <span style="text-align: justify;" class="translatable">
+                                 Download Ubuntu 24.04 LTS customized version- To download click here.                                        
+                                 </span>
+                                 </a>
+                              </div>
+                                                            <!-- <div class="notification text-justify"> -->
+                              <div class="swiper-slide">
+                                 <a href="../docs/notification_1775818272_0.pdf" target="_blank">
+                                 <span class="item-count">3</span>
+                                 <span style="text-align: justify;" class="translatable imp_notif_2">
+                                 NATIONAL LOK ADALAT IS ON 09.05.2026...                                             
+                                 </span>
+                                 </a>
+                              </div>
+                                                            <!-- <div class="notification text-justify"> -->
+                              <div class="swiper-slide">
+                                 <a href="https://cdn3.digialm.com/EForms/configuredHtml/2381/98257/Index.html" target="_blank">
+                                 <span class="item-count">4</span>
+                                 <span style="text-align: justify;" class="translatable imp_notif_2">
+                                 Establishment – Online application for filling up of various posts in the High Court of Andhra Pradesh – Reg....                                             
+                                 </span>
+                                 </a>
+                              </div>
+                                                            <!-- <div class="notification text-justify"> -->
+                              <div class="swiper-slide">
+                                 <a href="https://cdn3.digialm.com/EForms/configuredHtml/2381/98257/Index.html" target="_blank">
+                                 <span class="item-count">5</span>
+                                 <span style="text-align: justify;" class="translatable imp_notif_2">
+                                 Establishment – Online application for filling up of various posts in the High Court of Andhra Pradesh – Reg....                                             
+                                 </span>
+                                 </a>
+                              </div>
+                                                            <!-- <div class="notification text-justify"> -->
+                              <div class="swiper-slide">
+                                 <a href="recruitments.php" target="_blank">
+                                 <span class="item-count">4</span>
+                                 <span style="text-align: justify;" class="translatable imp_notif_2">
+                                 Establishment – Notification for filling up of Court Master and Personal Secretary to the Hon’ble Judges and Registrars in the High Cour...                                             
+                                 </span>
+                                 </a>
+                              </div>
+                                                            <!-- <div class="notification text-justify"> -->
+                              <div class="swiper-slide">
+                                 <a href="../docs/notification_1774248554_0.pdf" target="_blank">
+                                 <span class="item-count">5</span>
+                                 <span style="text-align: justify;" class="translatable imp_notif_2">
+                                 Establishment – Notification for filling up of various posts in the High Court of Andhra Pradesh - Reg....                                             
+                                 </span>
+                                 </a>
+                              </div>
+                                                         </div>
+                           <!-- Navigation -->
+                           <div class="swiper-button-next"><img src="images/frwd.png" class="prev"></div>
+                           <div class="swiper-button-prev"><img src="images/bkwd.png" class="prev"></div>
+                        </div>
+                        <!-- <img src="images/frwd.png"class="next"> -->
+                        <!-- <button class="btn next">></button> -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container-fluid pt-3 pb-5 notify_sec">
+         <div class="container wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
+            <div class="text-center p-4">
+               <img src="images/hc.webp" class="img img-responsive" alt="HC Background2" />
+               <h2 class="pt-2 translatable notify_heading">Notifications</h2>
+            </div>
+            <div class="d-md-none mb-3">
+               <select class="form-control" id="mobileTabs">
+                  <option class="translatable" value="#nav-general" selected>General Notifications</option>
+                  <option class="translatable" value="#nav-profile">Recruitment Notifications</option>
+                  <option class="translatable" value="#nav-contact">Tender Notifications</option>
+                  <option class="translatable" value="#nav-circulars">Circular Instructions</option>
+                  <option class="translatable" value="#nav-gazette">Gazette Publications</option>
+                  <option class="translatable" value="#nav-circulated">Judgments Circulated</option>
+               </select>
+               <span class="dropdown2-symbol">&#9662;</span>
+            </div>
+            <!-- Nav tabs -->
+            <div class="nav nav-tabs nav-justified d-none d-md-flex" id="nav-tab" role="tablist">
+               <a class="tab_button nav-link active translatable" id="nav-general-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><b>General Notifications</b></a>
+               <a class="tab_button nav-link translatable" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><b>Recruitment Notifications</b></a>
+               <a class="tab_button nav-link translatable" id="nav-contact-tab" data-bs-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><b>Tender Notifications</b></a>
+               <a class="tab_button nav-link translatable" id="nav-circulars-tab" data-bs-toggle="tab" href="#nav-circulars" role="tab" aria-controls="nav-circulars" aria-selected="false"><b>Circular Instructions</b></a>
+               <a class="tab_button nav-link translatable" id="nav-gazette-tab" data-bs-toggle="tab" href="#nav-gazette" role="tab" aria-controls="nav-gazette" aria-selected="false"><b>Gazette Publications</b></a>
+               <a class="tab_button nav-link translatable" id="nav-circulated-tab" data-bs-toggle="tab" href="#nav-circulated" role="tab" aria-controls="nav-circulated" aria-selected="false"><b>Judgments Circulated</b></a>
+            </div>
+            <!-- Tab content -->
+            <div class="tab-content" id="nav-tabContent">
+               <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                  <ol>
+                     <!-- <li class="notif">
+                        <a href="/Hcdbs/meetingids.jsp" class="translatable" target="_blank">High Court of Andhra Pradesh – Microsoft Teams Meeting ID’s and Pass-codes for Hearing of Cases through Hybrid Mode from 29.01.2024 – Regarding.</a>
+                        </li> -->
+                                          <li class="notif">
+                        <a href="docs/notification_1775819037_0.pdf" class="translatable imp_notif_1" target="_blank">ESTABLISHMENT - HIGH COURT OF ANDHRA PRADESH -Extension of deputation period of Sri V. Sreenivasa Siva Ram, Registrar (Vigilance), Sri D. Yedukondalu, Registrar (I.T.-cum-C.P.C.) and Sri S. Kamalakara Reddy, Registrar (Judicial), High Court of Andhra Pradesh - Orders - Issued.<span><img src="images/new.gif" style="width: 5%;"></span></a>
+                     </li>
+                                          <li class="notif">
+                        <a href="docs/notification_1775818272_0.pdf" class="translatable imp_notif_1" target="_blank">NATIONAL LOK ADALAT IS ON 09.05.2026<span><img src="images/new.gif" style="width: 5%;"></span></a>
+                     </li>
+                                          <li class="notif">
+                        <a href="docs/notification_1775801508_0.pdf" class="translatable imp_notif_2" target="_blank">DISTRICT JUDGES - Appointment of  15 Civil Judges (Senior Division) as District Judges (Entry Level) by promotion on temporary basis under Rule 14 of A.P. State Judicial (Service and Cadre) Rules 2007 - Regarding.</a>
+                     </li>
+                                          <a href="notifications.php?year=2026"><button class="btn btn-primary translatable">View All</button></a>
+                  </ol>
+               </div>
+               <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                  <ol>
+                                          <li class="notif">
+                        <a href="docs/notification_1775801737_0.pdf" class="translatable imp_notif_2" target="_blank">RECRUITMENT – STAFF – DISTRICT JUDICIARY - 2025- MERITORIOUS SPORTS PERSONS CATEGORY – Enclosure of G.O. – Notified.</a>
+                     </li>
+                                          <li class="notif">
+                        <a href="recruitments.php" class="translatable imp_notif_2" target="_blank">RECRUITMENT – STAFF - DISTRICT JUDICIARY- 2025 - MERITORIOUS SPORTS PERSONS CATEGORY - List of eligible candidates under meritorious sports person category for the posts of Field Assistant, Examiner, Process Server and Office Subordinate in District Judiciary of A.P. - Submission of documents in District Court concerned - Notified.</a>
+                     </li>
+                                          <li class="notif">
+                        <a href="docs/notification_1775652811_0.pdf" class="translatable imp_notif_2" target="_blank">RECRUITMENT – STAFF - DISTRICT JUDICIARY- 2025 - FIELD ASSISTANT - Second list of provisionally selected candidates for recruitment to the post of                        Field Assistant issued vide Notification No.4/2025, dated 06.05.2025 in District Judiciary of A.P. – Notified.</a>
+                     </li>
+                                          <a href="recruitments.php?year=2026"><button class="btn btn-secondary translatable">View All</button></a>
+                  </ol>
+               </div>
+               <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                  <ol>
+                                          <li class="notif">
+                        <a href="docs/tender_1775652652_9082.pdf" class="translatable imp_notif_2" target="_blank">TENDER NOTIFICATION FOR PROCUREMENT OF 50 No.s of MF i1643i PRINTERS FOR THE USE OF HIGH COURT OF ANDHRA PRADESH - GEM PORTAL - REGARDING</a>
+                     </li>
+                                          <li class="notif">
+                        <a href="docs/tender_1775563419_1004.pdf" class="translatable imp_notif_2" target="_blank">Sealed quotations are invited through advertised tender enquiry from the eligible vendors for Disposal of unserviceable/obsolete E-Waste (IT Hardware) lying at the premises of High Court of Andhra Pradesh on &quot;AS IS WHERE IS&quot; basis -Reg.</a>
+                     </li>
+                                          <li class="notif">
+                        <a href="docs/tender_1775287593_6372.pdf" class="translatable imp_notif_2" target="_blank">PROCUREMENT OF ICT INFRASTRUCTURE FOR REGULATION OF INTERNET USAGE  FOR THE USE OF HIGH COURT OF ANDHRA PRADESH - CORRIGENDUM - GEM PORTAL – REGARDING</a>
+                     </li>
+                                          <li class="notif">
+                        <a href="docs/tender_1774347423_2540.pdf" class="translatable imp_notif_2" target="_blank">TENDER NOTIFICATION FOR PROCUREMENT OF ICT INFRASTRUCTURE FOR REGULATION OF INTERNET USAGE FOR THE USE OF HIGH COURT OF ANDHRA PRADESH - GEM PORTAL - REGARDING</a>
+                     </li>
+                                          <a href="tenders.php?year=2026"><button class="btn btn-success translatable">View All</button></a>
+                  </ol>
+               </div>
+               <div class="tab-pane fade" id="nav-circulars" role="tabpanel" aria-labelledby="nav-circulars-tab">
+                  <ol>
+                                          <li class="notif">
+                        <a href="docs/notification_1773227045_0.pdf" class="translatable imp_notif_2" target="_blank">Circular - Courts - Criminal Order dated 15.01.2026 passed in Miscellaneous Application No. 2034 of 2022 in Miscellaneous Application No. 1849 of 2021 in Special Leave Petition (Criminal) No. 5191 of 2021 (Satender Kumar Antil v. Central Bureau of Investigation and another) by the Hon&#039;ble Supreme Court of India - Directed to ensure that all the Under Trial Prisoners are released either by giving the benefit of S.O.P. or by modifying the bail conditions -Reg.</a>
+                     </li>
+                                          <li class="notif">
+                        <a href="docs/notification_1770372374_0.pdf" class="translatable imp_notif_2" target="_blank">Vacancy Circular received from the National GreenTribunal, Principal Bench, New Delhi, inviting applications for filling-up of Principal Private Secretary and Private Secretary in the Principal Bench and various Benches of National Green Tribunal from interested candidates, on deputation basis.</a>
+                     </li>
+                                          <li class="notif">
+                        <a href="docs/notification_1770027158_0.pdf" class="translatable imp_notif_2" target="_blank">Circular received from the Armed Forces Tribunal, Principal Bench, New Delhi, inviting applications for filling-up the post of Assistant Registrar (Protocol) in the Armed Forces Tribunal, Principal Bench, New Delhi, on deputation basis from eligible Officers</a>
+                     </li>
+                                          <a href="circulars.php?year=2026"><button class="btn btn-primary translatable">View All</button></a>
+                  </ol>
+               </div>
+               <div class="tab-pane fade" id="nav-gazette" role="tabpanel" aria-labelledby="nav-gazette-tab">
+                  <ol>
+                                             <li class="notif translatable imp_notif_2"><a href="../docs/notification_1773058245_0.pdf" target="_blank">ESTABLISHMENT - HIGH COURT OF ANDHRA PRADESH - Gazetted - SERVICE RULES OF THE HIGH COURT OF ANDHRA PRADESH, 2025</a></li>
+                                                                     <li class="notif translatable imp_notif_2"><a href="../docs/safe_notification_04122025104221.pdf" target="_blank">SARDAR VALLABHBHAI PATEI NATIONAL POLICE ACADEMY - Inviting applications for filling up of one post of Assistant Director (Law), General Central Service, Group A Gazetted, Non-Ministerial Level-11 in the Pay Matrix, to be filled on a deputation basis at Sardhar Vallabhbhai Patel National Police Academy, Hyderabad</a></li>
+                                                                     <li class="notif translatable imp_notif_2"><a href="../docs/safe_notification_05082025075402.pdf" target="_blank">GAZETTE - ANDHRA PRADESH HIGH COURT ADMIRALTY (JURISDICTION AND SETTLEMENT OF MARITIME CLAIMS) RULES, 2024.</a></li>
+                                                                     <li class="notif translatable imp_notif_2"><a href=" docs/CMNOTIFICATION2022.pdf" target="_blank">Applications are invited for filling up of 10 vacancies in the post of COURT MASTER AND
+                                PERSONAL SECRETARY TO THE HON&#039;BLE JUDGES AND REGISTRARS (Gazetted) in the Andhra Pradesh
+                                High Court Service , by way of limited recruitment
+                                for scheduled Castes, Scheduled Tribes, Physically Handicapped and Backward Classes.</a></li>
+                                                                     <li class="notif translatable imp_notif_2"><a href=" docs/reg_vig.pdf" target="_blank">ESTABLISHMENT - HIGH COURT OF ANDHRA
+                                PRADESH - Gazetted - Smt. G. Sunitha, District and
+                                Sessions Judge, on other duty as Registrar
+                                (Recruitment) - Extension of the term of appointment
+                                _ ORDERS - ISSUED.</a></li>
+                                                                     <li class="notif translatable imp_notif_2"><a href=" docs/reg_enq.pdf" target="_blank">ESTABLISHMENT - HIGH COURT OF ANDHRA PRADESH - Gazetted - Sri Duppala Venkata Ramana,
+                                District and Sessions Judge on other duty as Registrar (Administration) - Extension of
+                                the term of appointment - ORDERS - ISSUED.</a></li>
+                                                                     <li class="notif translatable imp_notif_2"><a href=" docs/RJ.pdf" target="_blank">High Court of Andhra Pradesh Gazetted - Appointment to the post of Registrar (Judicial), High Court of Andhra Pradesh - Orders- issued</a></li>
+                                                                     <li class="notif translatable imp_notif_2"><a href=" docs/proceedings_it.pdf" target="_blank">High Court of Andhra Pradesh-Gazetted- Appointment to the post of Registrar (I.T,-cum-C.P.C.), High Court of Andhra Pradesh - Orders - Issued.</a></li>
+                                                                  <!-- <li class="notif translatable imp_notif_2"><a href="docs/High_Court_Service_Rules_20255.pdf" target="_blank">HIGH COURT OF ANDHRA PRADESH - SERVICE RULES - 2025</a></li> -->
+                     <li class="notif translatable imp_notif_2"><a href="docs/Vulnerable_Witnesses_2024_ROC_81.pdf" target="_blank">HIGH COURT OF ANDHRA PRADESH - UPDATED GUIDELINES FOR RECORDING OF EVIDENCE OF VULNERABLE WITNESSES, 2024.</a></li>
+                     <li class="notif translatable imp_notif_2"><a href="docs/NSTEP_gazette.pdf" target="_blank">HIGH COURT OF ANDHRA PRADESH - RULES FOR NATIONAL SERVICE AND TRACKING OF ELECTRONIC PROCESS (NSTEP).</a></li>
+                     <li class="notif translatable imp_notif_2"><a href="docs/Video Conferencing Rules_gazette.pdf" target="_blank">HIGH COURT OF ANDHRA PRADESH - RULES FOR VIDEO CONFERENCING FOR COURTS - DATE OF COMMENCEMENT OF THE RULES - NOTIFIED.</a></li>
+                     <li class="notif translatable imp_notif_2"><a href="docs/e-Filing Rules_gazette.pdf" target="_blank">HIGH COURT OF ANDHRA PRADESH - RULES FOR ON-LINE ELECTRONIC FILING (e-FILING RULES) - DATE OF COMMENCEMENT OF THE RULES - NOTIFIED.</a></li>
+                     <li class="notif translatable imp_notif_2"><a href="docs/Live Streaming Rules_gazette.pdf" target="_blank">HIGH COURT OF ANDHRA PRADESH - ANDHRA PRADESH LIVESTREAMING RULES FOR COURT PROCEEDINGS - DATE OF COMMENCEMENT OF THE RULES - NOTIFIED.</a></li>
+                     <a href="Gazette_Publications.php?year=2026"><button class="btn btn-warning translatable">View All</button></a>
+                  </ol>
+               </div>
+               <div class="tab-pane fade" id="nav-circulated" role="tabpanel" aria-labelledby="nav-circulated-tab">
+                  <ol>
+                                          <li class="notif">
+                        <a href="docs/circulated_judgements/judgment_Civil Appeal_6856_1769401618.pdf" class="translatable circulated_judgments imp_notif_2" target="_blank">Supreme Court of India - Civil Appeal No.6856/2025 - 15-05-2025 - M/S. Gayatri Project Limited <b>Vs.</b> Madhya Pradesh Road Development - Where the arbitration proceedings are still underway, but statement of defence has been filed, there it would not be open for the parties to raise an objection of lack of jurisdiction, but if the statement of defence has already been filed, the relevant stage for raising an issue of jurisdictions is already crossed and it would not be open for the parties to raise an objection of lack of jurisdiction.</a>
+                     </li>
+                                          <li class="notif">
+                        <a href="docs/circulated_judgements/judgment_SUO MOTU WRIT PETITION (C)_7_1771915501.pdf" class="translatable circulated_judgments imp_notif_2" target="_blank">Supreme Court of India - SUO MOTU WRIT PETITION (C) No.7/2024 - 22-04-2025 - NA <b>Vs.</b> NA - The Central Project Co-ordinator of e-court project or Registrar (Computer/IT) of the High Courts, as the case may be, with the help of the State Government, shall create a dashboard on which the information regarding the amounts lying deposited in connection with the compensation granted under 1988 or 1923 Acts shall be regularly uploaded with all details. It will help all concerned to implement the directions issued under this order.</a>
+                     </li>
+                                          <li class="notif">
+                        <a href="docs/circulated_judgements/judgment_MA_709_1769403552.pdf" class="translatable circulated_judgments imp_notif_2" target="_blank">Supreme Court of India - MA No.709/2022 - 04-05-2022 - Indira Jai Singh <b>Vs.</b> Supreme Court of India through it’s Secretary General - Instructions for designation of Advocates as Senior Advocates - We find that the allocation of 15 points for publication is high, and thus we deem it fit to reduce the available points under this category to 5 points. Most practicing advocates find very little time to write academic articles. In any case, academic publications require a different aptitude. However, given that Senior Advocates are expected to make nuanced and sophisticated submissions, academic knowledge of the law is an important prerequisite. Thus, we would not like to do away with this criteria, but expand what should fall under this criteria, while reducing the points under this category.</a>
+                     </li>
+                                          <a href="circulated_judgments.php"><button class="btn btn-primary translatable">View All</button></a>
+                  </ol>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container-fluid cal-div">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-6 col-sm-12 col-12 wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms">
+                  <a href="https://www.youtube.com/@highcourtofandhrapradesh5296" target="_blank">
+                     <h2 class="text-center text-white p-4 yt_name"><i class="fa fa-rss"></i> <span class="translatable link_hover">High Court - Youtube Channel</span></h2>
+                  </a>
+                  <div class="text-center" style="height:481px;">
+                                          <iframe
+                        class="iframe yt_channel"
+                        src="https://www.youtube.com/embed/vyIzPAYXP4A"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                        ></iframe>
+                  </div>
+               </div>
+               <div class="col-lg-6 col-sm-12 col-12 wow fadeInRight animated" data-wow-delay="0ms" data-wow-duration="1500ms">
+                  <h2 class="text-center text-white p-4 yt_name " id="calopen" style="cursor: pointer;"><i class="fa fa-calendar"></i> <span class="translatable link_hover">High Court Calendar</span></h2>
+                  <div id="app"></div>
+               </div>
+               <div class="modal fade" id="calmodal" role="dialog">
+                  <div class="modal-dialog modal-xl">
+                     <div class="modal-content">
+                        <div class="modal-body">
+                           <style type="text/css" nonce="7TyCbppLDv5VKZ5cXzm9FQ==">
+                              #toolbar{
+                              display: none !important;
+                              }
+                           </style>
+                           <iframe src="docs/calendars/hc_2026.pdf" style="width: 100%;height: 85vh;"></iframe>
+                        </div>
+                        <div class="modal-footer">
+                           <!-- <button type="button" class="btn btn-danger translatable" data-dismiss="modal">Close</button>
+                              -->
+                           <button type="button" id="calclose" class="btn btn-danger translatable">Close</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container-fluid asso-div-background">
+         <div class="container pt-5 pb-5">
+            <div class="text-center">
+               <img src="images/hc.webp" class="img img-responsive" alt="HC Background3" />
+            </div>
+            <h2 class="text-center translatable" style="font-size: 43px; font-family: 'Calibri'; font-weight: 600;">Associated Links</h2>
+            <div class="row" style="padding: 10px;">
+               <div class="col-md-3 col-xs-6 col-lg-3 col-sm-6 col-6 asso-div wow zoomIn" data-wow-delay="0ms" data-wow-duration="1000ms">
+                  <a href="https://ecommitteesci.gov.in/" style="text-decoration: none;" rel="noopener noreferrer" target="_blank">
+                     <div class="row asso-div-inner neu_tile_cust new_title_cont">
+                        <div class="col-md-4 col-sm-4 col-12">
+                           <img src="images/ecourts-logo.webp" class="asso-img" alt="ecourts" />
+                        </div>
+                        <div class="col-md-8 col-sm-8 col-12">
+                           <p class="asso-text translatable">e-Committee</p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="col-md-3 col-xs-6 col-lg-3 col-sm-6 col-6 asso-div wow zoomIn" data-wow-delay="50ms" data-wow-duration="1000ms">
+                  <a href="https://njdg.ecourts.gov.in/njdg_v3/" style="text-decoration: none;" rel="noopener noreferrer" target="_blank">
+                     <div class="row asso-div-inner neu_tile_cust new_title_cont">
+                        <div class="col-md-4">
+                           <img src="images/njdg.webp" class="asso-img"  alt="NJDG"/>
+                        </div>
+                        <div class="col-md-8">
+                           <p class="asso-text translatable">N J D G</p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="col-md-3 col-xs-6 col-lg-3 col-sm-6 col-6 asso-div wow zoomIn" data-wow-delay="100ms" data-wow-duration="1000ms">
+                  <a href="https://judgments.ecourts.gov.in/pdfsearch/index.php" style="text-decoration: none;" rel="noopener noreferrer" target="_blank">
+                     <div class="row asso-div-inner neu_tile_cust new_title_cont">
+                        <div class="col-md-4 col-lg-4">
+                           <img src="images/escr.webp" class="asso-img" alt="eSCR" />
+                        </div>
+                        <div class="col-md-8 col-lg-8">
+                           <p class="asso-text translatable">e S C R</p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="col-md-3 col-xs-6 col-lg-3 col-sm-6 col-6 asso-div wow zoomIn" data-wow-delay="150ms" data-wow-duration="1000ms">
+                  <a href="https://scr.sci.gov.in/scrsearch/" style="text-decoration: none;" rel="noopener noreferrer" target="_blank">
+                     <div class="row asso-div-inner neu_tile_cust new_title_cont">
+                        <div class="col-md-4">
+                           <img src="images/dgscr.webp" class="asso-img"  alt="Digi SCR"/>
+                        </div>
+                        <div class="col-md-8">
+                           <p class="asso-text translatable">S C R</p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="col-md-3 col-xs-6 col-lg-3 col-sm-6 col-6 asso-div wow zoomIn" data-wow-delay="200ms" data-wow-duration="1000ms">
+                  <a href="coming_soon.php" style="text-decoration: none;" target="_blank" style="text-decoration: none;">
+                     <div class="row asso-div-inner neu_tile_cust new_title_cont">
+                        <div class="col-md-4">
+                           <img src="images/apja.webp" class="asso-img"  alt="APJA"/>
+                        </div>
+                        <div class="col-md-8">
+                           <p class="asso-text translatable">A P J A</p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="col-md-3 col-xs-6 col-lg-3 col-sm-6 col-6 asso-div wow zoomIn" data-wow-delay="250ms" data-wow-duration="1000ms">
+                  <a href="https://apslsa.ap.nic.in/" style="text-decoration: none;" rel="noopener noreferrer" target="_blank">
+                     <div class="row asso-div-inner neu_tile_cust new_title_cont">
+                        <div class="col-md-4">
+                           <img src="images/apslsa.webp" class="asso-img"  alt="APSLSA"/>
+                        </div>
+                        <div class="col-md-8">
+                           <p class="asso-text translatable">A P S L S A</p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="col-md-3 col-xs-6 col-lg-3 col-sm-6 col-6 asso-div wow zoomIn" data-wow-delay="300ms" data-wow-duration="1000ms">
+                  <a id="aphclsc" href="https://digi-services.aphc.ap.gov.in/aphclsc/" style="text-decoration: none;" rel="noopener noreferrer" target="_blank">
+                     <div class="row asso-div-inner neu_tile_cust new_title_cont">
+                        <div class="col-md-4">
+                           <img src="images/apslsc.webp" class="asso-img"  alt="APHCLSC"/>
+                        </div>
+                        <div class="col-md-8">
+                           <p class="asso-text translatable">A P H C L S C</p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="col-md-3 col-xs-6 col-lg-3 col-sm-6 col-6 asso-div wow zoomIn" data-wow-delay="350ms" data-wow-duration="1000ms">
+                  <a href="lok_adalat.php" style="text-decoration: none;" target="_blank">
+                     <div class="row asso-div-inner neu_tile_cust new_title_cont">
+                        <div class="col-md-4">
+                           <img src="images/lok-adalat.webp" class="asso-img"  alt="Lok Adalat"/>
+                        </div>
+                        <div class="col-md-8">
+                           <p class="asso-text translatable">Lok Adalat</p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div id="citation" class="col-md-3 col-xs-6 col-lg-3 col-sm-6 col-6 asso-div wow zoomIn" data-wow-delay="400ms" data-wow-duration="1000ms">
+                  <a href="https://digi-services.aphc.ap.gov.in/citation/" style="text-decoration: none;" target="_blank">
+                     <div class="row asso-div-inner neu_tile_cust new_title_cont">
+                        <div class="col-md-4">
+                           <img src="images/neutral-citation.webp" class="asso-img"  alt="Neutral Citation"/>
+                        </div>
+                        <div class="col-md-8">
+                           <p class="asso-text translatable">Neutral Citation</p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="col-md-3 col-xs-6 col-lg-3 col-sm-6 col-6 asso-div wow zoomIn" data-wow-delay="450ms" data-wow-duration="1000ms">
+                  <a href="https://digi-services.aphc.ap.gov.in/apdigilr" style="text-decoration: none;" target="_blank">
+                     <div class="row asso-div-inner neu_tile_cust new_title_cont">
+                        <div class="col-md-4">
+                           <img src="images/aplr.webp" class="asso-img" alt="Digi APLR" />
+                        </div>
+                        <div class="col-md-8">
+                           <p class="asso-text translatable">Digi A P L R</p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <!-- <div id="juvenile_justice" class="col-md-3 col-xs-6 col-lg-3 col-sm-6 col-6 asso-div wow zoomIn" data-wow-delay="500ms" data-wow-duration="1000ms"> -->
+               <div class="col-md-3 col-xs-6 col-lg-3 col-sm-6 col-6 asso-div wow zoomIn" data-wow-delay="500ms" data-wow-duration="1000ms">
+                  <a href="https://digi-services.aphc.ap.gov.in/juvenile_justice/" style="text-decoration: none;" target="_blank">
+                     <div class="row asso-div-inner neu_tile_cust new_title_cont">
+                        <div class="col-md-4">
+                           <img src="images/jj.webp" class="asso-img"  alt="Juvenile Justice"/>
+                        </div>
+                        <div class="col-md-8">
+                           <p class="asso-text translatable">Juvenile Justice</p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <!-- <div id="accessibility_committee" class="col-md-3 col-xs-6 col-lg-3 col-sm-6 col-6 asso-div wow zoomIn" data-wow-delay="550ms" data-wow-duration="1000ms"> -->
+               <div class="col-md-3 col-xs-6 col-lg-3 col-sm-6 col-6 asso-div wow zoomIn" data-wow-delay="550ms" data-wow-duration="1000ms">
+                  <a href="https://digi-services.aphc.ap.gov.in/accessibility_committee/" style="text-decoration: none;" target="_blank">
+                     <div class="row asso-div-inner neu_tile_cust new_title_cont">
+                        <div class="col-md-4">
+                           <img src="images/aac.webp" class="asso-img"  alt="Accessibility"/>
+                        </div>
+                        <div class="col-md-8">
+                           <p class="asso-text translatable">Accessibility</p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container-fluid" style="background: url('images/multi.jpg');">
+         <div class="row p-5">
+            <div class="col-md-4 text-center">
+               <div class="pt-5">
+                  <img src="images/hc.webp" class="img img-responsive"  alt="Landmark Judgments"/>
+                  <h2 class="index_heading"><u class="translatable">Landmark Judgments</u></h2>
+               </div>
+               <div class="col-md-12 pt-5">
+                  <a href="landmark_judgments.php"><button class="btn btn-dark text-right mt-2 mb-2 btn-block translatable">View All</button></a>
+               </div>
+            </div>
+            <div class="col-md-8" style="border: 1px solid;background: #ffffff7a;">
+               <div class="row">
+                  <div class="col-md-4 d-flex justify-content-center align-items-center">
+                     <div class="p-2">
+                        <img class="img-thumbnail imp_judge_img" src="images/judgment.webp"  alt="HC Background4"/>
+                     </div>
+                  </div>
+                                    <div class="col-md-8 text-left">
+                     <div style="margin-top: 10px; padding: 10px; float: left;">
+                        <p class="translatable" style="color: #196e0e; font-size: 20px; font-weight: 600;">C.A. No. 841/2018</p>
+                        <p style="color: #085278; font-size: 19px; text-transform: uppercase;"><span class="translatable">M/S. BAJAJ ALLIANCE GENERAL INSURANCE CO.LTD.</span> <b class="translatable" style="color: #811212";>  VS  </b> <span class="translatable">RAMBHA DEVI</span></p>
+                        <p class="translatable tes-wrapper2" style="text-align:justify;color: #a36304;min-height: 100px;">The Constitution Bench (five judges) unanimously upheld the correctness of the law laid down in Mukund Dewangan and decided that a person holding an LMV license was entitled to drive a transport vehicle weighing less than 7,500 kgs without any additional endorsement on their license. The judgment of the Court was authored by Justice Roy.</p>
+                        <a class="translatable btn " href="docs/imp_judgements/f07950f62e2d9da4246aa970da5eea19.pdf" target="_blank" style="padding: 5px 33px; font-size: 20px; margin-top: 5px; background: #062b36; color: #ebaa58;" class="btn mb-2">View Full Judgment</a>
+                        <!-- <input type="submit" class="btn " value="View Judgment"> -->
+                     </div>
+                  </div>
+                                    <!-- <div class="col-md-3">
+                     <div class="d-flex justify-content-center align-items-center view_btn p-2" style="height: 100%;">
+                         <a href="view.php"><button class="btn btn-dark">View All</button></a>
+                     </div>
+                     </div> -->
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container-fluid text-center tr_jud_div">
+         <img src="images/hc-white.webp" class="img pt-5"  alt="eAPHCR"/>
+         <!-- <h1 class="text-center pb-4" id="eaphcr"><a href="https://aphc2.in/eaphcr/" target="_blank" style="color: #fff; font-family: 'Calibri'; font-weight: 600;" class="translatable">eAPHCR <br>(Translated Judgments)</a></h1> -->
+         <h1 class="text-center pb-4 "><a href="https://digi-services.aphc.ap.gov.in/eaphcr/" target="_blank" style="font-family: 'Calibri'; font-weight: 600;" class="translatable link_hover">eAPHCR </a></h1>
+         <div class="row pb-2">
+                        <div class=" col-md-6" style="padding: 10px; border-right: 1px solid #7a7575;" id="sci_judgments">
+               <div class="row">
+                  <div class="col-md-4 d-flex justify-content-center align-items-center mb-3">
+                     <img class="img-thumbnail" src=" images/sci.webp" style="height: 150px;" alt="HC Background5">
+                  </div>
+                  <div class="col-md-8 text-left">
+                     <span id="eapchr_sci">
+                        <a href="https://digi-services.aphc.ap.gov.in/eaphcr/sci_judgements.php" target="_blank">
+                           <h4 class="link_hover"><u>Supreme Court of India Judgments</u></h4>
+                        </a>
+                     </span>
+                     <div class="mt-2 p-2 judgement_translatable_eng trans_classs">
+                        <p class="judgment_txt"> April 19 2023</p>
+                        <p class="judgment_txt">  Civil Appeal/2926/2023</p>
+                        <p class="judgment_txt">  Hon'ble Justice M. R. SHAH, AHSANUDDIN AMANULLAH</p>
+                        <p class="judgment_txt">  LAND ACQUISITION COLLECTOR (SOUTH) Vs. HARI CHAND AND ANR.</p>
+                        <div class="p-3">
+                           <a href="https://digi-services.aphc.ap.gov.in/eaphcr/docs/sci/eng/250315155746_eng.pdf" target="_blank"><button type="button" class="btn btn-success judgment_view_all">Judgment</button></a>
+                        </div>
+                     </div>
+                     <hr style="border-top: 1px solid #70706d;margin-bottom: 20px;">
+                     <div class="mt-2 p-2 judgement_translatable2 trans_classs">
+                        <p class="judgment_txt judgement_translatable"> April 19 2023</p>
+                        <p class="judgment_txt judgement_translatable">  Civil Appeal/2926/2023</p>
+                        <p class="judgment_txt judgement_translatable">  Honourable  Judge M. R. SHAH, AHSANUDDIN AMANULLAH</p>
+                        <p class="judgment_txt">  LAND ACQUISITION COLLECTOR (SOUTH) Vs. HARI CHAND AND ANR.</p>
+                        <div class="p-3">
+                           <a href="https://digi-services.aphc.ap.gov.in/eaphcr/docs/sci/tel/250315155746_tel.pdf" target="_blank"><button type="button" class="btn btn-success judgment_view_all judgement_translatable">Judgment</button></a>
+                        </div>
+                     </div>
+                     <hr style="border-top: 1px solid #70706d;margin-bottom: 20px;">
+                  </div>
+               </div>
+            </div>
+                        <div class="col-md-6" style="padding: 10px; border-right: 1px solid #7a7575;" id="sci_judgments">
+               <div class="row">
+                  <div class="col-md-4 d-flex justify-content-center align-items-center mb-3">
+                     <img class="img-thumbnail" src="images/hcap.webp" style="height: 150px;"  alt="HC Background6">
+                  </div>
+                  <div class="col-md-8 text-left">
+                     <span id="eapchr_aphc">
+                        <a href="https://digi-services.aphc.ap.gov.in/eaphcr/" target="_blank" >
+                           <h4 class="link_hover"><u>High Court of Andhra Pradesh Judgments</u></h4>
+                        </a>
+                     </span>
+                     <div class="mt-2 p-2 judgement_translatable_eng trans_classs">
+                        <p class="judgment_txt"> December 26 2023</p>
+                        <p class="judgment_txt">  MACMA/2415/2013</p>
+                        <p class="judgment_txt judgement_translatable">  Hon'ble Justice B V L N CHAKRAVARTHI</p>
+                        <p class="judgment_txt">  The A.P.S.R.T.C Vs. Kasunuru Moshe</p>
+                        <div class="p-3">
+                           <script type="text/javascript"  nonce="7TyCbppLDv5VKZ5cXzm9FQ==">
+                              console.log('tesst:'+localStorage.getItem("isInternal"));
+                              if (localStorage.getItem("isInternal")) {
+                                  $("#hc_eng").html('<p>Hellow</p>');
+                                  console.log('test');
+                              }
+                           </script>
+                           <span id="hc_eng"></span>
+                           <a href="https://digi-services.aphc.ap.gov.in/citation_files/203600024152013_7.pdf" target="_blank"><button type="button" class="btn btn-success judgment_view_all">Judgment</button></a>
+                        </div>
+                     </div>
+                     <hr style="border-top: 1px solid #70706d;margin-bottom: 20px;">
+                     <div class="mt-2 p-2 judgement_translatable4 trans_classs">
+                        <p class="judgment_txt judgement_translatable"> December 26 2023</p>
+                        <p class="judgment_txt judgement_translatable">MACMA/2415/2013</p>
+                        <p class="judgment_txt judgement_translatable">  Honourable Judge B V L N CHAKRAVARTHI</p>
+                        <p class="judgment_txt">  The A.P.S.R.T.C Vs. Kasunuru Moshe</p>
+                        <div class="p-3">
+                           <a href="https://digi-services.aphc.ap.gov.in/eaphcr/docs/tel/203600024152013_7.pdf" target="_blank"><button type="button" class="btn btn-success judgment_view_all judgement_translatable">Judgment</button></a>
+                        </div>
+                     </div>
+                     <hr style="border-top: 1px solid #70706d;margin-bottom: 20px;">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container-fluid" style="background:  url('images/multi.jpg');">
+         <div class="row" id="contentDiv" style="padding: 10px;">
+            <div class="row">
+               <!-- Left Side: Did You Know Section -->
+               <div class="col-md-4 text-center d-flex justify-content-center align-items-center">
+                  <div>
+                     <img src="images/hc.webp" class="img img-responsive" alt="HC Image" />
+                     <h1 style="color: #643200; font-family: 'Farro', sans-serif; font-weight: 600;"><u class="translatable">Did you know</u>?</h1>
+                  </div>
+               </div>
+               <!-- Right Side: Justice Information Section -->
+                              <div class="col-md-8" style="border: 1px solid;background: #ffffff7a;">
+                  <div class="row">
+                     <div class="col-md-4 text-center">
+                        <img class="img-thumbnail" src="images/did_u_know/Justice_K.Amareswari.webp" alt="Hon'ble Smt. Justice K. Amareswari " style="width: 200px; padding: 10px; margin: 18px 0;" />
+                     </div>
+                     <div class="col-md-8 text-left">
+                        <div style="margin: 10px; padding: 10px;">
+                           <h4 style="color: #196e0e;" class="translatable">Hon'ble Smt. Justice K. Amareswari </h4>
+                           <p style="color: #b97700; font-size: 19px;" class="translatable">The First woman judge of the High Court of Andhra Pradesh</p>
+                           <p class="tes-wrapper2 translatable" style="color: #56252c; font-size: 18px; text-align: justify;">
+                              Amareswari was born in Appikatla Village in Guntur District. She graduated with a master's degree in Politics and History from Andhra University College of Law in the year 1949. She completed her bachelor's in law from the same university. She became the first lady judge of the Andhra Pradesh High Court. She was a member of the Bar Council from 1960 to 1961 and was appointed Judge directly from the Bar. She was the Vice-President of the Indian Federation of Women Lawyers.[2] She also worked as the Vice-President of the Andhra Pradesh High Court Advocates Association during the period 1975-1976. In the year 1978 on 29 April she was appointed permanent Judge for Andhra Pradesh High Court. She died on 25 July 2009, in New Delhi where she had been practising as a senior advocate at the Supreme Court. She is survived by a son and daughter.                           </p>
+                           <button type="button" class="btn btn-info btn-lg translatable" id="view_more" data-toggle="modal" data-target="#myModal" style="padding: 5px 60px; font-size: 20px; margin-top: 20px; background: #062b36; color: #ebaa58;">
+                           View More
+                           </button>
+                           <div class="modal fade" id="myModal" role="dialog">
+                              <div class="modal-dialog modal-lg">
+                                 <div class="modal-content">
+                                    <div class="modal-body">
+                                       <div class="text-center">
+                                          <img class="img-thumbnail text-center" src="images/did_u_know/Justice_K.Amareswari.webp" alt="Hon'ble Smt. Justice K. Amareswari " style="width: 200px; padding: 10px; margin: 18px 0;" />
+                                          <p style="color: #196e0e; font-size: 19px;">
+                                             <b class="translatable">Hon'ble Smt. Justice K. Amareswari </b>
+                                          </p>
+                                          <p style="color: #b97700; font-size: 19px;">
+                                             <b class="translatable">The First woman judge of the High Court of Andhra Pradesh</b>
+                                          </p>
+                                       </div>
+                                       <hr />
+                                       <p style="color: #56252c; font-size: 18px; text-align: justify;" class="translatable">
+                                          Amareswari was born in Appikatla Village in Guntur District. She graduated with a master's degree in Politics and History from Andhra University College of Law in the year 1949. She completed her bachelor's in law from the same university. She became the first lady judge of the Andhra Pradesh High Court. She was a member of the Bar Council from 1960 to 1961 and was appointed Judge directly from the Bar. She was the Vice-President of the Indian Federation of Women Lawyers.[2] She also worked as the Vice-President of the Andhra Pradesh High Court Advocates Association during the period 1975-1976. In the year 1978 on 29 April she was appointed permanent Judge for Andhra Pradesh High Court. She died on 25 July 2009, in New Delhi where she had been practising as a senior advocate at the Supreme Court. She is survived by a son and daughter.                                       </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                       <button type="button" class="btn btn-danger translatable" data-bs-dismiss="modal" id="closeModalBtnFooter">Close</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+                           </div>
+         </div>
+      </div>
+      <div class="container-fluid othr-links text-center pt-5 pb-5">
+         <div class="container">
+            <img src="images/hc-white.webp" class="img img-responsive" alt="HC Background7"/>
+            <h2 class="text-center" style="padding: 15px; color: #58b729;"><span class="othr-text translatable">OTHER </span><span class="translatable">LINKS</span></h2>
+            &nbsp; 
+            <a class="othr-link-text translatable" href="https://dashboard.adalat.ai/login/" target="_blank">Adalat A I</a>&nbsp;<span class="bar">|</span>&nbsp;
+            <a class="othr-link-text translatable" href="https://indiankanoon.org/" target="_blank">Indian Kanoon</a>&nbsp;<span class="bar">|</span>&nbsp; 
+            <a class="othr-link-text translatable" href="https://ecommitteesci.gov.in/publication-type/newsletters/" target="_blank">e-Committee Newsletter</a>&nbsp;<span class="bar">|</span>&nbsp;
+            <a class="othr-link-text translatable" href="https://sclsc.gov.in/" target="_blank">Supreme Court Legal Services</a>&nbsp;<span class="bar">|</span>&nbsp;
+            <a class="othr-link-text translatable" href="https://nalsa.gov.in/" target="_blank">National Legal Services Authority</a>&nbsp;<span class="bar">|</span>&nbsp;
+            <a class="othr-link-text translatable" href="https://doj.gov.in/" target="_blank">Department of Justice</a>&nbsp;<span class="bar">|</span>&nbsp;
+            <a class="othr-link-text translatable" href="https://barcouncilap.org/" target="_blank">Bar Council of the State of Andhra Pradesh</a>&nbsp;<span class="bar">|</span>&nbsp; 
+            <a class="othr-link-text translatable" href="https://aphcaa.in/" target="_blank">Andhra Pradesh High Court Advocates Association</a>&nbsp;<span class="bar">|</span>&nbsp;
+            <a class="othr-link-text translatable" href="docs/midiationcenter.pdf" target="_blank">High Court Mediation & Arbitration Centre</a>&nbsp;<span class="bar">|</span>&nbsp; 
+            <a class="othr-link-text translatable" href="https://ncdrc.nic.in/" target="_blank">National Consumer Disputes Redressal Commission</a>&nbsp;<span class="bar">|</span>&nbsp;
+            <a class="othr-link-text translatable" href="https://scdrc.ap.nic.in/" target="_blank">Andhra Pradesh State Consumer Disputes Redressal Commission</a>&nbsp;<span class="bar">|</span>&nbsp; 
+            <a class="othr-link-text translatable" href="https://aftdelhi.nic.in/" target="_blank">Armed Forces Tribunal</a>&nbsp;<span class="bar">|</span>&nbsp;
+            <a class="othr-link-text translatable" href="https://legislative.gov.in/vidhi-sahitya-prakashan/" target="_blank">Azadi Ka Amrit Mahotsav</a>&nbsp;<span class="bar">|</span>&nbsp;  
+            <a class="othr-link-text translatable" href="https://goir.ap.gov.in/" target="_blank">Andhra Pradesh Government Orders issue Register</a>&nbsp;<span class="bar">|</span>&nbsp;
+            <a class="othr-link-text translatable" href="td1/" target="_blank">Telephone Directory</a>
+         </div>
+      </div>
+
+      <div class="container-fluid footer">
+  <button onclick="topFunction()" id="BacktoTop" title="Go to top"> &nbsp;^&nbsp; </button>
+  <div class="container">
+     <div class="row">
+       <div class="col-md-4">                
+          <a href="https://maps.app.goo.gl/qbR8kcUJh8zBtbWZ7" target="_blank"> 
+            <ul class="pt-4">
+              <li></li>
+              <li><p class="footer-text"><i class="fa fa-map-marker footer-icon"></i>&nbsp;&nbsp;<span class="translatable">GF9P+R69, Nelapadu</span></p></li>
+              <li><p class="footer-text">&nbsp;&nbsp;&nbsp;&nbsp;<span class="translatable">Amaravati, Guntur District</span></p></li>
+              <li><p class="footer-text">&nbsp;&nbsp;&nbsp;&nbsp;<span class="translatable">Andhra Pradesh </span></p></li>
+              <li><p class="footer-text">&nbsp;&nbsp;&nbsp;&nbsp;<span class="translatable">522239</span></p></li>
+              <li></li>
+            </ul>
+          </a>
+       </div>
+       <div class="col-md-4">
+          <ul class="pt-4">
+            <li></li>
+            <li><a href="policy.php?Content=WP"><p class="footer-text"><i class="fa fa-lock footer-icon"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span class="translatable">Website Policy</span></p></a></li>
+            <li><a href="policy.php?Content=AS"><p class="footer-text"><i class="fa fa-wheelchair footer-icon"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span class="translatable">Accessibility Statement</span></p></a></li>
+            <li><a href="policy.php?Content=HLP"><p class="footer-text"><i class="fa fa-link footer-icon"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span class="translatable">Hyperlinking Policy</span></p></a></li>
+            <li><a href="policy.php?Content=DR"><p class="footer-text"><i class="fa fa-exclamation-circle footer-icon"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span class="translatable">Disclaimer</span></p></a></li>
+            <li><a href="policy.php?Content=SM"><p class="footer-text"><i class="fa fa-sitemap footer-icon"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span class="translatable">Site Map</span></p></a></li>
+          </ul>
+       </div>
+       <div class="col-md-4">
+          <ul class="pt-4 pb-4">
+            <li></li>
+            <li><p class="footer-text text-justify"><span class="translatable">Content Owned by </span><br><span class="translatable">High Court of Andhra Pradesh</span>
+            <br><span class="translatable">Developed and hosted by</span><br>
+            <a href="http://www.nic.in" target="_blank" rel="noopener noreferrer" aria-label="National Informatics Centre" title="National Informatics Centre - External site opens in a new window"><font style="color: #f5b869"><span class="translatable">National Informatics Centre (NIC)</span></font></a>,<br> <span class="translatable">Ministry of Electronics &amp; IT, </span><br> <span class="translatable">Government of India.</span></p></li>
+          </ul>
+     </div>
+     </div>
+</div>
+
+  <div class="container-fluid">
+    <div class="container text-center">
+      <div class="col-md-12 text-center" >
+       <p class="footer-text translatable">&copy; High Court of Andhra Pradesh </p>
+     </div>
+    
+
+     <div class=" col-md-12 text-center" style="border-top:1px solid #9a9a9a">
+       <p style="letter-spacing: 6px;font-size: 18px;color:#fff;">Total Visitors:35687588 </p>     </div>
+    </div>
+  </div>
+
+  <!-- chat_script.php -->
+<style>
+      .chatbot-image {
+  border-radius:50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    /*box-shadow: 0 0 0 0 rgba(245, 183, 39, 0.6);*/
+  }
+  70% {
+    transform: scale(1.05);
+    /*box-shadow: 0 0 0 20px rgba(245, 183, 39, 0);*/
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+<div class="floating-chat">
+    <img src="images/Lexika.png" class="chatbot-image" style="width:85px;border-radius:50%;margin-top:-2px;">
+<!--     <p class="wave-text">
+  <span>A</span><span>s</span><span>k</span>
+  <span>&nbsp;</span>
+  <span>L</span><span>e</span><span>x</span><span>i</span><span>k</span><span>a</span>
+</p> -->
+<p class="wave-text">
+  <span style="--i:1">A</span>
+  <span style="--i:2">s</span>
+  <span style="--i:3">k</span>
+  <span style="--i:4">&nbsp;</span>
+  <span style="--i:5">L</span>
+  <span style="--i:6">e</span>
+  <span style="--i:7">x</span>
+  <span style="--i:8">i</span>
+  <span style="--i:9">k</span>
+  <span style="--i:10">a</span>
+</p>
+
+    <div class="chat">
+        <div class="header d-flex justify-content-center align-items-center" id="fa-fa-comments">
+            <span class="title text-left lexika-text">
+    <span id="lexika-line1"></span><br>
+    <small id="lexika-line2"></small>
+</span>
+            <button type="button">
+                <i class="fa fa-times" id="close_bot"></i>
+            </button>
+        </div>
+
+        <ul class="messages">
+            <!-- <li class="self">Hi I'm <b>Lexika</b>. Welcome to the High Court.</li> -->
+            <!-- <li class="self">How can I help you?</li>
+            <li class="self">Choose an option from the list below.</li>
+
+            <li class="self" id="main_menu">
+                <div class="row p-2">
+                    <div class="badge bg-light text-dark mb-2 w-70 p-2 badge-cust" data-option="cause_list">Cause List</div>
+                    <div class="badge bg-light text-dark mb-2 w-70 p-2 badge-cust" data-option="case_status">Case Status</div>
+                    <div class="badge bg-light text-dark mb-2 w-70 p-2 badge-cust" data-option="notice">Notice</div>
+                    <div class="badge bg-light text-dark mb-2 w-70 p-2 badge-cust" data-option="roster">Roster</div>
+                    <div class="badge bg-light text-dark mb-2 w-70 p-2 badge-cust" data-option="notifications">Notifications</div>
+                    <div class="badge bg-light text-dark mb-2 w-70 p-2 badge-cust" data-option="other_services">Other Services</div>
+                </div>
+            </li> -->
+        </ul>
+
+        <div style="border-top:3px solid #808080;"></div>
+
+        <div class="footer chat-footer">
+            <input type="text" class="form-control chat-input-box" id="chat-search-input" placeholder="Enter Advocate code here.">
+            <button id="sendinput">send</button>
+        </div>
+        <div class="footer chat-footer-search">
+            <input type="text" class="form-control chat-input-box" id="chat-input-search" placeholder="Enter Search Keyword...">
+            <button id="sendinputsearch">search</button>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="chat_assets/chat.css">
+<style>
+    .tri-color-text {
+        background-image: linear-gradient(to right, #ff671f, #ffffff, #046a38); /* Example: Orange, Green, Blue */
+        -webkit-background-clip: text; 
+        background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        color: transparent;
+    }
+    .chat-event{
+        color: #00f !important;
+        width: 50% !important;
+        text-align: center !important;
+        height: 48px !important;
+    }
+    .chat-event-2{
+        background-image: url('includes/flag2.jpg') !important;
+        height: 45px;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+    }
+    .chat-event-2:after {
+        position: absolute;
+        top: 0;
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 10px solid #fa830f !important;
+    }
+</style>
+<script>
+        const messagesHTML = [
+  `<li class="self">How can I help you?</li>`,
+  `<li class="self">Choose an option from the list below.</li>`,
+  `<li class="self" id="main_menu">
+      <div class="row p-2">
+        <div class="badge bg-light text-dark mb-2 w-70 p-2 badge-cust" data-option="cause_list">Cause List</div>
+        <div class="badge bg-light text-dark mb-2 w-70 p-2 badge-cust" data-option="case_status">Case Status</div>
+        <div class="badge bg-light text-dark mb-2 w-70 p-2 badge-cust" data-option="notice">Notice</div>
+        <div class="badge bg-light text-dark mb-2 w-70 p-2 badge-cust" data-option="roster">Roster</div>
+        <div class="badge bg-light text-dark mb-2 w-70 p-2 badge-cust" data-option="notifications">Notifications</div>
+        <div class="badge bg-light text-dark mb-2 w-70 p-2 badge-cust" data-option="other_services">Search for other Services</div>
+      </div>
+    </li>`
+];
+</script>
+<script src="chat_assets/chat.js"></script>
+
+
+
+
+
+
+
+<script src="js/acc.js"></script>
+      <script src="js/index_page.js"></script>
+      <script src="assets/jquery/plugins.js"></script>
+      <script src="assets/owl.carousel.min.js"></script>
+      <script src="assets/js/custom2.js"></script>
+      <script src="js/bootstrap4.6.0.bundle.min.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="css/swiper-bundle.min.css">
+      <script src="js/swiper-bundle.min.js"></script>
+      
+<script type="text/javascript">
+  'use strict';
+
+  // Public Globals
+  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+
+  let c_date = new Date();
+  let today_date = c_date.getDate();
+  let day = c_date.getDay();
+  let month = c_date.getMonth();
+  let year = c_date.getFullYear();
+
+  (function App() {
+    const calendar = `<div class="container cal_div">
+          <div class="row mb-5">
+              <div class="col-lg-9  col-sm-12 col-12 p-0 d-flex" style="box-shadow:0px 32px 47px rgba(32, 23, 23, 0.09)">
+                  <div class="border-0 flex-fill">
+                      <div class="card-header p-3 d-flex justify-content-between">
+                          <span class="prevMonth">&#10096;</span>
+                          <span><strong id="s_m"></strong></span>
+                          <span class="nextMonth">&#10097;</span>
+                      </div>
+                      <div class="card-body px-1 py-3">
+                          <div class="table-responsive">
+                              <table class="table table-sm table-borderless">
+                                  <thead class="days text-center">
+                                      <tr>
+                                          ${Object.keys(days)
+                                            .map((key) => `<th><span>${days[key].substring(0, 3)}</span></th>`)
+                                            .join('')}
+                                      </tr>
+                                  </thead>
+                                  <tbody id="dates" class="dates text-center"></tbody>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-sm-12 col-12 d-flex cal_events" style="padding: 0px">
+                  <div class="opacity_bg">
+                    <div class="current_day mt-5"><span>${today_date}</span></div>
+                    <div class="current_day_name"><span>${days[day]}</span></div>
+                    <div class="current-events mt-5">Event Name</div>
+                    <div class="details_events">
+                      <ul class="details_summary">
+                        <li><span>11:45 AM VC1</span></li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>`;
+    document.getElementById('app').innerHTML = calendar;
+  })();
+
+  var specialDates = [new Date(2024, 0, 14), new Date(2024, 2, 8), new Date(2024, 0, 1), new Date(2024, 0, 16), new Date(2024, 3, 5), new Date(2024, 3, 10), new Date(2024, 3, 9), new Date(2024, 3, 17), new Date(2024, 9, 11), new Date(2024, 1, 14), new Date(2024, 9, 30), new Date(2024, 4, 23), new Date(2024, 7, 16), new Date(2024, 9, 31), new Date(2024, 7, 19), new Date(2024, 10, 15), new Date(2024, 0, 17), new Date(2024, 0, 18), new Date(2024, 0, 19), new Date(2024, 0, 25), new Date(2024, 0, 15), new Date(2024, 2, 29), new Date(2024, 7, 15), new Date(2024, 8, 7), new Date(2024, 8, 16), new Date(2024, 9, 2), new Date(2024, 9, 7), new Date(2024, 9, 8), new Date(2024, 9, 9), new Date(2024, 9, 10), new Date(2024, 4, 10), new Date(2024, 6, 16), new Date(2024, 6, 17), new Date(2024, 11, 24), new Date(2024, 11, 26), new Date(2024, 11, 25), new Date(2024, 0, 26), new Date(2025, 0, 26), new Date(2025, 7, 14), new Date(2025, 5, 7), new Date(2025, 7, 15), new Date(2025, 7, 16), new Date(2025, 5, 27), new Date(2025, 2, 28), new Date(2025, 4, 12), new Date(2025, 6, 5), new Date(2025, 3, 30), new Date(2025, 2, 27), new Date(2024, 4, 14), new Date(2024, 4, 15), new Date(2024, 4, 16), new Date(2024, 4, 17), new Date(2024, 4, 18), new Date(2024, 4, 19), new Date(2024, 4, 20), new Date(2024, 4, 21), new Date(2024, 4, 22), new Date(2024, 4, 23), new Date(2024, 4, 24), new Date(2024, 4, 25), new Date(2024, 4, 26), new Date(2024, 4, 27), new Date(2024, 4, 28), new Date(2024, 4, 29), new Date(2024, 4, 30), new Date(2024, 4, 31), new Date(2024, 5, 1), new Date(2024, 5, 2), new Date(2024, 5, 3), new Date(2024, 5, 4), new Date(2024, 5, 5), new Date(2024, 5, 6), new Date(2024, 5, 7), new Date(2024, 5, 8), new Date(2024, 5, 9), new Date(2024, 5, 10), new Date(2024, 5, 11), new Date(2024, 5, 12), new Date(2024, 5, 13), new Date(2024, 5, 14), new Date(2025, 0, 1), new Date(2024, 10, 2), new Date(2025, 1, 26), new Date(2025, 3, 14), new Date(2025, 0, 14), new Date(2025, 0, 15), new Date(2025, 3, 5), new Date(2025, 7, 27), new Date(2025, 2, 14), new Date(2025, 9, 21), new Date(2025, 2, 31), new Date(2025, 1, 14), new Date(2025, 11, 25), new Date(2025, 9, 1), new Date(2025, 10, 5), new Date(2025, 3, 18), new Date(2025, 9, 20), new Date(2025, 7, 8), new Date(2025, 9, 2), new Date(2025, 0, 27), new Date(2025, 8, 5), new Date(2025, 8, 30), new Date(2025, 11, 24), new Date(2025, 3, 10), new Date(2025, 11, 26), new Date(2025, 0, 16), new Date(2025, 0, 17), new Date(2025, 8, 29), new Date(2025, 8, 30), new Date(2025, 9, 1), new Date(2025, 9, 2), new Date(2025, 9, 3), new Date(2025, 0, 13), new Date(2025, 4, 12), new Date(2025, 4, 13), new Date(2025, 4, 14), new Date(2025, 4, 15), new Date(2025, 4, 16), new Date(2025, 4, 17), new Date(2025, 4, 18), new Date(2025, 4, 19), new Date(2025, 4, 20), new Date(2025, 4, 21), new Date(2025, 4, 22), new Date(2025, 4, 23), new Date(2025, 4, 24), new Date(2025, 4, 25), new Date(2025, 4, 26), new Date(2025, 4, 27), new Date(2025, 4, 28), new Date(2025, 4, 29), new Date(2025, 4, 30), new Date(2025, 4, 31), new Date(2025, 5, 1), new Date(2025, 5, 2), new Date(2025, 5, 3), new Date(2025, 5, 4), new Date(2025, 5, 5), new Date(2025, 5, 6), new Date(2025, 5, 7), new Date(2025, 5, 8), new Date(2025, 5, 9), new Date(2025, 5, 10), new Date(2025, 5, 11), new Date(2025, 5, 12), new Date(2025, 5, 13), new Date(2025, 6, 6), new Date(2025, 7, 25), new Date(2025, 7, 26), new Date(2025, 9, 22), new Date(2025, 3, 11), new Date(2025, 3, 15), new Date(2025, 3, 6), new Date(2025, 2, 30), new Date(2026, 2, 26), new Date(2026, 0, 1), new Date(2026, 0, 13), new Date(2026, 0, 14), new Date(2026, 0, 15), new Date(2026, 0, 26), new Date(2026, 2, 4), new Date(2026, 2, 21), new Date(2026, 2, 25), new Date(2026, 3, 3), new Date(2026, 3, 13), new Date(2026, 3, 14), new Date(2026, 4, 27), new Date(2026, 5, 26), new Date(2026, 7, 15), new Date(2026, 7, 26), new Date(2026, 7, 27), new Date(2026, 7, 28), new Date(2026, 8, 4), new Date(2026, 8, 14), new Date(2026, 9, 2), new Date(2026, 9, 19), new Date(2026, 9, 20), new Date(2026, 9, 21), new Date(2026, 10, 7), new Date(2026, 10, 9), new Date(2026, 11, 25), new Date(2026, 1, 15), new Date(2026, 3, 5), new Date(2026, 10, 8), new Date(2026, 0, 9), new Date(2026, 0, 10), new Date(2026, 0, 11), new Date(2026, 0, 12), new Date(2026, 0, 13), new Date(2026, 0, 14), new Date(2026, 0, 15), new Date(2026, 0, 16), new Date(2026, 4, 11), new Date(2026, 4, 12), new Date(2026, 4, 13), new Date(2026, 4, 14), new Date(2026, 4, 15), new Date(2026, 4, 16), new Date(2026, 4, 17), new Date(2026, 4, 18), new Date(2026, 4, 19), new Date(2026, 4, 20), new Date(2026, 4, 21), new Date(2026, 4, 22), new Date(2026, 4, 23), new Date(2026, 4, 24), new Date(2026, 4, 25), new Date(2026, 4, 26), new Date(2026, 4, 27), new Date(2026, 4, 28), new Date(2026, 4, 29), new Date(2026, 4, 30), new Date(2026, 4, 31), new Date(2026, 5, 1), new Date(2026, 5, 2), new Date(2026, 5, 3), new Date(2026, 5, 4), new Date(2026, 5, 5), new Date(2026, 5, 6), new Date(2026, 5, 7), new Date(2026, 5, 8), new Date(2026, 5, 9), new Date(2026, 5, 10), new Date(2026, 5, 11), new Date(2026, 5, 12), new Date(2026, 9, 22), new Date(2026, 9, 23), new Date(2026, 0, 3), new Date(2026, 0, 16), new Date(2026, 0, 23), new Date(2026, 1, 3), new Date(2026, 2, 31), new Date(2026, 3, 20), new Date(2026, 4, 1), new Date(2026, 5, 3), new Date(2026, 5, 25), new Date(2026, 6, 16), new Date(2026, 6, 29), new Date(2026, 7, 4), new Date(2026, 9, 10), new Date(2026, 10, 24), new Date(2026, 11, 24), new Date(2026, 11, 26), new Date(2026, 0, 31), new Date(2026, 2, 7), new Date(2026, 8, 19), new Date(2026, 10, 21), new Date(2026, 2, 19), new Date(2026, 2, 27), new Date(2025, 0, 17), new Date(2025, 7, 30), new Date(2025, 10, 22), new Date(2025, 11, 20), new Date(2025, 4, 15), new Date(2025, 4, 22), new Date(2025, 4, 29), new Date(2025, 6, 5), new Date(2025, 9, 3)]; 
+  var specialClasses = ['public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'optional-holiday', 'public-holiday', 'optional-holiday', 'optional-holiday', 'public-holiday', 'optional-holiday', 'optional-holiday', 'vacation', 'vacation', 'vacation', 'optional-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'vacation', 'vacation', 'vacation', 'vacation', 'optional-holiday', 'optional-holiday', 'public-holiday', 'optional-holiday', 'optional-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'optional-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'optional-holiday', 'public-holiday', 'public-holiday', 'optional-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'optional-holiday', 'public-holiday', 'public-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'public-holiday', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'public-holiday', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'vacation', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'optional-holiday', 'public-holiday', 'public-holiday', 'vacation-court', 'court-day', 'court-day', 'court-day', 'vacation-court', 'vacation-court', 'vacation-court', 'vacation-court', 'vacation-court'];
+  var holidaysClasses = ['Bhogi<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'MAHASIVARATRI<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'New Year Day<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Kanuma<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Babu Jagajeevan Ram Birthday<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Ramzan<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Ugadi<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Sri Rama Navami<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Durgastami<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Sri Panchami<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Naraka Chaturdasi<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Buddha Purnima<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Varalaxmi Vratam<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Deepavali<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Raksha Bandhan<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Gurunanak Jayanthi<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Pongal Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Pongal Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Pongal Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Hazarath Ali Birthday<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Sankranthi<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Good Friday<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Independence Day<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Vinayaka Chavithi<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Eid Miladun Nabi<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Gandhi Jayanthi<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Dasara Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Dasara Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Dasara Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Dasara Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Basava Jayanthi<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Muharrum oh<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Muharrum<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Christmas Eve<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Boxing Day<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Chirstmas<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Republic Day<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'REPUBLIC DAY<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Arbayeen<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Bakrid<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Independence Day<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Sri Krishnastami<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Radhayatra<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Jumatulvada<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Budha Pournami<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', '9th Moharram<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Basava Jayanthi<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Shab-e-qadar<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'NEW YEAR DAY<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Bhai Duj<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Mahasivaratri<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Dr B.R.Ambedkar Birthday<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Sankranthi\/Pongal<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Kanuma<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Babu Jagjivan Ram Birthday<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Vinayaka Chaviti<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Holi<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Deepavali<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Ramzan<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Shab-e-Barat<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Christmas<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Maharnavami<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Gurunanak Jayanthi<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Good Friday<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Narka Chaturdhi<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Varalakshmi Vratam<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Gandhi Jayanthi<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Shab-e-Miraj<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Eid Miladunabi<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Durgastami<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Christmas Eve<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Mahaveer Jayanthi<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Boxing Day<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Pongal Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Pongal Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Dasara Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Dasara Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Dasara Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Dasara Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Dasara Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Bhogi<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Muharram<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Special Holiday<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Special Holiday<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Yama Dwiteya<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Special Holiday<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Special Holiday<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Sri Rama Navami<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Ugadi<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Special Holiday<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'New Year Day<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Bhogi<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Sankranti\/Pongal<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Kanuma<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Republic Day<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Holi<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Ramzan (Id-UI-Fitr)<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Special Holiday<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Good Firday<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Special Holiday<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Dr.B.R.Ambedkar Birthday<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Bakrid (Id-Ul-Azha)<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Muharrum<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Independence Day<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Eid Miladun Nabi<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Special Holiday<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Varalakshmi Vratam<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Sri Krishna Astami<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Vinayaka Chaviti<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Mahatma Gandhi Jayanthi<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Durgastami<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Maharnavami<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Vijayadasami\/Dussehra<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Naraka Chaturdasi<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Yama Dwiteya<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Christmas<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Mahasivaratri<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Babu Jagjivan Ram Birthday<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Deepavali<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Sankranti vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Sankranti vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Sankranti vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Sankranti vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Sankranti vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Sankranti vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Sankranti vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Sankranti vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Summer vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Dussehra vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Dussehra vacation<br>(<span style=\color:#47a2ff !important;\>Vacation<\/span>)', 'Hazarat Ali Birthday<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Shab-e-Meeraj<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Vasanth Panchami<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Shab e barat<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Mahavir Jayanti<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Basava Jayanthi<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Buddha Purnima<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Eid-e-Gadheer<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', '9th Muharrum<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Rath Yatra<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Guru Purnima<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Arbayeen<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Mahalaya Amavasya<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Guru Nanak Jayanthi<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Christmas Eve<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Boxing Day<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Court Working day<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Court Working day<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Court Working day<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Court Working day<br>(<span style=\color:#00ff2b !important;\>Optional Holiday<\/span>)', 'Ugadi<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Srirama Navami<br>(<span style=\color:#ff8100 !important;\>Public Holiday<\/span>)', 'Pongal Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation Court<\/span>)', 'Court Working day<br>(<span>Working Day<\/span>)', 'Court Working day<br>(<span>Working Day<\/span>)', 'Court Working day<br>(<span>Working Day<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation Court<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation Court<\/span>)', 'Summer Vacation<br>(<span style=\color:#47a2ff !important;\>Vacation Court<\/span>)', '(<span style=\color:#47a2ff !important;\>National Lok Adalat<\/span>)', '(<span style=\color:#47a2ff !important;\>Vacation Court<\/span>)'];
+
+  renderCalendar(month, year);
+
+  // Default to today's date when the calendar loads
+  updateOpacityBg(
+    today_date,
+    days[day],
+    holidaysClasses.filter((className, index) => {
+      return (
+        specialDates[index] &&
+        today_date === specialDates[index].getDate() &&
+        year === specialDates[index].getFullYear() &&
+        month === specialDates[index].getMonth()
+      );
+    })
+  );
+
+  function renderCalendar(m, y) {
+    const months = [
+      'January', 'February', 'March', 'April', 'May', 'June', 
+      'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+    const c_date = new Date();
+
+    let firstDay = new Date(y, m, 1).getDay();
+    let d_m = new Date(y, m + 1, 0).getDate();
+    let d_pm = new Date(y, m, 0).getDate();
+
+    let table = document.getElementById('dates');
+    table.innerHTML = '';
+    let s_m = document.getElementById('s_m');
+    s_m.innerHTML = months[m] + ' ' + y;
+
+    let date = 1;
+    let r_pm = d_pm - firstDay + 1;
+
+    for (let i = 0; i < 6; i++) {
+      let row = document.createElement('tr');
+
+      for (let j = 0; j < 7; j++) {
+        let cell = document.createElement('td');
+        let span = document.createElement('span');
+
+        if (i === 0 && j < firstDay) {
+          span.classList.add('ntMonth', 'prevMonth');
+          span.textContent = r_pm++;
+        } else if (date > d_m) {
+          span.classList.add('ntMonth', 'nextMonth');
+          span.textContent = date++ - d_m;
+        } else {
+          let div = document.createElement('div');
+          span.classList.add('showEvent');
+          span.textContent = date;
+
+          if (date === c_date.getDate() && y === c_date.getFullYear() && m === c_date.getMonth()) {
+            div.classList.add('today');
+          }
+
+          specialDates.forEach((specialDate, index) => {
+            if (specialDate && date === specialDate.getDate() && y === specialDate.getFullYear() && m === specialDate.getMonth()) {
+              div.classList.add(specialClasses[index]);
+            }
+          });
+
+          div.appendChild(span);
+          cell.appendChild(div);
+          date++;
+        }
+
+        if (j === 0) {
+          cell.classList.add('sunday');
+        } else if (j === 6) {
+          cell.classList.add('saturday');
+        }
+
+        if (!span.parentNode) {
+          cell.appendChild(span);
+        }
+
+        row.appendChild(cell);
+      }
+
+      table.appendChild(row);
+    }
+  }
+
+function updateOpacityBg(clickedDate, clickedDay, holidaysClasses) {
+  document.querySelector('.current_day span').textContent = clickedDate;
+  document.querySelector('.current_day_name span').textContent = clickedDay;
+
+  const detailsSummary = document.querySelector('.details_summary');
+  detailsSummary.innerHTML = ''; // Clear previous details
+
+  // Normalize to check for real events (ignoring <br> and html)
+  const normalizedEvents = holidaysClasses.map(ev => ev.replace(/<br>.*$/, '').trim());
+  const uniqueEventsSet = new Set(normalizedEvents);
+
+  // If there are real events, show only them
+  if (uniqueEventsSet.size > 0) {
+    holidaysClasses.forEach((eventHTML) => {
+      const li = document.createElement('li');
+      li.innerHTML = `<span>${eventHTML}</span>`;
+      detailsSummary.appendChild(li);
+    });
+  } else {
+    // If no events, show weekend or working day labels
+    const li = document.createElement('li');
+    if (clickedDay === 'Sunday') {
+      li.innerHTML = `<span>(Public Holiday)</span>`;
+    } else if (clickedDay === 'Saturday') {
+      const weekNumber = Math.ceil(clickedDate / 7);
+      if (weekNumber === 2) {
+        li.innerHTML = `<span>Second Saturday<br>(<span style="color:#fd4727 !important;">Public Holiday</span>)</span>`;
+      } else if (weekNumber === 4) {
+        li.innerHTML = `<span>Fourth Saturday<br>(<span style="color:#fd4727 !important;">Public Holiday</span>)</span>`;
+      } else {
+        li.innerHTML = `<span>Registry<br>(<span>Working Day</span>)</span>`;
+      }
+    } else {
+      li.innerHTML = `<span>Working Day</span>`;
+    }
+    detailsSummary.appendChild(li);
+  }
+}
+
+
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener(
+      'click',
+      function (e) {
+        if (e.target.matches('.showEvent') && !e.target.classList.contains('prevMonth') && !e.target.classList.contains('nextMonth')) {
+          const clickedDate = e.target.textContent;
+          const clickedDay = days[new Date(year, month, clickedDate).getDay()];
+
+          const clickedSpecialClasses = [];
+          specialDates.forEach((specialDate, index) => {
+            if (
+              specialDate &&
+              clickedDate == specialDate.getDate() &&
+              year === specialDate.getFullYear() &&
+              month === specialDate.getMonth()
+            ) {
+              clickedSpecialClasses.push(holidaysClasses[index]);
+            }
+          });
+
+          updateOpacityBg(clickedDate, clickedDay, clickedSpecialClasses);
+        }
+
+        if (e.target.matches('.prevMonth')) {
+          year = month === 0 ? year - 1 : year;
+          month = month === 0 ? 11 : month - 1;
+          renderCalendar(month, year);
+        }
+
+        if (e.target.matches('.nextMonth')) {
+          year = month === 11 ? year + 1 : year;
+          month = (month + 1) % 12;
+          renderCalendar(month, year);
+        }
+      },
+      true
+    );
+  });
+</script>
+      <script src="js/wow.js"></script>
+      <script src="js/script2.js"></script>
+
+     
+   </body>
+</html>

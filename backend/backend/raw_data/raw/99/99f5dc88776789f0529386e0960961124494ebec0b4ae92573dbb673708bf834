@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>High Court of Chhattisgarh</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content name="keywords">
+    <meta content name="description">
+
+    <link href="assets/img/favicon.png" rel="icon">
+        <base href="https://highcourt.cg.gov.in/">
+    <link href="assets/img/favicon.ico" rel="icon">
+
+    <link rel="stylesheet"
+        href="assets/css/cdnjs/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="assets/css/cdnjs/owl.theme.default.min.css">
+    <link
+        href="assets/css/all.min.css"
+        rel="stylesheet">
+    <link
+        href="assets/bootstrap-icons/bootstrap-icons.css"
+        rel="stylesheet">
+
+    <link href="assets/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css"
+        rel="stylesheet">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/index.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary loader" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-primary sticky-top p-0">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <a href="index.php" class="navbar-brand px-2 me-0 d-flex align-items-center">
+                <img src="assets/img/emblem.svg" height="50px" width="50px"
+                    alt="Emblem">
+                <div class>
+                    <h6 class="mb-0">
+                        <b>High Court Of Chhattisgarh</b><br>
+                        <span class="d-block text-white"><small><b>छत्तीसगढ
+                                    उच्च न्यायालय</b>
+                            </small></span>
+                    </h6>
+                </div>
+            </a>
+            <button type="button" class="navbar-toggler me-4"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse p-2" id="navbarCollapse">
+                <div class="navbar-nav mx-auto flex-wrap">
+                    <!-- <a href="index.php"
+                        class="nav-item nav-link ">Home</a> -->
+                    <a href="https://highcourt.cg.gov.in"
+                        class="nav-item nav-link ">
+                        Home                    </a>
+
+                    <div class="nav-item dropdown ">
+                        <a href="#" class="nav-link dropdown-toggle "
+                            data-bs-toggle="dropdown">Judges</a>
+                        <div class="dropdown-menu bg-primary mt-2">
+                            <a
+                                class="dropdown-item p-2" href="judges/judges.php">Sitting Judges</a>
+                            <a href="judges/former_cj.php"
+                                class="dropdown-item p-2">
+Former Chief Justice</a>
+                            <a href="judges/former_judges.php"
+                                class="dropdown-item p-2">Former Judges</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle "
+                            data-bs-toggle="dropdown">
+Registry</a>
+                        <div class="dropdown-menu bg-primary mt-2">
+                            <a
+                                class="dropdown-item p-2" href="registry/registry_officers.php">
+Registry Officers</a>
+                            <a href="registry/csja_officers.php"
+                                class="dropdown-item p-2">
+CSJA Officers</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item dropdown custom-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle " role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            District Judiciary                        </a>
+
+                        <ul class="dropdown-menu bg-primary mt-2">
+                            <!-- Submenu -->
+                            <li>
+                                <a href="#" class="dropdown-item dropdown-toggle p-2">
+                                    District Wise                                </a>
+                                <ul class="dropdown-menu bg-primary border border-white">
+                                    <li><a class="dropdown-item p-2" href="subcourts/disnamesr.php">All in the District</a></li>
+                                    <li><a class="dropdown-item p-2" href="subcourts/disname.php">Regular Courts</a></li>
+                                    <li><a class="dropdown-item p-2" href="subcourts/disnamedep.php">On Deputation</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Other menu items -->
+                            <li><a href="subcourts/judsr.php" class="dropdown-item p-2">Seniority Wise</a></li>
+                            <li><a href="subcourts/judalpha.php" class="dropdown-item p-2">Alphabetically</a></li>
+                            <li><a href="subcourts/depu.php" class="dropdown-item p-2">On Deputation</a></li>
+                            <li><a href="district_judiciary/retired_judicial_officer.php" class="dropdown-item p-2">Retired Judicial Officers</a></li>
+                            <li><a href="district_judiciary/redressal_of_grievances.php" class="dropdown-item p-2">Redressal of Grievances by CSCDJ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-item dropdown custom-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle "
+                            data-bs-toggle="dropdown">e-services</a>
+                        <div class="dropdown-menu bg-primary mt-2">
+                            <a href="e_services/efiling.php"
+                                class="dropdown-item p-2">e-Filing</a>
+
+                            <!-- <li class="nav-item">
+                                <a href="#" class="dropdown-item p-2 dropdown-toggle">e-Pay Link</a>
+                                <ul class="dropdown-submenu bg-primary">
+                                    <a class="dropdown-item p-2" href="https://pay.ecourts.gov.in/epay/" target="_blank">Court Fee</a>
+                                    <a class="dropdown-item p-2" href="https://vcourts.gov.in/virtualcourt/index.php" target="_blank">Virtual Court Challan(Traffic)</a>
+                                </ul>
+                            </li> -->
+
+                            <li>
+                                <a href="#" class="dropdown-item p-2 dropdown-toggle">e-Pay Link</a>
+                                <ul class="dropdown-menu bg-primary border border-white">
+                                    <li><a class="dropdown-item p-2" href="https://pay.ecourts.gov.in/epay/" target="_blank">Court Fee</a></li>
+                                    <li> <a class="dropdown-item p-2" href="https://vcourts.gov.in/virtualcourt/index.php" target="_blank">Virtual Court Challan(Traffic)</a></a></li>
+
+                                </ul>
+                            </li>
+
+                            <a href="https://egatepass.cghc.nic.in/" class="dropdown-item p-2" target="_blank">E-Gate
+                                Pass</a>
+                            <a href="e_services/vclink/vclink.php"
+                                class="dropdown-item p-2">Video Conference
+                                Call</a>
+                            <a href="e_services/dislist_vc.php"
+                                class="dropdown-item p-2">District Video
+                                Conference Call</a>
+                            <a href="https://highcourt.cg.gov.in/LibraryHC/Library.htm"
+                                class="dropdown-item p-2" target="_blank">Library</a>
+                            <!-- <li class="nav-item">
+                                <a href="#" class="dropdown-item p-2 dropdown-toggle">e-Gazette</a>
+                                <ul class="dropdown-submenu bg-primary">
+                                    <a class="dropdown-item p-2" href="https://highcourt.cg.gov.in/download/loding_cgaztte.html" target="_blank">Central e-Gazette</a>
+                                    <a class="dropdown-item p-2" href="https://highcourt.cg.gov.in/download/loding_cg_gaztte.html" target="_blank">CG e-Gazette</a>
+                                </ul>
+                            </li> -->
+                            <li>
+                                <a href="#" class="dropdown-item p-2 dropdown-toggle">e-Gazette</a>
+                                <ul class="dropdown-menu bg-primary border border-white">
+                                    <li><a class="dropdown-item p-2" href="https://highcourt.cg.gov.in/download/loding_cgaztte.html" target="_blank">Central e-Gazette</a></li>
+                                    <li> <a class="dropdown-item p-2" href="https://highcourt.cg.gov.in/download/loding_cg_gaztte.html" target="_blank">CG e-Gazette</a></li>
+                                </ul>
+                            </li>
+                            <a href="https://highcourt.cg.gov.in/download/loding_khasra.html"
+                                class="dropdown-item p-2" target="_blank">e-Khasra</a>
+                            <a href="https://highcourt.cg.gov.in/download/loding_indiacode.html" class="dropdown-item p-2" target="_blank">India
+                                Code</a>
+                            <a href="https://legislative.gov.in/vidhi-sahitya-prakashan/" class="dropdown-item p-2" target="_blank">Vidhi Sahitya Prakashan</a>
+                            <!-- <li class="nav-item">
+                                <a href="#" class="dropdown-item p-2 dropdown-toggle">VC Coordinators</a>
+                                <ul class="dropdown-submenu bg-primary">
+                                    <a class="dropdown-item p-2" href="download/RemotePointCoordinator01.04.2022.pdf" target="_blank">Child Witness</a>
+                                    <a class="dropdown-item p-2" href="download/VCCoordinatorsCG.pdf" target="_blank">Video Conferencing Co-ordinator</a>
+                                </ul>
+                            </li> -->
+                            <li>
+                                <a href="#" class="dropdown-item p-2 dropdown-toggle">VC Coordinators</a>
+                                <ul class="dropdown-menu bg-primary border border-white">
+                                    <li><a class="dropdown-item p-2" href="download/RemotePointCoordinator01.04.2022.pdf" target="_blank">Child Witness</a></li>
+                                    <li><a class="dropdown-item p-2" href="download/VCCoordinatorsCG.pdf" target="_blank">Video Conferencing Co-ordinator</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle"
+                            data-bs-toggle="dropdown">e-Book</a>
+                        <div class="dropdown-menu bg-primary mt-2">
+                            <a
+                                href="e_book/JusticeUnfoldedSagaofHighCourtofChhattisgarh.pdf"
+                                class="dropdown-item p-2" target="_blank">Justice Unfolded - Saga of High Court of Chhattisgarh</a>
+                            <a href="e_book/DistrictCourtsofChhattisgarh.pdf"
+                                class="dropdown-item p-2" target="_blank">District Court of Chhattisgarh</a>
+                            <a href="e_book/Legal_Glossary_final.pdf"
+                                class="dropdown-item p-2" target="_blank">Legal Glossary</a>
+                            <a href="e_book/90DaysMediationDrive.pdf"
+                                class="dropdown-item p-2" target="_blank">A Journey of Resolution and Harmony</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle "
+                            data-bs-toggle="dropdown">Judicial</a>
+                        <div class="dropdown-menu bg-primary mt-2">
+                            <a href="https://highcourt.cg.gov.in/noti/roster.php"
+                                class="dropdown-item p-2">Roster</a>
+                            <a href="https://highcourt.cg.gov.in/clists/index.php" class="dropdown-item p-2">Cause
+                                List</a>
+                            <a href="judicial/case_status.php" class="dropdown-item p-2">Case
+                                Status</a>
+                            <a href="https://highcourt.cg.gov.in/hcbspjudgement/eilr.php" class="dropdown-item p-2" target="_blank">Judgement (AFR)</a>
+                            <a href="https://highcourt.cg.gov.in/hcbspjudgement/oj_search.php" class="dropdown-item p-2" target="_blank">Order/Judgement </a>
+                <a href="https://highcourt.cg.gov.in/hcbspjudgement/reserve_oj_search.php" class="dropdown-item p-2" target="_blank">Reserve Cases Report </a>
+                            <a href="https://highcourt.cg.gov.in/interim_order/intrimOrder.php" class="dropdown-item p-2" target="_blank">Daily Order Judgement <small>(Upto June 2015)</small></a>
+                            <a href="judicial/mpmla/2026/mpmla.php" class="dropdown-item p-2">MP/MLA Cases List </a>
+                            <a href="cghc/mact_labour_cases.php" class="dropdown-item p-2">MACT & Labour Court Compensation </a>
+                            <a href="https://highcourt.cg.gov.in/mediation/main.htm" class="dropdown-item p-2" target="_blank">Mediation </a>
+                            <a href="https://highcourt.cg.gov.in/jj/main.htm"
+                                class="dropdown-item p-2" target="_blank">Juvenile Justice</a>
+                            <a href="judicial/FilingInstructions.pdf" class="dropdown-item p-2">Filing
+                                Instruction</a>
+                            <a href="judicial/Std_Coun.pdf" class="dropdown-item p-2">Standing Counsel </a>
+                            <a href="judicial/bast_practices.pdf" class="dropdown-item p-2">Best Practice </a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item dropdown custom-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle "
+                            data-bs-toggle="dropdown">IT</a>
+                        <div class="dropdown-menu bg-primary mt-2">
+                            <a href="committees/com_committee.php"
+                                class="dropdown-item p-2">Committee</a>
+                            <a href="https://ecommitteesci.gov.in/"
+                                class="dropdown-item p-2">e-Committee</a>
+                            <!-- <li class="nav-item">
+                                <a href="#" class="dropdown-item p-2 dropdown-toggle">e-Courts(C.G.)</a>
+                                <ul class="dropdown-submenu bg-primary">
+                                    <a class="dropdown-item p-2" href="download/jo_code.pdf" target="_blank">JO Code Detail</a>
+                                    <a class="dropdown-item p-2" href="download/judges/List_of_Ubuntu_Master_Trainers.pdf" target="_blank">Judges</a>
+                                    <a class="dropdown-item p-2" href="download/master_trainers_advocates.pdf" target="_blank">Advocates</a>
+                                    <a class="dropdown-item p-2" href="download/DSA.pdf" target="_blank">District System Administrator</a>
+                                    <a class="dropdown-item p-2" href="download/master_trainers_staff.pdf" target="_blank">Staff</a>
+                                </ul>
+                            </li> -->
+
+                            <li>
+                                <a href="#" class="dropdown-item p-2 dropdown-toggle">e-Courts(C.G.)</a>
+                                <ul class="dropdown-menu bg-primary border border-white">
+                                    <li><a class="dropdown-item p-2" href="download/jo_code.pdf" target="_blank">JO Code Detail</a></li>
+                                    <li><a class="dropdown-item p-2" href="download/judges/List_of_Ubuntu_Master_Trainers.pdf" target="_blank">Judges</a></li>
+                                    <li><a class="dropdown-item p-2" href="download/master_trainers_advocates.pdf" target="_blank">Advocates</a></li>
+                                    <li><a class="dropdown-item p-2" href="download/DSA.pdf" target="_blank">District System Administrator</a></li>
+                                    <li><a class="dropdown-item p-2" href="download/master_trainers_staff.pdf" target="_blank">Staff</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#" class="dropdown-item p-2 dropdown-toggle">NJDG</a>
+                                <ul class="dropdown-menu bg-primary border border-white">
+                                    <li><a class="dropdown-item p-2" href="https://njdg.ecourts.gov.in/hcnjdg_v2/" target="_blank">High Court</a></li>
+                                    <li><a class="dropdown-item p-2" href="https://njdg.ecourts.gov.in/njdg_v3/" target="_blank">District Court</a></li>
+                                </ul>
+                            </li>
+                            <a href="https://ecourts.gov.in/ecourts_home/"
+                                class="dropdown-item p-2">e-Court</a>
+                            <li>
+                                <a href="#" class="dropdown-item p-2 dropdown-toggle">Download</a>
+                                <ul class="dropdown-menu bg-primary border border-white">
+                                    <li><a class="dropdown-item p-2" href="download.php">Operating System</a></li>
+                                    <li><a class="dropdown-item p-2" href="drivers.php">Drivers</a></li>
+                                    <li><a class="dropdown-item p-2" href="apk.php">Applications/APK</a></li>
+                                    <li><a class="dropdown-item p-2" href="manual/pages/manual.php">English Manual</a></li>
+                                    <li><a class="dropdown-item p-2" href="manual/pages/h_manual.php">Hindi Manual</a></li>
+
+                                    <li><a class="dropdown-item p-2" href="download/sitepreparation.pdf">Site Preparation</a></li>
+                                    <li><a class="dropdown-item p-2" href="download/adv_req_form.pdf">Advocate Registration Form</a></li>
+                                    <li><a class="dropdown-item p-2" href="download/forms/Civil_Forms.pdf">Civil Form</a></li>
+                                    <li><a class="dropdown-item p-2" href="download/forms/Criminal_Forms.pdf">Criminal Form</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#" class="dropdown-item p-2 dropdown-toggle">Training</a>
+                                <ul class="dropdown-menu bg-primary border border-white">
+                                    <li><a class="dropdown-item p-2" href="manual/pages/manual.php">English Tutorial</a></li>
+                                    <li><a class="dropdown-item p-2" href="manual/pages/h_manual.php">Hindi Tutorial</a></li>
+                                    <li><a class="dropdown-item p-2" href="https://www.youtube.com/watch?v=irn_qVKi2N4">Video 1</a></li>
+                                    <li><a class="dropdown-item p-2" href="https://www.youtube.com/watch?v=ZwiNRPa22cc">Video 2</a></li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item p-2 dropdown-toggle">e-Services Video</a>
+                                <ul class="dropdown-menu bg-primary border border-white">
+                                    <li><a class="dropdown-item p-2" href="https://www.youtube.com/watch?v=tS4wID3xpWE">Joining Virtual Court</a></li>
+                                    <li><a class="dropdown-item p-2" href="https://www.youtube.com/watch?v=9_ODRBkUggg">e-Stamping 1</a></li>
+                                    <li><a class="dropdown-item p-2" href="https://www.youtube.com/watch?v=crVgtRFsxVU">e-Stamping 2</a></li>
+                                </ul>
+                            </li>
+                            <a href="gallery/eCourtgallery.php"
+                                class="dropdown-item p-2">e-Courts Event</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown custom-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle "
+                            data-bs-toggle="dropdown">Others</a>
+                        <div class="dropdown-menu bg-primary mt-2">
+                            <a href="https://highcourt.cg.gov.in/noti/officeorder.php" class="dropdown-item p-2">Office Order</a>
+                            <a href="https://highcourt.cg.gov.in/noti/notificationonly.php" class="dropdown-item p-2">Notification</a>
+                            <a href="https://highcourt.cg.gov.in/noti/information.php" class="dropdown-item p-2">Other Notice</a>
+                            <a href="other/sale.php" class="dropdown-item p-2">Sale Notice</a>
+                            <a href="https://highcourt.cg.gov.in/online_rti/index.php"
+                                class="dropdown-item p-2">Online RTI Portal</a>
+                            <a href="calendar/calendar.php" class="dropdown-item p-2">Yearly Calender</a>
+                            <li>
+                                <a href="#" class="dropdown-item p-2 dropdown-toggle">Gallery</a>
+                                <ul class="dropdown-menu bg-primary border border-white">
+                                    <li><a class="dropdown-item p-2" href="gallery.php">Photo Gallery</a></li>
+                                    <li><a class="dropdown-item p-2" href="speech.php">Speech/Article</a></li>
+                                    <li><a class="dropdown-item p-2" href="gallery/eCourtgallery.php">e-Courts Event</a></li>
+                                    <li><a class="dropdown-item p-2" href="gallery/Archieve.php">Archieve</a></li>
+                                </ul>
+                            </li>
+                            <a href="asset_detail/assets/assets.pdf" class="dropdown-item p-2">Assets Detail</a>
+                            <a href="related_links.php" class="dropdown-item p-2">Web Links</a>
+
+                        </div>
+                    </div>
+
+
+                    <div class="nav-item dropdown custom-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle "
+                            data-bs-toggle="dropdown">Information</a>
+                        <div class="dropdown-menu bg-primary mt-2">
+                            <a href="information/rule/rule.php"
+                                class="dropdown-item p-2">Rules</a>
+                            <li>
+                                <a href="#" class="dropdown-item p-2 dropdown-toggle">Recruitment</a>
+                                <ul class="dropdown-menu bg-primary border border-white">
+                                    <li><a class="dropdown-item p-2" href="recruit/recruithc.php">High Court Recruitment</a></li>
+                                    <li><a class="dropdown-item p-2" href="recruit/recruitdc.php">District Court Recruitment</a></li>
+                                    <li><a class="dropdown-item p-2" href="recruit/drt/page/recruitdrt.php">Pre/Post Retiral Recruitment</a></li>
+                                </ul>
+                            </li>
+
+
+                            <a href="https://highcourt.cg.gov.in/noti/tender.php"
+                                class="dropdown-item p-2">Tender</a>
+                            <a href="statistics/sta.php"
+                                class="dropdown-item p-2">Statistical Report</a>
+                            <li>
+                                <a href="#" class="dropdown-item p-2 dropdown-toggle">NewsLetter</a>
+                                <ul class="dropdown-menu bg-primary border border-white">
+                                    <li><a class="dropdown-item p-2" href="Newsletter/newsletter.php" target="_blank">e-Committee</a></li>
+                                    <li><a class="dropdown-item p-2" href="http://cgslsa.gov.in/NewsLetter.htm" target="_blank">SLSA Bilaspur</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="dropdown" id="accessibility-dropdown">
+                        <button class="btn btn-sm-square" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="true">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end bg-primary" aria-labelledby="dropdownMenuButton">
+                            <li class="px-3">
+                                <span class="mx-1">Theme Colors</span>
+                                <div class="d-flex flex-wrap justify-content-start">
+                                    <span class="box theme_box_1" role="button" tabindex="0" data-color="#bf9456"></span>
+                                    <span class="box theme_box_2" role="button" tabindex="0" data-color="#86A39F"></span>
+                                    <span class="box theme_box_3" role="button" tabindex="0" data-color="#AA81A0"></span>
+                                    <span class="box theme_box_4" role="button" tabindex="0" data-color="rgb(157, 155, 224)"></span>
+                                    <span class="box theme_box_5" role="button" tabindex="0" data-color="rgb(10, 120, 139)"></span>
+                                    <span class="box theme_box_6" role="button" tabindex="0" data-color="#fbaaca"></span>
+                                    <span class="box theme_box_7" role="button" tabindex="0" data-color="rgb(101, 139, 132)"></span>
+                                    <span class="box theme_box_8" role="button" tabindex="0" data-color="rgb(233, 129, 129)"></span>
+                                    <span class="box theme_box_9" role="button" tabindex="0" data-color="#AF3D48"></span>
+                                    <span class="box theme_box_10" role="button" tabindex="0" data-color="rgb(231 141 52)"></span>
+                                </div>
+                            </li>
+                            <hr>
+                            <li class="px-3">
+                                <span class="mx-1">Text Size</span>
+                                <div class="d-flex flex-wrap justify-content-start">
+                                    <span class="border border-white mx-1 p-1" role="button" tabindex="0" id="btn-increase">A+</span>
+                                    <span class="border border-white mx-1 p-1" role="button" tabindex="0" id="btn-decrease">A-</span>
+                                    <span class="border border-white mx-1 p-1" role="button" tabindex="0" id="btn-orig">A</span>
+                                </div>
+                            </li>
+                            <hr>
+                            <li class="px-3">
+                                <span class="mx-1">Language</span>
+                                <div class="d-flex flex-wrap justify-content-start">
+                                    <span class="border border-white mx-1 p-1" id="btn-eng-lang" role="button" tabindex="0">English</span>
+                                    <span class="border border-white mx-1 p-1" id="btn-hin-lang" role="button" tabindex="0">हिन्दी</span>
+                                </div>
+                            </li>
+                            <hr>
+                            <li class="px-3">
+                                <span class="mx-1">Mode</span>
+                                <div class="d-flex flex-wrap justify-content-start">
+                                    <span class=" border border-white mx-1 p-1" role="button" tabindex="0" id="btn-light-theme">Light</span>
+                                    <span class=" border border-white mx-1 p-1" role="button" tabindex="0" id="btn-dark-theme">Dark</span>
+                                </div>
+                            </li>
+                            <hr>
+                            <li class="px-3">
+                                <a href="screen_reader_access.php"><span class="text-white">Screen Reader Access</span></a>
+
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- <a class="btn btn-primary btn-sm-square"
+                        data-toggle="tooltip" data-placement="top"
+                        title="YouTube"
+                        href="https://www.youtube.com/@highcourtofchhattisgarh3160/videos" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-primary btn-sm-square"
+                        data-toggle="tooltip" data-placement="top"
+                        title="Telegram" href="https://t.me/+WM28BXeybykzODNl" target="_blank"><i
+                            class="fab fa-telegram-plane"></i></a> -->
+                </div>
+
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+<div class=" p-0 hero-header mb-3">
+    <div class="">
+        <div class="row g-0 align-items-center">
+            <!-- Carousel Section -->
+            <div id="imageCarousel" class="carousel slide image-container container wow fadeIn" data-bs-ride="carousel">
+                <!-- Carousel images -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/latestt.jpeg" class="d-block w-100 img-fluid" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/latest13.jpeg" class="d-block w-100 img-fluid" alt="Image 2">
+                    </div>
+                    <!-- <div class="carousel-item">
+                        <img src="assets/img/latest13.jpeg" class="d-block w-100 img-fluid" alt="Image 2">
+                    </div> -->
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+                    <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+                    <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+                <!-- Overlay with Links -->
+                <div class="pt-3">
+                    <div class="w-100 d-flex justify-content-center flex-wrap">
+
+                        <a
+                            href="https://highcourt.cg.gov.in/hcbspcourtview/livestreaming.php"
+                            class="head_icons m-1">
+                            <div class="zoom-in-wrapper zoom-in">
+                                <div class="py-2 bg-trans mx-1 d-flex flex-column justify-content-center align-items-center text-center hover-effect shadow">
+                                    <i class="fa fa-tv icon py-2"></i>Live Streaming                                </div>
+                            </div>
+                        </a>
+                        <a href="https://highcourt.cg.gov.in/clists/index.php" class="head_icons m-1">
+                            <div class="zoom-in-wrapper zoom-in">
+                                <div class="hover-effect shadow py-2 bg-trans mx-1 d-flex flex-column justify-content-center align-items-center text-center">
+                                    <i class="fa fa-list icon py-2"></i>Cause List                                </div>
+                            </div>
+                        </a>
+                        <a href="https://highcourt.cg.gov.in/hcbspcourtview/court1.php" class="head_icons m-1">
+                            <div class="zoom-in-wrapper zoom-in">
+                                <div class="py-2 bg-trans mx-1 d-flex flex-column justify-content-center align-items-center text-center hover-effect shadow">
+                                    <i class="fa fa-desktop icon py-2"></i>Display Board                                </div>
+                            </div>
+                        </a>
+                        <a href="judicial/case_status.php" class="head_icons m-1">
+                            <div class="zoom-in-wrapper zoom-in">
+                                <div class="py-2 bg-trans mx-1 d-flex flex-column justify-content-center align-items-center text-center hover-effect shadow">
+                                    <i class="fa fa-balance-scale icon py-2"></i>Case Status                                </div>
+                            </div>
+                        </a>
+                        <a href="https://highcourt.cg.gov.in/onlinecopying/" class="head_icons m-1">
+                            <div class="zoom-in-wrapper zoom-in">
+                                <div class="py-2 bg-trans mx-1 d-flex flex-column justify-content-center align-items-center text-center hover-effect shadow">
+                                    <i class="fa fa-list icon py-2"></i>e-Certified                                </div>
+                            </div>
+                        </a>
+                        <a href="https://filing.ecourts.gov.in/pdedev/" class="head_icons m-1">
+                            <div class="zoom-in-wrapper zoom-in">
+                                <div class="py-2 bg-trans mx-1 d-flex flex-column justify-content-center align-items-center text-center hover-effect shadow">
+                                    <i class="fa fa-list icon py-2"></i>e-Filing                                </div>
+                            </div>
+                        </a>
+                        <a href="https://highcourt.cg.gov.in/hcbspjudgement/oj_search.php" class="head_icons m-1">
+                            <div class="zoom-in-wrapper zoom-in">
+                                <div class="py-2 bg-trans mx-1 d-flex flex-column justify-content-center align-items-center text-center hover-effect shadow">
+                                    <i class="fa fa-gavel icon py-2"></i>Order/Judgments                                </div>
+                            </div>
+                        </a>
+                        <a href="https://highcourt.cg.gov.in/hcbspjudgement/eilr.php" class="head_icons m-1">
+                            <div class="zoom-in-wrapper zoom-in">
+                                <div class="py-2 bg-trans mx-1 d-flex flex-column justify-content-center align-items-center text-center hover-effect shadow">
+                                    <i class="fa fa-users icon py-2"></i>e-HCR(AFR)                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Hero End -->
+
+ <div class="mt-0 px-3">
+  <!-- <marquee><a href="livestreaming/livestreaming.php" target="_blank" class="h5"><span class="blink fw-bold text-danger ">Live Streaming:</span> <span class="">Farewell of Hon'ble Mr. Justice Arvind Kumar Verma, Judge, High Court of Chhattisgarh, Bilaspur on Tuesday, 7th April, 2026 at 03:30 p.m. in the Chief Justice’s Court.</span></a></marquee>-->
+</div>    
+
+<!-- About Start -->
+<div class="mt-0">
+    <div class="row g-5 px-4 px-lg-5">
+        <div class="col-lg-4 wow fadeIn" data-wow-delay="0.2s">
+            <div class="cj_div_container">
+                <div class="cj_div bg-primary">
+
+                    <p class="cj_div_p">
+                        Hon'ble The Chief Justice                    </p>
+
+                    <a href="judges/judges.php"
+                        title="Hon'ble Mr. Justice Ramesh Sinha" class="cj_name_a">
+
+                        <div class="cj_div_round">
+                            <img src="assets/img/cj_rs.jpeg"
+                                alt=" Hon'ble Mr. Justice Ramesh Sinha" class="cj_image">
+                        </div>
+
+                        <h2 class="cj_div_h2">
+                            Hon'ble Mr. Justice Ramesh Sinha                        </h2>
+
+                        <p class="cj_div_p2">
+                            (Hon'ble The Chief Justice)                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 wow fadeIn bg-white" data-wow-delay="0.5s">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>
+                    Latest                    <span class="text-primary">
+                        NOTIFICATION                    </span>
+                </h2>
+                <!-- Play/Pause button -->
+                <button id="playPauseBtn" class="btn btn-sm text-uppercase">
+                    Pause <i class="bi bi-pause"></i>
+                </button>
+            </div>
+
+            <div class="notification-wrapper mb-3">
+                <div class="latest_notofication_scroll" id="notificationScroll">
+
+                                                                <a class="text-dark" href="noti/view_file_noti.php?token=MzQyNzR8MTc3NTcxNzA1NQ%3D%3D.912d0f7963e316aada0088390fd6cd74371d57184612700bd346e217c02d71d6" target="_blank">
+                            <p class="mb-1">1.  Notification No. 281/Confdl./2026 Bilaspur dated 08/04/2026 </p>
+                        </a>
+                                            <a class="text-dark" href="noti/view_file_noti.php?token=MzQyNzN8MTc3NTcxNzA1NQ%3D%3D.4f043e0f7c3226cb1d6a0f304073c5fae0fbaf6e873b604881584e697bc6e031" target="_blank">
+                            <p class="mb-1">2.  Order No. 279 /Confdl./2026 Bilaspur dated 08/04/2026 </p>
+                        </a>
+                                            <a class="text-dark" href="noti/view_file_noti.php?token=MzQyNzJ8MTc3NTcxNzA1NQ%3D%3D.0efb93f15786ae5fcec964dd487120d929727ba24ef3b97da2ae3fa945870a28" target="_blank">
+                            <p class="mb-1">3.  Order No. 277 /Confdl./2026 Bilaspur dated 08/04/2026 </p>
+                        </a>
+                                            <a class="text-dark" href="noti/view_file_noti.php?token=MzQyMjl8MTc3NTcxNzA1NQ%3D%3D.6534d1c33a55e5ad21cf42c10b2f9687d2dadfe0153cf2fd867b66abbc5cc455" target="_blank">
+                            <p class="mb-1">4.  Notice for Recruitment to the Post of Junior Judicial Assistant (Computer). </p>
+                        </a>
+                                            <a class="text-dark" href="noti/view_file_noti.php?token=MzQyMjZ8MTc3NTcxNzA1NQ%3D%3D.6b779e0d1e1073a58e17bf6ef24e4190b944f60a24ddb53c59503f30d0d38056" target="_blank">
+                            <p class="mb-1">5.  Order No. 269 /Confdl./2026 Bilaspur dated 07/04/2026 </p>
+                        </a>
+                                            <a class="text-dark" href="noti/view_file_noti.php?token=MzQyMTJ8MTc3NTcxNzA1NQ%3D%3D.56f19d73f0798aee23413fec1b8ce649c50dc74afe5fe4cb7d858041d2efc3e8" target="_blank">
+                            <p class="mb-1">6.  Notification No. 6656/R.(J.)/2026 Bilaspur dated 06/04/2026 </p>
+                        </a>
+                                            <a class="text-dark" href="noti/view_file_noti.php?token=MzQxNjZ8MTc3NTcxNzA1NQ%3D%3D.d8c75aa29ff6e585e84b8564b416298c2618391785d661291b549c6fe27d6202" target="_blank">
+                            <p class="mb-1">7.  There shall be a farewell of Hon'ble Mr. Justice Arvind Kumar Verma, Judge, High Court of Chhattisgarh, Bilaspur on 07 April 2026 at 03:30 p.m. in the Chief Justice’s Court. </p>
+                        </a>
+                                            <a class="text-dark" href="noti/view_file_noti.php?token=MzQxNjV8MTc3NTcxNzA1NQ%3D%3D.b25e7a7a16d16890580e203c3b40b9d9128510a0b7158fa626a5667b1ee71303" target="_blank">
+                            <p class="mb-1">8.  Notification No. 6656/R.(J.)./2026, Bilaspur, Dated 06/04/2026. </p>
+                        </a>
+                                            <a class="text-dark" href="noti/view_file_noti.php?token=MzQxMzB8MTc3NTcxNzA1NQ%3D%3D.f4df59c9a86cb9b604f913c253f49b47510c98ef637a5f94b100cf4fb207914d" target="_blank">
+                            <p class="mb-1">9.  Following shall be the Roster for the High Court of Chhattisgarh, Bilaspur with effect from 08.04.2026. </p>
+                        </a>
+                                            <a class="text-dark" href="noti/view_file_noti.php?token=MzQwOTJ8MTc3NTcxNzA1NQ%3D%3D.effa02cd1ad248f29d2233843ad7590345c0f2880fc7f682282dd117456aba20" target="_blank">
+                            <p class="mb-1">10.  Regarding Pre-sitting meeting of upcoming National Lok Adalat on 09/05/2026.  </p>
+                        </a>
+                    
+                    <!-- <p class="mb-1">1. Endt No. 173345/Rules/2025 Bilaspur, dated 26th August 2025. </p>
+                    <p class="mb-1">2. Notification No. 17126/Checker Bilaspur, dated 23rd August 2025. </p>
+                    <p class="mb-1">3. Notification No. 17124/Checker Bilaspur, dated 23rd August 2025. </p>
+                    <p class="mb-1">4. Supplementary Constitution of Benches at High Court of Chhattisgarh, Bilaspur W.E.F. 26.08.2025. </p>
+                    <p class="mb-1">5. Order No. 1055/Confdl./2025 Bilaspur, dated 22nd August 2025. </p>
+                    <p class="mb-1">6. Order No. 1052/Confdl./2025 Bilaspur, dated 22nd August 2025. </p>
+                    <p class="mb-1">7. Order No. 1049/Confdl./2025 Bilaspur, dated 22nd August 2025. </p>
+                    <p class="mb-1">8. Notification No. 1047/Confdl./2025 Bilaspur, dated 22nd August 2025. </p>
+                    <p class="mb-1">9. Notification No. 17106/Checker Bilaspur, dated 22nd August 2025. </p>
+                    <p class="mb-1">10. Order No. 83(App.)/ Bilaspur, dated 20th August 2025. </p> -->
+
+                </div>
+            </div>
+
+
+            <!-- <a class="btn btn-primary text-uppercase px-5 py-3"
+                    href>Read More</a> -->
+            <!-- <a class="btn btn-sm btn-primary text-uppercase mb-4"
+                href="latest_notification.php">Read More <i
+                    class="bi bi-arrow-right"></i></a> -->
+            <a class="btn btn-sm btn-primary text-uppercase mb-4"
+                href="noti/index.php">Read More <i
+                    class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="col-lg-4 wow fadeIn bg-white" data-wow-delay="0.5s">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>
+                    Latest                    <span class="text-primary">
+                        AFR                    </span>
+                </h2>
+                <!-- Play/Pause button -->
+                <button id="playPauseBtn2" class="btn btn-sm text-uppercase">
+                    Pause <i class="bi bi-pause"></i>
+                </button>
+            </div>
+            <div class="notification-wrapper mb-3">
+                <div class="latest_afr_scroll" id="afrScroll">
+
+                                                                <a class="text-dark" href="Afr/view_file_afr.php?token=MzQyNzF8MTc3NTcxNzA1NQ%3D%3D.edbaaba6db6a4c28e797e8d7e2f7ede1617a3bf37e7db4fd0caacc79a6c5bf26" target="_blank"> 
+                            <p class="mb-1">1.  Courts, in exercise of judicial review under Article 226 of the Constitution of India, will not ordinarily interfere in economic or socio- economic policy decisions of the State, particularly in the absence of violation of statutory or constitutional provisions, and a Public Interest Litigation challenging such policy is liable to be dismissed on grounds of delay, laches, and lack of genuine public interest. </p>
+                        </a>
+                                            <a class="text-dark" href="Afr/view_file_afr.php?token=MzQyMzJ8MTc3NTcxNzA1NQ%3D%3D.be1ae83299f59bb573963687514e3981bfe880d73488398aa248952c22e5d8a0" target="_blank"> 
+                            <p class="mb-1">2.  Once a dying declaration is found to be authentic inspiring<br />
+confidence of the Court, then the same can be relied upon and can be<br />
+the sole basis for conviction without any corroboration. </p>
+                        </a>
+                                            <a class="text-dark" href="Afr/view_file_afr.php?token=MzQyMzF8MTc3NTcxNzA1NQ%3D%3D.ae8060d12c121f3c937f7c0c1536cde49c5095f6c18f321daa060e2fe36b3f86" target="_blank"> 
+                            <p class="mb-1">3.  Rejection of claim for employment under the Rehabilitation Policy on the<br />
+basis of an unnotified cut-off date, arising from an internal administrative<br />
+decision is legally unsustainable. </p>
+                        </a>
+                                            <a class="text-dark" href="Afr/view_file_afr.php?token=MzQyMzB8MTc3NTcxNzA1NQ%3D%3D.5d3487016bd4fc4c3e002e463f0ff765aa3c4d2f456df4310d49ee38f9ffc2ac" target="_blank"> 
+                            <p class="mb-1">4.  The Court while granting or refusing to grant injunction should<br />
+exercise sound judicial discretion to find the amount of substantial<br />
+mischief or injury which is likely to be caused to the parties. </p>
+                        </a>
+                                            <a class="text-dark" href="Afr/view_file_afr.php?token=MzQyMzR8MTc3NTcxNzA1NQ%3D%3D.1c2701dbf194ef0b45da1c879ea4d32613c75afa028bc1cc4cad47caabbb02d5" target="_blank"> 
+                            <p class="mb-1">5.  “The principle of res judicata applies equally to writ<br />
+petitions under Article 226 of the Constitution of<br />
+India. Once an issue has been finally adjudicated<br />
+between the same parties and affirmed up to the<br />
+higher Courts of India, the same cannot be<br />
+reopened in a subsequent writ petition by adopting<br />
+a different stand. Re-litigation of an issue already<br />
+concluded is impermissible.” </p>
+                        </a>
+                                            <a class="text-dark" href="Afr/view_file_afr.php?token=MzQyMzN8MTc3NTcxNzA1NQ%3D%3D.766534c38ac28fc7a9220ce47b904e7c77e0ca763dcf7f332cc39363417d27f7" target="_blank"> 
+                            <p class="mb-1">6.  “Under Order VII Rule 11 CPC, only plaint<br />
+averments has to be considered, not the defence<br />
+of the defendant. Rejection of plaint is<br />
+impermissible where any relief claimed falls within<br />
+civil court jurisdiction. The jurisdiction of the Debt<br />
+Recovery Tribunal under the SARFAESI Act is<br />
+limited in nature.” </p>
+                        </a>
+                                            <a class="text-dark" href="Afr/view_file_afr.php?token=MzQxNjF8MTc3NTcxNzA1NQ%3D%3D.539dc0737720108057616f4ce9f450a948cf5ae0da6ff05d423077d4c5ef724e" target="_blank"> 
+                            <p class="mb-1">7.  An artificial distinction cannot be drawn in favour of a particular accused when all are charged with participation in a common offence. Where the prosecution case rests on the same set of evidence against all accused, it would be impermissible to acquit one accused while convicting the others on that very evidence, unless a strong and compelling case for acquittal is independently made out in favour of such accused. </p>
+                        </a>
+                                            <a class="text-dark" href="Afr/view_file_afr.php?token=MzQwOTV8MTc3NTcxNzA1NQ%3D%3D.b2b8c21637894963fb0b42571b505b2ab37fbe4d4d637aa04ba6fd5bcde016bb" target="_blank"> 
+                            <p class="mb-1">8.  Mere participation in the examination does not confer any vested or indefeasible right to appointment or even to declaration of result. The State is competent to cancel a recruitment process prior to its culmination if found inconsistent with statutory provisions, in order to prevent perpetuation of illegality. The doctrine that “rules of the game cannot be changed after commencement” is inapplicable where the change is necessitated to ensure conformity with binding statutory rules. </p>
+                        </a>
+                                            <a class="text-dark" href="Afr/view_file_afr.php?token=MzQwOTR8MTc3NTcxNzA1NQ%3D%3D.3c803dbb8e5d200a47a61f9794077c3d0e4ba61645e03607b54b00b303578373" target="_blank"> 
+                            <p class="mb-1">9.  Misconduct involving indiscipline and repeated unauthorized absence constitutes a serious breach of service discipline and justifies the imposition of strict penalties by the disciplinary authority. The courts ought not to lightly interfere with the quantum of punishment unless it is shown to be shockingly disproportionate or vitiated by procedural irregularity, mala fides, or violation of principles of natural justice. </p>
+                        </a>
+                                            <a class="text-dark" href="Afr/view_file_afr.php?token=MzQwOTN8MTc3NTcxNzA1NQ%3D%3D.f87aaf3aae7a25a10c176b92617d6322a73b85cbdf666cf0460c2a8ea442b00b" target="_blank"> 
+                            <p class="mb-1">10.  Courts, though not expert medical bodies, are empowered to judicially review the decision-making process to ensure that it is fair, transparent, and in accordance with established legal principles; however, in matters requiring medical expertise, they must accord due deference to, and ultimately rely upon, the opinion rendered by the Disability Assessment Board as the competent authority. </p>
+                        </a>
+                    
+                    <!-- <p class="mb-1">1. A teacher holds a position of trust and responsibility. Any sexual, abusive, or exploitative act with a minor student is not just professional misconduct, but a grave criminal offence punishable under the POCSO Act, as it amounts to child exploitation and invites strict punishment. </p>
+                    <p class="mb-1">2. Where the matriculation or equivalent certificate is available and authentic, the same shall be treated as the conclusive evidence for determination of the age of the victim/child. In such cases, no other material whether medical, documentary, or oral shall be considered for the purpose of age determination, and any deviation therefrom would be impermissible in law. </p>
+                    <p class="mb-1">3. “In a Public Interest Litigation, when the petitioner is himself a party to disputes concerning the subject matter, and the same issue is already seized by the Court in another PIL including suo motu cognizance, the subsequent petition cannot be regarded as a bona fide public cause. Such a petition, being tainted with personal motive and vendetta, is liable to be dismissed with exemplary costs.” </p>
+                    <p class="mb-1">4. “The academic distinction between 'murder' and 'culpable homicide not amounting to murder' has always vexed the courts. The confusion is caused if courts losing sight of the true scope and meaning of the terms used by the legislature in these sections, allow themselves to be drawn into minute abstractions.” </p>
+                    <p class="mb-1">5. When an accused faces charges under special statutes for offences against the State, the grant of bail is ordinarily discouraged. Courts are obliged to exercise exceptional caution and a rigorous approach, weighing the seriousness of the allegations, the protection of State interests, and the statutory limitations on bail prescribed by the relevant special laws. </p>
+                    <p class="mb-1">6.The State, being the employer, can prescribe the qualification as a condition of eligibility for a particular post and can frame Rules with regard to recruitment and service conditions, and it can be declared ultra vires only if it is enacted beyond the legislative competence of the Constitution of India or is manifestly arbitrary.
+                        The equivalence of a qualification is not a matter that can be determined in the exercise of the powers of judicial review, and it is a matter for the State, as the recruiting authority, to determine. </p>
+                    <p class="mb-1">7. One of the self-imposed restrictions on exercise of power under Article 226 of the Constitution of India that has evolved through judicial precedents is that the Courts should normally not entertain a writ petition, where an effective and efficacious alternative remedy is available. </p>
+                    <p class="mb-1">8. Non-disclosure of reliance on past records in the second show-cause notice violates Article 311(2) of the Constitution of India, where past records are foundation of penalty. </p>
+                    <p class="mb-1">9. Gross discrepancies and lapses by prosecuting agency deemed wholly unacceptable; Trial Courts mandated to exercise vigilant oversight over actions of prosecution and Investigating Agencies to prevent accused from deriving undue benefit from prosecutorial derelictions, ensuring a fair and impartial trial, and upholding the sanctity of Rule of Law and due process. </p>
+                    <p class="mb-1">10. The provisions of 22 of the BNS (Section 84 IPC) will come to rescue of an accused, when he/she was not knowing that what he/she was doing, is wrong or the same is contrary to law. In order to ascertain the same, the imperative circumstances and the behavior preceding, attending and following the crime are the main consideration. </p> -->
+
+                </div>
+            </div>
+
+            <!-- <a class="btn btn-sm btn-primary text-uppercase mb-4"
+                href="latest_afr.php">Read More <i
+                    class="bi bi-arrow-right"></i></a> -->
+            <a class="btn btn-sm btn-primary text-uppercase mb-4"
+                href="Afr/index.php">Read More <i
+                    class="bi bi-arrow-right"></i></a>
+        </div>
+
+    </div>
+
+</div>
+<!-- About End -->
+
+
+
+<!-- Service Start -->
+<div class=" service mt-3 asso-div-background bg-white">
+    <div class="px-4 px-lg-5 pt-0 mt-0 mb-4 bg-white">
+        <div class="text-center wow fadeIn" data-wow-delay="0.1s">
+
+            <h2 class="mt-4">Our <span
+                    class="text-primary">Services</span></h2>
+        </div>
+        <div class="row g-md-0 text-center">
+            <div class="col-md-4 col-lg-2 p-2">
+                <div
+                    class="zoom-in-wrapper zoom-in asso-div wow zoomIn">
+                    <div
+                        class="service-item h-100 wow fadeIn border py-3"
+                        data-wow-delay="0.1s">
+                        <i
+                            class="fas fa-angle-double-right fa-2x text-primary"></i>
+                        <h6 class="">What's New</h6>
+                        <a class="btn btn-sm btn-primary text-dark"
+                            href="noti/index.php">Click here <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-2 p-2">
+                <div class="zoom-in-wrapper zoom-in asso-div wow zoomIn">
+                    <div
+                        class="service-item h-100 py-3 wow fadeIn border"
+                        data-wow-delay="0.1s">
+                        <i
+                            class="fas fa-balance-scale fa-2x text-primary"></i>
+
+                        <h6 class="">Virtual Court</h6>
+                        <a class="btn btn-sm btn-primary text-dark"
+                            href="e_services/vclink/vclink.php">Click here <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-2 p-2">
+                <div class="zoom-in-wrapper zoom-in asso-div wow zoomIn">
+                    <div
+                        class="service-item h-100 py-3 wow fadeIn border"
+                        data-wow-delay="0.1s">
+                        <i
+                            class="fas fa-desktop fa-2x text-primary"></i>
+                        <h6 class="">Web Diary</h6>
+                        <a class="btn btn-sm btn-primary text-dark"
+                            href="webdate.php">Click here <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-2 p-2">
+                <div class="zoom-in-wrapper zoom-in asso-div wow zoomIn">
+                    <div
+                        class="service-item h-100 py-3 wow fadeIn border"
+                        data-wow-delay="0.1s">
+                        <i
+                            class="fas fa-calendar fa-2x text-primary"></i>
+                        <h6 class="">Roster</h6>
+                        <a class="btn btn-sm btn-primary text-dark"
+                            href="https://highcourt.cg.gov.in/noti/roster.php">Click here <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-2 p-2">
+                <div class="zoom-in-wrapper zoom-in asso-div wow zoomIn">
+                    <div
+                        class="service-item h-100 py-3  wow fadeIn border"
+                        data-wow-delay="0.1s">
+                        <i class="fas fa-door-closed fa-2x text-primary"></i>
+                        <h6 class="">e-Gate Pass</h6>
+                        <a class="btn btn-sm btn-primary text-dark"
+                            href="https://egatepass.cghc.nic.in/">Click here <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-2 p-2">
+                <div class="zoom-in-wrapper zoom-in asso-div wow zoomIn">
+                    <div
+                        class="service-item h-100 py-3 wow fadeIn border"
+                        data-wow-delay="0.1s">
+                        <i
+                            class="fas fa-check-circle fa-2x text-primary"></i>
+                        <h6 class="">Complaints</h6>
+                        <a class="btn btn-sm btn-primary text-dark"
+                            href="complaint.php">Click here <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-2 p-2">
+                <div class="zoom-in-wrapper zoom-in asso-div wow zoomIn">
+                    <div
+                        class="service-item h-100 py-3 wow fadeIn border"
+                        data-wow-delay="0.1s">
+                        <i class="fas fa-gavel fa-2x text-primary"></i>
+                        <h6 class="">e-SCR</h6>
+                        <a class="btn btn-sm btn-primary text-dark"
+                            href="https://judgments.ecourts.gov.in/pdfsearch/index.php">Click here <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-2 p-2">
+                <div class="zoom-in-wrapper zoom-in asso-div wow zoomIn">
+                    <div
+                        class="service-item h-100 py-3 wow fadeIn border"
+                        data-wow-delay="0.1s">
+                        <i
+                            class="fas fa-briefcase fa-2x text-primary"></i>
+
+                        <h6 class="">Hindi Judgement</h6>
+                        <a class="btn btn-sm btn-primary text-dark"
+                            href="https://highcourt.cg.gov.in/hcbspjudgement/oj_hindi.php">Click here <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-2 p-2">
+                <div class="zoom-in-wrapper zoom-in asso-div wow zoomIn">
+                    <div
+                        class="service-item h-100 py-3 wow fadeIn border"
+                        data-wow-delay="0.1s">
+                        <i class="fas fa-scroll fa-2x text-primary"></i>
+                        <h6 class="">Neutral Citation</h6>
+                        <a class="btn btn-sm btn-primary text-dark"
+                            href="https://highcourt.cg.gov.in/hcbspjudgement/oj_search.php">Click here <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-2 p-2 ">
+                <div class="zoom-in-wrapper zoom-in asso-div wow zoomIn">
+                    <div
+                        class="service-item h-100 py-3  wow fadeIn border"
+                        data-wow-delay="0.1s">
+                        <i class="fas fa-clock fa-2x text-primary"></i>
+                        <h6 class="">Justice Clock</h6>
+                        <a class="btn btn-sm btn-primary text-dark"
+                            href="https://highcourt.cg.gov.in/hcbilaspurweb/JusticeClock.php">Click here <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-2 p-2">
+                <div class="zoom-in-wrapper zoom-in asso-div wow zoomIn">
+                    <div
+                        class="service-item h-100 py-3 wow fadeIn border"
+                        data-wow-delay="0.1s">
+                        <i class="fas fa-list fa-2x text-primary"></i>
+                        <h6 class="">Online RTI Portal</h6>
+                        <a class="btn btn-sm btn-primary text-dark"
+                            href="https://highcourt.cg.gov.in/online_rti/index.php">Click here <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-2 p-2">
+                <div class="zoom-in-wrapper zoom-in asso-div wow zoomIn">
+                    <div
+                        class="service-item h-100 py-3 wow fadeIn border"
+                        data-wow-delay="0.1s">
+                        <i class="fas fa-tv fa-2x text-primary"></i>
+                        <h6 class="">Recruitment</h6>
+                        <a class="btn btn-sm btn-primary text-dark"
+                            href="recruit/recruithc.php">Click here <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+<!-- Pricing Start -->
+<div class=" price px-4 px-lg-5 mt-5">
+    <div class="row g-md-4">
+        <div class="col-md-6">
+            <div
+                class="h-100 justify-content-center align-items-center py-3 ms-0 ms-lg-3 wow fadeIn">
+                <div class="card border bg-white">
+                    <div class="card-header ">
+                        <h3 class="text-center">Important <span
+                                class="text-primary">NOTICE</span></h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <div class="">
+                                <p class="mb-1 "><a class="text-dark" target="_blank" href="other/2024/circular_17327_23102024.pdf">1. Circular No. 17327 Bilaspur, dated 23rd October 2024. </a></p>
+                                <p class="mb-1"><a class="text-dark" target="_blank" href="other/2024/circuler_181_17102024.pdf">2. Circular No. 181 Bilaspur, dated 17th October 2024. </a></p>
+                                <p class="mb-1"><a class="text-dark" target="_blank" href="other/2024/circuler_123_17102024.pdf">3. Circular No. 123/D.E. Bilaspur, dated 17th October 2024. </a></p>
+                                <p class="mb-1"><a class="text-dark" target="_blank" href="other/2024/order_135_21082024.pdf">4. Order No 135 Bilaspur, dated 21th August 2024. </a></p>
+                                <p class="mb-1"><a class="text-dark" target="_blank" href="other/2024/circular_609_24062024.pdf">5. Circular No. 609/confdl./2024 Bilaspur,dated 24rd June 2024. </a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border ">
+                    <h3 class="text-center">More <span
+                            class="text-primary">About Us</span></h3>
+                    <div class="">
+                        <div class="row px-4 mb-2">
+                            <div class="col-md-4 text-center p-2">
+                                <div class="border border-1 border-primary about_button bg-primary shadow">
+                                    <a href="history.php" class="wow fadeIn text-white fw-bold ">History</a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center p-2">
+                                <div class="border border-1 border-primary about_button bg-primary shadow">
+                                    <a href="committees/committee.php" class="wow fadeIn text-white fw-bold">Committee</a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center p-2">
+                                <div class="border border-1 border-primary about_button bg-primary shadow">
+                                    <a href="download/court_building.php" class="wow fadeIn text-white fw-bold">Infrastructure</a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center p-2">
+                                <div class="border border-1 border-primary about_button bg-primary shadow">
+                                    <a href="about/district_web.php" class="wow fadeIn text-white fw-bold">District Court Website</a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center p-2">
+                                <div class="border border-1 border-primary about_button bg-primary shadow">
+                                    <a href="about/contact_us.php" class="wow fadeIn text-white fw-bold">Contact Numbers</a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center p-2">
+                                <div class="border border-1 border-primary about_button bg-primary shadow">
+                                    <a href="about/imp_email.php" class="wow fadeIn text-white fw-bold">Important Email ID</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div
+                class="h-100 justify-content-center align-items-center py-3  me-0 me-lg-3 wow fadeIn">
+                <div class="card border bg-white">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <h3 class="text-center flex-grow-1">
+                                Latest                                <span class="text-primary">
+                                    NEWS                                </span>
+                            </h3>
+                            <!-- Play/Pause button -->
+                            <button id="playPauseBtn3" class="btn btn-sm text-uppercase">
+                                Pause <i class="bi bi-pause"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="notification-wrapper2 mb-3 p-3  py-3">
+                            <div class="latest_notofication_scroll" id="newsScroll">
+
+                                                                                                    <a class="text-dark" href="news/view_file_news.php?token=MzQyNzB8MTc3NTcxNzA1NQ%3D%3D.f78f7c1c0347315be1cbb552414e69c2d4ce087eb13f707d91d481c91cd1d468" target="_blank">
+                                        <p class="mb-1">1.  Sabarimala Temple Entry: Bench Begins Hearing on Whether Order Allowing Women Should Continue. </p>
+                                                                        <a class="text-dark" href="news/view_file_news.php?token=MzQyNjl8MTc3NTcxNzA1NQ%3D%3D.71eaaa55012ca5b148a1cd7eb0e8904edb775103ce06405d2b19ecb320a1ffcf" target="_blank">
+                                        <p class="mb-1">2.  Only the competent medical board has the authority to verify the validity of disability certificates. </p>
+                                                                        <a class="text-dark" href="news/view_file_news.php?token=MzQyNjh8MTc3NTcxNzA1NQ%3D%3D.f8e2d6e69c155a78a8ad4d0b81e4a61b903a23347b38e77ab48ed2228e4e7c0e" target="_blank">
+                                        <p class="mb-1">3.  &quot;Work on road construction has stalled, and the High Court has asked for a response.&quot; </p>
+                                                                        <a class="text-dark" href="news/view_file_news.php?token=MzQyNjZ8MTc3NTcxNzA1NQ%3D%3D.fc521d5def1475dad81bda517d0dc5bda4b70e227a6b5d0c2753abc20149a0ad" target="_blank">
+                                        <p class="mb-1">4.  Voluntary Retirement is a Specific Right of the Employee: Court  </p>
+                                                                        <a class="text-dark" href="news/view_file_news.php?token=MzQyNjV8MTc3NTcxNzA1NQ%3D%3D.f5948812d7c5195396f80169879e384531bbeaa55c1f81e9bd01d4781f93a923" target="_blank">
+                                        <p class="mb-1">5.  Stray Cattle Menace: Supreme Court Seeks Response on Petition. </p>
+                                                                        <a class="text-dark" href="news/view_file_news.php?token=MzQyNjN8MTc3NTcxNzA1NQ%3D%3D.1c989311141a7d43083312b0ad730f752faaf6563c9e89f256c738f3e988a6fe" target="_blank">
+                                        <p class="mb-1">6.  High Court Strikes Down 50% Reservation for Men in Raipur Bar Association Elections. </p>
+                                                                        <a class="text-dark" href="news/view_file_news.php?token=MzQyNjB8MTc3NTcxNzA1NQ%3D%3D.e4d53af1e273c0a26b3e6dde68840be36c6601ce9fc1fe3386b6c52a2d2627c7" target="_blank">
+                                        <p class="mb-1">7.  Consider Regularizing Daily Wage Workers; Don't Balance Budget at the Expense of the Poor: HC to Government. </p>
+                                                                        <a class="text-dark" href="https://timesofindia.indiatimes.com/city/raipur/state-to-revise-noise-law-report-due-by-may-6/articleshow/130096001.cms" target="_blank">
+                                        <p class="mb-1">8.  State to revise noise law, report due by May 6. </p>
+                                                                        <a class="text-dark" href="news/view_file_news.php?token=MzQyNTl8MTc3NTcxNzA1NQ%3D%3D.f0ce438aea1972c6cf98934291515bb6f4324eca0599348ffd628fde8c1e8302" target="_blank">
+                                        <p class="mb-1">9.  HC flags 33 inmate deaths a yr, seeks prison chief’s affidavit. </p>
+                                                                        <a class="text-dark" href="news/view_file_news.php?token=MzQyNjR8MTc3NTcxNzA1NQ%3D%3D.fcbc9b2aa28e1f76f56ac62e49cd20f48984278141f20fdd911209ddd33a4c5c" target="_blank">
+                                        <p class="mb-1">10.  You said
+
+Delay In Recruitment To Specialised Medical Posts Particularly For Mental Healthcare Causes Prejudice To Public: Chhattisgarh High Court </p>
+                                                                        <!-- <p class="mb-1">1. Endt No. 173345/Rules/2025 Bilaspur, dated 26th August 2025. </p>
+                                <p class="mb-1">2. Notification No. 17126/Checker Bilaspur, dated 23rd August 2025. </p>
+                                <p class="mb-1">3. Notification No. 17124/Checker Bilaspur, dated 23rd August 2025. </p>
+                                <p class="mb-1">4. Supplementary Constitution of Benches at High Court of Chhattisgarh, Bilaspur W.E.F. 26.08.2025. </p>
+                                <p class="mb-1">5. Order No. 1055/Confdl./2025 Bilaspur, dated 22nd August 2025. </p>
+                                <p class="mb-1">6. Order No. 1052/Confdl./2025 Bilaspur, dated 22nd August 2025. </p>
+                                <p class="mb-1">7. Order No. 1049/Confdl./2025 Bilaspur, dated 22nd August 2025. </p>
+                                <p class="mb-1">8. Notification No. 1047/Confdl./2025 Bilaspur, dated 22nd August 2025. </p>
+                                <p class="mb-1">9. Notification No. 17106/Checker Bilaspur, dated 22nd August 2025. </p>
+                                <p class="mb-1">10. Order No. 83(App.)/ Bilaspur, dated 20th August 2025. </p> -->
+                            </div>
+
+                        </div>
+                        <center><a class="btn btn-sm btn-primary text-uppercase"
+                                href="news/index.php">Read More <i
+                                    class="bi bi-arrow-right"></i></a></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<!-- Pricing End -->
+
+
+<div class=" gallery pt-4">
+    <div class="px-4 px-lg-5 ms-0 ms-lg-2 me-0 me-lg-2">
+        <div class="text-center wow fadeIn" data-wow-delay="0.2s">
+            <h2 class="mb-3">Image <span
+                    class="text-primary">GALLERY</span></h2>
+        </div>
+        <div class="row g-0">
+            <div class="col-md-3 wow fadeIn p-1" data-wow-delay="0.6s">
+                <div class="gallery-item h-100">
+                    <img src="assets/img/events3/DSC_2579.JPG"
+                        class="img-fluid w-100 h-100" alt>
+                    <div class="gallery-icon">
+                        <a href="assets/img/events3/DSC_2579.JPG"
+                            class="btn text-white btn-lg-square"
+                            data-lightbox="Gallery-6">View Image</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeIn p-1" data-wow-delay="0.2s">
+                <div class="gallery-item h-70">
+                    <img src="assets/img/events2/1.jpg"
+                        class="img-fluid w-100 h-70" alt>
+                    <div class="gallery-icon">
+                        <a href="assets/img/events2/1.jpg"
+                            class="btn text-white btn-lg-square"
+                            data-lightbox="Gallery-6">View Image</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 wow fadeIn p-1" data-wow-delay="0.4s">
+                <div class="gallery-item h-100">
+                    <img src="assets/img/gallery3.jpg"
+                        class="img-fluid w-100 h-100" alt>
+                    <div class="gallery-icon">
+                        <a href="assets/img/gallery3.jpg"
+                            class="btn text-white btn-lg-square"
+                            data-lightbox="Gallery-6">View Image</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 wow fadeIn p-1" data-wow-delay="0.6s">
+                <div class="gallery-item h-100">
+                    <img src="assets/img/events2/DSC_3551.JPG"
+                        class="img-fluid w-100 h-100" alt>
+                    <div class="gallery-icon">
+                        <a href="assets/img/events2/DSC_3551.JPG"
+                            class="btn text-white btn-lg-square"
+                            data-lightbox="Gallery-6">View Image</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 wow fadeIn p-1" data-wow-delay="0.2s">
+                <div class="gallery-item h-100">
+                    <img src="assets/img/events2/DSC_2287.JPG"
+                        class="img-fluid w-100 h-100" alt>
+                    <div class="gallery-icon">
+                        <a href="assets/img/events2/DSC_2287.JPG"
+                            class="btn text-white btn-lg-square"
+                            data-lightbox="Gallery-6">View Image</a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-2 wow fadeIn p-1" data-wow-delay="0.6s">
+                <div class="gallery-item h-100">
+                    <img src="assets/img/events2/DSC_7752.JPG"
+                        class="img-fluid w-100 h-100" alt>
+                    <div class="gallery-icon">
+                        <a href="assets/img/events2/DSC_7752.JPG"
+                            class="btn text-white btn-lg-square"
+                            data-lightbox="Gallery-6">View Image</a>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="col-md-2 wow fadeIn p-1" data-wow-delay="0.6s">
+                <div class="gallery-item h-100">
+                    <img src="assets/img/events2/DSC_8824.JPG"
+                        class="img-fluid w-100 h-100" alt>
+                    <div class="gallery-icon">
+                        <a href="assets/img/events2/DSC_8824.JPG"
+                            class="btn text-white btn-lg-square"
+                            data-lightbox="Gallery-6">View Image</a>
+                    </div>
+                </div>
+            </div> -->
+            <div class="col-md-3 wow fadeIn p-1" data-wow-delay="0.4s">
+                <div class="gallery-item h-100">
+                    <img src="assets/img/events2/DSC_1147.JPG"
+                        class="img-fluid w-100 h-100" alt>
+                    <div class="gallery-icon">
+                        <a href="assets/img/events2/DSC_1147.JPG"
+                            class="btn text-white btn-lg-square"
+                            data-lightbox="Gallery-6">View Image</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 wow fadeIn p-1" data-wow-delay="0.6s">
+                <div class="gallery-item h-100">
+                    <img src="assets/img/events2/DSC_1111.JPG"
+                        class="img-fluid w-100 h-100" alt>
+                    <div class="gallery-icon">
+                        <a href="assets/img/events2/DSC_1111.JPG"
+                            class="btn text-white btn-lg-square"
+                            data-lightbox="Gallery-6">View Image</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 wow fadeIn p-1" data-wow-delay="0.6s">
+                <div class="gallery-item h-100">
+                    <img src="assets/img/events2/DSC_1667.JPG"
+                        class="img-fluid w-100 h-100" alt>
+                    <div class="gallery-icon">
+                        <a href="assets/img/events2/DSC_1667.JPG"
+                            class="btn text-white btn-lg-square"
+                            data-lightbox="Gallery-6">View Image</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <center><a class="btn btn-sm btn-primary text-uppercase mt-5"
+                href="gallery.php">View More Images <i
+                    class="bi bi-arrow-right"></i></a></center>
+    </div>
+</div>
+<!-- Gallery End -->
+
+<!-- Pricing Start -->
+<div class=" px-0 mt-5">
+    <div class="row g-0">
+        <!-- First Column (Calendar) -->
+        <div class="col-12 col-md-6">
+            <div class="h-100 bg-dark justify-content-center align-items-center p-4">
+                <h1 class="text-white text-center">High Court Calendar 2026</h1>
+                <div class="calendar p-0 p-lg-3 ">
+                    <div class="month-header bg-light d-flex justify-content-between">
+                        <button id="prevBtn"><i class="bi bi-chevron-left text-dark"></i></button>
+                        <span id="monthName" class="text-dark">August</span>
+                        <button id="nextBtn"><i class="bi bi-chevron-right text-dark"></i></button>
+                    </div>
+                    <table class="table table-bordered bg-light text-dark" id="calendarTable">
+                    </table>
+                    <div class="calendar-legend bg-white d-flex justify-content-center align-items-center gap-4 p-2">
+                        <span class="d-flex align-items-center">
+                            <span class="box me-2 working_saturday_box"></span>
+                            Working Saturday                        </span>
+
+                        <span class="d-flex align-items-center">
+                            <span class="box me-2 weekend_box"></span>
+                            Weekend                        </span>
+
+                        <span class="d-flex align-items-center">
+                            <span class="box me-2 holiday_box"></span>
+                            Holiday                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="d-flex justify-content-center align-items-center h-100 bg-primary p-4">
+                <div class="wow fadeIn" data-wow-delay="0.3s">
+                    <h1 class="text-white text-center">High Court YouTube Channel</h1>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                            class="embed-responsive-item youtube_channel "
+                            src="https://www.youtube.com/embed/UzKXQEw9szk?si=zn6vdpa7euC8K0Nd"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="py-3">
+                                </div>
+
+<!-- Footer Start -->
+<div
+    class="container-fluid footer position-relative bg-dark text-white-50 py-5 fadeIn"
+    data-wow-delay="0.2s">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6">
+                <a href class="navbar-brand">
+                    <h3 class="text-primary mb-0">High Court of
+                        Chhattisgarh</h3>
+                </a>
+                <p class="text-muted">The Chhattisgarh High Court was established on 1st of
+                    November 2000 as a separate High Court for newly
+                    created State of Chhattisgarh under the Madhya
+                    Pradesh Reorganisation Act, 2000 having its
+                    jurisdiction over the territories of the state of
+                    Chhattisgarh.</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <!-- <a class="btn btn-primary me-3"
+                        href="https://www.youtube.com/@highcourtofchhattisgarh3160/videos"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-primary me-3"
+                        href="https://t.me/+WM28BXeybykzODNl"><i class="fab fa-telegram"></i></a> -->
+                    <p class="mx-2 text-muted"><i
+                            class="fab fa-youtube me-1 text-primary"></i>
+                        <a href="https://www.youtube.com/@highcourtofchhattisgarh3160/videos" class="text-primary" target="_blank">Visit Our YouTube Channel</a>
+                    </p>
+                    <p class="mx-2 text-muted"><i
+                            class="fab fa-telegram me-1 text-primary"></i>
+                        <a href="telegram.php" class="text-primary" target="_blank">Visit Our Telegram Channel</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <p class="text-muted"><i
+                            class="fa fa-map-marker-alt me-2"></i>238W+XPH,
+                        Raipur - Bilaspur Expy, Bodri, Bilaspur,
+                        Chhattisgarh 495003</p>
+                    <p class="text-muted"><i
+                            class="fa fa-phone-alt me-2"></i>077522
+                        41040</p>
+                    <p class="text-muted"><i
+                            class="fa fa-envelope me-2"></i>
+                        highcourt[dot]cg[at]gov[dot]in</p>
+                    <p class="text-muted"><i
+                            class="fa fa-download me-2"></i>
+                        <a href="https://play.google.com/store/apps/details?id=cghc.nic.egatepass&hl=en-IN" class="text-primary">e-Gate Pass Download</a>
+                    </p>
+
+                    <!-- <p><i
+                            class="fab fa-youtube me-2"></i>
+                        <a href="" class="text-muted">Visit Our YouTube Channel</a>
+                    </p>
+                    <p><i
+                            class="fab fa-telegram me-2"></i>
+                        <a href="" class="text-muted">Telegram</a>
+                    </p> -->
+                    <!-- <div class="col-sm-6">
+                                <h5 class="text-primary mb-4">Quick Links</h5>
+                                <a class="btn btn-link" href>About Us</a>
+                                <a class="btn btn-link" href>Contact Us</a>
+                                <a class="btn btn-link" href>Our Services</a>
+                                <a class="btn btn-link" href>Terms &
+                                    Condition</a>
+                            </div>
+                            <div class="col-sm-6">
+                                <h5 class="text-primary mb-4">Popular Links</h5>
+                                <a class="btn btn-link" href>About Us</a>
+                                <a class="btn btn-link" href>Contact Us</a>
+                                <a class="btn btn-link" href>Our Services</a>
+                                <a class="btn btn-link" href>Terms &
+                                    Condition</a>
+                            </div>
+                            <div class="col-sm-12">
+                                <h5 class="text-primary mb-4">Gallery</h5>
+                            </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+<!-- Copyright Start -->
+<div
+    class="container-fluid bg-dark text-white border-top border-secondary py-4 fadeIn"
+    data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row">
+            <!-- <div
+                        class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">High Court of
+                            Chhattisgarh</a>, All Right Reserved.
+                    </div> -->
+            <div class="col-md-12 text-center text-muted">
+
+                Site is Designed and Maintained by High Court Computer
+                Cell Bilaspur. <a href="disclaimer.php" class="text-primary">(Disclaimer)</a><br>
+                Hosted by National Informatics Centre (NIC), Ministry of
+                Electronics & Information Technology, Government of
+                India.            </div>
+        </div>
+    </div>
+</div>
+<!-- Copyright End -->
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i
+        class="bi bi-arrow-up"></i></a>
+
+<!-- JavaScript Libraries -->
+
+<script
+    src="assets/js/googleapis/jquery.min.js"></script>
+
+<script
+    src="assets/js/cdnjs/bootstrap.bundle.min.js"></script>
+<script src="assets/lib/wow/wow.min.js"></script>
+<script src="assets/lib/easing/easing.min.js"></script>
+<script src="assets/lib/waypoints/waypoints.min.js"></script>
+<script src="assets/lib/counterup/counterup.min.js"></script>
+<script src="assets/lib/lightbox/js/lightbox.min.js"></script>
+<script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
+<!-- jQuery (necessary for Owl Carousel) -->
+<script
+    src="assets/js/cdnjs/jquery.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script
+    src="assets/js/cdnjs/owl.carousel.min.js"></script>
+<!-- Template Javascript -->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/index.js"></script>
+<script src="assets/js/footer.js"></script>
+<script src="assets/js/hc_calendar.js"></script>
+<script src="assets/js/playPause.js"></script>
+</body>
+
+
+</html>

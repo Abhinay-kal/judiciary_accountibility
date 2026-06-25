@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/themes/meghc/hclogo.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Home | High Court of Meghalaya</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_AFfilFL9ir5oT3mei8iwER8GUUu8lqdnHJxHjgVg94A.css?delta=0&amp;language=en&amp;theme=meghc&amp;include=eJxlUItuwyAM_CESfxJywE28moew0yT7-tEum9JNQnB3HGcbDIFUeWJhOwCvzL0xv3GcyWCWMqG4CcPdW-mrwgV7DiW7UKS0qexQBTk72k043yG2taKMJ3U3oV2FIzXgbDQ3NO6PEx7lrDKoHd06u0TzEqCR1pKVHzRIN63mtARG8Ykio3-GKvyXRlsokXtmkW5sYekV45ExcRiC6p-bN-Z0rdRurAv8Iv9y-G1h66mHGqX-BUrO-mS-N8mfBBc8fh_uwbQpvPYxlbhKlz6aP-Uf9AX7vZ--" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Cxv2O3iNUCzdhXRGIdjLKBe_VLBOdSqBkW8QhT0yIxE.css?delta=1&amp;language=en&amp;theme=meghc&amp;include=eJxlUItuwyAM_CESfxJywE28moew0yT7-tEum9JNQnB3HGcbDIFUeWJhOwCvzL0xv3GcyWCWMqG4CcPdW-mrwgV7DiW7UKS0qexQBTk72k043yG2taKMJ3U3oV2FIzXgbDQ3NO6PEx7lrDKoHd06u0TzEqCR1pKVHzRIN63mtARG8Ykio3-GKvyXRlsokXtmkW5sYekV45ExcRiC6p-bN-Z0rdRurAv8Iv9y-G1h66mHGqX-BUrO-mS-N8mfBBc8fh_uwbQpvPYxlbhKlz6aP-Uf9AX7vZ--" />
+<link rel="stylesheet" media="all" href="/styleswitcher/css/meghc?tc1a48" id="styleswitcher-css" />
+
+        <style media="all">/* <![CDATA[ */
+body {font-size: 93.75%; font-family: Georgia, 'Palatino Linotype', 'Book Antiqua', 'URW Palladio L',
+      Baskerville, Meiryo, 'Hiragino Mincho Pro', 'MS PMincho', serif; }
+h1,h2,h3,h4,h5 {font-family: Georgia, 'Palatino Linotype', 'Book Antiqua', 'URW Palladio L',
+      Baskerville, Meiryo, 'Hiragino Mincho Pro', 'MS PMincho', serif; }
+/* ]]> */
+</style>
+    
+  </head>
+  <body class="two-sidebars rc-3 path-frontpage">
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div id="page-wrapper" style=" margin-top: 2px; margin-bottom: 2px;">
+<div id="page" style="padding: 2px;">
+	<header id="header" role="banner" style=" border-width: 1px;" aria-label="Site header">
+    <div class="section clearfix">
+	<div id="top-header01" class="top-header01" >
+	  <div class="court_logo" >
+	      <div class="region region-hclogo">
+    <div id="block-hcmlogo" class="block block-block-content block-block-contentb2c8173f-f572-40bf-99b5-3b891089a072">
+  
+    
+      <div class="content">
+      
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><img alt="Screen Reader" data-entity-type="file" data-entity-uuid="775543ad-f3c3-4267-a768-475518b5ad60" id="icon_6" src="/sites/default/files/inline-images/hcm_logo.png"></p>
+</div>
+      
+    </div>
+  </div>
+
+  </div>
+
+	  </div>
+	  <div class="top-right01">
+	    <div class="top-left01-inner1">
+	        <div class="region region-screen-reader">
+    <div id="block-screenreaderaccess" class="block block-block-content block-block-content4dd3ea87-d6e0-4c1a-89c4-963caf3590e5">
+  
+    
+      <div class="content">
+      
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><a href="screen-reader-access" id="icon_5"><img alt="Screen Reader" data-entity-type="file" data-entity-uuid="775543ad-f3c3-4267-a768-475518b5ad60" src="/sites/default/files/inline-images/screen_reader.png"></a></p>
+</div>
+      
+    </div>
+  </div>
+
+  </div>
+
+		</div>
+		<div class="accessibility">
+		    <div class="region region-accessibility">
+    <div id="block-meghc-accessibilitywidget" class="block block-accessibility-widget block-accessibility-widget-block">
+  
+    
+      <div class="content">
+      <!-- accessibility panel -->
+<div class="uwaw uw-light-theme gradient-head uwaw-initial paid_widget" id="uw-main">
+   <div class="relative second-panel">
+      <h3>Accessibility options</h3>
+      <div class="uwaw-close" onclick="closeMain()"></div>
+   </div>
+   <div class="uwaw-body">
+      <div class="h-scroll">
+         <div class="uwaw-features">
+                        <div class="uwaw-features__item reset-feature" id="featureItem">
+               <button
+                  id="btn-s9"
+                  class="uwaw-features__item__i"
+                  data-uw-reader-content="Enable the UserWay screen reader"
+                  aria-label="Enable the UserWay screen reader"
+                  aria-pressed="false"
+                  >
+                  <span class="uwaw-features__item__icon">
+                  <span class="ux4g-icon icon-bigger-text"> </span> </span
+                     ><span class="uwaw-features__item__name">Bigger Text</span>
+                  <div
+                     class="uwaw-features__item__steps reset-steps"
+                     id="featureSteps"
+                     >
+                     <!-- Steps span tags will be dynamically added here -->
+                  </div>
+                  <span
+                     class="tick-active uwaw-features__item__enabled reset-tick"
+                     id="tickIcon"
+                     style="display: none"
+                     >
+                  </span>
+               </button>
+            </div>
+            <div class="uwaw-features__item reset-feature" id="featureItem-st">
+               <button
+                  id="btn-small-text"
+                  class="uwaw-features__item__i"
+                  data-uw-reader-content="Enable the UserWay screen reader"
+                  aria-label="Enable the UserWay screen reader"
+                  aria-pressed="false"
+                  >
+                  <span class="uwaw-features__item__icon">
+                  <span class="ux4g-icon icon-small-text"> </span> </span
+                     ><span class="uwaw-features__item__name">Small Text</span>
+                  <div
+                     class="uwaw-features__item__steps reset-steps"
+                     id="featureSteps-st"
+                     >
+                     <!-- Steps span tags will be dynamically added here -->
+                  </div>
+                  <span
+                     class="tick-active uwaw-features__item__enabled reset-tick"
+                     id="tickIcon-st"
+                     style="display: none"
+                     >
+                  </span>
+               </button>
+            </div>
+            <div class="uwaw-features__item reset-feature" id="featureItem-lh">
+               <button
+                  id="btn-s12"
+                  class="uwaw-features__item__i"
+                  data-uw-reader-content="Enable the UserWay screen reader"
+                  aria-label="Enable the UserWay screen reader"
+                  aria-pressed="false"
+                  >
+                  <span class="uwaw-features__item__icon">
+                  <span class="ux4g-icon icon-line-hight"> </span>
+                  </span>
+                  <span class="uwaw-features__item__name">Line Height</span>
+                  <div
+                     class="uwaw-features__item__steps reset-steps"
+                     id="featureSteps-lh"
+                     >
+                     <!-- Steps span tags will be dynamically added here -->
+                  </div>
+                  <span
+                     class="tick-active uwaw-features__item__enabled reset-tick"
+                     id="tickIcon-lh"
+                     style="display: none"
+                     >
+                  </span>
+               </button>
+            </div>
+            <div class="uwaw-features__item reset-feature" id="featureItem-ht">
+               <button
+                  id="btn-s10"
+                  onclick="highlightLinks()"
+                  class="uwaw-features__item__i"
+                  data-uw-reader-content="Enable the UserWay screen reader"
+                  aria-label="Enable the UserWay screen reader"
+                  aria-pressed="false"
+                  >
+               <span class="uwaw-features__item__icon">
+               <span class="ux4g-icon icon-highlight-links"> </span>
+               </span>
+               <span class="uwaw-features__item__name">Highlight Links</span>
+               <span
+                  class="tick-active uwaw-features__item__enabled reset-tick"
+                  id="tickIcon-ht"
+                  style="display: none"
+                  >
+               </span>
+               </button>
+            </div>
+            <div class="uwaw-features__item reset-feature" id="featureItem-ts">
+               <button
+                  id="btn-s13"
+                  onclick="increaseAndReset()"
+                  class="uwaw-features__item__i"
+                  data-uw-reader-content="Enable the UserWay screen reader"
+                  aria-label="Enable the UserWay screen reader"
+                  aria-pressed="false"
+                  >
+                  <span class="uwaw-features__item__icon">
+                  <span class="ux4g-icon icon-text-spacing"> </span>
+                  </span>
+                  <span class="uwaw-features__item__name">Text Spacing</span>
+                  <div
+                     class="uwaw-features__item__steps reset-steps"
+                     id="featureSteps-ts"
+                     >
+                     <!-- Steps span tags will be dynamically added here -->
+                  </div>
+                  <span
+                     class="tick-active uwaw-features__item__enabled reset-tick"
+                     id="tickIcon-ts"
+                     style="display: none"
+                     >
+                  </span>
+               </button>
+            </div>
+            <div class="uwaw-features__item reset-feature" id="featureItem-df">
+               <button
+                  id="btn-df"
+                  onclick="toggleFontFeature()"
+                  class="uwaw-features__item__i"
+                  data-uw-reader-content="Enable the UserWay screen reader"
+                  aria-label="Enable the UserWay screen reader"
+                  aria-pressed="false"
+                  >
+               <span class="uwaw-features__item__icon">
+               <span class="ux4g-icon icon-dyslexia-font"> </span>
+               </span>
+               <span class="uwaw-features__item__name">Dyslexia Friendly</span>
+               <span
+                  class="tick-active uwaw-features__item__enabled reset-tick"
+                  id="tickIcon-df"
+                  style="display: none"
+                  >
+               </span>
+               </button>
+            </div>
+            <div class="uwaw-features__item reset-feature" id="featureItem-hi">
+               <button
+                  id="btn-s11"
+                  onclick="toggleImages()"
+                  class="uwaw-features__item__i"
+                  data-uw-reader-content="Enable the UserWay screen reader"
+                  aria-label="Enable the UserWay screen reader"
+                  aria-pressed="false"
+                  >
+               <span class="uwaw-features__item__icon">
+               <span class="ux4g-icon icon-hide-images"> </span>
+               </span>
+               <span class="uwaw-features__item__name">Hide Images</span>
+               <span
+                  class="tick-active uwaw-features__item__enabled reset-tick"
+                  id="tickIcon-hi"
+                  style="display: none"
+                  >
+               </span>
+               </button>
+            </div>
+            <div
+               class="uwaw-features__item reset-feature"
+               id="featureItem-Cursor"
+               >
+               <button
+                  id="btn-cursor"
+                  onclick="toggleCursorFeature()"
+                  class="uwaw-features__item__i"
+                  data-uw-reader-content="Enable the UserWay screen reader"
+                  aria-label="Enable the UserWay screen reader"
+                  aria-pressed="false"
+                  >
+               <span class="uwaw-features__item__icon">
+               <span class="ux4g-icon icon-cursor"> </span>
+               </span>
+               <span class="uwaw-features__item__name">Cursor</span>
+               <span
+                  class="tick-active uwaw-features__item__enabled reset-tick"
+                  id="tickIcon-cursor"
+                  style="display: none"
+                  >
+               </span>
+               </button>
+            </div>
+            <div
+               class="uwaw-features__item reset-feature"
+               id="featureItem-ht-dark"
+               >
+               <button
+                  id="dark-btn"
+                  class="uwaw-features__item__i"
+                  data-uw-reader-content="Enable the UserWay screen reader"
+                  aria-label="Enable the UserWay screen reader"
+                  aria-pressed="false"
+                  >
+                  <span class="uwaw-features__item__name">
+                     <span class="light_dark_icon">
+                        <input
+                           type="checkbox"
+                           class="light_mode uwaw-featugres__item__i"
+                           id="checkbox"
+                           />
+                        <label for="checkbox" class="checkbox-label">
+                           <!-- <i class="fas fa-moon-stars"></i> -->
+                           <i class="fas fa-moon-stars">
+                           <span class="ux4g-icon icon-moon"></span>
+                           </i>
+                           <i class="fas fa-sun">
+                           <span class="ux4g-icon icon-sun"></span>
+                           </i>
+                           <span class="ball"></span>
+                        </label>
+                     </span>
+                     <span class="uwaw-features__item__name">Light-Dark</span>
+                  </span>
+                  <span
+                     class="tick-active uwaw-features__item__enabled reset-tick"
+                     id="tickIcon-ht-dark"
+                     style="display: none; pointer-events: none"
+                     >
+                  </span>
+               </button>
+            </div>
+            <!-- Invert Colors Widget -->
+            <div class="uwaw-features__item reset-feature" id="featureItem-ic">
+               <button
+                  id="btn-invert"
+                  class="uwaw-features__item__i"
+                  data-uw-reader-content="Enable the UserWay screen reader"
+                  aria-label="Enable the UserWay screen reader"
+                  aria-pressed="false"
+                  >
+               <span class="uwaw-features__item__icon">
+               <span class="ux4g-icon icon-invert"> </span>
+               </span>
+               <span class="uwaw-features__item__name">Invert Colors</span>
+               <span
+                  class="tick-active uwaw-features__item__enabled reset-tick"
+                  id="tickIcon-ic"
+                  style="display: none"
+                  >
+               </span>
+               </button>
+            </div>
+         </div>
+      </div>
+      <!-- Reset Button -->
+  </div>
+  <div class="reset-panel">
+      <!-- copyright accessibility bar -->
+      <div class="copyrights-accessibility">
+         <button class="btn-reset-all" id="reset-all" onclick="resetAll()">
+         <span class="reset-icon"> </span>
+         <span class="reset-btn-text">Reset All</span>
+         </button>
+      </div>
+  </div>
+</div>
+<span
+   id="uw-widget-custom-trigger">
+<img src="/sites/default/files/inline-images/accessibility.png" alt="Accessibility icons">
+</span>
+    </div>
+  </div>
+
+  </div>
+
+		</div>
+		<div class="sitemap_icon">
+		    <div class="region region-sitemap">
+    <div id="block-sitemap" class="block block-block-content block-block-contentac0637d5-e356-4081-9ee1-6784274e9c5a">
+  
+    
+      <div class="content">
+      
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><a href="sitemap" id="icon_4"><img alt="Sitemap" data-entity-type="file" data-entity-uuid="028b5f1d-129d-497d-90bc-d9e1be20d2f7" src="/sites/default/files/inline-images/sitemap.png"></a></p>
+</div>
+      
+    </div>
+  </div>
+
+  </div>
+
+		</div>
+		<div class="social_media_icon">   <div class="region region-social-media-icon">
+    <div id="block-socialmediablock" class="block block-accessibility block-socialmedia-block">
+  
+    
+      <div class="content">
+      
+	
+	<a href="javascript:;" id="icon_3" class="icon_3">
+		<img src="/sites/default/files/inline-images/social.png" alt="Social icons">
+	</a>
+	
+	
+    </div>
+  </div>
+
+  </div>
+ <div class="social_media_links">  <div class="region region-social-media-links">
+    <div id="block-socialmedialinks" class="block-social-media-links block block-social-media-links-block">
+  
+    
+      <div class="content">
+      
+
+<ul class="social-media-links--platforms platforms vertical">
+      <li>
+      <a class="social-media-link-icon--youtube" href="https://www.youtube.com/@highcourtofmeghalaya"  target="_blank" rel="noopener noreferrer" >
+        <img src="/modules/social_media_links/libraries/elegantthemes/PNG/youtube.png" alt="" />
+
+      </a>
+
+          </li>
+      <li>
+      <a class="social-media-link-icon--facebook" href="https://www.facebook.com/people/High-Court-of-Meghalaya/100095594252715/"  target="_blank" rel="noopener noreferrer" >
+        <img src="/modules/social_media_links/libraries/elegantthemes/PNG/facebook.png" alt="" />
+
+      </a>
+
+          </li>
+  </ul>
+
+    </div>
+  </div>
+
+  </div>
+</div></div>
+		<div class="search_icon">  <div class="region region-search-icon">
+    <div id="block-searchblock" class="block block-accessibility block-search-block">
+  
+    
+      <div class="content">
+      
+	
+	<a href="javascript:;" id="icon_2" class="icon_2">
+		<img src="/sites/default/files/inline-images/search.png" alt="Search icons">
+	</a>
+	
+    </div>
+  </div>
+
+  </div>
+<div class="custom_search">  <div class="region region-custom-search">
+    <div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-searchform-2" role="search">
+  
+    
+      <div class="content">
+      <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
+      <label for="edit-keys" class="visually-hidden">Search</label>
+        <input onblur="if (this.value == &#039;&#039;) {this.value = &#039;search this site&#039;;}" onfocus="if (this.value == &#039;search this site&#039;) {this.value = &#039;&#039;;}" data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="search this site" size="13" maxlength="128" class="form-search form-text"  />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit" type="hidden" name="submit" value="" />
+</div>
+
+</form>
+
+    </div>
+  </div>
+
+  </div>
+</div></div>
+		<div class="top-right-inner2">  <div class="region region-style-switcher">
+    <div id="block-styleswitcher" class="block block-styleswitcher block-styleswitcher-styleswitcher">
+  
+    
+      <div class="content">
+      <div class="item-list"><ul><li><a href="/styleswitcher/switch/meghc/custom/default?destination=/home" class="style-switcher custom-style style-default" data-rel="custom/default" rel="nofollow">A</a></li><li><a href="/styleswitcher/switch/meghc/custom/newsite?destination=/home" class="style-switcher custom-style style-newsite" data-rel="custom/newsite" rel="nofollow">A</a></li></ul></div>
+    </div>
+  </div>
+
+  </div>
+</div>
+		<div class="top-right-inner3">
+	        <div class="region region-textsize">
+    <div id="block-textresize" class="block block-text-resize block-text-resize-block">
+  
+    
+      <div class="content">
+      <div class="content"><a href="javascript:;" class="changer" id="text_resize_decrease"><sup>-</sup>A</a> <a href="javascript:;" class="changer" id="text_resize_reset">A</a> <a href="javascript:;" class="changer" id="text_resize_increase"><sup>+</sup>A</a><div id="text_resize_clear"></div></div>
+
+    </div>
+  </div>
+
+  </div>
+
+		  
+		  		</div>
+        <div class="top-right-inner4">  <div class="region region-language-tran">
+    <div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form-2" id="block-searchform" role="search">
+  
+    
+      <div class="content">
+      <form action="/search/node" method="get" id="search-block-form--2" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
+      <label for="edit-keys--2" class="visually-hidden">Search</label>
+        <input onblur="if (this.value == &#039;&#039;) {this.value = &#039;search this site&#039;;}" onfocus="if (this.value == &#039;search this site&#039;) {this.value = &#039;&#039;;}" data-drupal-selector="edit-keys" type="search" id="edit-keys--2" name="keys" value="search this site" size="13" maxlength="128" class="form-search form-text"  />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions--2"><input data-drupal-selector="edit-submit" type="hidden" name="submit" value="" />
+</div>
+
+</form>
+
+    </div>
+  </div>
+
+  </div>
+</div>
+		
+	  </div>
+	</div>
+    <div id="header-watermark" style="background-image: url(/themes/mayo/images/pat-1.png);" >
+    <div class="section clearfix">
+      	  
+      
+      
+      <div class="region region-header">
+    <div class="views-element-container block block-views block-views-blockinfocus-block-1" id="block-views-block-infocus-block-1">
+  
+    
+      <div class="content">
+      <div><div class="view view-infocus view-id-infocus view-display-id-block_1 js-view-dom-id-bb9b3e078f46bec8c01969a4f26782e3ffd01f34794e1acb9a07643189db8273">
+  
+    
+      
+      <div class="view-content">
+      
+<div>
+    
+<div id="flexslider-1" class="flexslider optionset-main-banner">
+ 
+<ul class="slides">
+    
+<li>
+    <div class="views-field views-field-nothing"><span class="field-content"><a href="" target="_blank" rel="noopener noreferrer">  <img loading="lazy" src="/sites/default/files/styles/mainbanner/public/infocus1_1.jpg?itok=V-OnkmR_" width="1920" height="350" alt="Front view of the High Court" title="Front view of the High Court" />
+
+
+</a></span></div>
+    </li>
+</ul>
+</div>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+
+    </div> <!-- /.section -->
+    </div> <!-- /#header-watermark -->
+    </div></header> <!-- /#header -->
+	
+    <div class="clearfix cfie"></div>
+	<div class="mainresize">
+    <!-- for nice_menus, superfish -->
+        <div id="menubar" class="menubar clearfix"
+      >
+	   <div id="maincontent">
+           <div class="region region-menubar">
+    <div id="block-meghc-mainmenu" class="block block-superfish block-superfishmain">
+  
+    
+      <div class="content">
+      
+<ul id="superfish-main" class="menu sf-menu sf-main sf-horizontal sf-style-white" role="menu" aria-label="Menu">
+  
+
+  
+  <li id="main-menu-link-content64f06de0-a13c-44f3-bbf8-e397cff8af48" class="active-trail sf-depth-1 sf-no-children sf-first" role="none">
+    
+          <a href="/" title="Home" class="is-active sf-depth-1" role="menuitem">Home</a>
+    
+    
+    
+    
+      </li>
+
+
+            
+  <li id="main-menu-link-content1d31002c-4820-49bf-a1c9-125969eaeb9c" class="sf-depth-1 menuparent" role="none">
+    
+          <span title="About us" class="sf-depth-1 menuparent nolink" role="menuitem" aria-haspopup="true" aria-expanded="false">About us</span>
+    
+    
+    
+              <ul role="menu">
+      
+      
+
+  
+  <li id="main-menu-link-contentfdec0b8b-3caf-4ed1-a989-071507d6845a" class="sf-depth-2 sf-no-children sf-first" role="none">
+    
+          <a href="/history" title="History" class="sf-depth-2" role="menuitem">History</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contentf8323438-55c4-41f5-97ab-f99bb4b22d75" class="sf-depth-2 sf-no-children" role="none">
+    
+          <a href="/rules-and-regulation" title="Acts &amp; Rules" class="sf-depth-2" role="menuitem">Acts &amp; Rules</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contentc6c4980b-98cb-4512-8d6b-ec367fecf2b7" class="sf-depth-2 sf-no-children" role="none">
+    
+          <a href="/whos-who" title="Who&#039;s who" class="sf-depth-2" role="menuitem">Who&#039;s who</a>
+    
+    
+    
+    
+      </li>
+
+
+
+              </ul>
+      
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contentbfdeeab4-7494-40d5-bbde-cde6e5c718f5" class="sf-depth-1 sf-no-children" role="none">
+    
+          <a href="/chief-justice-judges" title="Chief Justice &amp; Judges" class="sf-depth-1" role="menuitem">Chief Justice &amp; Judges</a>
+    
+    
+    
+    
+      </li>
+
+
+            
+  <li id="main-menu-link-contentbe1f0419-e39c-4356-b797-e5fe2300b2c0" class="sf-depth-1 menuparent" role="none">
+    
+          <a href="/notice-board" class="sf-depth-1 menuparent" role="menuitem" aria-haspopup="true" aria-expanded="false">Notice Board</a>
+    
+    
+    
+              <ul role="menu">
+      
+      
+
+  
+  <li id="main-menu-link-content3ac867b8-0e94-4624-a008-a0055c0cbb8e" class="sf-depth-2 sf-no-children sf-first" role="none">
+    
+          <a href="/statement-pending-criminal-cases-mpsmlas-state-meghalaya" class="sf-depth-2" role="menuitem">Pending criminal cases of MPs/MLAs</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contentcb9c5564-50f2-4a1b-8d54-695ab06e594b" class="sf-depth-2 sf-no-children" role="none">
+    
+          <a href="/meghcnotifications" class="sf-depth-2" role="menuitem">Notifications</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content823f4523-bb50-4b5c-90d3-30007ff9f7ac" class="sf-depth-2 sf-no-children" role="none">
+    
+          <a href="/constitution-of-bench" class="sf-depth-2" role="menuitem">Judicial Notification/Constitution of Bench</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contentdafc9463-d856-4fcf-8bea-2a15c1d40e96" class="sf-depth-2 sf-no-children" role="none">
+    
+          <a href="/causelist-related" title="Causelist Related" class="sf-depth-2" role="menuitem">Causelist Related</a>
+    
+    
+    
+    
+      </li>
+
+
+            
+  <li id="main-menu-link-content13ce5b73-9336-4344-989d-f65c46f2ea9f" class="sf-depth-2 menuparent" role="none">
+    
+          <span class="sf-depth-2 menuparent nolink" role="menuitem" aria-haspopup="true" aria-expanded="false">Orders</span>
+    
+    
+    
+              <ul role="menu">
+      
+      
+
+  
+  <li id="main-menu-link-contenta32cecb0-538d-463c-802e-f4c765b8acd6" class="sf-depth-3 sf-no-children sf-first" role="none">
+    
+          <a href="/office-order" class="sf-depth-3" role="menuitem">Office Order</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contenteae9c07f-6f6f-443d-b9c8-6e9c478539a5" class="sf-depth-3 sf-no-children sf-last" role="none">
+    
+          <a href="/standing-order" class="sf-depth-3" role="menuitem">Standing Order</a>
+    
+    
+    
+    
+      </li>
+
+
+
+              </ul>
+      
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content93644355-5bf2-461f-828d-8f9d023e7451" class="sf-depth-2 sf-no-children" role="none">
+    
+          <a href="/miscellaneous-notice" class="sf-depth-2" role="menuitem">Miscellaneous Notice</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content1492ee55-75fa-4d7a-b3db-6724c6a3c234" class="sf-depth-2 sf-no-children" role="none">
+    
+          <a href="/newsletter" class="sf-depth-2" role="menuitem">Newsletter</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content5300a330-fdc6-4877-9893-2aa2fba095a5" class="sf-depth-2 sf-no-children" role="none">
+    
+          <a href="/circulars" class="sf-depth-2" role="menuitem">Circulars</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content3c61a3ca-991c-451d-ac47-7358aae4d096" class="sf-depth-2 sf-no-children" role="none">
+    
+          <a href="/press-release" class="sf-depth-2" role="menuitem">Press Release</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contentc22fd63e-c66a-4e3e-a8b8-2c85d8712fbc" class="sf-depth-2 sf-no-children" role="none">
+    
+          <a href="/tenders" class="sf-depth-2" role="menuitem">Tenders</a>
+    
+    
+    
+    
+      </li>
+
+
+            
+  <li id="main-menu-link-content7cf07f79-4cec-4b68-96c5-8818de31e3ad" class="sf-depth-2 menuparent" role="none">
+    
+          <span class="sf-depth-2 menuparent nolink" role="menuitem" aria-haspopup="true" aria-expanded="false">Recruitment</span>
+    
+    
+    
+              <ul role="menu">
+      
+      
+
+  
+  <li id="main-menu-link-contentadc6ad71-04c4-4211-be8c-4959086b2890" class="sf-depth-3 sf-no-children sf-first" role="none">
+    
+          <a href="/recruitment" class="sf-depth-3" role="menuitem">Recruitment Notification</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contentc13e1ab7-d655-449f-8e64-170eef569622" class="sf-depth-3 sf-no-children" role="none">
+    
+          <a href="https://megrecruitment.nic.in/mhc/login.htm" class="sf-depth-3 sf-external" role="menuitem">Online Application</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content430e1bac-a25a-4f95-835d-2460ed419689" class="sf-depth-3 sf-no-children sf-last" role="none">
+    
+          <a href="/results" class="sf-depth-3" role="menuitem">Results</a>
+    
+    
+    
+    
+      </li>
+
+
+
+              </ul>
+      
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content6dbbdc48-ab0d-4a55-afe4-0d13b8d641f2" class="sf-depth-2 sf-no-children sf-last" role="none">
+    
+          <a href="/calendar" class="sf-depth-2" role="menuitem">Calendar</a>
+    
+    
+    
+    
+      </li>
+
+
+
+              </ul>
+      
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content024778c5-1e37-40d5-86d7-6869c68a1a98" class="sf-depth-1 sf-no-children" role="none">
+    
+          <a href="/statistics" class="sf-depth-1" role="menuitem">Statistics</a>
+    
+    
+    
+    
+      </li>
+
+
+            
+  <li id="main-menu-link-contente9ea030c-c1aa-4223-84f3-9e8ded9edd4b" class="sf-depth-1 menuparent" role="none">
+    
+          <a href="/library" title="Library" class="sf-depth-1 menuparent" role="menuitem" aria-haspopup="true" aria-expanded="false">Library</a>
+    
+    
+    
+              <ul role="menu">
+      
+      
+
+  
+  <li id="main-menu-link-contentfeac13b7-4ba0-4177-8e3f-7422ca6de8e6" class="sf-depth-2 sf-no-children sf-first sf-last" role="none">
+    
+          <a href="/photo-gallery" class="sf-depth-2" role="menuitem">Photo Gallery</a>
+    
+    
+    
+    
+      </li>
+
+
+
+              </ul>
+      
+    
+    
+      </li>
+
+
+            
+  <li id="main-menu-link-contentee7c3c15-707c-461d-b317-bb44e3d8dc0f" class="sf-depth-1 menuparent" role="none">
+    
+          <span title="Services" class="sf-depth-1 menuparent nolink" role="menuitem" aria-haspopup="true" aria-expanded="false">eCourts</span>
+    
+    
+    
+              <ul role="menu">
+      
+      
+
+  
+  <li id="main-menu-link-content7e77c1eb-f25b-4a5a-bbef-5b971faec9f3" class="sf-depth-2 sf-no-children sf-first" role="none">
+    
+          <a href="https://hcservices.ecourts.gov.in/ecourtindiaHC/index_highcourt.php?state_cd=21&amp;dist_cd=1&amp;stateNm=Meghalaya" class="sf-depth-2 sf-external" role="menuitem">Case Status</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content4016dd84-a519-487e-aeca-786ca1c11126" class="sf-depth-2 sf-no-children" role="none">
+    
+          <a href="https://hcservices.ecourts.gov.in/ecourtindiaHC/cases/highcourt_causelist.php?state_cd=21&amp;dist_cd=1&amp;court_code=1&amp;stateNm=Meghalaya" class="sf-depth-2 sf-external" role="menuitem">Causelist</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content2a5a8617-823b-4380-b460-e73cc091b6da" class="sf-depth-2 sf-no-children" role="none">
+    
+          <a href="https://hcservices.ecourts.gov.in/ecourtindiaHC/index_highcourt.php?state_cd=21&amp;dist_cd=1&amp;stateNm=Meghalaya" class="sf-depth-2 sf-external" role="menuitem">Orders</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content2f7051b0-18f0-42b2-b970-c2d010f8c0c0" class="sf-depth-2 sf-no-children" role="none">
+    
+          <a href="https://hcservices.ecourts.gov.in/ecourtindiaHC/index_highcourt.php?state_cd=21&amp;dist_cd=1&amp;stateNm=Meghalaya" class="sf-depth-2 sf-external" role="menuitem">Judgments</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content4bb985c9-8bdf-41a3-aec5-631b11c63cd1" class="sf-depth-2 sf-no-children" role="none">
+    
+          <a href="/legacy-orders" title="Judgment &amp; Orders (Old)" class="sf-depth-2" role="menuitem">Legacy Judgment &amp; Orders</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content210fb9ac-b374-49c3-84f4-cab933520e4d" class="sf-depth-2 sf-no-children" role="none">
+    
+          <a href="https://njdg.ecourts.gov.in/hcnjdgnew/" class="sf-depth-2 sf-external" role="menuitem">High Court NJDG</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contentf7871eb3-463e-46dd-821d-f5d101067a3f" class="sf-depth-2 sf-no-children" role="none">
+    
+          <a href="https://njdg.ecourts.gov.in/njdgnew/index.php" class="sf-depth-2 sf-external" role="menuitem">District Court NJDG</a>
+    
+    
+    
+    
+      </li>
+
+
+            
+  <li id="main-menu-link-contentf209dd39-70bc-4f1d-a985-a30f726b61ec" class="sf-depth-2 menuparent" role="none">
+    
+          <span class="sf-depth-2 menuparent nolink" role="menuitem" aria-haspopup="true" aria-expanded="false">eCourts Portal</span>
+    
+    
+    
+              <ul role="menu">
+      
+      
+
+  
+  <li id="main-menu-link-content359999d7-272a-453d-ad9f-6153878850be" class="sf-depth-3 sf-no-children sf-first" role="none">
+    
+          <a href="https://hcservices.ecourts.gov.in/hcservices/" class="sf-depth-3 sf-external" role="menuitem">High Courts</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content3cbb8e6b-0bba-454f-b55d-1943e36b899e" class="sf-depth-3 sf-no-children sf-last" role="none">
+    
+          <a href="https://services.ecourts.gov.in/ecourtindia_v6/" class="sf-depth-3 sf-external" role="menuitem">District &amp; Taluka Courts</a>
+    
+    
+    
+    
+      </li>
+
+
+
+              </ul>
+      
+    
+    
+      </li>
+
+
+
+              </ul>
+      
+    
+    
+      </li>
+
+
+            
+  <li id="main-menu-link-content11be3724-2266-4314-ae48-ce0a9649dcab" class="sf-depth-1 menuparent" role="none">
+    
+          <span class="sf-depth-1 menuparent nolink" role="menuitem" aria-haspopup="true" aria-expanded="false">eServices</span>
+    
+    
+    
+              <ul role="menu">
+      
+      
+
+  
+  <li id="main-menu-link-content444a8b30-8e32-4b81-9d5e-d9f41b132e59" class="sf-depth-2 sf-no-children sf-first" role="none">
+    
+          <a href="https://edlawr.meghalayahighcourt.nic.in/mhcjd/" target="_blank" title="Meghalaya High Court Judicial Data Hub" class="sf-depth-2 sf-external" role="menuitem">Judicial Data Hub</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contente52fff5d-0b98-4779-81c9-c579d4f57381" class="sf-depth-2 sf-no-children" role="none">
+    
+          <a href="https://edlawr.meghalayahighcourt.nic.in/" target="_blank" title="Digital Law Report" class="sf-depth-2 sf-external" role="menuitem">Digital Law Report</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contentdbb9ada0-06b6-4d49-acfb-798dfb4b1a53" class="sf-depth-2 sf-no-children" role="none">
+    
+          <a href="https://epass.meghalayahighcourt.nic.in" target="_blank" title="The ePass application facilitates secure and digital issuance of passes i.e., Visitor Passes for the public and litigants, and Vehicle Passes for staff and advocates, ensuring efficient access management within the High Court premises." class="sf-depth-2 sf-external" role="menuitem">ePass</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contentd937fc9a-bbc6-43f0-b891-ff52dd56b1a2" class="sf-depth-2 sf-no-children" role="none">
+    
+          <a href="https://shebox.meghalayahighcourt.nic.in/" target="_blank" class="sf-depth-2 sf-external" role="menuitem">She-Box</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contentf2f7ac65-26c9-4edf-ace9-4b1fec404788" class="sf-depth-2 sf-no-children sf-last" role="none">
+    
+          <a href="https://edir.meghalayahighcourt.nic.in/" target="_blank" title="eDirectory" class="sf-depth-2 sf-external" role="menuitem">eDirectory</a>
+    
+    
+    
+    
+      </li>
+
+
+
+              </ul>
+      
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content295e5703-b1f3-4f5d-b41e-74e865646c2d" class="sf-depth-1 sf-no-children" role="none">
+    
+          <a href="/contact-us" title="Contact Us" class="sf-depth-1" role="menuitem">Contact Us</a>
+    
+    
+    
+    
+      </li>
+
+
+</ul>
+
+    </div>
+  </div>
+
+  </div>
+
+	   </div>
+    </div>
+    	
+	<div class="newsmarquee">
+	    
+	  	  <div class="newsleft">
+        		  
+	  </div>
+	  		<div class="news-slider">   
+                    <div class="region region-highlighted">
+    <div id="block-meghclatestnewsblock" class="block block-vjr-views block-vjr-lnews-block">
+  
+    
+      <div class="content">
+      
+<div class="lnews_label">What's New ~</div>
+<div id="lnews_block">
+      <div class="scrolling-text" >
+	
+              <div class="blink_me">New</div><a href="/notification-10042026-bench-national-lok-adalat-which-scheduled-be-held-09052026">Notification 10.04.2026: Bench of National Lok Adalat which is scheduled to...</a> &emsp;
+	    	          <div class="blink_me">New</div><a href="/mediation-cases-wef-15042026-18042026">Mediation Cases w.e.f 15.04.2026 to 18.04.2026...</a> &emsp;
+	    	          <div class="blink_me">New</div><a href="/newsletter-ecommittee-supreme-court-india-january2026">Newsletter of the eCommittee, Supreme Court of India: January,2026...</a> &emsp;
+	    	          <div class="blink_me">New</div><a href="/notification-10042026-declaration-holiday-14042026-account-birthday-dr-br-ambedkar">Notification 10.04.2026: Declaration  of holiday on 14.04.2026 on account o...</a> &emsp;
+	    	          <div class="blink_me">New</div><a href="/notice-09042026-matters-be-taken-10042026">Notice 09.04.2026: Matters to be taken up on 10.04.2026...</a> &emsp;
+	    	          <div class="blink_me">New</div><a href="/notification-07042026-declaration-local-holiday-13042026-account-shad-suk-mynsiem">Notification 07.04.2026: Declaration of local holiday on 13.04.2026 on acco...</a> &emsp;
+	    	          <a href="/mediation-cases-wef-07042026-10042026">Mediation Cases w.e.f 07.04.2026 to 10.04.2026... |</a> &emsp;
+	    	          <a href="/31032026-single-bench-honble-mr-justice-hs-thangkhiew-will-sit-1130-am-01042026">31.03.2026: SINGLE BENCH of Hon&#039;ble Mr. Justice H.... |</a> &emsp;
+	    	          <a href="/mediation-cases-wef-01042026-02042026">Mediation Cases w.e.f 01.04.2026 to 02.04.2026... |</a> &emsp;
+	    	          <a href="/25032026-last-date-submission-applications-post-civil-judge-junior-division-cum-judicial-magistrate">25.03.2026: Last date for submission of applicatio... |</a> &emsp;
+	    	  	</div>
+   </div>
+</div>
+    </div>
+  </div>
+
+  </div>
+
+	    	  </div>
+	</div>
+	
+    <!-- space between menus and contents -->
+    <div class="spacer clearfix cfie"></div>
+
+    <div id="main-wrapper">
+    <div id="main" class="clearfix"
+      >
+
+            <div id="banner-top" class="banner clearfix">  <div class="region region-banner-top">
+    <div id="block-meghc-hcmenuitems" class="block block-case-status block-menu-block">
+  
+    
+      <div class="content">
+      
+   	<div id="meghc-rd">
+	 <div class="col-md-12">
+	 <div class="row meghc-padding">
+			<div class="col-md-1 col-xs-4">
+				<div class="col-meghc">
+					<a href="/case-status"><img alt="Case Status" src="/sites/default/files/inline-images/casestatus.jpg">
+						<span class="meghc-title">Case Status</span>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-1 col-xs-4">
+				<div class="col-meghc">
+					<a href="/causelist"><img alt="Causelist" src="/sites/default/files/inline-images/causelist.jpg">
+						<span class="meghc-title">Causelist</span>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-1 col-xs-4">
+				<div class="col-meghc">
+					<a href="/dboard"><img alt="Display Board" src="/sites/default/files/inline-images/dboard.jpg">
+						<span class="meghc-title">Display Board</span>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-1 col-xs-4">
+			  <div class="col-meghc">
+				<a href="/orders"><img alt="Orders/Judgments" src="/sites/default/files/inline-images/orders.jpg">
+					<span class="meghc-title">Court Orders</span>
+				</a></div>
+			</div>
+			<div class="col-md-1 col-xs-4">
+			  <div class="col-meghc">
+				<a href="/neutral-citation"><img alt="Neutral Citation" src="/sites/default/files/inline-images/orders.jpg">
+					<span class="meghc-title">Neutral Citation</span>
+				</a></div>
+			</div>
+			<div class="col-md-1 col-xs-4">
+				<div class="col-meghc">
+				<a href="/cert-copy"><img alt="Certified Copy" src="/sites/default/files/inline-images/ccopy.jpg">
+					<span class="meghc-title">Certified Copy</span>
+				</a></div>
+			</div>
+			<div class="col-md-1 col-xs-4">
+				<div class="col-meghc">
+				<a href="/fts"><img alt="Free Text Search" src="/sites/default/files/inline-images/fts.jpg">
+					<span class="meghc-title">FTS</span>
+				</a></div>
+			</div>
+			<div class="col-md-1 col-xs-4">
+				<div class="col-meghc">
+				<a href="https://vcourts.gov.in/virtualcourt/"><img alt="Virtual Court" src="/sites/default/files/inline-images/vcourt.jpg">
+					<span class="meghc-title">Virtual Court</span>
+				</a></div>
+			</div>
+			<div class="col-md-1 col-xs-4">
+				<div class="col-meghc">
+				<a href="/video-conference-link"><img alt="Video Conference" src="/sites/default/files/inline-images/vclink.jpg">
+					<span class="meghc-title">Video Conference</span>
+				</a></div>
+			</div>
+			<div class="col-md-1 col-xs-4">
+				<div class="col-meghc">
+				<a href="/efiling-services"><img alt="eFiling" src="/sites/default/files/inline-images/eFiling.png">
+					<span class="meghc-title">eFiling</span>
+					<div class="blink_me">New</div>
+				</a></div>
+			</div>
+			<div class="col-md-1 col-xs-4">
+				<div class="col-meghc">
+				<a href="/epayment-services"><img alt="ePay" src="/sites/default/files/inline-images/cFee.png">
+					<span class="meghc-title">ePay</span>
+					<div class="blink_me">New</div>
+				</a></div>
+			</div>
+			<div class="col-md-1 col-xs-4">
+				<div class="col-meghc">
+				<a href="/online-rti"><img alt="eRTI" src="/sites/default/files/inline-images/rti.png">
+					<span class="meghc-title">eRTI</span>
+				</a></div>
+			</div>
+					</div>
+	</div>
+	</div>
+	
+
+
+
+    </div>
+  </div>
+<div id="block-meghc-meghcjusticeclockblock" class="block block-vjr-views block-vjr-justice-clock-block">
+  
+    
+      <div class="content">
+      
+
+<div class="col-md-12 portlets">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+																	<div class="item active">
+						<strong class="b-center" style="font-size:18px"> <u style="text-transform: uppercase;">DISPOSAL LAST MONTH</u> </strong>
+						  <div class="row">
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box green-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CIVIL CASES : </b><b>137</b> </h1>
+								</div>
+							  </div>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box red-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CRIMINAL CASES : </b><b>50</b> </h1>
+								</div>
+							  </div>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box blue-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CIVIL + CRIMINAL : </b><b>187</b> </h1>
+								</div>
+							  </div>
+							</div>
+						  </div> 					</div>   				 																	<div class="item">
+						<strong class="b-center" style="font-size:18px"> <u style="text-transform: uppercase;">INSTITUTED LAST MONTH</u> </strong>
+						  <div class="row">
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box green-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CIVIL CASES : </b><b>168</b> </h1>
+								</div>
+							  </div>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box red-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CRIMINAL CASES : </b><b>69</b> </h1>
+								</div>
+							  </div>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box blue-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CIVIL + CRIMINAL : </b><b>237</b> </h1>
+								</div>
+							  </div>
+							</div>
+						  </div> 					</div>  																					<div class="item">
+						<strong class="b-center" style="font-size:18px"> <u style="text-transform: uppercase;">PENDING > 10 YEARS</u> </strong>
+						  <div class="row">
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box green-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CIVIL CASES : </b><b>9</b> </h1>
+								</div>
+							  </div>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box red-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CRIMINAL CASES : </b><b>0</b> </h1>
+								</div>
+							  </div>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box blue-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CIVIL + CRIMINAL : </b><b>9</b> </h1>
+								</div>
+							  </div>
+							</div>
+						  </div> 					</div>  																					<div class="item">
+						<strong class="b-center" style="font-size:18px"> <u style="text-transform: uppercase;">PENDING 5-10 YEARS</u> </strong>
+						  <div class="row">
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box green-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CIVIL CASES : </b><b>80</b> </h1>
+								</div>
+							  </div>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box red-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CRIMINAL CASES : </b><b>10</b> </h1>
+								</div>
+							  </div>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box blue-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CIVIL + CRIMINAL : </b><b>90</b> </h1>
+								</div>
+							  </div>
+							</div>
+						  </div> 					</div>  																					<div class="item">
+						<strong class="b-center" style="font-size:18px"> <u style="text-transform: uppercase;">PENDING 2-5 YEARS</u> </strong>
+						  <div class="row">
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box green-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CIVIL CASES : </b><b>148</b> </h1>
+								</div>
+							  </div>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box red-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CRIMINAL CASES : </b><b>90</b> </h1>
+								</div>
+							  </div>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box blue-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CIVIL + CRIMINAL : </b><b>238</b> </h1>
+								</div>
+							  </div>
+							</div>
+						  </div> 					</div>  																					<div class="item">
+						<strong class="b-center" style="font-size:18px"> <u style="text-transform: uppercase;">PENDING < 2 YEARS</u> </strong>
+						  <div class="row">
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box green-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CIVIL CASES : </b><b>1058</b> </h1>
+								</div>
+							  </div>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box red-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CRIMINAL CASES : </b><b>364</b> </h1>
+								</div>
+							  </div>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box blue-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CIVIL + CRIMINAL : </b><b>1422</b> </h1>
+								</div>
+							  </div>
+							</div>
+						  </div> 					</div>  																					<div class="item">
+						<strong class="b-center" style="font-size:18px"> <u style="text-transform: uppercase;">FILED BY WOMEN</u> </strong>
+						  <div class="row">
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box green-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CIVIL CASES : </b><b>2123</b> </h1>
+								</div>
+							  </div>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box red-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CRIMINAL CASES : </b><b>397</b> </h1>
+								</div>
+							  </div>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box blue-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CIVIL + CRIMINAL : </b><b>2520</b> </h1>
+								</div>
+							  </div>
+							</div>
+						  </div> 					</div>  																					<div class="item">
+						<strong class="b-center" style="font-size:18px"> <u style="text-transform: uppercase;">FILED BY SENIOR CITIZENS</u> </strong>
+						  <div class="row">
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box green-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CIVIL CASES : </b><b>1459</b> </h1>
+								</div>
+							  </div>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box red-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CRIMINAL CASES : </b><b>261</b> </h1>
+								</div>
+							  </div>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box blue-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CIVIL + CRIMINAL : </b><b>1720</b> </h1>
+								</div>
+							  </div>
+							</div>
+						  </div> 					</div>  																					<div class="item">
+						<strong class="b-center" style="font-size:18px"> <u style="text-transform: uppercase;">TOTAL PENDING</u> </strong>
+						  <div class="row">
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box green-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CIVIL CASES : </b><b>1294</b> </h1>
+								</div>
+							  </div>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box red-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CRIMINAL CASES : </b><b>462</b> </h1>
+								</div>
+							  </div>
+							</div>
+							<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+							  <div class="info-box blue-bg" style="border-radius: 20px 20px;">
+								<div class="text-center">
+								  <h1 style="font-size:20px;"> <b>CIVIL + CRIMINAL : </b><b>1756</b> </h1>
+								</div>
+							  </div>
+							</div>
+						  </div> 					</div>  												</div>     			</div>			</div> 	</div> </div> 
+    </div>
+  </div>
+
+  </div>
+</div>
+      <div class="spacer clearfix cfie"></div>
+      
+
+     
+
+      <div class="clearfix cfie"></div>
+
+
+      <!-- main content -->
+      <main id="content" class="column"><section class="section">
+
+        		
+        <a id="main-content"></a>
+        
+                
+                
+                  <div class="region region-content">
+    <div data-drupal-messages-fallback class="hidden"></div><div class="views-element-container"><div class="view view-frontpage view-id-frontpage view-display-id-page_1 js-view-dom-id-c607558dee59f53dc61109a607c3750543e3c293dd113151577a98095f76b737">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row">
+    
+<article data-history-node-id="1060" class="node node--type-page node--promoted node--view-mode-teaser clearfix">
+  <header>
+    
+          <h3 class="node__title">
+              </h3>
+        
+  </header>
+  <div class="node__content clearfix">
+    
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item"><p style="text-align: justify;">Shillong became the capital of the then Assam under the Chief Commissioner upon taking away its management from the Lieutenant Governor of Bengal vide Proclamation No.379 dated 06.02.1874 and Notification No.380 issued by the Governor General in Council. In the same year, in April, the Scheduled Districts Act, 1874 was enacted and the entire Assam under the Chief Commissioner was declared to be Scheduled Districts.</p>
+<p style="text-align: justify;">On 11th September, 1968 the Government of India announced a scheme for constituting an autonomous State within the State of Assam comprising certain areas specified in Part A of the table appended to paragraph 20 of the Sixth Schedule to the Constitution. In terms of the said announcement, the Constitution (22nd Amendment) Act, 1969 was enacted conferring power on the Parliament for the formation of an autonomous State within the State of Assam. Accordingly, Assam Reorganization (Meghalaya) Act, 1969 (Act 55 of 1969) was enacted for establishing autonomous State of Meghalaya within the State of Assam making special provisions with respect to application of laws in Meghalaya. The autonomous State of Meghalaya comprises of the United Khasi-Jaintia Hills District and the Garo Hills District appearing at Serial No.1 and 2 of the table appended to paragraph 20 of the Sixth Schedule...</p>
+</div>
+      
+  </div>
+
+      <div class="node__links">
+      <ul class="links inline"><li><a href="/history" rel="tag" title="History" hreflang="en">Read more<span class="visually-hidden"> about History</span></a></li></ul>
+    </div>
+  
+  
+
+</article>
+
+  </div>
+
+    </div>
+  
+      
+          </div>
+</div>
+
+  </div>
+
+        				      </section></main> <!-- /.section, /#content -->
+
+
+      <!-- sidebar (first) -->
+              <div id="sidebar-first" class="column sidebar"><div class="section">
+            <div class="region region-sidebar-first">
+    <div id="block-meghcnoticeboardblock" class="block block-vjr-views block-vjr-notif-block">
+  
+      <h4>Notice Board</h4>
+    
+      <div class="content">
+      
+<div class="notifblock" id="vjrsidebarul">
+<ul uk-list uk-list-striped>
+            <li class=""><div class="blink_me">New</div><a href="/notification-10042026-bench-national-lok-adalat-which-scheduled-be-held-09052026">Notification 10.04.2026: Bench of National Lok Adalat which is scheduled to...</a></li>
+		            <li class=""><div class="blink_me">New</div><a href="/mediation-cases-wef-15042026-18042026">Mediation Cases w.e.f 15.04.2026 to 18.04.2026...</a></li>
+		            <li class=""><div class="blink_me">New</div><a href="/newsletter-ecommittee-supreme-court-india-january2026">Newsletter of the eCommittee, Supreme Court of India: January,2026...</a></li>
+		            <li class=""><div class="blink_me">New</div><a href="/notification-10042026-declaration-holiday-14042026-account-birthday-dr-br-ambedkar">Notification 10.04.2026: Declaration  of holiday on 14.04.2026 on account o...</a></li>
+		            <li class=""><div class="blink_me">New</div><a href="/notification-07042026-declaration-local-holiday-13042026-account-shad-suk-mynsiem">Notification 07.04.2026: Declaration of local holiday on 13.04.2026 on acco...</a></li>
+		            <li class=""><a href="/mediation-cases-wef-07042026-10042026">Mediation Cases w.e.f 07.04.2026 to 10.04.2026...</a></li>
+		            <li class=""><a href="/mediation-cases-wef-01042026-02042026">Mediation Cases w.e.f 01.04.2026 to 02.04.2026...</a></li>
+		            <li class=""><a href="/25032026-last-date-submission-applications-post-civil-judge-junior-division-cum-judicial-magistrate">25.03.2026: Last date for submission of applications for the post of Civil ...</a></li>
+		            <li class=""><a href="/mediation-cases-wef-23032026-28032026">Mediation Cases w.e.f 23.03.2026 to 28.03.2026...</a></li>
+		            <li class=""><a href="/20032026-list-candidates-found-be-order-appear-speed-test-post-stenographer-grade-i">20.03.2026: List of candidates found to be in order to appear in the Speed ...</a></li>
+		            <li class=""><div class="container"><div class="star"></div><div class="text"><a href="/statement-pending-criminal-cases-mpsmlas-state-meghalaya">Pending criminal cases of MPs/MLAs...</a></div></div></li>
+		    </ul>
+</div>
+<a href="/notice-board">more+</a>
+    </div>
+  </div>
+
+  </div>
+
+        </div></div> <!-- /.section, /#sidebar-first -->
+                    <div id="sidebar-second" class="column sidebar"><div class="section">
+            <div class="region region-sidebar-second">
+    <div class="views-element-container block block-views block-views-blockrules-and-regulation-block-1" id="block-meghc-views-block-rules-and-regulation-block-1">
+  
+      <h4>Rules and Regulation</h4>
+    
+      <div class="content">
+      <div><div class="view view-rules-and-regulation view-id-rules_and_regulation view-display-id-block_1 js-view-dom-id-297ede779bf34d79e17df6e0284b89b7f0213f8833071089c7d4cdefa4a3ce34">
+  
+    
+      
+      <div class="view-content">
+      <div class="item-list">
+  
+  <ul>
+
+          <li><div class="views-field views-field-title"><span class="field-content"><a href="/high-court-meghalaya-designation-senior-advocate-rules-2017-0" hreflang="en">High Court of Meghalaya (Designation of Senior Advocate) Rules, 2017</a></span></div></li>
+          <li><div class="views-field views-field-title"><span class="field-content"><a href="/amendment-high-court-meghalaya-designation-senior-advocate-rules-2017-0" hreflang="en">Amendment of the High Court of Meghalaya (Designation of Senior Advocate) Rules, 2017</a></span></div></li>
+          <li><div class="views-field views-field-title"><span class="field-content"><a href="/district-courts-meghalaya-use-electronic-communication-and-audio-video-electronic-means-rules-2025" hreflang="en"> District Courts of Meghalaya for the Use of Electronic Communication and Audio-Video Electronic Means Rules, 2025</a></span></div></li>
+          <li><div class="views-field views-field-title"><span class="field-content"><a href="/high-court-meghalaya-online-electronic-efiling-rules-2024" hreflang="en">High Court of Meghalaya Online Electronic (eFiling) Rules, 2024</a></span></div></li>
+          <li><div class="views-field views-field-title"><span class="field-content"><a href="/amendment-high-court-meghalaya-designation-senior-advocate-rules-2017" hreflang="en">Amendment of the High Court of Meghalaya (Designation of Senior Advocate) Rules, 2017</a></span></div></li>
+    
+  </ul>
+
+</div>
+
+    </div>
+  
+          <div class="more-link"><a href="/rules-and-regulation">more+</a></div>
+
+      </div>
+</div>
+
+    </div>
+  </div>
+<div class="views-element-container block block-views block-views-blockuseful-links-block-1" id="block-views-block-useful-links-block-1">
+  
+      <h4>Useful Links</h4>
+    
+      <div class="content">
+      <div><div class="view view-useful-links view-id-useful_links view-display-id-block_1 js-view-dom-id-346ba70bafccebf2fca9e257c58d138d863d687f65afd1e345f7206cf4c8789d">
+  
+    
+      
+      <div class="view-content">
+      <div class="item-list">
+  
+  <ul>
+
+          <li><div class="views-field views-field-title"><span class="field-content"><a href="/former-chief-justices-judges" hreflang="en">Former Chief Justices &amp; Judges</a></span></div></li>
+          <li><div class="views-field views-field-title"><span class="field-content"><a href="/advocate-general-aag" hreflang="en">Advocate General &amp; AAG</a></span></div></li>
+          <li><div class="views-field views-field-title"><span class="field-content"><a href="/important-websites" hreflang="en">Important Websites</a></span></div></li>
+          <li><div class="views-field views-field-title"><span class="field-content"><a href="/mslsa" hreflang="en">MSLSA</a></span></div></li>
+          <li><div class="views-field views-field-title"><span class="field-content"><a href="/district-courts-website" hreflang="en">District Courts Website</a></span></div></li>
+    
+  </ul>
+
+</div>
+
+    </div>
+  
+          <div class="more-link"><a href="/useful-links">more+</a></div>
+
+      </div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+        </div></div> <!-- /.section, /#sidebar-second -->
+      
+
+      <div class="clearfix cfie"></div>
+
+     
+      <div class="clearfix cfie"></div>
+	    <div class="col-sm-12"><div class="news-box"></div></div>
+
+            	  <div id="ban-bottom">
+	    <div class="region region-banner-bottom">
+    <div class="views-element-container block block-views block-views-blockfooter-banner-block-1" id="block-views-block-footer-banner-block-1">
+  
+    
+      <div class="content">
+      <div><div class="view view-footer-banner view-id-footer_banner view-display-id-block_1 js-view-dom-id-10784cdad884404b02aa4daadaed1205c11020d38e40d31a634e5e6405964e18">
+  
+    
+      
+      <div class="view-content">
+      
+<div>
+    
+<div id="jcarousel" class="flexslider optionset-jcarousel">
+ 
+<ul class="slides">
+    
+<li>
+    <div class="views-field views-field-nothing"><div class="field-content fbanner"><a href="https://www.sci.gov.in/" target="_blank" rel="noopener noreferrer">  <img loading="lazy" src="/sites/default/files/styles/footerbanner/public/SupremeCourt.jpg?itok=6QkB2iBj" width="400" height="200" alt="Supreme Court of India" title="Supreme Court of India" />
+
+
+</a></div></div>
+    </li>
+<li>
+    <div class="views-field views-field-nothing"><div class="field-content fbanner"><a href="https://india.gov.in/" target="_blank" rel="noopener noreferrer">  <img loading="lazy" src="/sites/default/files/styles/footerbanner/public/NationalPortal.jpg?itok=Jookva-G" width="400" height="200" alt="National Portal of India" title="National Portal of India" />
+
+
+</a></div></div>
+    </li>
+<li>
+    <div class="views-field views-field-nothing"><div class="field-content fbanner"><a href="https://judgments.ecourts.gov.in/pdfsearch/index.php" target="_blank" rel="noopener noreferrer">  <img loading="lazy" src="/sites/default/files/styles/footerbanner/public/eSCR.jpg?itok=kfPxTB-X" width="400" height="200" alt="eSCR Judgments &amp; Orders search portal" title="eSCR Judgments &amp; Orders search portal" />
+
+
+</a></div></div>
+    </li>
+<li>
+    <div class="views-field views-field-nothing"><div class="field-content fbanner"><a href="https://hcservices.ecourts.gov.in/hcservices/main.php" target="_blank" rel="noopener noreferrer">  <img loading="lazy" src="/sites/default/files/styles/footerbanner/public/eCourtsServices.jpg?itok=A4TEzBvu" width="400" height="200" alt="eCourts Services for High Courts" title="eCourts Services for High Courts" />
+
+
+</a></div></div>
+    </li>
+<li>
+    <div class="views-field views-field-nothing"><div class="field-content fbanner"><a href="https://services.ecourts.gov.in/ecourtindia_v6/" target="_blank" rel="noopener noreferrer">  <img loading="lazy" src="/sites/default/files/styles/footerbanner/public/eCourtsDC.jpg?itok=EQNU4Gux" width="400" height="200" alt="eCourts Services for District Courts" title="eCourts Services for District Courts" />
+
+
+</a></div></div>
+    </li>
+<li>
+    <div class="views-field views-field-nothing"><div class="field-content fbanner"><a href="https://njdg.ecourts.gov.in/hcnjdgnew/" target="_blank" rel="noopener noreferrer">  <img loading="lazy" src="/sites/default/files/styles/footerbanner/public/NJDGHC.jpg?itok=9n5GP_8k" width="400" height="200" alt="National Judicial Data Grid High Courts" title="National Judicial Data Grid High Courts" />
+
+
+</a></div></div>
+    </li>
+<li>
+    <div class="views-field views-field-nothing"><div class="field-content fbanner"><a href="https://njdg.ecourts.gov.in/njdgnew/index.php" target="_blank" rel="noopener noreferrer">  <img loading="lazy" src="/sites/default/files/styles/footerbanner/public/NJDG%20district1.jpg?itok=hXvHBl_H" width="400" height="200" alt="National Judicial Data Grid District Courts" title="National Judicial Data Grid District Courts" />
+
+
+</a></div></div>
+    </li>
+<li>
+    <div class="views-field views-field-nothing"><div class="field-content fbanner"><a href="https://edlawr.meghalayahighcourt.nic.in/jclock/" target="_blank" rel="noopener noreferrer">  <img loading="lazy" src="/sites/default/files/styles/footerbanner/public/jclock%20banner_0.jpg?itok=vmvVjUzY" width="400" height="200" alt="eJustice Clock for the High Court" title="eJustice Clock for the High Court" />
+
+
+</a></div></div>
+    </li>
+<li>
+    <div class="views-field views-field-nothing"><div class="field-content fbanner"><a href="https://justiceclock.ecourts.gov.in/justiceClock/?p=home/state&amp;fstate_code=21" target="_blank" rel="noopener noreferrer">  <img loading="lazy" src="/sites/default/files/styles/footerbanner/public/dcclock.jpg?itok=9BYq5bVX" width="400" height="200" alt="eJustice Clock for the District Courts" title="eJustice Clock for the District Courts" />
+
+
+</a></div></div>
+    </li>
+<li>
+    <div class="views-field views-field-nothing"><div class="field-content fbanner"><a href="https://meghalaya.gov.in/" target="_blank" rel="noopener noreferrer">  <img loading="lazy" src="/sites/default/files/styles/footerbanner/public/MeghalayaPortal.jpg?itok=LGWh91iy" width="400" height="200" alt="Web Portal of Meghalaya " title="Web Portal of Meghalaya " />
+
+
+</a></div></div>
+    </li>
+<li>
+    <div class="views-field views-field-nothing"><div class="field-content fbanner"><a href="https://megrecruitment.nic.in/mhc/login.htm" target="_blank" rel="noopener noreferrer">  <img loading="lazy" src="/sites/default/files/styles/footerbanner/public/OnlineApplicaiton.jpg?itok=xKf7uTyP" width="400" height="200" alt=" Online Application" title=" Online Application" />
+
+
+</a></div></div>
+    </li>
+<li>
+    <div class="views-field views-field-nothing"><div class="field-content fbanner"><a href="https://play.google.com/store/apps/details?id=com.nic.meghcapp" target="_blank" rel="noopener noreferrer">  <img loading="lazy" src="/sites/default/files/styles/footerbanner/public/playstore3.jpg?itok=Htbhym7P" width="400" height="200" alt="Download Mobile App of the High Court from Play Store" title="Download Mobile App of the High Court from Play Store" />
+
+
+</a></div></div>
+    </li>
+<li>
+    <div class="views-field views-field-nothing"><div class="field-content fbanner"><a href="https://apps.apple.com/in/app/meghalaya-high-court/id1549513706" target="_blank" rel="noopener noreferrer">  <img loading="lazy" src="/sites/default/files/styles/footerbanner/public/appstore1.jpg?itok=RzwfVfc5" width="400" height="200" alt="Download Mobile App of the High Court from App Store" title="Download Mobile App of the High Court from App Store" />
+
+
+</a></div></div>
+    </li>
+</ul>
+</div>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+	  </div>
+      
+    </div> <!-- /#main -->
+    </div> <!-- /#main-wrapper -->
+
+    <!-- space between contents and footer -->
+    <div id="spacer" class="clearfix cfie"></div>
+
+    <div id="footer-wrapper">
+           
+	        
+          <div class="region region-footer-menu">
+    <nav role="navigation" aria-labelledby="block-footermenu-menu" id="block-footermenu" class="block block-menu navigation menu--menu-footer-bottom-link">
+            
+  <h2 class="visually-hidden" id="block-footermenu-menu">Footer menu</h2>
+  
+
+          <div class="content">
+        <div class="menu-toggle-target menu-toggle-target-show" id="show-block-footermenu"></div>
+    <div class="menu-toggle-target" id="hide-block-footermenu"></div>
+    <a class="menu-toggle" href="#show-block-footermenu">Show &mdash; Footer menu</a>
+    <a class="menu-toggle menu-toggle--hide" href="#hide-block-footermenu">Hide &mdash; Footer menu</a>
+    
+
+              <ul class="menu">
+                          <li class="menu-item"
+                      >
+        <a href="/accessibility-statement" data-drupal-link-system-path="node/955">Accessibility Statement</a>
+              </li>
+                      <li class="menu-item"
+                      >
+        <a href="/disclaimer" data-drupal-link-system-path="node/964">Disclaimer</a>
+              </li>
+                      <li class="menu-item"
+                      >
+        <a href="/copyright-policy" data-drupal-link-system-path="node/962">Copyright Policy</a>
+              </li>
+                      <li class="menu-item"
+                      >
+        <a href="/sitemap" data-drupal-link-system-path="sitemap">Site Map</a>
+              </li>
+                      <li class="menu-item"
+                      >
+        <a href="/hyperlink-policy" data-drupal-link-system-path="node/963">Hyperlink Policy</a>
+              </li>
+                      <li class="menu-item"
+                      >
+        <a href="/privacy-policy" data-drupal-link-system-path="node/961">Privacy Policy</a>
+              </li>
+                      <li class="menu-item"
+                      >
+        <a href="/terms-condition" data-drupal-link-system-path="node/960">Terms &amp; Condition</a>
+              </li>
+                      <li class="menu-item"
+                      >
+        <a href="/terms-use" data-drupal-link-system-path="node/956">Terms of Use</a>
+              </li>
+                      <li class="menu-item"
+                      >
+        <a href="/basic-page/help" data-drupal-link-system-path="node/957">Help</a>
+              </li>
+        </ul>
+  
+
+  </div>
+</nav>
+  </div>
+
+     
+      	  
+            <div id="footer"><div class="section">
+          <div class="region region-footer">
+    <div class="views-element-container block block-views block-views-blockcopyrights-block-1" id="block-views-block-copyrights-block-1">
+  
+    
+      <div class="content">
+      <div><div class="view view-copyrights view-id-copyrights view-display-id-block_1 js-view-dom-id-1dd586554c7925539fed7184df1f8848efef578160a6ddc618149e2862e5a071">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row">
+    <div class="views-field views-field-field-copyright"><div class="field-content"><p class="align-center">&nbsp;</p>
+<p class="align-center">© 2013-2026&nbsp;- All Rights Reserved - Official Website of High Court of Meghalaya, India<br>Designed, developed, published and managed by the High Court<br>For any query regarding this website, please contact the Web Information Manager&nbsp;@&nbsp;sysanalyst[dot]hc-meg[at]gov[dot]in</p>
+</div></div>
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
+  </div>
+<div class="views-element-container block block-views block-views-blocklast-updated-block-1" id="block-views-block-last-updated-block-1">
+  
+    
+      <div class="content">
+      <div><div class="view view-last-updated view-id-last_updated view-display-id-block_1 js-view-dom-id-e0f9eee17eacbf2cf0dff357a5185be3f3a2c5b2392a0de97b67c2a0b4e17870">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row">
+    <div class="views-field views-field-nothing"><span class="field-content">Last updated : <time datetime="2026-04-10T17:31:00+05:30">Apr 10, 2026 @ 17:31</time>
+</span></div>
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+      </div></div> <!-- /.section, /#footer -->
+      	      </div> <!-- /#footer-wrapper -->
+
+	</div> <!-- /#mainresize -->
+  </div> <!-- /#page -->
+</div> <!-- /#page-wrapper -->
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"home","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJx1UQmOgzAM_FAgT4pCcMHFORQbKPv6NW3Ftl0qRc4ciXz5EIAZOySUzfpXZt6YW7EfQOxAufNkOh8mJ1lPsS_YYcjpq3llEzLl2uWbLeQxHdRhIkxgP7iBm-g92b7OxVP7pOZCcGPCHqrFJDBUL6h5o9_ys8CGZdOng4kwjOEQQ8Ui_BQrcMmJcYGG9OcshnNATy5Cj97tmdj-l1oZIYLZEwCvKGHUMvot-YihCcwfzhszPBeoF-TRHuhMc2NeoO69JTn1OXoibQcgnft7VreOKHDu74jnjr-5JTPeh8obC0TdI4MRXYDTseEP2BfcPi6zIKxs77GNuZ9JpWt1DzlpcIJh0in8qQf6BSkPA_c","theme":"meghc","theme_token":null},"ajaxTrustedUrl":{"\/search\/node":true},"back_to_top":{"back_to_top_button_trigger":100,"back_to_top_speed":1200,"back_to_top_prevent_on_mobile":false,"back_to_top_prevent_in_admin":false,"back_to_top_button_type":"image","back_to_top_button_text":"Back to top"},"colorbox":{"transition":"elastic","speed":350,"opacity":0.85,"slideshow":true,"slideshowAuto":true,"slideshowSpeed":3000,"slideshowStart":"start slideshow","slideshowStop":"stop slideshow","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","overlayClose":true,"returnFocus":true,"maxWidth":"98%","maxHeight":"98%","initialWidth":"300","initialHeight":"250","fixed":true,"scrolling":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"data":{"extlink":{"extTarget":false,"extTargetAppendNewWindowDisplay":true,"extTargetAppendNewWindowLabel":"(opens in a new window)","extTargetNoOverride":false,"extNofollow":true,"extTitleNoOverride":false,"extNoreferrer":true,"extFollowNoOverride":false,"extClass":"0","extLabel":"(link is external)","extImgClass":false,"extSubdomains":true,"extExclude":"","extInclude":"","extCssExclude":"","extCssInclude":"","extCssExplicit":"","extAlert":true,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","extHideIcons":true,"mailtoClass":"mailto","telClass":"tel","mailtoLabel":"(link sends email)","telLabel":"(link is a phone number)","extUseFontAwesome":false,"extIconPlacement":"append","extPreventOrphan":true,"extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","extAdditionalLinkClasses":"","extAdditionalMailtoClasses":"","extAdditionalTelClasses":"","extFaTelClasses":"fa fa-phone","allowedDomains":["edlawr.meghalayahighcourt.nic.in","docs.meghalayahighcourt.nic.in","\/online-rti"],"extExcludeNoreferrer":""}},"text_resize":{"text_resize_scope":"mainresize","text_resize_minimum":14,"text_resize_maximum":16,"text_resize_line_height_allow":false,"text_resize_line_height_min":12,"text_resize_line_height_max":22},"styleSwitcher":{"styles":{"custom\/default":{"name":"custom\/default","label":"A","path":"http:\/\/meghalayahighcourt.nic.in\/styleswitcher\/css\/meghc","weight":-1,"status":true,"is_default":true,"_i":0,"theme":"meghc"},"custom\/newsite":{"name":"custom\/newsite","label":"A","path":"http:\/\/meghalayahighcourt.nic.in\/sites\/newstyle.css","weight":0,"status":true,"is_default":false,"_i":2,"theme":"meghc"}},"default":"custom\/default","enableOverlay":false,"cookieExpire":31536000,"theme":"meghc"},"flexslider":{"optionsets":{"jcarousel":{"animation":"slide","animationSpeed":200,"direction":"horizontal","slideshow":true,"easing":"swing","smoothHeight":false,"reverse":false,"slideshowSpeed":2000,"animationLoop":true,"randomize":false,"startAt":0,"itemWidth":210,"itemMargin":5,"minItems":0,"maxItems":0,"move":1,"directionNav":false,"controlNav":true,"thumbCaptions":false,"thumbCaptionsBoth":false,"keyboard":true,"multipleKeyboard":false,"mousewheel":false,"touch":true,"prevText":"Previous","nextText":"Next","namespace":"flex-","selector":".slides \u003E li","sync":"","asNavFor":"","initDelay":0,"useCSS":true,"video":false,"pausePlay":true,"pauseText":"Pause","playText":"Play","pauseOnAction":true,"pauseOnHover":true,"controlsContainer":"#jcarousel-controls .slides li","manualControls":""},"main_banner":{"animation":"fade","animationSpeed":600,"direction":"horizontal","slideshow":true,"easing":"swing","smoothHeight":false,"reverse":false,"slideshowSpeed":5000,"animationLoop":true,"randomize":false,"startAt":0,"itemWidth":0,"itemMargin":0,"minItems":0,"maxItems":0,"move":0,"directionNav":false,"controlNav":false,"thumbCaptions":false,"thumbCaptionsBoth":false,"keyboard":true,"multipleKeyboard":false,"mousewheel":false,"touch":true,"prevText":"Previous","nextText":"Next","namespace":"flex-","selector":".slides \u003E li","sync":"","asNavFor":"","initDelay":0,"useCSS":true,"video":false,"pausePlay":true,"pauseText":"Pause","playText":"Play","pauseOnAction":true,"pauseOnHover":false,"controlsContainer":"","manualControls":""}},"instances":{"jcarousel":"jcarousel","flexslider-1":"main_banner"}},"superfish":{"superfish-main":{"id":"superfish-main","sf":{"animation":{"opacity":"show","height":"show"},"speed":"fast","autoArrows":true,"dropShadows":true},"plugins":{"smallscreen":{"cloneParent":0,"mode":"window_width"},"supposition":true,"supersubs":true}}},"user":{"uid":0,"permissionsHash":"b71e0e3709649d14a1c61c412af6e010d6c4bd3d7d850a48cedd5150743fe931"}}</script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0-rc.1"></script>
+<script src="/sites/default/files/js/js_D-JeJhOT2r552zy7I5q9rxkybO-xUU7IZr7hVRdfN-8.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=meghc&amp;include=eJx1j4sOwjAIRX-oyic1bYcbim0D7KFfb31kmWYmJJzTS0IJKaEqRWKyG4StuS_zM3U9GvRcYmAXQ7p4K60qbNif1aXCRWJZoHKgvKqnzJQRftzhYq1foJOxBj5-1J0YF2XqUICyYS_BqGR3xX5In08cNAlVU6d2Y9SZLA1t_MucjhXlRDrASntvfigTynNTtt1cr4G5LUTM-_mTdIz6L61F6XWCtRO9oNIdYcPHd3PTWfxEOCus9ADhCKmv"></script>
+<script src="/modules/custom/vjr_views/js/newsticker.js?v=11.2.10"></script>
+<script src="/sites/default/files/js/js_3SOCc7UEoZWyU0JNM9KYfaUToFAJzg25gK0MXfZyuUs.js?scope=footer&amp;delta=3&amp;language=en&amp;theme=meghc&amp;include=eJx1j4sOwjAIRX-oyic1bYcbim0D7KFfb31kmWYmJJzTS0IJKaEqRWKyG4StuS_zM3U9GvRcYmAXQ7p4K60qbNif1aXCRWJZoHKgvKqnzJQRftzhYq1foJOxBj5-1J0YF2XqUICyYS_BqGR3xX5In08cNAlVU6d2Y9SZLA1t_MucjhXlRDrASntvfigTynNTtt1cr4G5LUTM-_mTdIz6L61F6XWCtRO9oNIdYcPHd3PTWfxEOCus9ADhCKmv"></script>
+
+  </body>
+</html>

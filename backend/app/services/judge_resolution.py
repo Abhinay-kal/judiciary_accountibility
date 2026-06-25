@@ -11,6 +11,8 @@ from itertools import combinations
 from typing import Iterable, Sequence
 
 from rapidfuzz import fuzz
+from sqlalchemy import Float, String, bindparam, func, select
+from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session
 
 from app.core.config import get_settings
@@ -150,19 +152,35 @@ def candidate_lookup(
     phonetic: str,
     hearing_date: datetime | None = None,
     designation: str | None = None,
+    similarity_threshold: float = 0.30,
+    max_candidate_pool: int = 30,
     limit: int = 10,
 ) -> list[CandidateScore]:
-    if not normalized_name:
+    sanitized_name = normalize_name((normalized_name or "").strip())
+    if not sanitized_name or not _is_session_usable(db):
         return []
-    query = db.query(JudgeRegistry)
-    if court_id is not None:
-        query = query.filter((JudgeRegistry.court_id == court_id) | (JudgeRegistry.court_id.is_(None)))
 
-    candidates = query.limit(200).all()
+    threshold = max(0.0, min(1.0, float(similarity_threshold)))
+    pool_size = max(1, int(max_candidate_pool))
+    input_name_param = bindparam("input_name", sanitized_name, type_=String())
+    similarity_threshold_param = bindparam("similarity_threshold", threshold, type_=Float())
+
+    statement = select(JudgeRegistry).where(
+        func.similarity(JudgeRegistry.name, input_name_param) > similarity_threshold_param
+    )
+    if court_id is not None:
+        statement = statement.where((JudgeRegistry.court_id == court_id) | (JudgeRegistry.court_id.is_(None)))
+    statement = statement.order_by(func.similarity(JudgeRegistry.name, input_name_param).desc()).limit(pool_size)
+
+    try:
+        candidates = list(db.scalars(statement))
+    except SQLAlchemyError:
+        return []
+
     scored: list[CandidateScore] = []
     for candidate in candidates:
         score, match_type = _score_candidate(
-            normalized_name=normalized_name,
+            normalized_name=sanitized_name,
             phonetic=phonetic,
             candidate=candidate,
             hearing_date=hearing_date,
@@ -190,9 +208,20 @@ def resolve_judge(
     court_id: int | None,
     hearing_date: datetime | None = None,
     designation: str | None = None,
+    similarity_threshold: float | None = None,
 ) -> AttributionResult:
-    normalized = normalize_name(raw_name)
-    phone = phonetic_key(raw_name)
+    normalized = normalize_name((raw_name or "").strip())
+    if not normalized or not _is_session_usable(db):
+        return AttributionResult(
+            judge_id=None,
+            score=0.0,
+            match_type="no_match",
+            candidate_list=[],
+        )
+
+    settings = get_settings()
+    threshold = similarity_threshold if similarity_threshold is not None else settings.judge_match_similarity_threshold
+    phone = phonetic_key(normalized)
     candidates = candidate_lookup(
         db,
         court_id=court_id,
@@ -200,9 +229,10 @@ def resolve_judge(
         phonetic=phone,
         hearing_date=hearing_date,
         designation=designation,
+        similarity_threshold=threshold,
     )
-    threshold = get_settings().judge_match_confidence_threshold
-    if candidates and candidates[0].score >= threshold:
+    confidence_threshold = settings.judge_match_confidence_threshold
+    if candidates and candidates[0].score >= confidence_threshold:
         winner = candidates[0]
         return AttributionResult(
             judge_id=winner.judge_id,
@@ -211,7 +241,6 @@ def resolve_judge(
             candidate_list=candidates,
         )
 
-    settings = get_settings()
     if settings.enable_judge_ml_matcher:
         from app.ml.judge_matcher import JudgeMLMatcher
 
@@ -429,6 +458,16 @@ def _soundex(token: str) -> str:
         previous = code
     result = (first + "".join(digits) + "000")[:4]
     return result
+
+
+def _is_session_usable(db: Session | None) -> bool:
+    if db is None:
+        return False
+    try:
+        db.get_bind()
+    except Exception:
+        return False
+    return True
 
 
 def raw_bench_snapshot_id(raw_bench: str | None) -> str | None:
