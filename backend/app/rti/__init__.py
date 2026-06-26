@@ -51,12 +51,11 @@ __license__ = "MIT"
 from .templates import (
     RTITemplate,
     RTIRequestType,
-    RTI_TEMPLATES,
-    ApplicantDetails,
-    AuthorityInfo,
-    InformationRequest,
-    Declaration,
-    ContactDetails,
+    CourtLevel,
+    CourtDetails,
+    CaseInfo,
+    ApplicantInfo,
+    RTITemplateLibrary,
 )
 
 from .authority_lookup import (
@@ -92,12 +91,11 @@ __all__ = [
     # Templates
     "RTITemplate",
     "RTIRequestType",
-    "RTI_TEMPLATES",
-    "ApplicantDetails",
-    "AuthorityInfo",
-    "InformationRequest",
-    "Declaration",
-    "ContactDetails",
+    "CourtLevel",
+    "CourtDetails",
+    "CaseInfo",
+    "ApplicantInfo",
+    "RTITemplateLibrary",
     
     # Authority Lookup
     "PIManager",
