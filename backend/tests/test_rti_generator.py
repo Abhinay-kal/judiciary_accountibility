@@ -10,13 +10,12 @@ from app.rti import (
     RTIValidator,
     RTIExporter,
     RTITracker,
-    PIManager,
+    AuthorityLookup,
     RTIRequestType,
     RTIRequestStatus,
     RTIReasonDenial,
     ExportFormat,
     CourtLevel,
-    State,
 )
 
 
@@ -51,7 +50,7 @@ def rti_tracker():
 @pytest.fixture
 def pio_manager():
     """PIO Manager instance."""
-    return PIManager()
+    return AuthorityLookup()
 
 
 @pytest.fixture
@@ -616,24 +615,24 @@ class TestAuthorityLookup:
         pio_manager
     ):
         """Test getting PIO for district court."""
-        pio = pio_manager.get_pio_for_court(
+        pio = pio_manager.get_pio_by_court(
             court_level=CourtLevel.DISTRICT_COURT,
-            state=State.MAHARASHTRA,
-            jurisdiction="Mumbai"
+            state="maharashtra",
+            district="Mumbai"
         )
         
         assert pio is not None
         assert pio.court_level == CourtLevel.DISTRICT_COURT
-        assert pio.state == State.MAHARASHTRA
+        assert pio.state == "maharashtra"
 
     def test_get_pio_for_high_court(
         self,
         pio_manager
     ):
         """Test getting PIO for high court."""
-        pio = pio_manager.get_pio_for_court(
+        pio = pio_manager.get_pio_by_court(
             court_level=CourtLevel.HIGH_COURT,
-            state=State.MAHARASHTRA
+            state="maharashtra"
         )
         
         assert pio is not None
@@ -644,9 +643,9 @@ class TestAuthorityLookup:
         pio_manager
     ):
         """Test getting PIO for supreme court."""
-        pio = pio_manager.get_pio_for_court(
+        pio = pio_manager.get_pio_by_court(
             court_level=CourtLevel.SUPREME_COURT,
-            state=State.DELHI
+            state="delhi"
         )
         
         assert pio is not None
@@ -657,24 +656,24 @@ class TestAuthorityLookup:
         pio_manager
     ):
         """Test listing all PIOs in a state."""
-        pios = pio_manager.list_pios_by_state(State.MAHARASHTRA)
+        pios = pio_manager.search_by_state("maharashtra")
         
         assert pios is not None
         assert len(pios) > 0
-        assert all(pio.state == State.MAHARASHTRA for pio in pios)
+        assert all(pio.state == "Maharashtra" for pio in pios)
 
     def test_get_pio_address(
         self,
         pio_manager
     ):
         """Test getting formatted PIO address."""
-        pio = pio_manager.get_pio_for_court(
+        pio = pio_manager.get_pio_by_court(
             court_level=CourtLevel.DISTRICT_COURT,
-            state=State.MAHARASHTRA
+            state="maharashtra"
         )
         
         if pio:
-            address = pio_manager.get_pio_address(pio.pio_id)
+            address = pio_manager.get_format_address(pio)
             assert address is not None
             assert isinstance(address, str)
 

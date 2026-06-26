@@ -59,10 +59,8 @@ from .templates import (
 )
 
 from .authority_lookup import (
-    PIManager,
-    PIOMaster,
-    CourtLevel,
-    State,
+    AuthorityLookup,
+    PIOMeta,
 )
 
 from .validation import (
@@ -98,10 +96,8 @@ __all__ = [
     "RTITemplateLibrary",
     
     # Authority Lookup
-    "PIManager",
-    "PIOMaster",
-    "CourtLevel",
-    "State",
+    "AuthorityLookup",
+    "PIOMeta",
     
     # Validation
     "RTIValidator",
