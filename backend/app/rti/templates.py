@@ -56,10 +56,10 @@ class ApplicantInfo:
     """RTI applicant details."""
     name: str
     address_line1: str
-    address_line2: Optional[str] = None
     city: str
     state: str
     pincode: str
+    address_line2: Optional[str] = None
     email: Optional[str] = None
     phone: Optional[str] = None
     aadhar_optional: Optional[str] = None

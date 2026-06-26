@@ -42,13 +42,14 @@ class ExternalReport:
     url: str
     publication_date: datetime
     
+    # Quality metrics
+    match_confidence: float  # 0.0-1.0
+    credibility_score: float  # 0.0-1.0
+    
     # Content
     summary: Optional[str] = None
     full_text: Optional[str] = None
     
-    # Quality metrics
-    match_confidence: float  # 0.0-1.0
-    credibility_score: float  # 0.0-1.0
     relevance_level: "ReportRelevanceLevel" = ReportRelevanceLevel.RELATED
     
     # Verification
